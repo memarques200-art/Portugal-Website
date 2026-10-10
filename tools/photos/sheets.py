@@ -45,6 +45,15 @@ Q = {
  "inst-1974": ("Revolução dos Cravos 25 de Abril 1974", 600, False),
 }
 Q.update({
+ "x-south": ("Alentejo montado landscape", 1000, False),
+ "x-1974": ("25 de Abril de 2024 cravos", 1000, False),
+ "x-celeste": ("Celeste dos Cravos", 1000, False),
+ "x-marchas": ("Marchas Populares Lisboa", 800, False),
+ "e-fatima2": ("Basílica de Nossa Senhora do Rosário Fátima", 1000, False),
+ "c-santoantonio2": ("Festas de Lisboa arraial sardinhas", 600, False),
+ "f-alheira2": ("alheira de Mirandela enchido", 400, False),
+ "inst-1974b": ("Carnation Revolution Lisbon 1974 soldiers crowd", 400, False),
+ "geo-south2": ("Alentejo planície", 1200, False),
  "hero-geo2": ("Praia da Marinha Algarve cliffs", 2400, True),
  "hero-geo3": ("Serra da Estrela panorama", 2400, True),
  "f-bacalhau": ("Bacalhau à Brás", 800, False),

@@ -8,11 +8,13 @@ credf = os.path.join(OUT, "credits.json")
 cred = json.load(open(credf)) if os.path.exists(credf) else {}
 for key, sel in picks.items():
     if sel is None: continue
-    ext = "png" if key == "geo-climate" else "jpg"
+    ext = "png" if key in ("geo-climate", "hist-routes") else "jpg"
     fname = f"{key}.{ext}"
     if fname in cred and os.path.exists(os.path.join(OUT, fname)): continue
-    src, idx = (sel.split(":")[0], int(sel.split(":")[1])) if isinstance(sel, str) else (key, sel)
-    c = cands[src][idx]
+    if isinstance(sel, dict): c = {"title": sel["title"]}
+    else:
+        src, idx = (sel.split(":")[0], int(sel.split(":")[1])) if isinstance(sel, str) else (key, sel)
+        c = cands[src][idx]
     hero = key.startswith("hero-") or key == "bridge-alps"
     tw = 3840 if hero else 1280
     try:

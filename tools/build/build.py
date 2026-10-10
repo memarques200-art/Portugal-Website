@@ -316,7 +316,7 @@ SWAP = {
  "images/hist-guimaraes.jpg": "images/photos/hist-guimaraes.jpg",
  "images/hist-windsor.jpg": "images/photos/hist-windsor.jpg",
  "images/hist-tea.jpg": "images/photos/hist-tea.jpg",
- "images/hist-routes-map.jpg": "images/photos/hist-routes.jpg",
+ "images/hist-routes-map.jpg": "images/photos/hist-routes.png",
 }
 import os as _os
 ROOT = _os.path.dirname(_os.path.abspath(SRC))

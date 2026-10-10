@@ -2526,6 +2526,67 @@
   .car-label{font-size:13px; font-weight:600; color:var(--grey); letter-spacing:.02em;}
   @media (max-width:900px){ .car-grid{grid-template-columns:1fr; gap:40px;} }
 
+  .trophy-sec .trophy-panel{max-width:760px; margin:0 auto;}
+  .concl-portrait{width:150px; height:150px; border-radius:50%; object-fit:cover; object-position:center 25%; display:block; margin:0 auto 22px; border:6px solid var(--warm-white); outline:1px solid var(--border); box-shadow:0 18px 40px -20px rgba(23,33,29,.35);}
+  .photo-credit{position:absolute; right:12px; bottom:10px; z-index:2; font-size:10.5px; color:rgba(255,255,255,.85); text-shadow:0 1px 4px rgba(0,0,0,.6);}
+
+  /* ---------- PHOTOS ---------- */
+  .card-photo{margin:-30px -24px 20px; aspect-ratio:16/10; overflow:hidden; border-radius:4px 4px 0 0; background:#E9E5DC;}
+  .card-photo img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease;}
+  .info-card--photo{border-top-width:0; padding-top:30px; overflow:hidden;}
+  .info-card--photo:hover .card-photo img{transform:scale(1.05);}
+
+  .rev-photo{margin:0;}
+  .rev-photo img{width:100%; aspect-ratio:4/3; object-fit:cover; display:block; border-radius:6px; box-shadow:0 24px 50px -24px rgba(0,0,0,.6); filter:grayscale(.15);}
+  .rev-photo figcaption{margin-top:10px; font-size:12.5px; color:rgba(252,251,248,.7); text-align:left;}
+
+  .dish-gallery{display:grid; grid-template-columns:repeat(4, 1fr); gap:20px;}
+  .dish-card{background:var(--warm-white); border:1px solid var(--border); border-radius:6px; overflow:hidden; box-shadow:0 18px 40px -30px rgba(23,33,29,.3); transition:transform .25s ease, box-shadow .25s ease;}
+  .dish-card:hover{transform:translateY(-4px); box-shadow:0 24px 48px -24px rgba(23,33,29,.35);}
+  .dish-photo{aspect-ratio:4/3; overflow:hidden; background:#E9E5DC;}
+  .dish-photo img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease;}
+  .dish-card:hover .dish-photo img{transform:scale(1.06);}
+  .dish-body{padding:18px 18px 20px;}
+  .dish-card .dish-name{font-size:23px;}
+  @media (max-width:1100px){ .dish-gallery{grid-template-columns:repeat(3, 1fr);} }
+  @media (max-width:800px){ .dish-gallery{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:480px){ .dish-gallery{grid-template-columns:1fr;} }
+
+  .fest-card--photo{padding-top:0;}
+  .fest-photo{margin:0 -28px 22px; aspect-ratio:16/10; overflow:hidden;}
+  .fest-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+
+  .cr7-photo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 20%; opacity:.55;}
+  .cr7-card::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(10,24,20,.95) 0%, rgba(10,24,20,.55) 50%, rgba(10,24,20,.1) 100%);}
+  .cr7-card > *:not(.cr7-photo){z-index:1;}
+  .cr7-tag, .cr7-name, .cr7-desc, .cr7-num{z-index:2 !important;}
+
+  .story{padding:0; overflow:hidden; display:flex; flex-direction:column;}
+  .story-photo{margin:0; position:relative; aspect-ratio:16/10; overflow:hidden; background:#E9E5DC;}
+  .story-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .story-photo figcaption{position:absolute; left:0; right:0; bottom:0; padding:22px 14px 10px; font-size:11.5px; line-height:1.45; color:#fff; background:linear-gradient(to top, rgba(10,14,12,.85), rgba(10,14,12,0));}
+  .story-body{padding:24px 26px 28px;}
+
+  .car-side{display:flex; flex-direction:column; gap:24px;}
+  .car-photos{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .car-photos img{width:100%; aspect-ratio:4/5; object-fit:cover; display:block; border-radius:4px; box-shadow:0 18px 40px -24px rgba(23,33,29,.4);}
+  .car-grid{grid-template-columns:1.1fr .9fr;}
+
+  .credits{background:var(--ink); color:rgba(252,251,248,.7); padding:28px 0; font-size:12px;}
+  .credits summary{cursor:pointer; color:var(--warm-white); font-weight:600; letter-spacing:.04em;}
+  .credits ol{margin:16px 0 0 18px; columns:2; column-gap:40px; line-height:1.6;}
+  .credits li{break-inside:avoid; margin-bottom:4px;}
+  .credits a{text-decoration:underline; text-decoration-color:rgba(252,251,248,.3);}
+  @media (max-width:700px){ .credits ol{columns:1;} }
+  .geo-cr-climate-map{background:#fff;}
+  .geo-cr-climate-map img[src*="photos/"]{object-fit:contain; padding:16px;}
+  .page-hero-media::after{
+    background:linear-gradient(90deg, rgba(247,245,240,.97) 0%, rgba(247,245,240,.92) 26%, rgba(247,245,240,.72) 42%, rgba(247,245,240,.28) 58%, rgba(247,245,240,0) 70%);
+  }
+  @media (max-width:900px){
+    .page-hero-media::after{background:linear-gradient(180deg, rgba(247,245,240,.96) 0%, rgba(247,245,240,.9) 45%, rgba(247,245,240,.55) 70%, rgba(247,245,240,.2) 100%);}
+  }
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -2570,7 +2631,7 @@
     <div class="view active" id="view-home">
 <header class="hero">
     <div class="hero-media">
-      <img src="images/hero-porto.jpg" alt="Vue de Porto au coucher du soleil">
+      <img src="images/photos/hero-home.jpg" alt="Vue de Porto au coucher du soleil">
     </div>
     <div class="hero-content">
       <p class="eyebrow" data-i18n="hero_eyebrow">BIENVENUE AU</p>
@@ -2747,56 +2808,56 @@
         </div>
         <div class="journey-grid">
             <a class="journey-card" href="#geographie" data-view="geographie">
-              <img src="images/journey-geo.jpg" alt="Géographie">
+              <img src="images/photos/j-geo.jpg" alt="Géographie">
               <div class="journey-card-content">
                 <span class="journey-number">01</span>
                 <span class="journey-label" data-i18n="journey_geo">Géographie</span>
               </div>
             </a>
             <a class="journey-card" href="#histoire" data-view="histoire">
-              <img src="images/journey-hist.jpg" alt="Histoire">
+              <img src="images/photos/j-hist.jpg" alt="Histoire">
               <div class="journey-card-content">
                 <span class="journey-number">02</span>
                 <span class="journey-label" data-i18n="journey_hist">Histoire</span>
               </div>
             </a>
             <a class="journey-card" href="#institutions" data-view="institutions">
-              <img src="images/journey-inst.jpg" alt="Institutions">
+              <img src="images/photos/inst-saobento.jpg" alt="Institutions">
               <div class="journey-card-content">
                 <span class="journey-number">03</span>
                 <span class="journey-label" data-i18n="journey_inst">Institutions</span>
               </div>
             </a>
             <a class="journey-card" href="#societe" data-view="societe">
-              <img src="images/journey-soc.jpg" alt="Société">
+              <img src="images/photos/j-soc.jpg" alt="Société">
               <div class="journey-card-content">
                 <span class="journey-number">04</span>
                 <span class="journey-label" data-i18n="journey_soc">Société</span>
               </div>
             </a>
             <a class="journey-card" href="#culture" data-view="culture">
-              <img src="images/journey-cult.jpg" alt="Culture">
+              <img src="images/photos/j-cult.jpg" alt="Culture">
               <div class="journey-card-content">
                 <span class="journey-number">05</span>
                 <span class="journey-label" data-i18n="journey_cult">Culture</span>
               </div>
             </a>
             <a class="journey-card" href="#culture" data-view="culture">
-              <img src="images/journey-gastro.jpg" alt="Gastronomie">
+              <img src="images/photos/f-nata.jpg" alt="Gastronomie">
               <div class="journey-card-content">
                 <span class="journey-number">06</span>
                 <span class="journey-label" data-i18n="journey_gastro">Gastronomie</span>
               </div>
             </a>
             <a class="journey-card" href="#regions" data-view="regions">
-              <img src="images/journey-reg.jpg" alt="Régions">
+              <img src="images/photos/r-douro.jpg" alt="Régions">
               <div class="journey-card-content">
                 <span class="journey-number">07</span>
                 <span class="journey-label" data-i18n="journey_reg">Régions</span>
               </div>
             </a>
             <a class="journey-card" href="#conclusion" data-view="conclusion">
-              <img src="images/journey-moi.jpg" alt="Portugal & moi">
+              <img src="images/photos/j-moi.jpg" alt="Portugal & moi">
               <div class="journey-card-content">
                 <span class="journey-number">08</span>
                 <span class="journey-label" data-i18n="journey_moi">Portugal & moi</span>
@@ -2807,7 +2868,7 @@
     </section>
     <section class="bridge-section">
       <div class="bridge-media">
-        <img src="images/bridge-alps.jpg" alt="Montagnes suisses">
+        <img src="images/photos/bridge-alps.jpg" alt="Montagnes suisses">
         <div class="bridge-overlay"></div>
       </div>
       <div class="wrap bridge-content">
@@ -2840,7 +2901,7 @@
     <div class="view" id="view-geographie">
 <section class="page-hero">
       <div class="page-hero-media">
-        <img src="images/geo-hero.jpg" alt="Farol e vagas gigantes em Foz do Douro, Porto">
+        <img src="images/photos/hero-geo.jpg" alt="Farol e vagas gigantes em Foz do Douro, Porto">
       </div>
       <div class="page-hero-content">
         <div class="page-hero-eyebrow">01 <span>/ 08</span></div>
@@ -2932,10 +2993,10 @@
           </div>
         </div>
         <div class="geo-duality-photo">
-          <img src="images/geo-north.jpg" alt="Paysage du Nord du Portugal, région montagneuse">
+          <img src="images/photos/geo-north.jpg" alt="Paysage du Nord du Portugal, région montagneuse">
         </div>
         <div class="geo-duality-photo">
-          <img src="images/geo-south.jpg" alt="Paysage du Sud du Portugal, plaine dorée">
+          <img src="images/photos/geo-south.jpg" alt="Paysage du Sud du Portugal, plaine dorée">
         </div>
       </div>
     </section>
@@ -2961,7 +3022,7 @@
         </div>
 
         <div class="geo-cr-climate-map">
-          <img src="images/geo-climate-map.jpg" alt="Carte des influences climatiques du Portugal">
+          <img src="images/photos/geo-climate.png" alt="Carte des influences climatiques du Portugal">
         </div>
 
         <div class="geo-cr-relief-text">
@@ -2976,7 +3037,7 @@
         </div>
 
         <div class="geo-cr-relief-photo">
-          <img src="images/geo-relief.jpg" alt="Chaîne de montagnes au Portugal">
+          <img src="images/photos/geo-relief.jpg" alt="Chaîne de montagnes au Portugal">
         </div>
       </div>
     </section>
@@ -2995,13 +3056,13 @@
             <p class="geo-volc-desc" data-i18n="geo_volc_acores_desc">Neuf îles volcaniques avec des lacs de cratère, sources chaudes et paysages uniques.</p>
           </div>
           <div class="geo-volc-photo-wrap">
-            <img src="images/geo-acores.jpg" alt="Lac de cratère au coucher du soleil, São Miguel, Açores">
+            <img src="images/photos/geo-acores.jpg" alt="Lac de cratère au coucher du soleil, São Miguel, Açores">
             <p class="geo-volc-caption" data-i18n="geo_volc_acores_caption">En 1957-1958, l'éruption du volcan des Capelinhos (île de Faial) a fait naître de nouvelles terres sur l'océan.</p>
           </div>
         </div>
 
         <div class="geo-volc-center">
-          <img src="images/geo-volcano.jpg" alt="Éruption volcanique">
+          <img src="images/photos/geo-volcano.jpg" alt="Éruption volcanique">
         </div>
 
         <div class="geo-volc-col">
@@ -3010,7 +3071,7 @@
             <p class="geo-volc-desc" data-i18n="geo_volc_madeira_desc">Île montagneuse d'origine volcanique, avec des falaises impressionnantes et des vallées profondes.</p>
           </div>
           <div class="geo-volc-photo-wrap geo-volc-photo-wrap--tall">
-            <img src="images/geo-madeira.jpg" alt="Falaises de Madère">
+            <img src="images/photos/geo-madeira.jpg" alt="Falaises de Madère">
           </div>
         </div>
       </div>
@@ -3097,7 +3158,7 @@
 <div class="view" id="view-histoire">
     <section class="page-hero">
       <div class="page-hero-media">
-        <img src="images/hist-hero.jpg" alt="Caravelle portugaise devant la Tour de Belém, Lisbonne">
+        <img src="images/photos/hero-hist.jpg" alt="Caravelle portugaise devant la Tour de Belém, Lisbonne">
       </div>
       <div class="page-hero-content">
         <div class="page-hero-eyebrow">02 <span>/ 08</span></div>
@@ -3116,7 +3177,7 @@
             <p class="hist-card-desc" data-i18n="hist_c1_desc">Le vert symbolise l'espoir de l'avenir et le rouge le sang versé pour l'indépendance.</p>
           </div>
           <div class="hist-card-photo">
-            <img src="images/hist-flag.jpg" alt="Drapeau portugais">
+            <img src="images/photos/hist-flag.jpg" alt="Drapeau portugais">
           </div>
         </div>
 
@@ -3126,7 +3187,7 @@
             <p class="hist-card-desc" data-i18n="hist_c2_desc">Du Comté de Portugal à la nation indépendante, une identité forgée au fil des siècles.</p>
           </div>
           <div class="hist-card-photo">
-            <img src="images/hist-guimaraes.jpg" alt="Château de Guimarães et statue de Dom Afonso Henriques">
+            <img src="images/photos/hist-guimaraes.jpg" alt="Château de Guimarães et statue de Dom Afonso Henriques">
           </div>
         </div>
 
@@ -3137,7 +3198,7 @@
             <a class="hist-card-link" href="https://fr.wikipedia.org/wiki/Trait%C3%A9_de_Windsor_(1386)" target="_blank" rel="noopener" data-i18n="hist_c3_link">En savoir plus <span class="arrow">→</span></a>
           </div>
           <div class="hist-card-photo">
-            <img src="images/hist-windsor.jpg" alt="Traité de Windsor de 1386">
+            <img src="images/photos/hist-windsor.jpg" alt="Traité de Windsor de 1386">
           </div>
         </div>
 
@@ -3147,7 +3208,7 @@
             <p class="hist-card-desc" data-i18n="hist_c4_desc">Popularisé en Angleterre par la reine portugaise Catherine de Bragance. Une légende raconte que le mot « Tea » viendrait de « Tem ervas aromáticas&nbsp;? », écrit sur les caisses.</p>
           </div>
           <div class="hist-card-photo">
-            <img src="images/hist-tea.jpg" alt="Service à thé en porcelaine">
+            <img src="images/photos/hist-tea.jpg" alt="Service à thé en porcelaine">
           </div>
         </div>
       </div>
@@ -3155,7 +3216,7 @@
 
     <section class="hist-routes">
       <div class="hist-routes-map">
-        <img src="images/hist-routes-map.jpg" alt="Carte des routes maritimes portugaises historiques">
+        <img src="images/photos/hist-routes.png" alt="Carte des routes maritimes portugaises historiques">
       </div>
       <div class="hist-routes-content">
         <h2 class="hist-routes-title" data-i18n="hist_routes_title">Un empire<br>de routes maritimes</h2>
@@ -3204,12 +3265,12 @@
           <h2 class="sec-title" data-i18n="hist_st_title">Six histoires surprenantes</h2>
         </div>
         <div class="story-grid">
-          <article class="story"><span class="story-num">01</span><h3 class="story-title" data-i18n="hist_s1_title">Le monde coupé en deux</h3><p class="story-text" data-i18n="hist_s1_text">En 1494, le Portugal et l'Espagne signent le traité de Tordesillas : une ligne imaginaire, tracée du nord au sud dans l'Atlantique, partage entre eux les terres à découvrir. C'est à cause de cette ligne qu'on parle aujourd'hui portugais au Brésil.</p></article>
-          <article class="story"><span class="story-num">02</span><h3 class="story-title" data-i18n="hist_s2_title">Les premiers Européens au Japon</h3><p class="story-text" data-i18n="hist_s2_text">En 1543, des marchands portugais débarquent sur l'île de Tanegashima : ce sont les premiers Européens à atteindre le Japon. Ils y apportent les armes à feu, le pain — en japonais, « pan » vient du portugais « pão » — et, selon une théorie répandue, l'idée de la tempura.</p></article>
-          <article class="story"><span class="story-num">03</span><h3 class="story-title" data-i18n="hist_s3_title">Le jour où Lisbonne a tremblé</h3><p class="story-text" data-i18n="hist_s3_text">Le 1er novembre 1755, un séisme suivi d'un tsunami et d'incendies détruit Lisbonne et fait des dizaines de milliers de morts. Le marquis de Pombal reconstruit la Baixa avec des rues droites et la « gaiola pombalina », une cage en bois qui protège les immeubles des secousses : l'une des premières constructions parasismiques au monde. Son enquête auprès des paroisses est considérée comme l'un des débuts de la sismologie moderne.</p></article>
-          <article class="story"><span class="story-num">04</span><h3 class="story-title" data-i18n="hist_s4_title">Un consul contre la dictature</h3><p class="story-text" data-i18n="hist_s4_text">En juin 1940, à Bordeaux, le consul Aristides de Sousa Mendes désobéit aux ordres de Salazar et délivre des visas à des milliers de réfugiés fuyant les nazis, dont de nombreux Juifs. Sanctionné et privé de sa carrière, il meurt dans la pauvreté en 1954. Il est reconnu « Juste parmi les nations » en 1966 et honoré au Panthéon national portugais en 2021.</p></article>
-          <article class="story"><span class="story-num">05</span><h3 class="story-title" data-i18n="hist_s5_title">48 ans de dictature</h3><p class="story-text" data-i18n="hist_s5_text">De 1926 à 1974, le Portugal vit sous une dictature, dirigée surtout par António de Oliveira Salazar : censure, police politique (la PIDE), prisonniers politiques. Le pays reste pauvre et isolé. Dans les années 1960, des centaines de milliers de Portugais émigrent, souvent clandestinement — « a salto » — vers la France.</p></article>
-          <article class="story"><span class="story-num">06</span><h3 class="story-title" data-i18n="hist_s6_title">La fin d'un empire</h3><p class="story-text" data-i18n="hist_s6_text">De 1961 à 1974, le Portugal mène une guerre en Angola, en Guinée-Bissau et au Mozambique pour garder ses colonies. Après la Révolution des Œillets, elles deviennent indépendantes et des centaines de milliers de « retornados » rentrent au Portugal. En 1999, la remise de Macao à la Chine met fin à près de six siècles d'empire.</p></article>
+          <article class="story"><figure class="story-photo"><img src="images/photos/st-cantino.jpg" alt="" loading="lazy"><figcaption data-i18n="hist_s1_cap">Le planisphère de Cantino (1502), l'une des plus anciennes cartes montrant la ligne de Tordesillas.</figcaption></figure><div class="story-body"><span class="story-num">01</span><h3 class="story-title" data-i18n="hist_s1_title">Le monde coupé en deux</h3><p class="story-text" data-i18n="hist_s1_text">En 1494, le Portugal et l'Espagne signent le traité de Tordesillas : une ligne imaginaire, tracée du nord au sud dans l'Atlantique, partage entre eux les terres à découvrir. C'est à cause de cette ligne qu'on parle aujourd'hui portugais au Brésil.</p></div></article>
+          <article class="story"><figure class="story-photo"><img src="images/photos/st-nanban.jpg" alt="" loading="lazy"><figcaption data-i18n="hist_s2_cap">Paravent japonais « Nanban » (vers 1600) montrant l'arrivée d'un navire portugais.</figcaption></figure><div class="story-body"><span class="story-num">02</span><h3 class="story-title" data-i18n="hist_s2_title">Les premiers Européens au Japon</h3><p class="story-text" data-i18n="hist_s2_text">En 1543, des marchands portugais débarquent sur l'île de Tanegashima : ce sont les premiers Européens à atteindre le Japon. Ils y apportent les armes à feu, le pain — en japonais, « pan » vient du portugais « pão » — et, selon une théorie répandue, l'idée de la tempura.</p></div></article>
+          <article class="story"><figure class="story-photo"><img src="images/photos/st-1755.jpg" alt="" loading="lazy"><figcaption data-i18n="hist_s3_cap">Gravure de l'époque montrant Lisbonne en ruines et le tsunami dans le port.</figcaption></figure><div class="story-body"><span class="story-num">03</span><h3 class="story-title" data-i18n="hist_s3_title">Le jour où Lisbonne a tremblé</h3><p class="story-text" data-i18n="hist_s3_text">Le 1er novembre 1755, un séisme suivi d'un tsunami et d'incendies détruit Lisbonne et fait des dizaines de milliers de morts. Le marquis de Pombal reconstruit la Baixa avec des rues droites et la « gaiola pombalina », une cage en bois qui protège les immeubles des secousses : l'une des premières constructions parasismiques au monde. Son enquête auprès des paroisses est considérée comme l'un des débuts de la sismologie moderne.</p></div></article>
+          <article class="story"><figure class="story-photo"><img src="images/photos/st-mendes.jpg" alt="" loading="lazy"><figcaption data-i18n="hist_s4_cap">Aristides de Sousa Mendes (1885–1954).</figcaption></figure><div class="story-body"><span class="story-num">04</span><h3 class="story-title" data-i18n="hist_s4_title">Un consul contre la dictature</h3><p class="story-text" data-i18n="hist_s4_text">En juin 1940, à Bordeaux, le consul Aristides de Sousa Mendes désobéit aux ordres de Salazar et délivre des visas à des milliers de réfugiés fuyant les nazis, dont de nombreux Juifs. Sanctionné et privé de sa carrière, il meurt dans la pauvreté en 1954. Il est reconnu « Juste parmi les nations » en 1966 et honoré au Panthéon national portugais en 2021.</p></div></article>
+          <article class="story"><figure class="story-photo"><img src="images/photos/st-salazar.jpg" alt="" loading="lazy"><figcaption data-i18n="hist_s5_cap">António de Oliveira Salazar, à la tête du pays de 1932 à 1968.</figcaption></figure><div class="story-body"><span class="story-num">05</span><h3 class="story-title" data-i18n="hist_s5_title">48 ans de dictature</h3><p class="story-text" data-i18n="hist_s5_text">De 1926 à 1974, le Portugal vit sous une dictature, dirigée surtout par António de Oliveira Salazar : censure, police politique (la PIDE), prisonniers politiques. Le pays reste pauvre et isolé. Dans les années 1960, des centaines de milliers de Portugais émigrent, souvent clandestinement — « a salto » — vers la France.</p></div></article>
+          <article class="story"><figure class="story-photo"><img src="images/photos/st-macau.jpg" alt="" loading="lazy"><figcaption data-i18n="hist_s6_cap">Macao, dernier territoire portugais d'outre-mer, rendu à la Chine en 1999.</figcaption></figure><div class="story-body"><span class="story-num">06</span><h3 class="story-title" data-i18n="hist_s6_title">La fin d'un empire</h3><p class="story-text" data-i18n="hist_s6_text">De 1961 à 1974, le Portugal mène une guerre en Angola, en Guinée-Bissau et au Mozambique pour garder ses colonies. Après la Révolution des Œillets, elles deviennent indépendantes et des centaines de milliers de « retornados » rentrent au Portugal. En 1999, la remise de Macao à la Chine met fin à près de six siècles d'empire.</p></div></article>
         </div>
       </div>
     </section>
@@ -3228,19 +3289,16 @@
     </div>
 
     <div class="view" id="view-institutions">
-    <section class="page-hero page-hero--split">
-      <div class="split-grid">
-        <div class="page-hero-content">
-          <div class="page-hero-eyebrow">03 <span>/ 08</span></div>
-          <h1 class="page-hero-title" data-i18n="inst_hero_title">Institutions</h1>
-          <p class="page-hero-subtitle" data-i18n="inst_hero_subtitle">Une république démocratique au cœur de l'Europe</p>
-          <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-          <p class="page-hero-text" data-i18n="inst_hero_text">Depuis la Révolution des Œillets de 1974, le Portugal est une démocratie stable, fondée sur la Constitution de 1976.</p>
-        </div>
-        <div class="split-photo">
-          <span class="split-num">03</span>
-          <img src="images/journey-inst.jpg" alt="Assembleia da República, Lisboa">
-        </div>
+    <section class="page-hero">
+      <div class="page-hero-media">
+        <img src="images/photos/hero-inst.jpg" alt="Palácio de São Bento, Lisbonne">
+      </div>
+      <div class="page-hero-content">
+        <div class="page-hero-eyebrow">03 <span>/ 08</span></div>
+        <h1 class="page-hero-title" data-i18n="inst_hero_title">Institutions</h1>
+        <p class="page-hero-subtitle" data-i18n="inst_hero_subtitle">Une république démocratique au cœur de l'Europe</p>
+        <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+        <p class="page-hero-text" data-i18n="inst_hero_text">Depuis la Révolution des Œillets de 1974, le Portugal est une démocratie stable, fondée sur la Constitution de 1976.</p>
       </div>
     </section>
 
@@ -3264,29 +3322,29 @@
           <p class="sec-lead" data-i18n="inst_pow_lead">Le Portugal est une république semi-présidentielle : le pouvoir est partagé entre quatre organes de souveraineté.</p>
         </div>
         <div class="info-grid">
-          <article class="info-card">
-            <span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5L3 8z"/><path d="M5 16h14"/></svg></span>
+          <article class="info-card info-card--photo">
+            <div class="card-photo"><img src="images/photos/inst-belem.jpg" alt="Palácio de Belém" loading="lazy"></div>
             <span class="info-tag" data-i18n="inst_p1_tag">CHEF DE L'ÉTAT</span>
             <h3 class="info-title" data-i18n="inst_p1_title">Président de la République</h3>
             <p class="info-desc" data-i18n="inst_p1_desc">Élu au suffrage universel direct pour 5 ans (2 mandats consécutifs au maximum). Il peut dissoudre le Parlement et opposer son veto aux lois.</p>
             <p class="info-who" data-i18n="inst_p1_who">Depuis mars 2026 : António José Seguro</p>
           </article>
-          <article class="info-card">
-            <span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M4 21V10M20 21V10M2 10l10-6 10 6M8 10v11M12 10v11M16 10v11"/></svg></span>
+          <article class="info-card info-card--photo">
+            <div class="card-photo"><img src="images/photos/inst-saobento.jpg" alt="Palácio de São Bento" loading="lazy"></div>
             <span class="info-tag" data-i18n="inst_p2_tag">POUVOIR LÉGISLATIF</span>
             <h3 class="info-title" data-i18n="inst_p2_title">Assemblée de la République</h3>
             <p class="info-desc" data-i18n="inst_p2_desc">230 députés élus pour 4 ans à la proportionnelle. Elle vote les lois et le budget, et contrôle le gouvernement.</p>
             <p class="info-who" data-i18n="inst_p2_who">Siège : palais de São Bento, Lisbonne</p>
           </article>
-          <article class="info-card">
-            <span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 12h18"/></svg></span>
+          <article class="info-card info-card--photo">
+            <div class="card-photo"><img src="images/photos/inst-praca.jpg" alt="Praça do Comércio" loading="lazy"></div>
             <span class="info-tag" data-i18n="inst_p3_tag">POUVOIR EXÉCUTIF</span>
             <h3 class="info-title" data-i18n="inst_p3_title">Gouvernement</h3>
             <p class="info-desc" data-i18n="inst_p3_desc">Dirigé par le Premier ministre, nommé par le Président selon les résultats des élections. Il est responsable devant le Parlement.</p>
             <p class="info-who" data-i18n="inst_p3_who">Premier ministre : Luís Montenegro</p>
           </article>
-          <article class="info-card">
-            <span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M4 7h16M6 7l-3 7a3 3 0 006 0L6 7zM18 7l-3 7a3 3 0 006 0l-3-7z"/></svg></span>
+          <article class="info-card info-card--photo">
+            <div class="card-photo"><img src="images/photos/inst-tc.jpg" alt="Tribunal Constitucional" loading="lazy"></div>
             <span class="info-tag" data-i18n="inst_p4_tag">POUVOIR JUDICIAIRE</span>
             <h3 class="info-title" data-i18n="inst_p4_title">Tribunaux</h3>
             <p class="info-desc" data-i18n="inst_p4_desc">Indépendants des autres pouvoirs. Le Tribunal constitutionnel veille au respect de la Constitution.</p>
@@ -3305,19 +3363,7 @@
           <p class="rev-note" data-i18n="inst_rev_note">Aujourd'hui, le 25 avril est un jour férié : le « Dia da Liberdade », jour de la Liberté.</p>
         </div>
         <div class="rev-visual">
-          <svg viewBox="0 0 200 260" aria-hidden="true">
-   <path d="M100 250 C 98 200, 104 160, 100 110" stroke="#7FA88F" stroke-width="5" fill="none" stroke-linecap="round"/>
-   <path d="M100 190 C 80 180, 64 160, 62 140 C 82 146, 96 164, 100 190z" fill="#5E8C72"/>
-   <path d="M101 170 C 120 160, 134 142, 136 124 C 116 130, 104 148, 101 170z" fill="#5E8C72"/>
-   <path d="M86 118 L 114 118 L 108 132 L 92 132 Z" fill="#5E8C72"/>
-   <g fill="#C8423C">
-     <path d="M100 30 c 8 10 22 4 26 16 c 12 2 16 14 8 22 c 8 8 2 22 -10 22 c -4 12 -18 14 -24 6 c -6 8 -20 6 -24 -6 c -12 0 -18 -14 -10 -22 c -8 -8 -4 -20 8 -22 c 4 -12 18 -6 26 -16z"/>
-   </g>
-   <g fill="#E05A50">
-     <path d="M100 48 c 6 7 15 3 18 11 c 8 2 10 10 5 15 c 5 6 1 15 -7 15 c -3 8 -12 9 -16 4 c -4 5 -13 4 -16 -4 c -8 0 -12 -9 -7 -15 c -5 -5 -3 -13 5 -15 c 3 -8 12 -4 18 -11z"/>
-   </g>
-   <circle cx="100" cy="80" r="9" fill="#A83232"/>
- </svg>
+          <figure class="rev-photo"><img src="images/photos/inst-1974.jpg" alt="25 avril 1974" loading="lazy"><figcaption data-i18n="inst_rev_cap">Lisbonne, 25 avril 2024 : 50 ans après, la foule défile encore : « Ils ont planté en nous la liberté ».</figcaption></figure>
           <p class="rev-lyric">« Grândola, vila morena,<br>terra da fraternidade… »<span>Zeca Afonso, 1971</span></p>
         </div>
       </div>
@@ -3389,19 +3435,16 @@
     </div>
 
     <div class="view" id="view-societe">
-    <section class="page-hero page-hero--split">
-      <div class="split-grid">
-        <div class="page-hero-content">
-          <div class="page-hero-eyebrow">04 <span>/ 08</span></div>
-          <h1 class="page-hero-title" data-i18n="soc_hero_title">Société</h1>
-          <p class="page-hero-subtitle" data-i18n="soc_hero_subtitle">Un peuple chaleureux, ouvert sur le monde</p>
-          <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-          <p class="page-hero-text" data-i18n="soc_hero_text">Famille, accueil et saudade : les Portugais sont attachés à leurs traditions et présents sur tous les continents.</p>
-        </div>
-        <div class="split-photo">
-          <span class="split-num">04</span>
-          <img src="images/journey-soc.jpg" alt="Elétrico 28, Lisboa">
-        </div>
+    <section class="page-hero">
+      <div class="page-hero-media">
+        <img src="images/photos/hero-soc.jpg" alt="Alfama, Lisbonne">
+      </div>
+      <div class="page-hero-content">
+        <div class="page-hero-eyebrow">04 <span>/ 08</span></div>
+        <h1 class="page-hero-title" data-i18n="soc_hero_title">Société</h1>
+        <p class="page-hero-subtitle" data-i18n="soc_hero_subtitle">Un peuple chaleureux, ouvert sur le monde</p>
+        <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+        <p class="page-hero-text" data-i18n="soc_hero_text">Famille, accueil et saudade : les Portugais sont attachés à leurs traditions et présents sur tous les continents.</p>
       </div>
     </section>
 
@@ -3426,8 +3469,8 @@
         <div class="info-grid">
           <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="6" r="2.4"/><circle cx="17" cy="6" r="2.4"/><circle cx="12" cy="12" r="1.9"/><path d="M3 20v-5a4 4 0 018 0M13 15a4 4 0 018 0v5M9.5 21v-2.5a2.5 2.5 0 015 0V21"/></svg></span><h3 class="info-title" data-i18n="soc_l1_title">La famille</h3><p class="info-desc" data-i18n="soc_l1_desc">Le cœur de la société. Les grands repas du dimanche réunissent souvent plusieurs générations.</p></article>
           <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l4-4 4 2 3-2 4 1 5 3"/><path d="M6 8l5 6a1.5 1.5 0 002.2 0l.3-.3M9.5 15.5l1.5 1.5a1.5 1.5 0 002.1 0L19 11M2 12l5 5"/></svg></span><h3 class="info-title" data-i18n="soc_l2_title">L'accueil</h3><p class="info-desc" data-i18n="soc_l2_desc">Les Portugais sont réputés pour leur gentillesse et leur hospitalité envers les visiteurs.</p></article>
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a5 5 0 01-5 5H9a5 5 0 01-5-5V9zM16 10h1.5a2.5 2.5 0 010 5H16M3 21h14"/><path d="M8 3c-.8 1 .8 2 0 3M12 3c-.8 1 .8 2 0 3"/></svg></span><h3 class="info-title" data-i18n="soc_l3_title">Le café</h3><p class="info-desc" data-i18n="soc_l3_desc">Une « bica » à Lisbonne ou un « cimbalino » à Porto : le petit café est un rituel de chaque jour.</p></article>
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M10 4h4M7 21V11l5-4 5 4v10M3 21h18M10 21v-4a2 2 0 014 0v4"/></svg></span><h3 class="info-title" data-i18n="soc_l4_title">La foi</h3><p class="info-desc" data-i18n="soc_l4_desc">Pays de tradition catholique. Le sanctuaire de Fátima attire des millions de pèlerins chaque année.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/e-cafe.jpg" alt="Café A Brasileira" loading="lazy"></div><h3 class="info-title" data-i18n="soc_l3_title">Le café</h3><p class="info-desc" data-i18n="soc_l3_desc">Une « bica » à Lisbonne ou un « cimbalino » à Porto : le petit café est un rituel de chaque jour.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/e-fatima.jpg" alt="Fátima" loading="lazy"></div><h3 class="info-title" data-i18n="soc_l4_title">La foi</h3><p class="info-desc" data-i18n="soc_l4_desc">Pays de tradition catholique. Le sanctuaire de Fátima attire des millions de pèlerins chaque année.</p></article>
         </div>
       </div>
     </section>
@@ -3487,8 +3530,8 @@
         </div>
         <div class="info-grid">
           <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span><h3 class="info-title" data-i18n="soc_eco1_title">La crise de 2011</h3><p class="info-desc" data-i18n="soc_eco1">En pleine crise de la dette, le Portugal reçoit 78 milliards d'euros de l'UE et du FMI, en échange d'une forte austérité. Il sort du programme en 2014 et rembourse le FMI en avance, dès 2018.</p></article>
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12v10M12 12l-1.5-9h3L12 12zM12 12l8 3.5-1.5 2.6L12 12zM12 12l-8 3.5 1.5 2.6L12 12z"/><path d="M8 22h8"/></svg></span><h3 class="info-title" data-i18n="soc_eco2_title">Champion du renouvelable</h3><p class="info-desc" data-i18n="soc_eco2">Environ 71 % de l'électricité consommée en 2024 venait d'énergies renouvelables : barrages, éoliennes et soleil.</p></article>
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-7M12 14c-4 0-7-2.5-7-6a7 7 0 0114 0c0 3.5-3 6-7 6zM12 14l-3-3M12 12l3-3M8 21h8"/></svg></span><h3 class="info-title" data-i18n="soc_eco3_title">Le pays du liège</h3><p class="info-desc" data-i18n="soc_eco3">Environ la moitié du liège mondial vient du Portugal. On écorce le chêne-liège à la main tous les 9 ans environ, sans abattre l'arbre.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/e-wind.jpg" alt="Éoliennes" loading="lazy"></div><h3 class="info-title" data-i18n="soc_eco2_title">Champion du renouvelable</h3><p class="info-desc" data-i18n="soc_eco2">Environ 71 % de l'électricité consommée en 2024 venait d'énergies renouvelables : barrages, éoliennes et soleil.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/e-cork.jpg" alt="Chêne-liège" loading="lazy"></div><h3 class="info-title" data-i18n="soc_eco3_title">Le pays du liège</h3><p class="info-desc" data-i18n="soc_eco3">Environ la moitié du liège mondial vient du Portugal. On écorce le chêne-liège à la main tous les 9 ans environ, sans abattre l'arbre.</p></article>
           <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="3"/><circle cx="16" cy="9" r="2.4"/><path d="M2.5 20c0-3.6 2.7-6 6-6s6 2.4 6 6M14.5 20c0-2.8 1.8-4.8 4-4.8s4 2 4 4.8"/></svg></span><h3 class="info-title" data-i18n="soc_eco4_title">Terre d'accueil</h3><p class="info-desc" data-i18n="soc_eco4">Longtemps pays d'émigration, le Portugal attire aujourd'hui : plus de 1,5 million d'étrangers y vivaient fin 2024, surtout des Brésiliens.</p></article>
         </div>
       </div>
@@ -3508,19 +3551,16 @@
     </div>
 
     <div class="view" id="view-culture">
-    <section class="page-hero page-hero--split">
-      <div class="split-grid">
-        <div class="page-hero-content">
-          <div class="page-hero-eyebrow">05 <span>/ 08</span></div>
-          <h1 class="page-hero-title" data-i18n="cult_hero_title">Culture &amp; gastronomie</h1>
-          <p class="page-hero-subtitle" data-i18n="cult_hero_subtitle">Fado, azulejos et saveurs de l'Atlantique</p>
-          <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-          <p class="page-hero-text" data-i18n="cult_hero_text">Une culture façonnée par la mer, la musique et la table, transmise de génération en génération.</p>
-        </div>
-        <div class="split-photo">
-          <span class="split-num">05</span>
-          <img src="images/journey-cult.jpg" alt="Azulejos">
-        </div>
+    <section class="page-hero">
+      <div class="page-hero-media">
+        <img src="images/photos/hero-cult.jpg" alt="Azulejos de la gare de São Bento, Porto">
+      </div>
+      <div class="page-hero-content">
+        <div class="page-hero-eyebrow">05 <span>/ 08</span></div>
+        <h1 class="page-hero-title" data-i18n="cult_hero_title">Culture &amp; gastronomie</h1>
+        <p class="page-hero-subtitle" data-i18n="cult_hero_subtitle">Fado, azulejos et saveurs de l'Atlantique</p>
+        <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+        <p class="page-hero-text" data-i18n="cult_hero_text">Une culture façonnée par la mer, la musique et la table, transmise de génération en génération.</p>
       </div>
     </section>
 
@@ -3531,10 +3571,10 @@
           <h2 class="sec-title" data-i18n="cult_arts_title">L'âme portugaise</h2>
         </div>
         <div class="info-grid">
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="15" r="5"/><circle cx="9" cy="15" r="1.6"/><path d="M12.5 11.5L20 4M18 3l3 3"/></svg></span><h3 class="info-title" data-i18n="cult_a1_title">Le fado</h3><p class="info-desc" data-i18n="cult_a1_desc">Chant mélancolique accompagné de la guitare portugaise. Amália Rodrigues en est la grande voix. Patrimoine immatériel de l'UNESCO depuis 2011.</p></article>
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="3"/><path d="M3 3l4 4M21 3l-4 4M3 21l4-4M21 21l-4-4"/></svg></span><h3 class="info-title" data-i18n="cult_a2_title">Les azulejos</h3><p class="info-desc" data-i18n="cult_a2_desc">Carreaux de faïence peints, souvent bleus et blancs, qui décorent églises, gares et façades.</p></article>
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10a8 8 0 0116 0v11M8 21v-9a4 4 0 018 0v9M2 21h20"/></svg></span><h3 class="info-title" data-i18n="cult_a3_title">L'art manuélin</h3><p class="info-desc" data-i18n="cult_a3_desc">Style de l'époque des Découvertes, riche en motifs marins : cordages, coquillages, sphères armillaires. Exemple : le monastère des Hiéronymites.</p></article>
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5v-15z"/><path d="M4 20.5A2.5 2.5 0 016.5 18H20v3H6.5"/><path d="M9 7h7M9 10.5h5"/></svg></span><h3 class="info-title" data-i18n="cult_a4_title">La littérature</h3><p class="info-desc" data-i18n="cult_a4_desc">Luís de Camões (Les Lusiades, 1572), Fernando Pessoa et José Saramago, prix Nobel de littérature 1998.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/c-fado.jpg" alt="Amália Rodrigues" loading="lazy"></div><h3 class="info-title" data-i18n="cult_a1_title">Le fado</h3><p class="info-desc" data-i18n="cult_a1_desc">Chant mélancolique accompagné de la guitare portugaise. Amália Rodrigues en est la grande voix. Patrimoine immatériel de l'UNESCO depuis 2011.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/c-azulejo.jpg" alt="Azulejos" loading="lazy"></div><h3 class="info-title" data-i18n="cult_a2_title">Les azulejos</h3><p class="info-desc" data-i18n="cult_a2_desc">Carreaux de faïence peints, souvent bleus et blancs, qui décorent églises, gares et façades.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/c-manuelino.jpg" alt="Mosteiro dos Jerónimos" loading="lazy"></div><h3 class="info-title" data-i18n="cult_a3_title">L'art manuélin</h3><p class="info-desc" data-i18n="cult_a3_desc">Style de l'époque des Découvertes, riche en motifs marins : cordages, coquillages, sphères armillaires. Exemple : le monastère des Hiéronymites.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/c-pessoa.jpg" alt="Fernando Pessoa" loading="lazy"></div><h3 class="info-title" data-i18n="cult_a4_title">La littérature</h3><p class="info-desc" data-i18n="cult_a4_desc">Luís de Camões (Les Lusiades, 1572), Fernando Pessoa et José Saramago, prix Nobel de littérature 1998.</p></article>
         </div>
       </div>
     </section>
@@ -3546,22 +3586,19 @@
           <h2 class="sec-title" data-i18n="cult_food_title">Une cuisine simple et généreuse</h2>
           <p class="sec-lead" data-i18n="cult_food_lead">Poisson frais, huile d'olive, ail et bons produits du terroir : la cuisine portugaise se partage en famille.</p>
         </div>
-        <div class="food-grid">
-          <div class="food-photo"><img src="images/journey-gastro.jpg" alt="Gastronomie portugaise"></div>
-          <div class="dish-grid">
-            <div class="dish"><span class="dish-name">Bacalhau</span><p class="dish-desc" data-i18n="cult_d1_desc">La morue, plat national. On dit qu'il existe plus de 365 recettes : une pour chaque jour de l'année&nbsp;!</p></div>
-            <div class="dish"><span class="dish-name">Pastel de nata</span><p class="dish-desc" data-i18n="cult_d2_desc">Petit flan à la crème dans une pâte feuilletée, né au monastère des Hiéronymites à Belém.</p></div>
-            <div class="dish"><span class="dish-name">Francesinha</span><p class="dish-desc" data-i18n="cult_d3_desc">La spécialité de Porto : un sandwich généreux nappé de fromage fondu et d'une sauce épicée.</p></div>
-            <div class="dish"><span class="dish-name">Sardinhas assadas</span><p class="dish-desc" data-i18n="cult_d4_desc">Sardines grillées, reines des fêtes populaires de juin.</p></div>
-            <div class="dish"><span class="dish-name">Caldo verde</span><p class="dish-desc" data-i18n="cult_d5_desc">Soupe au chou vert, à la pomme de terre et au chouriço.</p></div>
-            <div class="dish"><span class="dish-name">Leitão da Bairrada</span><p class="dish-desc" data-i18n="cult_d6_desc">Cochon de lait rôti, spécialité de la Bairrada, tout près de chez moi.</p></div>
-            <div class="dish"><span class="dish-name">Polvo à lagareiro</span><p class="dish-desc" data-i18n="cult_d7_desc">Poulpe rôti au four avec beaucoup d'huile d'olive et d'ail, servi avec des pommes de terre « a murro », écrasées d'un coup de poing.</p></div>
-            <div class="dish"><span class="dish-name">Cataplana</span><p class="dish-desc" data-i18n="cult_d8_desc">Fruits de mer cuits à l'étouffée dans une casserole en cuivre en forme de coquillage : la spécialité de l'Algarve.</p></div>
-            <div class="dish"><span class="dish-name">Bifana</span><p class="dish-desc" data-i18n="cult_d9_desc">Petit pain garni de porc mariné à l'ail et au vin blanc : le casse-croûte préféré des Portugais.</p></div>
-            <div class="dish"><span class="dish-name">Queijo Serra da Estrela</span><p class="dish-desc" data-i18n="cult_d10_desc">Fromage de brebis si crémeux qu'on le mange à la cuillère, fabriqué dans la région de la Serra da Estrela, voisine de Viseu.</p></div>
-            <div class="dish"><span class="dish-name">Alheira</span><p class="dish-desc" data-i18n="cult_d11_desc">Saucisse à base de volaille et de pain. Selon la tradition, des Juifs l'auraient inventée sous l'Inquisition pour faire croire qu'ils mangeaient du porc.</p></div>
-            <div class="dish"><span class="dish-name">Ovos moles de Aveiro</span><p class="dish-desc" data-i18n="cult_d12_desc">Douceur d'Aveiro au jaune d'œuf et au sucre. On raconte que beaucoup de desserts portugais sont nés dans les couvents, où les blancs d'œufs servaient à amidonner le linge.</p></div>
-          </div>
+        <div class="dish-gallery">
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-bacalhau.jpg" alt="Bacalhau" loading="lazy"></div><div class="dish-body"><span class="dish-name">Bacalhau</span><p class="dish-desc" data-i18n="cult_d1_desc">La morue, plat national. On dit qu'il existe plus de 365 recettes : une pour chaque jour de l'année&nbsp;!</p></div></article>
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-nata.jpg" alt="Pastel de nata" loading="lazy"></div><div class="dish-body"><span class="dish-name">Pastel de nata</span><p class="dish-desc" data-i18n="cult_d2_desc">Petit flan à la crème dans une pâte feuilletée, né au monastère des Hiéronymites à Belém.</p></div></article>
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-francesinha.jpg" alt="Francesinha" loading="lazy"></div><div class="dish-body"><span class="dish-name">Francesinha</span><p class="dish-desc" data-i18n="cult_d3_desc">La spécialité de Porto : un sandwich généreux nappé de fromage fondu et d'une sauce épicée.</p></div></article>
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-sardinhas.jpg" alt="Sardinhas assadas" loading="lazy"></div><div class="dish-body"><span class="dish-name">Sardinhas assadas</span><p class="dish-desc" data-i18n="cult_d4_desc">Sardines grillées, reines des fêtes populaires de juin.</p></div></article>
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-caldo.jpg" alt="Caldo verde" loading="lazy"></div><div class="dish-body"><span class="dish-name">Caldo verde</span><p class="dish-desc" data-i18n="cult_d5_desc">Soupe au chou vert, à la pomme de terre et au chouriço.</p></div></article>
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-leitao.jpg" alt="Leitão da Bairrada" loading="lazy"></div><div class="dish-body"><span class="dish-name">Leitão da Bairrada</span><p class="dish-desc" data-i18n="cult_d6_desc">Cochon de lait rôti, spécialité de la Bairrada, tout près de chez moi.</p></div></article>
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-polvo.jpg" alt="Polvo à lagareiro" loading="lazy"></div><div class="dish-body"><span class="dish-name">Polvo à lagareiro</span><p class="dish-desc" data-i18n="cult_d7_desc">Poulpe rôti au four avec beaucoup d'huile d'olive et d'ail, servi avec des pommes de terre « a murro », écrasées d'un coup de poing.</p></div></article>
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-cataplana.jpg" alt="Cataplana" loading="lazy"></div><div class="dish-body"><span class="dish-name">Cataplana</span><p class="dish-desc" data-i18n="cult_d8_desc">Fruits de mer cuits à l'étouffée dans une casserole en cuivre en forme de coquillage : la spécialité de l'Algarve.</p></div></article>
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-bifana.jpg" alt="Bifana" loading="lazy"></div><div class="dish-body"><span class="dish-name">Bifana</span><p class="dish-desc" data-i18n="cult_d9_desc">Petit pain garni de porc mariné à l'ail et au vin blanc : le casse-croûte préféré des Portugais.</p></div></article>
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-queijo.jpg" alt="Queijo Serra da Estrela" loading="lazy"></div><div class="dish-body"><span class="dish-name">Queijo Serra da Estrela</span><p class="dish-desc" data-i18n="cult_d10_desc">Fromage de brebis si crémeux qu'on le mange à la cuillère, fabriqué dans la région de la Serra da Estrela, voisine de Viseu.</p></div></article>
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-alheira.jpg" alt="Alheira" loading="lazy"></div><div class="dish-body"><span class="dish-name">Alheira</span><p class="dish-desc" data-i18n="cult_d11_desc">Saucisse à base de volaille et de pain. Selon la tradition, des Juifs l'auraient inventée sous l'Inquisition pour faire croire qu'ils mangeaient du porc.</p></div></article>
+          <article class="dish-card"><div class="dish-photo"><img src="images/photos/f-ovos.jpg" alt="Ovos moles de Aveiro" loading="lazy"></div><div class="dish-body"><span class="dish-name">Ovos moles de Aveiro</span><p class="dish-desc" data-i18n="cult_d12_desc">Douceur d'Aveiro au jaune d'œuf et au sucre. On raconte que beaucoup de desserts portugais sont nés dans les couvents, où les blancs d'œufs servaient à amidonner le linge.</p></div></article>
         </div>
       </div>
     </section>
@@ -3600,9 +3637,9 @@
           <h2 class="sec-title" data-i18n="cult_fest_title">Juin, le mois de la fête</h2>
         </div>
         <div class="fest-grid">
-          <div class="fest-card"><span class="fest-date" data-i18n="cult_f1_date">10 juin</span><span class="fest-name">Dia de Portugal</span><p class="fest-desc" data-i18n="cult_f1_desc">Fête nationale, en l'honneur de Camões et des communautés portugaises dans le monde.</p></div>
-          <div class="fest-card"><span class="fest-date" data-i18n="cult_f2_date">13 juin</span><span class="fest-name">Santo António</span><p class="fest-desc" data-i18n="cult_f2_desc">Lisbonne fête saint Antoine : sardines grillées, musique et marches populaires dans les quartiers.</p></div>
-          <div class="fest-card"><span class="fest-date" data-i18n="cult_f3_date">23–24 juin</span><span class="fest-name">São João</span><p class="fest-desc" data-i18n="cult_f3_desc">À Porto, toute la ville sort dans la rue, avec des petits marteaux en plastique et des feux d'artifice.</p></div>
+          <div class="fest-card fest-card--photo"><div class="fest-photo"><img src="images/photos/c-diaportugal.jpg" alt="Padrão dos Descobrimentos" loading="lazy"></div><span class="fest-date" data-i18n="cult_f1_date">10 juin</span><span class="fest-name">Dia de Portugal</span><p class="fest-desc" data-i18n="cult_f1_desc">Fête nationale, en l'honneur de Camões et des communautés portugaises dans le monde.</p></div>
+          <div class="fest-card fest-card--photo"><div class="fest-photo"><img src="images/photos/c-santoantonio.jpg" alt="Marchas de Santo António" loading="lazy"></div><span class="fest-date" data-i18n="cult_f2_date">13 juin</span><span class="fest-name">Santo António</span><p class="fest-desc" data-i18n="cult_f2_desc">Lisbonne fête saint Antoine : sardines grillées, musique et marches populaires dans les quartiers.</p></div>
+          <div class="fest-card fest-card--photo"><div class="fest-photo"><img src="images/photos/c-saojoao.jpg" alt="São João, Porto" loading="lazy"></div><span class="fest-date" data-i18n="cult_f3_date">23–24 juin</span><span class="fest-name">São João</span><p class="fest-desc" data-i18n="cult_f3_desc">À Porto, toute la ville sort dans la rue, avec des petits marteaux en plastique et des feux d'artifice.</p></div>
         </div>
       </div>
     </section>
@@ -3621,14 +3658,24 @@
     </div>
 
     <div class="view" id="view-sport">
-    <section class="page-hero page-hero--split">
-      <div class="split-grid">
-        <div class="page-hero-content">
-          <div class="page-hero-eyebrow">06 <span>/ 08</span></div>
-          <h1 class="page-hero-title" data-i18n="sport_hero_title">Sport</h1>
-          <p class="page-hero-subtitle" data-i18n="sport_hero_subtitle">Une passion nationale</p>
-          <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-          <p class="page-hero-text" data-i18n="sport_hero_text">Le football fait vibrer tout le pays, mais le Portugal brille aussi sur les vagues, sur roulettes et sur la piste.</p>
+    <section class="page-hero">
+      <div class="page-hero-media">
+        <img src="images/photos/hero-sport.jpg" alt="Vague géante à Nazaré">
+      </div>
+      <div class="page-hero-content">
+        <div class="page-hero-eyebrow">06 <span>/ 08</span></div>
+        <h1 class="page-hero-title" data-i18n="sport_hero_title">Sport</h1>
+        <p class="page-hero-subtitle" data-i18n="sport_hero_subtitle">Une passion nationale</p>
+        <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+        <p class="page-hero-text" data-i18n="sport_hero_text">Le football fait vibrer tout le pays, mais le Portugal brille aussi sur les vagues, sur roulettes et sur la piste.</p>
+      </div>
+    </section>
+
+    <section class="sec sec--ivory trophy-sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="sport_trophies_eyebrow">LES GRANDES VICTOIRES</span>
+          <h2 class="sec-title" data-i18n="sport_trophies_h">Le palmarès de la Seleção</h2>
         </div>
         <div class="trophy-panel">
           <div class="trophy-head"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v5a4 4 0 01-8 0V4zM8 6H5a2.5 2.5 0 003 4M16 6h3a2.5 2.5 0 01-3 4M12 13v4M8.5 21h7M9.5 17h5l.5 4h-6z"/></svg><span data-i18n="sport_trophies_title">PALMARÈS DE LA SELEÇÃO</span></div>
@@ -3646,15 +3693,15 @@
           <h2 class="sec-title" data-i18n="sport_foot_title">Le roi des sports</h2>
         </div>
         <div class="foot-grid">
-          <article class="cr7-card">
+          <article class="cr7-card"><img class="cr7-photo" src="images/photos/s-ronaldo.jpg" alt="Cristiano Ronaldo" loading="lazy">
             <span class="cr7-num">7</span>
             <span class="cr7-tag">CR7</span>
             <h3 class="cr7-name">Cristiano Ronaldo</h3>
             <p class="cr7-desc" data-i18n="sport_cr7_desc">Né à Funchal (Madère) en 1985. Cinq Ballons d'or et meilleur buteur de l'histoire des sélections nationales.</p>
           </article>
           <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 6.6L21 9.5l-5 4.6L17.5 21 12 17.3 6.5 21 8 14.1l-5-4.6 6.4-.9z"/></svg></span><h3 class="info-title" data-i18n="sport_leg_title">Les légendes</h3><p class="info-desc" data-i18n="sport_leg_desc">Eusébio, Luís Figo (Ballon d'or 2000) et l'entraîneur José Mourinho ont aussi marqué l'histoire du football.</p></article>
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.3 2.4-1.3 3.9H10l-1.3-3.9L12 7.5zM12 3v4.5M20.5 9.5l-4 1.5M3.5 9.5l4 1.5M15 18.5l-1-4.7M9 18.5l1-4.7"/></svg></span><h3 class="info-title">Os três grandes</h3><p class="info-desc" data-i18n="sport_clubs_desc">Benfica et Sporting (Lisbonne), FC Porto : trois clubs qui divisent les familles… dans la bonne humeur&nbsp;!</p></article>
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="5"/><path d="M8.5 11.5L5 3h4l3 6 3-6h4l-3.5 8.5M12 13v4"/></svg></span><h3 class="info-title">Eusébio</h3><p class="info-desc" data-i18n="sport_eusebio">Eusébio, la « Panthère noire », né au Mozambique, meilleur buteur de la Coupe du monde 1966 avec 9 buts.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/s-luz.jpg" alt="Estádio da Luz" loading="lazy"></div><h3 class="info-title">Os três grandes</h3><p class="info-desc" data-i18n="sport_clubs_desc">Benfica et Sporting (Lisbonne), FC Porto : trois clubs qui divisent les familles… dans la bonne humeur&nbsp;!</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/s-eusebio.jpg" alt="Statue d'Eusébio" loading="lazy"></div><h3 class="info-title">Eusébio</h3><p class="info-desc" data-i18n="sport_eusebio">Eusébio, la « Panthère noire », né au Mozambique, meilleur buteur de la Coupe du monde 1966 avec 9 buts.</p></article>
         </div>
       </div>
     </section>
@@ -3666,8 +3713,8 @@
           <h2 class="sec-title" data-i18n="sport_more_title">D'autres fiertés sportives</h2>
         </div>
         <div class="info-grid">
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M3 13c1-5 5-8 10-8 3 0 5 1.5 5 4-2-1-4 0-4 2 0 1.5 1 2 2 2"/></svg></span><h3 class="info-title" data-i18n="sport_m1_title">Surf à Nazaré</h3><p class="info-desc" data-i18n="sport_m1_desc">Des vagues géantes de plus de 25 mètres : des records du monde de surf y ont été établis.</p></article>
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l1 9h7a3 3 0 013 3H5V4z"/><circle cx="8" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg></span><h3 class="info-title" data-i18n="sport_m2_title">Rink-hockey</h3><p class="info-desc" data-i18n="sport_m2_desc">L'une des plus grandes nations du hockey sur patins à roulettes, avec plus de 15 titres de champion du monde.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/hero-sport-card.jpg" alt="Nazaré" loading="lazy"></div><h3 class="info-title" data-i18n="sport_m1_title">Surf à Nazaré</h3><p class="info-desc" data-i18n="sport_m1_desc">Des vagues géantes de plus de 25 mètres : des records du monde de surf y ont été établis.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/s-hockey.jpg" alt="Rink-hockey" loading="lazy"></div><h3 class="info-title" data-i18n="sport_m2_title">Rink-hockey</h3><p class="info-desc" data-i18n="sport_m2_desc">L'une des plus grandes nations du hockey sur patins à roulettes, avec plus de 15 titres de champion du monde.</p></article>
           <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="5"/><path d="M8.5 11.5L5 3h4l3 6 3-6h4l-3.5 8.5M12 13v4"/></svg></span><h3 class="info-title" data-i18n="sport_m3_title">Athlétisme</h3><p class="info-desc" data-i18n="sport_m3_desc">Carlos Lopes (1984) et Rosa Mota (1988) ont remporté l'or olympique au marathon.</p></article>
           <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.3 2.4-1.3 3.9H10l-1.3-3.9L12 7.5zM12 3v4.5M20.5 9.5l-4 1.5M3.5 9.5l4 1.5M15 18.5l-1-4.7M9 18.5l1-4.7"/></svg></span><h3 class="info-title" data-i18n="sport_m4_title">Futsal</h3><p class="info-desc" data-i18n="sport_m4_desc">Champion du monde en 2021 et double champion d'Europe.</p></article>
         </div>
@@ -3688,19 +3735,16 @@
     </div>
 
     <div class="view" id="view-regions">
-    <section class="page-hero page-hero--split">
-      <div class="split-grid">
-        <div class="page-hero-content">
-          <div class="page-hero-eyebrow">07 <span>/ 08</span></div>
-          <h1 class="page-hero-title" data-i18n="reg_hero_title">Régions</h1>
-          <p class="page-hero-subtitle" data-i18n="reg_hero_subtitle">Du Minho à l'Algarve, jusqu'au milieu de l'Atlantique</p>
-          <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-          <p class="page-hero-text" data-i18n="reg_hero_text">Cinq régions sur le continent et deux archipels autonomes : sept visages d'un même pays.</p>
-        </div>
-        <div class="split-photo">
-          <span class="split-num">07</span>
-          <img src="images/journey-reg.jpg" alt="Vallée du Douro">
-        </div>
+    <section class="page-hero">
+      <div class="page-hero-media">
+        <img src="images/photos/hero-reg.jpg" alt="Vignobles en terrasses de la vallée du Douro">
+      </div>
+      <div class="page-hero-content">
+        <div class="page-hero-eyebrow">07 <span>/ 08</span></div>
+        <h1 class="page-hero-title" data-i18n="reg_hero_title">Régions</h1>
+        <p class="page-hero-subtitle" data-i18n="reg_hero_subtitle">Du Minho à l'Algarve, jusqu'au milieu de l'Atlantique</p>
+        <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+        <p class="page-hero-text" data-i18n="reg_hero_text">Cinq régions sur le continent et deux archipels autonomes : sept visages d'un même pays.</p>
       </div>
     </section>
 
@@ -3712,33 +3756,33 @@
         </div>
         <div class="region-grid">
           <article class="region-card">
-            <div class="region-photo"><img src="images/hero-porto.jpg" alt="Porto"><span class="region-num">1</span></div>
+            <div class="region-photo"><img src="images/photos/r-porto.jpg" alt="Porto"><span class="region-num">1</span></div>
             <div class="region-body"><h3 class="region-name" data-i18n="reg_n_name">Le Nord</h3><span class="region-cities">Porto · Braga · Guimarães</span><p class="region-desc" data-i18n="reg_n_desc">Région verte et montagneuse. Guimarães est considérée comme le berceau du Portugal ; la vallée du Douro et ses vignes en terrasses sont classées à l'UNESCO.</p></div>
           </article>
           <article class="region-card region-card--home">
             <div class="region-inner">
-              <div class="region-photo"><img src="images/geo-relief.jpg" alt="Montagnes du centre du Portugal"><span class="region-num">2</span><span class="region-badge" data-i18n="reg_home">CHEZ MOI</span></div>
+              <div class="region-photo"><img src="images/photos/r-coimbra.jpg" alt="Montagnes du centre du Portugal"><span class="region-num">2</span><span class="region-badge" data-i18n="reg_home">CHEZ MOI</span></div>
               <div class="region-body"><h3 class="region-name" data-i18n="reg_c_name">Le Centre</h3><span class="region-cities">Coimbra · Aveiro · Viseu</span><p class="region-desc" data-i18n="reg_c_desc">Terre de contrastes : l'université de Coimbra (1290), Aveiro et ses canaux, la Serra da Estrela… et Caramulo, mon village&nbsp;!</p></div>
             </div>
           </article>
           <article class="region-card">
-            <div class="region-photo"><img src="images/hist-hero.jpg" alt="Belém, Lisbonne" style="object-position:58% 50%;"><span class="region-num">3</span></div>
+            <div class="region-photo"><img src="images/photos/r-lisboa.jpg" alt="Belém, Lisbonne"><span class="region-num">3</span></div>
             <div class="region-body"><h3 class="region-name" data-i18n="reg_l_name">Lisbonne</h3><span class="region-cities">Lisboa · Sintra · Cascais</span><p class="region-desc" data-i18n="reg_l_desc">La capitale, ville aux sept collines au bord du Tage, avec ses trams jaunes, Belém et les palais romantiques de Sintra.</p></div>
           </article>
           <article class="region-card">
-            <div class="region-photo"><img src="images/geo-south.jpg" alt="Plaine de l'Alentejo"><span class="region-num">4</span></div>
+            <div class="region-photo"><img src="images/photos/r-evora.jpg" alt="Plaine de l'Alentejo"><span class="region-num">4</span></div>
             <div class="region-body"><h3 class="region-name" data-i18n="reg_al_name">L'Alentejo</h3><span class="region-cities">Évora · Beja</span><p class="region-desc" data-i18n="reg_al_desc">Vastes plaines dorées, oliviers et chênes-lièges : le Portugal produit environ la moitié du liège mondial. Évora est classée à l'UNESCO.</p></div>
           </article>
           <article class="region-card">
-            <div class="region-photo"><img src="images/journey-moi.jpg" alt="Plage de l'Algarve"><span class="region-num">5</span></div>
+            <div class="region-photo"><img src="images/photos/r-algarve.jpg" alt="Plage de l'Algarve"><span class="region-num">5</span></div>
             <div class="region-body"><h3 class="region-name" data-i18n="reg_ag_name">L'Algarve</h3><span class="region-cities">Faro · Lagos</span><p class="region-desc" data-i18n="reg_ag_desc">Plages de sable doré, falaises spectaculaires et plus de 300 jours de soleil par an.</p></div>
           </article>
           <article class="region-card">
-            <div class="region-photo"><img src="images/geo-acores.jpg" alt="Açores"><span class="region-num">6</span><span class="region-badge region-badge--auto" data-i18n="reg_auto">RÉGION AUTONOME</span></div>
+            <div class="region-photo"><img src="images/photos/r-acores.jpg" alt="Açores"><span class="region-num">6</span><span class="region-badge region-badge--auto" data-i18n="reg_auto">RÉGION AUTONOME</span></div>
             <div class="region-body"><h3 class="region-name" data-i18n="reg_az_name">Les Açores</h3><span class="region-cities">Ponta Delgada</span><p class="region-desc" data-i18n="reg_az_desc">Neuf îles volcaniques au milieu de l'Atlantique : lacs de cratère, sources chaudes et le Pico, plus haut sommet du pays.</p></div>
           </article>
           <article class="region-card">
-            <div class="region-photo"><img src="images/geo-madeira.jpg" alt="Madère"><span class="region-num">7</span><span class="region-badge region-badge--auto" data-i18n="reg_auto">RÉGION AUTONOME</span></div>
+            <div class="region-photo"><img src="images/photos/r-madeira.jpg" alt="Madère"><span class="region-num">7</span><span class="region-badge region-badge--auto" data-i18n="reg_auto">RÉGION AUTONOME</span></div>
             <div class="region-body"><h3 class="region-name" data-i18n="reg_m_name">Madère</h3><span class="region-cities">Funchal</span><p class="region-desc" data-i18n="reg_m_desc">L'« île de l'éternel printemps » : levadas, fleurs, vin de Madère… et ville natale de Cristiano Ronaldo.</p></div>
           </article>
         </div>
@@ -3752,10 +3796,13 @@
           <h2 class="sec-title" data-i18n="reg_car_title">Caramulo, la montagne de l'air pur</h2>
           <p class="sec-lead" data-i18n="reg_car_text">Dans les années 1920, le docteur Jerónimo de Lacerda fonde à Caramulo une station de sanatoriums : on venait de tout le pays soigner la tuberculose grâce à l'air pur de la montagne. Plus tard, ses fils créent le Musée du Caramulo, qui réunit une collection d'art — de l'Égypte ancienne à Picasso — et une magnifique collection de voitures et de motos anciennes.</p>
         </div>
+        <div class="car-side">
+          <div class="car-photos"><img src="images/photos/r-caramulo.jpg" alt="Serra do Caramulo" loading="lazy"><img src="images/photos/r-caramulo2.jpg" alt="Museu do Caramulo" loading="lazy"></div>
         <div class="car-facts">
           <div class="car-fact"><span class="car-num">1 076 <small>m</small></span><span class="car-label" data-i18n="reg_car_f1">Altitude du Caramulinho, le sommet de la serra</span></div>
           <div class="car-fact"><span class="car-num">1920s</span><span class="car-label" data-i18n="reg_car_f2">Fondation du sanatorium</span></div>
           <div class="car-fact"><span class="car-num">1953</span><span class="car-label" data-i18n="reg_car_f3">Fondation du Musée du Caramulo</span></div>
+        </div>
         </div>
       </div>
     </section>
@@ -3774,25 +3821,23 @@
     </div>
 
     <div class="view" id="view-conclusion">
-    <section class="page-hero page-hero--split">
-      <div class="split-grid">
-        <div class="page-hero-content">
-          <div class="page-hero-eyebrow">08 <span>/ 08</span></div>
-          <h1 class="page-hero-title" data-i18n="concl_hero_title">Conclusion</h1>
-          <p class="page-hero-subtitle" data-i18n="concl_hero_subtitle">Ce que le Portugal représente pour moi</p>
-          <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-          <p class="page-hero-text" data-i18n="concl_hero_text">Un voyage à travers un pays… et à travers mon histoire.</p>
-        </div>
-        <div class="split-photo">
-          <span class="split-num">08</span>
-          <img src="images/luis.jpg" alt="Luís Marques">
-        </div>
+    <section class="page-hero">
+      <div class="page-hero-media">
+        <img src="images/photos/hero-concl.jpg" alt="Cabo da Roca">
+      </div>
+      <div class="page-hero-content">
+        <div class="page-hero-eyebrow">08 <span>/ 08</span></div>
+        <h1 class="page-hero-title" data-i18n="concl_hero_title">Conclusion</h1>
+        <p class="page-hero-subtitle" data-i18n="concl_hero_subtitle">Ce que le Portugal représente pour moi</p>
+        <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+        <p class="page-hero-text" data-i18n="concl_hero_text">Un voyage à travers un pays… et à travers mon histoire.</p>
       </div>
     </section>
 
     <section class="sec sec--white">
       <div class="wrap">
         <div class="sec-head">
+          <img class="concl-portrait" src="images/luis.jpg" alt="Luís Marques">
           <span class="sec-eyebrow" data-i18n="concl_eyebrow">POUR MOI, LE PORTUGAL, C'EST…</span>
         </div>
         <div class="pillar-grid">
@@ -3805,7 +3850,7 @@
 
     <section class="bridge-section">
       <div class="bridge-media">
-        <img src="images/bridge-alps.jpg" alt="Montagnes suisses">
+        <img src="images/photos/bridge-alps.jpg" alt="Montagnes suisses">
         <div class="bridge-overlay"></div>
       </div>
       <div class="wrap bridge-content">
@@ -3844,6 +3889,95 @@
     </section>
     </div>
   </main>
+
+  <footer class="credits">
+    <div class="wrap">
+      <details>
+        <summary data-i18n="credits_title">Crédits photos</summary>
+        <p style="margin-top:10px;" data-i18n="credits_intro">Photos issues de Wikimedia Commons, sous licences libres. Merci à leurs auteurs.</p>
+        <ol>
+          <li><a href="https://commons.wikimedia.org/wiki/File:CH.VS.Zermatt_Sunnegga_Grindjisee_Matterhorn_9034_16x9-R_16K.jpg" target="_blank" rel="noopener">CH.VS.Zermatt Sunnegga Grindjisee Matterhorn 9034 16x9-R 16K.jpg</a> — NOTE: This image is a panorama  consisting of multiple frame, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Azulejo_facade_of_the_Capela_das_Almas_in_Porto_(3).jpg" target="_blank" rel="noopener">Azulejo facade of the Capela das Almas in Porto (3).jpg</a> — Krzysztof Golik, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Belem_-_Padrao_dos_Descobrimentos.jpg" target="_blank" rel="noopener">Belem - Padrao dos Descobrimentos.jpg</a> — Ingo Mehling, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:ArT_of_opEN_doors_project_-_Travessa_das_Torres_02.jpg" target="_blank" rel="noopener">ArT of opEN doors project - Travessa das Torres 02.jpg</a> — H. Zell, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Cloister_of_the_Jerónimos_Monastery_in_Belém,_Lisbon,_20250604_1313_9206.jpg" target="_blank" rel="noopener">Cloister of the Jerónimos Monastery in Belém, Lisbon, 20250604 1313 9206.jpg</a> — Jakub Hałun, CC BY 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Lisboa-Pessoa-A_Brasileira-1.jpg" target="_blank" rel="noopener">Lisboa-Pessoa-A Brasileira-1.jpg</a> — Nol Aders, CC BY 2.5</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Marchas_Populares_de_Lisboa_(4).JPG" target="_blank" rel="noopener">Marchas Populares de Lisboa (4).JPG</a> — Béria Lima de Rodríguez, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Festa_de_Sao_Joao_(Porto).jpg" target="_blank" rel="noopener">Festa de Sao Joao (Porto).jpg</a> — Hugo Cadavez from Portugal, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:A_BRASILEIRA_DO_CHIADO.jpg" target="_blank" rel="noopener">A BRASILEIRA DO CHIADO.jpg</a> — VDT2021, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Cork_Trees_Ubrique.jpg" target="_blank" rel="noopener">Cork Trees Ubrique.jpg</a> — Wavering, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Fatima_BW_2018-10-07_17-40-47.jpg" target="_blank" rel="noopener">Fatima BW 2018-10-07 17-40-47.jpg</a> — Berthold Werner, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Serra_Branca_wind_farm,_Graciosa_Island,_Azores,_Portugal_(PPL1-Corrected)_julesvernex2-3.jpg" target="_blank" rel="noopener">Serra Branca wind farm, Graciosa Island, Azores, Portugal (PPL1-Corrected) julesvernex2-3.jpg</a> — Jules Verne Times Two, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Alheira_Portuguese_dish_(2).jpg" target="_blank" rel="noopener">Alheira Portuguese dish (2).jpg</a> — Dolon Prova, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Bacalhau_a_bras_en_Mil_Estorias_(52214548936).jpg" target="_blank" rel="noopener">Bacalhau a bras en Mil Estorias (52214548936).jpg</a> — JJ Merelo, CC BY-SA 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Delicious_Bifana_Sandwich,_As_Bifana_do_Afonso_(49652989992).jpg" target="_blank" rel="noopener">Delicious Bifana Sandwich, As Bifana do Afonso (49652989992).jpg</a> — Sonse, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Caldo_verde.jpg" target="_blank" rel="noopener">Caldo verde.jpg</a> — Mateus Hidalgo, CC BY-SA 2.5 br</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Seafood_Cataplana_at_World_Heritage_Cuisine_Summit_&_Food_Festival_2018_(Day_2)_-_20.jpg" target="_blank" rel="noopener">Seafood Cataplana at World Heritage Cuisine Summit &amp; Food Festival 2018 (Day 2) - 20.jpg</a> — Satdeep Gill, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Francesinha_encaixados_porto_portugal.jpg" target="_blank" rel="noopener">Francesinha encaixados porto portugal.jpg</a> — Ih8connecticut, CC0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Leitão_à_Bairrada.JPG" target="_blank" rel="noopener">Leitão à Bairrada.JPG</a> — Adriao, CC BY 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Pasteis_de_nata_(Lissabon_2016)_(26069956686).jpg" target="_blank" rel="noopener">Pasteis de nata (Lissabon 2016) (26069956686).jpg</a> — Paul Arps from The Netherlands, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Ovos_Moles_Peixinho.jpg" target="_blank" rel="noopener">Ovos Moles Peixinho.jpg</a> — Luísa Paulos, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Polvo_a_lagareiro.jpg" target="_blank" rel="noopener">Polvo a lagareiro.jpg</a> — Exilexi, CC BY 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Queijo_Serra_da_Estrela_DOP_-_Marca_de_caseína.jpg" target="_blank" rel="noopener">Queijo Serra da Estrela DOP - Marca de caseína.jpg</a> — Hipersyl, CC0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Grilled_Sardines_5.50€_Marisqueira_O_Varino_Nazaré_(3785526688).jpg" target="_blank" rel="noopener">Grilled Sardines 5.50€ Marisqueira O Varino Nazaré (3785526688).jpg</a> — Yusuke Kawasaki from Tokyo, Japan, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Lago_verde,_isla_de_San_Miguel,_Azores,_Portugal,_2020-07-29,_DD_16.jpg" target="_blank" rel="noopener">Lago verde, isla de San Miguel, Azores, Portugal, 2020-07-29, DD 16.jpg</a> — Diego Delso, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Köppen_climate_types_of_Iberia.png" target="_blank" rel="noopener">Köppen climate types of Iberia.png</a> — Adam Peterson, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:PSL_-_Cliffs_and_sea_stacks_at_Ponta_de_São_Lourenço,_Madeira,_2012.jpg" target="_blank" rel="noopener">PSL - Cliffs and sea stacks at Ponta de São Lourenço, Madeira, 2012.jpg</a> — Josep M. Gracia, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Peneda-Geres_NP_from_Tibo_Lookout_(2).jpg" target="_blank" rel="noopener">Peneda-Geres NP from Tibo Lookout (2).jpg</a> — Krzysztof Golik, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Serra_da_Estrela-_Brumas_Matinais.jpg" target="_blank" rel="noopener">Serra da Estrela- Brumas Matinais.jpg</a> — Sara Bento Photography, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Rede_Natura_2000_-_Sítio_do_Cabeção_-_05.jpg" target="_blank" rel="noopener">Rede Natura 2000 - Sítio do Cabeção - 05.jpg</a> — Joao 1968, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Volcanic_cliffs_of_Capelinhos,_Faial_Island,_2014.jpg" target="_blank" rel="noopener">Volcanic cliffs of Capelinhos, Faial Island, 2014.jpg</a> — Josep M. Gracia, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Cabo_da_Roca_at_sunset,_Portugal.jpg" target="_blank" rel="noopener">Cabo da Roca at sunset, Portugal.jpg</a> — Aurelia Teslaru, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Porto_April_2019-5.jpg" target="_blank" rel="noopener">Porto April 2019-5.jpg</a> — Alvesgaspar, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Praia_da_Marinha_(2012-09-27),_by_Klugschnacker_in_Wikipedia_(69).JPG" target="_blank" rel="noopener">Praia da Marinha (2012-09-27), by Klugschnacker in Wikipedia (69).JPG</a> — Klugschnacker, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Lisbon_Torre_de_Bel%C3%A9m_BW_2018-10-03_16-33-21.jpg" target="_blank" rel="noopener">Lisbon Torre de Belém BW 2018-10-03 16-33-21.jpg</a> — Berthold Werner, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:D%C3%A4mmerung_am_Rio_Douro.jpg" target="_blank" rel="noopener">Dämmerung am Rio Douro.jpg</a> — Wurminister, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Assembleia_da_República_(Portugal)_Palácio_de_São_Bento,_Lisboa.JPG" target="_blank" rel="noopener">Assembleia da República (Portugal) Palácio de São Bento, Lisboa.JPG</a> — Jose Manuel, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Terraced_vineyards_in_the_douro_valley.jpg" target="_blank" rel="noopener">Terraced vineyards in the douro valley.jpg</a> — Rosino, CC BY-SA 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Lissabon_-_Alfama_-_Largo_de_Santa_Luzia_-_Streetcar_-_2.jpg" target="_blank" rel="noopener">Lissabon - Alfama - Largo de Santa Luzia - Streetcar - 2.jpg</a> — Ingo Mehling, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Praia_do_Norte,Nazaré_-21_(50656467151).jpg" target="_blank" rel="noopener">Praia do Norte,Nazaré -21 (50656467151).jpg</a> — Luis Ascenso from Lisbon, Portugal, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Praia_do_Norte_beach_-_High_waves_-_Nazaré_-_Portugal_(39615885300).jpg" target="_blank" rel="noopener">Praia do Norte beach - High waves - Nazaré - Portugal (39615885300).jpg</a> — Luis Ascenso from Lisbon, Portugal, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Portuguese_flag_on_the_"Netos_de_José_Augusto"_whale_watching_boat,_São_Miguel_Island,_Azores,_Portugal_(PPL1-Corrected)-2.jpg" target="_blank" rel="noopener">Portuguese flag on the &quot;Netos de José Augusto&quot; whale watching boat, São Miguel Island, Azores, Portugal (PPL1-Corrected)-2.jpg</a> — Jules Verne Times Two, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Castelo_de_Guimaraes_(1).jpg" target="_blank" rel="noopener">Castelo de Guimaraes (1).jpg</a> — Krzysztof Golik, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Descobrimentos_e_explorações_portuguesesV2.png" target="_blank" rel="noopener">Descobrimentos e explorações portuguesesV2.png</a> — Descobrimentos_e_explorações_portugueses.png: *Portuguese_discoveries_and_explor, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Jacob_Huysmans_-_Queen_Catherine_of_Braganza_as_Saint_Catherine_of_Alexandria.jpg" target="_blank" rel="noopener">Jacob Huysmans - Queen Catherine of Braganza as Saint Catherine of Alexandria.jpg</a> — Jacob Huysmans, Public domain</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Casamento_João_I_e_Filipa_Lencastre.JPG" target="_blank" rel="noopener">Casamento João I e Filipa Lencastre.JPG</a> — , Public domain</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Desfile_25_de_Abril_2024_em_Lisboa_9.jpg" target="_blank" rel="noopener">Desfile 25 de Abril 2024 em Lisboa 9.jpg</a> — Anita Braga, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Palácio_de_Belém_-_Lisboa_-_Portugal_(5284626059).jpg" target="_blank" rel="noopener">Palácio de Belém - Lisboa - Portugal (5284626059).jpg</a> — Vitor Oliveira from Torres Vedras, PORTUGAL, CC BY-SA 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Lisbon_Praça_do_Comércio_BW_2018-10-08_17-42-58.jpg" target="_blank" rel="noopener">Lisbon Praça do Comércio BW 2018-10-08 17-42-58.jpg</a> — Berthold Werner, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Lisboa_São_Bento_Palace_(39785046844).jpg" target="_blank" rel="noopener">Lisboa São Bento Palace (39785046844).jpg</a> — Matthew Black from London, UK, CC BY-SA 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Tribunal_Constitucional_Portugal.jpg" target="_blank" rel="noopener">Tribunal Constitucional Portugal.jpg</a> — Cruks, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Igreja_do_Carmo_(Porto)_2.jpg" target="_blank" rel="noopener">Igreja do Carmo (Porto) 2.jpg</a> — T meltzer, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Ponta_da_Piedade,_Lagos_(20680152686).jpg" target="_blank" rel="noopener">Ponta da Piedade, Lagos (20680152686).jpg</a> — Paul Wilkinson from London, United Kingdom, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Monasterio_de_los_Jerónimos,_Lisboa,_Portugal,_2022-07-24,_DD_38-40_HDR.jpg" target="_blank" rel="noopener">Monasterio de los Jerónimos, Lisboa, Portugal, 2022-07-24, DD 38-40 HDR.jpg</a> — Diego Delso, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Serra_do_Caramulo_-_Portugal_(6929735785).jpg" target="_blank" rel="noopener">Serra do Caramulo - Portugal (6929735785).jpg</a> — Vitor Oliveira from Torres Vedras, PORTUGAL, CC BY-SA 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Number_28_tram,_Calçada_de_São_Francisco,_Lisbon,_Portugal_julesvernex2.jpg" target="_blank" rel="noopener">Number 28 tram, Calçada de São Francisco, Lisbon, Portugal julesvernex2.jpg</a> — Jules Verne Times Two
+
+http://julesvernex2.com, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Pico_Volcano.jpg" target="_blank" rel="noopener">Pico Volcano.jpg</a> — The Cosmonaut, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Benagil_Cave_(10).jpg" target="_blank" rel="noopener">Benagil Cave (10).jpg</a> — Joseolgon, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Serra_do_Caramulo_-_Portugal_(4261555151).jpg" target="_blank" rel="noopener">Serra do Caramulo - Portugal (4261555151).jpg</a> — Vitor Oliveira from Torres Vedras, PORTUGAL, CC BY-SA 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Museu_do_Caramulo_-_Portugal_(4684593349).jpg" target="_blank" rel="noopener">Museu do Caramulo - Portugal (4684593349).jpg</a> — Vitor Oliveira from Torres Vedras, PORTUGAL, CC BY-SA 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Coimbra_BW_2018-10-06_10-11-56.jpg" target="_blank" rel="noopener">Coimbra BW 2018-10-06 10-11-56.jpg</a> — Berthold Werner, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Portugal_Vallée_du_Douro_(8121915978).jpg" target="_blank" rel="noopener">Portugal Vallée du Douro (8121915978).jpg</a> — peuplier from Switzerland Suisse romande, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Roman_Temple_Evora_Portugal_01.jpg" target="_blank" rel="noopener">Roman Temple Evora Portugal 01.jpg</a> — Norbert Nagel, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:View_from_Miradouro_de_Santa_Luzia,_Lisbon,_20250603_2016_9045.jpg" target="_blank" rel="noopener">View from Miradouro de Santa Luzia, Lisbon, 20250603 2016 9045.jpg</a> — Jakub Hałun, CC BY 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:View_from_Miradouro_do_Pico_do_Arieiro_-_Madeira_01.jpg" target="_blank" rel="noopener">View from Miradouro do Pico do Arieiro - Madeira 01.jpg</a> — H. Zell, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Rabelo_boats_and_Ribeira_seen_from_Cais_de_Gaia,_20250605_1623_9879.jpg" target="_blank" rel="noopener">Rabelo boats and Ribeira seen from Cais de Gaia, 20250605 1623 9879.jpg</a> — Jakub Hałun, CC BY 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Estatua_de_Eusébio,_Estádio_da_Luz,_Lisboa_01.jpg" target="_blank" rel="noopener">Estatua de Eusébio, Estádio da Luz, Lisboa 01.jpg</a> — GualdimG, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Seleção_Portuguesa_de_Hóquei_em_Patins_-_01.jpg" target="_blank" rel="noopener">Seleção Portuguesa de Hóquei em Patins - 01.jpg</a> — Carlos Delgado, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:LuzLissabon.jpg" target="_blank" rel="noopener">LuzLissabon.jpg</a> — Massimo Catarinella, CC BY 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Argentine_-_Portugal_-_Cristiano_Ronaldo.jpg" target="_blank" rel="noopener">Argentine - Portugal - Cristiano Ronaldo.jpg</a> — Ludovic Péron, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:1755_Lisbon_earthquake.jpg" target="_blank" rel="noopener">1755 Lisbon earthquake.jpg</a> — Unknown authorUnknown author, Public domain</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Cantino_planisphere_(1502).jpg" target="_blank" rel="noopener">Cantino planisphere (1502).jpg</a> — anonymous Portuguese (1502), Public domain</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Restos_de_la_Catedral_de_San_Pablo,_Macao,_2013-08-08,_DD_05.jpg" target="_blank" rel="noopener">Restos de la Catedral de San Pablo, Macao, 2013-08-08, DD 05.jpg</a> — Diego Delso, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Aristides_de_Sousa_Mendes,_1940.jpg" target="_blank" rel="noopener">Aristides de Sousa Mendes, 1940.jpg</a> — Unknown photographer, Public domain</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Nanban_Scene_–_Arrival_of_the_Portuguese_in_Japan.jpg" target="_blank" rel="noopener">Nanban Scene – Arrival of the Portuguese in Japan.jpg</a> — Jorge Patrão, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:António_de_Oliveira_Salazar_portrait_(by_Manuel_Alves_San_Payo)_–_Lisboa.jpg" target="_blank" rel="noopener">António de Oliveira Salazar portrait (by Manuel Alves San Payo) – Lisboa.jpg</a> — Manuel Alves de San Payo, Public domain</li>
+        </ol>
+      </details>
+    </div>
+  </footer>
 
   <script>
     const nav = document.getElementById('siteNav');
@@ -4268,7 +4402,7 @@
   "hist_s4_cap": "Aristides de Sousa Mendes (1885–1954).",
   "hist_s5_title": "48 ans de dictature",
   "hist_s5_text": "De 1926 à 1974, le Portugal vit sous une dictature, dirigée surtout par António de Oliveira Salazar : censure, police politique (la PIDE), prisonniers politiques. Le pays reste pauvre et isolé. Dans les années 1960, des centaines de milliers de Portugais émigrent, souvent clandestinement — « a salto » — vers la France.",
-  "hist_s5_cap": "Bidonville d'immigrés portugais à Champigny-sur-Marne, près de Paris, dans les années 1960.",
+  "hist_s5_cap": "António de Oliveira Salazar, à la tête du pays de 1932 à 1968.",
   "hist_s6_title": "La fin d'un empire",
   "hist_s6_text": "De 1961 à 1974, le Portugal mène une guerre en Angola, en Guinée-Bissau et au Mozambique pour garder ses colonies. Après la Révolution des Œillets, elles deviennent indépendantes et des centaines de milliers de « retornados » rentrent au Portugal. En 1999, la remise de Macao à la Chine met fin à près de six siècles d'empire.",
   "hist_s6_cap": "Macao, dernier territoire portugais d'outre-mer, rendu à la Chine en 1999.",
@@ -4276,7 +4410,7 @@
   "inst_p2_place": "Palais de São Bento, siège du Parlement",
   "inst_p3_place": "Place du Commerce : des ministères occupent encore ses arcades",
   "inst_p4_place": "Tribunal constitutionnel, Lisbonne",
-  "inst_rev_cap": "Lisbonne, 25 avril 1974 : la foule entoure les soldats de la révolution.",
+  "inst_rev_cap": "Lisbonne, 25 avril 2024 : 50 ans après, la foule défile encore : « Ils ont planté en nous la liberté ».",
   "inst_pio_eyebrow": "UN PAYS PIONNIER",
   "inst_pio_title": "Des choix qui ont fait école",
   "inst_pio1": "L'un des premiers pays au monde à abolir la peine de mort pour les crimes civils. Victor Hugo félicite alors le Portugal d'être à l'avant-garde de l'Europe.",
@@ -4687,7 +4821,7 @@
   "hist_s4_cap": "Aristides de Sousa Mendes (1885–1954).",
   "hist_s5_title": "48 anni di dittatura",
   "hist_s5_text": "Dal 1926 al 1974 il Portogallo vive sotto una dittatura, guidata soprattutto da António de Oliveira Salazar: censura, polizia politica (la PIDE), prigionieri politici. Il paese resta povero e isolato. Negli anni '60 centinaia di migliaia di portoghesi emigrano, spesso clandestinamente — «a salto» — verso la Francia.",
-  "hist_s5_cap": "Baraccopoli di immigrati portoghesi a Champigny-sur-Marne, vicino a Parigi, negli anni '60.",
+  "hist_s5_cap": "António de Oliveira Salazar, alla guida del paese dal 1932 al 1968.",
   "hist_s6_title": "La fine di un impero",
   "hist_s6_text": "Dal 1961 al 1974 il Portogallo combatte una guerra in Angola, Guinea-Bissau e Mozambico per mantenere le sue colonie. Dopo la Rivoluzione dei Garofani diventano indipendenti e centinaia di migliaia di «retornados» rientrano in Portogallo. Nel 1999 la restituzione di Macao alla Cina chiude quasi sei secoli di impero.",
   "hist_s6_cap": "Macao, ultimo territorio portoghese d'oltremare, restituito alla Cina nel 1999.",
@@ -4695,7 +4829,7 @@
   "inst_p2_place": "Palazzo di São Bento, sede del Parlamento",
   "inst_p3_place": "Piazza del Commercio: alcuni ministeri occupano ancora i suoi portici",
   "inst_p4_place": "Corte costituzionale, Lisbona",
-  "inst_rev_cap": "Lisbona, 25 aprile 1974: la folla circonda i soldati della rivoluzione.",
+  "inst_rev_cap": "Lisbona, 25 aprile 2024: 50 anni dopo, la folla sfila ancora: «Hanno piantato in noi la libertà».",
   "inst_pio_eyebrow": "UN PAESE PIONIERE",
   "inst_pio_title": "Scelte che hanno fatto scuola",
   "inst_pio1": "Uno dei primi paesi al mondo ad abolire la pena di morte per i reati civili. Victor Hugo si congratula con il Portogallo per essere all'avanguardia in Europa.",
@@ -5106,7 +5240,7 @@
   "hist_s4_cap": "Aristides de Sousa Mendes (1885–1954).",
   "hist_s5_title": "48 Jahre Diktatur",
   "hist_s5_text": "Von 1926 bis 1974 lebt Portugal unter einer Diktatur, vor allem unter António de Oliveira Salazar: Zensur, politische Polizei (PIDE), politische Gefangene. Das Land bleibt arm und isoliert. In den 1960er-Jahren wandern Hunderttausende Portugiesen aus, oft heimlich – «a salto» – nach Frankreich.",
-  "hist_s5_cap": "Barackensiedlung portugiesischer Einwanderer in Champigny-sur-Marne bei Paris, 1960er-Jahre.",
+  "hist_s5_cap": "António de Oliveira Salazar, an der Spitze des Landes von 1932 bis 1968.",
   "hist_s6_title": "Das Ende eines Weltreichs",
   "hist_s6_text": "Von 1961 bis 1974 führt Portugal in Angola, Guinea-Bissau und Mosambik Krieg, um seine Kolonien zu behalten. Nach der Nelkenrevolution werden sie unabhängig, und Hunderttausende «Retornados» kehren nach Portugal zurück. 1999 beendet die Rückgabe Macaus an China fast sechs Jahrhunderte Weltreich.",
   "hist_s6_cap": "Macau, das letzte portugiesische Überseegebiet, 1999 an China zurückgegeben.",
@@ -5114,7 +5248,7 @@
   "inst_p2_place": "São-Bento-Palast, Sitz des Parlaments",
   "inst_p3_place": "Praça do Comércio: In ihren Arkaden sitzen noch heute Ministerien",
   "inst_p4_place": "Verfassungsgericht, Lissabon",
-  "inst_rev_cap": "Lissabon, 25. April 1974: Die Menge umringt die Soldaten der Revolution.",
+  "inst_rev_cap": "Lissabon, 25. April 2024: 50 Jahre später zieht die Menge noch immer durch die Strassen: «Sie haben in uns die Freiheit gepflanzt».",
   "inst_pio_eyebrow": "EIN LAND DER PIONIERE",
   "inst_pio_title": "Entscheidungen mit Vorbildwirkung",
   "inst_pio1": "Eines der ersten Länder der Welt, das die Todesstrafe für zivile Verbrechen abschafft. Victor Hugo lobt Portugal damals als Vorreiter Europas.",
