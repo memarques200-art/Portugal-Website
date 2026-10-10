@@ -2844,6 +2844,28 @@
   .rev-song small{display:block; font-family:'Inter', sans-serif; font-style:normal; font-size:12.5px; color:rgba(252,251,248,.75); margin-top:3px;}
   .rev-text{color:var(--warm-white); font-size:16.5px;}
 
+  /* ---------- Caramulo Motorfestival ---------- */
+  .cmf-sec{position:relative; padding:110px 0 60px; overflow:hidden; color:#fff;}
+  .cmf-media{position:absolute; inset:0;}
+  .cmf-media img{width:100%; height:100%; object-fit:cover; display:block;}
+  .cmf-media::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(20,8,8,.92) 0%, rgba(40,10,10,.78) 40%, rgba(40,10,10,.25) 75%, rgba(0,0,0,.1) 100%);}
+  .cmf-grid{position:relative; z-index:1; display:grid; grid-template-columns:1.25fr .75fr; gap:48px; align-items:center;}
+  .cmf-card{max-width:600px;}
+  .cmf-card .sec-eyebrow{color:#F2C14E;}
+  .cmf-title{font-family:'Inter', sans-serif; font-weight:800; font-style:italic; text-transform:uppercase; letter-spacing:-.01em; font-size:clamp(38px, 5vw, 60px); line-height:1; margin:6px 0 20px; color:#fff;}
+  .cmf-text{font-size:17px; line-height:1.75; color:#fff; font-weight:500; margin-bottom:24px;}
+  .cmf-facts{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:26px;}
+  .cmf-facts div{flex:1 1 140px; background:rgba(168,50,50,.85); border-radius:8px; padding:12px 14px;}
+  .cmf-facts b{display:block; font-size:28px; font-weight:800; line-height:1.1;}
+  .cmf-facts span{font-size:11px; font-weight:700; letter-spacing:.08em;}
+  .cmf-btn{display:inline-block; background:#fff; color:var(--red); font-weight:800; font-size:14px; padding:13px 22px; border-radius:999px; transition:transform .2s ease;}
+  .cmf-btn:hover{transform:translateY(-2px);}
+  .cmf-poster{width:100%; max-width:420px; justify-self:end; border-radius:8px; box-shadow:0 30px 60px -20px rgba(0,0,0,.7); border:4px solid #fff; transform:rotate(2deg);}
+  .cmf-cap{position:relative; z-index:1; text-align:right; padding:20px 24px 0; font-size:12.5px; color:rgba(255,255,255,.8);}
+  .pas-photo--red{background:#C8102E;}
+  .pas-photo--red img{object-fit:contain;}
+  @media (max-width:900px){ .cmf-grid{grid-template-columns:1fr;} .cmf-poster{justify-self:start; max-width:320px;} .cmf-media::after{background:rgba(30,8,8,.8);} }
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -4112,6 +4134,25 @@
       </div>
     </section>
 
+        <section class="cmf-sec">
+      <div class="cmf-media"><img src="images/luis/motorfestival.jpg" alt="Caramulo Motorfestival" loading="lazy"></div>
+      <div class="wrap cmf-grid">
+        <div class="cmf-card">
+          <span class="sec-eyebrow" data-i18n="cmf_eyebrow">CHAQUE SEPTEMBRE À CARAMULO</span>
+          <h2 class="cmf-title">Caramulo Motorfestival</h2>
+          <p class="cmf-text" data-i18n="cmf_text">Chaque année début septembre, Caramulo devient la capitale portugaise du moteur. Organisé par le Musée du Caramulo, le Caramulo Motorfestival est la plus grande fête automobile du Portugal : la Rampa Histórica, une course de côte de voitures anciennes et de compétition sur les routes de la serra, des défilés, des expositions et même un air show. L'entrée est libre ! En 2025, le festival a fêté sa 20<sup>e</sup> édition.</p>
+          <div class="cmf-facts">
+            <div><b>20<sup>e</sup></b><span data-i18n="cmf_f1">ÉDITION EN 2025</span></div>
+            <div><b>≈ 140</b><span data-i18n="cmf_f2">ÉQUIPES SUR LA RAMPA HISTÓRICA</span></div>
+            <div><b>40 000+</b><span data-i18n="cmf_f3">VISITEURS ATTENDUS</span></div>
+          </div>
+          <a class="cmf-btn" href="https://www.caramulo-motorfestival.com/pt/homepage/" target="_blank" rel="noopener"><span data-i18n="cmf_btn">Site officiel du festival</span> →</a>
+        </div>
+        <img class="cmf-poster" src="images/luis/motorfestival-affiche.jpg" alt="Affiche Caramulo Motorfestival 2025" loading="lazy">
+      </div>
+      <p class="cmf-cap" data-i18n="cmf_cap">Les supercars défilent dans les rues de Caramulo.</p>
+    </section>
+
     <section class="cta-section">
       <div class="wrap cta-content">
         <h3 class="cta-title" data-i18n="reg_cta_title">Et pour finir… ce que le Portugal représente pour moi.</h3>
@@ -4186,6 +4227,7 @@
           <article class="pas-card pas-card--tall" data-opt="parapente.jpg"><div class="pas-photo"><img src="images/luis/parapente.jpg" alt="Parapente au-dessus du Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_para_t">Le parapente</h3><p class="pas-text" data-i18n="concl_p_para">Récemment, j'ai volé en parapente au-dessus du lac Léman. Une vue inoubliable&nbsp;!</p></div></article>
           <article class="pas-card " data-opt="moto-garage.jpg"><div class="pas-photo"><img src="images/luis/moto-garage.jpg" alt="Moto en réparation" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_meca_t">La mécanique</h3><p class="pas-text" data-i18n="concl_p_meca">J'adore modifier ma moto et la réparer moi-même : chaque détail compte&nbsp;!</p></div></article>
           <article class="pas-card " data-opt="jura.jpg"><div class="pas-photo"><img src="images/luis/jura.jpg" alt="Le Jura" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_sort_t">Les sorties</h3><p class="pas-text" data-i18n="concl_p_sort">Découvrir de nouveaux endroits, comme le Jura, où je suis allé voir la course de côte automobile de Saint-Ursanne.</p></div></article>
+          <article class="pas-card" data-opt="motorfestival-affiche.jpg"><div class="pas-photo pas-photo--red"><img src="images/luis/motorfestival-affiche.jpg" alt="Caramulo Motorfestival" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_cmf_t">Le Caramulo Motorfestival</h3><p class="pas-text" data-i18n="concl_p_cmf">Chaque septembre, voitures de course et motos envahissent les routes de mon village : un rendez-vous incontournable pour un passionné de moteurs comme moi.</p></div></article>
           <article class="pas-card " data-opt="lac.jpg"><div class="pas-photo"><img src="images/luis/lac.jpg" alt="Sur le lac Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_lac_t">Le lac Léman</h3><p class="pas-text" data-i18n="concl_p_lac">L'été, on profite du lac : kayak, baignade et détente.</p></div></article>
           <article class="pas-card pas-card--text"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-7M12 14c-4 0-7-2.5-7-6a7 7 0 0114 0c0 3.5-3 6-7 6zM12 14l-3-3M12 12l3-3M8 21h8"/></svg></span><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_walk_t">Marcher et se balader</h3><p class="pas-text" data-i18n="concl_p_walk">Randonnées et balades — « passear », comme on dit au Portugal —, par exemple jusqu'au lac de Tanay, au-dessus de Vouvry.</p></div></article>
         </div>
@@ -4863,7 +4905,16 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "wf_reg_as": "ASIE &amp; AFRIQUE",
   "wf_reg_eu": "EUROPE",
   "concl_fam_c4": "Une soirée tous ensemble",
-  "inst_rev_songs": "Les deux signaux radio"
+  "inst_rev_songs": "Les deux signaux radio",
+  "cmf_eyebrow": "CHAQUE SEPTEMBRE À CARAMULO",
+  "cmf_text": "Chaque année début septembre, Caramulo devient la capitale portugaise du moteur. Organisé par le Musée du Caramulo, le Caramulo Motorfestival est la plus grande fête automobile du Portugal : la Rampa Histórica, une course de côte de voitures anciennes et de compétition sur les routes de la serra, des défilés, des expositions et même un air show. L'entrée est libre ! En 2025, le festival a fêté sa 20<sup>e</sup> édition.",
+  "cmf_f1": "ÉDITION EN 2025",
+  "cmf_f2": "ÉQUIPES SUR LA RAMPA HISTÓRICA",
+  "cmf_f3": "VISITEURS ATTENDUS",
+  "cmf_btn": "Site officiel du festival",
+  "cmf_cap": "Les supercars défilent dans les rues de Caramulo.",
+  "concl_p_cmf_t": "Le Caramulo Motorfestival",
+  "concl_p_cmf": "Chaque septembre, voitures de course et motos envahissent les routes de mon village : un rendez-vous incontournable pour un passionné de moteurs comme moi."
  },
  "it": {
   "nav_home": "Home",
@@ -5338,7 +5389,16 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "wf_reg_as": "ASIA E AFRICA",
   "wf_reg_eu": "EUROPA",
   "concl_fam_c4": "Una serata tutti insieme",
-  "inst_rev_songs": "I due segnali radio"
+  "inst_rev_songs": "I due segnali radio",
+  "cmf_eyebrow": "OGNI SETTEMBRE A CARAMULO",
+  "cmf_text": "Ogni anno a inizio settembre Caramulo diventa la capitale portoghese dei motori. Organizzato dal Museo del Caramulo, il Caramulo Motorfestival è la più grande festa automobilistica del Portogallo: la Rampa Histórica, una corsa in salita di auto d'epoca e da competizione sulle strade della serra, sfilate, esposizioni e perfino un air show. L'ingresso è libero! Nel 2025 il festival ha celebrato la sua 20ª edizione.",
+  "cmf_f1": "EDIZIONE NEL 2025",
+  "cmf_f2": "SQUADRE SULLA RAMPA HISTÓRICA",
+  "cmf_f3": "VISITATORI ATTESI",
+  "cmf_btn": "Sito ufficiale del festival",
+  "cmf_cap": "Le supercar sfilano per le strade di Caramulo.",
+  "concl_p_cmf_t": "Il Caramulo Motorfestival",
+  "concl_p_cmf": "Ogni settembre auto da corsa e moto invadono le strade del mio villaggio: un appuntamento imperdibile per un appassionato di motori come me."
  },
  "de": {
   "nav_home": "Startseite",
@@ -5813,7 +5873,16 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "wf_reg_as": "ASIEN &amp; AFRIKA",
   "wf_reg_eu": "EUROPA",
   "concl_fam_c4": "Ein Abend alle zusammen",
-  "inst_rev_songs": "Die zwei Radiosignale"
+  "inst_rev_songs": "Die zwei Radiosignale",
+  "cmf_eyebrow": "JEDEN SEPTEMBER IN CARAMULO",
+  "cmf_text": "Jedes Jahr Anfang September wird Caramulo zur portugiesischen Hauptstadt der Motoren. Das vom Museu do Caramulo organisierte Caramulo Motorfestival ist das grösste Autofest Portugals: die Rampa Histórica, ein Bergrennen mit historischen Renn- und Sportwagen auf den Strassen der Serra, Paraden, Ausstellungen und sogar eine Flugshow. Der Eintritt ist frei! 2025 feierte das Festival seine 20. Ausgabe.",
+  "cmf_f1": "AUSGABE 2025",
+  "cmf_f2": "TEAMS BEI DER RAMPA HISTÓRICA",
+  "cmf_f3": "ERWARTETE BESUCHER",
+  "cmf_btn": "Offizielle Festival-Website",
+  "cmf_cap": "Supersportwagen paradieren durch die Strassen von Caramulo.",
+  "concl_p_cmf_t": "Das Caramulo Motorfestival",
+  "concl_p_cmf": "Jeden September erobern Rennwagen und Motorräder die Strassen meines Dorfes: ein Pflichttermin für einen Motorfan wie mich."
  }
 };
 

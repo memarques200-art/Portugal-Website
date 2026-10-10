@@ -281,3 +281,20 @@ T2.update({
   "Am 25. April 1974 stürzen junge Offiziere fast gewaltlos die Diktatur des Estado Novo, die seit 48 Jahren an der Macht war. Das Signal geben zwei Lieder im Radio: Am 24. April um 22.55 Uhr kündigt «E Depois do Adeus» von Paulo de Carvalho auf den Emissores Associados de Lisboa den Militärs an, sich bereitzuhalten; um 0.20 Uhr startet «Grândola, Vila Morena» von Zeca Afonso auf Rádio Renascença die Operationen. Die Bevölkerung schenkt den Soldaten rote Nelken, die sie in die Gewehrläufe stecken."),
 "inst_rev_songs": ("Les deux signaux radio", "I due segnali radio", "Die zwei Radiosignale"),
 })
+
+T2.update({
+"cmf_eyebrow": ("CHAQUE SEPTEMBRE À CARAMULO", "OGNI SETTEMBRE A CARAMULO", "JEDEN SEPTEMBER IN CARAMULO"),
+"cmf_text": ("Chaque année début septembre, Caramulo devient la capitale portugaise du moteur. Organisé par le Musée du Caramulo, le Caramulo Motorfestival est la plus grande fête automobile du Portugal : la Rampa Histórica, une course de côte de voitures anciennes et de compétition sur les routes de la serra, des défilés, des expositions et même un air show. L'entrée est libre ! En 2025, le festival a fêté sa 20<sup>e</sup> édition.",
+  "Ogni anno a inizio settembre Caramulo diventa la capitale portoghese dei motori. Organizzato dal Museo del Caramulo, il Caramulo Motorfestival è la più grande festa automobilistica del Portogallo: la Rampa Histórica, una corsa in salita di auto d'epoca e da competizione sulle strade della serra, sfilate, esposizioni e perfino un air show. L'ingresso è libero! Nel 2025 il festival ha celebrato la sua 20ª edizione.",
+  "Jedes Jahr Anfang September wird Caramulo zur portugiesischen Hauptstadt der Motoren. Das vom Museu do Caramulo organisierte Caramulo Motorfestival ist das grösste Autofest Portugals: die Rampa Histórica, ein Bergrennen mit historischen Renn- und Sportwagen auf den Strassen der Serra, Paraden, Ausstellungen und sogar eine Flugshow. Der Eintritt ist frei! 2025 feierte das Festival seine 20. Ausgabe."),
+"cmf_f1": ("ÉDITIONS EN 2025", "EDIZIONI NEL 2025", "AUSGABEN 2025"),
+"cmf_f2": ("ÉQUIPES SUR LA RAMPA HISTÓRICA", "SQUADRE SULLA RAMPA HISTÓRICA", "TEAMS BEI DER RAMPA HISTÓRICA"),
+"cmf_f3": ("VISITEURS ATTENDUS", "VISITATORI ATTESI", "ERWARTETE BESUCHER"),
+"cmf_btn": ("Site officiel du festival", "Sito ufficiale del festival", "Offizielle Festival-Website"),
+"cmf_cap": ("Les supercars défilent dans les rues de Caramulo.", "Le supercar sfilano per le strade di Caramulo.", "Supersportwagen paradieren durch die Strassen von Caramulo."),
+"concl_p_cmf_t": ("Le Caramulo Motorfestival", "Il Caramulo Motorfestival", "Das Caramulo Motorfestival"),
+"concl_p_cmf": ("Chaque septembre, voitures de course et motos envahissent les routes de mon village : un rendez-vous incontournable pour un passionné de moteurs comme moi.",
+  "Ogni settembre auto da corsa e moto invadono le strade del mio villaggio: un appuntamento imperdibile per un appassionato di motori come me.",
+  "Jeden September erobern Rennwagen und Motorräder die Strassen meines Dorfes: ein Pflichttermin für einen Motorfan wie mich."),
+})
+T2.update({"cmf_f1": ("ÉDITION EN 2025", "EDIZIONE NEL 2025", "AUSGABE 2025")})

@@ -923,3 +923,25 @@
   .rev-song{font-family:'Cormorant Garamond', serif; font-style:italic; font-size:21px; color:var(--warm-white); line-height:1.25;}
   .rev-song small{display:block; font-family:'Inter', sans-serif; font-style:normal; font-size:12.5px; color:rgba(252,251,248,.75); margin-top:3px;}
   .rev-text{color:var(--warm-white); font-size:16.5px;}
+
+  /* ---------- Caramulo Motorfestival ---------- */
+  .cmf-sec{position:relative; padding:110px 0 60px; overflow:hidden; color:#fff;}
+  .cmf-media{position:absolute; inset:0;}
+  .cmf-media img{width:100%; height:100%; object-fit:cover; display:block;}
+  .cmf-media::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(20,8,8,.92) 0%, rgba(40,10,10,.78) 40%, rgba(40,10,10,.25) 75%, rgba(0,0,0,.1) 100%);}
+  .cmf-grid{position:relative; z-index:1; display:grid; grid-template-columns:1.25fr .75fr; gap:48px; align-items:center;}
+  .cmf-card{max-width:600px;}
+  .cmf-card .sec-eyebrow{color:#F2C14E;}
+  .cmf-title{font-family:'Inter', sans-serif; font-weight:800; font-style:italic; text-transform:uppercase; letter-spacing:-.01em; font-size:clamp(38px, 5vw, 60px); line-height:1; margin:6px 0 20px; color:#fff;}
+  .cmf-text{font-size:17px; line-height:1.75; color:#fff; font-weight:500; margin-bottom:24px;}
+  .cmf-facts{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:26px;}
+  .cmf-facts div{flex:1 1 140px; background:rgba(168,50,50,.85); border-radius:8px; padding:12px 14px;}
+  .cmf-facts b{display:block; font-size:28px; font-weight:800; line-height:1.1;}
+  .cmf-facts span{font-size:11px; font-weight:700; letter-spacing:.08em;}
+  .cmf-btn{display:inline-block; background:#fff; color:var(--red); font-weight:800; font-size:14px; padding:13px 22px; border-radius:999px; transition:transform .2s ease;}
+  .cmf-btn:hover{transform:translateY(-2px);}
+  .cmf-poster{width:100%; max-width:420px; justify-self:end; border-radius:8px; box-shadow:0 30px 60px -20px rgba(0,0,0,.7); border:4px solid #fff; transform:rotate(2deg);}
+  .cmf-cap{position:relative; z-index:1; text-align:right; padding:20px 24px 0; font-size:12.5px; color:rgba(255,255,255,.8);}
+  .pas-photo--red{background:#C8102E;}
+  .pas-photo--red img{object-fit:contain;}
+  @media (max-width:900px){ .cmf-grid{grid-template-columns:1fr;} .cmf-poster{justify-self:start; max-width:320px;} .cmf-media::after{background:rgba(30,8,8,.8);} }
