@@ -906,3 +906,11 @@
   .pas-text, .info-desc, .dish-desc, .region-desc, .story-text, .fest-desc, .pillar-desc{color:var(--text); font-size:16px; font-weight:500; line-height:1.65;}
   .pas-card{background:var(--warm-white);}
   .pas-title{font-size:28px;}
+
+  /* famille : grande photo + 3 photos */
+  .fam-grid.fam-n4{grid-template-columns:repeat(3, 1fr); grid-template-rows:auto;}
+  .fam-n4 .fam-photo--big{grid-column:1 / -1; grid-row:auto;}
+  .fam-n4 .fam-photo--big img{aspect-ratio:4/3; max-height:720px;}
+  .fam-n4 .fam-photo:not(.fam-photo--big) img{aspect-ratio:4/3;}
+  .fam-photo figcaption{font-size:15px;}
+  @media (max-width:800px){ .fam-grid.fam-n4{grid-template-columns:1fr;} }

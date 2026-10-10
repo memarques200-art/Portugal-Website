@@ -256,3 +256,8 @@ T2.update({
   "La parola «marmellata» viene dal portoghese «marmelada», una pasta di mele cotogne.",
   "Das Wort «Marmelade» kommt vom portugiesischen «marmelada», einem Quittenbrot."),
 })
+
+T2.update({
+"concl_fam_c2": ("Un dîner en famille", "Una cena in famiglia", "Ein Abendessen mit der Familie"),
+"concl_fam_c4": ("Une soirée tous ensemble", "Una serata tutti insieme", "Ein Abend alle zusammen"),
+})

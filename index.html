@@ -2827,6 +2827,14 @@
   .pas-card{background:var(--warm-white);}
   .pas-title{font-size:28px;}
 
+  /* famille : grande photo + 3 photos */
+  .fam-grid.fam-n4{grid-template-columns:repeat(3, 1fr); grid-template-rows:auto;}
+  .fam-n4 .fam-photo--big{grid-column:1 / -1; grid-row:auto;}
+  .fam-n4 .fam-photo--big img{aspect-ratio:4/3; max-height:720px;}
+  .fam-n4 .fam-photo:not(.fam-photo--big) img{aspect-ratio:4/3;}
+  .fam-photo figcaption{font-size:15px;}
+  @media (max-width:800px){ .fam-grid.fam-n4{grid-template-columns:1fr;} }
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -4165,6 +4173,7 @@
           <article class="pas-card pas-card--tall" data-opt="parapente.jpg"><div class="pas-photo"><img src="images/luis/parapente.jpg" alt="Parapente au-dessus du Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_para_t">Le parapente</h3><p class="pas-text" data-i18n="concl_p_para">Récemment, j'ai volé en parapente au-dessus du lac Léman. Une vue inoubliable&nbsp;!</p></div></article>
           <article class="pas-card " data-opt="moto-garage.jpg"><div class="pas-photo"><img src="images/luis/moto-garage.jpg" alt="Moto en réparation" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_meca_t">La mécanique</h3><p class="pas-text" data-i18n="concl_p_meca">J'adore modifier ma moto et la réparer moi-même : chaque détail compte&nbsp;!</p></div></article>
           <article class="pas-card " data-opt="jura.jpg"><div class="pas-photo"><img src="images/luis/jura.jpg" alt="Le Jura" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_sort_t">Les sorties</h3><p class="pas-text" data-i18n="concl_p_sort">Découvrir de nouveaux endroits, comme le Jura, où je suis allé voir la course de côte automobile de Saint-Ursanne.</p></div></article>
+          <article class="pas-card " data-opt="lac.jpg"><div class="pas-photo"><img src="images/luis/lac.jpg" alt="Sur le lac Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_lac_t">Le lac Léman</h3><p class="pas-text" data-i18n="concl_p_lac">L'été, on profite du lac : kayak, baignade et détente.</p></div></article>
           <article class="pas-card pas-card--text"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-7M12 14c-4 0-7-2.5-7-6a7 7 0 0114 0c0 3.5-3 6-7 6zM12 14l-3-3M12 12l3-3M8 21h8"/></svg></span><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_walk_t">Marcher et se balader</h3><p class="pas-text" data-i18n="concl_p_walk">Randonnées et balades — « passear », comme on dit au Portugal —, par exemple jusqu'au lac de Tanay, au-dessus de Vouvry.</p></div></article>
         </div>
       </div>
@@ -4177,7 +4186,10 @@
           <h2 class="sec-title" data-i18n="concl_fam_title">Le plus important</h2>
           <p class="sec-lead" data-i18n="concl_fam_text">Ma famille, ici en Suisse et au Portugal, c'est ce que j'ai de plus précieux. Les grandes réunions de famille sont toujours une fête.</p>
         </div>
-        <div class="fam-grid fam-n1">
+        <div class="fam-grid fam-n4">
+          <figure class="fam-photo fam-photo--big" data-opt="famille-portugal.jpg"><img src="images/luis/famille-portugal.jpg" alt="" loading="lazy"><figcaption data-i18n="concl_fam_c1">Toute la famille réunie</figcaption></figure>
+          <figure class="fam-photo" data-opt="famille-diner.jpg"><img src="images/luis/famille-diner.jpg" alt="" loading="lazy"><figcaption data-i18n="concl_fam_c2">Un dîner en famille</figcaption></figure>
+          <figure class="fam-photo" data-opt="famille-diner2.jpg"><img src="images/luis/famille-diner2.jpg" alt="" loading="lazy"><figcaption data-i18n="concl_fam_c4">Une soirée tous ensemble</figcaption></figure>
           <figure class="fam-photo" data-opt="famille.jpg"><img src="images/luis/famille.jpg" alt="" loading="lazy"><figcaption data-i18n="concl_fam_c3">Prêts pour une balade</figcaption></figure>
         </div>
       </div>
@@ -4836,7 +4848,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "wf_reg_jp": "JAPON",
   "wf_reg_in": "INDE",
   "wf_reg_as": "ASIE &amp; AFRIQUE",
-  "wf_reg_eu": "EUROPE"
+  "wf_reg_eu": "EUROPE",
+  "concl_fam_c4": "Une soirée tous ensemble"
  },
  "it": {
   "nav_home": "Home",
@@ -5309,7 +5322,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "wf_reg_jp": "GIAPPONE",
   "wf_reg_in": "INDIA",
   "wf_reg_as": "ASIA E AFRICA",
-  "wf_reg_eu": "EUROPA"
+  "wf_reg_eu": "EUROPA",
+  "concl_fam_c4": "Una serata tutti insieme"
  },
  "de": {
   "nav_home": "Startseite",
@@ -5782,7 +5796,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "wf_reg_jp": "JAPAN",
   "wf_reg_in": "INDIEN",
   "wf_reg_as": "ASIEN &amp; AFRIKA",
-  "wf_reg_eu": "EUROPA"
+  "wf_reg_eu": "EUROPA",
+  "concl_fam_c4": "Ein Abend alle zusammen"
  }
 };
 
