@@ -2805,6 +2805,28 @@
   .page-hero-text{font-weight:500;}
   .video-sec .sec-lead{color:var(--warm-white); opacity:1;}
 
+  /* ---------- lisibilité v8 ---------- */
+  :root{ --text:#141A18; }
+  /* texte d'introduction des sections : plus grand, plus foncé, sur un fond uni */
+  .sec-lead{color:var(--text); font-size:18px; font-weight:500; line-height:1.7;}
+  .sec--ivory .sec-head .sec-lead, .smf-sec .sec-lead{background:rgba(252,251,248,.92); padding:14px 20px; border-radius:8px; box-shadow:0 8px 24px -18px rgba(23,33,29,.35);}
+  .sec-head--left .sec-lead{padding-left:16px;}
+  .video-sec .sec-lead{background:none; box-shadow:none; padding:0; color:var(--warm-white);}
+
+  /* étapes du parcours : cartes blanches */
+  .steps{gap:14px;}
+  .steps::before{top:23px;}
+  .step{background:var(--warm-white); border:1px solid var(--border); border-radius:10px; padding:0 16px 20px; box-shadow:0 14px 34px -24px rgba(23,33,29,.4);}
+  .step-num{margin-top:-1px; transform:translateY(0); background:var(--warm-white);}
+  .step-date{font-size:23px;}
+  .step-text{font-size:15.5px; font-weight:500; color:var(--text); line-height:1.6;}
+  @media (min-width:901px){ .step{padding-top:0;} .step-num{margin-top:0;} }
+
+  /* cartes passions & autres textes de cartes */
+  .pas-text, .info-desc, .dish-desc, .region-desc, .story-text, .fest-desc, .pillar-desc{color:var(--text); font-size:16px; font-weight:500; line-height:1.65;}
+  .pas-card{background:var(--warm-white);}
+  .pas-title{font-size:28px;}
+
   .view{display:none;}
   .view.active{display:block;}
 
