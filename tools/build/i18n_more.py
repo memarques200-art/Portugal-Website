@@ -299,3 +299,12 @@ T2.update({
 })
 T2.update({"cmf_f1": ("ÉDITION EN 2025", "EDIZIONE NEL 2025", "AUSGABE 2025")})
 T2.update({"video_watch_cmf": ("Regarder le Caramulo Motorfestival", "Guarda il Caramulo Motorfestival", "Das Caramulo Motorfestival ansehen")})
+
+T2.update({
+"songs_eyebrow": ("ÉCOUTEZ L'HISTOIRE", "ASCOLTA LA STORIA", "HÖR DIE GESCHICHTE"),
+"songs_title": ("Les deux chansons de la révolution", "Le due canzoni della rivoluzione", "Die zwei Lieder der Revolution"),
+"songs_lead": ("Cliquez pour écouter un extrait des deux signaux qui ont lancé le 25 avril.", "Clicca per ascoltare un estratto dei due segnali che diedero il via al 25 aprile.", "Klicken Sie, um einen Ausschnitt der zwei Signale zu hören, die den 25. April auslösten."),
+"songs_adeus": ("Premier signal : les militaires doivent se préparer.", "Primo segnale: i militari devono prepararsi.", "Erstes Signal: Die Militärs sollen sich bereithalten."),
+"songs_grandola": ("Deuxième signal : les opérations commencent. La chanson devient l'hymne de la liberté.", "Secondo segnale: le operazioni iniziano. La canzone diventa l'inno della libertà.", "Zweites Signal: Die Operationen beginnen. Das Lied wird zur Hymne der Freiheit."),
+"songs_note": ("Extraits de 30 secondes fournis par Spotify (connexion Internet nécessaire).", "Estratti di 30 secondi forniti da Spotify (serve una connessione Internet).", "30-Sekunden-Ausschnitte von Spotify (Internetverbindung nötig)."),
+})

@@ -2875,6 +2875,32 @@
   .video-play--sm svg{width:28px; height:28px; margin-left:4px;}
   @media (max-width:900px){ .cmf-video{justify-self:start; transform:none;} }
 
+  /* ---------- les deux chansons ---------- */
+  .songs-sec{background:linear-gradient(135deg, #10302A 0%, #174A3A 55%, #5A1E22 100%); color:var(--warm-white);}
+  .songs-sec .sec-title{color:var(--warm-white);}
+  .songs-sec .sec-eyebrow{color:#F2C14E;}
+  .songs-sec .sec-lead{color:var(--warm-white); background:none !important; box-shadow:none !important;}
+  .songs-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px; max-width:1000px; margin:0 auto;}
+  .song-card{position:relative; display:grid; grid-template-columns:auto 1fr; gap:20px; align-items:start; background:rgba(252,251,248,.07); border:1px solid rgba(252,251,248,.22); border-radius:14px; padding:24px; transition:background .3s ease, border-color .3s ease;}
+  .song-card:hover{background:rgba(252,251,248,.11);}
+  .song-card.playing{border-color:#F2C14E; background:rgba(252,251,248,.12);}
+  .song-btn{width:72px; height:72px; border-radius:50%; border:none; cursor:pointer; background:var(--red); display:flex; align-items:center; justify-content:center; box-shadow:0 10px 30px rgba(0,0,0,.4); transition:transform .2s ease;}
+  .song-btn:hover{transform:scale(1.08);}
+  .song-btn svg{width:32px; height:32px;}
+  .song-btn .i-play{fill:#fff; margin-left:4px;}
+  .song-btn .i-close{display:none; stroke:#fff; stroke-width:2.4; fill:none;}
+  .song-card.playing .song-btn{background:#F2C14E;}
+  .song-card.playing .i-play{display:none;}
+  .song-card.playing .i-close{display:block; stroke:#10302A;}
+  .song-time{display:block; font-size:12px; font-weight:800; letter-spacing:.1em; color:#F2C14E; margin-bottom:6px;}
+  .song-title{font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:700; font-size:30px; line-height:1.1; color:#fff; margin-bottom:6px;}
+  .song-artist{display:block; font-size:13px; font-weight:600; color:rgba(252,251,248,.8); margin-bottom:10px;}
+  .song-text{font-size:15px; line-height:1.6; color:var(--warm-white);}
+  .song-player{grid-column:1 / -1;}
+  .song-player iframe{display:block; width:100%; height:152px; border:0; border-radius:12px; margin-top:6px;}
+  .songs-note{text-align:center; margin-top:22px; font-size:12.5px; color:rgba(252,251,248,.7);}
+  @media (max-width:800px){ .songs-grid{grid-template-columns:1fr;} }
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -3685,6 +3711,45 @@
             <div class="rev-signal"><span class="rev-time">00:20</span><span class="rev-song">« Grândola, Vila Morena »<small>Zeca Afonso · Rádio Renascença</small></span></div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="sec songs-sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="songs_eyebrow">ÉCOUTEZ L'HISTOIRE</span>
+          <h2 class="sec-title" data-i18n="songs_title">Les deux chansons de la révolution</h2>
+          <p class="sec-lead" data-i18n="songs_lead">Cliquez pour écouter un extrait des deux signaux qui ont lancé le 25 avril.</p>
+        </div>
+        <div class="songs-grid">
+          <article class="song-card" data-song="adeus">
+            <button class="song-btn" type="button" aria-label="Play">
+              <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
+            <div class="song-info">
+              <span class="song-time">24 · IV · 1974 — 22:55</span>
+              <h3 class="song-title">E Depois do Adeus</h3>
+              <span class="song-artist">Paulo de Carvalho · Emissores Associados de Lisboa</span>
+              <p class="song-text" data-i18n="songs_adeus">Premier signal : les militaires doivent se préparer.</p>
+            </div>
+            <div class="song-player"></div>
+          </article>
+          <article class="song-card" data-song="grandola">
+            <button class="song-btn" type="button" aria-label="Play">
+              <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
+            <div class="song-info">
+              <span class="song-time">25 · IV · 1974 — 00:20</span>
+              <h3 class="song-title">Grândola, Vila Morena</h3>
+              <span class="song-artist">Zeca Afonso · Rádio Renascença</span>
+              <p class="song-text" data-i18n="songs_grandola">Deuxième signal : les opérations commencent. La chanson devient l'hymne de la liberté.</p>
+            </div>
+            <div class="song-player"></div>
+          </article>
+        </div>
+        <p class="songs-note" data-i18n="songs_note">Extraits de 30 secondes fournis par Spotify (connexion Internet nécessaire).</p>
       </div>
     </section>
 
@@ -4927,7 +4992,13 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "cmf_cap": "Les supercars défilent dans les rues de Caramulo.",
   "concl_p_cmf_t": "Le Caramulo Motorfestival",
   "concl_p_cmf": "Chaque septembre, voitures de course et motos envahissent les routes de mon village : un rendez-vous incontournable pour un passionné de moteurs comme moi.",
-  "video_watch_cmf": "Regarder le Caramulo Motorfestival"
+  "video_watch_cmf": "Regarder le Caramulo Motorfestival",
+  "songs_eyebrow": "ÉCOUTEZ L'HISTOIRE",
+  "songs_title": "Les deux chansons de la révolution",
+  "songs_lead": "Cliquez pour écouter un extrait des deux signaux qui ont lancé le 25 avril.",
+  "songs_adeus": "Premier signal : les militaires doivent se préparer.",
+  "songs_grandola": "Deuxième signal : les opérations commencent. La chanson devient l'hymne de la liberté.",
+  "songs_note": "Extraits de 30 secondes fournis par Spotify (connexion Internet nécessaire)."
  },
  "it": {
   "nav_home": "Home",
@@ -5412,7 +5483,13 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "cmf_cap": "Le supercar sfilano per le strade di Caramulo.",
   "concl_p_cmf_t": "Il Caramulo Motorfestival",
   "concl_p_cmf": "Ogni settembre auto da corsa e moto invadono le strade del mio villaggio: un appuntamento imperdibile per un appassionato di motori come me.",
-  "video_watch_cmf": "Guarda il Caramulo Motorfestival"
+  "video_watch_cmf": "Guarda il Caramulo Motorfestival",
+  "songs_eyebrow": "ASCOLTA LA STORIA",
+  "songs_title": "Le due canzoni della rivoluzione",
+  "songs_lead": "Clicca per ascoltare un estratto dei due segnali che diedero il via al 25 aprile.",
+  "songs_adeus": "Primo segnale: i militari devono prepararsi.",
+  "songs_grandola": "Secondo segnale: le operazioni iniziano. La canzone diventa l'inno della libertà.",
+  "songs_note": "Estratti di 30 secondi forniti da Spotify (serve una connessione Internet)."
  },
  "de": {
   "nav_home": "Startseite",
@@ -5897,7 +5974,13 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "cmf_cap": "Supersportwagen paradieren durch die Strassen von Caramulo.",
   "concl_p_cmf_t": "Das Caramulo Motorfestival",
   "concl_p_cmf": "Jeden September erobern Rennwagen und Motorräder die Strassen meines Dorfes: ein Pflichttermin für einen Motorfan wie mich.",
-  "video_watch_cmf": "Das Caramulo Motorfestival ansehen"
+  "video_watch_cmf": "Das Caramulo Motorfestival ansehen",
+  "songs_eyebrow": "HÖR DIE GESCHICHTE",
+  "songs_title": "Die zwei Lieder der Revolution",
+  "songs_lead": "Klicken Sie, um einen Ausschnitt der zwei Signale zu hören, die den 25. April auslösten.",
+  "songs_adeus": "Erstes Signal: Die Militärs sollen sich bereithalten.",
+  "songs_grandola": "Zweites Signal: Die Operationen beginnen. Das Lied wird zur Hymne der Freiheit.",
+  "songs_note": "30-Sekunden-Ausschnitte von Spotify (Internetverbindung nötig)."
  }
 };
 
@@ -5944,6 +6027,23 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
         document.querySelectorAll(sel).forEach(el => { el.classList.add('rv'); io.observe(el); });
       }
     } catch(e) {}
+
+    // Revolution songs: Spotify 30-second previews (track ids) or Spotify search fallback
+    const SONGS = {
+      adeus:    { spotify: '', search: 'E Depois do Adeus Paulo de Carvalho' },
+      grandola: { spotify: '', search: 'Grândola Vila Morena Zeca Afonso' }
+    };
+    document.querySelectorAll('.song-card').forEach(card => {
+      const s = SONGS[card.dataset.song];
+      card.querySelector('.song-btn').addEventListener('click', () => {
+        if (!s.spotify) { window.open('https://open.spotify.com/search/' + encodeURIComponent(s.search), '_blank', 'noopener'); return; }
+        const player = card.querySelector('.song-player');
+        if (card.classList.contains('playing')) { player.innerHTML = ''; card.classList.remove('playing'); return; }
+        document.querySelectorAll('.song-card.playing').forEach(c => { c.classList.remove('playing'); c.querySelector('.song-player').innerHTML = ''; });
+        player.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + s.spotify + '?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
+        card.classList.add('playing');
+      });
+    });
 
     let savedLang = null;
     try { savedLang = localStorage.getItem('lang'); } catch(e) {}

@@ -295,6 +295,23 @@ script = '''  <script>
       }
     } catch(e) {}
 
+    // Revolution songs: Spotify 30-second previews (track ids) or Spotify search fallback
+    const SONGS = {
+      adeus:    { spotify: '', search: 'E Depois do Adeus Paulo de Carvalho' },
+      grandola: { spotify: '', search: 'Grândola Vila Morena Zeca Afonso' }
+    };
+    document.querySelectorAll('.song-card').forEach(card => {
+      const s = SONGS[card.dataset.song];
+      card.querySelector('.song-btn').addEventListener('click', () => {
+        if (!s.spotify) { window.open('https://open.spotify.com/search/' + encodeURIComponent(s.search), '_blank', 'noopener'); return; }
+        const player = card.querySelector('.song-player');
+        if (card.classList.contains('playing')) { player.innerHTML = ''; card.classList.remove('playing'); return; }
+        document.querySelectorAll('.song-card.playing').forEach(c => { c.classList.remove('playing'); c.querySelector('.song-player').innerHTML = ''; });
+        player.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + s.spotify + '?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
+        card.classList.add('playing');
+      });
+    });
+
     let savedLang = null;
     try { savedLang = localStorage.getItem('lang'); } catch(e) {}
     if(savedLang && savedLang !== 'fr' && I18N[savedLang]) applyLanguage(savedLang);
