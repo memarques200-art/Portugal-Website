@@ -2795,6 +2795,16 @@
   @media (max-width:1000px){ .wf-card{flex-basis:calc(50% - 10px);} }
   @media (max-width:600px){ .wf-card{flex-basis:100%;} }
 
+  /* ---------- lisibilité : textes plus foncés partout ---------- */
+  :root{ --grey:#4A524E; --text:#1F2724; }
+  .sec-lead{color:var(--text); font-size:17px; font-weight:500; line-height:1.75;}
+  .info-desc, .dish-desc, .region-desc, .story-text, .pas-text, .fest-desc, .pillar-desc, .geo-cr-body, .geo-duality-feature-desc,
+  .geo-cr-feature-desc, .geo-volc-desc, .geo-location-body, .geo-extras-desc, .page-hero-text, .step-text, .world-desc, .pio-text,
+  .saudade-text, .car-label, .hist-card-desc{color:var(--text);}
+  .info-desc, .dish-desc, .region-desc, .story-text, .pas-text, .fest-desc, .pillar-desc{font-size:15px; font-weight:500;}
+  .page-hero-text{font-weight:500;}
+  .video-sec .sec-lead{color:var(--warm-white); opacity:1;}
+
   .view{display:none;}
   .view.active{display:block;}
 
