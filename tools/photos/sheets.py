@@ -45,6 +45,14 @@ Q = {
  "inst-1974": ("Revolução dos Cravos 25 de Abril 1974", 600, False),
 }
 Q.update({
+ "smf-castle": ("Castelo de Santa Maria da Feira", 2000, True),
+ "smf-viagem": ("Feira Medieval de SM", 1200, False),
+ "smf-viagem2": ("Viagem Medieval Terra de Santa Maria", 800, False),
+ "naz-dec": ("Waves in Nazaré in December 2025", 3000, True),
+ "smf-castle": ("Castelo de Santa Maria da Feira", 2000, True),
+ "smf-viagem": ("Feira Medieval de SM", 1200, False),
+ "smf-viagem2": ("Viagem Medieval Terra de Santa Maria", 800, False),
+ "naz-dec": ("Waves in Nazaré in December 2025", 3000, True),
  "x-south": ("Alentejo montado landscape", 1000, False),
  "x-1974": ("25 de Abril de 2024 cravos", 1000, False),
  "x-celeste": ("Celeste dos Cravos", 1000, False),
@@ -105,10 +113,10 @@ for k in keys:
     if k in res: c = res[k]
     else:
         ok = lambda x: (not land or x["w"] > x["h"]*1.25) and x["thumb"]
-        c = [x for x in search(q + ' incategory:"Quality_images"', n=12, minw=minw) if ok(x)][:5]
+        c = [x for x in search(q + ' incategory:"Quality_images"', n=12, minw=minw) if ok(x)][:5] if not k.startswith(("smf","naz")) else [] if not k.startswith(("smf","naz")) else []
         if len(c) < 3:
             seen = {x["title"] for x in c}
-            c += [x for x in search(q, n=12, minw=minw) if ok(x) and x["title"] not in seen][:5-len(c)]
+            c += [x for x in search(q, n=12, minw=minw) if ok(x) and x["title"] not in seen][:(10 if k.startswith(("smf","naz")) else 5)-len(c)]
     res[k] = c
     json.dump(res, open("cands.json","w"), indent=1)
     W = Image.new("RGB", (5*260, 2*230), "white"); d = ImageDraw.Draw(W)

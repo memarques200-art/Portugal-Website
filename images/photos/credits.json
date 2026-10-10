@@ -606,5 +606,21 @@
   "lic": "CC BY-SA 4.0",
   "w": 1100,
   "h": 825
+ },
+ "smf-castle2.jpg": {
+  "title": "File:Castelo St. Maria Feira (1).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Castelo_St._Maria_Feira_(1).jpg",
+  "artist": "Jorge Lobo",
+  "lic": "CC BY-SA 4.0",
+  "w": 1100,
+  "h": 733
+ },
+ "smf-castle.jpg": {
+  "title": "File:Castelo da Feira ou Castelo de Santa Maria da Feira (1).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Castelo_da_Feira_ou_Castelo_de_Santa_Maria_da_Feira_(1).jpg",
+  "artist": "António Amen",
+  "lic": "CC BY-SA 3.0",
+  "w": 1100,
+  "h": 733
  }
 }

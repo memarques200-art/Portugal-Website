@@ -93,6 +93,7 @@ I18N = json.loads(m.group(1))
 for k, (fr, it, de) in T.items():
     I18N["fr"][k] = fr; I18N["it"][k] = it; I18N["de"][k] = de
 FR = I18N["fr"]
+for _l in I18N: I18N[_l].pop('concl_quote', None)
 
 # ---------------- head ----------------
 sub1('<title>Portugal — Une présentation</title>',
@@ -183,6 +184,7 @@ timeline = f'''
       </div>
     </section>
 
+''' + open(os.path.join(HERE, 'smf_section.html')).read() + '''
     @@cta:hist:institutions@@
 '''
 sub1('''    </section>
@@ -283,6 +285,16 @@ script = '''  <script>
       });
     });
 
+    // Reveal on scroll
+    try {
+      const sel = '.info-card, .dish-card, .region-card, .story, .pas-card, .fam-photo, .fest-card, .pillar, .step, .tl-item, .world-item, .pio-item, .card, .journey-card, .smf-photo, .video-frame, .life-photos figure';
+      if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('js-reveal');
+        const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin: '0px 0px -8% 0px'});
+        document.querySelectorAll(sel).forEach(el => { el.classList.add('rv'); io.observe(el); });
+      }
+    } catch(e) {}
+
     let savedLang = null;
     try { savedLang = localStorage.getItem('lang'); } catch(e) {}
     if(savedLang && savedLang !== 'fr' && I18N[savedLang]) applyLanguage(savedLang);
@@ -290,6 +302,14 @@ script = '''  <script>
   </script>'''
 s0 = html.index('  <script>'); s1 = html.index('  </script>') + len('  </script>')
 html = html[:s0] + script + html[s1:]
+
+# ---------------- optional personal photos: drop blocks whose image is missing ----------------
+import os as _o2
+_root = _o2.path.dirname(_o2.path.abspath(SRC))
+def _drop(m):
+    return m.group(0) if _o2.path.exists(_o2.path.join(_root, "images/luis", m.group(2))) else ""
+html = re.sub(r'\n\s*<(article|figure|section) [^>]*data-opt="([^"]+)".*?</\1>', _drop, html, flags=re.S)
+html = html.replace(' class="fam-grid">', ' class="fam-grid fam-n%d">' % len(re.findall(r'class="fam-photo', html)), 1)
 
 # ---------------- real photos replace AI images ----------------
 SWAP = {

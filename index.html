@@ -2587,6 +2587,164 @@
     .page-hero-media::after{background:linear-gradient(180deg, rgba(247,245,240,.96) 0%, rgba(247,245,240,.9) 45%, rgba(247,245,240,.55) 70%, rgba(247,245,240,.2) 100%);}
   }
 
+  /* ---------- CONCLUSION : vie de Luís ---------- */
+  .steps{display:grid; grid-template-columns:repeat(5, 1fr); gap:0; position:relative;}
+  .steps::before{content:""; position:absolute; left:4%; right:4%; top:22px; height:2px; background:linear-gradient(90deg, var(--green), var(--gold), var(--red));}
+  .step{position:relative; padding:0 16px; text-align:center;}
+  .step-num{position:relative; z-index:1; display:inline-flex; width:46px; height:46px; border-radius:50%; align-items:center; justify-content:center; background:var(--warm-white); border:2px solid var(--gold); font-family:'Cormorant Garamond', serif; font-weight:700; font-size:18px; color:var(--green); margin-bottom:16px;}
+  .step-date{display:block; font-family:'Cormorant Garamond', serif; font-weight:700; font-size:24px; color:var(--red); margin-bottom:8px;}
+  .step-text{font-size:14px; line-height:1.6; color:var(--ink);}
+  @media (max-width:900px){
+    .steps{grid-template-columns:1fr; gap:22px;}
+    .steps::before{left:22px; right:auto; top:0; bottom:0; width:2px; height:auto; background:linear-gradient(180deg, var(--green), var(--gold), var(--red));}
+    .step{display:grid; grid-template-columns:46px 1fr; column-gap:18px; text-align:left; padding:0;}
+    .step-num{grid-row:span 2; margin:0;}
+  }
+
+  .pas-grid{display:grid; grid-template-columns:repeat(3, 1fr); grid-auto-rows:minmax(0, auto); gap:20px;}
+  .pas-card{background:var(--ivory); border:1px solid var(--border); border-radius:8px; overflow:hidden; display:flex; flex-direction:column; margin:0; box-shadow:0 18px 40px -30px rgba(23,33,29,.3);}
+  .pas-card--wide{grid-column:span 2;}
+  .pas-card--tall{grid-row:span 2;}
+  .pas-photo{aspect-ratio:4/3; overflow:hidden; background:#E9E5DC;}
+  .pas-card--wide .pas-photo{aspect-ratio:16/8;}
+  .pas-card--tall .pas-photo{aspect-ratio:auto; flex:1; min-height:360px;}
+  .pas-photo img, .pas-photo-only img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease;}
+  .pas-card:hover img{transform:scale(1.04);}
+  .pas-body{padding:20px 22px 24px;}
+  .pas-title{font-size:26px; font-weight:700; margin-bottom:8px;}
+  .pas-text{font-size:14.5px; line-height:1.65; color:var(--grey);}
+  .pas-card--text{justify-content:center; padding:26px 4px 6px 22px;}
+  .pas-card--text .pas-body{padding:12px 18px 18px 0;}
+  .pas-photo-only{position:relative; min-height:240px;}
+  .pas-photo-only figcaption{position:absolute; left:0; right:0; bottom:0; padding:30px 18px 14px; color:#fff; font-family:'Cormorant Garamond', serif; font-style:italic; font-size:20px; background:linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));}
+  @media (max-width:900px){
+    .pas-grid{grid-template-columns:1fr 1fr;}
+    .pas-card--tall{grid-row:auto;}
+    .pas-card--tall .pas-photo{aspect-ratio:3/4; min-height:0;}
+  }
+  @media (max-width:600px){
+    .pas-grid{grid-template-columns:1fr;}
+    .pas-card--wide{grid-column:auto;}
+  }
+
+  .leman-band{position:relative; height:min(62vh, 560px); overflow:hidden;}
+  .leman-band img{width:100%; height:100%; object-fit:cover; display:block;}
+  .leman-cap{position:absolute; left:0; right:0; bottom:0; padding:60px 24px 26px; text-align:center; color:#fff; font-family:'Cormorant Garamond', serif; font-style:italic; font-size:clamp(22px, 3vw, 34px); background:linear-gradient(to top, rgba(10,20,30,.65), rgba(10,20,30,0));}
+
+  .fam-grid{display:grid; grid-template-columns:2fr 1fr; grid-template-rows:auto auto; gap:20px;}
+  .fam-photo{position:relative; margin:0; border-radius:8px; overflow:hidden; box-shadow:0 24px 50px -30px rgba(23,33,29,.45); background:#E9E5DC;}
+  .fam-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .fam-photo--big{grid-row:span 2;}
+  .fam-photo figcaption{position:absolute; left:0; right:0; bottom:0; padding:30px 18px 14px; color:#fff; font-size:13.5px; font-weight:600; background:linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));}
+  .fam-n1{grid-template-columns:minmax(0, 560px); justify-content:center;}
+  .fam-n1 .fam-photo img{aspect-ratio:1/1;}
+  .fam-n2{grid-template-columns:1fr 1fr;}
+  .fam-n2 .fam-photo--big{grid-row:auto;}
+  @media (max-width:800px){ .fam-grid{grid-template-columns:1fr;} .fam-photo--big{grid-row:auto;} }
+
+  /* ---------- COULEURS DU PORTUGAL : drapeau + azulejos ---------- */
+  :root{ --azul:#1E4F8F; --azul-deep:#163C6E; --azul-soft:#EAF0F8; --tile:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='88'%20height='88'%20viewBox='0%200%2088%2088'%3E%3Crect%20width='88'%20height='88'%20fill='%23F7F9FC'/%3E%3Cg%20fill='%231E4F8F'%20fill-opacity='1'%20stroke='%231E4F8F'%20stroke-opacity='1'%20stroke-width='1.6'%3E%3Cpath%20d='M44%208c7%209%207%2017%200%2022c-7-5-7-13%200-22zM44%2080c7-9%207-17%200-22c-7%205-7%2013%200%2022zM8%2044c9-7%2017-7%2022%200c-5%207-13%207-22%200zM80%2044c-9-7-17-7-22%200c5%207%2013%207%2022%200z'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='6'/%3E%3Cpath%20d='M0%200h12c0%207-5%2012-12%2012zM88%200v12c-7%200-12-5-12-12zM0%2088v-12c7%200%2012%205%2012%2012zM88%2088h-12c0-7%205-12%2012-12z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%231E4F8F'%20stroke-opacity='1'%20stroke-width='1.2'%3E%3Ccircle%20cx='44'%20cy='44'%20r='17'/%3E%3Cpath%20d='M44%2027l17%2017l-17%2017l-17-17z'/%3E%3C/g%3E%3C/svg%3E"); }
+
+  /* bande drapeau sous la navigation */
+  .nav::after{content:""; position:absolute; left:0; right:0; bottom:-1px; height:3px; background:linear-gradient(90deg, var(--green) 0 40%, var(--red) 40% 100%);}
+
+  /* frise d'azulejos */
+  .cta-section, .credits, .rev-band, .wine-band{position:relative;}
+  .cta-section::before, .credits::before{content:""; position:absolute; left:0; right:0; top:0; height:30px; background:var(--tile); background-size:30px 30px; border-bottom:2px solid var(--azul);}
+  .cta-section{padding-top:126px; background-color:var(--green); background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='88'%20height='88'%20viewBox='0%200%2088%2088'%3E%3Crect%20width='88'%20height='88'%20fill='none'/%3E%3Cg%20fill='%23FCFBF8'%20fill-opacity='0.06'%20stroke='%23FCFBF8'%20stroke-opacity='0.06'%20stroke-width='1.6'%3E%3Cpath%20d='M44%208c7%209%207%2017%200%2022c-7-5-7-13%200-22zM44%2080c7-9%207-17%200-22c-7%205-7%2013%200%2022zM8%2044c9-7%2017-7%2022%200c-5%207-13%207-22%200zM80%2044c-9-7-17-7-22%200c5%207%2013%207%2022%200z'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='6'/%3E%3Cpath%20d='M0%200h12c0%207-5%2012-12%2012zM88%200v12c-7%200-12-5-12-12zM0%2088v-12c7%200%2012%205%2012%2012zM88%2088h-12c0-7%205-12%2012-12z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%23FCFBF8'%20stroke-opacity='0.06'%20stroke-width='1.2'%3E%3Ccircle%20cx='44'%20cy='44'%20r='17'/%3E%3Cpath%20d='M44%2027l17%2017l-17%2017l-17-17z'/%3E%3C/g%3E%3C/svg%3E"); background-size:120px 120px;}
+  .credits{padding-top:58px;}
+
+  /* fonds azulejo très légers */
+  .sec--ivory{background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='88'%20height='88'%20viewBox='0%200%2088%2088'%3E%3Crect%20width='88'%20height='88'%20fill='none'/%3E%3Cg%20fill='%231E4F8F'%20fill-opacity='0.07'%20stroke='%231E4F8F'%20stroke-opacity='0.07'%20stroke-width='1.6'%3E%3Cpath%20d='M44%208c7%209%207%2017%200%2022c-7-5-7-13%200-22zM44%2080c7-9%207-17%200-22c-7%205-7%2013%200%2022zM8%2044c9-7%2017-7%2022%200c-5%207-13%207-22%200zM80%2044c-9-7-17-7-22%200c5%207%2013%207%2022%200z'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='6'/%3E%3Cpath%20d='M0%200h12c0%207-5%2012-12%2012zM88%200v12c-7%200-12-5-12-12zM0%2088v-12c7%200%2012%205%2012%2012zM88%2088h-12c0-7%205-12%2012-12z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%231E4F8F'%20stroke-opacity='0.07'%20stroke-width='1.2'%3E%3Ccircle%20cx='44'%20cy='44'%20r='17'/%3E%3Cpath%20d='M44%2027l17%2017l-17%2017l-17-17z'/%3E%3C/g%3E%3C/svg%3E"); background-size:120px 120px;}
+  .saudade{background:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='88'%20height='88'%20viewBox='0%200%2088%2088'%3E%3Crect%20width='88'%20height='88'%20fill='none'/%3E%3Cg%20fill='%231E4F8F'%20fill-opacity='0.1'%20stroke='%231E4F8F'%20stroke-opacity='0.1'%20stroke-width='1.6'%3E%3Cpath%20d='M44%208c7%209%207%2017%200%2022c-7-5-7-13%200-22zM44%2080c7-9%207-17%200-22c-7%205-7%2013%200%2022zM8%2044c9-7%2017-7%2022%200c-5%207-13%207-22%200zM80%2044c-9-7-17-7-22%200c5%207%2013%207%2022%200z'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='6'/%3E%3Cpath%20d='M0%200h12c0%207-5%2012-12%2012zM88%200v12c-7%200-12-5-12-12zM0%2088v-12c7%200%2012%205%2012%2012zM88%2088h-12c0-7%205-12%2012-12z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%231E4F8F'%20stroke-opacity='0.1'%20stroke-width='1.2'%3E%3Ccircle%20cx='44'%20cy='44'%20r='17'/%3E%3Cpath%20d='M44%2027l17%2017l-17%2017l-17-17z'/%3E%3C/g%3E%3C/svg%3E"), radial-gradient(ellipse at center, #FCFBF8 0%, #FCFBF8 35%, #E3EBF6 100%); background-size:110px 110px, auto;}
+  .saudade-word{color:var(--azul);}
+
+  /* titres : filet vert-rouge */
+  .sec-title::after{content:""; display:block; width:72px; height:3px; margin:16px auto 0; background:linear-gradient(90deg, var(--green) 0 40%, var(--red) 40% 100%); border-radius:2px;}
+  .sec-head--left .sec-title::after{margin-left:0;}
+  .cta-title::after, .glance-title::after{content:none;}
+  .sec-eyebrow{display:inline-flex; align-items:center; gap:10px;}
+  .sec-eyebrow::before{content:""; width:14px; height:14px; background:var(--tile); background-size:14px 14px; border:1px solid var(--azul); border-radius:2px; flex-shrink:0;}
+  .sec-head:not(.sec-head--left) .sec-eyebrow{justify-content:center;}
+
+  /* cartes : bordures tricolores (vert / rouge / bleu azulejo) */
+  .info-card:nth-child(3n+3){border-top-color:var(--azul);}
+  .info-card--photo{border-top:4px solid var(--green);}
+  .info-card--photo:nth-child(2n){border-top-color:var(--red);}
+  .info-card--photo:nth-child(3n+3){border-top-color:var(--azul);}
+  .dish-card{border-bottom:4px solid var(--green);}
+  .dish-card:nth-child(3n+2){border-bottom-color:var(--red);}
+  .dish-card:nth-child(3n+3){border-bottom-color:var(--azul);}
+  .region-card{border-top:4px solid var(--green);}
+  .region-card:nth-child(2n){border-top-color:var(--red);}
+  .region-card:nth-child(3n){border-top-color:var(--azul);}
+  .region-card--home{border:2px solid var(--gold); border-top:4px solid var(--red);}
+  .story{border-top:4px solid var(--azul);}
+  .story:nth-child(2n){border-top-color:var(--red);}
+  .story:nth-child(3n){border-top-color:var(--green);}
+  .pas-card{border-top:4px solid var(--azul);}
+  .pas-card:nth-child(2n){border-top-color:var(--red);}
+  .pas-card:nth-child(3n){border-top-color:var(--green);}
+  .card{border-top:3px solid var(--azul);}
+  .card:nth-child(2n){border-top-color:var(--red);}
+  .card:nth-child(3n){border-top-color:var(--green);}
+
+  /* icônes colorées */
+  .geo-stat-item:nth-child(3n+1) .geo-stat-icon svg{stroke:var(--green);}
+  .geo-stat-item:nth-child(3n+2) .geo-stat-icon svg{stroke:var(--red);}
+  .geo-stat-item:nth-child(3n+3) .geo-stat-icon svg{stroke:var(--azul);}
+  .geo-stats{border-top:4px solid transparent; border-image:linear-gradient(90deg, var(--green) 0 40%, var(--red) 40% 100%) 1;}
+  .glance-card{border-top:4px solid var(--azul);}
+  .glance-item:nth-child(2n) .glance-icon svg{stroke:var(--red);}
+  .glance-item:nth-child(3n) .glance-icon svg{stroke:var(--azul);}
+  .world-item:nth-child(2n) .world-title{color:var(--azul);}
+  .world-item:nth-child(3n) .world-title{color:var(--red);}
+  .wf-item:nth-child(2n) .wf-name{color:var(--azul);}
+  .tl-year{color:var(--azul);}
+  .tl-item:nth-child(3n+1) .tl-year{color:var(--green);}
+  .tl-item--key .tl-year{color:var(--red);}
+  .chips span:nth-child(2n){border-color:var(--azul); color:var(--azul);}
+  .word-pt{color:var(--azul);}
+  .step-num{border-color:var(--azul);}
+  .step:nth-child(2n) .step-date{color:var(--azul);}
+  .callout{border-left-color:var(--azul);}
+  .pio-item:nth-child(2n){border-left-color:var(--red);}
+  .pio-item:nth-child(3n){border-left-color:var(--azul);}
+
+  /* hero : léger zoom vivant */
+  @keyframes kenburns{from{transform:scale(1);} to{transform:scale(1.07);}}
+  .hero-media img, .page-hero-media img{animation:kenburns 22s ease-in-out infinite alternate; transform-origin:60% 50%;}
+  @media (prefers-reduced-motion:reduce){ .hero-media img, .page-hero-media img{animation:none;} }
+
+  /* apparition au défilement */
+  .js-reveal .rv{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease;}
+  .js-reveal .rv.in{opacity:1; transform:none;}
+
+  /* vidéos */
+  .video-sec{background:var(--azul-deep); background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='88'%20height='88'%20viewBox='0%200%2088%2088'%3E%3Crect%20width='88'%20height='88'%20fill='none'/%3E%3Cg%20fill='%23FCFBF8'%20fill-opacity='0.06'%20stroke='%23FCFBF8'%20stroke-opacity='0.06'%20stroke-width='1.6'%3E%3Cpath%20d='M44%208c7%209%207%2017%200%2022c-7-5-7-13%200-22zM44%2080c7-9%207-17%200-22c-7%205-7%2013%200%2022zM8%2044c9-7%2017-7%2022%200c-5%207-13%207-22%200zM80%2044c-9-7-17-7-22%200c5%207%2013%207%2022%200z'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='6'/%3E%3Cpath%20d='M0%200h12c0%207-5%2012-12%2012zM88%200v12c-7%200-12-5-12-12zM0%2088v-12c7%200%2012%205%2012%2012zM88%2088h-12c0-7%205-12%2012-12z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%23FCFBF8'%20stroke-opacity='0.06'%20stroke-width='1.2'%3E%3Ccircle%20cx='44'%20cy='44'%20r='17'/%3E%3Cpath%20d='M44%2027l17%2017l-17%2017l-17-17z'/%3E%3C/g%3E%3C/svg%3E"); background-size:120px 120px; color:var(--warm-white);}
+  .video-sec .sec-title, .video-sec .sec-lead{color:var(--warm-white);}
+  .video-sec .sec-lead{opacity:.85;}
+  .video-sec .sec-eyebrow{color:#F2C14E;}
+  .video-grid, .smf-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:center;}
+  .smf-grid + .smf-grid{margin-top:64px;}
+  .smf-grid--rev{grid-template-columns:1.1fr .9fr;}
+  .video-frame{position:relative; aspect-ratio:16/9; border-radius:10px; overflow:hidden; background:#0d1a2b url("images/photos/hero-sport.jpg") center/cover; box-shadow:0 30px 60px -30px rgba(0,0,0,.6); border:4px solid var(--warm-white);}
+  .smf-sec .video-frame{background-image:url("images/photos/smf-castle.jpg");}
+  .video-frame iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
+  .video-link{display:inline-block; margin-top:12px; font-size:13px; font-weight:700; color:inherit; opacity:.85; text-decoration:underline; text-underline-offset:3px;}
+  .smf-sec{background:var(--azul-soft); background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='88'%20height='88'%20viewBox='0%200%2088%2088'%3E%3Crect%20width='88'%20height='88'%20fill='none'/%3E%3Cg%20fill='%231E4F8F'%20fill-opacity='0.07'%20stroke='%231E4F8F'%20stroke-opacity='0.07'%20stroke-width='1.6'%3E%3Cpath%20d='M44%208c7%209%207%2017%200%2022c-7-5-7-13%200-22zM44%2080c7-9%207-17%200-22c-7%205-7%2013%200%2022zM8%2044c9-7%2017-7%2022%200c-5%207-13%207-22%200zM80%2044c-9-7-17-7-22%200c5%207%2013%207%2022%200z'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='6'/%3E%3Cpath%20d='M0%200h12c0%207-5%2012-12%2012zM88%200v12c-7%200-12-5-12-12zM0%2088v-12c7%200%2012%205%2012%2012zM88%2088h-12c0-7%205-12%2012-12z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%231E4F8F'%20stroke-opacity='0.07'%20stroke-width='1.2'%3E%3Ccircle%20cx='44'%20cy='44'%20r='17'/%3E%3Cpath%20d='M44%2027l17%2017l-17%2017l-17-17z'/%3E%3C/g%3E%3C/svg%3E"); background-size:120px 120px;}
+  .smf-photo{margin:0; position:relative; border-radius:10px; overflow:hidden; box-shadow:0 30px 60px -30px rgba(23,33,29,.5); border:4px solid #fff;}
+  .smf-photo img{width:100%; aspect-ratio:3/2; object-fit:cover; display:block;}
+  .smf-photo figcaption{position:absolute; left:0; right:0; bottom:0; padding:24px 14px 10px; color:#fff; font-size:12.5px; background:linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));}
+  @media (max-width:900px){ .video-grid, .smf-grid, .smf-grid--rev{grid-template-columns:1fr; gap:28px;} .smf-grid--rev > div:first-child{order:2;} }
+
+  .steps{grid-template-columns:repeat(6, 1fr);}
+  .life-photos{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:48px;}
+  .life-photos figure{margin:0; position:relative; border-radius:8px; overflow:hidden; box-shadow:0 18px 40px -26px rgba(23,33,29,.45);}
+  .life-photos img{width:100%; aspect-ratio:4/3; object-fit:cover; display:block;}
+  .life-photos figcaption{position:absolute; left:0; right:0; bottom:0; padding:26px 14px 10px; color:#fff; font-size:13px; font-weight:600; background:linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));}
+  @media (max-width:900px){ .steps{grid-template-columns:1fr;} .life-photos{grid-template-columns:1fr;} }
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -3275,6 +3433,30 @@
       </div>
     </section>
 
+
+    <section class="sec smf-sec">
+      <div class="wrap">
+        <div class="smf-grid">
+          <div class="sec-head sec-head--left" style="margin-bottom:0;">
+            <span class="sec-eyebrow" data-i18n="smf_eyebrow">SANTA MARIA DA FEIRA — LÀ OÙ J'AI VÉCU</span>
+            <h2 class="sec-title" data-i18n="smf_title">Une ville de château et de chevaliers</h2>
+            <p class="sec-lead" data-i18n="smf_text">Avant de partir pour la Suisse, j'ai vécu à Santa Maria da Feira, à une trentaine de kilomètres au sud de Porto. La ville est dominée par l'un des plus beaux châteaux médiévaux du Portugal.</p>
+          </div>
+          <figure class="smf-photo"><img src="images/photos/smf-castle.jpg" alt="Castelo de Santa Maria da Feira" loading="lazy"><figcaption data-i18n="smf_castle_cap">Le château de Santa Maria da Feira.</figcaption></figure>
+        </div>
+        <div class="smf-grid smf-grid--rev">
+          <div>
+            <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/s8ip94klcQs?rel=0" title="Viagem Medieval" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <a class="video-link" href="https://youtu.be/s8ip94klcQs" target="_blank" rel="noopener">▶ <span data-i18n="video_fallback">Regarder sur YouTube</span></a>
+          </div>
+          <div class="sec-head sec-head--left" style="margin-bottom:0;">
+            <h3 class="sec-title" style="font-size:36px;">Viagem Medieval</h3>
+            <p class="sec-lead" data-i18n="smf_viagem_text">Chaque été depuis 1996, toute la ville remonte le temps pendant une douzaine de jours : tournois de chevaliers, spectacles, musique, fauconnerie et marchés d'époque. C'est la plus grande reconstitution médiévale de la péninsule Ibérique, avec des centaines de milliers de visiteurs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section">
       <div class="wrap cta-content">
         <h3 class="cta-title" data-i18n="hist_cta_title">Prêt à découvrir les institutions du Portugal&nbsp;?</h3>
@@ -3686,6 +3868,20 @@
       </div>
     </section>
 
+    <section class="sec video-sec">
+      <div class="wrap video-grid">
+        <div class="sec-head sec-head--left" style="margin-bottom:0;">
+          <span class="sec-eyebrow" data-i18n="sport_video_eyebrow">EN VIDÉO</span>
+          <h2 class="sec-title" data-i18n="sport_video_title">Les vagues géantes de Nazaré</h2>
+          <p class="sec-lead" data-i18n="sport_video_text">Chaque hiver, les meilleurs surfeurs du monde viennent affronter les vagues de Praia do Norte, parmi les plus grandes jamais surfées.</p>
+        </div>
+        <div>
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/ZfLSN4mxY0E?rel=0" title="Nazaré" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <a class="video-link" href="https://youtu.be/ZfLSN4mxY0E" target="_blank" rel="noopener">▶ <span data-i18n="video_fallback">Regarder sur YouTube</span></a>
+        </div>
+      </div>
+    </section>
+
     <section class="sec sec--white">
       <div class="wrap">
         <div class="sec-head">
@@ -3848,15 +4044,57 @@
       </div>
     </section>
 
-    <section class="bridge-section">
-      <div class="bridge-media">
-        <img src="images/photos/bridge-alps.jpg" alt="Montagnes suisses">
-        <div class="bridge-overlay"></div>
-      </div>
-      <div class="wrap bridge-content">
-        <p class="concl-quote"><span data-i18n="concl_quote">« On peut quitter le Portugal, mais le Portugal ne nous quitte jamais. »</span><span class="concl-quote-by">— LUÍS MARQUES</span></p>
+    <section class="sec sec--ivory">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="concl_life_eyebrow">MON HISTOIRE</span>
+          <h2 class="sec-title" data-i18n="concl_life_title">De Caramulo au bord du Léman</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="step-num">01</span><span class="step-date" data-i18n="concl_t1_d">Les origines</span><p class="step-text" data-i18n="concl_t1">Je grandis à Caramulo, dans la montagne près de Viseu, au centre du Portugal.</p></div>
+          <div class="step"><span class="step-num">02</span><span class="step-date" data-i18n="concl_t1b_d">Santa Maria da Feira</span><p class="step-text" data-i18n="concl_t1b">Avant la Suisse, je vis à Santa Maria da Feira, la ville du château et de la Viagem Medieval.</p></div>
+          <div class="step"><span class="step-num">03</span><span class="step-date" data-i18n="concl_t2_d">Mai 2013</span><p class="step-text" data-i18n="concl_t2">J'arrive en Suisse et je commence à travailler chez Nestlé, d'abord à Lausanne.</p></div>
+          <div class="step"><span class="step-num">04</span><span class="step-date" data-i18n="concl_t3_d">2013</span><p class="step-text" data-i18n="concl_t3">Je rejoins ensuite Vevey, au siège international de Nestlé. Je vis alors à Villeneuve.</p></div>
+          <div class="step"><span class="step-num">05</span><span class="step-date" data-i18n="concl_t4_d">Octobre 2013</span><p class="step-text" data-i18n="concl_t4">Je m'installe à Vouvry, en Valais, entre le lac et les montagnes.</p></div>
+          <div class="step"><span class="step-num">06</span><span class="step-date" data-i18n="concl_t5_d">Aujourd'hui</span><p class="step-text" data-i18n="concl_t5">Plus de 13 ans en Suisse, et le Portugal toujours dans le cœur.</p></div>
+        </div>
+        <div class="life-photos">
+          <figure><img src="images/photos/r-caramulo.jpg" alt="Caramulo" loading="lazy"><figcaption data-i18n="concl_ph_caramulo">Caramulo, mes racines</figcaption></figure>
+          <figure><img src="images/photos/smf-castle2.jpg" alt="Santa Maria da Feira" loading="lazy"><figcaption data-i18n="concl_ph_feira">Santa Maria da Feira</figcaption></figure>
+        </div>
       </div>
     </section>
+
+    <section class="sec sec--white">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="concl_pas_eyebrow">MES PASSIONS</span>
+          <h2 class="sec-title" data-i18n="concl_pas_title">Une vie active, toujours en mouvement</h2>
+          <p class="sec-lead" data-i18n="concl_pas_lead">J'aime sortir, bouger et découvrir de nouveaux endroits.</p>
+        </div>
+        <div class="pas-grid">
+          <article class="pas-card pas-card--wide" data-opt="moto-alpes.jpg"><div class="pas-photo"><img src="images/luis/moto-alpes.jpg" alt="Ducati Multistrada dans les Alpes" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_moto_t">La moto</h3><p class="pas-text" data-i18n="concl_p_moto">Ma grande passion. Je roule en Suisse, dans le nord de l'Italie, en France et en Allemagne, à la recherche des plus belles routes de montagne.</p></div></article>
+          <article class="pas-card pas-card--tall" data-opt="parapente.jpg"><div class="pas-photo"><img src="images/luis/parapente.jpg" alt="Parapente au-dessus du Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_para_t">Le parapente</h3><p class="pas-text" data-i18n="concl_p_para">Récemment, j'ai volé en parapente au-dessus du lac Léman. Une vue inoubliable&nbsp;!</p></div></article>
+          <article class="pas-card " data-opt="moto-garage.jpg"><div class="pas-photo"><img src="images/luis/moto-garage.jpg" alt="Moto en réparation" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_meca_t">La mécanique</h3><p class="pas-text" data-i18n="concl_p_meca">J'adore modifier ma moto et la réparer moi-même : chaque détail compte&nbsp;!</p></div></article>
+          <article class="pas-card " data-opt="jura.jpg"><div class="pas-photo"><img src="images/luis/jura.jpg" alt="Le Jura" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_sort_t">Les sorties</h3><p class="pas-text" data-i18n="concl_p_sort">Découvrir de nouveaux endroits, comme le Jura, où je suis allé voir la course de côte automobile de Saint-Ursanne.</p></div></article>
+          <article class="pas-card pas-card--text"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-7M12 14c-4 0-7-2.5-7-6a7 7 0 0114 0c0 3.5-3 6-7 6zM12 14l-3-3M12 12l3-3M8 21h8"/></svg></span><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_walk_t">Marcher et se balader</h3><p class="pas-text" data-i18n="concl_p_walk">Randonnées et balades — « passear », comme on dit au Portugal —, par exemple jusqu'au lac de Tanay, au-dessus de Vouvry.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--ivory">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="concl_fam_eyebrow">EN FAMILLE</span>
+          <h2 class="sec-title" data-i18n="concl_fam_title">Le plus important</h2>
+          <p class="sec-lead" data-i18n="concl_fam_text">Ma famille, ici en Suisse et au Portugal, c'est ce que j'ai de plus précieux. Les grandes réunions de famille sont toujours une fête.</p>
+        </div>
+        <div class="fam-grid fam-n1">
+          <figure class="fam-photo" data-opt="famille.jpg"><img src="images/luis/famille.jpg" alt="" loading="lazy"><figcaption data-i18n="concl_fam_c3">Prêts pour une balade</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
 
     <section class="sec sec--ivory">
       <div class="wrap">
@@ -3968,6 +4206,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Seleção_Portuguesa_de_Hóquei_em_Patins_-_01.jpg" target="_blank" rel="noopener">Seleção Portuguesa de Hóquei em Patins - 01.jpg</a> — Carlos Delgado, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:LuzLissabon.jpg" target="_blank" rel="noopener">LuzLissabon.jpg</a> — Massimo Catarinella, CC BY 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Argentine_-_Portugal_-_Cristiano_Ronaldo.jpg" target="_blank" rel="noopener">Argentine - Portugal - Cristiano Ronaldo.jpg</a> — Ludovic Péron, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Castelo_da_Feira_ou_Castelo_de_Santa_Maria_da_Feira_(1).jpg" target="_blank" rel="noopener">Castelo da Feira ou Castelo de Santa Maria da Feira (1).jpg</a> — António Amen, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Castelo_St._Maria_Feira_(1).jpg" target="_blank" rel="noopener">Castelo St. Maria Feira (1).jpg</a> — Jorge Lobo, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:1755_Lisbon_earthquake.jpg" target="_blank" rel="noopener">1755 Lisbon earthquake.jpg</a> — Unknown authorUnknown author, Public domain</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Cantino_planisphere_(1502).jpg" target="_blank" rel="noopener">Cantino planisphere (1502).jpg</a> — anonymous Portuguese (1502), Public domain</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Restos_de_la_Catedral_de_San_Pablo,_Macao,_2013-08-08,_DD_05.jpg" target="_blank" rel="noopener">Restos de la Catedral de San Pablo, Macao, 2013-08-08, DD 05.jpg</a> — Diego Delso, CC BY-SA 3.0</li>
@@ -4375,7 +4615,6 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "concl_p2_desc": "Le travail, le respect, la solidarité et le sens de l'accueil, que j'emporte partout avec moi.",
   "concl_p3_title": "Un pont",
   "concl_p3_desc": "Entre le Portugal et la Suisse, entre hier et demain. Fier d'être Portugais, heureux de vivre en Suisse.",
-  "concl_quote": "« On peut quitter le Portugal, mais le Portugal ne nous quitte jamais. »",
   "concl_recap_title": "Ce que nous avons découvert",
   "concl_thanks": "Merci de votre attention.",
   "concl_questions": "Des questions&nbsp;?",
@@ -4454,7 +4693,56 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "reg_car_f3": "Fondation du Musée du Caramulo",
   "concl_hero_cap": "Cabo da Roca, « là où la terre finit et où la mer commence ».",
   "credits_title": "Crédits photos",
-  "credits_intro": "Photos issues de Wikimedia Commons, sous licences libres. Merci à leurs auteurs."
+  "credits_intro": "Photos issues de Wikimedia Commons, sous licences libres. Merci à leurs auteurs.",
+  "concl_life_eyebrow": "MON HISTOIRE",
+  "concl_life_title": "De Caramulo au bord du Léman",
+  "concl_t1_d": "Les origines",
+  "concl_t1": "Je grandis à Caramulo, dans la montagne près de Viseu, au centre du Portugal.",
+  "concl_t2_d": "Mai 2013",
+  "concl_t2": "J'arrive en Suisse et je commence à travailler chez Nestlé, d'abord à Lausanne.",
+  "concl_t3_d": "2013",
+  "concl_t3": "Je rejoins ensuite Vevey, au siège international de Nestlé. Je vis alors à Villeneuve.",
+  "concl_t4_d": "Octobre 2013",
+  "concl_t4": "Je m'installe à Vouvry, en Valais, entre le lac et les montagnes.",
+  "concl_t5_d": "Aujourd'hui",
+  "concl_t5": "Plus de 13 ans en Suisse, et le Portugal toujours dans le cœur.",
+  "concl_pas_eyebrow": "MES PASSIONS",
+  "concl_pas_title": "Une vie active, toujours en mouvement",
+  "concl_pas_lead": "J'aime sortir, bouger et découvrir de nouveaux endroits.",
+  "concl_p_moto_t": "La moto",
+  "concl_p_moto": "Ma grande passion. Je roule en Suisse, dans le nord de l'Italie, en France et en Allemagne, à la recherche des plus belles routes de montagne.",
+  "concl_p_meca_t": "La mécanique",
+  "concl_p_meca": "J'adore modifier ma moto et la réparer moi-même : chaque détail compte&nbsp;!",
+  "concl_p_para_t": "Le parapente",
+  "concl_p_para": "Récemment, j'ai volé en parapente au-dessus du lac Léman. Une vue inoubliable&nbsp;!",
+  "concl_p_sort_t": "Les sorties",
+  "concl_p_sort": "Découvrir de nouveaux endroits, comme le Jura, où je suis allé voir la course de côte automobile de Saint-Ursanne.",
+  "concl_p_walk_t": "Marcher et se balader",
+  "concl_p_walk": "Randonnées et balades — « passear », comme on dit au Portugal —, par exemple jusqu'au lac de Tanay, au-dessus de Vouvry.",
+  "concl_p_lac_t": "Le lac Léman",
+  "concl_p_lac": "L'été, on profite du lac : kayak, baignade et détente.",
+  "concl_sunset": "Coucher de soleil sur le Léman",
+  "concl_leman_cap": "Le lac Léman, mon horizon de tous les jours.",
+  "concl_fam_eyebrow": "EN FAMILLE",
+  "concl_fam_title": "Le plus important",
+  "concl_fam_text": "Ma famille, ici en Suisse et au Portugal, c'est ce que j'ai de plus précieux. Les grandes réunions de famille sont toujours une fête.",
+  "concl_fam_c1": "Toute la famille réunie",
+  "concl_fam_c2": "Un dîner en famille",
+  "concl_fam_c3": "Prêts pour une balade",
+  "smf_eyebrow": "SANTA MARIA DA FEIRA — LÀ OÙ J'AI VÉCU",
+  "smf_title": "Une ville de château et de chevaliers",
+  "smf_text": "Avant de partir pour la Suisse, j'ai vécu à Santa Maria da Feira, à une trentaine de kilomètres au sud de Porto. La ville est dominée par l'un des plus beaux châteaux médiévaux du Portugal.",
+  "smf_viagem_text": "Chaque été depuis 1996, toute la ville remonte le temps pendant une douzaine de jours : tournois de chevaliers, spectacles, musique, fauconnerie et marchés d'époque. C'est la plus grande reconstitution médiévale de la péninsule Ibérique, avec des centaines de milliers de visiteurs.",
+  "smf_castle_cap": "Le château de Santa Maria da Feira.",
+  "video_fallback": "Regarder sur YouTube",
+  "sport_video_eyebrow": "EN VIDÉO",
+  "sport_video_title": "Les vagues géantes de Nazaré",
+  "sport_video_text": "Chaque hiver, les meilleurs surfeurs du monde viennent affronter les vagues de Praia do Norte, parmi les plus grandes jamais surfées.",
+  "concl_t1b_d": "Santa Maria da Feira",
+  "concl_t1b": "Avant la Suisse, je vis à Santa Maria da Feira, la ville du château et de la Viagem Medieval.",
+  "concl_ph_caramulo": "Caramulo, mes racines",
+  "concl_ph_feira": "Santa Maria da Feira",
+  "concl_ph_leman": "Le Léman, ma vie en Suisse"
  },
  "it": {
   "nav_home": "Home",
@@ -4794,7 +5082,6 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "concl_p2_desc": "Il lavoro, il rispetto, la solidarietà e il senso dell'accoglienza, che porto con me ovunque.",
   "concl_p3_title": "Un ponte",
   "concl_p3_desc": "Tra il Portogallo e la Svizzera, tra ieri e domani. Fiero di essere portoghese, felice di vivere in Svizzera.",
-  "concl_quote": "«Si può lasciare il Portogallo, ma il Portogallo non ci lascia mai.»",
   "concl_recap_title": "Cosa abbiamo scoperto",
   "concl_thanks": "Grazie per l'attenzione.",
   "concl_questions": "Domande?",
@@ -4873,7 +5160,56 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "reg_car_f3": "Fondazione del Museo del Caramulo",
   "concl_hero_cap": "Cabo da Roca, «dove la terra finisce e il mare comincia».",
   "credits_title": "Crediti fotografici",
-  "credits_intro": "Foto da Wikimedia Commons, con licenze libere. Grazie ai loro autori."
+  "credits_intro": "Foto da Wikimedia Commons, con licenze libere. Grazie ai loro autori.",
+  "concl_life_eyebrow": "LA MIA STORIA",
+  "concl_life_title": "Da Caramulo alle rive del Lemano",
+  "concl_t1_d": "Le origini",
+  "concl_t1": "Cresco a Caramulo, in montagna vicino a Viseu, nel centro del Portogallo.",
+  "concl_t2_d": "Maggio 2013",
+  "concl_t2": "Arrivo in Svizzera e inizio a lavorare per Nestlé, prima a Losanna.",
+  "concl_t3_d": "2013",
+  "concl_t3": "Poi passo a Vevey, alla sede internazionale di Nestlé. Vivo allora a Villeneuve.",
+  "concl_t4_d": "Ottobre 2013",
+  "concl_t4": "Mi trasferisco a Vouvry, nel Vallese, tra il lago e le montagne.",
+  "concl_t5_d": "Oggi",
+  "concl_t5": "Più di 13 anni in Svizzera, con il Portogallo sempre nel cuore.",
+  "concl_pas_eyebrow": "LE MIE PASSIONI",
+  "concl_pas_title": "Una vita attiva, sempre in movimento",
+  "concl_pas_lead": "Mi piace uscire, muovermi e scoprire posti nuovi.",
+  "concl_p_moto_t": "La moto",
+  "concl_p_moto": "La mia grande passione. Guido in Svizzera, nel nord Italia, in Francia e in Germania, alla ricerca delle più belle strade di montagna.",
+  "concl_p_meca_t": "La meccanica",
+  "concl_p_meca": "Adoro modificare la mia moto e ripararla da solo: ogni dettaglio conta!",
+  "concl_p_para_t": "Il parapendio",
+  "concl_p_para": "Di recente ho volato in parapendio sopra il lago Lemano. Una vista indimenticabile!",
+  "concl_p_sort_t": "Le gite",
+  "concl_p_sort": "Scoprire posti nuovi, come il Giura, dove sono andato a vedere la corsa automobilistica in salita di Saint-Ursanne.",
+  "concl_p_walk_t": "Camminare e passeggiare",
+  "concl_p_walk": "Escursioni e passeggiate — «passear», come si dice in Portogallo — per esempio fino al lago di Tanay, sopra Vouvry.",
+  "concl_p_lac_t": "Il lago Lemano",
+  "concl_p_lac": "D'estate ci godiamo il lago: kayak, bagni e relax.",
+  "concl_sunset": "Tramonto sul Lemano",
+  "concl_leman_cap": "Il lago Lemano, il mio orizzonte di ogni giorno.",
+  "concl_fam_eyebrow": "IN FAMIGLIA",
+  "concl_fam_title": "La cosa più importante",
+  "concl_fam_text": "La mia famiglia, qui in Svizzera e in Portogallo, è ciò che ho di più prezioso. Le grandi riunioni di famiglia sono sempre una festa.",
+  "concl_fam_c1": "Tutta la famiglia riunita",
+  "concl_fam_c2": "Una cena in famiglia",
+  "concl_fam_c3": "Pronti per una gita",
+  "smf_eyebrow": "SANTA MARIA DA FEIRA — DOVE HO VISSUTO",
+  "smf_title": "Una città di castello e di cavalieri",
+  "smf_text": "Prima di partire per la Svizzera ho vissuto a Santa Maria da Feira, una trentina di chilometri a sud di Porto. La città è dominata da uno dei più bei castelli medievali del Portogallo.",
+  "smf_viagem_text": "Ogni estate dal 1996 tutta la città torna indietro nel tempo per una dozzina di giorni: tornei di cavalieri, spettacoli, musica, falconeria e mercati d'epoca. È la più grande rievocazione medievale della penisola iberica, con centinaia di migliaia di visitatori.",
+  "smf_castle_cap": "Il castello di Santa Maria da Feira.",
+  "video_fallback": "Guarda su YouTube",
+  "sport_video_eyebrow": "IN VIDEO",
+  "sport_video_title": "Le onde giganti di Nazaré",
+  "sport_video_text": "Ogni inverno i migliori surfisti del mondo vengono ad affrontare le onde di Praia do Norte, tra le più grandi mai cavalcate.",
+  "concl_t1b_d": "Santa Maria da Feira",
+  "concl_t1b": "Prima della Svizzera vivo a Santa Maria da Feira, la città del castello e della Viagem Medieval.",
+  "concl_ph_caramulo": "Caramulo, le mie radici",
+  "concl_ph_feira": "Santa Maria da Feira",
+  "concl_ph_leman": "Il Lemano, la mia vita in Svizzera"
  },
  "de": {
   "nav_home": "Startseite",
@@ -5213,7 +5549,6 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "concl_p2_desc": "Arbeit, Respekt, Solidarität und Gastfreundschaft – Werte, die ich überallhin mitnehme.",
   "concl_p3_title": "Eine Brücke",
   "concl_p3_desc": "Zwischen Portugal und der Schweiz, zwischen gestern und morgen. Stolz, Portugiese zu sein, glücklich, in der Schweiz zu leben.",
-  "concl_quote": "«Man kann Portugal verlassen, aber Portugal verlässt einen nie.»",
   "concl_recap_title": "Was wir entdeckt haben",
   "concl_thanks": "Vielen Dank für Ihre Aufmerksamkeit.",
   "concl_questions": "Fragen?",
@@ -5292,7 +5627,56 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "reg_car_f3": "Gründung des Museu do Caramulo",
   "concl_hero_cap": "Cabo da Roca, «wo das Land endet und das Meer beginnt».",
   "credits_title": "Bildnachweis",
-  "credits_intro": "Fotos von Wikimedia Commons unter freien Lizenzen. Danke an die Urheber."
+  "credits_intro": "Fotos von Wikimedia Commons unter freien Lizenzen. Danke an die Urheber.",
+  "concl_life_eyebrow": "MEINE GESCHICHTE",
+  "concl_life_title": "Von Caramulo an den Genfersee",
+  "concl_t1_d": "Die Wurzeln",
+  "concl_t1": "Ich wachse in Caramulo auf, in den Bergen bei Viseu, im Zentrum Portugals.",
+  "concl_t2_d": "Mai 2013",
+  "concl_t2": "Ich komme in die Schweiz und beginne bei Nestlé zu arbeiten, zuerst in Lausanne.",
+  "concl_t3_d": "2013",
+  "concl_t3": "Danach wechsle ich nach Vevey an den internationalen Hauptsitz von Nestlé. Damals wohne ich in Villeneuve.",
+  "concl_t4_d": "Oktober 2013",
+  "concl_t4": "Ich ziehe nach Vouvry im Wallis, zwischen See und Bergen.",
+  "concl_t5_d": "Heute",
+  "concl_t5": "Über 13 Jahre in der Schweiz – und Portugal immer im Herzen.",
+  "concl_pas_eyebrow": "MEINE LEIDENSCHAFTEN",
+  "concl_pas_title": "Ein aktives Leben, immer in Bewegung",
+  "concl_pas_lead": "Ich bin gern unterwegs, in Bewegung und entdecke neue Orte.",
+  "concl_p_moto_t": "Das Motorrad",
+  "concl_p_moto": "Meine grosse Leidenschaft. Ich fahre in der Schweiz, in Norditalien, in Frankreich und in Deutschland – auf der Suche nach den schönsten Bergstrassen.",
+  "concl_p_meca_t": "Die Mechanik",
+  "concl_p_meca": "Ich liebe es, mein Motorrad umzubauen und selbst zu reparieren: Jedes Detail zählt!",
+  "concl_p_para_t": "Gleitschirmfliegen",
+  "concl_p_para": "Kürzlich bin ich mit dem Gleitschirm über den Genfersee geflogen. Eine unvergessliche Aussicht!",
+  "concl_p_sort_t": "Ausflüge",
+  "concl_p_sort": "Neue Orte entdecken, wie den Jura, wo ich das Bergrennen von Saint-Ursanne besucht habe.",
+  "concl_p_walk_t": "Wandern und Spazieren",
+  "concl_p_walk": "Wanderungen und Spaziergänge – «passear», wie man in Portugal sagt –, zum Beispiel zum Lac de Tanay oberhalb von Vouvry.",
+  "concl_p_lac_t": "Der Genfersee",
+  "concl_p_lac": "Im Sommer geniessen wir den See: Kajak, Baden und Entspannung.",
+  "concl_sunset": "Sonnenuntergang über dem Genfersee",
+  "concl_leman_cap": "Der Genfersee, mein tägliches Panorama.",
+  "concl_fam_eyebrow": "MIT DER FAMILIE",
+  "concl_fam_title": "Das Wichtigste",
+  "concl_fam_text": "Meine Familie, hier in der Schweiz und in Portugal, ist mein grösster Schatz. Die grossen Familientreffen sind immer ein Fest.",
+  "concl_fam_c1": "Die ganze Familie vereint",
+  "concl_fam_c2": "Ein Abendessen mit der Familie",
+  "concl_fam_c3": "Bereit für einen Ausflug",
+  "smf_eyebrow": "SANTA MARIA DA FEIRA — WO ICH GELEBT HABE",
+  "smf_title": "Eine Stadt der Burg und der Ritter",
+  "smf_text": "Bevor ich in die Schweiz zog, lebte ich in Santa Maria da Feira, rund dreissig Kilometer südlich von Porto. Über der Stadt thront eine der schönsten mittelalterlichen Burgen Portugals.",
+  "smf_viagem_text": "Jeden Sommer seit 1996 reist die ganze Stadt rund zwölf Tage lang in die Vergangenheit: Ritterturniere, Vorführungen, Musik, Falknerei und historische Märkte. Es ist das grösste Mittelalterfest der Iberischen Halbinsel, mit Hunderttausenden Besuchern.",
+  "smf_castle_cap": "Die Burg von Santa Maria da Feira.",
+  "video_fallback": "Auf YouTube ansehen",
+  "sport_video_eyebrow": "IM VIDEO",
+  "sport_video_title": "Die Riesenwellen von Nazaré",
+  "sport_video_text": "Jeden Winter stellen sich die besten Surfer der Welt den Wellen der Praia do Norte – einigen der grössten, die je gesurft wurden.",
+  "concl_t1b_d": "Santa Maria da Feira",
+  "concl_t1b": "Vor der Schweiz lebe ich in Santa Maria da Feira, der Stadt der Burg und der Viagem Medieval.",
+  "concl_ph_caramulo": "Caramulo, meine Wurzeln",
+  "concl_ph_feira": "Santa Maria da Feira",
+  "concl_ph_leman": "Der Genfersee, mein Leben in der Schweiz"
  }
 };
 
@@ -5329,6 +5713,16 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
         langMenu.classList.remove('open');
       });
     });
+
+    // Reveal on scroll
+    try {
+      const sel = '.info-card, .dish-card, .region-card, .story, .pas-card, .fam-photo, .fest-card, .pillar, .step, .tl-item, .world-item, .pio-item, .card, .journey-card, .smf-photo, .video-frame, .life-photos figure';
+      if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('js-reveal');
+        const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin: '0px 0px -8% 0px'});
+        document.querySelectorAll(sel).forEach(el => { el.classList.add('rv'); io.observe(el); });
+      }
+    } catch(e) {}
 
     let savedLang = null;
     try { savedLang = localStorage.getItem('lang'); } catch(e) {}
