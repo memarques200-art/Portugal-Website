@@ -320,3 +320,13 @@ T2.update({
 "smf_f2": ("JOURS DE FÊTE", "GIORNI DI FESTA", "FESTTAGE"),
 "smf_f3": ("PREMIÈRE ÉDITION", "PRIMA EDIZIONE", "ERSTE AUSGABE"),
 })
+
+T2.update({
+"rbar_eyebrow": ("PORTO & GAIA, AU-DESSUS DU DOURO", "PORTO E GAIA, SOPRA IL DOURO", "PORTO & GAIA, ÜBER DEM DOURO"),
+"rbar_text": ("En 2007, la course d'avions la plus rapide du monde arrive à Porto : les pilotes slaloment entre des pylônes gonflables à quelques mètres au-dessus du Douro, sous le pont Dom Luís. Environ 600 000 spectateurs envahissent les deux rives dès la première édition, puis près d'un million en 2008 : un record pour la compétition.",
+  "Nel 2007 la gara aerea più veloce del mondo arriva a Porto: i piloti fanno slalom tra piloni gonfiabili a pochi metri sopra il Douro, sotto il ponte Dom Luís. Circa 600 000 spettatori invadono le due rive già alla prima edizione, poi quasi un milione nel 2008: un record per la competizione.",
+  "2007 kommt das schnellste Flugrennen der Welt nach Porto: Die Piloten fliegen im Slalom um aufblasbare Pylonen, nur wenige Meter über dem Douro, unter der Dom-Luís-Brücke hindurch. Schon bei der ersten Ausgabe säumen rund 600 000 Zuschauer beide Ufer, 2008 sind es fast eine Million – ein Rekord für den Wettbewerb."),
+"rbar_f1": ("PREMIÈRE COURSE À PORTO", "PRIMA GARA A PORTO", "ERSTES RENNEN IN PORTO"),
+"rbar_f2": ("SPECTATEURS EN 2008 (RECORD)", "SPETTATORI NEL 2008 (RECORD)", "ZUSCHAUER 2008 (REKORD)"),
+"rbar_cap": ("Un avion de course au-dessus du Douro, face à Porto (édition 2017).", "Un aereo da corsa sopra il Douro, di fronte a Porto (edizione 2017).", "Ein Rennflugzeug über dem Douro vor Porto (Ausgabe 2017)."),
+})

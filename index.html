@@ -2904,6 +2904,19 @@
   .smf-facts div{background:var(--azul); color:#fff;}
   .cmf-facts b{white-space:nowrap;}
 
+  /* ---------- Red Bull Air Race ---------- */
+  .rbar-sec{padding:96px 0; background:linear-gradient(160deg, #0F2A4F 0%, #1E4F8F 60%, #2B6CB8 100%); color:#fff;}
+  .rbar-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center;}
+  .rbar-photo{margin:0; position:relative; border-radius:12px; overflow:hidden; border:4px solid #fff; box-shadow:0 30px 60px -25px rgba(0,0,0,.6);}
+  .rbar-photo img{width:100%; aspect-ratio:3/2; object-fit:cover; display:block;}
+  .rbar-photo figcaption{position:absolute; left:0; right:0; bottom:0; padding:26px 14px 10px; font-size:12.5px; background:linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));}
+  .rbar-sec .sec-eyebrow{color:#F2C14E;}
+  .rbar-title{font-family:'Inter', sans-serif; font-weight:800; font-style:italic; text-transform:uppercase; font-size:clamp(34px, 4.5vw, 52px); line-height:1; margin:8px 0 18px;}
+  .rbar-text{font-size:17px; line-height:1.75; font-weight:500; margin-bottom:22px;}
+  .rbar-facts div{background:var(--red);}
+  @media (max-width:900px){ .rbar-grid{grid-template-columns:1fr; gap:30px;} }
+  @media (min-width:901px){ .pas-grid > .pas-card:last-child{grid-column:span 2;} .pas-grid > .pas-card:last-child .pas-photo{aspect-ratio:16/7;} }
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -4130,6 +4143,21 @@
       </div>
     </section>
 
+        <section class="rbar-sec">
+      <div class="wrap rbar-grid">
+        <figure class="rbar-photo"><img src="images/photos/s-rbar.jpg" alt="Red Bull Air Race, Porto" loading="lazy"><figcaption data-i18n="rbar_cap">Un avion de course au-dessus du Douro, face à Porto (édition 2017).</figcaption></figure>
+        <div>
+          <span class="sec-eyebrow" data-i18n="rbar_eyebrow">PORTO & GAIA, AU-DESSUS DU DOURO</span>
+          <h2 class="rbar-title">Red Bull Air Race</h2>
+          <p class="rbar-text" data-i18n="rbar_text">En 2007, la course d'avions la plus rapide du monde arrive à Porto : les pilotes slaloment entre des pylônes gonflables à quelques mètres au-dessus du Douro, sous le pont Dom Luís. Environ 600 000 spectateurs envahissent les deux rives dès la première édition, puis près d'un million en 2008 : un record pour la compétition.</p>
+          <div class="cmf-facts rbar-facts">
+            <div><b>2007</b><span data-i18n="rbar_f1">PREMIÈRE COURSE À PORTO</span></div>
+            <div><b>1 000 000</b><span data-i18n="rbar_f2">SPECTATEURS EN 2008 (RECORD)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section">
       <div class="wrap cta-content">
         <h3 class="cta-title" data-i18n="sport_cta_title">Prêt à voyager à travers les régions&nbsp;?</h3>
@@ -4313,7 +4341,6 @@
           <article class="pas-card pas-card--tall" data-opt="parapente.jpg"><div class="pas-photo"><img src="images/luis/parapente.jpg" alt="Parapente au-dessus du Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_para_t">Le parapente</h3><p class="pas-text" data-i18n="concl_p_para">Récemment, j'ai volé en parapente au-dessus du lac Léman. Une vue inoubliable&nbsp;!</p></div></article>
           <article class="pas-card " data-opt="moto-garage.jpg"><div class="pas-photo"><img src="images/luis/moto-garage.jpg" alt="Moto en réparation" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_meca_t">La mécanique</h3><p class="pas-text" data-i18n="concl_p_meca">J'adore modifier ma moto et la réparer moi-même : chaque détail compte&nbsp;!</p></div></article>
           <article class="pas-card " data-opt="jura.jpg"><div class="pas-photo"><img src="images/luis/jura.jpg" alt="Le Jura" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_sort_t">Les sorties</h3><p class="pas-text" data-i18n="concl_p_sort">Découvrir de nouveaux endroits, comme le Jura, où je suis allé voir la course de côte automobile de Saint-Ursanne.</p></div></article>
-          <article class="pas-card" data-opt="motorfestival.jpg"><a class="pas-photo pas-video" href="https://youtu.be/jJedre8t3Go" target="_blank" rel="noopener"><img src="images/luis/motorfestival.jpg" alt="Caramulo Motorfestival" loading="lazy"><span class="video-play video-play--sm"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></a><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_cmf_t">Le Caramulo Motorfestival</h3><p class="pas-text" data-i18n="concl_p_cmf">Chaque septembre, voitures de course et motos envahissent les routes de mon village : un rendez-vous incontournable pour un passionné de moteurs comme moi.</p></div></article>
           <article class="pas-card " data-opt="lac.jpg"><div class="pas-photo"><img src="images/luis/lac.jpg" alt="Sur le lac Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_lac_t">Le lac Léman</h3><p class="pas-text" data-i18n="concl_p_lac">L'été, on profite du lac : kayak, baignade et détente.</p></div></article>
           <article class="pas-card" data-opt="tanay.jpg"><div class="pas-photo"><img src="images/luis/tanay.jpg" alt="Lac de Tanay" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_walk_t">Marcher et se balader</h3><p class="pas-text" data-i18n="concl_p_walk">Randonnées et balades — « passear », comme on dit au Portugal —, par exemple jusqu'au lac de Tanay, au-dessus de Vouvry.</p></div></article>
         </div>
@@ -4445,6 +4472,7 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Estatua_de_Eusébio,_Estádio_da_Luz,_Lisboa_01.jpg" target="_blank" rel="noopener">Estatua de Eusébio, Estádio da Luz, Lisboa 01.jpg</a> — GualdimG, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Seleção_Portuguesa_de_Hóquei_em_Patins_-_01.jpg" target="_blank" rel="noopener">Seleção Portuguesa de Hóquei em Patins - 01.jpg</a> — Carlos Delgado, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:LuzLissabon.jpg" target="_blank" rel="noopener">LuzLissabon.jpg</a> — Massimo Catarinella, CC BY 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Red_Bull_Air_Race_Oporto_2017_-_28.jpg" target="_blank" rel="noopener">Red Bull Air Race Oporto 2017 - 28.jpg</a> — Harpagornis, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Argentine_-_Portugal_-_Cristiano_Ronaldo.jpg" target="_blank" rel="noopener">Argentine - Portugal - Cristiano Ronaldo.jpg</a> — Ludovic Péron, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Castelo_da_Feira_ou_Castelo_de_Santa_Maria_da_Feira_(1).jpg" target="_blank" rel="noopener">Castelo da Feira ou Castelo de Santa Maria da Feira (1).jpg</a> — António Amen, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Castelo_St._Maria_Feira_(1).jpg" target="_blank" rel="noopener">Castelo St. Maria Feira (1).jpg</a> — Jorge Lobo, CC BY-SA 4.0</li>
@@ -5009,7 +5037,12 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "songs_note": "Extraits de 30 secondes fournis par Spotify (connexion Internet nécessaire).",
   "smf_f1": "VISITEURS EN 2025",
   "smf_f2": "JOURS DE FÊTE",
-  "smf_f3": "PREMIÈRE ÉDITION"
+  "smf_f3": "PREMIÈRE ÉDITION",
+  "rbar_eyebrow": "PORTO & GAIA, AU-DESSUS DU DOURO",
+  "rbar_text": "En 2007, la course d'avions la plus rapide du monde arrive à Porto : les pilotes slaloment entre des pylônes gonflables à quelques mètres au-dessus du Douro, sous le pont Dom Luís. Environ 600 000 spectateurs envahissent les deux rives dès la première édition, puis près d'un million en 2008 : un record pour la compétition.",
+  "rbar_f1": "PREMIÈRE COURSE À PORTO",
+  "rbar_f2": "SPECTATEURS EN 2008 (RECORD)",
+  "rbar_cap": "Un avion de course au-dessus du Douro, face à Porto (édition 2017)."
  },
  "it": {
   "nav_home": "Home",
@@ -5503,7 +5536,12 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "songs_note": "Estratti di 30 secondi forniti da Spotify (serve una connessione Internet).",
   "smf_f1": "VISITATORI NEL 2025",
   "smf_f2": "GIORNI DI FESTA",
-  "smf_f3": "PRIMA EDIZIONE"
+  "smf_f3": "PRIMA EDIZIONE",
+  "rbar_eyebrow": "PORTO E GAIA, SOPRA IL DOURO",
+  "rbar_text": "Nel 2007 la gara aerea più veloce del mondo arriva a Porto: i piloti fanno slalom tra piloni gonfiabili a pochi metri sopra il Douro, sotto il ponte Dom Luís. Circa 600 000 spettatori invadono le due rive già alla prima edizione, poi quasi un milione nel 2008: un record per la competizione.",
+  "rbar_f1": "PRIMA GARA A PORTO",
+  "rbar_f2": "SPETTATORI NEL 2008 (RECORD)",
+  "rbar_cap": "Un aereo da corsa sopra il Douro, di fronte a Porto (edizione 2017)."
  },
  "de": {
   "nav_home": "Startseite",
@@ -5997,7 +6035,12 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "songs_note": "30-Sekunden-Ausschnitte von Spotify (Internetverbindung nötig).",
   "smf_f1": "BESUCHER 2025",
   "smf_f2": "FESTTAGE",
-  "smf_f3": "ERSTE AUSGABE"
+  "smf_f3": "ERSTE AUSGABE",
+  "rbar_eyebrow": "PORTO & GAIA, ÜBER DEM DOURO",
+  "rbar_text": "2007 kommt das schnellste Flugrennen der Welt nach Porto: Die Piloten fliegen im Slalom um aufblasbare Pylonen, nur wenige Meter über dem Douro, unter der Dom-Luís-Brücke hindurch. Schon bei der ersten Ausgabe säumen rund 600 000 Zuschauer beide Ufer, 2008 sind es fast eine Million – ein Rekord für den Wettbewerb.",
+  "rbar_f1": "ERSTES RENNEN IN PORTO",
+  "rbar_f2": "ZUSCHAUER 2008 (REKORD)",
+  "rbar_cap": "Ein Rennflugzeug über dem Douro vor Porto (Ausgabe 2017)."
  }
 };
 
