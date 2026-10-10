@@ -980,3 +980,6 @@
   .song-player iframe{display:block; width:100%; height:152px; border:0; border-radius:12px; margin-top:6px;}
   .songs-note{text-align:center; margin-top:22px; font-size:12.5px; color:rgba(252,251,248,.7);}
   @media (max-width:800px){ .songs-grid{grid-template-columns:1fr;} }
+  .smf-facts{margin-top:20px;}
+  .smf-facts div{background:var(--azul); color:#fff;}
+  .cmf-facts b{white-space:nowrap;}

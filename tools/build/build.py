@@ -297,8 +297,8 @@ script = '''  <script>
 
     // Revolution songs: Spotify 30-second previews (track ids) or Spotify search fallback
     const SONGS = {
-      adeus:    { spotify: '', search: 'E Depois do Adeus Paulo de Carvalho' },
-      grandola: { spotify: '', search: 'Grândola Vila Morena Zeca Afonso' }
+      adeus:    { spotify: '6ThJAONKSkyQxnfLmmtpIh', search: 'E Depois do Adeus Paulo de Carvalho' },
+      grandola: { spotify: '7b0AYk76LUIOoE3IzbugaJ', search: 'Grândola Vila Morena Zeca Afonso' }
     };
     document.querySelectorAll('.song-card').forEach(card => {
       const s = SONGS[card.dataset.song];

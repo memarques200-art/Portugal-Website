@@ -308,3 +308,15 @@ T2.update({
 "songs_grandola": ("Deuxième signal : les opérations commencent. La chanson devient l'hymne de la liberté.", "Secondo segnale: le operazioni iniziano. La canzone diventa l'inno della libertà.", "Zweites Signal: Die Operationen beginnen. Das Lied wird zur Hymne der Freiheit."),
 "songs_note": ("Extraits de 30 secondes fournis par Spotify (connexion Internet nécessaire).", "Estratti di 30 secondi forniti da Spotify (serve una connessione Internet).", "30-Sekunden-Ausschnitte von Spotify (Internetverbindung nötig)."),
 })
+
+T2.update({
+"cmf_f3": ("VISITEURS EN 2026", "VISITATORI NEL 2026", "BESUCHER 2026"),
+"cmf_f1": ("JOURS DE FÊTE", "GIORNI DI FESTA", "FESTTAGE"),
+"cmf_f2": ("VOITURES SUR LA RAMPA HISTÓRICA (RECORD)", "AUTO SULLA RAMPA HISTÓRICA (RECORD)", "AUTOS BEI DER RAMPA HISTÓRICA (REKORD)"),
+"cmf_text": ("Chaque année début septembre, Caramulo devient la capitale portugaise du moteur. Organisé par le Musée du Caramulo, le Caramulo Motorfestival est la plus grande fête automobile du Portugal : la Rampa Histórica, une course de côte de voitures anciennes et de compétition sur les routes de la serra, des défilés, des expositions et même un air show. L'entrée est libre ! En 2026, plus de 60 000 personnes sont venues à Caramulo.",
+  "Ogni anno a inizio settembre Caramulo diventa la capitale portoghese dei motori. Organizzato dal Museo del Caramulo, il Caramulo Motorfestival è la più grande festa automobilistica del Portogallo: la Rampa Histórica, una corsa in salita di auto d'epoca e da competizione sulle strade della serra, sfilate, esposizioni e perfino un air show. L'ingresso è libero! Nel 2026 più di 60 000 persone sono venute a Caramulo.",
+  "Jedes Jahr Anfang September wird Caramulo zur portugiesischen Hauptstadt der Motoren. Das vom Museu do Caramulo organisierte Caramulo Motorfestival ist das grösste Autofest Portugals: die Rampa Histórica, ein Bergrennen mit historischen Renn- und Sportwagen auf den Strassen der Serra, Paraden, Ausstellungen und sogar eine Flugshow. Der Eintritt ist frei! 2026 kamen über 60 000 Menschen nach Caramulo."),
+"smf_f1": ("VISITEURS EN 2025", "VISITATORI NEL 2025", "BESUCHER 2025"),
+"smf_f2": ("JOURS DE FÊTE", "GIORNI DI FESTA", "FESTTAGE"),
+"smf_f3": ("PREMIÈRE ÉDITION", "PRIMA EDIZIONE", "ERSTE AUSGABE"),
+})
