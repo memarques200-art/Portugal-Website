@@ -2866,6 +2866,14 @@
   .pas-photo--red img{object-fit:contain;}
   @media (max-width:900px){ .cmf-grid{grid-template-columns:1fr;} .cmf-poster{justify-self:start; max-width:320px;} .cmf-media::after{background:rgba(30,8,8,.8);} }
   .life-photos{grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));}
+  .cmf-video{max-width:460px; width:100%; justify-self:end; transform:rotate(1.5deg); background:#C8102E;}
+  .cmf-video img{object-fit:cover;}
+  .pas-video{position:relative; display:block;}
+  .pas-video::after{content:""; position:absolute; inset:0; background:rgba(0,0,0,.15); transition:background .3s ease;}
+  .pas-video:hover::after{background:rgba(0,0,0,.05);}
+  .video-play--sm{width:62px; height:62px; margin:-31px 0 0 -31px; top:50%;}
+  .video-play--sm svg{width:28px; height:28px; margin-left:4px;}
+  @media (max-width:900px){ .cmf-video{justify-self:start; transform:none;} }
 
   .view{display:none;}
   .view.active{display:block;}
@@ -4149,7 +4157,11 @@
           </div>
           <a class="cmf-btn" href="https://www.caramulo-motorfestival.com/pt/homepage/" target="_blank" rel="noopener"><span data-i18n="cmf_btn">Site officiel du festival</span> →</a>
         </div>
-        <img class="cmf-poster" src="images/luis/motorfestival-affiche.jpg" alt="Affiche Caramulo Motorfestival 2025" loading="lazy">
+        <a class="video-poster cmf-video" href="https://youtu.be/jJedre8t3Go" target="_blank" rel="noopener">
+          <img src="images/luis/motorfestival-affiche.jpg" alt="Caramulo Motorfestival" loading="lazy">
+          <span class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="video-label"><span class="yt-badge">YouTube</span><span data-i18n="video_watch_cmf">Regarder le Caramulo Motorfestival</span></span>
+        </a>
       </div>
       <p class="cmf-cap" data-i18n="cmf_cap">Les supercars défilent dans les rues de Caramulo.</p>
     </section>
@@ -4228,7 +4240,7 @@
           <article class="pas-card pas-card--tall" data-opt="parapente.jpg"><div class="pas-photo"><img src="images/luis/parapente.jpg" alt="Parapente au-dessus du Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_para_t">Le parapente</h3><p class="pas-text" data-i18n="concl_p_para">Récemment, j'ai volé en parapente au-dessus du lac Léman. Une vue inoubliable&nbsp;!</p></div></article>
           <article class="pas-card " data-opt="moto-garage.jpg"><div class="pas-photo"><img src="images/luis/moto-garage.jpg" alt="Moto en réparation" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_meca_t">La mécanique</h3><p class="pas-text" data-i18n="concl_p_meca">J'adore modifier ma moto et la réparer moi-même : chaque détail compte&nbsp;!</p></div></article>
           <article class="pas-card " data-opt="jura.jpg"><div class="pas-photo"><img src="images/luis/jura.jpg" alt="Le Jura" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_sort_t">Les sorties</h3><p class="pas-text" data-i18n="concl_p_sort">Découvrir de nouveaux endroits, comme le Jura, où je suis allé voir la course de côte automobile de Saint-Ursanne.</p></div></article>
-          <article class="pas-card" data-opt="motorfestival.jpg"><div class="pas-photo"><img src="images/luis/motorfestival.jpg" alt="Caramulo Motorfestival" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_cmf_t">Le Caramulo Motorfestival</h3><p class="pas-text" data-i18n="concl_p_cmf">Chaque septembre, voitures de course et motos envahissent les routes de mon village : un rendez-vous incontournable pour un passionné de moteurs comme moi.</p></div></article>
+          <article class="pas-card" data-opt="motorfestival.jpg"><a class="pas-photo pas-video" href="https://youtu.be/jJedre8t3Go" target="_blank" rel="noopener"><img src="images/luis/motorfestival.jpg" alt="Caramulo Motorfestival" loading="lazy"><span class="video-play video-play--sm"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></a><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_cmf_t">Le Caramulo Motorfestival</h3><p class="pas-text" data-i18n="concl_p_cmf">Chaque septembre, voitures de course et motos envahissent les routes de mon village : un rendez-vous incontournable pour un passionné de moteurs comme moi.</p></div></article>
           <article class="pas-card " data-opt="lac.jpg"><div class="pas-photo"><img src="images/luis/lac.jpg" alt="Sur le lac Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_lac_t">Le lac Léman</h3><p class="pas-text" data-i18n="concl_p_lac">L'été, on profite du lac : kayak, baignade et détente.</p></div></article>
           <article class="pas-card" data-opt="tanay.jpg"><div class="pas-photo"><img src="images/luis/tanay.jpg" alt="Lac de Tanay" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_walk_t">Marcher et se balader</h3><p class="pas-text" data-i18n="concl_p_walk">Randonnées et balades — « passear », comme on dit au Portugal —, par exemple jusqu'au lac de Tanay, au-dessus de Vouvry.</p></div></article>
         </div>
@@ -4914,7 +4926,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "cmf_btn": "Site officiel du festival",
   "cmf_cap": "Les supercars défilent dans les rues de Caramulo.",
   "concl_p_cmf_t": "Le Caramulo Motorfestival",
-  "concl_p_cmf": "Chaque septembre, voitures de course et motos envahissent les routes de mon village : un rendez-vous incontournable pour un passionné de moteurs comme moi."
+  "concl_p_cmf": "Chaque septembre, voitures de course et motos envahissent les routes de mon village : un rendez-vous incontournable pour un passionné de moteurs comme moi.",
+  "video_watch_cmf": "Regarder le Caramulo Motorfestival"
  },
  "it": {
   "nav_home": "Home",
@@ -5398,7 +5411,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "cmf_btn": "Sito ufficiale del festival",
   "cmf_cap": "Le supercar sfilano per le strade di Caramulo.",
   "concl_p_cmf_t": "Il Caramulo Motorfestival",
-  "concl_p_cmf": "Ogni settembre auto da corsa e moto invadono le strade del mio villaggio: un appuntamento imperdibile per un appassionato di motori come me."
+  "concl_p_cmf": "Ogni settembre auto da corsa e moto invadono le strade del mio villaggio: un appuntamento imperdibile per un appassionato di motori come me.",
+  "video_watch_cmf": "Guarda il Caramulo Motorfestival"
  },
  "de": {
   "nav_home": "Startseite",
@@ -5882,7 +5896,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "cmf_btn": "Offizielle Festival-Website",
   "cmf_cap": "Supersportwagen paradieren durch die Strassen von Caramulo.",
   "concl_p_cmf_t": "Das Caramulo Motorfestival",
-  "concl_p_cmf": "Jeden September erobern Rennwagen und Motorräder die Strassen meines Dorfes: ein Pflichttermin für einen Motorfan wie mich."
+  "concl_p_cmf": "Jeden September erobern Rennwagen und Motorräder die Strassen meines Dorfes: ein Pflichttermin für einen Motorfan wie mich.",
+  "video_watch_cmf": "Das Caramulo Motorfestival ansehen"
  }
 };
 

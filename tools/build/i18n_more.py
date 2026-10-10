@@ -298,3 +298,4 @@ T2.update({
   "Jeden September erobern Rennwagen und Motorräder die Strassen meines Dorfes: ein Pflichttermin für einen Motorfan wie mich."),
 })
 T2.update({"cmf_f1": ("ÉDITION EN 2025", "EDIZIONE NEL 2025", "AUSGABE 2025")})
+T2.update({"video_watch_cmf": ("Regarder le Caramulo Motorfestival", "Guarda il Caramulo Motorfestival", "Das Caramulo Motorfestival ansehen")})

@@ -946,3 +946,11 @@
   .pas-photo--red img{object-fit:contain;}
   @media (max-width:900px){ .cmf-grid{grid-template-columns:1fr;} .cmf-poster{justify-self:start; max-width:320px;} .cmf-media::after{background:rgba(30,8,8,.8);} }
   .life-photos{grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));}
+  .cmf-video{max-width:460px; width:100%; justify-self:end; transform:rotate(1.5deg); background:#C8102E;}
+  .cmf-video img{object-fit:cover;}
+  .pas-video{position:relative; display:block;}
+  .pas-video::after{content:""; position:absolute; inset:0; background:rgba(0,0,0,.15); transition:background .3s ease;}
+  .pas-video:hover::after{background:rgba(0,0,0,.05);}
+  .video-play--sm{width:62px; height:62px; margin:-31px 0 0 -31px; top:50%;}
+  .video-play--sm svg{width:28px; height:28px; margin-left:4px;}
+  @media (max-width:900px){ .cmf-video{justify-self:start; transform:none;} }
