@@ -1,0 +1,2625 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portugal — Une présentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#F7F5F0;
+    --warm-white:#FCFBF8;
+    --ink:#17211D;
+    --green:#174A3A;
+    --red:#A83232;
+    --gold:#B8955A;
+    --grey:#737873;
+    --border:#DDD9D0;
+
+    --gap-xs:8px;
+    --gap-sm:16px;
+    --gap-md:32px;
+    --gap-lg:64px;
+    --gap-section:120px;
+
+    --max-w:1280px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.serif{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{
+    max-width:var(--max-w);
+    margin:0 auto;
+    padding:0 48px;
+  }
+
+  @media (max-width:640px){
+    .wrap{padding:0 24px;}
+  }
+
+  /* ---------- NAV ---------- */
+
+  .nav{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:100;
+    height:76px;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(90deg, #F9F7F2 0%, #EEF2F1 55%, #E3EBEE 100%);
+    border-bottom:1px solid var(--border);
+  }
+
+  .nav-inner{
+    width:100%;
+    max-width:var(--max-w);
+    margin:0 auto;
+    padding:0 48px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:.08em;
+    color:var(--ink);
+  }
+
+  .brand-crest{
+    width:28px;height:28px;
+    object-fit:contain;
+  }
+
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:34px;
+    list-style:none;
+  }
+
+  .nav-links a{
+    font-size:14px;
+    font-weight:500;
+    color:var(--ink);
+    position:relative;
+    padding-bottom:4px;
+    white-space:nowrap;
+    transition:color .2s ease;
+  }
+
+  .nav-links a:hover{color:var(--green);}
+
+  .nav-links a.active{color:var(--red);}
+
+  .nav-links a.active::after{
+    content:"";
+    position:absolute;
+    left:0;right:0;
+    bottom:-2px;
+    height:2px;
+    background:var(--red);
+  }
+
+  .lang-toggle{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.04em;
+    color:var(--ink);
+    cursor:pointer;
+    position:relative;
+    user-select:none;
+  }
+
+  .lang-menu{
+    position:absolute;
+    top:calc(100% + 14px);
+    right:0;
+    background:var(--warm-white);
+    border:1px solid var(--border);
+    border-radius:4px;
+    box-shadow:0 12px 30px -12px rgba(23,33,29,.25);
+    min-width:140px;
+    padding:6px;
+    display:none;
+    flex-direction:column;
+    gap:2px;
+    z-index:200;
+  }
+  .lang-menu.open{display:flex;}
+
+  .lang-option{
+    display:block;
+    width:100%;
+    text-align:left;
+    background:none;
+    border:none;
+    padding:9px 12px;
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    font-weight:500;
+    letter-spacing:0;
+    color:var(--ink);
+    cursor:pointer;
+    border-radius:3px;
+  }
+  .lang-option:hover{background:var(--ivory);}
+  .lang-option.active{color:var(--green); font-weight:700;}
+
+  .lang-toggle svg{width:10px;height:10px;}
+
+  .nav-burger{
+    display:none;
+    width:22px;height:16px;
+    position:relative;
+    background:none;
+    border:none;
+    cursor:pointer;
+  }
+  .nav-burger span{
+    position:absolute;left:0;right:0;height:2px;background:var(--ink);
+  }
+  .nav-burger span:nth-child(1){top:0;}
+  .nav-burger span:nth-child(2){top:7px;}
+  .nav-burger span:nth-child(3){top:14px;}
+
+  @media (max-width:980px){
+    .nav-links{display:none;}
+    .nav-burger{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    overflow:hidden;
+  }
+
+  .hero-media{
+    position:absolute;
+    inset:0;
+    z-index:0;
+  }
+
+  .hero-media img{
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:center 60%;
+  }
+
+  .hero-media::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg, rgba(247,245,240,.97) 0%, rgba(247,245,240,.86) 22%, rgba(247,245,240,.55) 38%, rgba(247,245,240,.18) 52%, rgba(247,245,240,0) 64%);
+  }
+
+  .hero-content{
+    position:relative;
+    z-index:1;
+    padding-top:76px;
+    padding-bottom:120px;
+    padding-left:clamp(24px, 7vw, 120px);
+    padding-right:24px;
+    width:100%;
+    max-width:720px;
+  }
+
+  .eyebrow{
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.22em;
+    color:var(--red);
+    margin-bottom:18px;
+    text-shadow:0 2px 16px rgba(247,245,240,.7);
+  }
+
+  .hero-title{
+    font-size:104px;
+    font-weight:700;
+    line-height:.95;
+    color:var(--green);
+    margin-bottom:28px;
+    text-shadow:0 2px 24px rgba(247,245,240,.7);
+  }
+
+  .hero-divider{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:22px;
+  }
+
+  .hero-divider .line{
+    width:64px;height:2px;
+  }
+  .hero-divider .line.left{background:linear-gradient(90deg, transparent, var(--green));}
+  .hero-divider .line.right{background:linear-gradient(90deg, var(--red), transparent);}
+
+  .hero-divider .cross{
+    width:36px;height:36px;
+    object-fit:contain;
+    opacity:1;
+  }
+
+  .hero-subtitle{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:26px;
+    color:var(--ink);
+    margin-bottom:22px;
+    text-shadow:0 2px 20px rgba(247,245,240,.7);
+  }
+
+  .hero-quote{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:20px;
+    line-height:1.5;
+    color:var(--ink);
+    max-width:460px;
+    margin-bottom:64px;
+    text-shadow:0 2px 20px rgba(247,245,240,.7);
+  }
+
+  @media (max-width:640px){
+    .hero-title{font-size:58px;}
+    .hero-subtitle{font-size:21px;}
+    .hero-content{padding-top:150px;}
+  }
+
+  /* ---------- CARDS ---------- */
+
+  /* ---------- INTRO / QUI SUIS-JE ---------- */
+
+  .intro-section{
+    background:var(--warm-white);
+    padding:104px 0 56px;
+  }
+
+  .intro-grid{
+    display:grid;
+    grid-template-columns:44% 1fr;
+    gap:0 64px;
+  }
+
+  .intro-header{
+    margin-bottom:32px;
+  }
+
+  .intro-grid-v2{
+    display:grid;
+    grid-template-columns:40% 1fr;
+    gap:0 48px;
+    align-items:stretch;
+  }
+
+  .intro-right-col{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+
+  .intro-cards-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:16px;
+  }
+
+  @media (max-width:980px){
+    .intro-grid-v2{grid-template-columns:1fr;}
+    .intro-photo{aspect-ratio:4/5;height:auto;}
+    .intro-right-col{margin-top:24px;}
+  }
+  @media (max-width:560px){
+    .intro-cards-grid{grid-template-columns:1fr;}
+  }
+
+  .intro-photo-col{
+    position:relative;
+    height:100%;
+  }
+
+  .intro-photo{
+    width:100%;
+    height:100%;
+    min-height:420px;
+    object-fit:cover;
+    display:block;
+    border-radius:2px;
+    border:10px solid var(--warm-white);
+    outline:1px solid var(--border);
+    box-shadow:0 18px 40px -20px rgba(23,33,29,.25);
+  }
+
+  .intro-text-col{
+    padding-top:8px;
+  }
+
+  .intro-eyebrow-row{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:36px;
+  }
+
+  .intro-eyebrow{
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.22em;
+    color:var(--gold);
+    white-space:nowrap;
+  }
+
+  .intro-eyebrow-line{
+    flex:1;
+    height:1px;
+    background:var(--border);
+  }
+
+  .intro-flag-badge{
+    width:26px;height:26px;
+    border-radius:50%;
+    overflow:hidden;
+    flex-shrink:0;
+    border:1px solid var(--border);
+    display:flex;
+  }
+  .intro-flag-badge svg{width:100%;height:100%;}
+
+  .intro-title{
+    font-size:56px;
+    font-weight:600;
+    line-height:1.05;
+    color:var(--green);
+    margin-bottom:14px;
+  }
+
+  .intro-subtitle{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:26px;
+    color:var(--gold);
+    margin-bottom:32px;
+  }
+
+  .intro-text-col p{
+    font-size:16.5px;
+    font-weight:600;
+    line-height:1.75;
+    color:var(--ink);
+    margin-bottom:22px;
+    max-width:520px;
+  }
+
+  .intro-text-col p:last-of-type{margin-bottom:0;}
+
+  .intro-stats-row{
+    grid-column:1 / -1;
+    margin-top:-118px;
+    margin-left:26%;
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:14px;
+  }
+
+  .intro-stat-card{
+    position:relative;
+    background:var(--ivory);
+    border:1px solid var(--border);
+    border-radius:3px;
+    padding:18px 14px 20px;
+    overflow:hidden;
+    min-height:150px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+  }
+
+  .intro-stat-illus{
+    position:absolute;
+    right:-10px;
+    bottom:-10px;
+    width:82%;
+    opacity:.9;
+    pointer-events:none;
+  }
+
+  .intro-stat-icon{
+    width:20px;height:20px;
+    margin-bottom:14px;
+    position:relative;
+    z-index:1;
+  }
+  .intro-stat-icon svg{width:100%;height:100%;stroke:var(--ink);fill:none;}
+
+  .intro-stat-label{
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.14em;
+    color:var(--gold);
+    margin-bottom:10px;
+    position:relative;
+    z-index:1;
+  }
+
+  .intro-stat-rule{
+    width:20px;height:1px;
+    background:var(--border);
+    margin-bottom:12px;
+    position:relative;
+    z-index:1;
+  }
+
+  .intro-stat-value{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:19px;
+    line-height:1.3;
+    color:var(--ink);
+    position:relative;
+    z-index:1;
+  }
+
+  @media (max-width:980px){
+    .intro-grid{grid-template-columns:1fr;}
+    .intro-stats-row{grid-column:1;margin-left:0;margin-top:24px;grid-template-columns:repeat(2,1fr);}
+    .intro-title{font-size:42px;}
+  }
+  @media (max-width:560px){
+    .intro-stats-row{grid-template-columns:1fr;}
+  }
+
+  .section-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    padding:36px 0 0;
+    background:var(--ivory);
+  }
+  .section-divider .line{
+    width:120px;height:2px;
+  }
+  .section-divider .line.l{background:linear-gradient(90deg, transparent, var(--green));}
+  .section-divider .line.r{background:linear-gradient(90deg, var(--red), transparent);}
+  .section-divider .dot{
+    width:8px;height:8px;
+    border-radius:50%;
+    background:var(--gold);
+  }
+
+  .cards-section{
+    position:relative;
+    z-index:2;
+    margin-top:-84px;
+  }
+
+  .cards-grid{
+    display:grid;
+    grid-template-columns:repeat(8, 1fr);
+    gap:14px;
+  }
+
+  @media (max-width:1180px){
+    .cards-grid{grid-template-columns:repeat(4, 1fr);}
+  }
+  @media (max-width:980px){
+    .cards-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:560px){
+    .cards-grid{grid-template-columns:1fr;}
+  }
+
+  .card{
+    background:var(--warm-white);
+    border:1px solid var(--border);
+    border-radius:4px;
+    padding:24px 12px 20px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    box-shadow:0 18px 40px -24px rgba(23,33,29,.18);
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 24px 48px -20px rgba(23,33,29,.24);
+    border-color:var(--gold);
+  }
+
+  .card-icon{
+    display:inline-block;
+    width:28px;height:28px;
+    margin-bottom:14px;
+    color:var(--ink);
+  }
+
+  .card-icon svg{width:100%;height:100%;stroke:var(--ink);fill:none;}
+
+  .card-label{
+    font-size:13.5px;
+    font-weight:600;
+    line-height:1.3;
+    margin-bottom:14px;
+  }
+
+  .card-underline{
+    width:36px;height:3px;
+    display:flex;
+    margin-top:auto;
+  }
+  .card-underline span{flex:1;height:100%;}
+  .card-underline span:first-child{background:var(--green);}
+  .card-underline span:last-child{background:var(--red);}
+
+  /* ---------- FOOTER STRIP ---------- */
+
+  .closing{
+    padding:64px 0 96px;
+    text-align:center;
+  }
+
+  .closing-band{
+    padding:36px 0;
+    background:var(--ivory);
+  }
+  .closing-band .closing-icon{
+    width:22px;height:22px;
+    margin-bottom:14px;
+  }
+  .closing-band .closing-quote{
+    font-size:19px;
+    margin-bottom:20px;
+  }
+  .closing-band .closing-rule{
+    width:100px;
+  }
+
+  .glance-section{
+    background:var(--ivory);
+    padding:0 0 var(--gap-section);
+  }
+
+  .glance-card{
+    background:var(--warm-white);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:40px 48px 36px;
+    box-shadow:0 18px 40px -28px rgba(23,33,29,.18);
+  }
+
+  .glance-title{
+    text-align:center;
+    font-size:30px;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:32px;
+  }
+
+  .glance-grid{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+  }
+
+  .glance-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:0 10px;
+    border-left:1px solid var(--border);
+  }
+  .glance-item:first-child{border-left:none;}
+
+  .glance-icon{
+    width:30px;height:30px;
+    margin-bottom:14px;
+    color:var(--green);
+  }
+  .glance-icon svg{width:100%;height:100%;stroke:var(--green);fill:none;}
+
+  .glance-label{
+    font-size:13px;
+    color:var(--grey);
+    margin-bottom:6px;
+  }
+
+  .glance-value{
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    font-weight:700;
+    color:var(--ink);
+  }
+
+  @media (max-width:980px){
+    .glance-grid{grid-template-columns:repeat(3, 1fr); row-gap:28px;}
+    .glance-item{border-left:none;}
+  }
+  @media (max-width:560px){
+    .glance-grid{grid-template-columns:repeat(2, 1fr);}
+    .glance-card{padding:32px 24px 28px;}
+  }
+
+  .journey-section{
+    background:var(--ivory);
+    padding:0 0 var(--gap-section);
+  }
+
+  .journey-title-row{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    margin-bottom:32px;
+  }
+
+  .journey-line{
+    flex:1;
+    height:1px;
+    background:var(--border);
+  }
+
+  .journey-title{
+    font-size:30px;
+    font-weight:600;
+    color:var(--ink);
+    white-space:nowrap;
+  }
+
+  .journey-grid{
+    display:grid;
+    grid-template-columns:repeat(8, 1fr);
+    gap:14px;
+  }
+
+  .journey-card{
+    position:relative;
+    aspect-ratio:3/4;
+    border-radius:4px;
+    overflow:hidden;
+    box-shadow:0 18px 40px -24px rgba(23,33,29,.25);
+  }
+
+  .journey-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+  }
+
+  .journey-card:hover img{
+    transform:scale(1.06);
+  }
+
+  .journey-card::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(10,14,12,.82) 0%, rgba(10,14,12,.15) 55%, rgba(10,14,12,0) 75%);
+  }
+
+  .journey-card-content{
+    position:absolute;
+    left:14px;
+    right:14px;
+    bottom:14px;
+    z-index:1;
+    color:#fff;
+  }
+
+  .journey-number{
+    display:block;
+    font-family:'Cormorant Garamond', serif;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.05em;
+    color:var(--gold);
+    margin-bottom:4px;
+  }
+
+  .journey-label{
+    font-family:'Cormorant Garamond', serif;
+    font-size:18px;
+    font-weight:600;
+    line-height:1.15;
+  }
+
+  @media (max-width:1180px){
+    .journey-grid{grid-template-columns:repeat(4, 1fr); row-gap:14px;}
+  }
+  @media (max-width:640px){
+    .journey-grid{grid-template-columns:repeat(2, 1fr);}
+    .journey-title{font-size:24px;}
+  }
+
+  .bridge-section{
+    position:relative;
+    overflow:hidden;
+    padding:100px 0 110px;
+  }
+
+  .bridge-media{
+    position:absolute;
+    inset:0;
+    z-index:0;
+  }
+  .bridge-media img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 55%;
+    display:block;
+  }
+
+  .bridge-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, var(--ivory) 0%, rgba(247,245,240,.96) 32%, rgba(247,245,240,.78) 58%, rgba(247,245,240,.4) 80%, rgba(247,245,240,.18) 100%);
+  }
+
+  .bridge-content{
+    position:relative;
+    z-index:1;
+    text-align:center;
+  }
+
+  .bridge-title{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    font-size:44px;
+    font-weight:700;
+    color:var(--ink);
+    margin-bottom:18px;
+    flex-wrap:wrap;
+  }
+
+  .bridge-flag{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid var(--warm-white);
+    box-shadow:0 4px 10px rgba(23,33,29,.25);
+  }
+
+  .bridge-dash{
+    color:var(--gold);
+    font-weight:700;
+  }
+
+  .bridge-subtitle{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:700;
+    font-size:22px;
+    color:var(--gold);
+    margin-bottom:26px;
+  }
+
+  .bridge-text{
+    font-family:'Inter', sans-serif;
+    font-size:16px;
+    font-weight:700;
+    color:var(--ink);
+    line-height:1.8;
+    max-width:640px;
+    margin:0 auto;
+  }
+
+  @media (max-width:640px){
+    .bridge-title{font-size:32px;}
+    .bridge-text br{display:none;}
+  }
+
+  .cta-section{
+    background:var(--green);
+    padding:96px 0;
+  }
+
+  .cta-content{
+    text-align:center;
+  }
+
+  .cta-title{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:40px;
+    color:var(--warm-white);
+    margin-bottom:36px;
+  }
+
+  .cta-button{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:rgba(252,251,248,.08);
+    border:1.5px solid rgba(252,251,248,.4);
+    color:var(--warm-white);
+    padding:17px 34px;
+    border-radius:999px;
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    text-decoration:none;
+    transition:background .25s ease, transform .25s ease, border-color .25s ease;
+  }
+
+  .cta-button:hover{
+    background:rgba(252,251,248,.18);
+    border-color:rgba(252,251,248,.7);
+    transform:translateY(-2px);
+  }
+
+  .cta-arrow{
+    width:16px;height:16px;
+    display:inline-flex;
+  }
+  .cta-arrow svg{width:100%;height:100%;stroke:var(--warm-white);fill:none;}
+
+  @media (max-width:560px){
+    .cta-title{font-size:28px;}
+  }
+
+  .closing-icon{
+    display:inline-block;
+    width:30px;height:30px;
+    margin:0 auto 28px;
+    color:var(--ink);
+  }
+  .closing-icon svg{width:100%;height:100%;stroke:var(--ink);fill:none;}
+
+  .closing-quote{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:24px;
+    color:var(--ink);
+    max-width:640px;
+    margin:0 auto 40px;
+    line-height:1.5;
+  }
+
+  .closing-rule{
+    width:120px;height:2px;
+    margin:0 auto;
+    display:flex;
+  }
+  .closing-rule span{flex:1;height:100%;}
+  .closing-rule span:nth-child(1){background:var(--green);}
+  .closing-rule span:nth-child(2){background:var(--gold);}
+  .closing-rule span:nth-child(3){background:var(--red);}
+
+</style>
+<style>
+
+
+  .page-hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    overflow:hidden;
+  }
+
+  .page-hero-media{
+    position:absolute;
+    inset:0;
+    z-index:0;
+  }
+  .page-hero-media img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 55%;
+    display:block;
+  }
+  .page-hero-media::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg, rgba(247,245,240,.97) 0%, rgba(247,245,240,.86) 22%, rgba(247,245,240,.55) 38%, rgba(247,245,240,.18) 52%, rgba(247,245,240,0) 64%);
+  }
+
+  .page-hero-content{
+    position:relative;
+    z-index:1;
+    padding-top:76px;
+    padding-bottom:80px;
+    padding-left:clamp(24px, 7vw, 120px);
+    padding-right:24px;
+    width:100%;
+    max-width:640px;
+  }
+
+  .page-hero-eyebrow{
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.08em;
+    color:var(--gold);
+    margin-bottom:20px;
+  }
+  .page-hero-eyebrow span{
+    color:var(--grey);
+    font-weight:500;
+  }
+
+  .page-hero-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:clamp(56px, 7vw, 88px);
+    color:var(--green);
+    letter-spacing:.01em;
+    line-height:1;
+    margin-bottom:22px;
+  }
+
+  .page-hero-subtitle{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:28px;
+    color:var(--ink);
+    line-height:1.35;
+    margin-bottom:26px;
+    max-width:480px;
+  }
+
+  .page-hero-divider{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:26px;
+  }
+  .page-hero-divider .line{
+    width:56px;height:2px;
+    background:var(--border);
+  }
+  .page-hero-divider .dot{
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--gold);
+  }
+
+  .page-hero-text{
+    font-family:'Inter', sans-serif;
+    font-size:17px;
+    color:var(--grey);
+    line-height:1.7;
+    max-width:420px;
+  }
+
+  @media (max-width:900px){
+    .page-hero-content{padding-left:24px; max-width:100%;}
+  }
+
+  .geo-stats{
+    background:var(--warm-white);
+    border-bottom:1px solid var(--border);
+  }
+
+  .geo-stats-grid{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+  }
+
+  .geo-stat-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:32px 20px;
+    border-left:1px solid var(--border);
+  }
+  .geo-stat-item:first-child{border-left:none;}
+
+  .geo-stat-icon{
+    width:26px;height:26px;
+    flex-shrink:0;
+    color:var(--grey);
+  }
+  .geo-stat-icon svg{width:100%;height:100%;stroke:var(--grey);fill:none;}
+
+  .geo-stat-text{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+
+  .geo-stat-value{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:26px;
+    color:var(--ink);
+    line-height:1;
+  }
+  .geo-stat-value .unit{
+    font-weight:500;
+    font-size:16px;
+    color:var(--grey);
+  }
+
+  .geo-stat-label{
+    font-family:'Inter', sans-serif;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.04em;
+    color:var(--grey);
+    line-height:1.5;
+  }
+  .geo-stat-label em{
+    font-style:italic;
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:13px;
+    color:var(--gold);
+    letter-spacing:0;
+  }
+
+  @media (max-width:900px){
+    .geo-stats-grid{grid-template-columns:repeat(3, 1fr);}
+    .geo-stat-item:nth-child(3n+1){border-left:none;}
+    .geo-stat-item{border-top:1px solid var(--border);}
+  }
+  @media (max-width:560px){
+    .geo-stats-grid{grid-template-columns:repeat(2, 1fr);}
+    .geo-stat-item:nth-child(3n+1){border-left:1px solid var(--border);}
+    .geo-stat-item:nth-child(2n+1){border-left:none;}
+  }
+
+  .geo-location{
+    position:relative;
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+  }
+
+  .geo-location-media{
+    position:absolute;
+    inset:0;
+    z-index:0;
+  }
+  .geo-location-media img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 45%;
+    display:block;
+  }
+  .geo-location-media::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg, rgba(247,245,240,.97) 0%, rgba(247,245,240,.88) 24%, rgba(247,245,240,.55) 42%, rgba(247,245,240,.15) 58%, rgba(247,245,240,0) 70%);
+  }
+
+  .ch-marker{
+    position:absolute;
+    left:77.5%;
+    top:8%;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .ch-marker-pin{
+    width:34px;height:34px;
+    border-radius:50%;
+    overflow:hidden;
+    border:2.5px solid #fff;
+    box-shadow:0 6px 16px -4px rgba(10,14,12,.55);
+    display:block;
+    animation:ch-bounce 2.6s ease-in-out infinite;
+  }
+  .ch-marker-pin img{
+    width:100%;height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .ch-marker-line{
+    width:1.5px;
+    height:14px;
+    background:rgba(255,255,255,.85);
+  }
+
+  .ch-marker-label{
+    margin-top:4px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:700;
+    font-size:14px;
+    color:#fff;
+    text-shadow:0 2px 6px rgba(0,0,0,.5);
+    white-space:nowrap;
+  }
+
+  @keyframes ch-bounce{
+    0%, 100%{ transform:translateY(0); }
+    50%{ transform:translateY(-5px); }
+  }
+
+  @media (max-width:900px){
+    .ch-marker{ left:74%; top:10%; }
+    .ch-marker-pin{ width:28px; height:28px; }
+    .ch-marker-label{ font-size:12px; }
+  }
+
+  .geo-location-content{
+    position:relative;
+    z-index:1;
+    padding:80px clamp(24px, 6vw, 96px);
+    max-width:520px;
+  }
+
+  .geo-location-eyebrow{
+    display:block;
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.08em;
+    color:var(--gold);
+    margin-bottom:18px;
+  }
+
+  .geo-location-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:44px;
+    color:var(--ink);
+    line-height:1.15;
+    margin-bottom:22px;
+  }
+
+  .geo-location-body{
+    font-family:'Inter', sans-serif;
+    font-size:16px;
+    color:var(--grey);
+    line-height:1.75;
+    margin-bottom:32px;
+    max-width:360px;
+  }
+
+  .geo-location-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    border:1.5px solid var(--ink);
+    color:var(--ink);
+    padding:14px 22px;
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-decoration:none;
+    transition:background .2s ease, color .2s ease;
+    background:rgba(252,251,248,.5);
+  }
+  .geo-location-btn:hover{
+    background:var(--ink);
+    color:var(--warm-white);
+  }
+  .geo-location-btn .arrow{
+    font-size:15px;
+  }
+
+  @media (max-width:900px){
+    .geo-location{min-height:auto; padding:60px 0;}
+    .geo-location-media::after{
+      background:linear-gradient(180deg, rgba(247,245,240,.97) 0%, rgba(247,245,240,.9) 35%, rgba(247,245,240,.5) 60%, rgba(247,245,240,.1) 80%);
+    }
+    .geo-location-content{max-width:100%; padding:40px 24px;}
+  }
+
+  .geo-duality{
+    background:var(--warm-white);
+    margin-top:48px;
+  }
+
+  .geo-duality-grid{
+    display:grid;
+    grid-template-columns:30% 1fr 1fr;
+    min-height:560px;
+  }
+
+  .geo-duality-photo + .geo-duality-photo{
+    margin-left:6px;
+  }
+
+  .geo-duality-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:56px clamp(24px, 4vw, 56px);
+    background:var(--warm-white);
+  }
+
+  .geo-duality-eyebrow{
+    display:block;
+    font-family:'Inter', sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.1em;
+    color:var(--red);
+    margin-bottom:16px;
+  }
+
+  .geo-duality-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:32px;
+    color:var(--ink);
+    line-height:1.2;
+    margin-bottom:36px;
+  }
+
+  .geo-duality-feature{
+    display:flex;
+    gap:14px;
+    margin-bottom:28px;
+  }
+  .geo-duality-feature:last-child{margin-bottom:0;}
+
+  .geo-duality-icon{
+    width:22px;height:22px;
+    flex-shrink:0;
+    margin-top:2px;
+    color:var(--green);
+  }
+  .geo-duality-icon svg{width:100%;height:100%;stroke:var(--green);fill:none;}
+
+  .geo-duality-feature-label{
+    display:block;
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.03em;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+
+  .geo-duality-feature-desc{
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+    color:var(--grey);
+    line-height:1.6;
+  }
+
+  .geo-duality-photo{
+    overflow:hidden;
+  }
+  .geo-duality-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  @media (max-width:900px){
+    .geo-duality-grid{grid-template-columns:1fr; min-height:auto;}
+    .geo-duality-photo{height:340px;}
+  }
+
+  .geo-climate-relief{
+    background:var(--ivory);
+    margin-top:48px;
+  }
+
+  .geo-cr-grid{
+    display:grid;
+    grid-template-columns:1.15fr 1fr 1.05fr 0.9fr;
+    min-height:520px;
+  }
+
+  .geo-cr-climate-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:56px clamp(24px, 3vw, 48px);
+  }
+
+  .geo-cr-eyebrow{
+    display:block;
+    font-family:'Inter', sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.1em;
+    color:var(--red);
+    margin-bottom:16px;
+  }
+
+  .geo-cr-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:28px;
+    color:var(--ink);
+    line-height:1.25;
+    margin-bottom:20px;
+  }
+
+  .geo-cr-body{
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+    color:var(--grey);
+    line-height:1.7;
+    margin-bottom:32px;
+  }
+
+  .geo-cr-features{
+    display:flex;
+    gap:24px;
+  }
+
+  .geo-cr-feature{
+    flex:1;
+  }
+
+  .geo-cr-icon{
+    display:inline-flex;
+    width:20px;height:20px;
+    color:var(--green);
+    margin-bottom:8px;
+  }
+  .geo-cr-icon svg{width:100%;height:100%;stroke:var(--green);fill:none;}
+
+  .geo-cr-feature-label{
+    display:block;
+    font-family:'Inter', sans-serif;
+    font-size:12.5px;
+    font-weight:700;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+
+  .geo-cr-feature-desc{
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    color:var(--grey);
+    line-height:1.55;
+  }
+
+  .geo-cr-climate-map{
+    background:#F5F4F2;
+    overflow:hidden;
+    border-left:1px solid var(--border);
+  }
+  .geo-cr-climate-map img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .geo-cr-relief-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:56px clamp(24px, 3vw, 48px);
+    border-left:1px solid var(--border);
+  }
+
+  .geo-cr-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .geo-cr-list li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+    color:var(--ink);
+    font-weight:500;
+    line-height:1.4;
+  }
+  .geo-cr-list .geo-cr-icon{
+    margin-bottom:0;
+    flex-shrink:0;
+  }
+
+  .geo-cr-relief-photo{
+    overflow:hidden;
+  }
+  .geo-cr-relief-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  @media (max-width:1100px){
+    .geo-cr-grid{grid-template-columns:1fr 1fr;}
+    .geo-cr-climate-map{border-left:none;}
+    .geo-cr-relief-text{border-left:none; grid-column:1 / -1; border-top:1px solid var(--border);}
+    .geo-cr-relief-photo{grid-column:1 / -1; height:320px;}
+  }
+  @media (max-width:640px){
+    .geo-cr-grid{grid-template-columns:1fr;}
+    .geo-cr-relief-photo{height:280px;}
+    .geo-cr-features{flex-direction:column; gap:20px;}
+  }
+
+  .geo-volcanic{
+    background:var(--warm-white);
+    margin-top:48px;
+  }
+
+  .geo-volc-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.85fr 1.15fr 0.85fr;
+    min-height:560px;
+  }
+
+  .geo-volc-intro{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:56px clamp(24px, 3vw, 48px);
+  }
+
+  .geo-volc-col{
+    display:flex;
+    flex-direction:column;
+    border-left:1px solid var(--border);
+  }
+
+  .geo-volc-col-text{
+    padding:32px 24px 20px;
+  }
+
+  .geo-volc-label{
+    display:block;
+    font-family:'Inter', sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.08em;
+    color:var(--red);
+    margin-bottom:12px;
+  }
+
+  .geo-volc-desc{
+    font-family:'Inter', sans-serif;
+    font-size:13.5px;
+    color:var(--grey);
+    line-height:1.6;
+  }
+
+  .geo-volc-photo-wrap{
+    position:relative;
+    flex:1;
+    overflow:hidden;
+    margin:0 24px 24px;
+    border-radius:3px;
+  }
+  .geo-volc-photo-wrap--tall{
+    margin-top:0;
+  }
+  .geo-volc-photo-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .geo-volc-caption{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    padding:14px 12px 12px;
+    font-family:'Inter', sans-serif;
+    font-size:11px;
+    line-height:1.5;
+    color:#fff;
+    background:linear-gradient(to top, rgba(10,14,12,.82) 0%, rgba(10,14,12,.35) 60%, rgba(10,14,12,0) 100%);
+  }
+
+  .geo-volc-center{
+    overflow:hidden;
+    border-left:1px solid var(--border);
+  }
+  .geo-volc-center img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  @media (max-width:1100px){
+    .geo-volc-grid{grid-template-columns:1fr 1fr;}
+    .geo-volc-intro{grid-column:1 / -1; border-left:none;}
+    .geo-volc-center{grid-column:1 / -1; height:360px; border-left:none; border-top:1px solid var(--border);}
+  }
+  @media (max-width:640px){
+    .geo-volc-grid{grid-template-columns:1fr;}
+    .geo-volc-col{border-left:none; border-top:1px solid var(--border);}
+  }
+
+  .geo-extras{
+    background:var(--ivory);
+    margin-top:48px;
+  }
+
+  .geo-extras-footer{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    padding:44px 0 36px;
+    border-bottom:1px solid var(--border);
+  }
+
+  .geo-extras-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+  }
+
+  .geo-extras-col{
+    padding:48px clamp(24px, 3vw, 48px);
+    border-left:1px solid var(--border);
+  }
+  .geo-extras-col:first-child{border-left:none;}
+
+  .geo-extras-col--luis{
+    background:var(--warm-white);
+  }
+
+  .geo-extras-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:26px;
+    color:var(--ink);
+    line-height:1.25;
+    margin:16px 0 28px;
+  }
+
+  .geo-extras-col--luis .geo-extras-title{
+    color:var(--ink);
+    font-weight:700;
+  }
+
+  .geo-extras-desc{
+    font-family:'Inter', sans-serif;
+    font-size:14.5px;
+    color:var(--grey);
+    line-height:1.75;
+  }
+
+  .geo-extras-book{
+    position:relative;
+    width:160px;
+    margin:24px auto 0;
+    border-radius:4px;
+    overflow:hidden;
+    box-shadow:0 14px 28px -14px rgba(23,33,29,.4);
+  }
+  .geo-extras-book img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+  .geo-extras-book-caption{
+    display:block;
+    margin-top:10px;
+    width:160px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:12.5px;
+    color:var(--grey);
+    line-height:1.4;
+  }
+  .geo-extras-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+  }
+  .geo-extras-list--facts{
+    margin-top:16px;
+  }
+  .geo-extras-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+  }
+  .geo-extras-list li span:last-child{
+    font-family:'Inter', sans-serif;
+    font-size:14.5px;
+    color:var(--ink);
+    line-height:1.55;
+  }
+
+  .geo-extras-icon{
+    width:22px;height:22px;
+    flex-shrink:0;
+    margin-top:1px;
+    color:var(--green);
+  }
+  .geo-extras-icon svg{width:100%;height:100%;stroke:var(--green);fill:none;}
+
+  .geo-extras-footer-label{
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.08em;
+    color:var(--ink);
+  }
+
+  .geo-extras-footer-arrow{
+    width:18px;height:18px;
+    color:var(--grey);
+  }
+  .geo-extras-footer-arrow svg{width:100%;height:100%;stroke:var(--grey);fill:none;}
+
+  @media (max-width:900px){
+    .geo-extras-grid{grid-template-columns:1fr;}
+    .geo-extras-col{border-left:none; border-top:1px solid var(--border);}
+    .geo-extras-col:first-child{border-top:none;}
+  }
+
+  .hist-cards{
+    background:var(--ivory);
+    margin-top:48px;
+  }
+
+  .hist-cards-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+  }
+
+  .hist-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:6px;
+    min-height:280px;
+  }
+
+  .hist-card-photo{
+    position:absolute;
+    inset:0;
+    z-index:0;
+  }
+  .hist-card-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+  }
+  .hist-card:hover .hist-card-photo img{
+    transform:scale(1.05);
+  }
+  .hist-card-photo::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(100deg, rgba(252,251,248,.97) 0%, rgba(252,251,248,.93) 32%, rgba(252,251,248,.55) 55%, rgba(252,251,248,.12) 75%, rgba(252,251,248,0) 90%);
+  }
+
+  .hist-card-text{
+    position:relative;
+    z-index:1;
+    padding:26px 22px;
+  }
+
+  .hist-card-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:21px;
+    color:var(--ink);
+    line-height:1.25;
+    margin-bottom:14px;
+  }
+
+  .hist-card-desc{
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    color:var(--ink);
+    line-height:1.6;
+    max-width:80%;
+  }
+
+  .hist-card-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:16px;
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1.5px solid var(--ink);
+    padding-bottom:2px;
+  }
+  .hist-card-link .arrow{
+    transition:transform .2s ease;
+  }
+  .hist-card-link:hover .arrow{
+    transform:translateX(3px);
+  }
+
+  @media (max-width:900px){
+    .hist-cards-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:560px){
+    .hist-cards-grid{grid-template-columns:1fr;}
+  }
+
+  .hist-routes{
+    position:relative;
+    margin-top:48px;
+    min-height:560px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+  }
+
+  .hist-routes-map{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    background:#F4EEE1;
+  }
+  .hist-routes-map img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+  }
+  .hist-routes-content{
+    position:relative;
+    z-index:1;
+    padding:40px clamp(24px, 4vw, 56px);
+    margin:32px;
+    max-width:420px;
+    background:rgba(232,218,190,.95);
+    border-radius:6px;
+    box-shadow:0 24px 50px -24px rgba(23,33,29,.35);
+  }
+
+  .hist-routes-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:32px;
+    color:var(--ink);
+    line-height:1.2;
+    margin-bottom:20px;
+  }
+
+  .hist-routes-desc{
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+    font-weight:700;
+    color:#0A0E0C;
+    line-height:1.65;
+    margin-bottom:24px;
+  }
+
+  .hist-routes-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px 16px;
+    margin-bottom:28px;
+  }
+
+  .hist-routes-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Inter', sans-serif;
+    font-size:13.5px;
+    font-weight:500;
+    color:var(--ink);
+  }
+  .hist-routes-item svg{
+    width:16px;height:16px;
+    flex-shrink:0;
+    stroke:var(--green);
+    fill:none;
+  }
+
+  .hist-routes-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    border:1.5px solid var(--ink);
+    color:var(--ink);
+    padding:13px 20px;
+    font-family:'Inter', sans-serif;
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:.03em;
+    text-decoration:none;
+    align-self:flex-start;
+    background:rgba(252,251,248,.5);
+    transition:background .2s ease, color .2s ease;
+  }
+  .hist-routes-btn:hover{
+    background:var(--ink);
+    color:var(--warm-white);
+  }
+
+  .hist-routes-legend{
+    position:absolute;
+    right:20px;
+    bottom:16px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Inter', sans-serif;
+    font-size:11.5px;
+    font-weight:600;
+    color:var(--ink);
+    background:rgba(252,251,248,.85);
+    padding:6px 12px;
+    border-radius:3px;
+  }
+  .hist-routes-legend .line{
+    width:18px;height:2px;
+    background:var(--red);
+    display:inline-block;
+  }
+
+  @media (max-width:900px){
+    .hist-routes{min-height:auto; padding:60px 0;}
+    .hist-routes-content{max-width:calc(100% - 48px); padding:32px 24px; margin:24px;}
+  }
+
+
+
+  .view{display:none;}
+  .view.active{display:block;}
+
+</style>
+</head>
+<body>
+
+<nav class="nav" id="siteNav">
+    <div class="nav-inner">
+      <a href="#" class="brand" data-view="home">
+        <img src="images/crest.png" alt="" class="brand-crest">
+        PORTUGAL
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active" data-view="home" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="#" class="nav-link" data-view="geographie" data-i18n="nav_geo">Géographie</a></li>
+        <li><a href="#" class="nav-link" data-view="histoire" data-i18n="nav_hist">Histoire</a></li>
+        <li><a href="#" class="nav-link" data-i18n="nav_inst">Institutions</a></li>
+        <li><a href="#" class="nav-link" data-i18n="nav_soc">Société</a></li>
+        <li><a href="#" class="nav-link" data-i18n="nav_cult">Culture</a></li>
+        <li><a href="#" class="nav-link" data-i18n="nav_reg">Régions</a></li>
+        <li><a href="#" class="nav-link" data-i18n="nav_concl">Conclusion</a></li>
+      </ul>
+
+      <div class="lang-toggle" id="langToggle">
+        <span id="langCurrent">FR</span>
+        <svg viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="var(--ink)" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <div class="lang-menu" id="langMenu">
+          <button class="lang-option active" data-lang="fr">Français</button>
+          <button class="lang-option" data-lang="it">Italiano</button>
+          <button class="lang-option" data-lang="de">Deutsch</button>
+        </div>
+      </div>
+
+      <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="view active" id="view-home">
+<header class="hero">
+    <div class="hero-media">
+      <img src="images/hero-porto.jpg" alt="Vue de Porto au coucher du soleil">
+    </div>
+    <div class="hero-content">
+      <p class="eyebrow" data-i18n="hero_eyebrow">BIENVENUE AU</p>
+      <h1 class="hero-title">Portugal</h1>
+      <div class="hero-divider">
+        <span class="line left"></span>
+        <img class="cross" src="images/cross.png" alt="">
+        <span class="line right"></span>
+      </div>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">Une présentation du Portugal</p>
+      <p class="hero-quote" data-i18n="hero_quote">« Un petit pays au bord de l'Atlantique, avec une grande histoire, une culture riche et beaucoup de soleil. »</p>
+    </div>
+  </header>
+
+    <section class="cards-section wrap">
+      <div class="cards-grid">
+
+        <a class="card" href="#" data-view="geographie">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z" stroke-width="1.4"/><circle cx="12" cy="9" r="2.4" stroke-width="1.4"/></svg></span>
+          <span class="card-label" data-i18n="card_geo">Géographie</span>
+          <span class="card-underline"><span></span><span></span></span>
+        </a>
+
+        <a class="card" href="#" data-view="histoire">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 15h18M5 15V9l7-4 7 4v6M12 5v4" stroke-width="1.4" stroke-linejoin="round"/><path d="M4 19h16" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+          <span class="card-label" data-i18n="card_hist">Histoire</span>
+          <span class="card-underline"><span></span><span></span></span>
+        </a>
+
+        <a class="card" href="#" data-view="institutions">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10M20 21V10M2 10l10-6 10 6M6 10v7M10 10v7M14 10v7M18 10v7" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+          <span class="card-label" data-i18n="card_inst">Institutions<br>&amp; politique</span>
+          <span class="card-underline"><span></span><span></span></span>
+        </a>
+
+        <a class="card" href="#" data-view="societe">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="2.6" stroke-width="1.4"/><circle cx="17" cy="9" r="2" stroke-width="1.4"/><path d="M4 20c.6-3.4 2.6-5.2 5-5.2s4.4 1.8 5 5.2M15 20c.3-2.3 1.6-3.8 3.5-3.8" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+          <span class="card-label" data-i18n="card_pop">Population<br>&amp; société</span>
+          <span class="card-underline"><span></span><span></span></span>
+        </a>
+
+        <a class="card" href="#" data-view="culture">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="17" r="3" stroke-width="1.4"/><path d="M11 17V5l8-2v10" stroke-width="1.4" stroke-linejoin="round"/><circle cx="16" cy="14" r="3" stroke-width="1.4"/></svg></span>
+          <span class="card-label" data-i18n="card_cult">Culture<br>&amp; gastronomie</span>
+          <span class="card-underline"><span></span><span></span></span>
+        </a>
+
+        <a class="card" href="#" data-view="sport">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="1.4"/><path d="M12 7.5l3.3 2.4-1.3 3.9H10l-1.3-3.9L12 7.5z" stroke-width="1.2" stroke-linejoin="round"/><path d="M12 3v4.5M12 20.5V16M3.5 9.5l4 1.5M20.5 9.5l-4 1.5M4.5 17l4-2.7M19.5 17l-4-2.7" stroke-width="1.1"/></svg></span>
+          <span class="card-label" data-i18n="card_sport">Sport</span>
+          <span class="card-underline"><span></span><span></span></span>
+        </a>
+
+        <a class="card" href="#" data-view="regions">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M9 3L3 5v16l6-2 6 2 6-2V3l-6 2-6-2z" stroke-width="1.3" stroke-linejoin="round"/><path d="M9 3v16M15 5v16" stroke-width="1.1"/></svg></span>
+          <span class="card-label" data-i18n="card_reg">Les régions</span>
+          <span class="card-underline"><span></span><span></span></span>
+        </a>
+
+        <a class="card" href="#" data-view="conclusion">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10a4.5 4.5 0 018.5-2 4.5 4.5 0 018.5 2c0 5.4-7.5 10-7.5 10z" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+          <span class="card-label" data-i18n="card_moi">Ce que le Portugal<br>représente pour moi</span>
+          <span class="card-underline"><span></span><span></span></span>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="closing closing-band wrap">
+      <span class="closing-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2l2 3h-4l2-3z" stroke-width="1.3" stroke-linejoin="round"/><path d="M9 5h6l1.4 14.1a1 1 0 01-1 1.1H8.6a1 1 0 01-1-1.1L9 5z" stroke-width="1.3" stroke-linejoin="round"/><path d="M9.6 10h4.8M9.2 14.5h5.6" stroke-width="1.1"/></svg>
+      </span>
+      <p class="closing-quote" data-i18n="closing_quote">« De l'Atlantique à la Méditerranée, un peuple accueillant et fier de ses racines. »</p>
+      <div class="closing-rule"><span></span><span></span><span></span></div>
+    </section>
+
+    <section class="intro-section">
+    <div class="wrap">
+      <div class="intro-grid-v2">
+        <div class="intro-photo-col">
+          <img class="intro-photo" src="images/luis.jpg" alt="Luís Marques">
+        </div>
+        <div class="intro-right-col">
+          <div class="intro-header">
+            <div class="intro-eyebrow-row">
+              <span class="intro-eyebrow" data-i18n="intro_eyebrow">QUI SUIS-JE&nbsp;?</span>
+              <span class="intro-eyebrow-line"></span>
+              <span class="intro-flag-badge"><svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#A83232"/><rect width="12" height="20" fill="#174A3A"/><circle cx="12" cy="10" r="4" fill="#B8955A"/></svg></span>
+            </div>
+            <h2 class="intro-title" data-i18n="intro_title">Faisons connaissance.</h2>
+            <p class="intro-subtitle" data-i18n="intro_subtitle">Je suis Luís Marques.</p>
+          </div>
+          <div class="intro-cards-grid">
+          <div class="intro-stat-card">
+            <span class="intro-stat-icon"><svg viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z" stroke-width="1.4"/><circle cx="12" cy="9" r="2.4" stroke-width="1.4"/></svg></span>
+            <span class="intro-stat-label" data-i18n="stat1_label">ORIGINAIRE DE</span>
+            <span class="intro-stat-rule"></span>
+            <span class="intro-stat-value">Caramulo,<br>Viseu</span>
+            <img class="intro-stat-illus" src="images/stat-1.png" alt="">
+          </div>
+          <div class="intro-stat-card">
+            <span class="intro-stat-icon"><svg viewBox="0 0 24 24"><path d="M12 2v3M9 9V6.5a3 3 0 016 0V9M5 22l4-13h6l4 13M3 22h18M8 22v-4M16 22v-4M10 12h4" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+            <span class="intro-stat-label" data-i18n="stat2_label">ARRIVÉ EN SUISSE</span>
+            <span class="intro-stat-rule"></span>
+            <span class="intro-stat-value">2013<br><span style="font-family:'Inter',sans-serif;font-size:13px;font-weight:400;" data-i18n="stat2_sub">Plus de 13 ans<br>en Suisse</span></span>
+            <img class="intro-stat-illus" src="images/stat-2.png" alt="">
+          </div>
+          <div class="intro-stat-card">
+            <span class="intro-stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1.5" stroke-width="1.4"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 12h18" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+            <span class="intro-stat-label" data-i18n="stat3_label">PROFESSION</span>
+            <span class="intro-stat-rule"></span>
+            <span class="intro-stat-value" style="font-size:17px;" data-i18n="stat3_value">Responsable d'objets,<br>Centre sécurité</span>
+            <img class="intro-stat-illus" src="images/stat-3.png" alt="">
+          </div>
+          <div class="intro-stat-card">
+            <span class="intro-stat-icon"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10a4.5 4.5 0 018.5-2 4.5 4.5 0 018.5 2c0 5.4-7.5 10-7.5 10z" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+            <span class="intro-stat-label" data-i18n="stat4_label">CENTRES D'INTÉRÊT</span>
+            <span class="intro-stat-rule"></span>
+            <span class="intro-stat-value" style="font-family:'Inter',sans-serif;font-size:14px;font-weight:500;line-height:1.6;" data-i18n="stat4_value">Voyages<br>Sport<br>Gastronomie<br>Culture</span>
+            <img class="intro-stat-illus" src="images/stat-4.png" alt="">
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="glance-section">
+      <div class="wrap">
+        <div class="glance-card">
+          <h3 class="glance-title" data-i18n="glance_title">Le Portugal en un coup d'œil</h3>
+          <div class="glance-grid">
+            <div class="glance-item">
+              <span class="glance-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10M20 21V10M2 10l10-6 10 6M6 10v11M10 10v11M14 10v11M18 10v11" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="glance-label" data-i18n="glance_capital_label">Capitale</span>
+              <span class="glance-value">Lisbonne</span>
+            </div>
+            <div class="glance-item">
+              <span class="glance-icon"><svg viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3" stroke-width="1.3"/><circle cx="16" cy="9" r="2.4" stroke-width="1.3"/><path d="M2.5 20c0-3.6 2.7-6 6-6s6 2.4 6 6M14.5 20c0-2.8 1.8-4.8 4-4.8s4 2 4 4.8" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+              <span class="glance-label" data-i18n="glance_pop_label">Population</span>
+              <span class="glance-value" data-i18n="glance_pop_value">≈ 10,6 millions</span>
+            </div>
+            <div class="glance-item">
+              <span class="glance-icon"><svg viewBox="0 0 24 24"><path d="M13.5 2c-1 2-2.5 3-1.5 5 .8 1.6-.5 2.4-1.5 3.5-1.3 1.4-1 3 0 4 .8.8 1 2 .3 3.2C9.8 19 9 20.5 10 22c2.5-1 3.5-3.5 3-5.5-.5-2 1-2.5 2-4 1-1.5.5-3-.5-4-1-1-.5-2.5.5-4C16 3 15 2.2 13.5 2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+              <span class="glance-label" data-i18n="glance_area_label">Superficie</span>
+              <span class="glance-value">92 212 km²</span>
+            </div>
+            <div class="glance-item">
+              <span class="glance-icon"><svg viewBox="0 0 24 24"><path d="M4 4h13a3 3 0 013 3v7a3 3 0 01-3 3H10l-4 4v-4H4a3 3 0 01-3-3V7a3 3 0 013-3z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+              <span class="glance-label" data-i18n="glance_lang_label">Langue officielle</span>
+              <span class="glance-value" data-i18n="glance_lang_value">Portugais</span>
+            </div>
+            <div class="glance-item">
+              <span class="glance-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="5.5" stroke-width="1.3"/><circle cx="16" cy="15" r="5.5" stroke-width="1.3"/></svg></span>
+              <span class="glance-label" data-i18n="glance_currency_label">Monnaie</span>
+              <span class="glance-value">Euro (€)</span>
+            </div>
+            <div class="glance-item">
+              <span class="glance-icon"><svg viewBox="0 0 24 24"><path d="M2 17c1.5 1.4 3 1.4 4.5 0s3-1.4 4.5 0 3 1.4 4.5 0 3-1.4 4.5 0" stroke-width="1.3" stroke-linecap="round"/><path d="M2 12c1.5 1.4 3 1.4 4.5 0s3-1.4 4.5 0 3 1.4 4.5 0 3-1.4 4.5 0" stroke-width="1.3" stroke-linecap="round"/><path d="M12 3c1.5 2 1.5 4-1 6" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+              <span class="glance-label" data-i18n="glance_sea_label">Façade maritime</span>
+              <span class="glance-value" data-i18n="glance_sea_value">Océan Atlantique</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-section">
+      <div class="wrap">
+        <div class="journey-title-row">
+          <span class="journey-line"></span>
+          <h3 class="journey-title" data-i18n="journey_title">Au fil de cette présentation</h3>
+          <span class="journey-line"></span>
+        </div>
+        <div class="journey-grid">
+            <div class="journey-card">
+              <img src="images/journey-geo.jpg" alt="Géographie">
+              <div class="journey-card-content">
+                <span class="journey-number">01</span>
+                <span class="journey-label" data-i18n="journey_geo">Géographie</span>
+              </div>
+            </div>
+            <div class="journey-card">
+              <img src="images/journey-hist.jpg" alt="Histoire">
+              <div class="journey-card-content">
+                <span class="journey-number">02</span>
+                <span class="journey-label" data-i18n="journey_hist">Histoire</span>
+              </div>
+            </div>
+            <div class="journey-card">
+              <img src="images/journey-inst.jpg" alt="Institutions">
+              <div class="journey-card-content">
+                <span class="journey-number">03</span>
+                <span class="journey-label" data-i18n="journey_inst">Institutions</span>
+              </div>
+            </div>
+            <div class="journey-card">
+              <img src="images/journey-soc.jpg" alt="Société">
+              <div class="journey-card-content">
+                <span class="journey-number">04</span>
+                <span class="journey-label" data-i18n="journey_soc">Société</span>
+              </div>
+            </div>
+            <div class="journey-card">
+              <img src="images/journey-cult.jpg" alt="Culture">
+              <div class="journey-card-content">
+                <span class="journey-number">05</span>
+                <span class="journey-label" data-i18n="journey_cult">Culture</span>
+              </div>
+            </div>
+            <div class="journey-card">
+              <img src="images/journey-gastro.jpg" alt="Gastronomie">
+              <div class="journey-card-content">
+                <span class="journey-number">06</span>
+                <span class="journey-label" data-i18n="journey_gastro">Gastronomie</span>
+              </div>
+            </div>
+            <div class="journey-card">
+              <img src="images/journey-reg.jpg" alt="Régions">
+              <div class="journey-card-content">
+                <span class="journey-number">07</span>
+                <span class="journey-label" data-i18n="journey_reg">Régions</span>
+              </div>
+            </div>
+            <div class="journey-card">
+              <img src="images/journey-moi.jpg" alt="Portugal & moi">
+              <div class="journey-card-content">
+                <span class="journey-number">08</span>
+                <span class="journey-label" data-i18n="journey_moi">Portugal & moi</span>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="bridge-section">
+      <div class="bridge-media">
+        <img src="images/bridge-alps.jpg" alt="Montagnes suisses">
+        <div class="bridge-overlay"></div>
+      </div>
+      <div class="wrap bridge-content">
+        <h3 class="bridge-title">
+          <span>Portugal</span>
+          <img class="bridge-flag" src="images/flag-pt.jpg" alt="Portugal">
+          <span class="bridge-dash">—</span>
+          <img class="bridge-flag" src="images/flag-ch.jpg" alt="Suisse">
+          <span>Suisse</span>
+        </h3>
+        <p class="bridge-subtitle" data-i18n="bridge_subtitle">Deux pays, deux cultures, un parcours.</p>
+        <p class="bridge-text" data-i18n="bridge_text">Le Portugal est mes racines. La Suisse est aujourd'hui le pays où je construis mon avenir.<br>Cette présentation est le pont entre ces deux parties de ma vie.</p>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="wrap cta-content">
+        <h3 class="cta-title" data-i18n="cta_title">Prêt à découvrir le Portugal&nbsp;?</h3>
+        <a class="cta-button" href="#" data-view="geographie">
+          <span data-i18n="cta_button">Commencer la présentation</span>
+          <span class="cta-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+  
+    </div>
+
+    <div class="view" id="view-geographie">
+<section class="page-hero">
+      <div class="page-hero-media">
+        <img src="images/geo-hero.jpg" alt="Farol e vagas gigantes em Foz do Douro, Porto">
+      </div>
+      <div class="page-hero-content">
+        <div class="page-hero-eyebrow">01 <span>/ 08</span></div>
+        <h1 class="page-hero-title" data-i18n="geo_hero_title">Géographie</h1>
+        <p class="page-hero-subtitle" data-i18n="geo_hero_subtitle">Le Portugal, entre l'Europe et l'Atlantique</p>
+        <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+        <p class="page-hero-text" data-i18n="geo_hero_text">Un pays à la taille modeste, mais d'une richesse géographique exceptionnelle.</p>
+      </div>
+    </section>
+
+    <section class="geo-stats">
+      <div class="wrap">
+        <div class="geo-stats-grid">
+          <div class="geo-stat-item">
+            <span class="geo-stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="6" rx="1" transform="rotate(-45 12 12)" stroke-width="1.3"/><path d="M8.5 9.5l1.4 1.4M11 7l1.4 1.4M13.5 4.5l1.4 1.4" stroke-width="1.1"/></svg></span>
+            <div class="geo-stat-text">
+              <span class="geo-stat-value">561 <span class="unit">km</span></span>
+              <span class="geo-stat-label" data-i18n="geo_stat1">DU NORD AU SUD</span>
+            </div>
+          </div>
+          <div class="geo-stat-item">
+            <span class="geo-stat-icon"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 12l4-4M3 12l4 4M21 12l-4-4M21 12l-4 4" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div class="geo-stat-text">
+              <span class="geo-stat-value">218 <span class="unit">km</span></span>
+              <span class="geo-stat-label" data-i18n="geo_stat2">D'EST EN OUEST</span>
+            </div>
+          </div>
+          <div class="geo-stat-item">
+            <span class="geo-stat-icon"><svg viewBox="0 0 24 24"><path d="M2 15c1.5 1.3 3 1.3 4.5 0s3-1.3 4.5 0 3 1.3 4.5 0 3-1.3 4.5 0" stroke-width="1.3" stroke-linecap="round"/><path d="M2 10c1.5 1.3 3 1.3 4.5 0s3-1.3 4.5 0 3 1.3 4.5 0 3-1.3 4.5 0" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+            <div class="geo-stat-text">
+              <span class="geo-stat-value">832 <span class="unit">km</span></span>
+              <span class="geo-stat-label" data-i18n="geo_stat3">DE CÔTE ATLANTIQUE</span>
+            </div>
+          </div>
+          <div class="geo-stat-item">
+            <span class="geo-stat-icon"><svg viewBox="0 0 24 24"><path d="M2 19l6-10 4 6 3-4 7 8H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+            <div class="geo-stat-text">
+              <span class="geo-stat-value">1 993 <span class="unit">m</span></span>
+              <span class="geo-stat-label" data-i18n="geo_stat4">POINT CULMINANT<br>DU CONTINENT<br><em>Serra da Estrela</em></span>
+            </div>
+          </div>
+          <div class="geo-stat-item">
+            <span class="geo-stat-icon"><svg viewBox="0 0 24 24"><path d="M4 19l7-14 2 4 2-2 5 12H4z" stroke-width="1.3" stroke-linejoin="round"/><path d="M12 2v2M9 3l1 1.6M15 3l-1 1.6" stroke-width="1.1" stroke-linecap="round"/></svg></span>
+            <div class="geo-stat-text">
+              <span class="geo-stat-value">2 351 <span class="unit">m</span></span>
+              <span class="geo-stat-label" data-i18n="geo_stat5">POINT CULMINANT<br>DU PAYS<br><em>Pico (Açores)</em></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="geo-location">
+      <div class="geo-location-media">
+        <img src="images/geo-map-europe.jpg" alt="Carte de localisation du Portugal en Europe">
+        <div class="ch-marker">
+          <span class="ch-marker-pin">
+            <img src="images/ch-pin.png" alt="Suisse">
+          </span>
+          <span class="ch-marker-line"></span>
+        </div>
+      </div>
+      <div class="geo-location-content">
+        <span class="geo-location-eyebrow" data-i18n="geo_loc_eyebrow">OÙ SE TROUVE LE PORTUGAL&nbsp;?</span>
+        <h2 class="geo-location-title" data-i18n="geo_loc_title">À l'extrémité<br>sud-ouest de l'Europe</h2>
+        <p class="geo-location-body" data-i18n="geo_loc_body">Le Portugal est situé sur la péninsule Ibérique, bordé à l'est et au nord par l'Espagne et à l'ouest et au sud par l'océan Atlantique.</p>
+        <a class="geo-location-btn" href="https://www.google.com/maps/place/Portugal" target="_blank" rel="noopener"><span data-i18n="geo_loc_btn">VOIR LA CARTE INTERACTIVE</span> <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <section class="geo-duality">
+      <div class="geo-duality-grid">
+        <div class="geo-duality-text">
+          <span class="geo-duality-eyebrow" data-i18n="geo_dual_eyebrow">PETIT PAYS, GRANDE DIVERSITÉ</span>
+          <h2 class="geo-duality-title" data-i18n="geo_dual_title">Deux visages,<br>un même pays</h2>
+          <div class="geo-duality-feature">
+            <span class="geo-duality-icon"><svg viewBox="0 0 24 24"><path d="M2 19l6-10 4 6 3-4 7 8H2z" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+            <div class="geo-duality-feature-text">
+              <span class="geo-duality-feature-label" data-i18n="geo_dual_f1_label">NORD&nbsp;: MONTAGNEUX</span>
+              <p class="geo-duality-feature-desc" data-i18n="geo_dual_f1_desc">Relief marqué, collines, vallées verdoyantes et villages traditionnels.</p>
+            </div>
+          </div>
+          <div class="geo-duality-feature">
+            <span class="geo-duality-icon"><svg viewBox="0 0 24 24"><path d="M2 17h20" stroke-width="1.4" stroke-linecap="round"/><path d="M2 17c3-.6 5-2 8-2s5 1.4 8 1" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+            <div class="geo-duality-feature-text">
+              <span class="geo-duality-feature-label" data-i18n="geo_dual_f2_label">SUD&nbsp;: PLAINE</span>
+              <p class="geo-duality-feature-desc" data-i18n="geo_dual_f2_desc">Grands espaces ouverts, paysages doux et lumières intenses.</p>
+            </div>
+          </div>
+        </div>
+        <div class="geo-duality-photo">
+          <img src="images/geo-north.jpg" alt="Paysage du Nord du Portugal, région montagneuse">
+        </div>
+        <div class="geo-duality-photo">
+          <img src="images/geo-south.jpg" alt="Paysage du Sud du Portugal, plaine dorée">
+        </div>
+      </div>
+    </section>
+
+    <section class="geo-climate-relief">
+      <div class="geo-cr-grid">
+        <div class="geo-cr-climate-text">
+          <span class="geo-cr-eyebrow" data-i18n="geo_cr_climate_eyebrow">LE CLIMAT</span>
+          <h2 class="geo-cr-title" data-i18n="geo_cr_climate_title">Un climat influencé par<br>deux forces naturelles</h2>
+          <p class="geo-cr-body" data-i18n="geo_cr_climate_body">Le climat du Portugal est influencé par le courant du Nord (océan Atlantique) et par les masses d'air chaudes venant du nord de l'Afrique.</p>
+          <div class="geo-cr-features">
+            <div class="geo-cr-feature">
+              <span class="geo-cr-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.5 6l15 12M19.5 6l-15 12" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+              <span class="geo-cr-feature-label" data-i18n="geo_cr_f1_label">NORD&nbsp;: FROID</span>
+              <p class="geo-cr-feature-desc" data-i18n="geo_cr_f1_desc">Hivers plus froids et pluvieux, étés doux.</p>
+            </div>
+            <div class="geo-cr-feature">
+              <span class="geo-cr-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" stroke-width="1.3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+              <span class="geo-cr-feature-label" data-i18n="geo_cr_f2_label">SUD&nbsp;: CHAUD</span>
+              <p class="geo-cr-feature-desc" data-i18n="geo_cr_f2_desc">Hivers doux et ensoleillés, étés chauds et secs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="geo-cr-climate-map">
+          <img src="images/geo-climate-map.jpg" alt="Carte des influences climatiques du Portugal">
+        </div>
+
+        <div class="geo-cr-relief-text">
+          <span class="geo-cr-eyebrow" data-i18n="geo_cr_relief_eyebrow">RELIEF &amp; MONTAGNES</span>
+          <h2 class="geo-cr-title" data-i18n="geo_cr_relief_title">Un relief contrasté</h2>
+          <ul class="geo-cr-list">
+            <li><span class="geo-cr-icon"><svg viewBox="0 0 24 24"><path d="M2 19l6-10 4 6 3-4 7 8H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span data-i18n="geo_cr_li1">Chaînes montagneuses au nord.</span></li>
+            <li><span class="geo-cr-icon"><svg viewBox="0 0 24 24"><path d="M3 17c2-4 4-6 6-6s3 3 5 3 3-5 6-5" stroke-width="1.3" stroke-linecap="round"/></svg></span><span data-i18n="geo_cr_li2">Collines et vallées au centre.</span></li>
+            <li><span class="geo-cr-icon"><svg viewBox="0 0 24 24"><path d="M2 17h20" stroke-width="1.3" stroke-linecap="round"/><path d="M2 17c3-.6 5-2 8-2s5 1.4 8 1" stroke-width="1.1" stroke-linecap="round"/></svg></span><span data-i18n="geo_cr_li3">Vastes plaines au sud.</span></li>
+            <li><span class="geo-cr-icon"><svg viewBox="0 0 24 24"><path d="M2 15c1.5 1.3 3 1.3 4.5 0s3-1.3 4.5 0 3 1.3 4.5 0 3-1.3 4.5 0" stroke-width="1.3" stroke-linecap="round"/><path d="M2 10c1.5 1.3 3 1.3 4.5 0s3-1.3 4.5 0 3 1.3 4.5 0 3-1.3 4.5 0" stroke-width="1.3" stroke-linecap="round"/></svg></span><span data-i18n="geo_cr_li4">Côtes découpées et falaises face à l'Atlantique.</span></li>
+          </ul>
+        </div>
+
+        <div class="geo-cr-relief-photo">
+          <img src="images/geo-relief.jpg" alt="Chaîne de montagnes au Portugal">
+        </div>
+      </div>
+    </section>
+
+    <section class="geo-volcanic">
+      <div class="geo-volc-grid">
+        <div class="geo-volc-intro">
+          <span class="geo-cr-eyebrow" data-i18n="geo_volc_eyebrow">LE PORTUGAL VOLCANIQUE</span>
+          <h2 class="geo-cr-title" data-i18n="geo_volc_title">Madère et Açores,<br>terres de volcans</h2>
+          <p class="geo-cr-body" data-i18n="geo_volc_body">Les îles de Madère et des Açores sont d'origine volcanique. Leur paysage spectaculaire est le résultat d'éruptions vieilles de millions d'années.</p>
+        </div>
+
+        <div class="geo-volc-col">
+          <div class="geo-volc-col-text">
+            <span class="geo-volc-label" data-i18n="geo_volc_acores_label">AÇORES</span>
+            <p class="geo-volc-desc" data-i18n="geo_volc_acores_desc">Neuf îles volcaniques avec des lacs de cratère, sources chaudes et paysages uniques.</p>
+          </div>
+          <div class="geo-volc-photo-wrap">
+            <img src="images/geo-acores.jpg" alt="Lac de cratère au coucher du soleil, São Miguel, Açores">
+            <p class="geo-volc-caption" data-i18n="geo_volc_acores_caption">En 2022, le volcan Capelinhos (île de Faial) est entré en éruption, rappelant la force de la nature.</p>
+          </div>
+        </div>
+
+        <div class="geo-volc-center">
+          <img src="images/geo-volcano.jpg" alt="Éruption volcanique">
+        </div>
+
+        <div class="geo-volc-col">
+          <div class="geo-volc-col-text">
+            <span class="geo-volc-label" data-i18n="geo_volc_madeira_label">MADÈRE</span>
+            <p class="geo-volc-desc" data-i18n="geo_volc_madeira_desc">Île montagneuse d'origine volcanique, avec des falaises impressionnantes et des vallées profondes.</p>
+          </div>
+          <div class="geo-volc-photo-wrap geo-volc-photo-wrap--tall">
+            <img src="images/geo-madeira.jpg" alt="Falaises de Madère">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="geo-extras">
+      <div class="geo-extras-footer">
+        <span class="geo-extras-footer-label" data-i18n="geo_ext_footer">LE SAVIEZ-VOUS&nbsp;?</span>
+        <span class="geo-extras-footer-arrow">
+          <svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </div>
+
+      <div class="geo-extras-grid">
+        <div class="geo-extras-col">
+          <span class="geo-cr-eyebrow" data-i18n="geo_ext_nature_eyebrow">NATURE &amp; BIODIVERSITÉ</span>
+          <h3 class="geo-extras-title" data-i18n="geo_ext_nature_title">Une nature riche<br>et préservée</h3>
+          <ul class="geo-extras-list">
+            <li>
+              <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M12 3c2.5 2 4 4.2 4 6.8a4 4 0 01-8 0C8 7.2 9.5 5 12 3z" stroke-width="1.3" stroke-linejoin="round"/><path d="M12 10.5V21M9 21h6" stroke-width="1.3" stroke-linecap="round"/><path d="M12 14c-2 0-3.5-1.2-3.5-1.2M12 17c2 0 3.2-1 3.2-1" stroke-width="1.1" stroke-linecap="round"/></svg></span>
+              <span data-i18n="geo_ext_nature_li1">Forêts, parcs naturels<br>et réserves protégées.</span>
+            </li>
+            <li>
+              <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M7 10c-1.5-1-2-3-1-4.5C7 4 9 4.5 9.5 6M17 10c1.5-1 2-3 1-4.5C17 4 15 4.5 14.5 6" stroke-width="1.2" stroke-linecap="round"/><ellipse cx="12" cy="13" rx="5.5" ry="5" stroke-width="1.3"/><circle cx="10" cy="12" r=".6" fill="currentColor" stroke="none"/><circle cx="14" cy="12" r=".6" fill="currentColor" stroke="none"/></svg></span>
+              <span data-i18n="geo_ext_nature_li2">Faune et flore variées,<br>dont plusieurs espèces<br>endémiques.</span>
+            </li>
+            <li>
+              <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M4 20C4 10 12 4 20 4c0 8-6 16-16 16z" stroke-width="1.3" stroke-linejoin="round"/><path d="M6 18C10 14 14 10 18 6" stroke-width="1.1" stroke-linecap="round"/></svg></span>
+              <span data-i18n="geo_ext_nature_li3">Un engagement fort pour<br>la protection de l'environnement.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="geo-extras-col">
+          <span class="geo-cr-eyebrow" data-i18n="geo_ext_facts_eyebrow">PETITS FAITS ÉTONNANTS</span>
+          <ul class="geo-extras-list geo-extras-list--facts">
+            <li>
+              <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M2 19l6-10 4 6 3-4 7 8H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+              <span data-i18n="geo_ext_fact1">Le point culminant du pays se trouve<br>aux Açores (Pico, 2 351 m).</span>
+            </li>
+            <li>
+              <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.6L21 9.5l-5 4.6L17.5 21 12 17.3 6.5 21 8 14.1l-5-4.6 6.4-.9z" stroke-width="1.2" stroke-linejoin="round"/></svg></span>
+              <span data-i18n="geo_ext_fact2">Le Portugal n'a qu'un seul voisin<br>terrestre&nbsp;: l'Espagne.</span>
+            </li>
+            <li>
+              <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M3 16c1-3 3-5 6-5 1 0 1.5-1 2.5-1 2 0 3 1.5 3 1.5s2-1 3.5.5c1 1 1 2.5 0 3.5M8 11V7M14 12c0 2-1.5 3-3 3-2 0-3-1.5-4-1.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="9" r=".5" fill="currentColor" stroke="none"/></svg></span>
+              <span data-i18n="geo_ext_fact3">Il y a des empreintes de dinosaures<br>vieilles de 175 millions d'années&nbsp;!</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="geo-extras-col geo-extras-col--luis">
+          <span class="geo-cr-eyebrow" data-i18n="geo_ext_luis_eyebrow">CARAMULO, VISEU &mdash; CHEZ LUÍS</span>
+          <h3 class="geo-extras-title" data-i18n="geo_ext_luis_title">Ma ville, mon origine</h3>
+          <p class="geo-extras-desc" data-i18n="geo_ext_luis_desc">Caramulo est un village de montagne au centre du Portugal, terre du peuple lusitanien.</p>
+          <div class="geo-extras-book">
+            <img src="images/asterix.jpg" alt="Astérix en Lusitanie"><span class="geo-extras-book-caption" data-i18n="geo_ext_book_caption">Le peuple lusitanien,<br>même dans Astérix&nbsp;!</span></div></div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="wrap cta-content">
+        <h3 class="cta-title" data-i18n="geo_cta_title">Prêt à découvrir l'histoire du Portugal&nbsp;?</h3>
+        <a class="cta-button" href="#" data-view="histoire">
+          <span data-i18n="geo_cta_button">Continuer vers l'Histoire</span>
+          <span class="cta-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+
+
+
+
+
+    </div>
+
+<div class="view" id="view-histoire">
+    <section class="page-hero">
+      <div class="page-hero-media">
+        <img src="images/hist-hero.jpg" alt="Caravelle portugaise devant la Tour de Belém, Lisbonne">
+      </div>
+      <div class="page-hero-content">
+        <div class="page-hero-eyebrow">02 <span>/ 08</span></div>
+        <h1 class="page-hero-title" data-i18n="hist_hero_title">Histoire</h1>
+        <p class="page-hero-subtitle" data-i18n="hist_hero_subtitle">Un peuple de navigateurs,<br>une histoire de découvertes</p>
+        <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+        <p class="page-hero-text" data-i18n="hist_hero_text">Petite nation, grand destin&nbsp;: le Portugal a joué un rôle majeur dans l'histoire du monde, de la mer aux idées.</p>
+      </div>
+    </section>
+
+    <section class="hist-cards">
+      <div class="hist-cards-grid">
+        <div class="hist-card">
+          <div class="hist-card-text">
+            <h3 class="hist-card-title" data-i18n="hist_c1_title">Le drapeau<br>portugais</h3>
+            <p class="hist-card-desc" data-i18n="hist_c1_desc">Le vert symbolise l'espoir de l'avenir et le rouge le sang versé pour l'indépendance.</p>
+          </div>
+          <div class="hist-card-photo">
+            <img src="images/hist-flag.jpg" alt="Drapeau portugais">
+          </div>
+        </div>
+
+        <div class="hist-card">
+          <div class="hist-card-text">
+            <h3 class="hist-card-title" data-i18n="hist_c2_title">La construction<br>du Portugal</h3>
+            <p class="hist-card-desc" data-i18n="hist_c2_desc">Du Comté de Portugal à la nation indépendante, une identité forgée au fil des siècles.</p>
+          </div>
+          <div class="hist-card-photo">
+            <img src="images/hist-guimaraes.jpg" alt="Château de Guimarães et statue de Dom Afonso Henriques">
+          </div>
+        </div>
+
+        <div class="hist-card">
+          <div class="hist-card-text">
+            <h3 class="hist-card-title" data-i18n="hist_c3_title">Traité de Windsor<br>(1386)</h3>
+            <p class="hist-card-desc" data-i18n="hist_c3_desc">Le plus ancien traité toujours en vigueur. Alliance avec l'Angleterre qui a résisté à deux invasions de Napoléon.</p>
+            <a class="hist-card-link" href="#" data-i18n="hist_c3_link">En savoir plus <span class="arrow">→</span></a>
+          </div>
+          <div class="hist-card-photo">
+            <img src="images/hist-windsor.jpg" alt="Traité de Windsor de 1386">
+          </div>
+        </div>
+
+        <div class="hist-card">
+          <div class="hist-card-text">
+            <h3 class="hist-card-title" data-i18n="hist_c4_title">Le thé<br>en Angleterre</h3>
+            <p class="hist-card-desc" data-i18n="hist_c4_desc">Introduit par une reine portugaise. Le Portugal a joué un rôle clé dans le commerce du thé. Origine possible du mot « Tea »&nbsp;: écrit sur une caisse « Tem ervas aromáticas&nbsp;? »</p>
+          </div>
+          <div class="hist-card-photo">
+            <img src="images/hist-tea.jpg" alt="Service à thé en porcelaine">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hist-routes">
+      <div class="hist-routes-map">
+        <img src="images/hist-routes-map.jpg" alt="Carte des routes maritimes portugaises historiques">
+      </div>
+      <div class="hist-routes-content">
+        <h2 class="hist-routes-title" data-i18n="hist_routes_title">Un empire<br>de routes maritimes</h2>
+        <p class="hist-routes-desc" data-i18n="hist_routes_desc">Les navigateurs portugais ont ouvert des routes commerciales vers le monde entier.</p>
+        <div class="hist-routes-list">
+          <span class="hist-routes-item"><svg viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z" stroke-width="1.4"/><circle cx="12" cy="9" r="2.4" stroke-width="1.4"/></svg><span data-i18n="hist_routes_afrique">Afrique</span></span>
+          <span class="hist-routes-item"><svg viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z" stroke-width="1.4"/><circle cx="12" cy="9" r="2.4" stroke-width="1.4"/></svg><span data-i18n="hist_routes_chine">Chine</span></span>
+          <span class="hist-routes-item"><svg viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z" stroke-width="1.4"/><circle cx="12" cy="9" r="2.4" stroke-width="1.4"/></svg><span data-i18n="hist_routes_inde">Inde</span></span>
+          <span class="hist-routes-item"><svg viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z" stroke-width="1.4"/><circle cx="12" cy="9" r="2.4" stroke-width="1.4"/></svg><span data-i18n="hist_routes_japon">Japon</span></span>
+          <span class="hist-routes-item"><svg viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z" stroke-width="1.4"/><circle cx="12" cy="9" r="2.4" stroke-width="1.4"/></svg><span data-i18n="hist_routes_bresil">Brésil</span></span>
+        </div>
+        <a class="hist-routes-btn" href="https://commons.wikimedia.org/wiki/File:Descobrimentos_e_explora%C3%A7%C3%B5es_portuguesesV2.png" target="_blank" rel="noopener"><span data-i18n="hist_routes_btn">Voir la carte</span> <span class="arrow">→</span></a>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <script>
+    const nav = document.getElementById('siteNav');
+    const onScroll = () => {
+      if (window.scrollY > 40) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+
+
+    function showView(name){
+      const target = document.getElementById('view-' + name);
+      if(!target){ return; }
+      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+      target.classList.add('active');
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      document.querySelectorAll('.nav-link[data-view="' + name + '"]').forEach(l => l.classList.add('active'));
+      window.scrollTo({top: 0, left: 0, behavior: 'auto'});
+    }
+    document.querySelectorAll('[data-view]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        showView(el.getAttribute('data-view'));
+      });
+    });
+
+
+    const I18N = {"fr": {"nav_home": "Accueil", "nav_geo": "Géographie", "nav_hist": "Histoire", "nav_inst": "Institutions", "nav_soc": "Société", "nav_cult": "Culture", "nav_reg": "Régions", "nav_concl": "Conclusion", "hero_eyebrow": "BIENVENUE AU", "hero_subtitle": "Une présentation du Portugal", "hero_quote": "« Un petit pays au bord de l'Atlantique, avec une grande histoire, une culture riche et beaucoup de soleil. »", "card_geo": "Géographie", "card_hist": "Histoire", "card_inst": "Institutions<br>&amp; politique", "card_pop": "Population<br>&amp; société", "card_cult": "Culture<br>&amp; gastronomie", "card_sport": "Sport", "card_reg": "Les régions", "card_moi": "Ce que le Portugal<br>représente pour moi", "closing_quote": "« De l'Atlantique à la Méditerranée, un peuple accueillant et fier de ses racines. »", "intro_eyebrow": "QUI SUIS-JE&nbsp;?", "intro_title": "Faisons connaissance.", "intro_subtitle": "Je suis Luís Marques.", "stat1_label": "ORIGINAIRE DE", "stat2_label": "ARRIVÉ EN SUISSE", "stat2_sub": "Plus de 13 ans<br>en Suisse", "stat3_label": "PROFESSION", "stat3_value": "Responsable d'objets,<br>Centre sécurité", "stat4_label": "CENTRES D'INTÉRÊT", "stat4_value": "Voyages<br>Sport<br>Gastronomie<br>Culture", "glance_title": "Le Portugal en un coup d'œil", "glance_capital_label": "Capitale", "glance_pop_label": "Population", "glance_pop_value": "≈ 10,6 millions", "glance_area_label": "Superficie", "glance_lang_label": "Langue officielle", "glance_lang_value": "Portugais", "glance_currency_label": "Monnaie", "glance_sea_label": "Façade maritime", "glance_sea_value": "Océan Atlantique", "journey_title": "Au fil de cette présentation", "journey_geo": "Géographie", "journey_hist": "Histoire", "journey_inst": "Institutions", "journey_soc": "Société", "journey_cult": "Culture", "journey_gastro": "Gastronomie", "journey_reg": "Régions", "journey_moi": "Portugal &amp; moi", "bridge_subtitle": "Deux pays, deux cultures, un parcours.", "bridge_text": "Le Portugal est mes racines. La Suisse est aujourd'hui le pays où je construis mon avenir.<br>Cette présentation est le pont entre ces deux parties de ma vie.", "cta_title": "Prêt à découvrir le Portugal&nbsp;?", "cta_button": "Commencer la présentation", "geo_hero_title": "Géographie", "geo_hero_subtitle": "Le Portugal, entre l'Europe et l'Atlantique", "geo_hero_text": "Un pays à la taille modeste, mais d'une richesse géographique exceptionnelle.", "geo_stat1": "DU NORD AU SUD", "geo_stat2": "D'EST EN OUEST", "geo_stat3": "DE CÔTE ATLANTIQUE", "geo_stat4": "POINT CULMINANT<br>DU CONTINENT<br><em>Serra da Estrela</em>", "geo_stat5": "POINT CULMINANT<br>DU PAYS<br><em>Pico (Açores)</em>", "geo_loc_eyebrow": "OÙ SE TROUVE LE PORTUGAL&nbsp;?", "geo_loc_title": "À l'extrémité<br>sud-ouest de l'Europe", "geo_loc_body": "Le Portugal est situé sur la péninsule Ibérique, bordé à l'est et au nord par l'Espagne et à l'ouest et au sud par l'océan Atlantique.", "geo_loc_btn": "VOIR LA CARTE INTERACTIVE", "geo_dual_eyebrow": "PETIT PAYS, GRANDE DIVERSITÉ", "geo_dual_title": "Deux visages,<br>un même pays", "geo_dual_f1_label": "NORD&nbsp;: MONTAGNEUX", "geo_dual_f1_desc": "Relief marqué, collines, vallées verdoyantes et villages traditionnels.", "geo_dual_f2_label": "SUD&nbsp;: PLAINE", "geo_dual_f2_desc": "Grands espaces ouverts, paysages doux et lumières intenses.", "geo_cr_climate_eyebrow": "LE CLIMAT", "geo_cr_climate_title": "Un climat influencé par<br>deux forces naturelles", "geo_cr_climate_body": "Le climat du Portugal est influencé par le courant du Nord (océan Atlantique) et par les masses d'air chaudes venant du nord de l'Afrique.", "geo_cr_f1_label": "NORD&nbsp;: FROID", "geo_cr_f1_desc": "Hivers plus froids et pluvieux, étés doux.", "geo_cr_f2_label": "SUD&nbsp;: CHAUD", "geo_cr_f2_desc": "Hivers doux et ensoleillés, étés chauds et secs.", "geo_cr_relief_eyebrow": "RELIEF &amp; MONTAGNES", "geo_cr_relief_title": "Un relief contrasté", "geo_cr_li1": "Chaînes montagneuses au nord.", "geo_cr_li2": "Collines et vallées au centre.", "geo_cr_li3": "Vastes plaines au sud.", "geo_cr_li4": "Côtes découpées et falaises face à l'Atlantique.", "geo_volc_eyebrow": "LE PORTUGAL VOLCANIQUE", "geo_volc_title": "Madère et Açores,<br>terres de volcans", "geo_volc_body": "Les îles de Madère et des Açores sont d'origine volcanique. Leur paysage spectaculaire est le résultat d'éruptions vieilles de millions d'années.", "geo_volc_acores_label": "AÇORES", "geo_volc_acores_desc": "Neuf îles volcaniques avec des lacs de cratère, sources chaudes et paysages uniques.", "geo_volc_acores_caption": "En 2022, le volcan Capelinhos (île de Faial) est entré en éruption, rappelant la force de la nature.", "geo_volc_madeira_label": "MADÈRE", "geo_volc_madeira_desc": "Île montagneuse d'origine volcanique, avec des falaises impressionnantes et des vallées profondes.", "geo_ext_nature_eyebrow": "NATURE &amp; BIODIVERSITÉ", "geo_ext_nature_title": "Une nature riche<br>et préservée", "geo_ext_nature_li1": "Forêts, parcs naturels<br>et réserves protégées.", "geo_ext_nature_li2": "Faune et flore variées,<br>dont plusieurs espèces<br>endémiques.", "geo_ext_nature_li3": "Un engagement fort pour<br>la protection de l'environnement.", "geo_ext_facts_eyebrow": "PETITS FAITS ÉTONNANTS", "geo_ext_fact1": "Le point culminant du pays se trouve<br>aux Açores (Pico, 2 351 m).", "geo_ext_fact2": "Le Portugal n'a qu'un seul voisin<br>terrestre&nbsp;: l'Espagne.", "geo_ext_fact3": "Il y a des empreintes de dinosaures<br>vieilles de 175 millions d'années&nbsp;!", "geo_ext_luis_eyebrow": "CARAMULO, VISEU &mdash; CHEZ LUÍS", "geo_ext_luis_title": "Ma ville, mon origine", "geo_ext_luis_desc": "Caramulo est un village de montagne au centre du Portugal, terre du peuple lusitanien.", "geo_ext_footer": "LE SAVIEZ-VOUS&nbsp;?", "geo_ext_book_caption": "Le peuple lusitanien,<br>même dans Astérix&nbsp;!", "geo_cta_title": "Prêt à découvrir l'histoire du Portugal&nbsp;?", "geo_cta_button": "Continuer vers l'Histoire", "hist_hero_title": "Histoire", "hist_hero_subtitle": "Un peuple de navigateurs,<br>une histoire de découvertes", "hist_hero_text": "Petite nation, grand destin&nbsp;: le Portugal a joué un rôle majeur dans l'histoire du monde, de la mer aux idées.", "hist_c1_title": "Le drapeau<br>portugais", "hist_c1_desc": "Le vert symbolise l'espoir de l'avenir et le rouge le sang versé pour l'indépendance.", "hist_c2_title": "La construction<br>du Portugal", "hist_c2_desc": "Du Comté de Portugal à la nation indépendante, une identité forgée au fil des siècles.", "hist_c3_title": "Traité de Windsor<br>(1386)", "hist_c3_desc": "Le plus ancien traité toujours en vigueur. Alliance avec l'Angleterre qui a résisté à deux invasions de Napoléon.", "hist_c3_link": "En savoir plus <span class=\"arrow\">→</span>", "hist_c4_title": "Le thé<br>en Angleterre", "hist_c4_desc": "Introduit par une reine portugaise. Le Portugal a joué un rôle clé dans le commerce du thé. Origine possible du mot « Tea » : écrit sur une caisse « Tem ervas aromáticas ? »", "hist_routes_title": "Un empire<br>de routes maritimes", "hist_routes_desc": "Les navigateurs portugais ont ouvert des routes commerciales vers le monde entier.", "hist_routes_afrique": "Afrique", "hist_routes_chine": "Chine", "hist_routes_inde": "Inde", "hist_routes_japon": "Japon", "hist_routes_bresil": "Brésil", "hist_routes_btn": "Voir la carte"}, "it": {"nav_home": "Home", "nav_geo": "Geografia", "nav_hist": "Storia", "nav_inst": "Istituzioni", "nav_soc": "Società", "nav_cult": "Cultura", "nav_reg": "Regioni", "nav_concl": "Conclusione", "hero_eyebrow": "BENVENUTI IN", "hero_subtitle": "Una presentazione del Portogallo", "hero_quote": "«Un piccolo paese sull'Atlantico, con una grande storia, una cultura ricca e tanto sole.»", "card_geo": "Geografia", "card_hist": "Storia", "card_inst": "Istituzioni<br>e politica", "card_pop": "Popolazione<br>e società", "card_cult": "Cultura<br>e gastronomia", "card_sport": "Sport", "card_reg": "Le regioni", "card_moi": "Cosa rappresenta<br>il Portogallo per me", "closing_quote": "«Dall'Atlantico al Mediterraneo, un popolo accogliente e fiero delle sue radici.»", "intro_eyebrow": "CHI SONO?", "intro_title": "Facciamo conoscenza.", "intro_subtitle": "Sono Luís Marques.", "stat1_label": "ORIGINARIO DI", "stat2_label": "ARRIVATO IN SVIZZERA", "stat2_sub": "Più di 13 anni<br>in Svizzera", "stat3_label": "PROFESSIONE", "stat3_value": "Responsabile oggetti,<br>Centro sicurezza", "stat4_label": "INTERESSI", "stat4_value": "Viaggi<br>Sport<br>Gastronomia<br>Cultura", "glance_title": "Il Portogallo in breve", "glance_capital_label": "Capitale", "glance_pop_label": "Popolazione", "glance_pop_value": "≈ 10,6 milioni", "glance_area_label": "Superficie", "glance_lang_label": "Lingua ufficiale", "glance_lang_value": "Portoghese", "glance_currency_label": "Moneta", "glance_sea_label": "Facciata marittima", "glance_sea_value": "Oceano Atlantico", "journey_title": "Nel corso di questa presentazione", "journey_geo": "Geografia", "journey_hist": "Storia", "journey_inst": "Istituzioni", "journey_soc": "Società", "journey_cult": "Cultura", "journey_gastro": "Gastronomia", "journey_reg": "Regioni", "journey_moi": "Portogallo e io", "bridge_subtitle": "Due paesi, due culture, un percorso.", "bridge_text": "Il Portogallo sono le mie radici. La Svizzera è oggi il paese dove costruisco il mio futuro.<br>Questa presentazione è il ponte tra queste due parti della mia vita.", "cta_title": "Pronti a scoprire il Portogallo&nbsp;?", "cta_button": "Inizia la presentazione", "geo_hero_title": "Geografia", "geo_hero_subtitle": "Il Portogallo, tra l'Europa e l'Atlantico", "geo_hero_text": "Un paese di dimensioni modeste, ma di una ricchezza geografica eccezionale.", "geo_stat1": "DA NORD A SUD", "geo_stat2": "DA EST A OVEST", "geo_stat3": "DI COSTA ATLANTICA", "geo_stat4": "PUNTO CULMINANTE<br>DEL CONTINENTE<br><em>Serra da Estrela</em>", "geo_stat5": "PUNTO CULMINANTE<br>DEL PAESE<br><em>Pico (Azzorre)</em>", "geo_loc_eyebrow": "DOVE SI TROVA IL PORTOGALLO?", "geo_loc_title": "All'estremità<br>sud-ovest dell'Europa", "geo_loc_body": "Il Portogallo si trova sulla penisola iberica, confina a est e a nord con la Spagna e a ovest e a sud con l'oceano Atlantico.", "geo_loc_btn": "VEDI LA MAPPA INTERATTIVA", "geo_dual_eyebrow": "PICCOLO PAESE, GRANDE DIVERSITÀ", "geo_dual_title": "Due volti,<br>un solo paese", "geo_dual_f1_label": "NORD: MONTUOSO", "geo_dual_f1_desc": "Rilievo marcato, colline, valli verdeggianti e villaggi tradizionali.", "geo_dual_f2_label": "SUD: PIANEGGIANTE", "geo_dual_f2_desc": "Ampi spazi aperti, paesaggi dolci e luce intensa.", "geo_cr_climate_eyebrow": "IL CLIMA", "geo_cr_climate_title": "Un clima influenzato da<br>due forze naturali", "geo_cr_climate_body": "Il clima del Portogallo è influenzato dalla corrente del Nord (oceano Atlantico) e dalle masse d'aria calda provenienti dal nord Africa.", "geo_cr_f1_label": "NORD: FREDDO", "geo_cr_f1_desc": "Inverni più freddi e piovosi, estati miti.", "geo_cr_f2_label": "SUD: CALDO", "geo_cr_f2_desc": "Inverni miti e soleggiati, estati calde e secche.", "geo_cr_relief_eyebrow": "RILIEVO E MONTAGNE", "geo_cr_relief_title": "Un rilievo contrastato", "geo_cr_li1": "Catene montuose a nord.", "geo_cr_li2": "Colline e valli al centro.", "geo_cr_li3": "Vaste pianure a sud.", "geo_cr_li4": "Coste frastagliate e scogliere di fronte all'Atlantico.", "geo_volc_eyebrow": "IL PORTOGALLO VULCANICO", "geo_volc_title": "Madeira e Azzorre,<br>terre di vulcani", "geo_volc_body": "Le isole di Madeira e delle Azzorre sono di origine vulcanica. Il loro paesaggio spettacolare è il risultato di eruzioni vecchie di milioni di anni.", "geo_volc_acores_label": "AZZORRE", "geo_volc_acores_desc": "Nove isole vulcaniche con laghi craterici, sorgenti termali e paesaggi unici.", "geo_volc_acores_caption": "Nel 2022, il vulcano Capelinhos (isola di Faial) è entrato in eruzione, ricordando la forza della natura.", "geo_volc_madeira_label": "MADEIRA", "geo_volc_madeira_desc": "Isola montuosa di origine vulcanica, con scogliere imponenti e valli profonde.", "geo_ext_nature_eyebrow": "NATURA E BIODIVERSITÀ", "geo_ext_nature_title": "Una natura ricca<br>e preservata", "geo_ext_nature_li1": "Foreste, parchi naturali<br>e riserve protette.", "geo_ext_nature_li2": "Fauna e flora variegate,<br>tra cui diverse specie<br>endemiche.", "geo_ext_nature_li3": "Un forte impegno per<br>la protezione dell'ambiente.", "geo_ext_facts_eyebrow": "PICCOLE CURIOSITÀ", "geo_ext_fact1": "Il punto più alto del paese si trova<br>alle Azzorre (Pico, 2 351 m).", "geo_ext_fact2": "Il Portogallo ha un solo vicino<br>terrestre: la Spagna.", "geo_ext_fact3": "Ci sono impronte di dinosauri<br>vecchie di 175 milioni di anni!", "geo_ext_luis_eyebrow": "CARAMULO, VISEU &mdash; DA LUÍS", "geo_ext_luis_title": "La mia città, la mia origine", "geo_ext_luis_desc": "Caramulo è un villaggio di montagna nel centro del Portogallo, terra del popolo lusitano.", "geo_ext_footer": "LO SAPEVI?", "geo_ext_book_caption": "Il popolo lusitano,<br>anche in Astérix!", "geo_cta_title": "Pronti a scoprire la storia del Portogallo&nbsp;?", "geo_cta_button": "Continua verso la Storia", "hist_hero_title": "Storia", "hist_hero_subtitle": "Un popolo di navigatori,<br>una storia di scoperte", "hist_hero_text": "Piccola nazione, grande destino: il Portogallo ha avuto un ruolo importante nella storia del mondo, dal mare alle idee.", "hist_c1_title": "La bandiera<br>portoghese", "hist_c1_desc": "Il verde simboleggia la speranza nel futuro e il rosso il sangue versato per l'indipendenza.", "hist_c2_title": "La costruzione<br>del Portogallo", "hist_c2_desc": "Dalla Contea del Portogallo alla nazione indipendente, un'identità forgiata nel corso dei secoli.", "hist_c3_title": "Trattato di Windsor<br>(1386)", "hist_c3_desc": "Il più antico trattato ancora in vigore. Alleanza con l'Inghilterra che ha resistito a due invasioni di Napoleone.", "hist_c3_link": "Scopri di più <span class=\"arrow\">→</span>", "hist_c4_title": "Il tè<br>in Inghilterra", "hist_c4_desc": "Introdotto da una regina portoghese. Il Portogallo ha avuto un ruolo chiave nel commercio del tè. Possibile origine della parola «Tea»: scritto su una cassa «Tem ervas aromáticas?»", "hist_routes_title": "Un impero<br>di rotte marittime", "hist_routes_desc": "I navigatori portoghesi hanno aperto rotte commerciali verso tutto il mondo.", "hist_routes_afrique": "Africa", "hist_routes_chine": "Cina", "hist_routes_inde": "India", "hist_routes_japon": "Giappone", "hist_routes_bresil": "Brasile", "hist_routes_btn": "Vedi la mappa"}, "de": {"nav_home": "Startseite", "nav_geo": "Geografie", "nav_hist": "Geschichte", "nav_inst": "Institutionen", "nav_soc": "Gesellschaft", "nav_cult": "Kultur", "nav_reg": "Regionen", "nav_concl": "Schluss", "hero_eyebrow": "WILLKOMMEN IN", "hero_subtitle": "Eine Präsentation über Portugal", "hero_quote": "«Ein kleines Land am Atlantik, mit einer großen Geschichte, einer reichen Kultur und viel Sonne.»", "card_geo": "Geografie", "card_hist": "Geschichte", "card_inst": "Institutionen<br>&amp; Politik", "card_pop": "Bevölkerung<br>&amp; Gesellschaft", "card_cult": "Kultur<br>&amp; Gastronomie", "card_sport": "Sport", "card_reg": "Die Regionen", "card_moi": "Was Portugal<br>für mich bedeutet", "closing_quote": "«Vom Atlantik bis zum Mittelmeer, ein gastfreundliches Volk, stolz auf seine Wurzeln.»", "intro_eyebrow": "WER BIN ICH?", "intro_title": "Lernen wir uns kennen.", "intro_subtitle": "Ich bin Luís Marques.", "stat1_label": "HERKUNFT", "stat2_label": "ANKUNFT IN DER SCHWEIZ", "stat2_sub": "Seit über 13 Jahren<br>in der Schweiz", "stat3_label": "BERUF", "stat3_value": "Objektverantwortlicher,<br>Sicherheitszentrale", "stat4_label": "INTERESSEN", "stat4_value": "Reisen<br>Sport<br>Gastronomie<br>Kultur", "glance_title": "Portugal auf einen Blick", "glance_capital_label": "Hauptstadt", "glance_pop_label": "Bevölkerung", "glance_pop_value": "≈ 10,6 Millionen", "glance_area_label": "Fläche", "glance_lang_label": "Amtssprache", "glance_lang_value": "Portugiesisch", "glance_currency_label": "Währung", "glance_sea_label": "Küstenlage", "glance_sea_value": "Atlantischer Ozean", "journey_title": "Im Verlauf dieser Präsentation", "journey_geo": "Geografie", "journey_hist": "Geschichte", "journey_inst": "Institutionen", "journey_soc": "Gesellschaft", "journey_cult": "Kultur", "journey_gastro": "Gastronomie", "journey_reg": "Regionen", "journey_moi": "Portugal und ich", "bridge_subtitle": "Zwei Länder, zwei Kulturen, ein Weg.", "bridge_text": "Portugal sind meine Wurzeln. Die Schweiz ist heute das Land, in dem ich meine Zukunft aufbaue.<br>Diese Präsentation ist die Brücke zwischen diesen zwei Teilen meines Lebens.", "cta_title": "Bereit, Portugal zu entdecken&nbsp;?", "cta_button": "Präsentation starten", "geo_hero_title": "Geografie", "geo_hero_subtitle": "Portugal, zwischen Europa und dem Atlantik", "geo_hero_text": "Ein Land von bescheidener Grösse, aber mit aussergewöhnlichem geografischen Reichtum.", "geo_stat1": "VON NORD NACH SÜD", "geo_stat2": "VON OST NACH WEST", "geo_stat3": "ATLANTIKKÜSTE", "geo_stat4": "HÖCHSTER PUNKT<br>DES FESTLANDS<br><em>Serra da Estrela</em>", "geo_stat5": "HÖCHSTER PUNKT<br>DES LANDES<br><em>Pico (Azoren)</em>", "geo_loc_eyebrow": "WO LIEGT PORTUGAL?", "geo_loc_title": "Am südwestlichen<br>Rand Europas", "geo_loc_body": "Portugal liegt auf der Iberischen Halbinsel, grenzt im Osten und Norden an Spanien und im Westen und Süden an den Atlantischen Ozean.", "geo_loc_btn": "INTERAKTIVE KARTE ANSEHEN", "geo_dual_eyebrow": "KLEINES LAND, GROSSE VIELFALT", "geo_dual_title": "Zwei Gesichter,<br>ein Land", "geo_dual_f1_label": "NORDEN: BERGIG", "geo_dual_f1_desc": "Ausgeprägtes Relief, Hügel, grüne Täler und traditionelle Dörfer.", "geo_dual_f2_label": "SÜDEN: FLACH", "geo_dual_f2_desc": "Weite offene Flächen, sanfte Landschaften und intensives Licht.", "geo_cr_climate_eyebrow": "DAS KLIMA", "geo_cr_climate_title": "Ein Klima, geprägt von<br>zwei Naturkräften", "geo_cr_climate_body": "Das Klima Portugals wird von der Nordströmung (Atlantik) und den warmen Luftmassen aus Nordafrika beeinflusst.", "geo_cr_f1_label": "NORDEN: KALT", "geo_cr_f1_desc": "Kältere, regnerische Winter, milde Sommer.", "geo_cr_f2_label": "SÜDEN: WARM", "geo_cr_f2_desc": "Milde, sonnige Winter, heisse, trockene Sommer.", "geo_cr_relief_eyebrow": "RELIEF &amp; GEBIRGE", "geo_cr_relief_title": "Ein kontrastreiches Relief", "geo_cr_li1": "Gebirgsketten im Norden.", "geo_cr_li2": "Hügel und Täler in der Mitte.", "geo_cr_li3": "Weite Ebenen im Süden.", "geo_cr_li4": "Zerklüftete Küsten und Klippen zum Atlantik.", "geo_volc_eyebrow": "DAS VULKANISCHE PORTUGAL", "geo_volc_title": "Madeira und Azoren,<br>Länder der Vulkane", "geo_volc_body": "Die Inseln Madeira und die Azoren sind vulkanischen Ursprungs. Ihre spektakuläre Landschaft ist das Ergebnis von Millionen Jahre alten Eruptionen.", "geo_volc_acores_label": "AZOREN", "geo_volc_acores_desc": "Neun vulkanische Inseln mit Kraterseen, heissen Quellen und einzigartigen Landschaften.", "geo_volc_acores_caption": "2022 brach der Vulkan Capelinhos (Insel Faial) aus und erinnerte an die Kraft der Natur.", "geo_volc_madeira_label": "MADEIRA", "geo_volc_madeira_desc": "Bergige Insel vulkanischen Ursprungs, mit beeindruckenden Klippen und tiefen Tälern.", "geo_ext_nature_eyebrow": "NATUR &amp; BIODIVERSITÄT", "geo_ext_nature_title": "Eine reiche und<br>geschützte Natur", "geo_ext_nature_li1": "Wälder, Naturparks<br>und Schutzgebiete.", "geo_ext_nature_li2": "Vielfältige Fauna und Flora,<br>darunter mehrere<br>endemische Arten.", "geo_ext_nature_li3": "Ein starkes Engagement für<br>den Umweltschutz.", "geo_ext_facts_eyebrow": "KLEINE ÜBERRASCHENDE FAKTEN", "geo_ext_fact1": "Der höchste Punkt des Landes liegt<br>auf den Azoren (Pico, 2 351 m).", "geo_ext_fact2": "Portugal hat nur einen<br>Landnachbarn: Spanien.", "geo_ext_fact3": "Es gibt Dinosaurierspuren,<br>die 175 Millionen Jahre alt sind!", "geo_ext_luis_eyebrow": "CARAMULO, VISEU &mdash; BEI LUÍS", "geo_ext_luis_title": "Meine Stadt, mein Ursprung", "geo_ext_luis_desc": "Caramulo ist ein Bergdorf in Zentralportugal, im Land des lusitanischen Volkes.", "geo_ext_footer": "WUSSTEN SIE SCHON?", "geo_ext_book_caption": "Die Lusitanier —<br>sogar bei Asterix!", "geo_cta_title": "Bereit, die Geschichte Portugals zu entdecken&nbsp;?", "geo_cta_button": "Weiter zur Geschichte", "hist_hero_title": "Geschichte", "hist_hero_subtitle": "Ein Volk von Seefahrern,<br>eine Geschichte der Entdeckungen", "hist_hero_text": "Kleine Nation, grosses Schicksal: Portugal spielte eine bedeutende Rolle in der Weltgeschichte, vom Meer bis zu den Ideen.", "hist_c1_title": "Die portugiesische<br>Flagge", "hist_c1_desc": "Grün symbolisiert die Hoffnung auf die Zukunft und Rot das für die Unabhängigkeit vergossene Blut.", "hist_c2_title": "Der Aufbau<br>Portugals", "hist_c2_desc": "Von der Grafschaft Portugal zur unabhängigen Nation, eine über Jahrhunderte geformte Identität.", "hist_c3_title": "Vertrag von Windsor<br>(1386)", "hist_c3_desc": "Der älteste noch geltende Vertrag. Bündnis mit England, das zwei napoleonischen Invasionen standhielt.", "hist_c3_link": "Mehr erfahren <span class=\"arrow\">→</span>", "hist_c4_title": "Der Tee<br>in England", "hist_c4_desc": "Eingeführt von einer portugiesischen Königin. Portugal spielte eine Schlüsselrolle im Teehandel. Mögliche Herkunft des Wortes «Tea»: geschrieben auf einer Kiste «Tem ervas aromáticas?»", "hist_routes_title": "Ein Reich<br>der Seewege", "hist_routes_desc": "Die portugiesischen Seefahrer eröffneten Handelsrouten in die ganze Welt.", "hist_routes_afrique": "Afrika", "hist_routes_chine": "China", "hist_routes_inde": "Indien", "hist_routes_japon": "Japan", "hist_routes_bresil": "Brasilien", "hist_routes_btn": "Karte ansehen"}};
+
+    function applyLanguage(lang){
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const dict = I18N[lang] || I18N.fr;
+        if(dict[key] !== undefined){
+          el.innerHTML = dict[key];
+        }
+      });
+      document.getElementById('langCurrent').textContent = lang.toUpperCase();
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+      document.documentElement.setAttribute('lang', lang);
+    }
+
+    const langToggle = document.getElementById('langToggle');
+    const langMenu = document.getElementById('langMenu');
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langMenu.classList.toggle('open');
+    });
+    document.addEventListener('click', () => {
+      langMenu.classList.remove('open');
+    });
+    document.querySelectorAll('.lang-option').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        applyLanguage(btn.getAttribute('data-lang'));
+        langMenu.classList.remove('open');
+      });
+    });
+
+  </script>
+
+</body>
+</html>
