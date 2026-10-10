@@ -2357,7 +2357,7 @@
 
   .foot-grid{display:grid; grid-template-columns:1.2fr 1fr; grid-template-rows:auto auto; gap:20px;}
   .cr7-card{
-    grid-row:1 / span 2;
+    grid-row:1 / span 3;
     position:relative;
     overflow:hidden;
     border-radius:8px;
@@ -2491,6 +2491,40 @@
     .nav{display:none;}
     .view{display:block !important; page-break-after:always;}
   }
+
+  /* ---------- ROUND 2 ---------- */
+  .pio-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:20px;}
+  .pio-item{padding:28px 24px; border-left:3px solid var(--gold); background:var(--ivory); border-radius:0 6px 6px 0;}
+  .pio-year{display:block; font-family:'Cormorant Garamond', serif; font-weight:700; font-size:44px; line-height:1; color:var(--green); margin-bottom:12px;}
+  .pio-year sup{font-size:.5em;}
+  .pio-text{font-size:14.5px; line-height:1.65; color:var(--ink);}
+  @media (max-width:1000px){ .pio-grid{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:560px){ .pio-grid{grid-template-columns:1fr;} }
+
+  .food-photo{position:sticky; top:100px; align-self:start;}
+  .food-photo img{height:auto; min-height:0; aspect-ratio:3/4;}
+
+  .world-food{max-width:860px; margin:0 auto;}
+  .wf-item{display:grid; grid-template-columns:180px 1fr; gap:24px; padding:20px 0; border-top:1px solid var(--border); font-size:15px; line-height:1.65; color:var(--ink);}
+  .wf-name{font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:700; font-size:28px; color:var(--red); line-height:1.1;}
+  @media (max-width:640px){ .wf-item{grid-template-columns:1fr; gap:6px;} }
+
+  .story-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;}
+  .story{background:var(--warm-white); border:1px solid var(--border); border-radius:6px; padding:30px 26px; box-shadow:0 18px 40px -30px rgba(23,33,29,.25);}
+  .story-num{display:block; font-family:'Cormorant Garamond', serif; font-weight:700; font-size:16px; color:var(--gold); margin-bottom:6px;}
+  .story-title{font-size:26px; font-weight:700; line-height:1.2; margin-bottom:14px;}
+  .story-text{font-size:14.5px; line-height:1.7; color:var(--grey);}
+  @media (max-width:1000px){ .story-grid{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:640px){ .story-grid{grid-template-columns:1fr;} }
+
+  .car-grid{display:grid; grid-template-columns:1.3fr .7fr; gap:64px; align-items:center;}
+  .car-facts{display:flex; flex-direction:column; gap:0; border-left:3px solid var(--red); padding-left:32px;}
+  .car-fact{padding:18px 0; border-top:1px solid var(--border);}
+  .car-fact:first-child{border-top:none;}
+  .car-num{display:block; font-family:'Cormorant Garamond', serif; font-weight:700; font-size:40px; color:var(--green); line-height:1.1;}
+  .car-num small{font-size:20px; color:var(--grey);}
+  .car-label{font-size:13px; font-weight:600; color:var(--grey); letter-spacing:.02em;}
+  @media (max-width:900px){ .car-grid{grid-template-columns:1fr; gap:40px;} }
 
   .view{display:none;}
   .view.active{display:block;}
@@ -3025,6 +3059,10 @@
               <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M3 16c1-3 3-5 6-5 1 0 1.5-1 2.5-1 2 0 3 1.5 3 1.5s2-1 3.5.5c1 1 1 2.5 0 3.5M8 11V7M14 12c0 2-1.5 3-3 3-2 0-3-1.5-4-1.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="9" r=".5" fill="currentColor" stroke="none"/></svg></span>
               <span data-i18n="geo_ext_fact3">Il y a des empreintes de dinosaures<br>vieilles de 175 millions d'années&nbsp;!</span>
             </li>
+            <li>
+              <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z" stroke-width="1.4"/><circle cx="12" cy="9" r="2.4" stroke-width="1.4"/></svg></span>
+              <span data-i18n="geo_ext_fact4">Le cabo da Roca est le point le plus occidental de l'Europe continentale : « là où la terre finit et où la mer commence » (Camões).</span>
+            </li>
           </ul>
         </div>
 
@@ -3143,13 +3181,35 @@
           <div class="tl-item tl-item--key"><span class="tl-year">1143</span><p class="tl-text" data-i18n="hist_tl_1143">Traité de Zamora : le royaume de Portugal est reconnu. Dom Afonso Henriques devient son premier roi.</p></div>
           <div class="tl-item"><span class="tl-year">1297</span><p class="tl-text" data-i18n="hist_tl_1297">Traité d'Alcañices : les frontières du pays sont fixées, parmi les plus anciennes d'Europe.</p></div>
           <div class="tl-item"><span class="tl-year">1415</span><p class="tl-text" data-i18n="hist_tl_1415">Prise de Ceuta : début de l'expansion maritime portugaise.</p></div>
+          <div class="tl-item"><span class="tl-year">1494</span><p class="tl-text" data-i18n="hist_tl_1494">Traité de Tordesillas : le Portugal et l'Espagne se partagent les terres à découvrir.</p></div>
           <div class="tl-item"><span class="tl-year">1498</span><p class="tl-text" data-i18n="hist_tl_1498">Vasco de Gama atteint l'Inde par la mer en contournant l'Afrique.</p></div>
           <div class="tl-item"><span class="tl-year">1500</span><p class="tl-text" data-i18n="hist_tl_1500">Pedro Álvares Cabral arrive au Brésil.</p></div>
+          <div class="tl-item"><span class="tl-year">1640</span><p class="tl-text" data-i18n="hist_tl_1640">Après 60 ans d'union avec l'Espagne, le Portugal retrouve son indépendance le 1er décembre.</p></div>
           <div class="tl-item"><span class="tl-year">1755</span><p class="tl-text" data-i18n="hist_tl_1755">Un tremblement de terre suivi d'un tsunami détruit Lisbonne. Le marquis de Pombal reconstruit la ville.</p></div>
+          <div class="tl-item"><span class="tl-year">1822</span><p class="tl-text" data-i18n="hist_tl_1822">Le Brésil proclame son indépendance.</p></div>
           <div class="tl-item"><span class="tl-year">1910</span><p class="tl-text" data-i18n="hist_tl_1910">Fin de la monarchie : la République est proclamée le 5 octobre.</p></div>
           <div class="tl-item tl-item--key"><span class="tl-year">1974</span><p class="tl-text" data-i18n="hist_tl_1974">Révolution des Œillets (25 avril) : fin de la dictature de l'Estado Novo.</p></div>
           <div class="tl-item"><span class="tl-year">1986</span><p class="tl-text" data-i18n="hist_tl_1986">Le Portugal entre dans la Communauté européenne, l'actuelle Union européenne.</p></div>
+          <div class="tl-item"><span class="tl-year">1999</span><p class="tl-text" data-i18n="hist_tl_1999">Macao est rendue à la Chine : fin de près de six siècles d'empire.</p></div>
           <div class="tl-item"><span class="tl-year">2002</span><p class="tl-text" data-i18n="hist_tl_2002">L'euro remplace l'escudo dans les porte-monnaie.</p></div>
+          <div class="tl-item"><span class="tl-year">2007</span><p class="tl-text" data-i18n="hist_tl_2007">Signature du traité de Lisbonne, qui organise encore aujourd'hui l'Union européenne.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--ivory">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="hist_st_eyebrow">CE QU'ON SAIT MOINS</span>
+          <h2 class="sec-title" data-i18n="hist_st_title">Six histoires surprenantes</h2>
+        </div>
+        <div class="story-grid">
+          <article class="story"><span class="story-num">01</span><h3 class="story-title" data-i18n="hist_s1_title">Le monde coupé en deux</h3><p class="story-text" data-i18n="hist_s1_text">En 1494, le Portugal et l'Espagne signent le traité de Tordesillas : une ligne imaginaire, tracée du nord au sud dans l'Atlantique, partage entre eux les terres à découvrir. C'est à cause de cette ligne qu'on parle aujourd'hui portugais au Brésil.</p></article>
+          <article class="story"><span class="story-num">02</span><h3 class="story-title" data-i18n="hist_s2_title">Les premiers Européens au Japon</h3><p class="story-text" data-i18n="hist_s2_text">En 1543, des marchands portugais débarquent sur l'île de Tanegashima : ce sont les premiers Européens à atteindre le Japon. Ils y apportent les armes à feu, le pain — en japonais, « pan » vient du portugais « pão » — et, selon une théorie répandue, l'idée de la tempura.</p></article>
+          <article class="story"><span class="story-num">03</span><h3 class="story-title" data-i18n="hist_s3_title">Le jour où Lisbonne a tremblé</h3><p class="story-text" data-i18n="hist_s3_text">Le 1er novembre 1755, un séisme suivi d'un tsunami et d'incendies détruit Lisbonne et fait des dizaines de milliers de morts. Le marquis de Pombal reconstruit la Baixa avec des rues droites et la « gaiola pombalina », une cage en bois qui protège les immeubles des secousses : l'une des premières constructions parasismiques au monde. Son enquête auprès des paroisses est considérée comme l'un des débuts de la sismologie moderne.</p></article>
+          <article class="story"><span class="story-num">04</span><h3 class="story-title" data-i18n="hist_s4_title">Un consul contre la dictature</h3><p class="story-text" data-i18n="hist_s4_text">En juin 1940, à Bordeaux, le consul Aristides de Sousa Mendes désobéit aux ordres de Salazar et délivre des visas à des milliers de réfugiés fuyant les nazis, dont de nombreux Juifs. Sanctionné et privé de sa carrière, il meurt dans la pauvreté en 1954. Il est reconnu « Juste parmi les nations » en 1966 et honoré au Panthéon national portugais en 2021.</p></article>
+          <article class="story"><span class="story-num">05</span><h3 class="story-title" data-i18n="hist_s5_title">48 ans de dictature</h3><p class="story-text" data-i18n="hist_s5_text">De 1926 à 1974, le Portugal vit sous une dictature, dirigée surtout par António de Oliveira Salazar : censure, police politique (la PIDE), prisonniers politiques. Le pays reste pauvre et isolé. Dans les années 1960, des centaines de milliers de Portugais émigrent, souvent clandestinement — « a salto » — vers la France.</p></article>
+          <article class="story"><span class="story-num">06</span><h3 class="story-title" data-i18n="hist_s6_title">La fin d'un empire</h3><p class="story-text" data-i18n="hist_s6_text">De 1961 à 1974, le Portugal mène une guerre en Angola, en Guinée-Bissau et au Mozambique pour garder ses colonies. Après la Révolution des Œillets, elles deviennent indépendantes et des centaines de milliers de « retornados » rentrent au Portugal. En 1999, la remise de Macao à la Chine met fin à près de six siècles d'empire.</p></article>
         </div>
       </div>
     </section>
@@ -3300,6 +3360,21 @@
       </div>
     </section>
 
+        <section class="sec sec--white">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="inst_pio_eyebrow">UN PAYS PIONNIER</span>
+          <h2 class="sec-title" data-i18n="inst_pio_title">Des choix qui ont fait école</h2>
+        </div>
+        <div class="pio-grid">
+          <div class="pio-item"><span class="pio-year">1867</span><p class="pio-text" data-i18n="inst_pio1">L'un des premiers pays au monde à abolir la peine de mort pour les crimes civils. Victor Hugo félicite alors le Portugal d'être à l'avant-garde de l'Europe.</p></div>
+          <div class="pio-item"><span class="pio-year">2001</span><p class="pio-text" data-i18n="inst_pio2">Dépénalisation de la consommation de toutes les drogues : les consommateurs sont orientés vers les soins plutôt que vers la prison. Le trafic reste un crime, et les contaminations au VIH liées aux seringues chutent fortement.</p></div>
+          <div class="pio-item"><span class="pio-year">2010</span><p class="pio-text" data-i18n="inst_pio3">Le mariage est ouvert aux couples de même sexe.</p></div>
+          <div class="pio-item"><span class="pio-year" data-i18n="inst_pio4_year">7<sup>e</sup></span><p class="pio-text" data-i18n="inst_pio4">pays le plus pacifique du monde selon le Global Peace Index 2025, et dans le top 10 depuis 2015.</p></div>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section">
       <div class="wrap cta-content">
         <h3 class="cta-title" data-i18n="inst_cta_title">Prêt à rencontrer les Portugais&nbsp;?</h3>
@@ -3404,6 +3479,21 @@
       </div>
     </section>
 
+        <section class="sec sec--white">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="soc_eco_eyebrow">ÉCONOMIE</span>
+          <h2 class="sec-title" data-i18n="soc_eco_title">De la crise à un nouvel élan</h2>
+        </div>
+        <div class="info-grid">
+          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span><h3 class="info-title" data-i18n="soc_eco1_title">La crise de 2011</h3><p class="info-desc" data-i18n="soc_eco1">En pleine crise de la dette, le Portugal reçoit 78 milliards d'euros de l'UE et du FMI, en échange d'une forte austérité. Il sort du programme en 2014 et rembourse le FMI en avance, dès 2018.</p></article>
+          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12v10M12 12l-1.5-9h3L12 12zM12 12l8 3.5-1.5 2.6L12 12zM12 12l-8 3.5 1.5 2.6L12 12z"/><path d="M8 22h8"/></svg></span><h3 class="info-title" data-i18n="soc_eco2_title">Champion du renouvelable</h3><p class="info-desc" data-i18n="soc_eco2">Environ 71 % de l'électricité consommée en 2024 venait d'énergies renouvelables : barrages, éoliennes et soleil.</p></article>
+          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-7M12 14c-4 0-7-2.5-7-6a7 7 0 0114 0c0 3.5-3 6-7 6zM12 14l-3-3M12 12l3-3M8 21h8"/></svg></span><h3 class="info-title" data-i18n="soc_eco3_title">Le pays du liège</h3><p class="info-desc" data-i18n="soc_eco3">Environ la moitié du liège mondial vient du Portugal. On écorce le chêne-liège à la main tous les 9 ans environ, sans abattre l'arbre.</p></article>
+          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="3"/><circle cx="16" cy="9" r="2.4"/><path d="M2.5 20c0-3.6 2.7-6 6-6s6 2.4 6 6M14.5 20c0-2.8 1.8-4.8 4-4.8s4 2 4 4.8"/></svg></span><h3 class="info-title" data-i18n="soc_eco4_title">Terre d'accueil</h3><p class="info-desc" data-i18n="soc_eco4">Longtemps pays d'émigration, le Portugal attire aujourd'hui : plus de 1,5 million d'étrangers y vivaient fin 2024, surtout des Brésiliens.</p></article>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section">
       <div class="wrap cta-content">
         <h3 class="cta-title" data-i18n="soc_cta_title">Prêt à goûter à la culture portugaise&nbsp;?</h3>
@@ -3465,6 +3555,12 @@
             <div class="dish"><span class="dish-name">Sardinhas assadas</span><p class="dish-desc" data-i18n="cult_d4_desc">Sardines grillées, reines des fêtes populaires de juin.</p></div>
             <div class="dish"><span class="dish-name">Caldo verde</span><p class="dish-desc" data-i18n="cult_d5_desc">Soupe au chou vert, à la pomme de terre et au chouriço.</p></div>
             <div class="dish"><span class="dish-name">Leitão da Bairrada</span><p class="dish-desc" data-i18n="cult_d6_desc">Cochon de lait rôti, spécialité de la Bairrada, tout près de chez moi.</p></div>
+            <div class="dish"><span class="dish-name">Polvo à lagareiro</span><p class="dish-desc" data-i18n="cult_d7_desc">Poulpe rôti au four avec beaucoup d'huile d'olive et d'ail, servi avec des pommes de terre « a murro », écrasées d'un coup de poing.</p></div>
+            <div class="dish"><span class="dish-name">Cataplana</span><p class="dish-desc" data-i18n="cult_d8_desc">Fruits de mer cuits à l'étouffée dans une casserole en cuivre en forme de coquillage : la spécialité de l'Algarve.</p></div>
+            <div class="dish"><span class="dish-name">Bifana</span><p class="dish-desc" data-i18n="cult_d9_desc">Petit pain garni de porc mariné à l'ail et au vin blanc : le casse-croûte préféré des Portugais.</p></div>
+            <div class="dish"><span class="dish-name">Queijo Serra da Estrela</span><p class="dish-desc" data-i18n="cult_d10_desc">Fromage de brebis si crémeux qu'on le mange à la cuillère, fabriqué dans la région de la Serra da Estrela, voisine de Viseu.</p></div>
+            <div class="dish"><span class="dish-name">Alheira</span><p class="dish-desc" data-i18n="cult_d11_desc">Saucisse à base de volaille et de pain. Selon la tradition, des Juifs l'auraient inventée sous l'Inquisition pour faire croire qu'ils mangeaient du porc.</p></div>
+            <div class="dish"><span class="dish-name">Ovos moles de Aveiro</span><p class="dish-desc" data-i18n="cult_d12_desc">Douceur d'Aveiro au jaune d'œuf et au sucre. On raconte que beaucoup de desserts portugais sont nés dans les couvents, où les blancs d'œufs servaient à amidonner le linge.</p></div>
           </div>
         </div>
       </div>
@@ -3481,7 +3577,23 @@
       </div>
     </section>
 
-    <section class="sec sec--white">
+    <section class="sec sec--ivory">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="cult_world_eyebrow">UNE INFLUENCE MONDIALE</span>
+          <h2 class="sec-title" data-i18n="cult_world_title">Le Portugal a changé la cuisine du monde</h2>
+        </div>
+        <div class="world-food">
+          <p class="wf-item"><span class="wf-name">Tempura</span><span data-i18n="cult_w1">Japon — Les missionnaires portugais mangeaient du poisson et des légumes frits pendant les jours de jeûne des « Quatre-Temps » (têmporas) : une origine probable de la tempura.</span></p>
+          <p class="wf-item"><span class="wf-name">Vindaloo</span><span data-i18n="cult_w2">Inde — Le vindaloo de Goa tire son nom de la « carne de vinha d'alhos », une viande marinée au vin et à l'ail apportée par les Portugais.</span></p>
+          <p class="wf-item"><span class="wf-name">Piri-piri</span><span data-i18n="cult_w3">Asie et Afrique — Les navigateurs portugais ont diffusé le piment venu d'Amérique, jusqu'en Inde et en Thaïlande.</span></p>
+          <p class="wf-item"><span class="wf-name">Kasutera</span><span data-i18n="cult_w4">Japon — Le gâteau « kasutera » vient du « pão de Castela », le gâteau de Castille apporté par les Portugais à Nagasaki.</span></p>
+          <p class="wf-item"><span class="wf-name">Marmelada</span><span data-i18n="cult_w5">Europe — Le mot « marmelade » vient du portugais « marmelada », une pâte de coings.</span></p>
+        </div>
+      </div>
+    </section>
+
+        <section class="sec sec--white">
       <div class="wrap">
         <div class="sec-head">
           <span class="sec-eyebrow" data-i18n="cult_fest_eyebrow">FÊTES &amp; TRADITIONS</span>
@@ -3542,6 +3654,7 @@
           </article>
           <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 6.6L21 9.5l-5 4.6L17.5 21 12 17.3 6.5 21 8 14.1l-5-4.6 6.4-.9z"/></svg></span><h3 class="info-title" data-i18n="sport_leg_title">Les légendes</h3><p class="info-desc" data-i18n="sport_leg_desc">Eusébio, Luís Figo (Ballon d'or 2000) et l'entraîneur José Mourinho ont aussi marqué l'histoire du football.</p></article>
           <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.3 2.4-1.3 3.9H10l-1.3-3.9L12 7.5zM12 3v4.5M20.5 9.5l-4 1.5M3.5 9.5l4 1.5M15 18.5l-1-4.7M9 18.5l1-4.7"/></svg></span><h3 class="info-title">Os três grandes</h3><p class="info-desc" data-i18n="sport_clubs_desc">Benfica et Sporting (Lisbonne), FC Porto : trois clubs qui divisent les familles… dans la bonne humeur&nbsp;!</p></article>
+          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="5"/><path d="M8.5 11.5L5 3h4l3 6 3-6h4l-3.5 8.5M12 13v4"/></svg></span><h3 class="info-title">Eusébio</h3><p class="info-desc" data-i18n="sport_eusebio">Eusébio, la « Panthère noire », né au Mozambique, meilleur buteur de la Coupe du monde 1966 avec 9 buts.</p></article>
         </div>
       </div>
     </section>
@@ -3628,6 +3741,21 @@
             <div class="region-photo"><img src="images/geo-madeira.jpg" alt="Madère"><span class="region-num">7</span><span class="region-badge region-badge--auto" data-i18n="reg_auto">RÉGION AUTONOME</span></div>
             <div class="region-body"><h3 class="region-name" data-i18n="reg_m_name">Madère</h3><span class="region-cities">Funchal</span><p class="region-desc" data-i18n="reg_m_desc">L'« île de l'éternel printemps » : levadas, fleurs, vin de Madère… et ville natale de Cristiano Ronaldo.</p></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+        <section class="sec sec--white">
+      <div class="wrap car-grid">
+        <div class="sec-head sec-head--left" style="margin-bottom:0;">
+          <span class="sec-eyebrow" data-i18n="reg_car_eyebrow">ZOOM SUR CHEZ MOI</span>
+          <h2 class="sec-title" data-i18n="reg_car_title">Caramulo, la montagne de l'air pur</h2>
+          <p class="sec-lead" data-i18n="reg_car_text">Dans les années 1920, le docteur Jerónimo de Lacerda fonde à Caramulo une station de sanatoriums : on venait de tout le pays soigner la tuberculose grâce à l'air pur de la montagne. Plus tard, ses fils créent le Musée du Caramulo, qui réunit une collection d'art — de l'Égypte ancienne à Picasso — et une magnifique collection de voitures et de motos anciennes.</p>
+        </div>
+        <div class="car-facts">
+          <div class="car-fact"><span class="car-num">1 076 <small>m</small></span><span class="car-label" data-i18n="reg_car_f1">Altitude du Caramulinho, le sommet de la serra</span></div>
+          <div class="car-fact"><span class="car-num">1920s</span><span class="car-label" data-i18n="reg_car_f2">Fondation du sanatorium</span></div>
+          <div class="car-fact"><span class="car-num">1953</span><span class="car-label" data-i18n="reg_car_f3">Fondation du Musée du Caramulo</span></div>
         </div>
       </div>
     </section>
@@ -4117,7 +4245,82 @@
   "concl_recap_title": "Ce que nous avons découvert",
   "concl_thanks": "Merci de votre attention.",
   "concl_questions": "Des questions&nbsp;?",
-  "concl_back": "Revenir à l'accueil"
+  "concl_back": "Revenir à l'accueil",
+  "geo_ext_fact4": "Le cabo da Roca est le point le plus occidental de l'Europe continentale : « là où la terre finit et où la mer commence » (Camões).",
+  "hist_tl_1494": "Traité de Tordesillas : le Portugal et l'Espagne se partagent les terres à découvrir.",
+  "hist_tl_1640": "Après 60 ans d'union avec l'Espagne, le Portugal retrouve son indépendance le 1er décembre.",
+  "hist_tl_1822": "Le Brésil proclame son indépendance.",
+  "hist_tl_1999": "Macao est rendue à la Chine : fin de près de six siècles d'empire.",
+  "hist_tl_2007": "Signature du traité de Lisbonne, qui organise encore aujourd'hui l'Union européenne.",
+  "hist_st_eyebrow": "CE QU'ON SAIT MOINS",
+  "hist_st_title": "Six histoires surprenantes",
+  "hist_s1_title": "Le monde coupé en deux",
+  "hist_s1_text": "En 1494, le Portugal et l'Espagne signent le traité de Tordesillas : une ligne imaginaire, tracée du nord au sud dans l'Atlantique, partage entre eux les terres à découvrir. C'est à cause de cette ligne qu'on parle aujourd'hui portugais au Brésil.",
+  "hist_s1_cap": "Le planisphère de Cantino (1502), l'une des plus anciennes cartes montrant la ligne de Tordesillas.",
+  "hist_s2_title": "Les premiers Européens au Japon",
+  "hist_s2_text": "En 1543, des marchands portugais débarquent sur l'île de Tanegashima : ce sont les premiers Européens à atteindre le Japon. Ils y apportent les armes à feu, le pain — en japonais, « pan » vient du portugais « pão » — et, selon une théorie répandue, l'idée de la tempura.",
+  "hist_s2_cap": "Paravent japonais « Nanban » (vers 1600) montrant l'arrivée d'un navire portugais.",
+  "hist_s3_title": "Le jour où Lisbonne a tremblé",
+  "hist_s3_text": "Le 1er novembre 1755, un séisme suivi d'un tsunami et d'incendies détruit Lisbonne et fait des dizaines de milliers de morts. Le marquis de Pombal reconstruit la Baixa avec des rues droites et la « gaiola pombalina », une cage en bois qui protège les immeubles des secousses : l'une des premières constructions parasismiques au monde. Son enquête auprès des paroisses est considérée comme l'un des débuts de la sismologie moderne.",
+  "hist_s3_cap": "Gravure de l'époque montrant Lisbonne en ruines et le tsunami dans le port.",
+  "hist_s4_title": "Un consul contre la dictature",
+  "hist_s4_text": "En juin 1940, à Bordeaux, le consul Aristides de Sousa Mendes désobéit aux ordres de Salazar et délivre des visas à des milliers de réfugiés fuyant les nazis, dont de nombreux Juifs. Sanctionné et privé de sa carrière, il meurt dans la pauvreté en 1954. Il est reconnu « Juste parmi les nations » en 1966 et honoré au Panthéon national portugais en 2021.",
+  "hist_s4_cap": "Aristides de Sousa Mendes (1885–1954).",
+  "hist_s5_title": "48 ans de dictature",
+  "hist_s5_text": "De 1926 à 1974, le Portugal vit sous une dictature, dirigée surtout par António de Oliveira Salazar : censure, police politique (la PIDE), prisonniers politiques. Le pays reste pauvre et isolé. Dans les années 1960, des centaines de milliers de Portugais émigrent, souvent clandestinement — « a salto » — vers la France.",
+  "hist_s5_cap": "Bidonville d'immigrés portugais à Champigny-sur-Marne, près de Paris, dans les années 1960.",
+  "hist_s6_title": "La fin d'un empire",
+  "hist_s6_text": "De 1961 à 1974, le Portugal mène une guerre en Angola, en Guinée-Bissau et au Mozambique pour garder ses colonies. Après la Révolution des Œillets, elles deviennent indépendantes et des centaines de milliers de « retornados » rentrent au Portugal. En 1999, la remise de Macao à la Chine met fin à près de six siècles d'empire.",
+  "hist_s6_cap": "Macao, dernier territoire portugais d'outre-mer, rendu à la Chine en 1999.",
+  "inst_p1_place": "Palais de Belém, résidence du Président",
+  "inst_p2_place": "Palais de São Bento, siège du Parlement",
+  "inst_p3_place": "Place du Commerce : des ministères occupent encore ses arcades",
+  "inst_p4_place": "Tribunal constitutionnel, Lisbonne",
+  "inst_rev_cap": "Lisbonne, 25 avril 1974 : la foule entoure les soldats de la révolution.",
+  "inst_pio_eyebrow": "UN PAYS PIONNIER",
+  "inst_pio_title": "Des choix qui ont fait école",
+  "inst_pio1": "L'un des premiers pays au monde à abolir la peine de mort pour les crimes civils. Victor Hugo félicite alors le Portugal d'être à l'avant-garde de l'Europe.",
+  "inst_pio2": "Dépénalisation de la consommation de toutes les drogues : les consommateurs sont orientés vers les soins plutôt que vers la prison. Le trafic reste un crime, et les contaminations au VIH liées aux seringues chutent fortement.",
+  "inst_pio3": "Le mariage est ouvert aux couples de même sexe.",
+  "inst_pio4_year": "7<sup>e</sup>",
+  "inst_pio4": "pays le plus pacifique du monde selon le Global Peace Index 2025, et dans le top 10 depuis 2015.",
+  "soc_eco_eyebrow": "ÉCONOMIE",
+  "soc_eco_title": "De la crise à un nouvel élan",
+  "soc_eco1_title": "La crise de 2011",
+  "soc_eco1": "En pleine crise de la dette, le Portugal reçoit 78 milliards d'euros de l'UE et du FMI, en échange d'une forte austérité. Il sort du programme en 2014 et rembourse le FMI en avance, dès 2018.",
+  "soc_eco2_title": "Champion du renouvelable",
+  "soc_eco2": "Environ 71 % de l'électricité consommée en 2024 venait d'énergies renouvelables : barrages, éoliennes et soleil.",
+  "soc_eco3_title": "Le pays du liège",
+  "soc_eco3": "Environ la moitié du liège mondial vient du Portugal. On écorce le chêne-liège à la main tous les 9 ans environ, sans abattre l'arbre.",
+  "soc_eco4_title": "Terre d'accueil",
+  "soc_eco4": "Longtemps pays d'émigration, le Portugal attire aujourd'hui : plus de 1,5 million d'étrangers y vivaient fin 2024, surtout des Brésiliens.",
+  "cult_d7_desc": "Poulpe rôti au four avec beaucoup d'huile d'olive et d'ail, servi avec des pommes de terre « a murro », écrasées d'un coup de poing.",
+  "cult_d8_desc": "Fruits de mer cuits à l'étouffée dans une casserole en cuivre en forme de coquillage : la spécialité de l'Algarve.",
+  "cult_d9_desc": "Petit pain garni de porc mariné à l'ail et au vin blanc : le casse-croûte préféré des Portugais.",
+  "cult_d10_desc": "Fromage de brebis si crémeux qu'on le mange à la cuillère, fabriqué dans la région de la Serra da Estrela, voisine de Viseu.",
+  "cult_d11_desc": "Saucisse à base de volaille et de pain. Selon la tradition, des Juifs l'auraient inventée sous l'Inquisition pour faire croire qu'ils mangeaient du porc.",
+  "cult_d12_desc": "Douceur d'Aveiro au jaune d'œuf et au sucre. On raconte que beaucoup de desserts portugais sont nés dans les couvents, où les blancs d'œufs servaient à amidonner le linge.",
+  "cult_world_eyebrow": "UNE INFLUENCE MONDIALE",
+  "cult_world_title": "Le Portugal a changé la cuisine du monde",
+  "cult_w1": "Japon — Les missionnaires portugais mangeaient du poisson et des légumes frits pendant les jours de jeûne des « Quatre-Temps » (têmporas) : une origine probable de la tempura.",
+  "cult_w2": "Inde — Le vindaloo de Goa tire son nom de la « carne de vinha d'alhos », une viande marinée au vin et à l'ail apportée par les Portugais.",
+  "cult_w3": "Asie et Afrique — Les navigateurs portugais ont diffusé le piment venu d'Amérique, jusqu'en Inde et en Thaïlande.",
+  "cult_w4": "Japon — Le gâteau « kasutera » vient du « pão de Castela », le gâteau de Castille apporté par les Portugais à Nagasaki.",
+  "cult_w5": "Europe — Le mot « marmelade » vient du portugais « marmelada », une pâte de coings.",
+  "cult_gallery_hint": "Douze classiques à goûter absolument",
+  "sport_trophies_eyebrow": "LES GRANDES VICTOIRES",
+  "sport_trophies_h": "Le palmarès de la Seleção",
+  "sport_hero_cap": "Une vague géante à Nazaré.",
+  "sport_eusebio": "Eusébio, la « Panthère noire », né au Mozambique, meilleur buteur de la Coupe du monde 1966 avec 9 buts.",
+  "reg_car_eyebrow": "ZOOM SUR CHEZ MOI",
+  "reg_car_title": "Caramulo, la montagne de l'air pur",
+  "reg_car_text": "Dans les années 1920, le docteur Jerónimo de Lacerda fonde à Caramulo une station de sanatoriums : on venait de tout le pays soigner la tuberculose grâce à l'air pur de la montagne. Plus tard, ses fils créent le Musée du Caramulo, qui réunit une collection d'art — de l'Égypte ancienne à Picasso — et une magnifique collection de voitures et de motos anciennes.",
+  "reg_car_f1": "Altitude du Caramulinho, le sommet de la serra",
+  "reg_car_f2": "Fondation du sanatorium",
+  "reg_car_f3": "Fondation du Musée du Caramulo",
+  "concl_hero_cap": "Cabo da Roca, « là où la terre finit et où la mer commence ».",
+  "credits_title": "Crédits photos",
+  "credits_intro": "Photos issues de Wikimedia Commons, sous licences libres. Merci à leurs auteurs."
  },
  "it": {
   "nav_home": "Home",
@@ -4461,7 +4664,82 @@
   "concl_recap_title": "Cosa abbiamo scoperto",
   "concl_thanks": "Grazie per l'attenzione.",
   "concl_questions": "Domande?",
-  "concl_back": "Torna alla home"
+  "concl_back": "Torna alla home",
+  "geo_ext_fact4": "Il Cabo da Roca è il punto più occidentale dell'Europa continentale: «dove la terra finisce e il mare comincia» (Camões).",
+  "hist_tl_1494": "Trattato di Tordesillas: Portogallo e Spagna si spartiscono le terre da scoprire.",
+  "hist_tl_1640": "Dopo 60 anni di unione con la Spagna, il Portogallo ritrova l'indipendenza il 1° dicembre.",
+  "hist_tl_1822": "Il Brasile proclama la sua indipendenza.",
+  "hist_tl_1999": "Macao viene restituita alla Cina: fine di quasi sei secoli di impero.",
+  "hist_tl_2007": "Firma del Trattato di Lisbona, che ancora oggi organizza l'Unione europea.",
+  "hist_st_eyebrow": "CIÒ CHE SI SA MENO",
+  "hist_st_title": "Sei storie sorprendenti",
+  "hist_s1_title": "Il mondo diviso in due",
+  "hist_s1_text": "Nel 1494 Portogallo e Spagna firmano il Trattato di Tordesillas: una linea immaginaria, tracciata da nord a sud nell'Atlantico, divide tra loro le terre da scoprire. È per questa linea che oggi in Brasile si parla portoghese.",
+  "hist_s1_cap": "Il planisfero di Cantino (1502), una delle più antiche carte con la linea di Tordesillas.",
+  "hist_s2_title": "I primi europei in Giappone",
+  "hist_s2_text": "Nel 1543 mercanti portoghesi sbarcano sull'isola di Tanegashima: sono i primi europei a raggiungere il Giappone. Portano le armi da fuoco, il pane — in giapponese «pan» viene dal portoghese «pão» — e, secondo una teoria diffusa, l'idea della tempura.",
+  "hist_s2_cap": "Paravento giapponese «Nanban» (verso il 1600) con l'arrivo di una nave portoghese.",
+  "hist_s3_title": "Il giorno in cui Lisbona tremò",
+  "hist_s3_text": "Il 1° novembre 1755 un terremoto, seguito da uno tsunami e da incendi, distrugge Lisbona e causa decine di migliaia di morti. Il marchese di Pombal ricostruisce la Baixa con strade dritte e la «gaiola pombalina», una gabbia di legno che protegge gli edifici dalle scosse: una delle prime costruzioni antisismiche al mondo. La sua inchiesta presso le parrocchie è considerata uno degli inizi della sismologia moderna.",
+  "hist_s3_cap": "Incisione dell'epoca con Lisbona in rovina e lo tsunami nel porto.",
+  "hist_s4_title": "Un console contro la dittatura",
+  "hist_s4_text": "Nel giugno 1940, a Bordeaux, il console Aristides de Sousa Mendes disobbedisce agli ordini di Salazar e rilascia visti a migliaia di rifugiati in fuga dai nazisti, tra cui molti ebrei. Punito e privato della carriera, muore in povertà nel 1954. Viene riconosciuto «Giusto tra le nazioni» nel 1966 e onorato nel Pantheon nazionale portoghese nel 2021.",
+  "hist_s4_cap": "Aristides de Sousa Mendes (1885–1954).",
+  "hist_s5_title": "48 anni di dittatura",
+  "hist_s5_text": "Dal 1926 al 1974 il Portogallo vive sotto una dittatura, guidata soprattutto da António de Oliveira Salazar: censura, polizia politica (la PIDE), prigionieri politici. Il paese resta povero e isolato. Negli anni '60 centinaia di migliaia di portoghesi emigrano, spesso clandestinamente — «a salto» — verso la Francia.",
+  "hist_s5_cap": "Baraccopoli di immigrati portoghesi a Champigny-sur-Marne, vicino a Parigi, negli anni '60.",
+  "hist_s6_title": "La fine di un impero",
+  "hist_s6_text": "Dal 1961 al 1974 il Portogallo combatte una guerra in Angola, Guinea-Bissau e Mozambico per mantenere le sue colonie. Dopo la Rivoluzione dei Garofani diventano indipendenti e centinaia di migliaia di «retornados» rientrano in Portogallo. Nel 1999 la restituzione di Macao alla Cina chiude quasi sei secoli di impero.",
+  "hist_s6_cap": "Macao, ultimo territorio portoghese d'oltremare, restituito alla Cina nel 1999.",
+  "inst_p1_place": "Palazzo di Belém, residenza del Presidente",
+  "inst_p2_place": "Palazzo di São Bento, sede del Parlamento",
+  "inst_p3_place": "Piazza del Commercio: alcuni ministeri occupano ancora i suoi portici",
+  "inst_p4_place": "Corte costituzionale, Lisbona",
+  "inst_rev_cap": "Lisbona, 25 aprile 1974: la folla circonda i soldati della rivoluzione.",
+  "inst_pio_eyebrow": "UN PAESE PIONIERE",
+  "inst_pio_title": "Scelte che hanno fatto scuola",
+  "inst_pio1": "Uno dei primi paesi al mondo ad abolire la pena di morte per i reati civili. Victor Hugo si congratula con il Portogallo per essere all'avanguardia in Europa.",
+  "inst_pio2": "Depenalizzazione del consumo di tutte le droghe: i consumatori vengono indirizzati alle cure invece che al carcere. Lo spaccio resta un reato e i contagi da HIV legati alle siringhe calano fortemente.",
+  "inst_pio3": "Il matrimonio viene aperto alle coppie dello stesso sesso.",
+  "inst_pio4_year": "7°",
+  "inst_pio4": "paese più pacifico del mondo secondo il Global Peace Index 2025, e nella top 10 dal 2015.",
+  "soc_eco_eyebrow": "ECONOMIA",
+  "soc_eco_title": "Dalla crisi a un nuovo slancio",
+  "soc_eco1_title": "La crisi del 2011",
+  "soc_eco1": "In piena crisi del debito, il Portogallo riceve 78 miliardi di euro da UE e FMI, in cambio di una dura austerità. Esce dal programma nel 2014 e rimborsa il FMI in anticipo, già nel 2018.",
+  "soc_eco2_title": "Campione delle rinnovabili",
+  "soc_eco2": "Circa il 71 % dell'elettricità consumata nel 2024 proveniva da fonti rinnovabili: dighe, eolico e sole.",
+  "soc_eco3_title": "Il paese del sughero",
+  "soc_eco3": "Circa la metà del sughero mondiale viene dal Portogallo. La quercia da sughero viene decorticata a mano ogni 9 anni circa, senza abbattere l'albero.",
+  "soc_eco4_title": "Terra d'accoglienza",
+  "soc_eco4": "A lungo paese di emigrazione, oggi il Portogallo attira: a fine 2024 vi vivevano oltre 1,5 milioni di stranieri, soprattutto brasiliani.",
+  "cult_d7_desc": "Polpo arrostito al forno con tanto olio d'oliva e aglio, servito con patate «a murro», schiacciate con un pugno.",
+  "cult_d8_desc": "Frutti di mare cotti in una pentola di rame a forma di conchiglia: la specialità dell'Algarve.",
+  "cult_d9_desc": "Panino con maiale marinato all'aglio e vino bianco: lo spuntino preferito dei portoghesi.",
+  "cult_d10_desc": "Formaggio di pecora così cremoso che si mangia con il cucchiaio, prodotto nella regione della Serra da Estrela, vicina a Viseu.",
+  "cult_d11_desc": "Salsiccia a base di pollame e pane. Secondo la tradizione, sarebbe stata inventata dagli ebrei durante l'Inquisizione per far credere di mangiare maiale.",
+  "cult_d12_desc": "Dolce di Aveiro a base di tuorlo d'uovo e zucchero. Si racconta che molti dolci portoghesi siano nati nei conventi, dove gli albumi servivano ad inamidare la biancheria.",
+  "cult_world_eyebrow": "UN'INFLUENZA MONDIALE",
+  "cult_world_title": "Il Portogallo ha cambiato la cucina del mondo",
+  "cult_w1": "Giappone — I missionari portoghesi mangiavano pesce e verdure fritti nei giorni di digiuno delle «Quattro Tempora» (têmporas): una probabile origine della tempura.",
+  "cult_w2": "India — Il vindaloo di Goa prende il nome dalla «carne de vinha d'alhos», carne marinata nel vino e nell'aglio portata dai portoghesi.",
+  "cult_w3": "Asia e Africa — I navigatori portoghesi hanno diffuso il peperoncino venuto dall'America, fino in India e in Thailandia.",
+  "cult_w4": "Giappone — Il dolce «kasutera» deriva dal «pão de Castela», il pan di Castiglia portato dai portoghesi a Nagasaki.",
+  "cult_w5": "Europa — La parola «marmellata» viene dal portoghese «marmelada», una pasta di mele cotogne.",
+  "cult_gallery_hint": "Dodici classici da assaggiare assolutamente",
+  "sport_trophies_eyebrow": "LE GRANDI VITTORIE",
+  "sport_trophies_h": "Il palmarès della Seleção",
+  "sport_hero_cap": "Un'onda gigante a Nazaré.",
+  "sport_eusebio": "Eusébio, la «Pantera nera», nato in Mozambico, capocannoniere dei Mondiali 1966 con 9 gol.",
+  "reg_car_eyebrow": "ZOOM SU CASA MIA",
+  "reg_car_title": "Caramulo, la montagna dell'aria pura",
+  "reg_car_text": "Negli anni '20 il dottor Jerónimo de Lacerda fonda a Caramulo una stazione di sanatori: si veniva da tutto il paese per curare la tubercolosi grazie all'aria pura di montagna. Più tardi i suoi figli creano il Museo del Caramulo, che riunisce una collezione d'arte — dall'antico Egitto a Picasso — e una splendida collezione di auto e moto d'epoca.",
+  "reg_car_f1": "Altitudine del Caramulinho, la vetta della serra",
+  "reg_car_f2": "Fondazione del sanatorio",
+  "reg_car_f3": "Fondazione del Museo del Caramulo",
+  "concl_hero_cap": "Cabo da Roca, «dove la terra finisce e il mare comincia».",
+  "credits_title": "Crediti fotografici",
+  "credits_intro": "Foto da Wikimedia Commons, con licenze libere. Grazie ai loro autori."
  },
  "de": {
   "nav_home": "Startseite",
@@ -4805,7 +5083,82 @@
   "concl_recap_title": "Was wir entdeckt haben",
   "concl_thanks": "Vielen Dank für Ihre Aufmerksamkeit.",
   "concl_questions": "Fragen?",
-  "concl_back": "Zurück zur Startseite"
+  "concl_back": "Zurück zur Startseite",
+  "geo_ext_fact4": "Das Cabo da Roca ist der westlichste Punkt des europäischen Festlands: «wo das Land endet und das Meer beginnt» (Camões).",
+  "hist_tl_1494": "Vertrag von Tordesillas: Portugal und Spanien teilen die noch zu entdeckenden Länder unter sich auf.",
+  "hist_tl_1640": "Nach 60 Jahren Union mit Spanien erlangt Portugal am 1. Dezember seine Unabhängigkeit zurück.",
+  "hist_tl_1822": "Brasilien erklärt seine Unabhängigkeit.",
+  "hist_tl_1999": "Macau wird an China zurückgegeben: das Ende von fast sechs Jahrhunderten Weltreich.",
+  "hist_tl_2007": "Unterzeichnung des Vertrags von Lissabon, der die EU bis heute organisiert.",
+  "hist_st_eyebrow": "WAS MAN WENIGER WEISS",
+  "hist_st_title": "Sechs überraschende Geschichten",
+  "hist_s1_title": "Die Welt in zwei Hälften",
+  "hist_s1_text": "1494 unterzeichnen Portugal und Spanien den Vertrag von Tordesillas: Eine gedachte Linie von Nord nach Süd durch den Atlantik teilt die zu entdeckenden Länder unter ihnen auf. Wegen dieser Linie spricht man heute in Brasilien Portugiesisch.",
+  "hist_s1_cap": "Das Cantino-Planisphäre (1502), eine der ältesten Karten mit der Linie von Tordesillas.",
+  "hist_s2_title": "Die ersten Europäer in Japan",
+  "hist_s2_text": "1543 landen portugiesische Händler auf der Insel Tanegashima: die ersten Europäer in Japan. Sie bringen Feuerwaffen mit, das Brot – das japanische «pan» kommt vom portugiesischen «pão» – und, nach einer verbreiteten Theorie, die Idee der Tempura.",
+  "hist_s2_cap": "Japanischer «Nanban»-Wandschirm (um 1600) mit der Ankunft eines portugiesischen Schiffes.",
+  "hist_s3_title": "Der Tag, an dem Lissabon bebte",
+  "hist_s3_text": "Am 1. November 1755 zerstören ein Erdbeben, ein Tsunami und Brände Lissabon; Zehntausende sterben. Der Marquis von Pombal baut die Baixa mit geraden Strassen und der «Gaiola pombalina» wieder auf – einem Holzkäfig, der die Häuser vor Erschütterungen schützt: eine der ersten erdbebensicheren Bauweisen der Welt. Seine Umfrage bei den Pfarreien gilt als einer der Anfänge der modernen Seismologie.",
+  "hist_s3_cap": "Zeitgenössischer Stich: Lissabon in Trümmern und der Tsunami im Hafen.",
+  "hist_s4_title": "Ein Konsul gegen die Diktatur",
+  "hist_s4_text": "Im Juni 1940 widersetzt sich der Konsul Aristides de Sousa Mendes in Bordeaux den Befehlen Salazars und stellt Tausenden von Flüchtlingen vor den Nazis Visa aus, darunter vielen Juden. Bestraft und um seine Laufbahn gebracht, stirbt er 1954 in Armut. 1966 wird er als «Gerechter unter den Völkern» anerkannt, 2021 im portugiesischen Nationalpantheon geehrt.",
+  "hist_s4_cap": "Aristides de Sousa Mendes (1885–1954).",
+  "hist_s5_title": "48 Jahre Diktatur",
+  "hist_s5_text": "Von 1926 bis 1974 lebt Portugal unter einer Diktatur, vor allem unter António de Oliveira Salazar: Zensur, politische Polizei (PIDE), politische Gefangene. Das Land bleibt arm und isoliert. In den 1960er-Jahren wandern Hunderttausende Portugiesen aus, oft heimlich – «a salto» – nach Frankreich.",
+  "hist_s5_cap": "Barackensiedlung portugiesischer Einwanderer in Champigny-sur-Marne bei Paris, 1960er-Jahre.",
+  "hist_s6_title": "Das Ende eines Weltreichs",
+  "hist_s6_text": "Von 1961 bis 1974 führt Portugal in Angola, Guinea-Bissau und Mosambik Krieg, um seine Kolonien zu behalten. Nach der Nelkenrevolution werden sie unabhängig, und Hunderttausende «Retornados» kehren nach Portugal zurück. 1999 beendet die Rückgabe Macaus an China fast sechs Jahrhunderte Weltreich.",
+  "hist_s6_cap": "Macau, das letzte portugiesische Überseegebiet, 1999 an China zurückgegeben.",
+  "inst_p1_place": "Belém-Palast, Sitz des Präsidenten",
+  "inst_p2_place": "São-Bento-Palast, Sitz des Parlaments",
+  "inst_p3_place": "Praça do Comércio: In ihren Arkaden sitzen noch heute Ministerien",
+  "inst_p4_place": "Verfassungsgericht, Lissabon",
+  "inst_rev_cap": "Lissabon, 25. April 1974: Die Menge umringt die Soldaten der Revolution.",
+  "inst_pio_eyebrow": "EIN LAND DER PIONIERE",
+  "inst_pio_title": "Entscheidungen mit Vorbildwirkung",
+  "inst_pio1": "Eines der ersten Länder der Welt, das die Todesstrafe für zivile Verbrechen abschafft. Victor Hugo lobt Portugal damals als Vorreiter Europas.",
+  "inst_pio2": "Entkriminalisierung des Konsums aller Drogen: Konsumierende werden in Behandlung statt ins Gefängnis geschickt. Handel bleibt strafbar, und die HIV-Ansteckungen durch Spritzen gehen stark zurück.",
+  "inst_pio3": "Die Ehe wird für gleichgeschlechtliche Paare geöffnet.",
+  "inst_pio4_year": "Platz 7",
+  "inst_pio4": "im Global Peace Index 2025 der friedlichsten Länder der Welt – seit 2015 in den Top 10.",
+  "soc_eco_eyebrow": "WIRTSCHAFT",
+  "soc_eco_title": "Von der Krise zum Aufschwung",
+  "soc_eco1_title": "Die Krise von 2011",
+  "soc_eco1": "Mitten in der Schuldenkrise erhält Portugal 78 Milliarden Euro von EU und IWF – im Gegenzug für einen harten Sparkurs. 2014 verlässt es das Programm und zahlt den IWF vorzeitig bis 2018 zurück.",
+  "soc_eco2_title": "Meister der Erneuerbaren",
+  "soc_eco2": "Rund 71 % des 2024 verbrauchten Stroms stammten aus erneuerbaren Quellen: Wasserkraft, Wind und Sonne.",
+  "soc_eco3_title": "Das Land des Korks",
+  "soc_eco3": "Rund die Hälfte des weltweiten Korks kommt aus Portugal. Die Korkeiche wird etwa alle 9 Jahre von Hand geschält – ohne den Baum zu fällen.",
+  "soc_eco4_title": "Einwanderungsland",
+  "soc_eco4": "Lange ein Auswanderungsland, zieht Portugal heute Menschen an: Ende 2024 lebten über 1,5 Millionen Ausländer dort, vor allem Brasilianer.",
+  "cult_d7_desc": "Im Ofen gebratener Oktopus mit viel Olivenöl und Knoblauch, dazu Kartoffeln «a murro» – mit der Faust zerdrückt.",
+  "cult_d8_desc": "Meeresfrüchte, gedämpft in einem muschelförmigen Kupfertopf: die Spezialität der Algarve.",
+  "cult_d9_desc": "Brötchen mit in Knoblauch und Weisswein mariniertem Schweinefleisch: der Lieblingsimbiss der Portugiesen.",
+  "cult_d10_desc": "Schafskäse, so cremig, dass man ihn löffelt – aus der Region Serra da Estrela, gleich neben Viseu.",
+  "cult_d11_desc": "Wurst aus Geflügel und Brot. Der Überlieferung nach erfanden Juden sie zur Zeit der Inquisition, um vorzutäuschen, sie würden Schweinefleisch essen.",
+  "cult_d12_desc": "Süssigkeit aus Aveiro aus Eigelb und Zucker. Man erzählt, viele portugiesische Desserts seien in Klöstern entstanden, wo das Eiweiss zum Stärken der Wäsche diente.",
+  "cult_world_eyebrow": "EIN WELTWEITER EINFLUSS",
+  "cult_world_title": "Portugal hat die Küche der Welt verändert",
+  "cult_w1": "Japan — Portugiesische Missionare assen an den Fastentagen der «Quatember» (têmporas) frittierten Fisch und Gemüse: ein wahrscheinlicher Ursprung der Tempura.",
+  "cult_w2": "Indien — Das Vindaloo aus Goa verdankt seinen Namen der «carne de vinha d'alhos», in Wein und Knoblauch eingelegtem Fleisch der Portugiesen.",
+  "cult_w3": "Asien und Afrika — Portugiesische Seefahrer verbreiteten die Chili aus Amerika bis nach Indien und Thailand.",
+  "cult_w4": "Japan — Der «Kasutera»-Kuchen stammt vom «pão de Castela», dem Kastilienbrot, das die Portugiesen nach Nagasaki brachten.",
+  "cult_w5": "Europa — Das Wort «Marmelade» kommt vom portugiesischen «marmelada», einem Quittenbrot.",
+  "cult_gallery_hint": "Zwölf Klassiker, die man probieren muss",
+  "sport_trophies_eyebrow": "DIE GROSSEN SIEGE",
+  "sport_trophies_h": "Die Erfolge der Seleção",
+  "sport_hero_cap": "Eine Riesenwelle in Nazaré.",
+  "sport_eusebio": "Eusébio, der «Schwarze Panther», in Mosambik geboren, Torschützenkönig der WM 1966 mit 9 Toren.",
+  "reg_car_eyebrow": "MEINE HEIMAT IM FOKUS",
+  "reg_car_title": "Caramulo, der Berg der reinen Luft",
+  "reg_car_text": "In den 1920er-Jahren gründet der Arzt Jerónimo de Lacerda in Caramulo einen Sanatoriumskurort: Aus dem ganzen Land kam man, um mit der reinen Bergluft die Tuberkulose zu behandeln. Später gründen seine Söhne das Museu do Caramulo mit einer Kunstsammlung – vom alten Ägypten bis Picasso – und einer prächtigen Sammlung historischer Autos und Motorräder.",
+  "reg_car_f1": "Höhe des Caramulinho, des höchsten Gipfels",
+  "reg_car_f2": "Gründung des Sanatoriums",
+  "reg_car_f3": "Gründung des Museu do Caramulo",
+  "concl_hero_cap": "Cabo da Roca, «wo das Land endet und das Meer beginnt».",
+  "credits_title": "Bildnachweis",
+  "credits_intro": "Fotos von Wikimedia Commons unter freien Lizenzen. Danke an die Urheber."
  }
 };
 

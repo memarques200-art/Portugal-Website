@@ -1,6 +1,8 @@
 import json, re, sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from i18n_new import T
+from i18n_more import T2
+T = {**T, **T2}
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = sys.argv[1]
@@ -42,6 +44,8 @@ ICONS = {
  "wave": svg('<path d="M2 18c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M3 13c1-5 5-8 10-8 3 0 5 1.5 5 4-2-1-4 0-4 2 0 1.5 1 2 2 2"/>'),
  "skate": svg('<path d="M5 4h4l1 9h7a3 3 0 013 3H5V4z"/><circle cx="8" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/>'),
  "medal": svg('<circle cx="12" cy="15" r="5"/><path d="M8.5 11.5L5 3h4l3 6 3-6h4l-3.5 8.5M12 13v4"/>'),
+ "chart": svg('<path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/>'),
+ "wind": svg('<path d="M12 12v10M12 12l-1.5-9h3L12 12zM12 12l8 3.5-1.5 2.6L12 12zM12 12l-8 3.5 1.5 2.6L12 12z"/><path d="M8 22h8"/>'),
  "tree": svg('<path d="M12 21v-7M12 14c-4 0-7-2.5-7-6a7 7 0 0114 0c0 3.5-3 6-7 6zM12 14l-3-3M12 12l3-3M8 21h8"/>'),
  "carnation": '''<svg viewBox="0 0 200 260" aria-hidden="true">
    <path d="M100 250 C 98 200, 104 160, 100 110" stroke="#7FA88F" stroke-width="5" fill="none" stroke-linecap="round"/>
@@ -134,15 +138,25 @@ for k in ("closing_quote", "geo_volc_acores_caption", "hist_c4_desc"):
     html, n = re.subn(r'(data-i18n="%s">)(.*?)(</p>)' % k, lambda m: m.group(1) + FR[k] + m.group(3), html, flags=re.S)
     assert n == 1, k
 
+# Cabo da Roca fact
+sub1('''vieilles de 175 millions d'années&nbsp;!</span>
+            </li>''', '''vieilles de 175 millions d'années&nbsp;!</span>
+            </li>
+            <li>
+              <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z" stroke-width="1.4"/><circle cx="12" cy="9" r="2.4" stroke-width="1.4"/></svg></span>
+              <span data-i18n="geo_ext_fact4">''' + FR["geo_ext_fact4"] + '''</span>
+            </li>''')
+
 # Windsor link
 sub1('<a class="hist-card-link" href="#" data-i18n="hist_c3_link">',
      '<a class="hist-card-link" href="https://fr.wikipedia.org/wiki/Trait%C3%A9_de_Windsor_(1386)" target="_blank" rel="noopener" data-i18n="hist_c3_link">')
 
 # ---------------- HISTOIRE timeline + CTA ----------------
-years = ["1143","1297","1415","1498","1500","1755","1910","1974","1986","2002"]
+years = ["1143","1297","1415","1494","1498","1500","1640","1755","1822","1910","1974","1986","1999","2002","2007"]
 items = "\n".join(
     f'          <div class="tl-item{" tl-item--key" if y in ("1143","1974") else ""}"><span class="tl-year">{y}</span><p class="tl-text" i18n="hist_tl_{y}"></p></div>'
     for y in years)
+stories = '\n'.join(f'          <article class="story"><span class="story-num">0{i}</span><h3 class="story-title" i18n="hist_s{i}_title"></h3><p class="story-text" i18n="hist_s{i}_text"></p></article>' for i in range(1,7))
 timeline = f'''
     <section class="sec sec--white">
       <div class="wrap">
@@ -152,6 +166,18 @@ timeline = f'''
         </div>
         <div class="tl">
 {items}
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--ivory">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" i18n="hist_st_eyebrow"></span>
+          <h2 class="sec-title" i18n="hist_st_title"></h2>
+        </div>
+        <div class="story-grid">
+{stories}
         </div>
       </div>
     </section>
