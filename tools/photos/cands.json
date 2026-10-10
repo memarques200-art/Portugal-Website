@@ -1,0 +1,858 @@
+{
+ "hero-home": [
+  {
+   "title": "File:Porto sunset (9999249184) (2).jpg",
+   "w": 5184,
+   "h": 3456,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Porto_sunset_%289999249184%29_%282%29.jpg/330px-Porto_sunset_%289999249184%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Bobo Boom",
+   "cats": ""
+  },
+  {
+   "title": "File:Rio Douro e la Ribeira. Ph Ivan Stesso.jpg",
+   "w": 3264,
+   "h": 2448,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Rio_Douro_e_la_Ribeira._Ph_Ivan_Stesso.jpg/330px-Rio_Douro_e_la_Ribeira._Ph_Ivan_Stesso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Ivan Stesso",
+   "cats": ""
+  },
+  {
+   "title": "File:Porto (42580168240).jpg",
+   "w": 3264,
+   "h": 2448,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Porto_%2842580168240%29.jpg/330px-Porto_%2842580168240%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Izaro Basurko",
+   "cats": ""
+  },
+  {
+   "title": "File:Porto, Douro.jpg",
+   "w": 3712,
+   "h": 2088,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Porto%2C_Douro.jpg/330px-Porto%2C_Douro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Annie and Andrew",
+   "cats": ""
+  },
+  {
+   "title": "File:Porto (48837490666).jpg",
+   "w": 4032,
+   "h": 3021,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Porto_%2848837490666%29.jpg/330px-Porto_%2848837490666%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Sergei Gussev",
+   "cats": ""
+  },
+  {
+   "title": "File:Douro abaixo (12955424454).jpg",
+   "w": 2560,
+   "h": 1920,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Douro_abaixo_%2812955424454%29.jpg/330px-Douro_abaixo_%2812955424454%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Edgar Jim\u00e9nez from Milton Keynes, UK",
+   "cats": ""
+  },
+  {
+   "title": "File:D\u00e4mmerung am Rio Douro.jpg",
+   "w": 4912,
+   "h": 3264,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/D%C3%A4mmerung_am_Rio_Douro.jpg/330px-D%C3%A4mmerung_am_Rio_Douro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Wurminister",
+   "cats": ""
+  },
+  {
+   "title": "File:Upstream (14249121613).jpg",
+   "w": 2784,
+   "h": 1568,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Upstream_%2814249121613%29.jpg/330px-Upstream_%2814249121613%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Edgar Jim\u00e9nez from Milton Keynes, UK",
+   "cats": ""
+  },
+  {
+   "title": "File:Dom Lu\u00eds I Bridge, Porto (55247080185).jpg",
+   "w": 6048,
+   "h": 4032,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Dom_Lu%C3%ADs_I_Bridge%2C_Porto_%2855247080185%29.jpg/330px-Dom_Lu%C3%ADs_I_Bridge%2C_Porto_%2855247080185%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 4.0",
+   "artist": "Michael Gaylard from Horsham, UK",
+   "cats": ""
+  }
+ ],
+ "hero-hist": [
+  {
+   "title": "File:Torre de Bel\u00e9m por Rodrigo Tetsuo Argenton (2).jpg",
+   "w": 6000,
+   "h": 4000,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Torre_de_Bel%C3%A9m_por_Rodrigo_Tetsuo_Argenton_%282%29.jpg/330px-Torre_de_Bel%C3%A9m_por_Rodrigo_Tetsuo_Argenton_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Rodrigo.Argenton",
+   "cats": ""
+  },
+  {
+   "title": "File:Torre de Bel\u00e9m, Lisboa, Portugal, 2012-05-12, DD 16.JPG",
+   "w": 4490,
+   "h": 3443,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Torre_de_Bel%C3%A9m%2C_Lisboa%2C_Portugal%2C_2012-05-12%2C_DD_16.JPG/330px-Torre_de_Bel%C3%A9m%2C_Lisboa%2C_Portugal%2C_2012-05-12%2C_DD_16.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Diego Delso",
+   "cats": ""
+  },
+  {
+   "title": "File:Lisbon Torre de Bel\u00e9m BW 2018-10-03 16-35-39.jpg",
+   "w": 5264,
+   "h": 3874,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Lisbon_Torre_de_Bel%C3%A9m_BW_2018-10-03_16-35-39.jpg/330px-Lisbon_Torre_de_Bel%C3%A9m_BW_2018-10-03_16-35-39.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Berthold Werner",
+   "cats": ""
+  },
+  {
+   "title": "File:Lisbon Torre de Bel\u00e9m BW 2018-10-03 16-33-21.jpg",
+   "w": 5388,
+   "h": 3936,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Lisbon_Torre_de_Bel%C3%A9m_BW_2018-10-03_16-33-21.jpg/330px-Lisbon_Torre_de_Bel%C3%A9m_BW_2018-10-03_16-33-21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Berthold Werner",
+   "cats": ""
+  },
+  {
+   "title": "File:Lisbon Torre de Bel\u00e9m BW 2018-10-03 16-35-08.jpg",
+   "w": 5184,
+   "h": 3670,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Lisbon_Torre_de_Bel%C3%A9m_BW_2018-10-03_16-35-08.jpg/330px-Lisbon_Torre_de_Bel%C3%A9m_BW_2018-10-03_16-35-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Berthold Werner",
+   "cats": ""
+  },
+  {
+   "title": "File:Lisbon Torre de Bel\u00e9m BW 2018-10-03 16-38-01.jpg",
+   "w": 5572,
+   "h": 3976,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Lisbon_Torre_de_Bel%C3%A9m_BW_2018-10-03_16-38-01.jpg/330px-Lisbon_Torre_de_Bel%C3%A9m_BW_2018-10-03_16-38-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Berthold Werner",
+   "cats": ""
+  },
+  {
+   "title": "File:Torre de Belem - Model.jpg",
+   "w": 6000,
+   "h": 4000,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Torre_de_Belem_-_Model.jpg/330px-Torre_de_Belem_-_Model.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Ingo Mehling",
+   "cats": ""
+  }
+ ],
+ "hero-geo": [
+  {
+   "title": "File:Felgueiras Lighthouse Storm.jpg",
+   "w": 1984,
+   "h": 1488,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Felgueiras_Lighthouse_Storm.jpg/330px-Felgueiras_Lighthouse_Storm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Ralf Junghanns",
+   "cats": ""
+  },
+  {
+   "title": "File:Porto, lighthouse (31096583417).jpg",
+   "w": 2048,
+   "h": 1536,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Porto%2C_lighthouse_%2831096583417%29.jpg/330px-Porto%2C_lighthouse_%2831096583417%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Francisco Restivo from Porto, Portugal",
+   "cats": ""
+  }
+ ],
+ "hero-inst": [
+  {
+   "title": "File:Pal\u00e1cio de S\u00e3o Bento - Lisboa - Portugal (34386695250).jpg",
+   "w": 5184,
+   "h": 3888,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Pal%C3%A1cio_de_S%C3%A3o_Bento_-_Lisboa_-_Portugal_%2834386695250%29.jpg/330px-Pal%C3%A1cio_de_S%C3%A3o_Bento_-_Lisboa_-_Portugal_%2834386695250%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Vitor Oliveira from Torres Vedras, PORTUGAL",
+   "cats": ""
+  },
+  {
+   "title": "File:Assembleia da Rep\u00fablica (Portugal) Pal\u00e1cio de S\u00e3o Bento, Lisboa.JPG",
+   "w": 3648,
+   "h": 2049,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Assembleia_da_Rep%C3%BAblica_%28Portugal%29_Pal%C3%A1cio_de_S%C3%A3o_Bento%2C_Lisboa.JPG/330px-Assembleia_da_Rep%C3%BAblica_%28Portugal%29_Pal%C3%A1cio_de_S%C3%A3o_Bento%2C_Lisboa.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Jose Manuel",
+   "cats": ""
+  },
+  {
+   "title": "File:Biblioteca, Pal\u00e1cio de S\u00e3o Bento (2017-04-25).png",
+   "w": 3240,
+   "h": 2414,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biblioteca%2C_Pal%C3%A1cio_de_S%C3%A3o_Bento_%282017-04-25%29.png/330px-Biblioteca%2C_Pal%C3%A1cio_de_S%C3%A3o_Bento_%282017-04-25%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "RickMorais",
+   "cats": ""
+  },
+  {
+   "title": "File:Lisboa S\u00e3o Bento Palace (39785046844).jpg",
+   "w": 4096,
+   "h": 2731,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Lisboa_S%C3%A3o_Bento_Palace_%2839785046844%29.jpg/330px-Lisboa_S%C3%A3o_Bento_Palace_%2839785046844%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Matthew Black from London, UK",
+   "cats": ""
+  },
+  {
+   "title": "File:Topo da Escadaria Nobre, Pal\u00e1cio de S\u00e3o Bento (2017-04-25).png",
+   "w": 3216,
+   "h": 2440,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Topo_da_Escadaria_Nobre%2C_Pal%C3%A1cio_de_S%C3%A3o_Bento_%282017-04-25%29.png/330px-Topo_da_Escadaria_Nobre%2C_Pal%C3%A1cio_de_S%C3%A3o_Bento_%282017-04-25%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "RickMorais",
+   "cats": ""
+  }
+ ],
+ "hero-soc": [
+  {
+   "title": "File:Lisboa May 2013-11.jpg",
+   "w": 19740,
+   "h": 5110,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Lisboa_May_2013-11.jpg/330px-Lisboa_May_2013-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Alvesgaspar",
+   "cats": ""
+  },
+  {
+   "title": "File:Alfama, Lisbon (DSC03367).jpg",
+   "w": 3872,
+   "h": 2592,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Alfama%2C_Lisbon_%28DSC03367%29.jpg/330px-Alfama%2C_Lisbon_%28DSC03367%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Matti Blume",
+   "cats": ""
+  },
+  {
+   "title": "File:Vistas de Lisboa desde el Mirador de Santa Luzia, Portugal, 2012-05-12, DD 01.JPG",
+   "w": 5597,
+   "h": 3360,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Vistas_de_Lisboa_desde_el_Mirador_de_Santa_Luzia%2C_Portugal%2C_2012-05-12%2C_DD_01.JPG/330px-Vistas_de_Lisboa_desde_el_Mirador_de_Santa_Luzia%2C_Portugal%2C_2012-05-12%2C_DD_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Diego Delso",
+   "cats": ""
+  },
+  {
+   "title": "File:Lissabon - Alfama - Largo de Santa Luzia - Streetcar - 2.jpg",
+   "w": 6000,
+   "h": 4000,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Lissabon_-_Alfama_-_Largo_de_Santa_Luzia_-_Streetcar_-_2.jpg/330px-Lissabon_-_Alfama_-_Largo_de_Santa_Luzia_-_Streetcar_-_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Ingo Mehling",
+   "cats": ""
+  },
+  {
+   "title": "File:Lissabon - Alfama - Largo Santa Luzia - Streetcar - 1.jpg",
+   "w": 6000,
+   "h": 4000,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Lissabon_-_Alfama_-_Largo_Santa_Luzia_-_Streetcar_-_1.jpg/330px-Lissabon_-_Alfama_-_Largo_Santa_Luzia_-_Streetcar_-_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Ingo Mehling",
+   "cats": ""
+  }
+ ],
+ "hero-cult": [
+  {
+   "title": "File:Estaci\u00f3n de tren S\u00e3o Bento, Oporto, Portugal, 2019-06-02, DD 06.jpg",
+   "w": 6448,
+   "h": 3965,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Estaci%C3%B3n_de_tren_S%C3%A3o_Bento%2C_Oporto%2C_Portugal%2C_2019-06-02%2C_DD_06.jpg/330px-Estaci%C3%B3n_de_tren_S%C3%A3o_Bento%2C_Oporto%2C_Portugal%2C_2019-06-02%2C_DD_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Diego Delso",
+   "cats": ""
+  },
+  {
+   "title": "File:Estaci\u00f3n de tren S\u00e3o Bento, Oporto, Portugal, 2019-06-02, DD 05.jpg",
+   "w": 7074,
+   "h": 4565,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Estaci%C3%B3n_de_tren_S%C3%A3o_Bento%2C_Oporto%2C_Portugal%2C_2019-06-02%2C_DD_05.jpg/330px-Estaci%C3%B3n_de_tren_S%C3%A3o_Bento%2C_Oporto%2C_Portugal%2C_2019-06-02%2C_DD_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Diego Delso",
+   "cats": ""
+  },
+  {
+   "title": "File:Porto April 2019-15.jpg",
+   "w": 5742,
+   "h": 2910,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Porto_April_2019-15.jpg/330px-Porto_April_2019-15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Alvesgaspar",
+   "cats": ""
+  },
+  {
+   "title": "File:Porto April 2019-5.jpg",
+   "w": 5595,
+   "h": 4088,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Porto_April_2019-5.jpg/330px-Porto_April_2019-5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Alvesgaspar",
+   "cats": ""
+  },
+  {
+   "title": "File:Porto April 2019-4.jpg",
+   "w": 5595,
+   "h": 4221,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Porto_April_2019-4.jpg/330px-Porto_April_2019-4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Alvesgaspar",
+   "cats": ""
+  }
+ ],
+ "hero-sport": [
+  {
+   "title": "File:Mysovskiy Sergey surfing Nazare.jpg",
+   "w": 2000,
+   "h": 1074,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Mysovskiy_Sergey_surfing_Nazare.jpg/330px-Mysovskiy_Sergey_surfing_Nazare.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Alohamansurfer",
+   "cats": ""
+  },
+  {
+   "title": "File:Praia do Norte beach - High waves - Nazar\u00e9 - Portugal (39615885300).jpg",
+   "w": 2048,
+   "h": 1365,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Praia_do_Norte_beach_-_High_waves_-_Nazar%C3%A9_-_Portugal_%2839615885300%29.jpg/330px-Praia_do_Norte_beach_-_High_waves_-_Nazar%C3%A9_-_Portugal_%2839615885300%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Luis Ascenso from Lisbon, Portugal",
+   "cats": ""
+  },
+  {
+   "title": "File:Praia do Norte beach - High waves - Nazar\u00e9 - Portugal (27553300758).jpg",
+   "w": 2048,
+   "h": 1365,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Praia_do_Norte_beach_-_High_waves_-_Nazar%C3%A9_-_Portugal_%2827553300758%29.jpg/330px-Praia_do_Norte_beach_-_High_waves_-_Nazar%C3%A9_-_Portugal_%2827553300758%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Luis Ascenso from Lisbon, Portugal",
+   "cats": ""
+  },
+  {
+   "title": "File:Praia do Norte beach - High waves - Nazar\u00e9 - Portugal (27553300538).jpg",
+   "w": 2048,
+   "h": 1365,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Praia_do_Norte_beach_-_High_waves_-_Nazar%C3%A9_-_Portugal_%2827553300538%29.jpg/330px-Praia_do_Norte_beach_-_High_waves_-_Nazar%C3%A9_-_Portugal_%2827553300538%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Luis Ascenso from Lisbon, Portugal",
+   "cats": ""
+  },
+  {
+   "title": "File:Praia do Norte,Nazar\u00e9 -21 (50656467151).jpg",
+   "w": 2048,
+   "h": 1363,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Praia_do_Norte%2CNazar%C3%A9_-21_%2850656467151%29.jpg/330px-Praia_do_Norte%2CNazar%C3%A9_-21_%2850656467151%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Luis Ascenso from Lisbon, Portugal",
+   "cats": ""
+  }
+ ],
+ "hero-reg": [
+  {
+   "title": "File:Terraced vineyards in the douro valley.jpg",
+   "w": 3008,
+   "h": 1692,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Terraced_vineyards_in_the_douro_valley.jpg/330px-Terraced_vineyards_in_the_douro_valley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Rosino",
+   "cats": ""
+  },
+  {
+   "title": "File:Alto Douro vineyards.jpg",
+   "w": 2560,
+   "h": 1920,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Alto_Douro_vineyards.jpg/330px-Alto_Douro_vineyards.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Edgar Jim\u00e9nez",
+   "cats": ""
+  },
+  {
+   "title": "File:Douro valley (3913421618).jpg",
+   "w": 3456,
+   "h": 2304,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Douro_valley_%283913421618%29.jpg/330px-Douro_valley_%283913421618%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Marco Varisco from Albany, New York, USA",
+   "cats": ""
+  }
+ ],
+ "hero-concl": [
+  {
+   "title": "File:Sunset at Cabo da Roca.jpg",
+   "w": 3543,
+   "h": 2362,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Sunset_at_Cabo_da_Roca.jpg/330px-Sunset_at_Cabo_da_Roca.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "This photo was taken by Anton Zelenov.\nPlease credit this wi",
+   "cats": ""
+  },
+  {
+   "title": "File:Seascape after sunset denoised.jpg",
+   "w": 2640,
+   "h": 1760,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Seascape_after_sunset_denoised.jpg/330px-Seascape_after_sunset_denoised.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Rnbc (talk) at en.wikipedia",
+   "cats": ""
+  },
+  {
+   "title": "File:Cabo da Roca at sunset, Portugal.jpg",
+   "w": 6000,
+   "h": 4000,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Cabo_da_Roca_at_sunset%2C_Portugal.jpg/330px-Cabo_da_Roca_at_sunset%2C_Portugal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Aurelia Teslaru",
+   "cats": ""
+  },
+  {
+   "title": "File:Cabo da Roca 20.jpg",
+   "w": 4000,
+   "h": 3000,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Cabo_da_Roca_20.jpg/330px-Cabo_da_Roca_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Simon Burchell",
+   "cats": ""
+  },
+  {
+   "title": "File:Cabo da Roca 18.jpg",
+   "w": 4000,
+   "h": 3000,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Cabo_da_Roca_18.jpg/330px-Cabo_da_Roca_18.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Simon Burchell",
+   "cats": ""
+  }
+ ],
+ "bridge-alps": [
+  {
+   "title": "File:CH.VS.Zermatt Sunnegga Grindjisee Matterhorn 9034 16x9-R 16K.jpg",
+   "w": 16384,
+   "h": 9216,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/CH.VS.Zermatt_Sunnegga_Grindjisee_Matterhorn_9034_16x9-R_16K.jpg/330px-CH.VS.Zermatt_Sunnegga_Grindjisee_Matterhorn_9034_16x9-R_16K.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "NOTE: This image is a panorama  consisting of multiple frame",
+   "cats": ""
+  },
+  {
+   "title": "File:Matterhorn reflection in the Riffelsee at sunrise.jpg",
+   "w": 6000,
+   "h": 4000,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Matterhorn_reflection_in_the_Riffelsee_at_sunrise.jpg/330px-Matterhorn_reflection_in_the_Riffelsee_at_sunrise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Deralpinbergsteiger",
+   "cats": ""
+  },
+  {
+   "title": "File:Matterhorn reflection in the Riffelsee with the Milky Way galaxy.jpg",
+   "w": 6000,
+   "h": 4000,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Matterhorn_reflection_in_the_Riffelsee_with_the_Milky_Way_galaxy.jpg/330px-Matterhorn_reflection_in_the_Riffelsee_with_the_Milky_Way_galaxy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Deralpinbergsteiger",
+   "cats": ""
+  },
+  {
+   "title": "File:Matterhorn und Dents Blanches reflecting on the lake below Gornergrat.jpg",
+   "w": 5760,
+   "h": 3840,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Matterhorn_und_Dents_Blanches_reflecting_on_the_lake_below_Gornergrat.jpg/330px-Matterhorn_und_Dents_Blanches_reflecting_on_the_lake_below_Gornergrat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Paradise Chronicle",
+   "cats": ""
+  },
+  {
+   "title": "File:Matterhorn and Riffelhorn reflection in the Riffelsee at sunset and a red sky.jpg",
+   "w": 6000,
+   "h": 4000,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Matterhorn_and_Riffelhorn_reflection_in_the_Riffelsee_at_sunset_and_a_red_sky.jpg/330px-Matterhorn_and_Riffelhorn_reflection_in_the_Riffelsee_at_sunset_and_a_red_sky.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Deralpinbergsteiger",
+   "cats": ""
+  }
+ ],
+ "j-geo": [
+  {
+   "title": "File:Farol Ponta da Piedade 02.jpg",
+   "w": 3412,
+   "h": 2275,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Farol_Ponta_da_Piedade_02.jpg/330px-Farol_Ponta_da_Piedade_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Tony Bowden",
+   "cats": ""
+  },
+  {
+   "title": "File:Ponta da Piedade, Lagos (20518421738).jpg",
+   "w": 3456,
+   "h": 5184,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Ponta_da_Piedade%2C_Lagos_%2820518421738%29.jpg/330px-Ponta_da_Piedade%2C_Lagos_%2820518421738%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Paul Wilkinson from London, United Kingdom",
+   "cats": ""
+  },
+  {
+   "title": "File:Ponta da Piedade, Lagos (20083809934).jpg",
+   "w": 5184,
+   "h": 3456,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Ponta_da_Piedade%2C_Lagos_%2820083809934%29.jpg/330px-Ponta_da_Piedade%2C_Lagos_%2820083809934%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Paul Wilkinson from London, United Kingdom",
+   "cats": ""
+  },
+  {
+   "title": "File:Ponta da Piedade, Lagos (20680152686).jpg",
+   "w": 3456,
+   "h": 5184,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Ponta_da_Piedade%2C_Lagos_%2820680152686%29.jpg/330px-Ponta_da_Piedade%2C_Lagos_%2820680152686%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Paul Wilkinson from London, United Kingdom",
+   "cats": ""
+  },
+  {
+   "title": "File:Ponta da Piedade, Lagos (20713226241).jpg",
+   "w": 5184,
+   "h": 3456,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Ponta_da_Piedade%2C_Lagos_%2820713226241%29.jpg/330px-Ponta_da_Piedade%2C_Lagos_%2820713226241%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Paul Wilkinson from London, United Kingdom",
+   "cats": ""
+  }
+ ],
+ "j-hist": [
+  {
+   "title": "File:Monasterio de los Jer\u00f3nimos, Lisboa, Portugal, 2022-07-24, DD 38-40 HDR.jpg",
+   "w": 6365,
+   "h": 5557,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Monasterio_de_los_Jer%C3%B3nimos%2C_Lisboa%2C_Portugal%2C_2022-07-24%2C_DD_38-40_HDR.jpg/330px-Monasterio_de_los_Jer%C3%B3nimos%2C_Lisboa%2C_Portugal%2C_2022-07-24%2C_DD_38-40_HDR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Diego Delso",
+   "cats": ""
+  },
+  {
+   "title": "File:View of Mosteiro dos Jer\u00f3nimos from Monument of the Discoveries, Bel\u00e9m, Lisbon, 20250604 1111 9124.jpg",
+   "w": 5672,
+   "h": 3786,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/View_of_Mosteiro_dos_Jer%C3%B3nimos_from_Monument_of_the_Discoveries%2C_Bel%C3%A9m%2C_Lisbon%2C_20250604_1111_9124.jpg/330px-View_of_Mosteiro_dos_Jer%C3%B3nimos_from_Monument_of_the_Discoveries%2C_Bel%C3%A9m%2C_Lisbon%2C_20250604_1111_9124.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 4.0",
+   "artist": "Jakub Ha\u0142un",
+   "cats": ""
+  },
+  {
+   "title": "File:Lion fountain in the cloisters of Mosteiro dos Jer\u00f3nimos, Bel\u00e9m, Lisbon, 20250604 1317 9219.jpg",
+   "w": 3128,
+   "h": 4685,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Lion_fountain_in_the_cloisters_of_Mosteiro_dos_Jer%C3%B3nimos%2C_Bel%C3%A9m%2C_Lisbon%2C_20250604_1317_9219.jpg/330px-Lion_fountain_in_the_cloisters_of_Mosteiro_dos_Jer%C3%B3nimos%2C_Bel%C3%A9m%2C_Lisbon%2C_20250604_1317_9219.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 4.0",
+   "artist": "Jakub Ha\u0142un",
+   "cats": ""
+  },
+  {
+   "title": "File:Lion fountain in the cloisters of Mosteiro dos Jer\u00f3nimos, Bel\u00e9m, Lisbon, 20250604 1317 9217.jpg",
+   "w": 2912,
+   "h": 4360,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Lion_fountain_in_the_cloisters_of_Mosteiro_dos_Jer%C3%B3nimos%2C_Bel%C3%A9m%2C_Lisbon%2C_20250604_1317_9217.jpg/330px-Lion_fountain_in_the_cloisters_of_Mosteiro_dos_Jer%C3%B3nimos%2C_Bel%C3%A9m%2C_Lisbon%2C_20250604_1317_9217.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 4.0",
+   "artist": "Jakub Ha\u0142un",
+   "cats": ""
+  },
+  {
+   "title": "File:Mosteiro dos Jer\u00f3nimos por Rodrigo Tetsuo Argenton (12).jpg",
+   "w": 6000,
+   "h": 4000,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Mosteiro_dos_Jer%C3%B3nimos_por_Rodrigo_Tetsuo_Argenton_%2812%29.jpg/330px-Mosteiro_dos_Jer%C3%B3nimos_por_Rodrigo_Tetsuo_Argenton_%2812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "",
+   "cats": ""
+  }
+ ],
+ "j-soc": [
+  {
+   "title": "File:Tram 28 Lisbon Portuguese.jpg",
+   "w": 2796,
+   "h": 1752,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Tram_28_Lisbon_Portuguese.jpg/330px-Tram_28_Lisbon_Portuguese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "\u0412\u0432\u043b\u0430\u0441\u0435\u043d\u043a\u043e",
+   "cats": ""
+  },
+  {
+   "title": "File:Tram 28 at Largo de Santa Luzia in Lisbon, 20250606 1958 0419.jpg",
+   "w": 2391,
+   "h": 3583,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Tram_28_at_Largo_de_Santa_Luzia_in_Lisbon%2C_20250606_1958_0419.jpg/330px-Tram_28_at_Largo_de_Santa_Luzia_in_Lisbon%2C_20250606_1958_0419.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 4.0",
+   "artist": "Jakub Ha\u0142un",
+   "cats": ""
+  },
+  {
+   "title": "File:Number 28 tram, Cal\u00e7ada de S\u00e3o Francisco, Lisbon, Portugal julesvernex2.jpg",
+   "w": 3264,
+   "h": 4441,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Number_28_tram%2C_Cal%C3%A7ada_de_S%C3%A3o_Francisco%2C_Lisbon%2C_Portugal_julesvernex2.jpg/330px-Number_28_tram%2C_Cal%C3%A7ada_de_S%C3%A3o_Francisco%2C_Lisbon%2C_Portugal_julesvernex2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Jules Verne Times Two\n\nhttp://julesvernex2.com",
+   "cats": ""
+  },
+  {
+   "title": "File:Tram of line 28E on Rua Augusto Rosa in Lisbon, 20250603 2011 9033.jpg",
+   "w": 2696,
+   "h": 4037,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Tram_of_line_28E_on_Rua_Augusto_Rosa_in_Lisbon%2C_20250603_2011_9033.jpg/330px-Tram_of_line_28E_on_Rua_Augusto_Rosa_in_Lisbon%2C_20250603_2011_9033.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 4.0",
+   "artist": "Jakub Ha\u0142un",
+   "cats": ""
+  },
+  {
+   "title": "File:Lisbon BW 2018-10-03 13-34-55.jpg",
+   "w": 5099,
+   "h": 3056,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Lisbon_BW_2018-10-03_13-34-55.jpg/330px-Lisbon_BW_2018-10-03_13-34-55.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Berthold Werner",
+   "cats": ""
+  }
+ ],
+ "j-cult": [
+  {
+   "title": "File:Azulejo facade of the Capela das Almas in Porto (4).jpg",
+   "w": 3328,
+   "h": 3328,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Azulejo_facade_of_the_Capela_das_Almas_in_Porto_%284%29.jpg/330px-Azulejo_facade_of_the_Capela_das_Almas_in_Porto_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Krzysztof Golik",
+   "cats": ""
+  },
+  {
+   "title": "File:Azulejo facade of the Capela das Almas in Porto (3).jpg",
+   "w": 4364,
+   "h": 3200,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Azulejo_facade_of_the_Capela_das_Almas_in_Porto_%283%29.jpg/330px-Azulejo_facade_of_the_Capela_das_Almas_in_Porto_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Krzysztof Golik",
+   "cats": ""
+  },
+  {
+   "title": "File:Igreja do Carmo (Porto) 2.jpg",
+   "w": 4377,
+   "h": 3502,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Igreja_do_Carmo_%28Porto%29_2.jpg/330px-Igreja_do_Carmo_%28Porto%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "T meltzer",
+   "cats": ""
+  },
+  {
+   "title": "File:Porto July 2009-2a.jpg",
+   "w": 6123,
+   "h": 8224,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Porto_July_2009-2a.jpg/330px-Porto_July_2009-2a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Alvesgaspar",
+   "cats": ""
+  },
+  {
+   "title": "File:Iglesia de San Ildefonso, Oporto, Portugal, 2019-06-02, DD 32-34 HDR.jpg",
+   "w": 4983,
+   "h": 6184,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Iglesia_de_San_Ildefonso%2C_Oporto%2C_Portugal%2C_2019-06-02%2C_DD_32-34_HDR.jpg/330px-Iglesia_de_San_Ildefonso%2C_Oporto%2C_Portugal%2C_2019-06-02%2C_DD_32-34_HDR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Diego Delso",
+   "cats": ""
+  }
+ ],
+ "j-gastro": [
+  {
+   "title": "File:Funchal (Madeira, Portugal), Rua Dr. Fern\u00e3o de Ornelas, Nata 7 - Fern\u00e3o Ornelas -- 2025 -- 1205.jpg",
+   "w": 6720,
+   "h": 4480,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Funchal_%28Madeira%2C_Portugal%29%2C_Rua_Dr._Fern%C3%A3o_de_Ornelas%2C_Nata_7_-_Fern%C3%A3o_Ornelas_--_2025_--_1205.jpg/330px-Funchal_%28Madeira%2C_Portugal%29%2C_Rua_Dr._Fern%C3%A3o_de_Ornelas%2C_Nata_7_-_Fern%C3%A3o_Ornelas_--_2025_--_1205.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Dietmar Rabich",
+   "cats": ""
+  },
+  {
+   "title": "File:Pastel de nata septembre 2015.jpg",
+   "w": 3200,
+   "h": 2133,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Pastel_de_nata_septembre_2015.jpg/330px-Pastel_de_nata_septembre_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Photo Claude TRUONG-NGOC",
+   "cats": ""
+  },
+  {
+   "title": "File:Pastel de nata (18616473070).jpg",
+   "w": 3200,
+   "h": 2133,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Pastel_de_nata_%2818616473070%29.jpg/330px-Pastel_de_nata_%2818616473070%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "fw42 from Germany",
+   "cats": ""
+  },
+  {
+   "title": "File:Pastel de Bel\u00e9m - Portugal (50530260537).jpg",
+   "w": 1207,
+   "h": 904,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Pastel_de_Bel%C3%A9m_-_Portugal_%2850530260537%29.jpg/330px-Pastel_de_Bel%C3%A9m_-_Portugal_%2850530260537%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY 2.0",
+   "artist": "Amanda  Coutinho from S\u00e3o Paulo, Brasil",
+   "cats": ""
+  },
+  {
+   "title": "File:Pastel de nata - Nazare 2021.jpg",
+   "w": 4640,
+   "h": 3472,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Pastel_de_nata_-_Nazare_2021.jpg/330px-Pastel_de_nata_-_Nazare_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Addshore",
+   "cats": ""
+  }
+ ],
+ "j-moi": [
+  {
+   "title": "File:Calliphorid July 2010-3a.jpg",
+   "w": 2012,
+   "h": 1470,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Calliphorid_July_2010-3a.jpg/330px-Calliphorid_July_2010-3a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Alvesgaspar",
+   "cats": ""
+  },
+  {
+   "title": "File:Bug July 2010-1.jpg",
+   "w": 2661,
+   "h": 1863,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Bug_July_2010-1.jpg/330px-Bug_July_2010-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "Alvesgaspar",
+   "cats": ""
+  },
+  {
+   "title": "File:Serra do Caramulo - Portugal (4261555151).jpg",
+   "w": 3655,
+   "h": 5010,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Serra_do_Caramulo_-_Portugal_%284261555151%29.jpg/330px-Serra_do_Caramulo_-_Portugal_%284261555151%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Vitor Oliveira from Torres Vedras, PORTUGAL",
+   "cats": ""
+  },
+  {
+   "title": "File:Serra do Caramulo - Portugal (6929735785).jpg",
+   "w": 5184,
+   "h": 3888,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Serra_do_Caramulo_-_Portugal_%286929735785%29.jpg/330px-Serra_do_Caramulo_-_Portugal_%286929735785%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Vitor Oliveira from Torres Vedras, PORTUGAL",
+   "cats": ""
+  },
+  {
+   "title": "File:Serra do Caramulo - Portugal (122537364).jpg",
+   "w": 1280,
+   "h": 857,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Serra_do_Caramulo_-_Portugal_%28122537364%29.jpg/330px-Serra_do_Caramulo_-_Portugal_%28122537364%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 2.0",
+   "artist": "Vitor Oliveira from Torres Vedras, PORTUGAL",
+   "cats": ""
+  }
+ ],
+ "geo-north": [
+  {
+   "title": "File:Parque Nacional Peneda-G\u00e9res, Portugal.jpg",
+   "w": 7222,
+   "h": 2509,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Parque_Nacional_Peneda-G%C3%A9res%2C_Portugal.jpg/330px-Parque_Nacional_Peneda-G%C3%A9res%2C_Portugal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Harpagornis",
+   "cats": ""
+  },
+  {
+   "title": "File:Peneda-Geres NP in Adrao (3).jpg",
+   "w": 18535,
+   "h": 2555,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Peneda-Geres_NP_in_Adrao_%283%29.jpg/330px-Peneda-Geres_NP_in_Adrao_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Krzysztof Golik",
+   "cats": ""
+  },
+  {
+   "title": "File:Peneda-Geres NP from Tibo Lookout (2).jpg",
+   "w": 5401,
+   "h": 1859,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Peneda-Geres_NP_from_Tibo_Lookout_%282%29.jpg/330px-Peneda-Geres_NP_from_Tibo_Lookout_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Krzysztof Golik",
+   "cats": ""
+  },
+  {
+   "title": "File:Granitic tors - Peneda-Ger\u00eas.jpg",
+   "w": 5500,
+   "h": 3666,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Granitic_tors_-_Peneda-Ger%C3%AAs.jpg/330px-Granitic_tors_-_Peneda-Ger%C3%AAs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "The Cosmonaut",
+   "cats": ""
+  },
+  {
+   "title": "File:Granite hills - Peneda-Ger\u00eas.jpg",
+   "w": 5500,
+   "h": 3666,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Granite_hills_-_Peneda-Ger%C3%AAs.jpg/330px-Granite_hills_-_Peneda-Ger%C3%AAs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "The Cosmonaut",
+   "cats": ""
+  }
+ ],
+ "geo-south": [],
+ "geo-climate": [
+  {
+   "title": "File:Brazil K\u00f6ppen Climate Map.png",
+   "w": 1199,
+   "h": 995,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Brazil_K%C3%B6ppen_Climate_Map.png/330px-Brazil_K%C3%B6ppen_Climate_Map.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 3.0",
+   "artist": "South America K\u00f6ppen_Map.png: Peel, M. C., Finlayson, B. L.,",
+   "cats": ""
+  },
+  {
+   "title": "File:Kazakhstan map of K\u00f6ppen climate classification.jpg",
+   "w": 1259,
+   "h": 805,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Kazakhstan_map_of_K%C3%B6ppen_climate_classification.jpg/330px-Kazakhstan_map_of_K%C3%B6ppen_climate_classification.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Ali Zifan, rowanwindwhistler",
+   "cats": ""
+  },
+  {
+   "title": "File:K\u00f6ppen climate types of Iberia.png",
+   "w": 2000,
+   "h": 2471,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/K%C3%B6ppen_climate_types_of_Iberia.png/330px-K%C3%B6ppen_climate_types_of_Iberia.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "Adam Peterson",
+   "cats": ""
+  },
+  {
+   "title": "File:Mapa clim\u00e1tico do Brasil, mapa de climas do Brasil, tipos clim\u00e1ticos do Brasil ( Koppen ), Brasil climas mapa.png",
+   "w": 1934,
+   "h": 1876,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Mapa_clim%C3%A1tico_do_Brasil%2C_mapa_de_climas_do_Brasil%2C_tipos_clim%C3%A1ticos_do_Brasil_%28_Koppen_%29%2C_Brasil_climas_mapa.png/330px-Mapa_clim%C3%A1tico_do_Brasil%2C_mapa_de_climas_do_Brasil%2C_tipos_clim%C3%A1ticos_do_Brasil_%28_Koppen_%29%2C_Brasil_climas_mapa.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC0",
+   "artist": "Brokyr8",
+   "cats": ""
+  },
+  {
+   "title": "File:Classifica\u00e7\u00e3o Clim\u00e1tica Koppen do Vale do Jequitinhonha.jpg",
+   "w": 6489,
+   "h": 4588,
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Classifica%C3%A7%C3%A3o_Clim%C3%A1tica_Koppen_do_Vale_do_Jequitinhonha.jpg/330px-Classifica%C3%A7%C3%A3o_Clim%C3%A1tica_Koppen_do_Vale_do_Jequitinhonha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "lic": "CC BY-SA 4.0",
+   "artist": "T\u00fallio Morais Franca",
+   "cats": ""
+  }
+ ]
+}

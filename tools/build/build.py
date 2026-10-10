@@ -156,7 +156,8 @@ years = ["1143","1297","1415","1494","1498","1500","1640","1755","1822","1910","
 items = "\n".join(
     f'          <div class="tl-item{" tl-item--key" if y in ("1143","1974") else ""}"><span class="tl-year">{y}</span><p class="tl-text" i18n="hist_tl_{y}"></p></div>'
     for y in years)
-stories = '\n'.join(f'          <article class="story"><span class="story-num">0{i}</span><h3 class="story-title" i18n="hist_s{i}_title"></h3><p class="story-text" i18n="hist_s{i}_text"></p></article>' for i in range(1,7))
+SKEYS = ['st-cantino','st-nanban','st-1755','st-mendes','st-salazar','st-macau']
+stories = '\n'.join(f'          <article class="story"><figure class="story-photo"><img src="images/photos/{SKEYS[i-1]}.jpg" alt="" loading="lazy"><figcaption i18n="hist_s{i}_cap"></figcaption></figure><div class="story-body"><span class="story-num">0{i}</span><h3 class="story-title" i18n="hist_s{i}_title"></h3><p class="story-text" i18n="hist_s{i}_text"></p></div></article>' for i in range(1,7))
 timeline = f'''
     <section class="sec sec--white">
       <div class="wrap">
@@ -289,6 +290,65 @@ script = '''  <script>
   </script>'''
 s0 = html.index('  <script>'); s1 = html.index('  </script>') + len('  </script>')
 html = html[:s0] + script + html[s1:]
+
+# ---------------- real photos replace AI images ----------------
+SWAP = {
+ "images/hero-porto.jpg": "images/photos/hero-home.jpg",
+ "images/journey-geo.jpg": "images/photos/j-geo.jpg",
+ "images/journey-hist.jpg": "images/photos/j-hist.jpg",
+ "images/journey-inst.jpg": "images/photos/inst-saobento.jpg",
+ "images/journey-soc.jpg": "images/photos/j-soc.jpg",
+ "images/journey-cult.jpg": "images/photos/j-cult.jpg",
+ "images/journey-gastro.jpg": "images/photos/f-nata.jpg",
+ "images/journey-reg.jpg": "images/photos/r-douro.jpg",
+ "images/journey-moi.jpg": "images/photos/j-moi.jpg",
+ "images/bridge-alps.jpg": "images/photos/bridge-alps.jpg",
+ "images/geo-hero.jpg": "images/photos/hero-geo.jpg",
+ "images/geo-north.jpg": "images/photos/geo-north.jpg",
+ "images/geo-south.jpg": "images/photos/geo-south.jpg",
+ "images/geo-climate-map.jpg": "images/photos/geo-climate.png",
+ "images/geo-relief.jpg": "images/photos/geo-relief.jpg",
+ "images/geo-acores.jpg": "images/photos/geo-acores.jpg",
+ "images/geo-volcano.jpg": "images/photos/geo-volcano.jpg",
+ "images/geo-madeira.jpg": "images/photos/geo-madeira.jpg",
+ "images/hist-hero.jpg": "images/photos/hero-hist.jpg",
+ "images/hist-flag.jpg": "images/photos/hist-flag.jpg",
+ "images/hist-guimaraes.jpg": "images/photos/hist-guimaraes.jpg",
+ "images/hist-windsor.jpg": "images/photos/hist-windsor.jpg",
+ "images/hist-tea.jpg": "images/photos/hist-tea.jpg",
+ "images/hist-routes-map.jpg": "images/photos/hist-routes.jpg",
+}
+import os as _os
+ROOT = _os.path.dirname(_os.path.abspath(SRC))
+for old, new in SWAP.items():
+    if _os.path.exists(_os.path.join(ROOT, new)):
+        html = html.replace('src="%s"' % old, 'src="%s"' % new)
+missing = sorted(set(re.findall(r'src="(images/photos/[^"]+)"', html)) - {p for p in set(re.findall(r'src="(images/photos/[^"]+)"', html)) if _os.path.exists(_os.path.join(ROOT, p))})
+if missing: print("MISSING PHOTOS:", missing)
+
+# credits
+CRED = _os.path.join(ROOT, "images/photos/credits.json")
+if _os.path.exists(CRED):
+    import html as _h
+    cred = json.load(open(CRED))
+    used = set(re.findall(r'src="images/photos/([^"]+)"', html))
+    items = "\n".join(
+        f'          <li><a href="{c["page"]}" target="_blank" rel="noopener">{_h.escape(c["title"][5:])}</a> — {_h.escape(c["artist"][:80])}, {_h.escape(c["lic"])}</li>'
+        for f, c in sorted(cred.items()) if f in used)
+    block = f'''
+  <footer class="credits">
+    <div class="wrap">
+      <details>
+        <summary data-i18n="credits_title">{FR["credits_title"]}</summary>
+        <p style="margin-top:10px;" data-i18n="credits_intro">{FR["credits_intro"]}</p>
+        <ol>
+{items}
+        </ol>
+      </details>
+    </div>
+  </footer>
+'''
+    sub1('  </main>\n', '  </main>\n' + block)
 
 # sanity: every data-i18n key exists in every language
 keys = set(re.findall(r'data-i18n="(\w+)"', html))
