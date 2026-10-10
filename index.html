@@ -2865,6 +2865,7 @@
   .pas-photo--red{background:#C8102E;}
   .pas-photo--red img{object-fit:contain;}
   @media (max-width:900px){ .cmf-grid{grid-template-columns:1fr;} .cmf-poster{justify-self:start; max-width:320px;} .cmf-media::after{background:rgba(30,8,8,.8);} }
+  .life-photos{grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));}
 
   .view{display:none;}
   .view.active{display:block;}
@@ -4124,7 +4125,7 @@
           <p class="sec-lead" data-i18n="reg_car_text">Dans les années 1920, le docteur Jerónimo de Lacerda fonde à Caramulo une station de sanatoriums : on venait de tout le pays soigner la tuberculose grâce à l'air pur de la montagne. Plus tard, ses fils créent le Musée du Caramulo, qui réunit une collection d'art — de l'Égypte ancienne à Picasso — et une magnifique collection de voitures et de motos anciennes.</p>
         </div>
         <div class="car-side">
-          <div class="car-photos"><img src="images/photos/r-caramulo.jpg" alt="Serra do Caramulo" loading="lazy"><img src="images/photos/r-caramulo2.jpg" alt="Museu do Caramulo" loading="lazy"></div>
+          <div class="car-photos"><img src="images/luis/caramulo-vue.jpg" alt="Serra do Caramulo" loading="lazy"><img src="images/photos/r-caramulo2.jpg" alt="Museu do Caramulo" loading="lazy"></div>
         <div class="car-facts">
           <div class="car-fact"><span class="car-num">1 076 <small>m</small></span><span class="car-label" data-i18n="reg_car_f1">Altitude du Caramulinho, le sommet de la serra</span></div>
           <div class="car-fact"><span class="car-num">1920s</span><span class="car-label" data-i18n="reg_car_f2">Fondation du sanatorium</span></div>
@@ -4209,7 +4210,7 @@
           <div class="step"><span class="step-num">06</span><span class="step-date" data-i18n="concl_t5_d">Aujourd'hui</span><p class="step-text" data-i18n="concl_t5">Plus de 13 ans en Suisse, et le Portugal toujours dans le cœur.</p></div>
         </div>
         <div class="life-photos">
-          <figure><img src="images/photos/r-caramulo.jpg" alt="Caramulo" loading="lazy"><figcaption data-i18n="concl_ph_caramulo">Caramulo, mes racines</figcaption></figure>
+          <figure><img src="images/luis/caramulo-vue.jpg" alt="Caramulo" loading="lazy"><figcaption data-i18n="concl_ph_caramulo">Caramulo, mes racines</figcaption></figure>
           <figure><img src="images/photos/smf-castle2.jpg" alt="Santa Maria da Feira" loading="lazy"><figcaption data-i18n="concl_ph_feira">Santa Maria da Feira</figcaption></figure>
         </div>
       </div>
@@ -4227,9 +4228,9 @@
           <article class="pas-card pas-card--tall" data-opt="parapente.jpg"><div class="pas-photo"><img src="images/luis/parapente.jpg" alt="Parapente au-dessus du Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_para_t">Le parapente</h3><p class="pas-text" data-i18n="concl_p_para">Récemment, j'ai volé en parapente au-dessus du lac Léman. Une vue inoubliable&nbsp;!</p></div></article>
           <article class="pas-card " data-opt="moto-garage.jpg"><div class="pas-photo"><img src="images/luis/moto-garage.jpg" alt="Moto en réparation" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_meca_t">La mécanique</h3><p class="pas-text" data-i18n="concl_p_meca">J'adore modifier ma moto et la réparer moi-même : chaque détail compte&nbsp;!</p></div></article>
           <article class="pas-card " data-opt="jura.jpg"><div class="pas-photo"><img src="images/luis/jura.jpg" alt="Le Jura" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_sort_t">Les sorties</h3><p class="pas-text" data-i18n="concl_p_sort">Découvrir de nouveaux endroits, comme le Jura, où je suis allé voir la course de côte automobile de Saint-Ursanne.</p></div></article>
-          <article class="pas-card" data-opt="motorfestival-affiche.jpg"><div class="pas-photo pas-photo--red"><img src="images/luis/motorfestival-affiche.jpg" alt="Caramulo Motorfestival" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_cmf_t">Le Caramulo Motorfestival</h3><p class="pas-text" data-i18n="concl_p_cmf">Chaque septembre, voitures de course et motos envahissent les routes de mon village : un rendez-vous incontournable pour un passionné de moteurs comme moi.</p></div></article>
+          <article class="pas-card" data-opt="motorfestival.jpg"><div class="pas-photo"><img src="images/luis/motorfestival.jpg" alt="Caramulo Motorfestival" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_cmf_t">Le Caramulo Motorfestival</h3><p class="pas-text" data-i18n="concl_p_cmf">Chaque septembre, voitures de course et motos envahissent les routes de mon village : un rendez-vous incontournable pour un passionné de moteurs comme moi.</p></div></article>
           <article class="pas-card " data-opt="lac.jpg"><div class="pas-photo"><img src="images/luis/lac.jpg" alt="Sur le lac Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_lac_t">Le lac Léman</h3><p class="pas-text" data-i18n="concl_p_lac">L'été, on profite du lac : kayak, baignade et détente.</p></div></article>
-          <article class="pas-card pas-card--text"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-7M12 14c-4 0-7-2.5-7-6a7 7 0 0114 0c0 3.5-3 6-7 6zM12 14l-3-3M12 12l3-3M8 21h8"/></svg></span><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_walk_t">Marcher et se balader</h3><p class="pas-text" data-i18n="concl_p_walk">Randonnées et balades — « passear », comme on dit au Portugal —, par exemple jusqu'au lac de Tanay, au-dessus de Vouvry.</p></div></article>
+          <article class="pas-card" data-opt="tanay.jpg"><div class="pas-photo"><img src="images/luis/tanay.jpg" alt="Lac de Tanay" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_walk_t">Marcher et se balader</h3><p class="pas-text" data-i18n="concl_p_walk">Randonnées et balades — « passear », comme on dit au Portugal —, par exemple jusqu'au lac de Tanay, au-dessus de Vouvry.</p></div></article>
         </div>
       </div>
     </section>
@@ -4349,7 +4350,6 @@
 http://julesvernex2.com, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Pico_Volcano.jpg" target="_blank" rel="noopener">Pico Volcano.jpg</a> — The Cosmonaut, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Benagil_Cave_(10).jpg" target="_blank" rel="noopener">Benagil Cave (10).jpg</a> — Joseolgon, CC BY-SA 4.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:Serra_do_Caramulo_-_Portugal_(4261555151).jpg" target="_blank" rel="noopener">Serra do Caramulo - Portugal (4261555151).jpg</a> — Vitor Oliveira from Torres Vedras, PORTUGAL, CC BY-SA 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Museu_do_Caramulo_-_Portugal_(4684593349).jpg" target="_blank" rel="noopener">Museu do Caramulo - Portugal (4684593349).jpg</a> — Vitor Oliveira from Torres Vedras, PORTUGAL, CC BY-SA 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Coimbra_BW_2018-10-06_10-11-56.jpg" target="_blank" rel="noopener">Coimbra BW 2018-10-06 10-11-56.jpg</a> — Berthold Werner, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Portugal_Vallée_du_Douro_(8121915978).jpg" target="_blank" rel="noopener">Portugal Vallée du Douro (8121915978).jpg</a> — peuplier from Switzerland Suisse romande, CC BY 2.0</li>

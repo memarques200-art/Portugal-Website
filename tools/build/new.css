@@ -945,3 +945,4 @@
   .pas-photo--red{background:#C8102E;}
   .pas-photo--red img{object-fit:contain;}
   @media (max-width:900px){ .cmf-grid{grid-template-columns:1fr;} .cmf-poster{justify-self:start; max-width:320px;} .cmf-media::after{background:rgba(30,8,8,.8);} }
+  .life-photos{grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));}
