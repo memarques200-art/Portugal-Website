@@ -261,3 +261,23 @@ T2.update({
 "concl_fam_c2": ("Un dîner en famille", "Una cena in famiglia", "Ein Abendessen mit der Familie"),
 "concl_fam_c4": ("Une soirée tous ensemble", "Una serata tutti insieme", "Ein Abend alle zusammen"),
 })
+
+# Corrections de Luís (ordre exact du parcours + les deux signaux radio du 25 avril)
+T2.update({
+"concl_t2_d": ("Mai 2013", "Maggio 2013", "Mai 2013"),
+"concl_t2": ("J'arrive à Villeneuve et je commence à travailler pour Securitas, chez Nestlé à Lausanne.",
+  "Arrivo a Villeneuve e inizio a lavorare per Securitas, presso Nestlé a Losanna.",
+  "Ich komme in Villeneuve an und beginne für Securitas bei Nestlé in Lausanne zu arbeiten."),
+"concl_t3_d": ("Octobre 2013", "Ottobre 2013", "Oktober 2013"),
+"concl_t3": ("Je m'installe à Vouvry, en Valais, entre le lac et les montagnes.",
+  "Mi trasferisco a Vouvry, nel Vallese, tra il lago e le montagne.",
+  "Ich ziehe nach Vouvry im Wallis, zwischen See und Bergen."),
+"concl_t4_d": ("Décembre 2014", "Dicembre 2014", "Dezember 2014"),
+"concl_t4": ("Je suis invité à rejoindre l'équipe du centre de sécurité de Nestlé, au siège international à Vevey, où je suis responsable d'objet.",
+  "Vengo invitato a entrare nella squadra del centro di sicurezza di Nestlé, presso la sede internazionale di Vevey, dove sono responsabile d'oggetto.",
+  "Ich werde eingeladen, dem Team der Sicherheitszentrale am internationalen Hauptsitz von Nestlé in Vevey beizutreten, wo ich Objektverantwortlicher bin."),
+"inst_rev_text": ("Le 25 avril 1974, de jeunes officiers renversent presque sans violence la dictature de l'Estado Novo, au pouvoir depuis 48 ans. Le signal est donné par deux chansons à la radio : le 24 avril à 22 h 55, « E Depois do Adeus » de Paulo de Carvalho, sur les Emissores Associados de Lisboa, prévient les militaires de se préparer ; puis à 0 h 20, « Grândola, Vila Morena » de Zeca Afonso, sur Rádio Renascença, lance les opérations. La population offre des œillets rouges aux soldats, qui les glissent dans le canon de leurs fusils.",
+  "Il 25 aprile 1974 giovani ufficiali rovesciano quasi senza violenza la dittatura dell'Estado Novo, al potere da 48 anni. Il segnale arriva da due canzoni alla radio: il 24 aprile alle 22.55, «E Depois do Adeus» di Paulo de Carvalho, sugli Emissores Associados de Lisboa, avverte i militari di prepararsi; poi alle 0.20, «Grândola, Vila Morena» di Zeca Afonso, su Rádio Renascença, dà il via alle operazioni. La popolazione offre garofani rossi ai soldati, che li infilano nelle canne dei fucili.",
+  "Am 25. April 1974 stürzen junge Offiziere fast gewaltlos die Diktatur des Estado Novo, die seit 48 Jahren an der Macht war. Das Signal geben zwei Lieder im Radio: Am 24. April um 22.55 Uhr kündigt «E Depois do Adeus» von Paulo de Carvalho auf den Emissores Associados de Lisboa den Militärs an, sich bereitzuhalten; um 0.20 Uhr startet «Grândola, Vila Morena» von Zeca Afonso auf Rádio Renascença die Operationen. Die Bevölkerung schenkt den Soldaten rote Nelken, die sie in die Gewehrläufe stecken."),
+"inst_rev_songs": ("Les deux signaux radio", "I due segnali radio", "Die zwei Radiosignale"),
+})

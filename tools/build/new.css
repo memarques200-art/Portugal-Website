@@ -914,3 +914,12 @@
   .fam-n4 .fam-photo:not(.fam-photo--big) img{aspect-ratio:4/3;}
   .fam-photo figcaption{font-size:15px;}
   @media (max-width:800px){ .fam-grid.fam-n4{grid-template-columns:1fr;} }
+
+  .rev-signals{margin-top:20px; text-align:left; background:rgba(252,251,248,.08); border:1px solid rgba(252,251,248,.25); border-radius:10px; padding:16px 18px;}
+  .rev-signals-title{display:block; font-size:11.5px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:#F2C14E; margin-bottom:10px;}
+  .rev-signal{display:flex; align-items:center; gap:16px; padding:8px 0; border-top:1px solid rgba(252,251,248,.15);}
+  .rev-signal:first-of-type{border-top:none;}
+  .rev-time{font-family:'Cormorant Garamond', serif; font-weight:700; font-size:30px; color:#F2C14E; min-width:78px;}
+  .rev-song{font-family:'Cormorant Garamond', serif; font-style:italic; font-size:21px; color:var(--warm-white); line-height:1.25;}
+  .rev-song small{display:block; font-family:'Inter', sans-serif; font-style:normal; font-size:12.5px; color:rgba(252,251,248,.75); margin-top:3px;}
+  .rev-text{color:var(--warm-white); font-size:16.5px;}

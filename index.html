@@ -2835,6 +2835,15 @@
   .fam-photo figcaption{font-size:15px;}
   @media (max-width:800px){ .fam-grid.fam-n4{grid-template-columns:1fr;} }
 
+  .rev-signals{margin-top:20px; text-align:left; background:rgba(252,251,248,.08); border:1px solid rgba(252,251,248,.25); border-radius:10px; padding:16px 18px;}
+  .rev-signals-title{display:block; font-size:11.5px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:#F2C14E; margin-bottom:10px;}
+  .rev-signal{display:flex; align-items:center; gap:16px; padding:8px 0; border-top:1px solid rgba(252,251,248,.15);}
+  .rev-signal:first-of-type{border-top:none;}
+  .rev-time{font-family:'Cormorant Garamond', serif; font-weight:700; font-size:30px; color:#F2C14E; min-width:78px;}
+  .rev-song{font-family:'Cormorant Garamond', serif; font-style:italic; font-size:21px; color:var(--warm-white); line-height:1.25;}
+  .rev-song small{display:block; font-family:'Inter', sans-serif; font-style:normal; font-size:12.5px; color:rgba(252,251,248,.75); margin-top:3px;}
+  .rev-text{color:var(--warm-white); font-size:16.5px;}
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -3634,12 +3643,16 @@
         <div>
           <span class="rev-eyebrow">25 · IV · 1974</span>
           <h2 class="rev-title" data-i18n="inst_rev_title">La Révolution des Œillets</h2>
-          <p class="rev-text" data-i18n="inst_rev_text">Le 25 avril 1974, de jeunes officiers renversent presque sans violence la dictature de l'Estado Novo, au pouvoir depuis 48 ans. Le signal&nbsp;? La chanson « Grândola, Vila Morena » diffusée à la radio. La population offre des œillets rouges aux soldats, qui les glissent dans le canon de leurs fusils.</p>
+          <p class="rev-text" data-i18n="inst_rev_text">Le 25 avril 1974, de jeunes officiers renversent presque sans violence la dictature de l'Estado Novo, au pouvoir depuis 48 ans. Le signal est donné par deux chansons à la radio : le 24 avril à 22 h 55, « E Depois do Adeus » de Paulo de Carvalho, sur les Emissores Associados de Lisboa, prévient les militaires de se préparer ; puis à 0 h 20, « Grândola, Vila Morena » de Zeca Afonso, sur Rádio Renascença, lance les opérations. La population offre des œillets rouges aux soldats, qui les glissent dans le canon de leurs fusils.</p>
           <p class="rev-note" data-i18n="inst_rev_note">Aujourd'hui, le 25 avril est un jour férié : le « Dia da Liberdade », jour de la Liberté.</p>
         </div>
         <div class="rev-visual">
           <figure class="rev-photo"><img src="images/photos/inst-1974.jpg" alt="25 avril 1974" loading="lazy"><figcaption data-i18n="inst_rev_cap">Lisbonne, 25 avril 2024 : 50 ans après, la foule défile encore : « Ils ont planté en nous la liberté ».</figcaption></figure>
-          <p class="rev-lyric">« Grândola, vila morena,<br>terra da fraternidade… »<span>Zeca Afonso, 1971</span></p>
+          <div class="rev-signals">
+            <span class="rev-signals-title" data-i18n="inst_rev_songs">Les deux signaux radio</span>
+            <div class="rev-signal"><span class="rev-time">22:55</span><span class="rev-song">« E Depois do Adeus »<small>Paulo de Carvalho · Emissores Associados de Lisboa</small></span></div>
+            <div class="rev-signal"><span class="rev-time">00:20</span><span class="rev-song">« Grândola, Vila Morena »<small>Zeca Afonso · Rádio Renascença</small></span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -4149,9 +4162,9 @@
         <div class="steps">
           <div class="step"><span class="step-num">01</span><span class="step-date" data-i18n="concl_t1_d">Les origines</span><p class="step-text" data-i18n="concl_t1">Je grandis à Caramulo, dans la montagne près de Viseu, au centre du Portugal.</p></div>
           <div class="step"><span class="step-num">02</span><span class="step-date" data-i18n="concl_t1b_d">Santa Maria da Feira</span><p class="step-text" data-i18n="concl_t1b">Avant la Suisse, je vis à Santa Maria da Feira, la ville du château et de la Viagem Medieval.</p></div>
-          <div class="step"><span class="step-num">03</span><span class="step-date" data-i18n="concl_t2_d">Mai 2013</span><p class="step-text" data-i18n="concl_t2">J'arrive en Suisse et je commence à travailler chez Nestlé, d'abord à Lausanne.</p></div>
-          <div class="step"><span class="step-num">04</span><span class="step-date" data-i18n="concl_t3_d">2013</span><p class="step-text" data-i18n="concl_t3">Je rejoins ensuite Vevey, au siège international de Nestlé. Je vis alors à Villeneuve.</p></div>
-          <div class="step"><span class="step-num">05</span><span class="step-date" data-i18n="concl_t4_d">Octobre 2013</span><p class="step-text" data-i18n="concl_t4">Je m'installe à Vouvry, en Valais, entre le lac et les montagnes.</p></div>
+          <div class="step"><span class="step-num">03</span><span class="step-date" data-i18n="concl_t2_d">Mai 2013</span><p class="step-text" data-i18n="concl_t2">J'arrive à Villeneuve et je commence à travailler pour Securitas, chez Nestlé à Lausanne.</p></div>
+          <div class="step"><span class="step-num">04</span><span class="step-date" data-i18n="concl_t3_d">Octobre 2013</span><p class="step-text" data-i18n="concl_t3">Je m'installe à Vouvry, en Valais, entre le lac et les montagnes.</p></div>
+          <div class="step"><span class="step-num">05</span><span class="step-date" data-i18n="concl_t4_d">Décembre 2014</span><p class="step-text" data-i18n="concl_t4">Je suis invité à rejoindre l'équipe du centre de sécurité de Nestlé, au siège international à Vevey, où je suis responsable d'objet.</p></div>
           <div class="step"><span class="step-num">06</span><span class="step-date" data-i18n="concl_t5_d">Aujourd'hui</span><p class="step-text" data-i18n="concl_t5">Plus de 13 ans en Suisse, et le Portugal toujours dans le cœur.</p></div>
         </div>
         <div class="life-photos">
@@ -4550,7 +4563,7 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "inst_p4_desc": "Indépendants des autres pouvoirs. Le Tribunal constitutionnel veille au respect de la Constitution.",
   "inst_p4_who": "Ils rendent la justice « au nom du peuple »",
   "inst_rev_title": "La Révolution des Œillets",
-  "inst_rev_text": "Le 25 avril 1974, de jeunes officiers renversent presque sans violence la dictature de l'Estado Novo, au pouvoir depuis 48 ans. Le signal&nbsp;? La chanson « Grândola, Vila Morena » diffusée à la radio. La population offre des œillets rouges aux soldats, qui les glissent dans le canon de leurs fusils.",
+  "inst_rev_text": "Le 25 avril 1974, de jeunes officiers renversent presque sans violence la dictature de l'Estado Novo, au pouvoir depuis 48 ans. Le signal est donné par deux chansons à la radio : le 24 avril à 22 h 55, « E Depois do Adeus » de Paulo de Carvalho, sur les Emissores Associados de Lisboa, prévient les militaires de se préparer ; puis à 0 h 20, « Grândola, Vila Morena » de Zeca Afonso, sur Rádio Renascença, lance les opérations. La population offre des œillets rouges aux soldats, qui les glissent dans le canon de leurs fusils.",
   "inst_rev_note": "Aujourd'hui, le 25 avril est un jour férié : le « Dia da Liberdade », jour de la Liberté.",
   "inst_cmp_title": "Deux systèmes, deux façons de décider",
   "inst_cmp_r1": "Régime",
@@ -4799,11 +4812,11 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "concl_t1_d": "Les origines",
   "concl_t1": "Je grandis à Caramulo, dans la montagne près de Viseu, au centre du Portugal.",
   "concl_t2_d": "Mai 2013",
-  "concl_t2": "J'arrive en Suisse et je commence à travailler chez Nestlé, d'abord à Lausanne.",
-  "concl_t3_d": "2013",
-  "concl_t3": "Je rejoins ensuite Vevey, au siège international de Nestlé. Je vis alors à Villeneuve.",
-  "concl_t4_d": "Octobre 2013",
-  "concl_t4": "Je m'installe à Vouvry, en Valais, entre le lac et les montagnes.",
+  "concl_t2": "J'arrive à Villeneuve et je commence à travailler pour Securitas, chez Nestlé à Lausanne.",
+  "concl_t3_d": "Octobre 2013",
+  "concl_t3": "Je m'installe à Vouvry, en Valais, entre le lac et les montagnes.",
+  "concl_t4_d": "Décembre 2014",
+  "concl_t4": "Je suis invité à rejoindre l'équipe du centre de sécurité de Nestlé, au siège international à Vevey, où je suis responsable d'objet.",
   "concl_t5_d": "Aujourd'hui",
   "concl_t5": "Plus de 13 ans en Suisse, et le Portugal toujours dans le cœur.",
   "concl_pas_eyebrow": "MES PASSIONS",
@@ -4849,7 +4862,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "wf_reg_in": "INDE",
   "wf_reg_as": "ASIE &amp; AFRIQUE",
   "wf_reg_eu": "EUROPE",
-  "concl_fam_c4": "Une soirée tous ensemble"
+  "concl_fam_c4": "Une soirée tous ensemble",
+  "inst_rev_songs": "Les deux signaux radio"
  },
  "it": {
   "nav_home": "Home",
@@ -5024,7 +5038,7 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "inst_p4_desc": "Indipendenti dagli altri poteri. La Corte costituzionale vigila sul rispetto della Costituzione.",
   "inst_p4_who": "Amministrano la giustizia «in nome del popolo»",
   "inst_rev_title": "La Rivoluzione dei Garofani",
-  "inst_rev_text": "Il 25 aprile 1974, giovani ufficiali rovesciano quasi senza violenza la dittatura dell'Estado Novo, al potere da 48 anni. Il segnale? La canzone «Grândola, Vila Morena» trasmessa alla radio. La popolazione offre garofani rossi ai soldati, che li infilano nelle canne dei fucili.",
+  "inst_rev_text": "Il 25 aprile 1974 giovani ufficiali rovesciano quasi senza violenza la dittatura dell'Estado Novo, al potere da 48 anni. Il segnale arriva da due canzoni alla radio: il 24 aprile alle 22.55, «E Depois do Adeus» di Paulo de Carvalho, sugli Emissores Associados de Lisboa, avverte i militari di prepararsi; poi alle 0.20, «Grândola, Vila Morena» di Zeca Afonso, su Rádio Renascença, dà il via alle operazioni. La popolazione offre garofani rossi ai soldati, che li infilano nelle canne dei fucili.",
   "inst_rev_note": "Oggi il 25 aprile è festa nazionale: il «Dia da Liberdade», giorno della Libertà.",
   "inst_cmp_title": "Due sistemi, due modi di decidere",
   "inst_cmp_r1": "Regime",
@@ -5273,11 +5287,11 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "concl_t1_d": "Le origini",
   "concl_t1": "Cresco a Caramulo, in montagna vicino a Viseu, nel centro del Portogallo.",
   "concl_t2_d": "Maggio 2013",
-  "concl_t2": "Arrivo in Svizzera e inizio a lavorare per Nestlé, prima a Losanna.",
-  "concl_t3_d": "2013",
-  "concl_t3": "Poi passo a Vevey, alla sede internazionale di Nestlé. Vivo allora a Villeneuve.",
-  "concl_t4_d": "Ottobre 2013",
-  "concl_t4": "Mi trasferisco a Vouvry, nel Vallese, tra il lago e le montagne.",
+  "concl_t2": "Arrivo a Villeneuve e inizio a lavorare per Securitas, presso Nestlé a Losanna.",
+  "concl_t3_d": "Ottobre 2013",
+  "concl_t3": "Mi trasferisco a Vouvry, nel Vallese, tra il lago e le montagne.",
+  "concl_t4_d": "Dicembre 2014",
+  "concl_t4": "Vengo invitato a entrare nella squadra del centro di sicurezza di Nestlé, presso la sede internazionale di Vevey, dove sono responsabile d'oggetto.",
   "concl_t5_d": "Oggi",
   "concl_t5": "Più di 13 anni in Svizzera, con il Portogallo sempre nel cuore.",
   "concl_pas_eyebrow": "LE MIE PASSIONI",
@@ -5323,7 +5337,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "wf_reg_in": "INDIA",
   "wf_reg_as": "ASIA E AFRICA",
   "wf_reg_eu": "EUROPA",
-  "concl_fam_c4": "Una serata tutti insieme"
+  "concl_fam_c4": "Una serata tutti insieme",
+  "inst_rev_songs": "I due segnali radio"
  },
  "de": {
   "nav_home": "Startseite",
@@ -5498,7 +5513,7 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "inst_p4_desc": "Unabhängig von den anderen Gewalten. Das Verfassungsgericht wacht über die Einhaltung der Verfassung.",
   "inst_p4_who": "Sie sprechen Recht «im Namen des Volkes»",
   "inst_rev_title": "Die Nelkenrevolution",
-  "inst_rev_text": "Am 25. April 1974 stürzen junge Offiziere fast gewaltlos die Diktatur des Estado Novo, die seit 48 Jahren an der Macht war. Das Signal? Das Lied «Grândola, Vila Morena» im Radio. Die Bevölkerung schenkt den Soldaten rote Nelken, die sie in die Gewehrläufe stecken.",
+  "inst_rev_text": "Am 25. April 1974 stürzen junge Offiziere fast gewaltlos die Diktatur des Estado Novo, die seit 48 Jahren an der Macht war. Das Signal geben zwei Lieder im Radio: Am 24. April um 22.55 Uhr kündigt «E Depois do Adeus» von Paulo de Carvalho auf den Emissores Associados de Lisboa den Militärs an, sich bereitzuhalten; um 0.20 Uhr startet «Grândola, Vila Morena» von Zeca Afonso auf Rádio Renascença die Operationen. Die Bevölkerung schenkt den Soldaten rote Nelken, die sie in die Gewehrläufe stecken.",
   "inst_rev_note": "Heute ist der 25. April ein Feiertag: der «Dia da Liberdade», Tag der Freiheit.",
   "inst_cmp_title": "Zwei Systeme, zwei Arten zu entscheiden",
   "inst_cmp_r1": "Staatsform",
@@ -5747,11 +5762,11 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "concl_t1_d": "Die Wurzeln",
   "concl_t1": "Ich wachse in Caramulo auf, in den Bergen bei Viseu, im Zentrum Portugals.",
   "concl_t2_d": "Mai 2013",
-  "concl_t2": "Ich komme in die Schweiz und beginne bei Nestlé zu arbeiten, zuerst in Lausanne.",
-  "concl_t3_d": "2013",
-  "concl_t3": "Danach wechsle ich nach Vevey an den internationalen Hauptsitz von Nestlé. Damals wohne ich in Villeneuve.",
-  "concl_t4_d": "Oktober 2013",
-  "concl_t4": "Ich ziehe nach Vouvry im Wallis, zwischen See und Bergen.",
+  "concl_t2": "Ich komme in Villeneuve an und beginne für Securitas bei Nestlé in Lausanne zu arbeiten.",
+  "concl_t3_d": "Oktober 2013",
+  "concl_t3": "Ich ziehe nach Vouvry im Wallis, zwischen See und Bergen.",
+  "concl_t4_d": "Dezember 2014",
+  "concl_t4": "Ich werde eingeladen, dem Team der Sicherheitszentrale am internationalen Hauptsitz von Nestlé in Vevey beizutreten, wo ich Objektverantwortlicher bin.",
   "concl_t5_d": "Heute",
   "concl_t5": "Über 13 Jahre in der Schweiz – und Portugal immer im Herzen.",
   "concl_pas_eyebrow": "MEINE LEIDENSCHAFTEN",
@@ -5797,7 +5812,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "wf_reg_in": "INDIEN",
   "wf_reg_as": "ASIEN &amp; AFRIKA",
   "wf_reg_eu": "EUROPA",
-  "concl_fam_c4": "Ein Abend alle zusammen"
+  "concl_fam_c4": "Ein Abend alle zusammen",
+  "inst_rev_songs": "Die zwei Radiosignale"
  }
 };
 
