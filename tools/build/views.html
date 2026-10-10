@@ -311,12 +311,12 @@
           <span class="sec-eyebrow" i18n="cult_world_eyebrow"></span>
           <h2 class="sec-title" i18n="cult_world_title"></h2>
         </div>
-        <div class="world-food">
-          <p class="wf-item"><span class="wf-name">Tempura</span><span i18n="cult_w1"></span></p>
-          <p class="wf-item"><span class="wf-name">Vindaloo</span><span i18n="cult_w2"></span></p>
-          <p class="wf-item"><span class="wf-name">Piri-piri</span><span i18n="cult_w3"></span></p>
-          <p class="wf-item"><span class="wf-name">Kasutera</span><span i18n="cult_w4"></span></p>
-          <p class="wf-item"><span class="wf-name">Marmelada</span><span i18n="cult_w5"></span></p>
+        <div class="wf-grid">
+          <article class="wf-card wf-card--jp"><span class="wf-region" i18n="wf_reg_jp"></span><h3 class="wf-dish">Tempura</h3><p class="wf-text" i18n="cult_w1"></p></article>
+          <article class="wf-card wf-card--in"><span class="wf-region" i18n="wf_reg_in"></span><h3 class="wf-dish">Vindaloo</h3><p class="wf-text" i18n="cult_w2"></p></article>
+          <article class="wf-card wf-card--as"><span class="wf-region" i18n="wf_reg_as"></span><h3 class="wf-dish">Piri-piri</h3><p class="wf-text" i18n="cult_w3"></p></article>
+          <article class="wf-card wf-card--jp"><span class="wf-region" i18n="wf_reg_jp"></span><h3 class="wf-dish">Kasutera</h3><p class="wf-text" i18n="cult_w4"></p></article>
+          <article class="wf-card wf-card--eu"><span class="wf-region" i18n="wf_reg_eu"></span><h3 class="wf-dish">Marmelada</h3><p class="wf-text" i18n="cult_w5"></p></article>
         </div>
       </div>
     </section>
@@ -375,8 +375,11 @@
           <p class="sec-lead" i18n="sport_video_text"></p>
         </div>
         <div>
-          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/ZfLSN4mxY0E?rel=0" title="Nazaré" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <a class="video-link" href="https://youtu.be/ZfLSN4mxY0E" target="_blank" rel="noopener">▶ <span i18n="video_fallback"></span></a>
+          <a class="video-poster" href="https://youtu.be/ZfLSN4mxY0E" target="_blank" rel="noopener">
+            <img src="images/photos/hero-sport.jpg" alt="" loading="lazy">
+            <span class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="video-label"><span class="yt-badge">YouTube</span><span i18n="video_watch_nazare"></span></span>
+          </a>
         </div>
       </div>
     </section>

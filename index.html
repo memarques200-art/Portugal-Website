@@ -2761,6 +2761,40 @@
   .intro-stat-value span[style]{font-size:15px !important; font-weight:600 !important; color:#3D4642;}
   @media (max-width:560px){ .intro-stat-icon, .intro-stat-label, .intro-stat-rule, .intro-stat-value{max-width:70%;} }
 
+  /* ---------- vidéos : affiche cliquable ---------- */
+  .video-poster{position:relative; display:block; aspect-ratio:16/9; border-radius:10px; overflow:hidden; border:4px solid var(--warm-white); box-shadow:0 30px 60px -30px rgba(0,0,0,.6); color:#fff;}
+  .video-poster img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease;}
+  .video-poster::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,.25) 100%); transition:background .3s ease;}
+  .video-poster:hover img{transform:scale(1.05);}
+  .video-play{position:absolute; left:50%; top:46%; z-index:2; width:84px; height:84px; margin:-42px 0 0 -42px; border-radius:50%; background:var(--red); display:flex; align-items:center; justify-content:center; box-shadow:0 10px 30px rgba(0,0,0,.45); transition:transform .25s ease;}
+  .video-play svg{width:38px; height:38px; fill:#fff; margin-left:5px;}
+  .video-poster:hover .video-play{transform:scale(1.1);}
+  .video-play::before{content:""; position:absolute; inset:-10px; border-radius:50%; border:3px solid rgba(255,255,255,.7); animation:pulse 2s ease-out infinite;}
+  @keyframes pulse{0%{transform:scale(.9); opacity:1;} 100%{transform:scale(1.35); opacity:0;}}
+  .video-label{position:absolute; left:20px; right:20px; bottom:16px; z-index:2; display:flex; align-items:center; gap:12px; font-weight:700; font-size:16px; text-shadow:0 2px 8px rgba(0,0,0,.6);}
+  .yt-badge{flex-shrink:0; font-size:11px; font-weight:800; letter-spacing:.06em; padding:5px 9px; border-radius:4px; background:#fff; color:var(--red); text-shadow:none;}
+
+  /* ---------- influence mondiale : cartes lisibles ---------- */
+  .wf-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; max-width:1100px; margin:0 auto;}
+  .wf-card{background:var(--warm-white); border:1px solid var(--border); border-top:4px solid var(--red); border-radius:8px; padding:26px 26px 28px; box-shadow:0 18px 40px -28px rgba(23,33,29,.35);}
+  .wf-card--in{border-top-color:var(--green);}
+  .wf-card--as{border-top-color:var(--gold);}
+  .wf-card--eu{border-top-color:var(--azul);}
+  .wf-card:nth-child(4){border-top-color:var(--azul);}
+  .wf-region{display:inline-block; font-size:11.5px; font-weight:800; letter-spacing:.12em; color:#fff; background:var(--red); padding:5px 10px; border-radius:999px; margin-bottom:14px;}
+  .wf-card--in .wf-region{background:var(--green);}
+  .wf-card--as .wf-region{background:#9A7838;}
+  .wf-card--eu .wf-region, .wf-card:nth-child(4) .wf-region{background:var(--azul);}
+  .wf-dish{font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:700; font-size:32px; line-height:1.1; color:var(--ink); margin-bottom:12px;}
+  .wf-text{font-size:16px; font-weight:500; line-height:1.65; color:#2B3430;}
+  @media (max-width:1000px){ .wf-grid{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:600px){ .wf-grid{grid-template-columns:1fr;} }
+  .smf-sec .sec-lead{color:#2B3430; font-weight:500; font-size:16.5px;}
+  .wf-grid{display:flex; flex-wrap:wrap; justify-content:center;}
+  .wf-card{flex:0 1 calc(33.333% - 14px);}
+  @media (max-width:1000px){ .wf-card{flex-basis:calc(50% - 10px);} }
+  @media (max-width:600px){ .wf-card{flex-basis:100%;} }
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -3462,8 +3496,11 @@
         </div>
         <div class="smf-grid smf-grid--rev">
           <div>
-            <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/s8ip94klcQs?rel=0" title="Viagem Medieval" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <a class="video-link" href="https://youtu.be/s8ip94klcQs" target="_blank" rel="noopener">▶ <span data-i18n="video_fallback">Regarder sur YouTube</span></a>
+            <a class="video-poster" href="https://youtu.be/s8ip94klcQs" target="_blank" rel="noopener">
+            <img src="images/photos/smf-castle2.jpg" alt="" loading="lazy">
+            <span class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="video-label"><span class="yt-badge">YouTube</span><span data-i18n="video_watch_viagem">Regarder la Viagem Medieval</span></span>
+          </a>
           </div>
           <div class="sec-head sec-head--left" style="margin-bottom:0;">
             <h3 class="sec-title" style="font-size:36px;">Viagem Medieval</h3>
@@ -3818,12 +3855,12 @@
           <span class="sec-eyebrow" data-i18n="cult_world_eyebrow">UNE INFLUENCE MONDIALE</span>
           <h2 class="sec-title" data-i18n="cult_world_title">Le Portugal a changé la cuisine du monde</h2>
         </div>
-        <div class="world-food">
-          <p class="wf-item"><span class="wf-name">Tempura</span><span data-i18n="cult_w1">Japon — Les missionnaires portugais mangeaient du poisson et des légumes frits pendant les jours de jeûne des « Quatre-Temps » (têmporas) : une origine probable de la tempura.</span></p>
-          <p class="wf-item"><span class="wf-name">Vindaloo</span><span data-i18n="cult_w2">Inde — Le vindaloo de Goa tire son nom de la « carne de vinha d'alhos », une viande marinée au vin et à l'ail apportée par les Portugais.</span></p>
-          <p class="wf-item"><span class="wf-name">Piri-piri</span><span data-i18n="cult_w3">Asie et Afrique — Les navigateurs portugais ont diffusé le piment venu d'Amérique, jusqu'en Inde et en Thaïlande.</span></p>
-          <p class="wf-item"><span class="wf-name">Kasutera</span><span data-i18n="cult_w4">Japon — Le gâteau « kasutera » vient du « pão de Castela », le gâteau de Castille apporté par les Portugais à Nagasaki.</span></p>
-          <p class="wf-item"><span class="wf-name">Marmelada</span><span data-i18n="cult_w5">Europe — Le mot « marmelade » vient du portugais « marmelada », une pâte de coings.</span></p>
+        <div class="wf-grid">
+          <article class="wf-card wf-card--jp"><span class="wf-region" data-i18n="wf_reg_jp">JAPON</span><h3 class="wf-dish">Tempura</h3><p class="wf-text" data-i18n="cult_w1">Les missionnaires portugais mangeaient du poisson et des légumes frits pendant les jours de jeûne des « Quatre-Temps » (<em>têmporas</em>) : une origine probable de la tempura.</p></article>
+          <article class="wf-card wf-card--in"><span class="wf-region" data-i18n="wf_reg_in">INDE</span><h3 class="wf-dish">Vindaloo</h3><p class="wf-text" data-i18n="cult_w2">Ce curry de Goa tire son nom de la « carne de vinha d'alhos », une viande marinée au vin et à l'ail apportée par les Portugais.</p></article>
+          <article class="wf-card wf-card--as"><span class="wf-region" data-i18n="wf_reg_as">ASIE &amp; AFRIQUE</span><h3 class="wf-dish">Piri-piri</h3><p class="wf-text" data-i18n="cult_w3">Les navigateurs portugais ont diffusé le piment venu d'Amérique, jusqu'en Inde et en Thaïlande.</p></article>
+          <article class="wf-card wf-card--jp"><span class="wf-region" data-i18n="wf_reg_jp">JAPON</span><h3 class="wf-dish">Kasutera</h3><p class="wf-text" data-i18n="cult_w4">Ce gâteau japonais vient du « pão de Castela », le gâteau de Castille apporté par les Portugais à Nagasaki.</p></article>
+          <article class="wf-card wf-card--eu"><span class="wf-region" data-i18n="wf_reg_eu">EUROPE</span><h3 class="wf-dish">Marmelada</h3><p class="wf-text" data-i18n="cult_w5">Le mot « marmelade » vient du portugais « marmelada », une pâte de coings.</p></article>
         </div>
       </div>
     </section>
@@ -3892,8 +3929,11 @@
           <p class="sec-lead" data-i18n="sport_video_text">Chaque hiver, les meilleurs surfeurs du monde viennent affronter les vagues de Praia do Norte, parmi les plus grandes jamais surfées.</p>
         </div>
         <div>
-          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/ZfLSN4mxY0E?rel=0" title="Nazaré" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <a class="video-link" href="https://youtu.be/ZfLSN4mxY0E" target="_blank" rel="noopener">▶ <span data-i18n="video_fallback">Regarder sur YouTube</span></a>
+          <a class="video-poster" href="https://youtu.be/ZfLSN4mxY0E" target="_blank" rel="noopener">
+            <img src="images/photos/hero-sport.jpg" alt="" loading="lazy">
+            <span class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="video-label"><span class="yt-badge">YouTube</span><span data-i18n="video_watch_nazare">Regarder les vagues géantes de Nazaré</span></span>
+          </a>
         </div>
       </div>
     </section>
@@ -4691,11 +4731,11 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "cult_d12_desc": "Douceur d'Aveiro au jaune d'œuf et au sucre. On raconte que beaucoup de desserts portugais sont nés dans les couvents, où les blancs d'œufs servaient à amidonner le linge.",
   "cult_world_eyebrow": "UNE INFLUENCE MONDIALE",
   "cult_world_title": "Le Portugal a changé la cuisine du monde",
-  "cult_w1": "Japon — Les missionnaires portugais mangeaient du poisson et des légumes frits pendant les jours de jeûne des « Quatre-Temps » (têmporas) : une origine probable de la tempura.",
-  "cult_w2": "Inde — Le vindaloo de Goa tire son nom de la « carne de vinha d'alhos », une viande marinée au vin et à l'ail apportée par les Portugais.",
-  "cult_w3": "Asie et Afrique — Les navigateurs portugais ont diffusé le piment venu d'Amérique, jusqu'en Inde et en Thaïlande.",
-  "cult_w4": "Japon — Le gâteau « kasutera » vient du « pão de Castela », le gâteau de Castille apporté par les Portugais à Nagasaki.",
-  "cult_w5": "Europe — Le mot « marmelade » vient du portugais « marmelada », une pâte de coings.",
+  "cult_w1": "Les missionnaires portugais mangeaient du poisson et des légumes frits pendant les jours de jeûne des « Quatre-Temps » (<em>têmporas</em>) : une origine probable de la tempura.",
+  "cult_w2": "Ce curry de Goa tire son nom de la « carne de vinha d'alhos », une viande marinée au vin et à l'ail apportée par les Portugais.",
+  "cult_w3": "Les navigateurs portugais ont diffusé le piment venu d'Amérique, jusqu'en Inde et en Thaïlande.",
+  "cult_w4": "Ce gâteau japonais vient du « pão de Castela », le gâteau de Castille apporté par les Portugais à Nagasaki.",
+  "cult_w5": "Le mot « marmelade » vient du portugais « marmelada », une pâte de coings.",
   "cult_gallery_hint": "Douze classiques à goûter absolument",
   "sport_trophies_eyebrow": "LES GRANDES VICTOIRES",
   "sport_trophies_h": "Le palmarès de la Seleção",
@@ -4758,7 +4798,13 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "concl_t1b": "Avant la Suisse, je vis à Santa Maria da Feira, la ville du château et de la Viagem Medieval.",
   "concl_ph_caramulo": "Caramulo, mes racines",
   "concl_ph_feira": "Santa Maria da Feira",
-  "concl_ph_leman": "Le Léman, ma vie en Suisse"
+  "concl_ph_leman": "Le Léman, ma vie en Suisse",
+  "video_watch_nazare": "Regarder les vagues géantes de Nazaré",
+  "video_watch_viagem": "Regarder la Viagem Medieval",
+  "wf_reg_jp": "JAPON",
+  "wf_reg_in": "INDE",
+  "wf_reg_as": "ASIE &amp; AFRIQUE",
+  "wf_reg_eu": "EUROPE"
  },
  "it": {
   "nav_home": "Home",
@@ -5158,11 +5204,11 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "cult_d12_desc": "Dolce di Aveiro a base di tuorlo d'uovo e zucchero. Si racconta che molti dolci portoghesi siano nati nei conventi, dove gli albumi servivano ad inamidare la biancheria.",
   "cult_world_eyebrow": "UN'INFLUENZA MONDIALE",
   "cult_world_title": "Il Portogallo ha cambiato la cucina del mondo",
-  "cult_w1": "Giappone — I missionari portoghesi mangiavano pesce e verdure fritti nei giorni di digiuno delle «Quattro Tempora» (têmporas): una probabile origine della tempura.",
-  "cult_w2": "India — Il vindaloo di Goa prende il nome dalla «carne de vinha d'alhos», carne marinata nel vino e nell'aglio portata dai portoghesi.",
-  "cult_w3": "Asia e Africa — I navigatori portoghesi hanno diffuso il peperoncino venuto dall'America, fino in India e in Thailandia.",
-  "cult_w4": "Giappone — Il dolce «kasutera» deriva dal «pão de Castela», il pan di Castiglia portato dai portoghesi a Nagasaki.",
-  "cult_w5": "Europa — La parola «marmellata» viene dal portoghese «marmelada», una pasta di mele cotogne.",
+  "cult_w1": "I missionari portoghesi mangiavano pesce e verdure fritti nei giorni di digiuno delle «Quattro Tempora» (<em>têmporas</em>): una probabile origine della tempura.",
+  "cult_w2": "Questo curry di Goa prende il nome dalla «carne de vinha d'alhos», carne marinata nel vino e nell'aglio portata dai portoghesi.",
+  "cult_w3": "I navigatori portoghesi hanno diffuso il peperoncino venuto dall'America, fino in India e in Thailandia.",
+  "cult_w4": "Questo dolce giapponese deriva dal «pão de Castela», il pan di Castiglia portato dai portoghesi a Nagasaki.",
+  "cult_w5": "La parola «marmellata» viene dal portoghese «marmelada», una pasta di mele cotogne.",
   "cult_gallery_hint": "Dodici classici da assaggiare assolutamente",
   "sport_trophies_eyebrow": "LE GRANDI VITTORIE",
   "sport_trophies_h": "Il palmarès della Seleção",
@@ -5225,7 +5271,13 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "concl_t1b": "Prima della Svizzera vivo a Santa Maria da Feira, la città del castello e della Viagem Medieval.",
   "concl_ph_caramulo": "Caramulo, le mie radici",
   "concl_ph_feira": "Santa Maria da Feira",
-  "concl_ph_leman": "Il Lemano, la mia vita in Svizzera"
+  "concl_ph_leman": "Il Lemano, la mia vita in Svizzera",
+  "video_watch_nazare": "Guarda le onde giganti di Nazaré",
+  "video_watch_viagem": "Guarda la Viagem Medieval",
+  "wf_reg_jp": "GIAPPONE",
+  "wf_reg_in": "INDIA",
+  "wf_reg_as": "ASIA E AFRICA",
+  "wf_reg_eu": "EUROPA"
  },
  "de": {
   "nav_home": "Startseite",
@@ -5625,11 +5677,11 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "cult_d12_desc": "Süssigkeit aus Aveiro aus Eigelb und Zucker. Man erzählt, viele portugiesische Desserts seien in Klöstern entstanden, wo das Eiweiss zum Stärken der Wäsche diente.",
   "cult_world_eyebrow": "EIN WELTWEITER EINFLUSS",
   "cult_world_title": "Portugal hat die Küche der Welt verändert",
-  "cult_w1": "Japan — Portugiesische Missionare assen an den Fastentagen der «Quatember» (têmporas) frittierten Fisch und Gemüse: ein wahrscheinlicher Ursprung der Tempura.",
-  "cult_w2": "Indien — Das Vindaloo aus Goa verdankt seinen Namen der «carne de vinha d'alhos», in Wein und Knoblauch eingelegtem Fleisch der Portugiesen.",
-  "cult_w3": "Asien und Afrika — Portugiesische Seefahrer verbreiteten die Chili aus Amerika bis nach Indien und Thailand.",
-  "cult_w4": "Japan — Der «Kasutera»-Kuchen stammt vom «pão de Castela», dem Kastilienbrot, das die Portugiesen nach Nagasaki brachten.",
-  "cult_w5": "Europa — Das Wort «Marmelade» kommt vom portugiesischen «marmelada», einem Quittenbrot.",
+  "cult_w1": "Portugiesische Missionare assen an den Fastentagen der «Quatember» (<em>têmporas</em>) frittierten Fisch und Gemüse: ein wahrscheinlicher Ursprung der Tempura.",
+  "cult_w2": "Dieses Curry aus Goa verdankt seinen Namen der «carne de vinha d'alhos», in Wein und Knoblauch eingelegtem Fleisch der Portugiesen.",
+  "cult_w3": "Portugiesische Seefahrer verbreiteten die Chili aus Amerika bis nach Indien und Thailand.",
+  "cult_w4": "Dieser japanische Kuchen stammt vom «pão de Castela», dem Kastilienbrot, das die Portugiesen nach Nagasaki brachten.",
+  "cult_w5": "Das Wort «Marmelade» kommt vom portugiesischen «marmelada», einem Quittenbrot.",
   "cult_gallery_hint": "Zwölf Klassiker, die man probieren muss",
   "sport_trophies_eyebrow": "DIE GROSSEN SIEGE",
   "sport_trophies_h": "Die Erfolge der Seleção",
@@ -5692,7 +5744,13 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "concl_t1b": "Vor der Schweiz lebe ich in Santa Maria da Feira, der Stadt der Burg und der Viagem Medieval.",
   "concl_ph_caramulo": "Caramulo, meine Wurzeln",
   "concl_ph_feira": "Santa Maria da Feira",
-  "concl_ph_leman": "Der Genfersee, mein Leben in der Schweiz"
+  "concl_ph_leman": "Der Genfersee, mein Leben in der Schweiz",
+  "video_watch_nazare": "Die Riesenwellen von Nazaré ansehen",
+  "video_watch_viagem": "Die Viagem Medieval ansehen",
+  "wf_reg_jp": "JAPAN",
+  "wf_reg_in": "INDIEN",
+  "wf_reg_as": "ASIEN &amp; AFRIKA",
+  "wf_reg_eu": "EUROPA"
  }
 };
 

@@ -232,3 +232,27 @@ T2.update({
 "concl_ph_feira": ("Santa Maria da Feira", "Santa Maria da Feira", "Santa Maria da Feira"),
 "concl_ph_leman": ("Le Léman, ma vie en Suisse", "Il Lemano, la mia vita in Svizzera", "Der Genfersee, mein Leben in der Schweiz"),
 })
+
+T2.update({
+"video_watch_nazare": ("Regarder les vagues géantes de Nazaré", "Guarda le onde giganti di Nazaré", "Die Riesenwellen von Nazaré ansehen"),
+"video_watch_viagem": ("Regarder la Viagem Medieval", "Guarda la Viagem Medieval", "Die Viagem Medieval ansehen"),
+"wf_reg_jp": ("JAPON", "GIAPPONE", "JAPAN"),
+"wf_reg_in": ("INDE", "INDIA", "INDIEN"),
+"wf_reg_as": ("ASIE &amp; AFRIQUE", "ASIA E AFRICA", "ASIEN &amp; AFRIKA"),
+"wf_reg_eu": ("EUROPE", "EUROPA", "EUROPA"),
+"cult_w1": ("Les missionnaires portugais mangeaient du poisson et des légumes frits pendant les jours de jeûne des « Quatre-Temps » (<em>têmporas</em>) : une origine probable de la tempura.",
+  "I missionari portoghesi mangiavano pesce e verdure fritti nei giorni di digiuno delle «Quattro Tempora» (<em>têmporas</em>): una probabile origine della tempura.",
+  "Portugiesische Missionare assen an den Fastentagen der «Quatember» (<em>têmporas</em>) frittierten Fisch und Gemüse: ein wahrscheinlicher Ursprung der Tempura."),
+"cult_w2": ("Ce curry de Goa tire son nom de la « carne de vinha d'alhos », une viande marinée au vin et à l'ail apportée par les Portugais.",
+  "Questo curry di Goa prende il nome dalla «carne de vinha d'alhos», carne marinata nel vino e nell'aglio portata dai portoghesi.",
+  "Dieses Curry aus Goa verdankt seinen Namen der «carne de vinha d'alhos», in Wein und Knoblauch eingelegtem Fleisch der Portugiesen."),
+"cult_w3": ("Les navigateurs portugais ont diffusé le piment venu d'Amérique, jusqu'en Inde et en Thaïlande.",
+  "I navigatori portoghesi hanno diffuso il peperoncino venuto dall'America, fino in India e in Thailandia.",
+  "Portugiesische Seefahrer verbreiteten die Chili aus Amerika bis nach Indien und Thailand."),
+"cult_w4": ("Ce gâteau japonais vient du « pão de Castela », le gâteau de Castille apporté par les Portugais à Nagasaki.",
+  "Questo dolce giapponese deriva dal «pão de Castela», il pan di Castiglia portato dai portoghesi a Nagasaki.",
+  "Dieser japanische Kuchen stammt vom «pão de Castela», dem Kastilienbrot, das die Portugiesen nach Nagasaki brachten."),
+"cult_w5": ("Le mot « marmelade » vient du portugais « marmelada », une pâte de coings.",
+  "La parola «marmellata» viene dal portoghese «marmelada», una pasta di mele cotogne.",
+  "Das Wort «Marmelade» kommt vom portugiesischen «marmelada», einem Quittenbrot."),
+})
