@@ -699,6 +699,21 @@ divider("08", "concl_hero_title", "concl_hero_subtitle", "concl_hero_text", P("h
   });
 }
 {
+  const s = add();
+  head(s, F.merci_eyebrow, F.merci_title);
+  tb(s, F.merci_lead, { x: MX, y: 1.5, w: 12, h: 0.5, fontSize: 15, color: COL.grey });
+  [[L("europeixe.jpg"), "Europeixe", F.merci_ep_place, F.merci_ep, "loja-europeixe.ch", "https://www.loja-europeixe.ch/"],
+   [L("nortejo-vitrine.jpg"), "Nortejo", F.merci_nt_place, F.merci_nt, F.merci_nt_link, "https://share.google/KC0aDwi6yydgWgbBS"]].forEach(([ph, n, pl, d, lt, url], i) => {
+    const x = MX + i * 6.2;
+    card(s, x, 2.15, 5.9, 4.65, COL.white);
+    img(s, ph, x, 2.15, 5.9, 2.4);
+    tb(s, n, { x: x + 0.25, y: 4.65, w: 5.4, h: 0.5, fontSize: 24, bold: true, fontFace: "Cambria", color: COL.green });
+    tb(s, pl, { x: x + 0.25, y: 5.15, w: 5.4, h: 0.3, fontSize: 10, bold: true, color: COL.azul, charSpacing: 2 });
+    tb(s, d, { x: x + 0.25, y: 5.45, w: 5.4, h: 0.9, fontSize: 12.5 });
+    s.addText([{ text: lt + "  →", options: { hyperlink: { url }, color: COL.red, bold: true } }], { isTextBox: true, x: x + 0.25, y: 6.35, w: 5.4, h: 0.35, fontSize: 12, fontFace: "Calibri", margin: 0 });
+  });
+}
+{
   const s = add("DARK");
   tb(s, "Obrigado!", { x: 0, y: 2.0, w: W, h: 1.8, fontSize: 96, bold: true, italic: true, fontFace: "Cambria", color: "F2C14E", align: "center" });
   tb(s, F.concl_thanks, { x: 0, y: 3.9, w: W, h: 0.6, fontSize: 24, color: COL.white, align: "center" });

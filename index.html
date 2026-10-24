@@ -3120,6 +3120,23 @@
   .is-fs .fs-btn .fs-out{display:block;}
   @media (max-width:900px){ .fs-btn{margin-left:auto; margin-right:10px; padding:7px;} .fs-btn span{display:none;} .lang-toggle{margin-left:0;} }
 
+  /* thank-you section and bar */
+  .merci-grid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:26px; max-width:1100px; margin:0 auto;}
+  .merci-card{background:var(--warm-white); border:1px solid var(--border); border-top:4px solid var(--red); border-radius:14px; overflow:hidden; box-shadow:0 18px 40px -28px rgba(23,33,29,.35); display:flex; flex-direction:column;}
+  .merci-photo{aspect-ratio:16/9; overflow:hidden;}
+  .merci-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .merci-photo--duo{display:grid; grid-template-columns:1fr 1fr; gap:3px;}
+  .merci-body{padding:22px 24px 26px;}
+  .merci-body h3{font-family:'Cormorant Garamond', serif; font-size:30px; color:var(--green); margin:0;}
+  .merci-place{display:block; font:700 11px Inter, sans-serif; letter-spacing:.14em; color:var(--azul); margin:2px 0 10px;}
+  .merci-body p{font-size:15.5px; line-height:1.65; color:var(--text); margin:0 0 14px;}
+  .merci-link{font:700 13px Inter, sans-serif; color:var(--red); text-decoration:none; letter-spacing:.04em;}
+  .merci-link:hover{text-decoration:underline;}
+  @media (max-width:800px){ .merci-grid{grid-template-columns:minmax(0,1fr);} }
+  .thanks-bar{background:var(--green); color:rgba(252,251,248,.85); text-align:center; padding:14px 0; font-size:13.5px;}
+  .thanks-bar a{color:#F2C14E; font-weight:700; text-decoration:none; margin:0 4px;}
+  .thanks-bar a:hover{text-decoration:underline;}
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -4796,6 +4813,34 @@
       </div>
     </section>
 
+    <section class="sec sec--ivory merci-sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="merci_eyebrow">REMERCIEMENTS</span>
+          <h2 class="sec-title" data-i18n="merci_title">Un grand merci&nbsp;!</h2>
+          <p class="sec-lead" data-i18n="merci_lead">Cette présentation a aussi un goût de Portugal grâce à deux commerces portugais de la région.</p>
+        </div>
+        <div class="merci-grid">
+          <article class="merci-card">
+            <div class="merci-photo"><img src="images/luis/europeixe.jpg" alt="Europeixe Aigle" loading="lazy"></div>
+            <div class="merci-body">
+              <h3>Europeixe</h3><span class="merci-place" data-i18n="merci_ep_place">MAGASIN PORTUGAIS · AIGLE</span>
+              <p data-i18n="merci_ep">Épicerie et produits portugais. Europeixe a généreusement offert les produits que vous pouvez goûter aujourd'hui. Muito obrigado&nbsp;!</p>
+              <a class="merci-link" href="https://www.loja-europeixe.ch/" target="_blank" rel="noopener">loja-europeixe.ch <span class="arrow">→</span></a>
+            </div>
+          </article>
+          <article class="merci-card">
+            <div class="merci-photo merci-photo--duo"><img src="images/luis/nortejo.jpg" alt="Pâtisserie Nortejo" loading="lazy"><img src="images/luis/nortejo-vitrine.jpg" alt="Vitrine de la pâtisserie Nortejo" loading="lazy"></div>
+            <div class="merci-body">
+              <h3>Nortejo</h3><span class="merci-place" data-i18n="merci_nt_place">PÂTISSERIE PORTUGAISE</span>
+              <p data-i18n="merci_nt">Les douceurs portugaises servies aujourd'hui viennent de la pâtisserie Nortejo&nbsp;: pastéis de nata et autres gourmandises. Obrigado&nbsp;!</p>
+              <a class="merci-link" href="https://share.google/KC0aDwi6yydgWgbBS" target="_blank" rel="noopener"><span data-i18n="merci_nt_link">Voir sur Google</span> <span class="arrow">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section">
       <div class="wrap cta-content">
         <p class="thanks-word">Obrigado!</p>
@@ -4923,6 +4968,9 @@
       </details>
     </div>
   </footer>
+  <div class="thanks-bar">
+    <div class="wrap"><span data-i18n="merci_bar">Merci pour leur soutien&nbsp;:</span> <a href="https://www.loja-europeixe.ch/" target="_blank" rel="noopener">Europeixe</a> · <a href="https://share.google/KC0aDwi6yydgWgbBS" target="_blank" rel="noopener">Nortejo</a></div>
+  </div>
 
   <script>
     const nav = document.getElementById('siteNav');
@@ -5617,7 +5665,16 @@
   "uni_c3": "Ouverte en 1906, avec son escalier rouge et ses boiseries sculptées, elle est souvent citée parmi les plus belles librairies du monde. Il faut parfois faire la queue pour y entrer !",
   "uni_c4_t": "Et Harry Potter&nbsp;?",
   "uni_c4": "J.K. Rowling a vécu à Porto au début des années 1990 : elle y enseignait l'anglais et écrivait déjà Harry Potter. On dit que les capes des étudiants ont inspiré les robes de Poudlard, et Lello sa bibliothèque… mais Rowling affirme n'être jamais entrée chez Lello !",
-  "fs_label": "Plein écran"
+  "fs_label": "Plein écran",
+  "merci_eyebrow": "REMERCIEMENTS",
+  "merci_title": "Un grand merci&nbsp;!",
+  "merci_lead": "Cette présentation a aussi un goût de Portugal grâce à deux commerces portugais de la région.",
+  "merci_ep_place": "MAGASIN PORTUGAIS · AIGLE",
+  "merci_ep": "Épicerie et produits portugais. Europeixe a généreusement offert les produits que vous pouvez goûter aujourd'hui. Muito obrigado&nbsp;!",
+  "merci_nt_place": "PÂTISSERIE PORTUGAISE",
+  "merci_nt": "Les douceurs portugaises servies aujourd'hui viennent de la pâtisserie Nortejo&nbsp;: pastéis de nata et autres gourmandises. Obrigado&nbsp;!",
+  "merci_nt_link": "Voir sur Google",
+  "merci_bar": "Merci pour leur soutien&nbsp;:"
  },
  "it": {
   "nav_home": "Home",
@@ -6241,7 +6298,16 @@
   "uni_c3": "Aperta nel 1906, con la sua scala rossa e i legni intagliati, è spesso citata tra le librerie più belle del mondo. A volte bisogna fare la fila per entrare!",
   "uni_c4_t": "E Harry Potter?",
   "uni_c4": "J.K. Rowling visse a Porto all'inizio degli anni '90: insegnava inglese e scriveva già Harry Potter. Si dice che i mantelli degli studenti abbiano ispirato le divise di Hogwarts, e la Lello la sua biblioteca… ma la Rowling afferma di non essere mai entrata alla Lello!",
-  "fs_label": "Schermo intero"
+  "fs_label": "Schermo intero",
+  "merci_eyebrow": "RINGRAZIAMENTI",
+  "merci_title": "Un grande grazie!",
+  "merci_lead": "Questa presentazione ha anche il sapore del Portogallo grazie a due negozi portoghesi della regione.",
+  "merci_ep_place": "NEGOZIO PORTOGHESE · AIGLE",
+  "merci_ep": "Alimentari e prodotti portoghesi. Europeixe ha gentilmente offerto i prodotti che potete assaggiare oggi. Muito obrigado!",
+  "merci_nt_place": "PASTICCERIA PORTOGHESE",
+  "merci_nt": "I dolci portoghesi serviti oggi vengono dalla pasticceria Nortejo: pastéis de nata e altre golosità. Obrigado!",
+  "merci_nt_link": "Vedi su Google",
+  "merci_bar": "Grazie per il loro sostegno:"
  },
  "de": {
   "nav_home": "Startseite",
@@ -6865,7 +6931,16 @@
   "uni_c3": "1906 eröffnet, mit ihrer roten Treppe und den geschnitzten Holzverkleidungen, gilt sie oft als eine der schönsten Buchhandlungen der Welt. Manchmal muss man anstehen, um hineinzukommen!",
   "uni_c4_t": "Und Harry Potter?",
   "uni_c4": "J.K. Rowling lebte Anfang der 1990er-Jahre in Porto: Sie unterrichtete Englisch und schrieb bereits an Harry Potter. Man sagt, die Studentenumhänge hätten die Roben von Hogwarts inspiriert und die Lello dessen Bibliothek … doch Rowling sagt, sie sei nie in der Lello gewesen!",
-  "fs_label": "Vollbild"
+  "fs_label": "Vollbild",
+  "merci_eyebrow": "DANK",
+  "merci_title": "Ein grosses Dankeschön!",
+  "merci_lead": "Diese Präsentation schmeckt auch nach Portugal – dank zwei portugiesischer Geschäfte aus der Region.",
+  "merci_ep_place": "PORTUGIESISCHES GESCHÄFT · AIGLE",
+  "merci_ep": "Portugiesische Lebensmittel und Spezialitäten. Europeixe hat die Produkte, die Sie heute probieren können, grosszügig gespendet. Muito obrigado!",
+  "merci_nt_place": "PORTUGIESISCHE KONDITOREI",
+  "merci_nt": "Die portugiesischen Süssigkeiten von heute stammen aus der Konditorei Nortejo: Pastéis de Nata und andere Leckereien. Obrigado!",
+  "merci_nt_link": "Auf Google ansehen",
+  "merci_bar": "Danke für die Unterstützung:"
  }
 };
 

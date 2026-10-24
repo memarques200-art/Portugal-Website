@@ -141,3 +141,14 @@ T4.update({
 T4.update({
 "fs_label": ("Plein écran", "Schermo intero", "Vollbild"),
 })
+T4.update({
+"merci_eyebrow": ("REMERCIEMENTS", "RINGRAZIAMENTI", "DANK"),
+"merci_title": ("Un grand merci&nbsp;!", "Un grande grazie!", "Ein grosses Dankeschön!"),
+"merci_lead": ("Cette présentation a aussi un goût de Portugal grâce à deux commerces portugais de la région.", "Questa presentazione ha anche il sapore del Portogallo grazie a due negozi portoghesi della regione.", "Diese Präsentation schmeckt auch nach Portugal – dank zwei portugiesischer Geschäfte aus der Region."),
+"merci_ep_place": ("MAGASIN PORTUGAIS · AIGLE", "NEGOZIO PORTOGHESE · AIGLE", "PORTUGIESISCHES GESCHÄFT · AIGLE"),
+"merci_ep": ("Épicerie et produits portugais. Europeixe a généreusement offert les produits que vous pouvez goûter aujourd'hui. Muito obrigado&nbsp;!", "Alimentari e prodotti portoghesi. Europeixe ha gentilmente offerto i prodotti che potete assaggiare oggi. Muito obrigado!", "Portugiesische Lebensmittel und Spezialitäten. Europeixe hat die Produkte, die Sie heute probieren können, grosszügig gespendet. Muito obrigado!"),
+"merci_nt_place": ("PÂTISSERIE PORTUGAISE", "PASTICCERIA PORTOGHESE", "PORTUGIESISCHE KONDITOREI"),
+"merci_nt": ("Les douceurs portugaises servies aujourd'hui viennent de la pâtisserie Nortejo&nbsp;: pastéis de nata et autres gourmandises. Obrigado&nbsp;!", "I dolci portoghesi serviti oggi vengono dalla pasticceria Nortejo: pastéis de nata e altre golosità. Obrigado!", "Die portugiesischen Süssigkeiten von heute stammen aus der Konditorei Nortejo: Pastéis de Nata und andere Leckereien. Obrigado!"),
+"merci_nt_link": ("Voir sur Google", "Vedi su Google", "Auf Google ansehen"),
+"merci_bar": ("Merci pour leur soutien&nbsp;:", "Grazie per il loro sostegno:", "Danke für die Unterstützung:"),
+})

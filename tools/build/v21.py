@@ -71,6 +71,11 @@ FS_JS = '''<script>
 </script>
 '''
 
+THANKS_BAR = '''  <div class="thanks-bar">
+    <div class="wrap"><span i18n="merci_bar"></span> <a href="https://www.loja-europeixe.ch/" target="_blank" rel="noopener">Europeixe</a> · <a href="https://share.google/KC0aDwi6yydgWgbBS" target="_blank" rel="noopener">Nortejo</a></div>
+  </div>
+'''
+
 def apply(html, render, FR=None, keys=()):
     def sub1(old, new):
         nonlocal html
@@ -93,6 +98,8 @@ def apply(html, render, FR=None, keys=()):
     # full-screen ("cinema") button in the nav
     sub1('      <div class="lang-toggle" id="langToggle">', FS_BTN + '      <div class="lang-toggle" id="langToggle">')
     sub1('</body>', FS_JS + '</body>')
+    # thank-you line at the bottom of every page
+    sub1('  </main>\n', '  </main>\n' + render(THANKS_BAR))
     # refresh the French text baked into the base page for every key we overrode
     for k in keys:
         html = re.sub(r'(<(\w+)[^>]*\sdata-i18n="%s"[^>]*>).*?(</\2>)' % k, lambda m: m.group(1) + FR[k] + m.group(3), html, flags=re.S)
