@@ -59,6 +59,8 @@ def apply(html, render, FR=None, keys=()):
     # founding of Portugal: Afonso Henriques instead of the castle
     sub1('src="images/photos/hist-guimaraes.jpg" alt="Château de Guimarães et statue de Dom Afonso Henriques"',
          'src="images/photos/x-afonso.jpg" alt="Statue de Dom Afonso Henriques, Guimarães"')
+    # conclusion: close-up portrait for the round photo
+    sub1('<img class="concl-portrait" src="images/luis.jpg"', '<img class="concl-portrait" src="images/luis-round.jpg"')
     # refresh the French text baked into the base page for every key we overrode
     for k in keys:
         html = re.sub(r'(<(\w+)[^>]*\sdata-i18n="%s"[^>]*>).*?(</\2>)' % k, lambda m: m.group(1) + FR[k] + m.group(3), html, flags=re.S)
