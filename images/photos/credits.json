@@ -24,12 +24,12 @@
   "h": 733
  },
  "j-soc.jpg": {
-  "title": "File:Number 28 tram, Calçada de São Francisco, Lisbon, Portugal julesvernex2.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Number_28_tram,_Calçada_de_São_Francisco,_Lisbon,_Portugal_julesvernex2.jpg",
-  "artist": "Jules Verne Times Two\n\nhttp://julesvernex2.com",
-  "lic": "CC BY-SA 4.0",
-  "w": 1100,
-  "h": 1497
+  "title": "File:Vistas de Lisboa desde el Mirador de Santa Luzia, Portugal, 2012-05-12, DD 01.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Vistas_de_Lisboa_desde_el_Mirador_de_Santa_Luzia,_Portugal,_2012-05-12,_DD_01.JPG",
+  "artist": "Diego Delso",
+  "lic": "CC BY-SA 3.0",
+  "w": 2560,
+  "h": 1537
  },
  "hero-inst.jpg": {
   "title": "File:Assembleia da República (Portugal) Palácio de São Bento, Lisboa.JPG",
@@ -38,14 +38,6 @@
   "lic": "CC BY-SA 3.0",
   "w": 2560,
   "h": 1438
- },
- "hero-soc.jpg": {
-  "title": "File:Lissabon - Alfama - Largo de Santa Luzia - Streetcar - 2.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Lissabon_-_Alfama_-_Largo_de_Santa_Luzia_-_Streetcar_-_2.jpg",
-  "artist": "Ingo Mehling",
-  "lic": "CC BY-SA 4.0",
-  "w": 2560,
-  "h": 1707
  },
  "hero-cult.jpg": {
   "title": "File:Porto April 2019-5.jpg",
@@ -718,5 +710,13 @@
   "lic": "CC BY-SA 2.0",
   "w": 1100,
   "h": 722
+ },
+ "hero-soc2.jpg": {
+  "title": "File:Vistas de Lisboa desde el Mirador de Santa Luzia, Portugal, 2012-05-12, DD 01.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Vistas_de_Lisboa_desde_el_Mirador_de_Santa_Luzia,_Portugal,_2012-05-12,_DD_01.JPG",
+  "artist": "Diego Delso",
+  "lic": "CC BY-SA 3.0",
+  "w": 2560,
+  "h": 1537
  }
 }

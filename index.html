@@ -3020,6 +3020,10 @@
   @media (max-width:900px){ .merv-grid{grid-template-columns:minmax(0, 1fr);} .merv-list, .merv-item{min-width:0;} }
   .info-card--photo .card-photo:has(img[src*="s-eusebio"]){aspect-ratio:4/5;}
   .card-photo img[src*="s-eusebio"]{object-position:50% 15%;}
+  .cmp-sub{display:block; font:700 11px Inter, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--azul); margin:12px 0 2px;}
+  .cmp-lbl2{font:600 12.5px Inter, sans-serif; fill:var(--text);}
+  .cmp-num2{font:800 17px Inter, sans-serif; fill:var(--azul);}
+  .page-hero-media img[src*="hero-soc2"]{object-position:50% 75%;}
 
   .view{display:none;}
   .view.active{display:block;}
@@ -3710,43 +3714,12 @@
     </section>
 
 
-    <section class="sec smf-sec">
-      <div class="wrap">
-        <div class="smf-grid">
-          <div class="sec-head sec-head--left" style="margin-bottom:0;">
-            <span class="sec-eyebrow" data-i18n="smf_eyebrow">SANTA MARIA DA FEIRA — LÀ OÙ J'AI VÉCU</span>
-            <h2 class="sec-title" data-i18n="smf_title">Une ville de château et de chevaliers</h2>
-            <p class="sec-lead" data-i18n="smf_text">Avant de partir pour la Suisse, j'ai vécu à Santa Maria da Feira, à une trentaine de kilomètres au sud de Porto. La ville est dominée par l'un des plus beaux châteaux médiévaux du Portugal.</p>
-          </div>
-          <figure class="smf-photo"><img src="images/photos/smf-castle.jpg" alt="Castelo de Santa Maria da Feira" loading="lazy"><figcaption data-i18n="smf_castle_cap">Le château de Santa Maria da Feira.</figcaption></figure>
-        </div>
-        <div class="smf-grid smf-grid--rev">
-          <div>
-            <a class="video-poster" href="https://youtu.be/s8ip94klcQs" target="_blank" rel="noopener">
-            <img src="images/photos/smf-castle2.jpg" alt="" loading="lazy">
-            <span class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-            <span class="video-label"><span class="yt-badge">YouTube</span><span data-i18n="video_watch_viagem">Regarder la Viagem Medieval</span></span>
-          </a>
-          </div>
-          <div class="sec-head sec-head--left" style="margin-bottom:0;">
-            <h3 class="sec-title" style="font-size:36px;">Viagem Medieval</h3>
-            <p class="sec-lead" data-i18n="smf_viagem_text">Chaque été depuis 1996, toute la ville remonte le temps pendant une douzaine de jours : tournois de chevaliers, spectacles, musique, fauconnerie et marchés d'époque. C'est la plus grande reconstitution médiévale de la péninsule Ibérique, avec des centaines de milliers de visiteurs.</p>
-            <div class="cmf-facts smf-facts">
-              <div><b>650 000</b><span data-i18n="smf_f1">VISITEURS EN 2025</span></div>
-              <div><b>12</b><span data-i18n="smf_f2">JOURS DE FÊTE</span></div>
-              <div><b>1996</b><span data-i18n="smf_f3">PREMIÈRE ÉDITION</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="inst-toggle-sec">
       <div class="wrap">
         <button class="inst-toggle" id="instToggle" type="button" aria-expanded="false" aria-controls="instPanel">
           <span class="inst-toggle-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10M20 21V10M2 10l10-6 10 6M8 10v11M12 10v11M16 10v11" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <span class="inst-toggle-text"><span class="inst-toggle-title" data-i18n="inst_toggle_title">Institutions &amp; politique</span><span class="inst-toggle-sub" data-i18n="inst_toggle_sub">Comment fonctionne la démocratie portugaise, la Révolution des Œillets et ses deux chansons, la comparaison avec la Suisse… Cliquez pour tout afficher.</span></span>
-          <span class="inst-toggle-btn"><span class="lbl-open" data-i18n="inst_toggle_open">Afficher</span><span class="lbl-close" data-i18n="inst_toggle_close">Masquer</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="inst-toggle-text"><span class="inst-toggle-title" data-i18n="inst_toggle_title">Envie d’en savoir plus&nbsp;?</span><span class="inst-toggle-sub" data-i18n="inst_toggle_sub">Découvrez les institutions du Portugal : qui gouverne et comment, la Révolution des Œillets et les deux chansons qui l’ont lancée.</span></span>
+          <span class="inst-toggle-btn"><span class="lbl-open" data-i18n="inst_toggle_open">Découvrir</span><span class="lbl-close" data-i18n="inst_toggle_close">Masquer</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </button>
       </div>
     </section>
@@ -3863,59 +3836,6 @@
       </div>
     </section>
 
-    <section class="sec sec--white">
-      <div class="wrap">
-        <div class="sec-head">
-          <span class="sec-eyebrow">PORTUGAL — SUISSE</span>
-          <h2 class="sec-title" data-i18n="inst_cmp_title">Deux systèmes, deux façons de décider</h2>
-        </div>
-        <div class="cmp">
-          <div class="cmp-row cmp-head">
-            <span class="cmp-label"></span>
-            <span class="cmp-country"><img class="bridge-flag" src="images/flag-pt.jpg" alt=""><span data-i18n="country_pt">Portugal</span></span>
-            <span class="cmp-country"><img class="bridge-flag" src="images/flag-ch.jpg" alt=""><span data-i18n="country_ch">Suisse</span></span>
-          </div>
-          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r1">Régime</span><span class="pt" data-i18n="inst_cmp_r1_pt">République semi-présidentielle</span><span class="ch" data-i18n="inst_cmp_r1_ch">État fédéral, démocratie directe</span></div>
-          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r2">Chef de l'État</span><span class="pt" data-i18n="inst_cmp_r2_pt">Un président élu par le peuple</span><span class="ch" data-i18n="inst_cmp_r2_ch">Le Conseil fédéral (7 membres), présidé à tour de rôle</span></div>
-          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r3">Parlement</span><span class="pt" data-i18n="inst_cmp_r3_pt">Une chambre : 230 députés</span><span class="ch" data-i18n="inst_cmp_r3_ch">Deux chambres : 200 + 46 membres</span></div>
-          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r4">Organisation</span><span class="pt" data-i18n="inst_cmp_r4_pt">État unitaire, 2 régions autonomes (Açores, Madère)</span><span class="ch" data-i18n="inst_cmp_r4_ch">26 cantons très autonomes</span></div>
-          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r5">Le peuple vote</span><span class="pt" data-i18n="inst_cmp_r5_pt">Élections ; référendums rares</span><span class="ch" data-i18n="inst_cmp_r5_ch">Votations plusieurs fois par an</span></div>
-          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r6">Europe</span><span class="pt" data-i18n="inst_cmp_r6_pt">Membre de l'UE depuis 1986, zone euro</span><span class="ch" data-i18n="inst_cmp_r6_ch">Hors UE : accords bilatéraux, Schengen</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sec sec--ivory">
-      <div class="wrap">
-        <div class="sec-head">
-          <span class="sec-eyebrow" data-i18n="inst_world_eyebrow">LE PORTUGAL DANS LE MONDE</span>
-          <h2 class="sec-title" data-i18n="inst_world_title">Un petit pays, une grande voix</h2>
-        </div>
-        <div class="world-grid">
-          <div class="world-item"><span class="world-title" data-i18n="inst_w1_title">OTAN</span><p class="world-desc" data-i18n="inst_w1_desc">Membre fondateur en 1949.</p></div>
-          <div class="world-item"><span class="world-title" data-i18n="inst_w2_title">Union européenne</span><p class="world-desc" data-i18n="inst_w2_desc">Membre depuis 1986. António Costa préside le Conseil européen depuis 2024.</p></div>
-          <div class="world-item"><span class="world-title" data-i18n="inst_w3_title">ONU</span><p class="world-desc" data-i18n="inst_w3_desc">António Guterres, ancien Premier ministre portugais, est secrétaire général de l'ONU depuis 2017.</p></div>
-          <div class="world-item"><span class="world-title" data-i18n="inst_w4_title">CPLP</span><p class="world-desc" data-i18n="inst_w4_desc">La Communauté des pays de langue portugaise réunit 9 pays sur 4 continents.</p></div>
-        </div>
-      </div>
-    </section>
-
-        <section class="sec sec--white">
-      <div class="wrap">
-        <div class="sec-head">
-          <span class="sec-eyebrow" data-i18n="inst_pio_eyebrow">UN PAYS PIONNIER</span>
-          <h2 class="sec-title" data-i18n="inst_pio_title">Des choix qui ont fait école</h2>
-        </div>
-        <div class="pio-grid">
-          <div class="pio-item"><span class="pio-year">1867</span><p class="pio-text" data-i18n="inst_pio1">L'un des premiers pays au monde à abolir la peine de mort pour les crimes civils. Victor Hugo félicite alors le Portugal d'être à l'avant-garde de l'Europe.</p></div>
-          <div class="pio-item"><span class="pio-year">2001</span><p class="pio-text" data-i18n="inst_pio2">Dépénalisation de la consommation de toutes les drogues : les consommateurs sont orientés vers les soins plutôt que vers la prison. Le trafic reste un crime, et les contaminations au VIH liées aux seringues chutent fortement.</p></div>
-          <div class="pio-item"><span class="pio-year">2010</span><p class="pio-text" data-i18n="inst_pio3">Le mariage est ouvert aux couples de même sexe.</p></div>
-          <div class="pio-item"><span class="pio-year" data-i18n="inst_pio4_year">7<sup>e</sup></span><p class="pio-text" data-i18n="inst_pio4">pays le plus pacifique du monde selon le Global Peace Index 2025, et dans le top 10 depuis 2015.</p></div>
-        </div>
-      </div>
-    </section>
-
-    
     </div>
 
     <section class="cta-section">
@@ -3934,7 +3854,7 @@
     <div class="view" id="view-societe">
     <section class="page-hero">
       <div class="page-hero-media">
-        <img src="images/photos/hero-soc.jpg" alt="Alfama, Lisbonne">
+        <img src="images/photos/hero-soc2.jpg" alt="Alfama et le Tage, Lisbonne">
       </div>
       <div class="page-hero-content">
         <div class="page-hero-eyebrow">03 <span>/ 08</span></div>
@@ -4030,6 +3950,57 @@
           <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/e-wind.jpg" alt="Éoliennes" loading="lazy"></div><h3 class="info-title" data-i18n="soc_eco2_title">Champion du renouvelable</h3><p class="info-desc" data-i18n="soc_eco2">Environ 71 % de l'électricité consommée en 2024 venait d'énergies renouvelables : barrages, éoliennes et soleil.</p></article>
           <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/e-cork.jpg" alt="Chêne-liège" loading="lazy"></div><h3 class="info-title" data-i18n="soc_eco3_title">Le pays du liège</h3><p class="info-desc" data-i18n="soc_eco3">Environ la moitié du liège mondial vient du Portugal. On écorce le chêne-liège à la main tous les 9 ans environ, sans abattre l'arbre.</p></article>
           <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="3"/><circle cx="16" cy="9" r="2.4"/><path d="M2.5 20c0-3.6 2.7-6 6-6s6 2.4 6 6M14.5 20c0-2.8 1.8-4.8 4-4.8s4 2 4 4.8"/></svg></span><h3 class="info-title" data-i18n="soc_eco4_title">Terre d'accueil</h3><p class="info-desc" data-i18n="soc_eco4">Longtemps pays d'émigration, le Portugal attire aujourd'hui : plus de 1,5 million d'étrangers y vivaient fin 2024, surtout des Brésiliens.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec--white">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow">PORTUGAL — SUISSE</span>
+          <h2 class="sec-title" data-i18n="inst_cmp_title">Deux systèmes, deux façons de décider</h2>
+        </div>
+        <div class="cmp">
+          <div class="cmp-row cmp-head">
+            <span class="cmp-label"></span>
+            <span class="cmp-country"><img class="bridge-flag" src="images/flag-pt.jpg" alt=""><span data-i18n="country_pt">Portugal</span></span>
+            <span class="cmp-country"><img class="bridge-flag" src="images/flag-ch.jpg" alt=""><span data-i18n="country_ch">Suisse</span></span>
+          </div>
+          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r1">Régime</span><span class="pt" data-i18n="inst_cmp_r1_pt">République semi-présidentielle</span><span class="ch" data-i18n="inst_cmp_r1_ch">État fédéral, démocratie directe</span></div>
+          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r2">Chef de l'État</span><span class="pt" data-i18n="inst_cmp_r2_pt">Un président élu par le peuple</span><span class="ch" data-i18n="inst_cmp_r2_ch">Le Conseil fédéral (7 membres), présidé à tour de rôle</span></div>
+          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r3">Parlement</span><span class="pt" data-i18n="inst_cmp_r3_pt">Une chambre : 230 députés</span><span class="ch" data-i18n="inst_cmp_r3_ch">Deux chambres : 200 + 46 membres</span></div>
+          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r4">Organisation</span><span class="pt" data-i18n="inst_cmp_r4_pt">État unitaire, 2 régions autonomes (Açores, Madère)</span><span class="ch" data-i18n="inst_cmp_r4_ch">26 cantons très autonomes</span></div>
+          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r5">Le peuple vote</span><span class="pt" data-i18n="inst_cmp_r5_pt">Élections ; référendums rares</span><span class="ch" data-i18n="inst_cmp_r5_ch">Votations plusieurs fois par an</span></div>
+          <div class="cmp-row"><span class="cmp-label" data-i18n="inst_cmp_r6">Europe</span><span class="pt" data-i18n="inst_cmp_r6_pt">Membre de l'UE depuis 1986, zone euro</span><span class="ch" data-i18n="inst_cmp_r6_ch">Hors UE : accords bilatéraux, Schengen</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--ivory">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="inst_world_eyebrow">LE PORTUGAL DANS LE MONDE</span>
+          <h2 class="sec-title" data-i18n="inst_world_title">Un petit pays, une grande voix</h2>
+        </div>
+        <div class="world-grid">
+          <div class="world-item"><span class="world-title" data-i18n="inst_w1_title">OTAN</span><p class="world-desc" data-i18n="inst_w1_desc">Membre fondateur en 1949.</p></div>
+          <div class="world-item"><span class="world-title" data-i18n="inst_w2_title">Union européenne</span><p class="world-desc" data-i18n="inst_w2_desc">Membre depuis 1986. António Costa préside le Conseil européen depuis 2024.</p></div>
+          <div class="world-item"><span class="world-title" data-i18n="inst_w3_title">ONU</span><p class="world-desc" data-i18n="inst_w3_desc">António Guterres, ancien Premier ministre portugais, est secrétaire général de l'ONU depuis 2017.</p></div>
+          <div class="world-item"><span class="world-title" data-i18n="inst_w4_title">CPLP</span><p class="world-desc" data-i18n="inst_w4_desc">La Communauté des pays de langue portugaise réunit 9 pays sur 4 continents.</p></div>
+        </div>
+      </div>
+    </section>
+
+        <section class="sec sec--white">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="inst_pio_eyebrow">UN PAYS PIONNIER</span>
+          <h2 class="sec-title" data-i18n="inst_pio_title">Des choix qui ont fait école</h2>
+        </div>
+        <div class="pio-grid">
+          <div class="pio-item"><span class="pio-year">1867</span><p class="pio-text" data-i18n="inst_pio1">L'un des premiers pays au monde à abolir la peine de mort pour les crimes civils. Victor Hugo félicite alors le Portugal d'être à l'avant-garde de l'Europe.</p></div>
+          <div class="pio-item"><span class="pio-year">2001</span><p class="pio-text" data-i18n="inst_pio2">Dépénalisation de la consommation de toutes les drogues : les consommateurs sont orientés vers les soins plutôt que vers la prison. Le trafic reste un crime, et les contaminations au VIH liées aux seringues chutent fortement.</p></div>
+          <div class="pio-item"><span class="pio-year">2010</span><p class="pio-text" data-i18n="inst_pio3">Le mariage est ouvert aux couples de même sexe.</p></div>
+          <div class="pio-item"><span class="pio-year" data-i18n="inst_pio4_year">7<sup>e</sup></span><p class="pio-text" data-i18n="inst_pio4">pays le plus pacifique du monde selon le Global Peace Index 2025, et dans le top 10 depuis 2015.</p></div>
         </div>
       </div>
     </section>
@@ -4359,6 +4330,37 @@
       <p class="cmf-cap" data-i18n="cmf_cap">Les supercars défilent dans les rues de Caramulo.</p>
     </section>
 
+    <section class="sec smf-sec">
+      <div class="wrap">
+        <div class="smf-grid">
+          <div class="sec-head sec-head--left" style="margin-bottom:0;">
+            <span class="sec-eyebrow" data-i18n="smf_eyebrow">SANTA MARIA DA FEIRA — LÀ OÙ J'AI VÉCU</span>
+            <h2 class="sec-title" data-i18n="smf_title">Une ville de château et de chevaliers</h2>
+            <p class="sec-lead" data-i18n="smf_text">Avant de partir pour la Suisse, j'ai vécu à Santa Maria da Feira, à une trentaine de kilomètres au sud de Porto. La ville est dominée par l'un des plus beaux châteaux médiévaux du Portugal.</p>
+          </div>
+          <figure class="smf-photo"><img src="images/photos/smf-castle.jpg" alt="Castelo de Santa Maria da Feira" loading="lazy"><figcaption data-i18n="smf_castle_cap">Le château de Santa Maria da Feira.</figcaption></figure>
+        </div>
+        <div class="smf-grid smf-grid--rev">
+          <div>
+            <a class="video-poster" href="https://youtu.be/s8ip94klcQs" target="_blank" rel="noopener">
+            <img src="images/photos/smf-castle2.jpg" alt="" loading="lazy">
+            <span class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="video-label"><span class="yt-badge">YouTube</span><span data-i18n="video_watch_viagem">Regarder la Viagem Medieval</span></span>
+          </a>
+          </div>
+          <div class="sec-head sec-head--left" style="margin-bottom:0;">
+            <h3 class="sec-title" style="font-size:36px;">Viagem Medieval</h3>
+            <p class="sec-lead" data-i18n="smf_viagem_text">Chaque été depuis 1996, toute la ville remonte le temps pendant une douzaine de jours : tournois de chevaliers, spectacles, musique, fauconnerie et marchés d'époque. C'est la plus grande reconstitution médiévale de la péninsule Ibérique, avec des centaines de milliers de visiteurs.</p>
+            <div class="cmf-facts smf-facts">
+              <div><b>650 000</b><span data-i18n="smf_f1">VISITEURS EN 2025</span></div>
+              <div><b>12</b><span data-i18n="smf_f2">JOURS DE FÊTE</span></div>
+              <div><b>1996</b><span data-i18n="smf_f3">PREMIÈRE ÉDITION</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section">
       <div class="wrap cta-content">
         <h3 class="cta-title" data-i18n="reg_cta_title">Prêt à découvrir les merveilles du Portugal&nbsp;?</h3>
@@ -4475,16 +4477,24 @@
           <ul class="merv-facts"><li data-i18n="m8_f1">Environ 250 km² de surface</li><li data-i18n="m8_f2">Plus de 1 100 km de rives : plus que toute la côte du Portugal continental !</li></ul>
           <div class="merv-cmp">
             <h4 data-i18n="m8_cmp_title">Alqueva ou Léman : lequel est le plus grand&nbsp;?</h4>
-            <svg viewBox="0 0 420 210" class="cmp-svg" role="img" aria-label="Léman 580 km², Alqueva 250 km²">
-              <circle cx="110" cy="105" r="92" class="cmp-leman"/><text x="110" y="100" text-anchor="middle" class="cmp-num">580 km²</text><text x="110" y="122" text-anchor="middle" class="cmp-lbl" data-i18n="m8_leman">Lac Léman</text>
-              <circle cx="295.4" cy="136.6" r="60.4" class="cmp-alq"/><text x="295.4" y="131.6" text-anchor="middle" class="cmp-num">250 km²</text><text x="295.4" y="153.6" text-anchor="middle" class="cmp-lbl" data-i18n="m8_alqueva">Lac d'Alqueva</text>
+            <span class="cmp-sub" data-i18n="m8_len_t">En longueur</span>
+            <svg viewBox="0 0 420 118" class="cmp-svg" role="img" aria-label="Longueur : Alqueva 83 km, Léman 73 km">
+              <text x="10" y="16" class="cmp-lbl2" data-i18n="m8_alqueva">Lac d'Alqueva</text>
+              <rect x="10" y="22" width="299" height="28" rx="14" class="cmp-alq"/><text x="317" y="42" class="cmp-num2">83 km</text>
+              <text x="10" y="76" class="cmp-lbl2" data-i18n="m8_leman">Lac Léman</text>
+              <rect x="10" y="82" width="263" height="28" rx="14" class="cmp-leman"/><text x="281" y="102" class="cmp-num2">73 km</text>
             </svg>
-            <p data-i18n="m8_cmp_text">Le Léman reste environ 2,3 fois plus grand. Les surfaces sont dessinées à l'échelle.</p>
+            <span class="cmp-sub" data-i18n="m8_area_t">En surface</span>
+            <svg viewBox="0 0 420 140" class="cmp-svg" role="img" aria-label="Surface : Léman 580 km², Alqueva 250 km²">
+              <circle cx="110" cy="70" r="62" class="cmp-leman"/><text x="110" y="66" text-anchor="middle" class="cmp-num">580 km²</text><text x="110" y="86" text-anchor="middle" class="cmp-lbl" data-i18n="m8_leman">Lac Léman</text>
+              <circle cx="270.7" cy="91.3" r="40.7" class="cmp-alq"/><text x="270.7" y="96.3" text-anchor="middle" class="cmp-num">250 km²</text><text x="321.4" y="96.3" class="cmp-lbl2" data-i18n="m8_alqueva">Lac d'Alqueva</text>
+            </svg>
+            <p data-i18n="m8_cmp_text">En longueur, Alqueva gagne : environ 83 km d'un bout à l'autre, contre 73 km pour le Léman. Mais en surface, le Léman reste environ 2,3 fois plus grand, car Alqueva est un lac étroit et ramifié qui épouse les vallées du Guadiana. Dessins à l'échelle.</p>
           </div>
         </article>
         <article class="merv-item" data-i="9" id="merv-9">
           <div class="merv-head"><span class="merv-num">9</span><div><span class="merv-place" data-i18n="m9_place">ALGARVE · LAGOA</span><h3 class="merv-name" data-i18n="m9_name">La grotte de Benagil</h3></div></div>
-          <div class="merv-photo" data-opt-photo="photos/r-algarve.jpg"><img src="images/photos/r-algarve.jpg" alt="" loading="lazy"></div>
+          <div class="merv-photo" data-opt-photo="luis/benagil.jpg"><img src="images/luis/benagil.jpg" alt="" loading="lazy"></div>
           
           <p class="merv-text" data-i18n="m9_text">Creusée par la mer dans les falaises dorées de l'Algarve, cette grotte possède une ouverture dans son plafond : « l'œil », par où entre la lumière du soleil. On ne peut l'atteindre que par la mer, en bateau ou en kayak.</p>
           <ul class="merv-facts"><li data-i18n="m9_f1">Accessible uniquement par la mer</li><li data-i18n="m9_f2">Parmi les grottes marines les plus célèbres du monde</li></ul>
@@ -4668,7 +4678,7 @@
           <li><a href="https://commons.wikimedia.org/wiki/File:D%C3%A4mmerung_am_Rio_Douro.jpg" target="_blank" rel="noopener">Dämmerung am Rio Douro.jpg</a> — Wurminister, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Palácio_Nacional_da_Pena,_Sintra,_Portugal,_20250606_1155_0104.jpg" target="_blank" rel="noopener">Palácio Nacional da Pena, Sintra, Portugal, 20250606 1155 0104.jpg</a> — Jakub Hałun, CC BY 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Terraced_vineyards_in_the_douro_valley.jpg" target="_blank" rel="noopener">Terraced vineyards in the douro valley.jpg</a> — Rosino, CC BY-SA 2.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:Lissabon_-_Alfama_-_Largo_de_Santa_Luzia_-_Streetcar_-_2.jpg" target="_blank" rel="noopener">Lissabon - Alfama - Largo de Santa Luzia - Streetcar - 2.jpg</a> — Ingo Mehling, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Vistas_de_Lisboa_desde_el_Mirador_de_Santa_Luzia,_Portugal,_2012-05-12,_DD_01.JPG" target="_blank" rel="noopener">Vistas de Lisboa desde el Mirador de Santa Luzia, Portugal, 2012-05-12, DD 01.JPG</a> — Diego Delso, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Praia_do_Norte,Nazaré_-21_(50656467151).jpg" target="_blank" rel="noopener">Praia do Norte,Nazaré -21 (50656467151).jpg</a> — Luis Ascenso from Lisbon, Portugal, CC BY 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Praia_do_Norte_beach_-_High_waves_-_Nazaré_-_Portugal_(39615885300).jpg" target="_blank" rel="noopener">Praia do Norte beach - High waves - Nazaré - Portugal (39615885300).jpg</a> — Luis Ascenso from Lisbon, Portugal, CC BY 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Portuguese_flag_on_the_"Netos_de_José_Augusto"_whale_watching_boat,_São_Miguel_Island,_Azores,_Portugal_(PPL1-Corrected)-2.jpg" target="_blank" rel="noopener">Portuguese flag on the &quot;Netos de José Augusto&quot; whale watching boat, São Miguel Island, Azores, Portugal (PPL1-Corrected)-2.jpg</a> — Jules Verne Times Two, CC BY-SA 4.0</li>
@@ -5298,9 +5308,9 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "card_merv": "Les merveilles<br>du Portugal",
   "journey_merv": "Merveilles",
   "journey_sport": "Sport",
-  "inst_toggle_title": "Institutions &amp; politique",
-  "inst_toggle_sub": "Comment fonctionne la démocratie portugaise, la Révolution des Œillets et ses deux chansons, la comparaison avec la Suisse… Cliquez pour tout afficher.",
-  "inst_toggle_open": "Afficher",
+  "inst_toggle_title": "Envie d’en savoir plus&nbsp;?",
+  "inst_toggle_sub": "Découvrez les institutions du Portugal : qui gouverne et comment, la Révolution des Œillets et les deux chansons qui l’ont lancée.",
+  "inst_toggle_open": "Découvrir",
   "inst_toggle_close": "Masquer",
   "merv_cta_title": "Et pour finir… ce que le Portugal représente pour moi.",
   "merv_cta_button": "Continuer vers la Conclusion",
@@ -5358,7 +5368,9 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "m8_f1": "Environ 250 km² de surface",
   "m8_f2": "Plus de 1 100 km de rives : plus que toute la côte du Portugal continental !",
   "m8_cmp_title": "Alqueva ou Léman : lequel est le plus grand&nbsp;?",
-  "m8_cmp_text": "Le Léman reste environ 2,3 fois plus grand. Les surfaces sont dessinées à l'échelle.",
+  "m8_len_t": "En longueur",
+  "m8_area_t": "En surface",
+  "m8_cmp_text": "En longueur, Alqueva gagne : environ 83 km d'un bout à l'autre, contre 73 km pour le Léman. Mais en surface, le Léman reste environ 2,3 fois plus grand, car Alqueva est un lac étroit et ramifié qui épouse les vallées du Guadiana. Dessins à l'échelle.",
   "m8_leman": "Lac Léman",
   "m8_alqueva": "Lac d'Alqueva",
   "m9_name": "La grotte de Benagil",
@@ -5869,9 +5881,9 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "card_merv": "Le meraviglie<br>del Portogallo",
   "journey_merv": "Meraviglie",
   "journey_sport": "Sport",
-  "inst_toggle_title": "Istituzioni e politica",
-  "inst_toggle_sub": "Come funziona la democrazia portoghese, la Rivoluzione dei Garofani e le sue due canzoni, il confronto con la Svizzera… Clicca per vedere tutto.",
-  "inst_toggle_open": "Mostra",
+  "inst_toggle_title": "Vuoi saperne di più?",
+  "inst_toggle_sub": "Scopri le istituzioni del Portogallo: chi governa e come, la Rivoluzione dei Garofani e le due canzoni che l’hanno avviata.",
+  "inst_toggle_open": "Scopri",
   "inst_toggle_close": "Nascondi",
   "merv_cta_title": "E per finire… cosa rappresenta il Portogallo per me.",
   "merv_cta_button": "Continua verso la Conclusione",
@@ -5929,7 +5941,9 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "m8_f1": "Circa 250 km² di superficie",
   "m8_f2": "Più di 1 100 km di sponde: più dell'intera costa del Portogallo continentale!",
   "m8_cmp_title": "Alqueva o Lemano: quale è più grande?",
-  "m8_cmp_text": "Il Lemano resta circa 2,3 volte più grande. Le superfici sono disegnate in scala.",
+  "m8_len_t": "In lunghezza",
+  "m8_area_t": "In superficie",
+  "m8_cmp_text": "In lunghezza vince Alqueva: circa 83 km da un capo all'altro, contro i 73 km del Lemano. In superficie, però, il Lemano resta circa 2,3 volte più grande, perché Alqueva è un lago stretto e ramificato che segue le valli del Guadiana. Disegni in scala.",
   "m8_leman": "Lago Lemano",
   "m8_alqueva": "Lago di Alqueva",
   "m9_name": "La grotta di Benagil",
@@ -6440,9 +6454,9 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "card_merv": "Die Wunder<br>Portugals",
   "journey_merv": "Wunder",
   "journey_sport": "Sport",
-  "inst_toggle_title": "Institutionen &amp; Politik",
-  "inst_toggle_sub": "Wie die portugiesische Demokratie funktioniert, die Nelkenrevolution und ihre zwei Lieder, der Vergleich mit der Schweiz … Klicken, um alles anzuzeigen.",
-  "inst_toggle_open": "Anzeigen",
+  "inst_toggle_title": "Lust auf mehr?",
+  "inst_toggle_sub": "Entdecken Sie die Institutionen Portugals: wer regiert und wie, die Nelkenrevolution und die zwei Lieder, die sie auslösten.",
+  "inst_toggle_open": "Entdecken",
   "inst_toggle_close": "Ausblenden",
   "merv_cta_title": "Und zum Schluss … was Portugal für mich bedeutet.",
   "merv_cta_button": "Weiter zum Schluss",
@@ -6500,7 +6514,9 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "m8_f1": "Rund 250 km² Fläche",
   "m8_f2": "Über 1 100 km Ufer – mehr als die ganze Küste des portugiesischen Festlands!",
   "m8_cmp_title": "Alqueva oder Genfersee: Welcher ist grösser?",
-  "m8_cmp_text": "Der Genfersee ist rund 2,3-mal grösser. Die Flächen sind massstabsgetreu dargestellt.",
+  "m8_len_t": "Länge",
+  "m8_area_t": "Fläche",
+  "m8_cmp_text": "In der Länge gewinnt Alqueva: rund 83 km von einem Ende zum anderen, gegenüber 73 km beim Genfersee. Bei der Fläche ist der Genfersee aber rund 2,3-mal grösser, denn Alqueva ist ein schmaler, verzweigter See, der den Tälern des Guadiana folgt. Massstabsgetreu dargestellt.",
   "m8_leman": "Genfersee",
   "m8_alqueva": "Alqueva-Stausee",
   "m9_name": "Die Benagil-Höhle",

@@ -209,12 +209,12 @@ timeline = f'''
       </div>
     </section>
 
-''' + open(os.path.join(HERE, 'smf_section.html')).read() + open(os.path.join(HERE, 'inst_panel.html')).read() + '''
+''' + open(os.path.join(HERE, 'inst_panel.html')).read() + '''
     @@cta:hist:societe@@
 '''
 sub1('''    </section>
     </div>
-  </main>''', '    </section>\n' + render(timeline) + '    </div>\n' + render(open(os.path.join(HERE, 'views.html')).read().replace('@@MERVEILLES@@', merv.view())) + '  </main>')
+  </main>''', '    </section>\n' + render(timeline) + '    </div>\n' + render(open(os.path.join(HERE, 'views.html')).read().replace('@@MERVEILLES@@', merv.view()).replace('@@SOCMORE@@', open(os.path.join(HERE,'soc_more.html')).read()).replace('@@SMF@@', open(os.path.join(HERE,'smf_section.html')).read())) + '  </main>')
 
 # ---------------- SCRIPT ----------------
 script = '''  <script>

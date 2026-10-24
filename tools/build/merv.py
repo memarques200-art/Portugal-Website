@@ -14,7 +14,7 @@ ITEMS = [
     (6, 'jeronimos', ['photos/w-jeronimos.jpg'], True, None),
     (7, 'vgama',     ['photos/w-vgama.jpg', 'photos/w-expo.jpg', 'photos/w-oceanario.jpg'], False, 'expo'),
     (8, 'alqueva',   ['photos/w-alqueva.jpg'], False, 'cmp'),
-    (9, 'benagil',   ['photos/r-algarve.jpg'], False, None),
+    (9, 'benagil',   ['luis/benagil.jpg'], False, None),
 ]
 # small manual offsets so the Lisbon pins don't sit on top of each other
 NUDGE = {'sintra': (-6, -6), 'belem': (-8, 10), 'jeronimos': (10, 12), 'vgama': (12, -10)}
@@ -60,12 +60,22 @@ def item(i, key, photos, seven, extra):
             <div class="merv-ocean"><figure class="merv-sub" data-opt-photo="{photos[2]}"><img src="images/{photos[2]}" alt="" loading="lazy"></figure><h4 i18n="m7_ocean_t"></h4><p i18n="m7_ocean"></p></div>
           </div>'''
     if extra == 'cmp':
-        R1 = 92; R2 = R1 * math.sqrt(250 / 580)
+        K = 3.6  # px per km, both lakes on the same scale
+        L1, L2 = 83 * K, 73 * K
+        R1 = 62; R2 = R1 * math.sqrt(250 / 580)
         more = f'''<div class="merv-cmp">
             <h4 i18n="m8_cmp_title"></h4>
-            <svg viewBox="0 0 420 210" class="cmp-svg" role="img" aria-label="Léman 580 km², Alqueva 250 km²">
-              <circle cx="110" cy="105" r="{R1}" class="cmp-leman"/><text x="110" y="100" text-anchor="middle" class="cmp-num">580 km²</text><text x="110" y="122" text-anchor="middle" class="cmp-lbl" data-i18n="m8_leman">Lac Léman</text>
-              <circle cx="{215+R2+20:.1f}" cy="{105+R1-R2:.1f}" r="{R2:.1f}" class="cmp-alq"/><text x="{215+R2+20:.1f}" y="{100+R1-R2:.1f}" text-anchor="middle" class="cmp-num">250 km²</text><text x="{215+R2+20:.1f}" y="{122+R1-R2:.1f}" text-anchor="middle" class="cmp-lbl" data-i18n="m8_alqueva">Lac d'Alqueva</text>
+            <span class="cmp-sub" i18n="m8_len_t"></span>
+            <svg viewBox="0 0 420 118" class="cmp-svg" role="img" aria-label="Longueur : Alqueva 83 km, Léman 73 km">
+              <text x="10" y="16" class="cmp-lbl2" data-i18n="m8_alqueva">Lac d'Alqueva</text>
+              <rect x="10" y="22" width="{L1:.0f}" height="28" rx="14" class="cmp-alq"/><text x="{10+L1+8:.0f}" y="42" class="cmp-num2">83 km</text>
+              <text x="10" y="76" class="cmp-lbl2" data-i18n="m8_leman">Lac Léman</text>
+              <rect x="10" y="82" width="{L2:.0f}" height="28" rx="14" class="cmp-leman"/><text x="{10+L2+8:.0f}" y="102" class="cmp-num2">73 km</text>
+            </svg>
+            <span class="cmp-sub" i18n="m8_area_t"></span>
+            <svg viewBox="0 0 420 140" class="cmp-svg" role="img" aria-label="Surface : Léman 580 km², Alqueva 250 km²">
+              <circle cx="110" cy="70" r="{R1}" class="cmp-leman"/><text x="110" y="66" text-anchor="middle" class="cmp-num">580 km²</text><text x="110" y="86" text-anchor="middle" class="cmp-lbl" data-i18n="m8_leman">Lac Léman</text>
+              <circle cx="{230+R2:.1f}" cy="{70+R1-R2:.1f}" r="{R2:.1f}" class="cmp-alq"/><text x="{230+R2:.1f}" y="{70+R1-R2+5:.1f}" text-anchor="middle" class="cmp-num">250 km²</text><text x="{230+2*R2+10:.1f}" y="{70+R1-R2+5:.1f}" class="cmp-lbl2" data-i18n="m8_alqueva">Lac d'Alqueva</text>
             </svg>
             <p i18n="m8_cmp_text"></p>
           </div>'''

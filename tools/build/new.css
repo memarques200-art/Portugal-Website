@@ -1100,3 +1100,7 @@
   @media (max-width:900px){ .merv-grid{grid-template-columns:minmax(0, 1fr);} .merv-list, .merv-item{min-width:0;} }
   .info-card--photo .card-photo:has(img[src*="s-eusebio"]){aspect-ratio:4/5;}
   .card-photo img[src*="s-eusebio"]{object-position:50% 15%;}
+  .cmp-sub{display:block; font:700 11px Inter, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--azul); margin:12px 0 2px;}
+  .cmp-lbl2{font:600 12.5px Inter, sans-serif; fill:var(--text);}
+  .cmp-num2{font:800 17px Inter, sans-serif; fill:var(--azul);}
+  .page-hero-media img[src*="hero-soc2"]{object-position:50% 75%;}

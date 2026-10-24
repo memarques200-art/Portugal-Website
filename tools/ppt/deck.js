@@ -268,18 +268,6 @@ divider("02", "hist_hero_title", "hist_hero_subtitle", "hist_hero_text", P("hero
   });
   s.addNotes([1, 2, 3, 4, 5, 6].map((i) => F["hist_s" + i + "_title"] + " — " + F["hist_s" + i + "_text"]).join("\n\n"));
 }
-{
-  const s = add();
-  img(s, P("smf-castle.jpg"), 0, 0, 6.2, H);
-  tb(s, F.smf_eyebrow, { x: 6.75, y: 0.6, w: 6, h: 0.5, fontSize: 12, bold: true, charSpacing: 2, color: COL.red });
-  tb(s, F.smf_title, { x: 6.75, y: 1.05, w: 6, h: 0.9, fontSize: 24, bold: true, fontFace: "Cambria", color: COL.green });
-  tb(s, F.smf_text, { x: 6.75, y: 2.0, w: 6, h: 1.25, fontSize: 15 });
-  tb(s, "Viagem Medieval", { x: 6.75, y: 3.3, w: 6, h: 0.5, fontSize: 22, bold: true, fontFace: "Cambria", color: COL.azul });
-  tb(s, F.smf_viagem_text, { x: 6.75, y: 3.8, w: 6, h: 1.4, fontSize: 14 });
-  [["650 000", F.smf_f1], ["12", F.smf_f2], ["1996", F.smf_f3]].forEach(([b, l], i) => stat(s, 6.75 + i * 2.0, 5.2, 1.9, b, l, ACC[i]));
-  link(s, "▶  Regarder la vidéo", "https://youtu.be/s8ip94klcQs", 6.75, 6.45, 2.8);
-  s.addNotes("Santa Maria da Feira : " + F.smf_text + " " + F.smf_viagem_text);
-}
 
 // =====================================================================
 sec("02 Histoire · Institutions");
@@ -315,36 +303,9 @@ divider("HISTOIRE · INSTITUTIONS", "inst_hero_title", "inst_hero_subtitle", "in
   });
   s.addNotes(F.inst_rev_text);
 }
-{
-  const s = add();
-  head(s, "PORTUGAL — SUISSE", F.inst_cmp_title);
-  const hdr = (t) => ({ text: t, options: { bold: true, color: COL.white, fill: { color: COL.green }, fontSize: 15 } });
-  const rows = [[hdr(""), hdr("🇵🇹  Portugal"), hdr("🇨🇭  Suisse")]];
-  for (let i = 1; i <= 6; i++) {
-    const shade = i % 2 ? COL.tint : COL.white;
-    rows.push([{ text: F["inst_cmp_r" + i].toUpperCase(), options: { bold: true, color: COL.red, fontSize: 12, fill: { color: shade } } }, { text: F["inst_cmp_r" + i + "_pt"], options: { fill: { color: shade } } }, { text: F["inst_cmp_r" + i + "_ch"], options: { fill: { color: shade } } }]);
-  }
-  s.addTable(rows, { x: MX, y: 1.8, w: 12.1, colW: [2.5, 4.8, 4.8], fontSize: 15, fontFace: "Calibri", color: COL.ink, border: { type: "solid", pt: 0.5, color: "D5DAD7" }, rowH: 0.62, valign: "middle", margin: 0.1 });
-}
-{
-  const s = add();
-  head(s, F.inst_pio_eyebrow, F.inst_pio_title);
-  [["1867", F.inst_pio1], ["2001", F.inst_pio2], ["2010", F.inst_pio3], ["7e", F.inst_pio4]].forEach(([b, t], i) => {
-    const x = MX + i * 3.07;
-    card(s, x, 1.75, 2.87, 2.75);
-    tb(s, b, { x: x + 0.2, y: 1.9, w: 2.5, h: 0.75, fontSize: 38, bold: true, fontFace: "Cambria", color: ACC[i] });
-    tb(s, t, { x: x + 0.2, y: 2.7, w: 2.5, h: 1.7, fontSize: 12, fit: "shrink" });
-  });
-  tb(s, F.inst_world_title, { x: MX, y: 4.8, w: 12, h: 0.5, fontSize: 22, bold: true, fontFace: "Cambria", color: COL.green });
-  [["OTAN", F.inst_w1_desc], ["Union européenne", F.inst_w2_desc], ["ONU", F.inst_w3_desc], ["CPLP", F.inst_w4_desc]].forEach(([b, t], i) => {
-    const x = MX + i * 3.07;
-    tb(s, b, { x, y: 5.4, w: 2.9, h: 0.45, fontSize: 18, bold: true, fontFace: "Cambria", color: COL.gold });
-    tb(s, t, { x, y: 5.85, w: 2.87, h: 1.0, fontSize: 12 });
-  });
-}
 // =====================================================================
 sec("03 Société");
-divider("03", "soc_hero_title", "soc_hero_subtitle", "soc_hero_text", P("hero-soc.jpg"));
+divider("03", "soc_hero_title", "soc_hero_subtitle", "soc_hero_text", P("hero-soc2.jpg"));
 {
   const s = add();
   head(s, F.soc_life_eyebrow, F.soc_life_title);
@@ -387,6 +348,33 @@ divider("03", "soc_hero_title", "soc_hero_subtitle", "soc_hero_text", P("hero-so
     if (ph) img(s, ph, x, 1.75, 2.87, 2.0); else { s.addShape(pres.shapes.RECTANGLE, { x, y: 1.75, w: 2.87, h: 2.0, fill: { color: i ? COL.tintBlue : COL.tint }, line: { color: COL.tint } }); tb(s, i ? "1,5 M" : "78 Md €", { x, y: 2.35, w: 2.87, h: 0.8, fontSize: 36, bold: true, fontFace: "Cambria", color: ACC[i], align: "center" }); }
     tb(s, t, { x: x + 0.2, y: 3.9, w: 2.5, h: 0.7, fontSize: 18, bold: true, fontFace: "Cambria", color: COL.green });
     tb(s, d, { x: x + 0.2, y: 4.65, w: 2.5, h: 2.05, fontSize: 13 });
+  });
+}
+{
+  const s = add();
+  head(s, "PORTUGAL — SUISSE", F.inst_cmp_title);
+  const hdr = (t) => ({ text: t, options: { bold: true, color: COL.white, fill: { color: COL.green }, fontSize: 15 } });
+  const rows = [[hdr(""), hdr("🇵🇹  Portugal"), hdr("🇨🇭  Suisse")]];
+  for (let i = 1; i <= 6; i++) {
+    const shade = i % 2 ? COL.tint : COL.white;
+    rows.push([{ text: F["inst_cmp_r" + i].toUpperCase(), options: { bold: true, color: COL.red, fontSize: 12, fill: { color: shade } } }, { text: F["inst_cmp_r" + i + "_pt"], options: { fill: { color: shade } } }, { text: F["inst_cmp_r" + i + "_ch"], options: { fill: { color: shade } } }]);
+  }
+  s.addTable(rows, { x: MX, y: 1.8, w: 12.1, colW: [2.5, 4.8, 4.8], fontSize: 15, fontFace: "Calibri", color: COL.ink, border: { type: "solid", pt: 0.5, color: "D5DAD7" }, rowH: 0.62, valign: "middle", margin: 0.1 });
+}
+{
+  const s = add();
+  head(s, F.inst_pio_eyebrow, F.inst_pio_title);
+  [["1867", F.inst_pio1], ["2001", F.inst_pio2], ["2010", F.inst_pio3], ["7e", F.inst_pio4]].forEach(([b, t], i) => {
+    const x = MX + i * 3.07;
+    card(s, x, 1.75, 2.87, 2.75);
+    tb(s, b, { x: x + 0.2, y: 1.9, w: 2.5, h: 0.75, fontSize: 38, bold: true, fontFace: "Cambria", color: ACC[i] });
+    tb(s, t, { x: x + 0.2, y: 2.7, w: 2.5, h: 1.7, fontSize: 12, fit: "shrink" });
+  });
+  tb(s, F.inst_world_title, { x: MX, y: 4.8, w: 12, h: 0.5, fontSize: 22, bold: true, fontFace: "Cambria", color: COL.green });
+  [["OTAN", F.inst_w1_desc], ["Union européenne", F.inst_w2_desc], ["ONU", F.inst_w3_desc], ["CPLP", F.inst_w4_desc]].forEach(([b, t], i) => {
+    const x = MX + i * 3.07;
+    tb(s, b, { x, y: 5.4, w: 2.9, h: 0.45, fontSize: 18, bold: true, fontFace: "Cambria", color: COL.gold });
+    tb(s, t, { x, y: 5.85, w: 2.87, h: 1.0, fontSize: 12 });
   });
 }
 // =====================================================================
@@ -523,6 +511,18 @@ divider("06", "reg_hero_title", "reg_hero_subtitle", "reg_hero_text", P("hero-re
   link(s, "▶  Regarder la vidéo", "https://youtu.be/jJedre8t3Go", 0.8, 6.55, 2.8);
   s.addNotes(F.cmf_text);
 }
+{
+  const s = add();
+  img(s, P("smf-castle.jpg"), 0, 0, 6.2, H);
+  tb(s, F.smf_eyebrow, { x: 6.75, y: 0.6, w: 6, h: 0.5, fontSize: 12, bold: true, charSpacing: 2, color: COL.red });
+  tb(s, F.smf_title, { x: 6.75, y: 1.05, w: 6, h: 0.9, fontSize: 24, bold: true, fontFace: "Cambria", color: COL.green });
+  tb(s, F.smf_text, { x: 6.75, y: 2.0, w: 6, h: 1.25, fontSize: 15 });
+  tb(s, "Viagem Medieval", { x: 6.75, y: 3.3, w: 6, h: 0.5, fontSize: 22, bold: true, fontFace: "Cambria", color: COL.azul });
+  tb(s, F.smf_viagem_text, { x: 6.75, y: 3.8, w: 6, h: 1.4, fontSize: 14 });
+  [["650 000", F.smf_f1], ["12", F.smf_f2], ["1996", F.smf_f3]].forEach(([b, l], i) => stat(s, 6.75 + i * 2.0, 5.2, 1.9, b, l, ACC[i]));
+  link(s, "▶  Regarder la vidéo", "https://youtu.be/s8ip94klcQs", 6.75, 6.45, 2.8);
+  s.addNotes("Santa Maria da Feira : " + F.smf_text + " " + F.smf_viagem_text);
+}
 
 // =====================================================================
 sec("07 Merveilles");
@@ -550,7 +550,7 @@ const WONDERS = [
   [6, P("w-jeronimos.jpg"), true],
   [7, P("w-vgama.jpg"), false, null, P("w-oceanario.jpg"), "m7_ocean_t"],
   [8, P("w-alqueva.jpg"), false, null, null, null, true],
-  [9, P("r-algarve.jpg"), false],
+  [9, L("benagil.jpg"), false],
 ];
 WONDERS.forEach(([i, ph, seven, video, ph2, cap2, cmp]) => {
   const s = add(), k = "m" + i;
@@ -577,12 +577,14 @@ WONDERS.forEach(([i, ph, seven, video, ph2, cap2, cmp]) => {
   });
   if (i === 7) tb(s, F.m7_ocean_t + " — " + F.m7_ocean, { x, y: y + 0.05, w, h: 1.1, fontSize: 12, color: COL.grey });
   if (cmp) {
-    const R1 = 0.95, R2 = R1 * Math.sqrt(250 / 580), cy = y + 0.25 + R1;
-    s.addShape(pres.shapes.OVAL, { x: x + 0.3, y: cy - R1, w: 2 * R1, h: 2 * R1, fill: { color: "2B6CB8" }, line: { color: "2B6CB8" } });
-    tb(s, "580 km²\n" + F.m8_leman, { x: x + 0.3, y: cy - 0.35, w: 2 * R1, h: 0.7, fontSize: 13, bold: true, color: COL.white, align: "center" });
-    s.addShape(pres.shapes.OVAL, { x: x + 2.6, y: cy + R1 - 2 * R2, w: 2 * R2, h: 2 * R2, fill: { color: "3BB3A0" }, line: { color: "3BB3A0" } });
-    tb(s, "250 km²\nAlqueva", { x: x + 2.6, y: cy + R1 - R2 - 0.3, w: 2 * R2, h: 0.6, fontSize: 11, bold: true, color: COL.white, align: "center" });
-    tb(s, F.m8_cmp_text, { x: x + 4.0, y: cy - 0.6, w: 1.95, h: 1.4, fontSize: 12, italic: true, color: COL.grey });
+    const K = 4.3 / 83;
+    [[F.m8_alqueva, 83, "3BB3A0"], [F.m8_leman, 73, "2B6CB8"]].forEach(([n, km, c], j) => {
+      const by = y + 0.1 + j * 0.62;
+      tb(s, n, { x, y: by, w: 1.6, h: 0.42, fontSize: 12, bold: true, valign: "middle" });
+      s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: x + 1.6, y: by + 0.05, w: km * K * 0.98, h: 0.32, fill: { color: c }, line: { color: c }, rectRadius: 0.16 });
+      tb(s, km + " km", { x: x + 1.6 + km * K, y: by, w: 1.0, h: 0.42, fontSize: 12, bold: true, color: COL.azul, valign: "middle" });
+    });
+    tb(s, F.m8_cmp_text, { x, y: y + 1.4, w, h: 1.0, fontSize: 11.5, italic: true, color: COL.grey });
   }
   s.addNotes(F[k + "_name"] + ". " + F[k + "_text"] + " " + F[k + "_f1"] + ". " + F[k + "_f2"] + "." + (i === 7 ? " " + F.m7_ocean : ""));
 });
