@@ -2,7 +2,9 @@ import json, re, sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from i18n_new import T
 from i18n_more import T2
-T = {**T, **T2}
+from i18n_merv import T3
+T = {**T, **T2, **T3}
+import merv
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = sys.argv[1]
@@ -97,7 +99,7 @@ for _l in I18N: I18N[_l].pop('concl_quote', None)
 
 # ---------------- head ----------------
 sub1('<title>Portugal — Une présentation</title>',
-     '<title>Portugal — Une présentation</title>\n<meta name="description" content="Une présentation du Portugal par Luís Marques : géographie, histoire, institutions, société, culture, sport et régions.">\n<link rel="icon" href="images/crest.png">')
+     '<title>Portugal — Une présentation</title>\n<meta name="description" content="Une présentation du Portugal par Luís Marques : géographie, histoire, société, culture, sport, régions et merveilles.">\n<link rel="icon" href="images/crest.png">')
 
 # ---------------- CSS ----------------
 css = open(os.path.join(HERE, 'new.css')).read()
@@ -109,11 +111,11 @@ nav_new = '''<ul class="nav-links" id="navLinks">
         <li><a href="#home" class="nav-link active" data-view="home" data-i18n="nav_home">Accueil</a></li>
         <li><a href="#geographie" class="nav-link" data-view="geographie" data-i18n="nav_geo">Géographie</a></li>
         <li><a href="#histoire" class="nav-link" data-view="histoire" data-i18n="nav_hist">Histoire</a></li>
-        <li><a href="#institutions" class="nav-link" data-view="institutions" data-i18n="nav_inst">Institutions</a></li>
         <li><a href="#societe" class="nav-link" data-view="societe" data-i18n="nav_soc">Société</a></li>
         <li><a href="#culture" class="nav-link" data-view="culture" data-i18n="nav_cult">Culture</a></li>
         <li><a href="#sport" class="nav-link" data-view="sport" data-i18n="nav_sport">Sport</a></li>
         <li><a href="#regions" class="nav-link" data-view="regions" data-i18n="nav_reg">Régions</a></li>
+        <li><a href="#merveilles" class="nav-link" data-view="merveilles" data-i18n="nav_merv">Merveilles</a></li>
         <li><a href="#conclusion" class="nav-link" data-view="conclusion" data-i18n="nav_concl">Conclusion</a></li>
       </ul>'''
 html = html.replace(nav_old, nav_new)
@@ -133,6 +135,29 @@ html, n = re.subn(r'<div class="journey-card">\n\s*<img src="([^"]+)" alt="([^"]
 assert n == 8, n
 html, n = re.subn(r'(<span class="journey-label"[^>]*>[^<]*</span>\n\s*</div>\n\s*)</div>', r'\1</a>', html)
 assert n == 8, n
+
+# ---- restructure: journey grid and home cards (Institutions -> Merveilles) ----
+js = html.index('<div class="journey-grid">'); je = html.index('</section>', js)
+JOURNEY = [("geographie","journey_geo","images/photos/j-geo.jpg"),("histoire","journey_hist","images/photos/j-hist.jpg"),("societe","journey_soc","images/photos/j-soc.jpg"),
+           ("culture","journey_cult","images/photos/j-cult.jpg"),("sport","journey_sport","images/photos/hero-sport-card.jpg"),("regions","journey_reg","images/photos/r-douro.jpg"),
+           ("merveilles","journey_merv","images/photos/hero-merv.jpg"),("conclusion","journey_moi","images/photos/j-moi.jpg")]
+jg = '<div class="journey-grid">\n' + ''.join(f'''            <a class="journey-card" href="#{v}" data-view="{v}">
+              <img src="{src}" alt="" loading="lazy">
+              <div class="journey-card-content">
+                <span class="journey-number">0{n+1}</span>
+                <span class="journey-label" data-i18n="{k}">{FR[k]}</span>
+              </div>
+            </a>
+''' for n,(v,k,src) in enumerate(JOURNEY)) + '        </div>\n      </div>\n    '
+html = html[:js] + jg + html[je:]
+ci = re.search(r'\n\s*<a class="card" href="#\w*" data-view="institutions">.*?</a>', html, re.S)
+inst_card = ci.group(0); html = html.replace(inst_card, '')
+merv_card = re.sub(r'<span class="card-icon">.*?</span>\s*<span class="card-label"[^>]*>.*?</span>',
+    '<span class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.6L21 9.5l-5 4.6L17.5 21 12 17.3 6.5 21 8 14.1l-5-4.6 6.4-.9z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>\n          <span class="card-label" data-i18n="card_merv">' + FR["card_merv"] + '</span>',
+    re.sub(r'href="#\w*"', 'href="#merveilles"', inst_card).replace('data-view="institutions"','data-view="merveilles"'), flags=re.S)
+cc = re.search(r'<a class="card" href="#\w*" data-view="conclusion"', html).start()
+cc = html.rindex('\n', 0, cc)
+html = html[:cc] + merv_card + html[cc:]
 
 # existing text fixes (visible FR text must match the dictionary)
 for k in ("closing_quote", "geo_volc_acores_caption", "hist_c4_desc"):
@@ -184,12 +209,12 @@ timeline = f'''
       </div>
     </section>
 
-''' + open(os.path.join(HERE, 'smf_section.html')).read() + '''
-    @@cta:hist:institutions@@
+''' + open(os.path.join(HERE, 'smf_section.html')).read() + open(os.path.join(HERE, 'inst_panel.html')).read() + '''
+    @@cta:hist:societe@@
 '''
 sub1('''    </section>
     </div>
-  </main>''', '    </section>\n' + render(timeline) + '    </div>\n' + render(open(os.path.join(HERE, 'views.html')).read()) + '  </main>')
+  </main>''', '    </section>\n' + render(timeline) + '    </div>\n' + render(open(os.path.join(HERE, 'views.html')).read().replace('@@MERVEILLES@@', merv.view())) + '  </main>')
 
 # ---------------- SCRIPT ----------------
 script = '''  <script>
@@ -234,13 +259,26 @@ script = '''  <script>
     });
     function viewFromHash(){
       const name = location.hash.replace('#', '') || 'home';
+      if (name === 'institutions') { showView('histoire', false); openInst(true); return; }
       showView(document.getElementById('view-' + name) ? name : 'home', false);
     }
+    // Institutions panel inside Histoire
+    const instToggle = document.getElementById('instToggle');
+    const instPanel = document.getElementById('instPanel');
+    function openInst(scroll){
+      instPanel.hidden = false; instToggle.setAttribute('aria-expanded', 'true'); instToggle.classList.add('open');
+      instPanel.querySelectorAll('.rv').forEach(e => e.classList.add('in'));
+      if (scroll) setTimeout(() => instToggle.scrollIntoView({behavior: 'smooth', block: 'start'}), 60);
+    }
+    instToggle.addEventListener('click', () => {
+      if (instPanel.hidden) openInst(false);
+      else { instPanel.hidden = true; instToggle.setAttribute('aria-expanded', 'false'); instToggle.classList.remove('open'); }
+    });
     window.addEventListener('popstate', viewFromHash);
     viewFromHash();
 
     // Arrow keys move between pages during the presentation
-    const ORDER = ['home','geographie','histoire','institutions','societe','culture','sport','regions','conclusion'];
+    const ORDER = ['home','geographie','histoire','societe','culture','sport','regions','merveilles','conclusion'];
     document.addEventListener('keydown', (e) => {
       if(e.altKey || e.ctrlKey || e.metaKey) return;
       const current = (document.querySelector('.view.active') || {}).id || 'view-home';
@@ -287,7 +325,7 @@ script = '''  <script>
 
     // Reveal on scroll
     try {
-      const sel = '.info-card, .dish-card, .region-card, .story, .pas-card, .fam-photo, .fest-card, .pillar, .step, .tl-item, .world-item, .pio-item, .card, .journey-card, .smf-photo, .video-frame, .life-photos figure';
+      const sel = '.merv-photo, .merv-cmp, .info-card, .dish-card, .region-card, .story, .pas-card, .fam-photo, .fest-card, .pillar, .step, .tl-item, .world-item, .pio-item, .card, .journey-card, .smf-photo, .video-frame, .life-photos figure';
       if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.classList.add('js-reveal');
         const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin: '0px 0px -8% 0px'});
@@ -311,6 +349,29 @@ script = '''  <script>
         card.classList.add('playing');
       });
     });
+
+    // Merveilles: map follows the scroll
+    (function(){
+      const PINS = ''' + merv.PIN_JS + ''';
+      const AX = ''' + str(merv.ARROW_X) + ''';
+      const arrow = document.getElementById('mArrow');
+      const pins = document.querySelectorAll('.mpin');
+      const items = document.querySelectorAll('.merv-item');
+      function activate(i){
+        pins.forEach(p => p.classList.toggle('active', p.dataset.i === String(i)));
+        items.forEach(it => it.classList.toggle('active', it.dataset.i === String(i)));
+        const [x, y] = PINS[i];
+        const cx = (x + AX) / 2;
+        arrow.setAttribute('d', 'M' + (x + 12) + ' ' + y + ' C ' + cx + ' ' + (y - 40) + ', ' + cx + ' ' + (y - 40) + ', ' + AX + ' ' + y);
+        arrow.classList.remove('draw'); void arrow.getBoundingClientRect(); arrow.classList.add('draw');
+      }
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) activate(e.target.dataset.i); }), {rootMargin: '-45% 0px -45% 0px'});
+        items.forEach(it => io.observe(it));
+      }
+      pins.forEach(p => p.addEventListener('click', () => document.getElementById('merv-' + p.dataset.i).scrollIntoView({behavior: 'smooth', block: 'center'})));
+      activate(1);
+    })();
 
     let savedLang = null;
     try { savedLang = localStorage.getItem('lang'); } catch(e) {}

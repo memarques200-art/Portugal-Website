@@ -996,3 +996,107 @@
   .rbar-facts div{background:var(--red);}
   @media (max-width:900px){ .rbar-grid{grid-template-columns:1fr; gap:30px;} }
   @media (min-width:901px){ .pas-grid > .pas-card:last-child{grid-column:span 2;} .pas-grid > .pas-card:last-child .pas-photo{aspect-ratio:16/7;} }
+
+  /* ---------- Institutions : panneau dépliable dans Histoire ---------- */
+  .inst-toggle-sec{padding:56px 0; background:var(--azul-soft);}
+  .inst-toggle{width:100%; display:flex; align-items:center; gap:22px; text-align:left; cursor:pointer; background:var(--green); color:#fff; border:none; border-radius:14px; padding:26px 30px; box-shadow:0 24px 50px -28px rgba(23,33,29,.6); transition:transform .2s ease, background .2s ease; font:inherit;}
+  .inst-toggle:hover{transform:translateY(-2px); background:#1d5a47;}
+  .inst-toggle-icon{flex-shrink:0; width:64px; height:64px; border-radius:50%; background:rgba(255,255,255,.12); display:flex; align-items:center; justify-content:center;}
+  .inst-toggle-icon svg{width:34px; height:34px; stroke:#F2C14E; fill:none;}
+  .inst-toggle-text{flex:1; display:flex; flex-direction:column; gap:6px;}
+  .inst-toggle-title{font-family:'Cormorant Garamond', serif; font-weight:700; font-size:34px; line-height:1.1;}
+  .inst-toggle-sub{font-size:15.5px; line-height:1.55; color:rgba(255,255,255,.88);}
+  .inst-toggle-btn{flex-shrink:0; display:flex; align-items:center; gap:8px; background:var(--red); padding:12px 20px; border-radius:999px; font-weight:800; font-size:14px;}
+  .inst-toggle-btn svg{width:18px; height:18px; stroke:#fff; fill:none; transition:transform .3s ease;}
+  .inst-toggle .lbl-close{display:none;}
+  .inst-toggle.open .lbl-open{display:none;}
+  .inst-toggle.open .lbl-close{display:inline;}
+  .inst-toggle.open .inst-toggle-btn svg{transform:rotate(180deg);}
+  .inst-panel{border-top:4px solid var(--green);}
+  .inst-panel:not([hidden]){animation:panelIn .45s ease;}
+  @keyframes panelIn{from{opacity:0; transform:translateY(-10px);} to{opacity:1; transform:none;}}
+  @media (max-width:700px){
+    .inst-toggle{flex-wrap:wrap; padding:22px;}
+    .inst-toggle-icon{width:50px; height:50px;}
+    .inst-toggle-title{font-size:27px;}
+    .inst-toggle-btn{margin-left:auto;}
+  }
+
+  /* ---------- Merveilles : carte qui suit le défilement ---------- */
+  .merv-sec{background:linear-gradient(180deg, var(--azul-soft) 0%, #F7F9FC 100%);}
+  .merv-grid{display:grid; grid-template-columns:minmax(300px, 0.85fr) 1.15fr; gap:40px; align-items:start;}
+  .merv-map-col{position:sticky; top:100px;}
+  .merv-map{background:#fff; border-radius:16px; padding:14px 0 14px 14px; box-shadow:0 24px 50px -30px rgba(23,33,29,.45); border:1px solid var(--border); overflow:hidden;}
+  .merv-svg{display:block; width:100%; height:auto; max-height:calc(100vh - 150px);}
+  .mland-es{fill:#ECEAE4; stroke:#D7D3C9; stroke-width:1;}
+  .mland-pt{fill:#DCEBDF; stroke:var(--green); stroke-width:1.6; stroke-linejoin:round;}
+  .mlabel-es{font:700 13px Inter, sans-serif; letter-spacing:.2em; fill:#B9B3A6;}
+  .mlabel-sea{font:italic 600 13px 'Cormorant Garamond', serif; fill:#7C9BC2; letter-spacing:.08em;}
+  .mcity{font:600 11px Inter, sans-serif; fill:#56605B;}
+  .mpin{cursor:pointer;}
+  .mpin-dot{fill:var(--green); stroke:#fff; stroke-width:2.5; transition:fill .3s ease, r .3s ease;}
+  .mpin text{font:800 10px Inter, sans-serif; fill:#fff; pointer-events:none;}
+  .mpin-halo{fill:var(--red); opacity:0; transform-origin:center; transform-box:fill-box;}
+  .mpin.active .mpin-dot{fill:var(--red); r:12;}
+  .mpin.active text{font-size:12px;}
+  .mpin.active .mpin-halo{animation:pinPulse 1.6s ease-out infinite;}
+  @keyframes pinPulse{0%{opacity:.55; transform:scale(.7);} 100%{opacity:0; transform:scale(1.9);}}
+  .marrow{fill:none; stroke:var(--red); stroke-width:3; stroke-linecap:round; stroke-dasharray:420; stroke-dashoffset:420;}
+  .marrow.draw{animation:drawArrow .7s ease forwards;}
+  @keyframes drawArrow{to{stroke-dashoffset:0;}}
+  .marrow-head{fill:var(--red);}
+
+  .merv-list{display:flex; flex-direction:column; gap:28px;}
+  .merv-item{background:#fff; border-radius:16px; padding:26px; border:1px solid var(--border); box-shadow:0 20px 44px -32px rgba(23,33,29,.45); opacity:.55; transform:scale(.985); transition:opacity .4s ease, transform .4s ease, box-shadow .4s ease, border-color .4s ease;}
+  .merv-item.active{opacity:1; transform:none; border-color:var(--red); box-shadow:0 30px 60px -30px rgba(23,33,29,.55);}
+  .merv-head{display:flex; align-items:center; gap:16px; margin-bottom:16px;}
+  .merv-num{flex-shrink:0; width:48px; height:48px; border-radius:50%; background:var(--green); color:#fff; display:flex; align-items:center; justify-content:center; font:700 22px 'Cormorant Garamond', serif;}
+  .merv-item.active .merv-num{background:var(--red);}
+  .merv-place{display:block; font-size:11.5px; font-weight:800; letter-spacing:.12em; color:var(--azul); margin-bottom:2px;}
+  .merv-name{font-size:30px; font-weight:700; line-height:1.1; color:var(--ink);}
+  .merv-photo{position:relative; display:block; border-radius:12px; overflow:hidden; aspect-ratio:16/10; background:#E9E5DC; color:#fff;}
+  .merv-photo img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease;}
+  .merv-item:hover .merv-photo img{transform:scale(1.04);}
+  .merv-video::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.6) 0%, rgba(0,0,0,.1) 55%);}
+  .merv-badge{display:inline-flex; align-items:center; gap:8px; margin-top:14px; font-size:12.5px; font-weight:800; color:#7A5A18; background:#FBF1D9; border:1px solid #EBD6A2; padding:6px 12px; border-radius:999px;}
+  .merv-badge::before{content:"★"; color:var(--gold);}
+  .merv-text{margin-top:14px; font-size:16.5px; font-weight:500; line-height:1.7; color:var(--text);}
+  .merv-facts{list-style:none; margin-top:14px; display:flex; flex-direction:column; gap:8px;}
+  .merv-facts li{position:relative; padding:10px 14px 10px 40px; background:var(--azul-soft); border-radius:10px; font-size:15px; font-weight:600; color:var(--ink);}
+  .merv-facts li::before{content:"✓"; position:absolute; left:14px; top:9px; color:var(--green); font-weight:900;}
+  .merv-sub{margin:16px 0 0; position:relative; border-radius:12px; overflow:hidden;}
+  .merv-sub img{width:100%; aspect-ratio:16/9; object-fit:cover; display:block;}
+  .merv-sub figcaption{position:absolute; left:0; right:0; bottom:0; padding:24px 14px 10px; color:#fff; font-size:13px; font-weight:600; background:linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));}
+  .merv-duo{display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start;}
+  .merv-ocean .merv-sub img{aspect-ratio:16/9;}
+  .merv-ocean h4, .merv-cmp h4{font-family:'Cormorant Garamond', serif; font-size:22px; font-weight:700; margin:12px 0 6px; color:var(--azul);}
+  .merv-ocean p{font-size:14.5px; line-height:1.6; color:var(--text);}
+  .merv-cmp{margin-top:18px; background:var(--azul-soft); border-radius:12px; padding:18px 20px;}
+  .merv-cmp h4{margin-top:0;}
+  .cmp-svg{width:100%; max-width:440px; display:block; margin:6px auto;}
+  .cmp-leman{fill:#2B6CB8; opacity:.9;}
+  .cmp-alq{fill:#3BB3A0; opacity:.95;}
+  .cmp-num{font:800 18px Inter, sans-serif; fill:#fff;}
+  .cmp-lbl{font:600 12.5px Inter, sans-serif; fill:#fff;}
+  .merv-cmp p{font-size:14.5px; color:var(--text); text-align:center;}
+
+  @media (max-width:900px){
+    .merv-grid{grid-template-columns:1fr; gap:20px;}
+    .merv-map-col{top:76px; z-index:5;}
+    .merv-map{padding:6px; border-radius:0 0 14px 14px;}
+    .merv-svg{max-height:32vh;}
+    .marrow, .marrow-head{display:none;}
+    .merv-item{opacity:1; transform:none; padding:18px;}
+    .merv-name{font-size:25px;}
+    .merv-duo{grid-template-columns:1fr;}
+  }
+  .merv-map{padding:10px 0 10px 10px;}
+  .merv-grid{grid-template-columns:minmax(300px, 0.8fr) 1.2fr;}
+  .mpin-dot{r:10;} .mpin.active .mpin-dot{r:13;}
+  .mpin text{font-size:11px;}
+  @media (max-width:900px){ .merv-map{padding:4px;} .merv-svg{max-height:30vh; margin:0 auto;} }
+  .card-photo img[src*="s-eusebio"]{object-position:50% 22%;}
+  .page-hero-media img[src*="hero-merv"]{object-position:65% 50%;}
+  @media (max-width:900px){ .merv-grid{grid-template-columns:minmax(0, 1fr);} .merv-list, .merv-item{min-width:0;} }
+  .info-card--photo .card-photo:has(img[src*="s-eusebio"]){aspect-ratio:4/5;}
+  .card-photo img[src*="s-eusebio"]{object-position:50% 15%;}

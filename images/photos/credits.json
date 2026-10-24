@@ -439,14 +439,6 @@
   "w": 1100,
   "h": 825
  },
- "s-eusebio.jpg": {
-  "title": "File:Estatua de Eusébio, Estádio da Luz, Lisboa 01.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Estatua_de_Eusébio,_Estádio_da_Luz,_Lisboa_01.jpg",
-  "artist": "GualdimG",
-  "lic": "CC BY-SA 4.0",
-  "w": 1100,
-  "h": 1468
- },
  "c-saojoao.jpg": {
   "title": "File:Festa de Sao Joao (Porto).jpg",
   "page": "https://commons.wikimedia.org/wiki/File:Festa_de_Sao_Joao_(Porto).jpg",
@@ -638,5 +630,93 @@
   "lic": "CC BY-SA 4.0",
   "w": 1100,
   "h": 681
+ },
+ "w-salinas.jpg": {
+  "title": "File:2025-08-03 Salinas de Aveiro.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:2025-08-03_Salinas_de_Aveiro.jpg",
+  "artist": "Alexkom000",
+  "lic": "CC BY 4.0",
+  "w": 1100,
+  "h": 733
+ },
+ "hero-merv.jpg": {
+  "title": "File:Palácio Nacional da Pena, Sintra, Portugal, 20250606 1155 0104.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Palácio_Nacional_da_Pena,_Sintra,_Portugal,_20250606_1155_0104.jpg",
+  "artist": "Jakub Hałun",
+  "lic": "CC BY 4.0",
+  "w": 2560,
+  "h": 1707
+ },
+ "w-pena.jpg": {
+  "title": "File:Sintra Portugal Palácio da Pena-01.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Sintra_Portugal_Palácio_da_Pena-01.jpg",
+  "artist": "CEphoto, Uwe Aranas",
+  "lic": "CC BY-SA 3.0",
+  "w": 1100,
+  "h": 733
+ },
+ "s-eusebio.jpg": {
+  "title": "File:Eusebio statue 2010.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Eusebio_statue_2010.jpg",
+  "artist": "Erik Cleves Kristensen",
+  "lic": "CC BY 2.0",
+  "w": 1100,
+  "h": 1467
+ },
+ "w-expo.jpg": {
+  "title": "File:Lisboa - Parque das Nações - 20170814 - 02 -.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Lisboa_-_Parque_das_Nações_-_20170814_-_02_-.jpg",
+  "artist": "Mathieu Kappler",
+  "lic": "CC BY-SA 4.0",
+  "w": 1100,
+  "h": 825
+ },
+ "w-alqueva.jpg": {
+  "title": "File:Albufeira do Alqueva - Portugal (48347214211).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Albufeira_do_Alqueva_-_Portugal_(48347214211).jpg",
+  "artist": "Vitor Oliveira from Torres Vedras, PORTUGAL",
+  "lic": "CC BY-SA 2.0",
+  "w": 1100,
+  "h": 727
+ },
+ "w-oceanario.jpg": {
+  "title": "File:Oceanário de Lisboa (53870803219).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Oceanário_de_Lisboa_(53870803219).jpg",
+  "artist": "Jorge Franganillo",
+  "lic": "CC BY 2.0",
+  "w": 1100,
+  "h": 660
+ },
+ "w-vgama.jpg": {
+  "title": "File:Vasco da Gama Bridge seen from Parque das Nações, Lisbon, Portugal julesvernex2.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Vasco_da_Gama_Bridge_seen_from_Parque_das_Nações,_Lisbon,_Portugal_julesvernex2.jpg",
+  "artist": "Jules Verne Times Two",
+  "lic": "CC BY-SA 4.0",
+  "w": 1100,
+  "h": 759
+ },
+ "w-douro.jpg": {
+  "title": "File:Břeh naproti Pinhão (Alijó, Portugalsko) 001.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Břeh_naproti_Pinhão_(Alijó,_Portugalsko)_001.jpg",
+  "artist": "Petr Adam Dohnálek",
+  "lic": "CC BY-SA 3.0 cz",
+  "w": 1100,
+  "h": 825
+ },
+ "w-aveiro.jpg": {
+  "title": "File:Canal in Aveiro 19.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Canal_in_Aveiro_19.jpg",
+  "artist": "John Samuel",
+  "lic": "CC BY-SA 4.0",
+  "w": 1100,
+  "h": 733
+ },
+ "w-jeronimos.jpg": {
+  "title": "File:Mosteiro dos Jerónimos - Lisboa - Portugal (34386696080).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Mosteiro_dos_Jerónimos_-_Lisboa_-_Portugal_(34386696080).jpg",
+  "artist": "Vitor Oliveira from Torres Vedras, PORTUGAL",
+  "lic": "CC BY-SA 2.0",
+  "w": 1100,
+  "h": 722
  }
 }

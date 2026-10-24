@@ -59,7 +59,7 @@
 "c-diaportugal": 4,
 "s-ronaldo": 0,
 "s-luz": 0,
-"s-eusebio": 3,
+"s-eusebio": "w-eusebio:5",
 "s-hockey": 1,
 "r-porto": 2,
 "r-coimbra": 1,
@@ -79,5 +79,16 @@
 "geo-south": "x-south:3",
 "smf-castle": 0,
 "smf-castle2": "smf-castle:6",
-"s-rbar": "rbar:6"
+"s-rbar": "rbar:6",
+"w-batalha": 1,
+"w-aveiro": 3,
+"w-salinas": 2,
+"w-pena": 0,
+"hero-merv": "w-pena:4",
+"w-vgama": 6,
+"w-expo": 3,
+"w-oceanario": 1,
+"w-alqueva": 0,
+"w-jeronimos": 2,
+"w-douro": 7
 }

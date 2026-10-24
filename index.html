@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portugal — Une présentation</title>
-<meta name="description" content="Une présentation du Portugal par Luís Marques : géographie, histoire, institutions, société, culture, sport et régions.">
+<meta name="description" content="Une présentation du Portugal par Luís Marques : géographie, histoire, société, culture, sport, régions et merveilles.">
 <link rel="icon" href="images/crest.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2917,6 +2917,110 @@
   @media (max-width:900px){ .rbar-grid{grid-template-columns:1fr; gap:30px;} }
   @media (min-width:901px){ .pas-grid > .pas-card:last-child{grid-column:span 2;} .pas-grid > .pas-card:last-child .pas-photo{aspect-ratio:16/7;} }
 
+  /* ---------- Institutions : panneau dépliable dans Histoire ---------- */
+  .inst-toggle-sec{padding:56px 0; background:var(--azul-soft);}
+  .inst-toggle{width:100%; display:flex; align-items:center; gap:22px; text-align:left; cursor:pointer; background:var(--green); color:#fff; border:none; border-radius:14px; padding:26px 30px; box-shadow:0 24px 50px -28px rgba(23,33,29,.6); transition:transform .2s ease, background .2s ease; font:inherit;}
+  .inst-toggle:hover{transform:translateY(-2px); background:#1d5a47;}
+  .inst-toggle-icon{flex-shrink:0; width:64px; height:64px; border-radius:50%; background:rgba(255,255,255,.12); display:flex; align-items:center; justify-content:center;}
+  .inst-toggle-icon svg{width:34px; height:34px; stroke:#F2C14E; fill:none;}
+  .inst-toggle-text{flex:1; display:flex; flex-direction:column; gap:6px;}
+  .inst-toggle-title{font-family:'Cormorant Garamond', serif; font-weight:700; font-size:34px; line-height:1.1;}
+  .inst-toggle-sub{font-size:15.5px; line-height:1.55; color:rgba(255,255,255,.88);}
+  .inst-toggle-btn{flex-shrink:0; display:flex; align-items:center; gap:8px; background:var(--red); padding:12px 20px; border-radius:999px; font-weight:800; font-size:14px;}
+  .inst-toggle-btn svg{width:18px; height:18px; stroke:#fff; fill:none; transition:transform .3s ease;}
+  .inst-toggle .lbl-close{display:none;}
+  .inst-toggle.open .lbl-open{display:none;}
+  .inst-toggle.open .lbl-close{display:inline;}
+  .inst-toggle.open .inst-toggle-btn svg{transform:rotate(180deg);}
+  .inst-panel{border-top:4px solid var(--green);}
+  .inst-panel:not([hidden]){animation:panelIn .45s ease;}
+  @keyframes panelIn{from{opacity:0; transform:translateY(-10px);} to{opacity:1; transform:none;}}
+  @media (max-width:700px){
+    .inst-toggle{flex-wrap:wrap; padding:22px;}
+    .inst-toggle-icon{width:50px; height:50px;}
+    .inst-toggle-title{font-size:27px;}
+    .inst-toggle-btn{margin-left:auto;}
+  }
+
+  /* ---------- Merveilles : carte qui suit le défilement ---------- */
+  .merv-sec{background:linear-gradient(180deg, var(--azul-soft) 0%, #F7F9FC 100%);}
+  .merv-grid{display:grid; grid-template-columns:minmax(300px, 0.85fr) 1.15fr; gap:40px; align-items:start;}
+  .merv-map-col{position:sticky; top:100px;}
+  .merv-map{background:#fff; border-radius:16px; padding:14px 0 14px 14px; box-shadow:0 24px 50px -30px rgba(23,33,29,.45); border:1px solid var(--border); overflow:hidden;}
+  .merv-svg{display:block; width:100%; height:auto; max-height:calc(100vh - 150px);}
+  .mland-es{fill:#ECEAE4; stroke:#D7D3C9; stroke-width:1;}
+  .mland-pt{fill:#DCEBDF; stroke:var(--green); stroke-width:1.6; stroke-linejoin:round;}
+  .mlabel-es{font:700 13px Inter, sans-serif; letter-spacing:.2em; fill:#B9B3A6;}
+  .mlabel-sea{font:italic 600 13px 'Cormorant Garamond', serif; fill:#7C9BC2; letter-spacing:.08em;}
+  .mcity{font:600 11px Inter, sans-serif; fill:#56605B;}
+  .mpin{cursor:pointer;}
+  .mpin-dot{fill:var(--green); stroke:#fff; stroke-width:2.5; transition:fill .3s ease, r .3s ease;}
+  .mpin text{font:800 10px Inter, sans-serif; fill:#fff; pointer-events:none;}
+  .mpin-halo{fill:var(--red); opacity:0; transform-origin:center; transform-box:fill-box;}
+  .mpin.active .mpin-dot{fill:var(--red); r:12;}
+  .mpin.active text{font-size:12px;}
+  .mpin.active .mpin-halo{animation:pinPulse 1.6s ease-out infinite;}
+  @keyframes pinPulse{0%{opacity:.55; transform:scale(.7);} 100%{opacity:0; transform:scale(1.9);}}
+  .marrow{fill:none; stroke:var(--red); stroke-width:3; stroke-linecap:round; stroke-dasharray:420; stroke-dashoffset:420;}
+  .marrow.draw{animation:drawArrow .7s ease forwards;}
+  @keyframes drawArrow{to{stroke-dashoffset:0;}}
+  .marrow-head{fill:var(--red);}
+
+  .merv-list{display:flex; flex-direction:column; gap:28px;}
+  .merv-item{background:#fff; border-radius:16px; padding:26px; border:1px solid var(--border); box-shadow:0 20px 44px -32px rgba(23,33,29,.45); opacity:.55; transform:scale(.985); transition:opacity .4s ease, transform .4s ease, box-shadow .4s ease, border-color .4s ease;}
+  .merv-item.active{opacity:1; transform:none; border-color:var(--red); box-shadow:0 30px 60px -30px rgba(23,33,29,.55);}
+  .merv-head{display:flex; align-items:center; gap:16px; margin-bottom:16px;}
+  .merv-num{flex-shrink:0; width:48px; height:48px; border-radius:50%; background:var(--green); color:#fff; display:flex; align-items:center; justify-content:center; font:700 22px 'Cormorant Garamond', serif;}
+  .merv-item.active .merv-num{background:var(--red);}
+  .merv-place{display:block; font-size:11.5px; font-weight:800; letter-spacing:.12em; color:var(--azul); margin-bottom:2px;}
+  .merv-name{font-size:30px; font-weight:700; line-height:1.1; color:var(--ink);}
+  .merv-photo{position:relative; display:block; border-radius:12px; overflow:hidden; aspect-ratio:16/10; background:#E9E5DC; color:#fff;}
+  .merv-photo img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease;}
+  .merv-item:hover .merv-photo img{transform:scale(1.04);}
+  .merv-video::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.6) 0%, rgba(0,0,0,.1) 55%);}
+  .merv-badge{display:inline-flex; align-items:center; gap:8px; margin-top:14px; font-size:12.5px; font-weight:800; color:#7A5A18; background:#FBF1D9; border:1px solid #EBD6A2; padding:6px 12px; border-radius:999px;}
+  .merv-badge::before{content:"★"; color:var(--gold);}
+  .merv-text{margin-top:14px; font-size:16.5px; font-weight:500; line-height:1.7; color:var(--text);}
+  .merv-facts{list-style:none; margin-top:14px; display:flex; flex-direction:column; gap:8px;}
+  .merv-facts li{position:relative; padding:10px 14px 10px 40px; background:var(--azul-soft); border-radius:10px; font-size:15px; font-weight:600; color:var(--ink);}
+  .merv-facts li::before{content:"✓"; position:absolute; left:14px; top:9px; color:var(--green); font-weight:900;}
+  .merv-sub{margin:16px 0 0; position:relative; border-radius:12px; overflow:hidden;}
+  .merv-sub img{width:100%; aspect-ratio:16/9; object-fit:cover; display:block;}
+  .merv-sub figcaption{position:absolute; left:0; right:0; bottom:0; padding:24px 14px 10px; color:#fff; font-size:13px; font-weight:600; background:linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));}
+  .merv-duo{display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start;}
+  .merv-ocean .merv-sub img{aspect-ratio:16/9;}
+  .merv-ocean h4, .merv-cmp h4{font-family:'Cormorant Garamond', serif; font-size:22px; font-weight:700; margin:12px 0 6px; color:var(--azul);}
+  .merv-ocean p{font-size:14.5px; line-height:1.6; color:var(--text);}
+  .merv-cmp{margin-top:18px; background:var(--azul-soft); border-radius:12px; padding:18px 20px;}
+  .merv-cmp h4{margin-top:0;}
+  .cmp-svg{width:100%; max-width:440px; display:block; margin:6px auto;}
+  .cmp-leman{fill:#2B6CB8; opacity:.9;}
+  .cmp-alq{fill:#3BB3A0; opacity:.95;}
+  .cmp-num{font:800 18px Inter, sans-serif; fill:#fff;}
+  .cmp-lbl{font:600 12.5px Inter, sans-serif; fill:#fff;}
+  .merv-cmp p{font-size:14.5px; color:var(--text); text-align:center;}
+
+  @media (max-width:900px){
+    .merv-grid{grid-template-columns:1fr; gap:20px;}
+    .merv-map-col{top:76px; z-index:5;}
+    .merv-map{padding:6px; border-radius:0 0 14px 14px;}
+    .merv-svg{max-height:32vh;}
+    .marrow, .marrow-head{display:none;}
+    .merv-item{opacity:1; transform:none; padding:18px;}
+    .merv-name{font-size:25px;}
+    .merv-duo{grid-template-columns:1fr;}
+  }
+  .merv-map{padding:10px 0 10px 10px;}
+  .merv-grid{grid-template-columns:minmax(300px, 0.8fr) 1.2fr;}
+  .mpin-dot{r:10;} .mpin.active .mpin-dot{r:13;}
+  .mpin text{font-size:11px;}
+  @media (max-width:900px){ .merv-map{padding:4px;} .merv-svg{max-height:30vh; margin:0 auto;} }
+  .card-photo img[src*="s-eusebio"]{object-position:50% 22%;}
+  .page-hero-media img[src*="hero-merv"]{object-position:65% 50%;}
+  @media (max-width:900px){ .merv-grid{grid-template-columns:minmax(0, 1fr);} .merv-list, .merv-item{min-width:0;} }
+  .info-card--photo .card-photo:has(img[src*="s-eusebio"]){aspect-ratio:4/5;}
+  .card-photo img[src*="s-eusebio"]{object-position:50% 15%;}
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -2935,11 +3039,11 @@
         <li><a href="#home" class="nav-link active" data-view="home" data-i18n="nav_home">Accueil</a></li>
         <li><a href="#geographie" class="nav-link" data-view="geographie" data-i18n="nav_geo">Géographie</a></li>
         <li><a href="#histoire" class="nav-link" data-view="histoire" data-i18n="nav_hist">Histoire</a></li>
-        <li><a href="#institutions" class="nav-link" data-view="institutions" data-i18n="nav_inst">Institutions</a></li>
         <li><a href="#societe" class="nav-link" data-view="societe" data-i18n="nav_soc">Société</a></li>
         <li><a href="#culture" class="nav-link" data-view="culture" data-i18n="nav_cult">Culture</a></li>
         <li><a href="#sport" class="nav-link" data-view="sport" data-i18n="nav_sport">Sport</a></li>
         <li><a href="#regions" class="nav-link" data-view="regions" data-i18n="nav_reg">Régions</a></li>
+        <li><a href="#merveilles" class="nav-link" data-view="merveilles" data-i18n="nav_merv">Merveilles</a></li>
         <li><a href="#conclusion" class="nav-link" data-view="conclusion" data-i18n="nav_concl">Conclusion</a></li>
       </ul>
 
@@ -2991,12 +3095,6 @@
           <span class="card-underline"><span></span><span></span></span>
         </a>
 
-        <a class="card" href="#" data-view="institutions">
-          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10M20 21V10M2 10l10-6 10 6M6 10v7M10 10v7M14 10v7M18 10v7" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
-          <span class="card-label" data-i18n="card_inst">Institutions<br>&amp; politique</span>
-          <span class="card-underline"><span></span><span></span></span>
-        </a>
-
         <a class="card" href="#" data-view="societe">
           <span class="card-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="2.6" stroke-width="1.4"/><circle cx="17" cy="9" r="2" stroke-width="1.4"/><path d="M4 20c.6-3.4 2.6-5.2 5-5.2s4.4 1.8 5 5.2M15 20c.3-2.3 1.6-3.8 3.5-3.8" stroke-width="1.4" stroke-linecap="round"/></svg></span>
           <span class="card-label" data-i18n="card_pop">Population<br>&amp; société</span>
@@ -3021,6 +3119,12 @@
           <span class="card-underline"><span></span><span></span></span>
         </a>
 
+
+        <a class="card" href="#merveilles" data-view="merveilles">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.6L21 9.5l-5 4.6L17.5 21 12 17.3 6.5 21 8 14.1l-5-4.6 6.4-.9z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+          <span class="card-label" data-i18n="card_merv">Les merveilles<br>du Portugal</span>
+          <span class="card-underline"><span></span><span></span></span>
+        </a>
         <a class="card" href="#" data-view="conclusion">
           <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10a4.5 4.5 0 018.5-2 4.5 4.5 0 018.5 2c0 5.4-7.5 10-7.5 10z" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
           <span class="card-label" data-i18n="card_moi">Ce que le Portugal<br>représente pour moi</span>
@@ -3138,59 +3242,59 @@
         </div>
         <div class="journey-grid">
             <a class="journey-card" href="#geographie" data-view="geographie">
-              <img src="images/photos/j-geo.jpg" alt="Géographie">
+              <img src="images/photos/j-geo.jpg" alt="" loading="lazy">
               <div class="journey-card-content">
                 <span class="journey-number">01</span>
                 <span class="journey-label" data-i18n="journey_geo">Géographie</span>
               </div>
             </a>
             <a class="journey-card" href="#histoire" data-view="histoire">
-              <img src="images/photos/j-hist.jpg" alt="Histoire">
+              <img src="images/photos/j-hist.jpg" alt="" loading="lazy">
               <div class="journey-card-content">
                 <span class="journey-number">02</span>
                 <span class="journey-label" data-i18n="journey_hist">Histoire</span>
               </div>
             </a>
-            <a class="journey-card" href="#institutions" data-view="institutions">
-              <img src="images/photos/inst-saobento.jpg" alt="Institutions">
+            <a class="journey-card" href="#societe" data-view="societe">
+              <img src="images/photos/j-soc.jpg" alt="" loading="lazy">
               <div class="journey-card-content">
                 <span class="journey-number">03</span>
-                <span class="journey-label" data-i18n="journey_inst">Institutions</span>
-              </div>
-            </a>
-            <a class="journey-card" href="#societe" data-view="societe">
-              <img src="images/photos/j-soc.jpg" alt="Société">
-              <div class="journey-card-content">
-                <span class="journey-number">04</span>
                 <span class="journey-label" data-i18n="journey_soc">Société</span>
               </div>
             </a>
             <a class="journey-card" href="#culture" data-view="culture">
-              <img src="images/photos/j-cult.jpg" alt="Culture">
+              <img src="images/photos/j-cult.jpg" alt="" loading="lazy">
               <div class="journey-card-content">
-                <span class="journey-number">05</span>
+                <span class="journey-number">04</span>
                 <span class="journey-label" data-i18n="journey_cult">Culture</span>
               </div>
             </a>
-            <a class="journey-card" href="#culture" data-view="culture">
-              <img src="images/photos/f-nata.jpg" alt="Gastronomie">
+            <a class="journey-card" href="#sport" data-view="sport">
+              <img src="images/photos/hero-sport-card.jpg" alt="" loading="lazy">
               <div class="journey-card-content">
-                <span class="journey-number">06</span>
-                <span class="journey-label" data-i18n="journey_gastro">Gastronomie</span>
+                <span class="journey-number">05</span>
+                <span class="journey-label" data-i18n="journey_sport">Sport</span>
               </div>
             </a>
             <a class="journey-card" href="#regions" data-view="regions">
-              <img src="images/photos/r-douro.jpg" alt="Régions">
+              <img src="images/photos/r-douro.jpg" alt="" loading="lazy">
               <div class="journey-card-content">
-                <span class="journey-number">07</span>
+                <span class="journey-number">06</span>
                 <span class="journey-label" data-i18n="journey_reg">Régions</span>
               </div>
             </a>
+            <a class="journey-card" href="#merveilles" data-view="merveilles">
+              <img src="images/photos/hero-merv.jpg" alt="" loading="lazy">
+              <div class="journey-card-content">
+                <span class="journey-number">07</span>
+                <span class="journey-label" data-i18n="journey_merv">Merveilles</span>
+              </div>
+            </a>
             <a class="journey-card" href="#conclusion" data-view="conclusion">
-              <img src="images/photos/j-moi.jpg" alt="Portugal & moi">
+              <img src="images/photos/j-moi.jpg" alt="" loading="lazy">
               <div class="journey-card-content">
                 <span class="journey-number">08</span>
-                <span class="journey-label" data-i18n="journey_moi">Portugal & moi</span>
+                <span class="journey-label" data-i18n="journey_moi">Portugal &amp; moi</span>
               </div>
             </a>
         </div>
@@ -3637,32 +3741,17 @@
       </div>
     </section>
 
-    <section class="cta-section">
-      <div class="wrap cta-content">
-        <h3 class="cta-title" data-i18n="hist_cta_title">Prêt à découvrir les institutions du Portugal&nbsp;?</h3>
-        <a class="cta-button" href="#institutions" data-view="institutions">
-          <span data-i18n="hist_cta_button">Continuer vers les Institutions</span>
-          <span class="cta-arrow">
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </a>
+    <section class="inst-toggle-sec">
+      <div class="wrap">
+        <button class="inst-toggle" id="instToggle" type="button" aria-expanded="false" aria-controls="instPanel">
+          <span class="inst-toggle-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10M20 21V10M2 10l10-6 10 6M8 10v11M12 10v11M16 10v11" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="inst-toggle-text"><span class="inst-toggle-title" data-i18n="inst_toggle_title">Institutions &amp; politique</span><span class="inst-toggle-sub" data-i18n="inst_toggle_sub">Comment fonctionne la démocratie portugaise, la Révolution des Œillets et ses deux chansons, la comparaison avec la Suisse… Cliquez pour tout afficher.</span></span>
+          <span class="inst-toggle-btn"><span class="lbl-open" data-i18n="inst_toggle_open">Afficher</span><span class="lbl-close" data-i18n="inst_toggle_close">Masquer</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
       </div>
     </section>
-    </div>
+    <div class="inst-panel" id="instPanel" hidden>
 
-    <div class="view" id="view-institutions">
-    <section class="page-hero">
-      <div class="page-hero-media">
-        <img src="images/photos/hero-inst.jpg" alt="Palácio de São Bento, Lisbonne">
-      </div>
-      <div class="page-hero-content">
-        <div class="page-hero-eyebrow">03 <span>/ 08</span></div>
-        <h1 class="page-hero-title" data-i18n="inst_hero_title">Institutions</h1>
-        <p class="page-hero-subtitle" data-i18n="inst_hero_subtitle">Une république démocratique au cœur de l'Europe</p>
-        <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-        <p class="page-hero-text" data-i18n="inst_hero_text">Depuis la Révolution des Œillets de 1974, le Portugal est une démocratie stable, fondée sur la Constitution de 1976.</p>
-      </div>
-    </section>
 
     <section class="geo-stats">
       <div class="wrap">
@@ -3826,11 +3915,14 @@
       </div>
     </section>
 
+    
+    </div>
+
     <section class="cta-section">
       <div class="wrap cta-content">
-        <h3 class="cta-title" data-i18n="inst_cta_title">Prêt à rencontrer les Portugais&nbsp;?</h3>
+        <h3 class="cta-title" data-i18n="hist_cta_title">Prêt à rencontrer les Portugais&nbsp;?</h3>
         <a class="cta-button" href="#societe" data-view="societe">
-          <span data-i18n="inst_cta_button">Continuer vers la Société</span>
+          <span data-i18n="hist_cta_button">Continuer vers la Société</span>
           <span class="cta-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
@@ -3845,7 +3937,7 @@
         <img src="images/photos/hero-soc.jpg" alt="Alfama, Lisbonne">
       </div>
       <div class="page-hero-content">
-        <div class="page-hero-eyebrow">04 <span>/ 08</span></div>
+        <div class="page-hero-eyebrow">03 <span>/ 08</span></div>
         <h1 class="page-hero-title" data-i18n="soc_hero_title">Société</h1>
         <p class="page-hero-subtitle" data-i18n="soc_hero_subtitle">Un peuple chaleureux, ouvert sur le monde</p>
         <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
@@ -3961,7 +4053,7 @@
         <img src="images/photos/hero-cult.jpg" alt="Azulejos de la gare de São Bento, Porto">
       </div>
       <div class="page-hero-content">
-        <div class="page-hero-eyebrow">05 <span>/ 08</span></div>
+        <div class="page-hero-eyebrow">04 <span>/ 08</span></div>
         <h1 class="page-hero-title" data-i18n="cult_hero_title">Culture &amp; gastronomie</h1>
         <p class="page-hero-subtitle" data-i18n="cult_hero_subtitle">Fado, azulejos et saveurs de l'Atlantique</p>
         <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
@@ -4068,7 +4160,7 @@
         <img src="images/photos/hero-sport.jpg" alt="Vague géante à Nazaré">
       </div>
       <div class="page-hero-content">
-        <div class="page-hero-eyebrow">06 <span>/ 08</span></div>
+        <div class="page-hero-eyebrow">05 <span>/ 08</span></div>
         <h1 class="page-hero-title" data-i18n="sport_hero_title">Sport</h1>
         <p class="page-hero-subtitle" data-i18n="sport_hero_subtitle">Une passion nationale</p>
         <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
@@ -4177,7 +4269,7 @@
         <img src="images/photos/hero-reg.jpg" alt="Vignobles en terrasses de la vallée du Douro">
       </div>
       <div class="page-hero-content">
-        <div class="page-hero-eyebrow">07 <span>/ 08</span></div>
+        <div class="page-hero-eyebrow">06 <span>/ 08</span></div>
         <h1 class="page-hero-title" data-i18n="reg_hero_title">Régions</h1>
         <p class="page-hero-subtitle" data-i18n="reg_hero_subtitle">Du Minho à l'Algarve, jusqu'au milieu de l'Atlantique</p>
         <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
@@ -4269,9 +4361,145 @@
 
     <section class="cta-section">
       <div class="wrap cta-content">
-        <h3 class="cta-title" data-i18n="reg_cta_title">Et pour finir… ce que le Portugal représente pour moi.</h3>
+        <h3 class="cta-title" data-i18n="reg_cta_title">Prêt à découvrir les merveilles du Portugal&nbsp;?</h3>
+        <a class="cta-button" href="#merveilles" data-view="merveilles">
+          <span data-i18n="reg_cta_button">Continuer vers les Merveilles</span>
+          <span class="cta-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+    </div>
+
+
+    <div class="view" id="view-merveilles">
+    <section class="page-hero">
+      <div class="page-hero-media">
+        <img src="images/photos/hero-merv.jpg" alt="Palácio da Pena, Sintra">
+      </div>
+      <div class="page-hero-content">
+        <div class="page-hero-eyebrow">07 <span>/ 08</span></div>
+        <h1 class="page-hero-title" data-i18n="merv_hero_title">Merveilles</h1>
+        <p class="page-hero-subtitle" data-i18n="merv_hero_subtitle">Les trésors du Portugal, du nord au sud</p>
+        <div class="page-hero-divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+        <p class="page-hero-text" data-i18n="merv_hero_text">Vignobles, monastères, palais, ponts et lacs : faites défiler la page et suivez la carte.</p>
+      </div>
+    </section>
+
+    <section class="sec merv-sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="merv_map_eyebrow">UN VOYAGE SUR LA CARTE</span>
+          <h2 class="sec-title" data-i18n="merv_map_title">Neuf merveilles à découvrir</h2>
+          <p class="sec-lead" data-i18n="merv_map_lead">Faites défiler : la carte vous montre où se trouve chaque merveille.</p>
+        </div>
+        <div class="merv-grid">
+          <div class="merv-map-col"><div class="merv-map">
+        <svg class="merv-svg" viewBox="25 15 335 724" role="img" aria-label="Carte du Portugal">
+          <defs><marker id="mArrowHead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="marrow-head"/></marker></defs>
+          <path class="mland-es" d="M820.5,-127.7L820.2,-126.4L820.2,-123.6L820.2,-122L823.1,-120.7L824.5,-119.2L824.9,-116.6L824.9,-115.9L825.2,-115.5L826.3,-115.7L827.4,-116.3L829.5,-116.6L831.7,-117.2L832.8,-117.2L834.6,-116.3L835.7,-115.7L835.7,-115L835.3,-114.4L835.3,-113.1L836,-110.9L836.7,-110.4L837.8,-109.8L838.9,-109.6L840,-109.8L841.4,-110.4L841.8,-111.5L842.5,-113.7L843.9,-114.6L846.1,-114.6L849.3,-113.7L853.3,-111.5L854.4,-111.7L855.5,-112.2L856.9,-112.2L859.8,-109.3L860.1,-104.5L859.1,-99.5L857.3,-95.3L856.2,-93.8L851.9,-89.4L851.1,-88.3L852.6,-85.7L854.4,-83.7L856.5,-82.4L859.1,-81.8L861.6,-81.5L863.4,-82.2L864.1,-83.9L864.5,-87.2L865.2,-89.9L867,-91.6L869.1,-92.5L871.3,-92L869.1,-90.3L868.4,-88.5L868.8,-86.8L870.6,-85L872.4,-83.9L878.1,-82.8L881.7,-81.1L885,-78.5L888.9,-78.9L889.7,-78.5L891.5,-77.6L892.2,-76.9L895.4,-76.5L897.2,-76.1L898.3,-74.7L901.9,-72.1L905.5,-71L913.8,-70.4L921.3,-71.7L923.9,-70.8L925.7,-67.3L926,-66.2L926,-65.3L925.7,-64.7L925.3,-64L926,-62.9L927.1,-61.8L927.8,-61.8L928.9,-61.8L930,-61.8L933.2,-59.6L935,-58.3L939,-53.3L939.3,-52.9L939,-52.2L939,-51.8L939.7,-51.5L941.1,-51.5L941.9,-51.3L942.2,-50.4L942.2,-49.8L942.2,-48.9L942.9,-48.3L944,-48.5L945.5,-49.6L946.5,-49.8L946.5,-52.9L949.1,-52.9L954.5,-50.4L957.7,-50.7L959.9,-52L964.9,-55.7L965.6,-54.8L966.3,-55L967.1,-56.1L967.8,-57.5L969.2,-55.9L969.6,-55.9L975.3,-52.4L976.4,-50L979.3,-49.8L982.2,-50.4L984,-51.3L983.6,-48.9L984.3,-46.7L985.4,-44.8L987.2,-43.4L987.6,-42.8L987.9,-41.9L987.9,-41L989,-40.6L990.5,-40.4L991.2,-39.7L991.5,-39.1L992.3,-38.4L996.2,-36.9L999.5,-37.3L1007.4,-39.9L1013.5,-40.8L1015.3,-42.1L1016.7,-42.3L1022.1,-41L1023.9,-40.2L1026.1,-36.7L1027.5,-34.9L1029,-35.1L1031.9,-38.8L1033.7,-40.6L1035.5,-41.3L1038.3,-38.8L1038.3,-38.4L1038.3,-38L1038.3,-37.3L1039.1,-36.9L1040.9,-36.7L1043,-36.7L1046.6,-37.7L1048.4,-37.1L1060.7,-37.3L1064.3,-36.9L1065.7,-37.3L1066.4,-38.4L1066.4,-38.6L1066.8,-40.8L1066.1,-42.8L1064.6,-44.3L1063.2,-44.8L1063.9,-46.1L1064.3,-46.5L1065,-47.2L1063.9,-48.5L1065.3,-52.2L1065,-55L1065.7,-56.8L1067.9,-57.7L1070.7,-57.9L1072.5,-57.7L1075.8,-56.4L1077.6,-56.1L1079.7,-56.1L1081.2,-55.9L1085.5,-53.5L1088.7,-52.4L1089.5,-51.8L1090.9,-50.2L1092,-49.8L1093.1,-50.2L1094.1,-51.1L1094.9,-51.3L1095.9,-51.1L1097.4,-49.8L1098.5,-49.4L1106.7,-48.7L1108.9,-48L1110.7,-46.7L1111.8,-44.8L1112.5,-42.8L1113.6,-41L1115,-39.7L1116.1,-39.7L1119.7,-40.6L1131.9,-40.6L1134.1,-39.9L1133.7,-38.2L1134.5,-37.7L1135.2,-37.5L1136.3,-37.1L1137.7,-34L1139.9,-31.6L1141.7,-27.2L1143.1,-25.3L1142.4,-24.6L1142,-23.3L1141.7,-22L1142.7,-21.5L1142.7,-20.9L1140.9,-18.3L1140.6,-16.7L1142.7,-17L1144.5,-15.6L1144.9,-13.4L1143.1,-12.1L1142.4,-11.9L1140.6,-11.3L1143.8,-6.9L1143.8,-5.3L1144.9,-4.5L1151,-3.8L1151.7,-3.8L1152.8,-4.5L1153.5,-5.1L1153.9,-6L1154.6,-6.4L1160.7,-7.3L1164,-8.6L1165.1,-12.1L1165.4,-12.6L1165.8,-12.6L1166.1,-12.6L1166.1,-12.1L1167.6,-11.7L1168.7,-11.7L1169.7,-12.4L1170.8,-13.2L1171.2,-12.8L1171.2,-12.6L1171.2,-12.1L1173,-11.5L1179.1,-10.6L1181.3,-9.7L1187,-6L1189.2,-5.6L1191.3,-5.3L1192.8,-4.7L1194.2,-2.5L1195.3,2.3L1196.4,4.3L1198.2,5.8L1199.6,6.7L1201.1,6.9L1203.6,6.5L1205,6.3L1206.5,5.4L1207.9,3.6L1210.4,1.9L1210.8,1.2L1211.5,-0.8L1212.2,-1.4L1213.7,-2.1L1218.3,-1.6L1224.5,-3.4L1227.7,-3.8L1230.6,-2.3L1231.7,-1.2L1237.4,1.4L1240.7,2.1L1242.1,2.1L1242.8,4.3L1244.6,6.3L1246.4,7.8L1248.2,8.2L1250.4,9.3L1251.5,9.5L1252.5,9.5L1253.3,8.9L1254,6.9L1254.7,6.3L1256.9,6L1261.2,7.6L1263.7,8L1266.2,8L1266.2,7.3L1264.8,6L1264.1,3.6L1264.8,2.3L1269.1,-0.8L1270.9,-1.6L1272.7,-1.8L1276.7,-1.2L1278.8,-1.6L1280.6,-2.5L1283.5,-5.3L1284.9,-6.2L1286.7,-6.4L1288.5,-6.4L1290,-6.7L1293.2,-9.1L1296.5,-8L1298.3,-9.1L1299.3,-8.9L1302.2,-8.6L1302.9,-8.4L1303.7,-7.1L1304.4,-5.8L1305.5,-4.9L1306.5,-4.3L1308.7,-3.6L1311.2,-3.2L1313.7,-3.4L1318.1,-4L1317.7,-2.3L1317,0.3L1317.3,2.5L1317.3,4.7L1318.8,6.5L1320.6,7.8L1322.7,7.3L1324.9,7.3L1326.3,9.1L1327.1,9.1L1328.1,8.2L1329.2,8.4L1331.7,10L1329.6,14.6L1328.9,15.9L1328.9,17.9L1327.8,18.7L1327.1,19.4L1326.3,20.7L1324.5,20L1320.9,20.7L1317.7,19.4L1317,18.3L1315.2,18.5L1313,20.7L1311.9,23.5L1311.6,28.1L1311.6,31.2L1312.3,33.6L1313.7,35.4L1317.3,37.3L1319.1,39.7L1321.3,43L1321.3,44.6L1319.9,45.9L1319.5,47.6L1320.2,49.6L1320.6,52.2L1320.9,53.1L1321.3,53.8L1323.1,55.3L1323.5,56.4L1323.1,58.8L1320.6,63L1319.5,66.2L1317.7,68L1315.2,71.9L1311.6,71.7L1308,74.3L1306.9,77.8L1304,79.6L1295,86.4L1293.2,89.2L1290,89.9L1287.8,90.5L1284.9,91.2L1283.9,91.4L1283.5,91.6L1282.1,93.2L1281.7,93.6L1281.3,94.7L1280.3,94.9L1279.2,94.7L1277.7,97.8L1265.1,103L1245,112.2L1242.8,114.2L1237.1,118.1L1229.5,121.2L1226.6,123.4L1224.1,126.9L1219.1,135.2L1216.2,139.1L1212.9,142.2L1206.1,145.9L1202.1,147L1195.3,147.7L1188.5,149.4L1186.3,150.7L1185.2,151L1182,150.7L1162.5,156.7L1153.9,157.3L1128.7,166.5L1121.9,168L1121.1,168.5L1119.3,171.8L1119,172.6L1118.3,173.3L1117.2,173.9L1115,172.4L1114.3,172.2L1109.6,172.4L1105.7,173.1L1101.7,174.8L1099.2,176.4L1087.7,187.3L1082.3,194.5L1071.5,205.5L1069.7,209.2L1072.2,210.7L1075.1,211.8L1076.1,211.8L1076.9,211.2L1076.5,210.3L1075.1,209.2L1076.9,209.4L1077.9,210.1L1079,211.2L1081.5,214.2L1084.1,216.2L1085.5,216.2L1087.3,216.9L1087.3,219.5L1085.9,222.1L1084.8,223.6L1078.3,225.4L1075.8,227.8L1070.7,235.5L1067.9,237.9L1064.6,239L1061.7,239.4L1059.2,235.7L1063.9,235L1066.4,236.6L1069.7,234.6L1073.3,228.9L1071.1,228.7L1068.2,228.9L1059.9,231.5L1058.1,232.8L1056.3,234.6L1054.9,237L1051.7,244.4L1050.2,248.4L1048.4,250.8L1046.6,252.8L1045.2,254.9L1044.5,258.2L1041.9,260.9L1035.1,274.2L1034,275.5L1031.1,277.7L1030.1,279.3L1026.5,284.1L1020.7,288.9L1014.6,300.9L1011.7,303.8L1006.7,307.1L1004.1,310.8L999.8,320L997.3,323.9L990.8,330.9L980.4,348L980,349.3L979.7,352.6L978.9,354.8L977.9,356.3L975.7,358.9L974.3,360.9L973.2,363.1L972.5,365.3L971.7,367L968.9,371.6L967.8,373.8L967.1,378.4L967.4,385L967.8,390.5L969.9,399L976.1,412.8L977.1,415L978.6,417.2L977.1,418L975.7,419.1L976.4,421.5L977.5,426.4L978.9,430.5L981.5,435.3L984.3,440.6L987.9,447.2L989.4,449.1L993,452L996.9,455.9L999.1,457.7L1001.6,458.3L1006.3,458.8L1011,460.3L1015.3,462.7L1018.5,466.2L1018.2,466.4L1017.1,467.3L1018.2,467.7L1018.9,468.6L1021.8,470.8L1022.9,470.6L1023.6,472.1L1023.6,474.3L1022.9,475.2L1021.1,475.4L1019.3,475.8L1017.8,476.5L1016.4,478L1014.9,480.7L1014.9,481.1L1014.6,481.5L1012.4,481.5L1011.7,482L1010.6,483.3L1009.5,483.9L1008.5,484.8L1007.4,486.8L1008.1,488.5L1005.9,488.1L1004.5,488.5L1003.4,489.2L1001.6,489.4L998.4,489.4L997.3,490.1L995.9,491.2L994.4,493.4L994.4,495.1L994.8,496.9L994.1,498.8L992.6,500.4L990.8,501L986.9,501L982.2,502.1L979.7,503L976.8,505.4L967.1,509.6L965.6,510.7L964.9,512.2L964.2,512.6L960.6,516.8L959.5,518.8L959.1,521.4L959.1,522.7L958.8,523.1L955.5,523.3L954.1,523.8L953,524.9L952.7,526.9L949.1,526.6L948,531.7L949.4,543.5L948.3,545L946.5,545.5L942.9,545.2L940.8,545.9L939,547.4L937.5,549.4L936.5,551.6L936.1,553.3L935.4,555.3L935,560.8L934.7,569.5L934.7,571.7L933.6,573L931.1,574.1L929.3,576.1L928.2,577.9L924.2,588.1L923.9,590.3L924.2,595.6L923.9,596.9L921.3,593.4L918.8,600.2L917.4,601.3L915.2,602.2L914.5,603.9L914.9,606.3L918.1,612.5L919.2,613.5L922.1,615.7L924.6,617L926.4,617.3L927.5,615.7L929.3,616.8L930,618.4L929.6,619.7L928.2,621L927.1,621.9L926.4,622.3L925.3,622.3L924.6,621.9L923.5,622.3L921,623.4L919.2,623.8L916.3,625.4L912.7,625.4L911.3,625.6L909.8,626.2L907.7,628L906.6,627.3L902.6,625.4L899.4,624.7L892.9,624.5L891.1,624.7L889.7,625.4L888.6,626.5L887.9,627.6L888.2,628.9L889.3,631.1L886.4,630.4L883.2,629.5L882.8,628.2L882.1,626.9L879.9,626.7L877.1,625.4L875.6,624.9L874.2,626.7L873.8,627.8L870.9,627.8L867.7,627.3L864.8,628.9L863,630L858.7,634.3L856.9,635.4L855.1,635.9L854.4,636.3L853.7,636.8L852.9,637.6L852.6,638.3L852.2,638.7L851.1,643.1L851.1,644L850.4,644.6L849.7,644.4L849.3,644L848.6,644L847.5,644.6L845.7,646.4L844.7,646.6L843.2,647L838.2,649.2L835.7,650.8L835.3,652.3L834.6,653.2L832.8,653L832.1,654L831.3,656.5L830.3,659.1L827,663.5L821.3,669.6L818.7,673.3L816.9,678.6L816.2,682.9L815.1,686.7L814.4,690.2L811.5,698L809.4,701.8L809.4,703.3L809.7,704.4L810.1,705.5L810.1,706.6L810.1,707.7L809.4,708.3L808.7,708.8L806.5,709L805.8,709.2L804.7,710.5L801.1,712.9L799.7,714.7L798.6,720.2L797.5,721.7L796.1,722.8L794.3,724.8L793.9,725.6L793.5,728.3L792.8,729.1L792.1,729.8L791,730.2L789.9,730.4L788.9,733.1L787.4,734.4L785.3,735L783.5,735.5L779.5,734.2L777,731.1L774.5,727.6L771.6,724.8L768.3,722.3L766.2,721.7L763.7,721.3L761.9,721.7L758.6,723.4L756.8,723.9L755.7,723.7L753.2,722.3L751.8,722.1L743.9,723.7L742.4,724.5L740.3,729.6L738.5,735.3L735.6,738.1L735.2,738.5L734.1,739.6L731.6,740.7L728,741.4L726.2,740.7L724.4,741.6L721.5,739.6L719.7,738.1L717.9,737.2L716.9,737.5L716.1,738.8L715.1,739L714,738.3L711.5,734.6L708.6,732.4L706.8,732.2L701.4,734.2L692.4,732.6L684.5,733.3L677.3,732L667.2,733.1L665.7,734.2L664.3,735.7L662.1,737.2L658.5,739.6L652.4,739.4L648.5,736.4L646.3,736.6L644.9,737.5L641.3,735.5L639.8,733.5L636.9,733.7L633.3,734L631.9,735.3L626.9,735.9L619.7,733.5L616.1,732.2L611,733.3L603.8,735.5L594.5,732.9L591.9,733.3L589.1,735.7L580.4,737L577.5,737.5L559.5,735.9L558.1,736.4L556.7,737.7L553.8,742.7L553.4,743.8L552,745.3L550.9,747.3L550.5,749.3L547.7,754.5L541.2,755.4L538.7,760.9L535.1,763.3L534,763.9L531.8,764.8L527.9,765.9L523.5,765.7L512,764.2L509.9,764.2L508.8,764.4L507.7,765.3L500.5,770.5L493.7,771.2L489,774.2L487.9,774.7L484.3,775.1L482.5,775.5L481.4,776.4L480,778.2L477.5,783.4L477.1,784.5L475.7,789.3L474.6,791.3L474.2,791.7L473.5,792.6L472.4,793.1L471,793.7L471,794.8L471.3,795.9L470.3,797.7L467,804L466.7,805.3L466.3,811.5L464.1,811.5L463.4,808.6L461.6,807.5L459.5,806.4L457.3,806.4L457.3,807.7L456.2,808.8L455.9,810.4L455.9,812.3L456.6,814.1L455.9,815L456.2,816.9L456.9,818.2L457.3,819.3L456.9,820.6L456.2,821.5L455.5,822.4L453.3,823.3L443.3,827L441.8,827.9L438.9,829L437.1,825L432.8,822.4L431,821.1L428.9,822L426.7,821.3L424.5,820L420.6,818.7L418.8,817.1L416.6,813.9L410.1,807.3L408.3,806L406.2,806L401.5,806.9L396.5,805.1L393.6,801.6L391.8,797.2L389.6,793.3L384.2,790.2L383.5,788.5L383.1,786.3L382.4,783.9L381.7,781.7L378.1,777.5L375.9,771.8L374.1,767.9L372,763.5L369.8,761.5L369.1,760.4L370.2,760L370.9,760L374.1,763.1L375.2,764.4L374.5,765.5L375.2,766.6L377,768.5L378.1,768.1L378.8,767.4L379.9,765.7L382.1,763.1L381.3,763.1L379.2,763.7L377.7,763.5L376.7,761.5L377.4,757.6L376.7,755.2L371.6,750.4L370.5,749.7L363.7,749.3L361.9,748.8L360.5,747.1L359.4,742.1L358.3,739.4L356.9,737L356.1,734.6L356.5,732.4L358.7,730.2L360.5,729.4L364.1,727.8L365.5,726.7L366.6,723.7L365.5,718.2L366.2,715.1L369.5,712.1L377.7,712.7L380.6,709L378.5,710.3L375.9,711.4L373.4,711.4L371.6,709.7L367.3,711.4L365.5,712.9L364.8,715.6L365.5,723.4L364.8,725L361.2,725L358.3,721L355.1,712.5L352.9,708.6L350,705.3L325.5,686.9L323,685.6L320.5,684.9L318.7,684L314.7,680.5L312.6,679.4L310.8,678.6L309,675.5L308.3,672.2L309,670.7L310.1,669.6L313.7,664.1L314.7,661.9L309.7,667.8L306.8,669.8L303.6,669.8L303.6,670.7L306.1,674.2L306.8,676.4L307.2,677.7L305.7,677.9L297.1,673.5L293.9,672.4L289.9,671.1L287.4,672.2L290.3,672.7L291.3,673.3L267.2,674L265.8,674.6L263.6,676.6L261.8,676.8L260,676.2L258.6,675.1L257.1,669.4L256.4,666.5L257.1,664.6L256.4,660.2L255.3,649.9L253.9,645.9L253.9,644.4L253.5,641.6L253.2,638.5L252.5,636.1L251.7,635.2L250.3,633.7L249.2,633L248.5,631.7L248.5,631.5L248.1,630.6L248.1,629.7L247.8,628L247.4,628L247.1,628L247.1,626.7L247.4,626L248.5,624.7L248.5,624.1L248.9,623.6L248.9,623L248.5,622.1L249.6,621.4L252.1,618.6L252.8,617.5L253.5,615.5L254.3,609.4L255.7,605.4L257.5,602.8L266.5,594.9L269.4,589.9L270.5,585.3L272.6,579.4L273,577L273,575.7L272.6,574.6L272.6,573.5L273.3,572.6L276.6,571.9L277.7,571.3L279.1,571.3L280.2,571.7L281.6,571.9L282.7,571.3L284.1,570.9L284.9,570.4L285.9,568.9L286.7,566.3L287.7,565.2L289.5,565.4L294.9,567.8L297.5,567.6L298.5,564.3L299.3,562.8L300.3,558.8L302.1,554.9L303.6,550.5L304.3,548.7L305.4,545L305,544.8L303.6,543.7L300.7,543.9L298.2,544.8L297.8,544.8L297.5,544.6L296,546.3L293.9,547.4L291.3,547.9L289.5,547.9L288.5,546.6L287.4,545.7L283.4,535.2L282.7,534.5L280.9,533.2L280.5,532.5L279.8,531.7L279.5,530.1L278.7,529.3L268.3,515.5L265.4,513.3L264,512.6L265.4,511.1L266.5,509.6L266.5,508L265.4,506.5L266.5,505L268.3,498.4L272.3,492.3L273,490.3L272.6,489.4L271.9,489L271.5,488.5L270.8,487.7L270.8,486.8L270.8,485.5L270.8,482.4L271.5,478L271.9,477.2L272.6,475.4L273,474.7L277.3,471L278.7,469.9L280.5,469.3L282,468L283.4,466.2L283.8,465.1L284.9,464.2L289.5,463.1L291,462.5L292.4,461.2L293.5,460.1L294.2,459.6L294.2,457.7L294.9,455.7L293.5,453.1L295.7,451.3L297.8,448.3L301.1,441.7L302.1,440.4L302.5,439.1L302.5,437.8L301.4,436.9L302.1,434.7L301.4,432.1L300,429.9L298.5,428.3L296,426.6L293.5,425.9L291,426.1L288.5,427.7L287.4,428.1L285.6,427.9L284.1,427.2L283.4,426.1L283.1,425.1L284.1,422.4L284.5,421.1L283.1,418.7L280.9,417.6L278,416.7L275.5,415.4L274.1,413.4L273.3,410.8L273.7,408.2L274.8,405.8L270.1,399.7L267.9,398.1L267.2,396.6L266.9,393.7L266.9,390.9L267.2,389.1L268.3,387.2L268.7,384.3L268.7,381.5L267.9,380.2L263.6,379.1L261.5,378L260,376.9L258.9,374L258.2,372.9L255,371L253.2,369.4L250.3,365.5L248.5,363.8L245.3,354.8L244.5,353L244.2,352.6L265.8,353.7L267.2,353.2L269,352.6L270.8,352.2L274.8,352.4L276.6,351.7L278.7,353.2L281.6,353.2L296.4,351.5L297.8,350.8L298.9,348L298.9,347.1L298.5,346.2L298.5,344.9L299.3,343.8L300.3,341.6L300.7,340.3L300.7,339.5L300,338.1L300,336.8L300.7,335.1L301.4,334.4L303.9,333.3L304.7,332.9L307.2,329.2L307.5,327.9L307.5,325.7L307.9,324.6L307.9,323.9L307.5,322.6L307.5,321.7L307.9,321.3L308.6,320.4L309,320L309.7,316.7L310.1,315.6L309.7,314.3L310.4,312.7L311.9,309.9L307.9,302.7L305.7,300L304.3,297.9L303.2,296.8L302.1,296.5L299.6,296.1L298.5,295.7L297.1,293.9L296.4,289.5L295.7,287.6L296.4,286L297.5,283.2L298.5,281.9L300.3,281.2L304.7,278.4L305.7,278.2L306.5,277.9L308.3,278.2L310.4,277.9L312.2,276.8L312.6,276L312.6,274.9L312.6,273.8L312.9,272.9L313.7,272.2L318,269L318.7,268.1L320.5,265L317.3,261.7L314.7,258L314.4,253.9L316.2,249.3L318.3,246L318.7,244.4L318.3,242.3L317.3,240.5L316.2,239.2L315.1,237.9L315.1,235.7L315.5,233.7L318,229.6L318.7,227.1L318.7,225.6L318.3,223.4L317.6,219L316.2,214.9L316.2,212.9L316.2,210.5L316.2,209.2L316.5,208.5L316.5,207.7L316.2,206.3L316.2,205.5L316.2,202.2L318,201.8L318.3,200L318,198.2L316.9,197.6L315.5,197.2L314.4,196.1L313.7,193.4L311.5,188.2L310.1,185.8L306.8,182.5L306.1,181.2L305.7,179.4L306.8,177.7L307.2,175.3L309.3,174.2L315.5,174.8L318.3,174.4L319.4,173.1L323.4,167.4L324.5,165L324.1,161.9L324.5,160.8L325.9,159.3L329.1,156.2L329.9,155.3L330.6,153.4L334.2,148.1L335.3,146.8L337.1,146.6L343.5,146.4L344.6,145.7L350.4,143.3L353.6,140.9L356.9,137.6L360.1,132.6L360.5,132.4L361.5,132.8L362.3,132.6L362.3,131.9L362.6,130.8L362.3,130.2L362.3,129.9L363.3,129.1L364.8,128.4L368,128.2L368,127.1L371.6,121.2L371.6,120.3L371.6,119.4L371.3,118.3L372,117L374.5,114.4L379.5,107.6L378.5,106.3L377,104.3L372.7,100L368.4,97.3L363.3,95.6L355.4,93.8L354,93.8L353.3,94.5L352.5,95.1L351.1,96L349.7,96.9L348.6,97.1L345.7,96L344.6,94L343.9,91.4L343.5,89L343.2,87.9L342.5,86.8L342.1,85.5L342.8,84.4L343.5,83.3L343.9,82L346.4,71.5L347.5,69.1L345,68.2L343.2,68L342.5,67.1L343.2,61.4L342.8,59.2L341.4,57.7L339.2,56.8L337.8,59.5L334.2,60.5L327.3,60.8L324.1,59.9L320.5,54.4L317.6,54L316.9,57.9L314.4,59.2L308.3,59.7L305.4,59.2L303.2,57.3L301.8,56.6L300.7,56.2L298.5,57.9L294.9,59.5L291.7,57.9L288.8,55.5L285.6,53.5L284.1,53.8L282.3,54.6L280.9,55.7L280.2,56.6L279.8,58.4L280.5,62.5L280.2,64.7L279.1,66.2L278,67.6L274.8,69.5L267.9,71.9L265.8,72.1L262.2,72.1L260.7,72.4L259.3,73.2L257.1,75.9L255.7,77L255.3,75L254.3,72.8L253.2,71.1L251.7,70.4L250.7,70.4L249.2,69.3L248.5,69.3L247.8,70L247.4,70.8L247.4,71.7L246.7,72.6L245.3,73.7L243.5,74.3L241.3,74.6L239.5,74.6L237.7,73.7L237.7,72.4L239.1,68.2L233.7,68L232.3,67.3L229.4,65.4L228,64.9L225.1,66.2L218.6,67.8L216.1,67.6L215,68L214.7,68.6L214.3,69.5L213.6,70.2L210.3,70.2L209.6,66.5L209.3,63L207.5,63.8L207.1,65.4L206.4,67.3L205.7,69.1L203.5,69.1L202.1,68.9L200.6,69.5L199.5,70.8L198.5,72.4L195.2,75.7L194.9,75.7L190.5,77L181.9,76.3L182.3,76.1L182.6,73L182.3,71.3L181.5,70.4L177.9,68.9L176.9,66.7L176.9,64.3L177.9,61.9L181.9,56.4L184.8,53.5L187.7,51.8L189.1,50.5L190.2,48.7L190.5,46.5L189.8,44.6L188,43.3L186.2,42.4L184.1,42.6L182.3,43.5L180.8,43.9L179.7,42.8L179.4,40.8L179.7,35.2L178.7,33.2L177.9,31.9L174.7,34.1L172.9,34.7L171.1,34.7L170.4,34.9L169.7,35.6L167.1,37.8L165.3,38.7L149.9,41.1L148.1,41.7L144.5,44.1L142.7,44.8L139.1,45L137.3,45.2L135.5,46.5L134.7,47.8L133.7,50.5L132.9,51.8L130.8,53.1L128.3,54L126.1,55.1L125,55.9L123.9,57.9L122.1,60.1L120.3,61.4L118.5,62.1L116.7,63L115.3,64.9L113.5,66.2L112.1,65.8L112.1,63.8L110.3,38.7L110.6,36.5L111.7,35.6L115.7,35.4L117.5,34.9L118.2,33.8L117.5,32.7L115.7,31.9L115.3,31L115.7,30.6L118.5,29.2L118.5,28.6L118.9,27.5L119.3,26.2L120.3,25.7L121.1,25.3L122.9,23.1L127.9,19.2L129.3,18.5L129.7,18.3L132.9,15.4L134.7,14.8L136.9,13.5L137.6,12.8L138,11.7L138,7.6L137.6,6.9L137.3,6.7L136.5,6.9L135.1,8.4L134,10.9L132.6,13L130.1,14.1L127.9,14.6L122.5,17L121.4,18.1L120.3,18.3L115.3,18.1L113.1,18.5L113.5,17L114.6,14.1L114.6,12.4L115.3,12.4L116.7,14.4L117.5,13.5L117.5,9.1L117.1,8.2L117.1,7.6L117.5,7.3L118.9,6.9L122.1,7.8L122.9,7.3L123.6,5.8L127.2,1.4L129,-0.1L132.2,-2.1L133.7,-3.6L134.4,-5.3L133.7,-4.9L132.6,-4.9L131.9,-5.3L130.8,-5.3L130.4,-5.1L130.4,-4.9L128.3,-3.6L125.7,-1.6L124.3,-1L122.1,-0.3L118.9,-0.1L115.7,-0.5L113.1,-1.8L112.4,-3.4L112.1,-5.8L111.3,-7.3L109.9,-8L106.3,-8.4L105.6,-9.1L106.7,-10.2L108.5,-11.3L110.3,-12.1L112.1,-12.6L113.1,-12.1L113.9,-11L113.9,-9.7L112.4,-9.1L113.5,-8.4L114.9,-8L116.4,-7.5L117.5,-8L117.8,-9.3L117.5,-10.8L117.5,-12.4L118.9,-13.2L117.5,-17.8L117.5,-20L117.8,-22L118.5,-23.5L120,-24.6L121.1,-24.8L122.5,-26.6L126.1,-34.5L126.8,-37.3L126.5,-37.3L125.7,-35.3L124.7,-33.4L123.2,-31.8L121.4,-31.2L119.6,-31.8L118.5,-33.6L117.5,-35.6L116,-36.7L114.6,-33.8L114.2,-32.3L115.3,-31.2L113.1,-28.1L112.1,-27.5L110.6,-28.6L111,-29.9L109.5,-29.2L106.3,-26.8L107.7,-25.1L106.7,-24.2L103.1,-23.3L102.7,-22.6L102,-19.6L101.3,-19.4L100.2,-18.5L98.7,-17L97.3,-18.5L97.3,-20.9L96.6,-23.1L94.4,-24L93,-25.5L93.3,-28.6L94.8,-31.8L96.2,-33.8L96.2,-35.3L96.2,-37.3L96.9,-39.9L98,-41.5L98.7,-42.3L99.5,-43.2L100.5,-43.7L100.9,-43.9L103.8,-45.6L106.3,-48.9L107.7,-50.2L110.3,-50.9L111,-51.8L111.3,-53.7L111.3,-55.9L109.2,-57L108.8,-53.9L107,-52.2L104.9,-51.3L102.3,-50.9L97.3,-51.5L95.1,-51.1L95.5,-48.9L93,-46.7L91.9,-46.1L90.1,-46.3L88.7,-47.4L87.9,-49.1L87.6,-51.1L86.5,-53.5L87.6,-53.5L88.7,-53.9L89.4,-54.8L90.1,-56.1L89,-57.7L87.9,-58.5L85.8,-59.2L85.8,-60.3L85.4,-62.1L85.1,-62.7L85.4,-63.4L86.1,-64.2L86.5,-65.1L86.5,-66.2L86.5,-67.1L85.8,-67.5L84,-67.7L83.3,-68.4L81.8,-70.6L80.4,-71.2L80.4,-70.4L81.1,-69.1L80.4,-68.2L79.7,-68L78.9,-68.2L78.6,-69.9L77.5,-69.9L76.4,-69.3L75.7,-68.6L75,-67.5L73.9,-64.9L73.2,-63.8L72.8,-64L71.7,-67.1L70.7,-67.7L70.7,-68.6L71.4,-69.7L73.5,-75.2L73.5,-76.1L73.9,-77.2L74.3,-78L74.6,-78.9L75,-80L74.3,-80.9L72.8,-81.8L72.1,-84.8L72.8,-85.7L74.3,-85.7L75,-86.8L75.3,-89.2L76.8,-90.3L77.9,-91.2L78.2,-92.7L79.7,-91.4L81.1,-90.9L82.2,-91.4L83.6,-92.7L84.3,-93.4L84.7,-94L85.1,-94.7L85.8,-95.3L86.9,-95.8L87.6,-96L89.4,-96L89.4,-97.1L87.6,-96.2L85.4,-95.8L83.6,-96L83.6,-97.1L80.7,-95.5L79.3,-95.8L78.2,-98L82.9,-102.3L86.1,-103.9L90.1,-102.3L91.5,-102.3L93.3,-102.8L94.8,-103.2L95.9,-104.3L97.3,-105L98.4,-106.7L98.7,-108.7L99.5,-108.7L101.3,-107.1L104.1,-107.4L106.7,-108.2L108.5,-109.6L106.3,-109.3L105.2,-110.2L103.8,-113.1L103.4,-113.1L102,-113.7L101.3,-114.6L102,-114.8L103.1,-115L107,-116.6L111.3,-119.4L114.2,-120.1L114.9,-121.2L116,-121.8L117.1,-122L118.2,-121.4L121.4,-118.3L123.2,-117.7L125,-117.2L129,-116.1L130.8,-115.9L133.3,-116.8L136.9,-118.8L140.9,-119.8L144.1,-118.3L149.5,-120.7L150.2,-121.6L150.6,-122.7L151.3,-123.8L152.4,-124.4L154.5,-124.9L154.9,-125.3L155.3,-126L155.6,-126.4L161,-127.7L161.4,-126.2L162.5,-124.9L164.6,-122.9L166.1,-124.4L166.4,-125.5L166.1,-128.6L166.8,-130.4L168.9,-130.1L171.8,-128.4L173.3,-127.7L174,-126.6L174.3,-125.1L175.1,-123.8L177.2,-121.6L178.3,-120.3L179,-118.3L179.7,-120.5L179.7,-122.5L179,-126.4L179,-128.4L179.4,-129.7L180.5,-130.6L182.6,-131.7L180.5,-132.8L178.7,-133L175.4,-132.5L173.6,-133.2L171.1,-135.6L169.7,-136.3L171.5,-137.6L181.5,-138.9L182.3,-139.1L183,-139.8L183.3,-140.6L183,-141.5L182.6,-141.7L180.5,-140.6L174.3,-139.8L174.7,-140.2L175.1,-140.4L175.8,-140.6L175.4,-141.1L174.3,-141.5L173.3,-140L171.1,-139.1L166.8,-138.9L167.5,-140.9L167.9,-143.7L168.2,-145.7L169.7,-145L170.7,-147L170,-147.6L169.3,-148.5L168.6,-149.8L168.6,-151.4L169.3,-151.4L170.7,-150.9L171.5,-151.4L174,-150.9L176.9,-152.5L191.3,-163L191.6,-161.4L192.7,-160.8L193.8,-160.6L194.9,-161.2L193.8,-161L193.4,-161.2L193.4,-161.9L193.8,-162.1L194.5,-162.5L194.9,-163L193.1,-164.3L192.7,-165.8L193.1,-167.1L193.4,-168.7L194.1,-169.8L195.6,-170.2L198.8,-170L202.1,-170.9L204.6,-172.4L207.1,-174.6L209.3,-177.2L211.8,-176.8L213.2,-174.8L213.9,-172.6L215.4,-170.9L215.4,-170L214.7,-170.4L213.9,-170.6L213.2,-170.9L212.5,-169.8L212.1,-168.7L212.1,-167.6L212.5,-166.5L211.4,-165.8L210.3,-166.5L210,-165.8L209.6,-165.8L209.3,-165.6L209.3,-164.7L214.3,-164.5L215,-165.4L213.2,-168.2L214.3,-168.9L215.7,-169.1L218.3,-168.2L217.9,-168.7L217.5,-169.5L217.5,-170L219,-171.5L220.8,-173L222.6,-174.1L226.5,-175L228.7,-176.3L230.5,-178.3L231.2,-180.3L231.6,-180.7L232.3,-180.3L233,-179.4L233,-177.9L232.7,-177.2L230.5,-174.6L230.5,-172.6L230.9,-172.2L231.6,-172.2L232.7,-172.6L232.7,-173L232.7,-173.7L232.7,-174.1L233.4,-174.6L234.1,-174.6L235.9,-175.5L236.3,-173.7L238.8,-169.1L238.4,-167.1L239.1,-167.4L240.6,-169.1L241.3,-170.9L242.7,-170.4L243.5,-171.1L244.5,-172.2L246,-172.6L249.9,-172.2L251,-171.7L259.3,-167.4L263.3,-166L269.7,-155.3L274.4,-153.1L274.1,-152.7L273.7,-152.2L273.3,-151.8L273,-151.6L273,-150.5L274.1,-150.1L275.1,-150.3L275.9,-150.9L276.9,-151.6L278.4,-151.6L280.5,-150.9L284.1,-150.3L290.3,-150.5L292.1,-151.6L293.9,-150.5L295.7,-150.3L296.7,-149.4L296.7,-147L296.4,-145.5L295.3,-143.9L294.6,-142.2L295.7,-140L296,-140L296.7,-142L297.1,-144.1L297.5,-145.9L298.9,-147L300,-150.1L305.7,-151.2L315.5,-151.6L316.9,-151.2L323,-151.6L327,-150.3L329.5,-150.1L335.3,-152.9L340.3,-152.5L345.3,-150.7L348.9,-148.7L350,-149.4L351.1,-149.8L353.6,-149.8L353.6,-150.3L353.3,-151.8L353.3,-152.5L354.3,-152L356.9,-150.9L358.3,-150.5L363.3,-151.6L368.4,-151.6L370.2,-151.8L372.7,-152.9L374.9,-153.6L375.6,-154.2L376.3,-154.9L377.7,-155.1L381,-152.9L382.1,-152.5L390,-151.6L391.4,-152.5L393.2,-151.6L394.7,-152.2L396.1,-153.3L397.5,-154L409.4,-154L409.8,-155.3L409.1,-156.2L408.7,-157.3L409.8,-158.6L409.8,-159L409.4,-159.9L409.4,-160.3L412.7,-160.3L413.7,-161L414.1,-162.5L414.8,-163.8L416.3,-163.6L419.5,-162.1L421.7,-160.3L427.4,-154.2L429.2,-151.6L429.9,-151.6L430.3,-153.3L431,-152.9L432.1,-150.5L437.5,-149.8L457.7,-150.5L460.5,-149.8L460.9,-147.9L459.8,-145.9L458,-144.4L458.7,-143.5L459.5,-144.1L461.6,-144.8L462.7,-145.2L463.4,-146.1L463.8,-147L464.5,-147.6L465.9,-147.9L469.9,-147.4L471.7,-147L478.9,-142.4L482.1,-141.3L490.8,-140.9L493.3,-140.2L494.4,-138.5L495.5,-139.3L502.7,-137.4L503.4,-137.6L504.8,-138.7L505.9,-138.9L507,-138.7L509.1,-137.6L516.3,-136L524.6,-132.5L526.4,-131.9L548.7,-129.9L549.1,-129.9L552,-127.5L553.8,-129.5L556.7,-129.9L559.5,-129.3L561.3,-127.5L562.1,-127.5L563.1,-129.3L564.2,-129.7L568.9,-129L581.1,-130.4L584,-132.3L590.1,-134.3L592.7,-134.5L597,-134.5L597.7,-135L597.7,-135.6L598.1,-136.3L598.8,-136.5L599.5,-136.3L602,-134.5L602.4,-135.2L602.7,-135.4L603.5,-135.4L603.8,-135.4L603.5,-135.8L602.4,-136.5L602.4,-137.4L606,-139.5L607.8,-140.4L609.2,-140L610.7,-140.6L611,-140.4L611.4,-140L614.3,-141.5L617.5,-142.2L620.4,-141.7L623.3,-140L618.6,-138L616.8,-136.9L615.7,-135.4L616.8,-134.3L617.1,-133.9L617.5,-133.6L617.1,-133.6L616.8,-133.4L616.8,-132.8L617.9,-132.8L618.9,-133L620.4,-133.6L621.1,-134.3L622.5,-136L622.9,-136.5L623.6,-136.3L624.7,-135L625.4,-134.5L625.8,-135.2L625.8,-136.3L625.1,-137.6L624.3,-138.2L624.3,-138.9L625.8,-138.7L626.5,-138.7L627.2,-138.2L627.2,-138.9L627.6,-138.9L627.9,-138.9L627.2,-140L628.3,-140.4L631.2,-140.6L632.3,-141.3L633.3,-142.2L634.4,-142.6L642,-145L644.5,-144.8L644.5,-142.6L645.9,-142.4L647.4,-141.5L648.5,-140.4L649.5,-140L656.4,-138.9L656.7,-138.2L657.1,-137.6L657.5,-136.9L657.1,-135.8L656.7,-135.6L656,-135.6L655.3,-135.4L654.9,-135.8L653.9,-136.5L653.1,-136.7L652.4,-136L652.1,-135.2L651.3,-134.5L649.9,-133.6L651.7,-133.2L652.8,-131.9L653.9,-131.2L655.3,-133.6L656.4,-132.1L657.8,-131.9L660.7,-132.8L662.1,-132.5L666.8,-131L672.9,-130.1L677.6,-128.6L679.1,-128.4L680.1,-127.7L682.3,-125.3L684.8,-124.4L687,-124L688.8,-123.8L690.9,-125.3L694.2,-123.6L699.2,-119.4L699.2,-120.3L698.1,-123.6L697.8,-125.1L697.1,-126L697.1,-126.6L697.4,-127.1L698.9,-127.5L699.9,-128.8L704.3,-131.4L706.1,-131.9L706.1,-132.8L705.3,-132.8L705.3,-133.6L707.1,-134.5L709.3,-134.7L714.7,-134.5L719.4,-135L721.5,-135.8L723,-136.5L724.4,-136.3L726.6,-134.7L728.4,-132.8L729.5,-131.4L730.5,-128.2L730.9,-125.5L731.3,-126L732,-128.4L732,-129L732,-129.7L732.3,-130.4L732.7,-131L733.8,-131.2L735.2,-130.8L736.3,-130.4L739.2,-129.9L744.9,-127.5L749.3,-126.6L751.8,-125.8L753.6,-123.1L763.3,-118.8L767.3,-117.7L771.6,-117.2L775.9,-117.7L779.1,-118.5L780.2,-118.5L780.9,-118.1L781.7,-117.2L782.4,-116.3L783.8,-115.9L784.2,-116.1L784.5,-116.3L784.9,-116.8L785.6,-116.8L786,-116.6L786.3,-115.9L786.3,-115.2L787.1,-115L789.9,-117.2L791.4,-117.7L793.5,-117.9L800.4,-120.3L802.9,-121.8L804,-122.3L805.4,-122.3L806.5,-121.4L807.2,-120.1L808.3,-119.4L809.4,-120.3L809,-120.7L807.9,-121.6L807.6,-122.3L811.5,-124L815.1,-127.1L818.7,-129L820.5,-127.7Z"/>
+          <path class="mland-pt" d="M258.6,675.1L258.9,675.7L258.9,676.4L259.3,676.8L260,677L260,677.7L259.3,678.8L257.5,677.5L255.3,676.8L253.2,676.8L251,677L248.9,677.9L244.9,680.8L243.1,681.4L237.3,685.4L236.6,686.4L221.5,697.2L217.9,700.2L216.5,700.2L215,699.6L212.9,699.1L206.7,698.9L204.9,698.3L204.2,699.8L203.1,699.6L201.7,698.7L201,698.3L201.7,699.8L202.1,700.7L202.4,701.8L200.3,698.5L196.7,695.2L189.5,691L185.1,690.2L182.3,688.6L178.7,688.9L170.7,689.9L167.1,688.9L163.5,687.3L160.7,688.9L156,689.3L151.7,687.8L151.7,688L146.3,684.9L141.9,684L137.3,684.5L135.8,684.9L134.4,685.8L131.5,689.3L125.4,689.3L123.9,689.7L121.4,691.5L120,691.9L118.5,692.1L116.4,692.8L114.2,694.8L112.1,693.9L110.3,695.9L109.5,696.5L108.5,697L106.3,698.7L105.6,699.1L103.8,698.5L102.7,697.4L101.6,696.7L100.2,697.4L100.9,693.7L101.6,691.9L102,691L105.9,684.7L107.4,681.2L108.8,678.1L107.7,674.2L109.5,672.4L111.7,670L113.1,664.3L112.4,661.9L111.7,660L113.5,656.7L116,653.4L116.7,650.3L118.5,645.9L119.6,640L120.3,636.5L120.3,630.6L120,627.6L118.9,625.6L117.5,623.8L117.5,622.3L118.9,616.6L119.3,612.9L120,609.6L121.4,608.9L124.3,608.5L124.7,605.4L124.7,604.8L123.9,605.7L121.8,606.3L119.3,606.3L118.2,604.1L118.9,597.6L120.3,590.6L120,586.2L119.6,583.1L117.8,579.8L114.6,579.2L110.6,576.5L111,575.5L111.7,575L112.4,574.8L113.1,573.9L118.5,562.3L120.3,553.1L122.5,546.1L122.1,539.3L121.4,531L120.3,523.8L117.8,518.8L115.3,515.9L112.1,512.2L108.5,509.1L105.6,508L107.4,506.5L109.5,507.4L113.1,510.7L117.8,512.4L120,513.5L120,515.2L124.3,515L134.4,517.9L139.4,516.1L136.2,515.9L133.7,515.5L126.5,512L125.4,510.9L125,509.1L124.7,507.1L125,505.6L125.4,504.3L126.5,503.6L126.5,502.8L125,502.1L123.9,500.8L123.6,498.8L124.3,497.5L122.5,497.1L120.7,501.2L118.9,501.9L118.9,502.8L121.1,503L122.1,505L122.1,507.1L121.1,508L118.9,507.8L116.7,507.4L113.1,505.4L109.5,504.1L104.5,505L100.2,510.2L100.9,510.9L95.1,513.3L85.4,514.6L83.3,515.2L81.8,516.6L80,517L77.5,516.1L76.8,516.1L76.8,515.5L76.8,514.6L76.8,513.7L77.1,513.3L77.9,512.2L81.1,509.1L81.5,505.2L81.5,499L79.3,492.9L76.1,488.1L74.6,484.2L76.4,483.1L81.1,482.6L85.4,482.2L87.6,483.5L88.7,485L89.4,485L88.7,482.4L90.1,481.5L93.3,480.7L94.8,480.4L94.8,479.8L96.2,477.8L98,476.3L100.9,474.1L104.5,470.8L104.9,470.6L105.2,470.2L105.6,469.9L105.6,469.1L104.9,467.3L103.4,464.9L103.1,462.1L103.8,460.1L101.3,460.3L100.2,458.3L99.8,455L98.7,452L103.1,442.8L105.6,438.8L109.2,436L111.3,435.6L115.3,435.3L117.5,434.5L121.1,431.6L122.5,430.1L123.6,428.1L120.7,430.1L116.4,433.4L107.7,434.5L106.3,435.6L104.5,439.3L99.8,446.3L94.1,457.5L91.2,461.2L90.1,462.9L89.4,464.9L89.7,467.3L89.7,471.7L90.1,474.7L88.7,477.8L83.6,479.6L77.9,480.4L71.4,479.8L69.6,481.3L67.8,483.5L63.8,481.1L59.5,479.1L57,478.7L53,479.3L50.9,478.7L50.9,476.1L51.6,473.9L50.1,468.2L50.1,465.6L50.9,464.2L51.9,462.7L54.5,460.3L57.7,449.8L57.3,441.9L56.3,437.1L57.3,434L57.7,430.5L61.7,423.5L62.7,420L64.9,415.2L65.3,410.4L66,406.2L64.5,399.9L63.5,397.2L59.9,393.5L59.1,392.2L60.2,391.8L64.5,393.1L72.1,388.3L73.9,386.5L76.1,386.3L77.1,387.8L78.2,388.1L79.3,387L78.6,385.2L77.1,383.7L78.6,381L80.7,378.4L81.8,376.9L83.6,375.8L86.5,373.8L87.9,371.4L89,369.4L90.8,365.7L91.2,363.5L90.8,360.9L92.3,357.4L93,352.6L100.5,331.6L113.1,295L114.6,293L116,294.8L117.5,295.7L121.4,295.7L121.4,294.8L120,293.3L118.5,292.2L116.7,291.5L112.1,290.9L110.3,289.8L109.2,288L109.2,285.2L110.3,281.4L113.5,275.5L120,249.7L121.4,241.6L123.6,235.7L124.7,228L125,227.6L125.4,227.4L125.7,230L125.4,230.9L127.5,227.6L129,226.5L130.4,227.4L131.1,227.4L131.1,226.5L130.8,226.1L130.4,225.4L130.1,224.5L130.4,223.9L131.5,223.2L131.9,223.6L132.2,224.3L132.9,224.7L133.7,224.3L134.7,223.4L135.8,221.2L134.4,220.1L133.3,218.6L133.7,217.3L135.5,216.6L138,216.4L139.8,215.8L141.2,214.7L142.7,213.1L141.2,213.4L138.7,214.7L136.5,215.1L136.2,215.1L135.5,215.3L133.3,214.2L132.6,213.1L131.5,209.6L135.5,204.4L134.4,201.5L134.4,203.7L133.7,205.5L132.9,205.9L132.6,204.2L131.1,207L130.1,210.3L129.3,213.8L129,217.1L128.6,219.3L127.5,222.3L126.1,225L125,226.5L134.4,182.3L134.4,177.5L133.3,168.9L133.3,164.3L135.1,162.6L135.1,161.7L131.5,160.8L129.3,157.3L128.3,152.7L126.5,149.2L126.8,147.5L126.5,145.9L126.1,144.6L125.4,142.9L125.7,138.9L125,137.6L124.3,137.4L123.9,136.1L123.6,134.8L122.1,132.4L121.8,130.4L121.8,128.9L121.4,125.1L122.5,120.8L121.4,117.9L121.1,115.1L120.7,113.3L120.3,111.1L119.3,107.2L118.9,104.3L118.2,102.1L117.8,99.7L117.1,97.5L117.1,94.5L117.5,92.9L119.6,92.1L125.7,91.2L127.5,90.3L129,89.2L130.4,87.9L119.3,91.2L117.1,91.4L115.7,91.2L113.9,90.1L112.1,85.9L112.1,82.2L112.8,76.5L112.1,72.8L112.4,71.3L113.1,70.2L120.3,64.5L123.6,60.8L125,55.9L126.1,55.1L128.3,54L130.8,53.1L132.9,51.8L133.7,50.5L134.7,47.8L135.5,46.5L137.3,45.2L139.1,45L142.7,44.8L144.5,44.1L148.1,41.7L149.9,41.1L165.3,38.7L167.1,37.8L169.7,35.6L170.4,34.9L171.1,34.7L172.9,34.7L174.7,34.1L177.9,31.9L178.7,33.2L179.7,35.2L179.4,40.8L179.7,42.8L180.8,43.9L182.3,43.5L184.1,42.6L186.2,42.4L188,43.3L189.8,44.6L190.5,46.5L190.2,48.7L189.1,50.5L187.7,51.8L184.8,53.5L181.9,56.4L177.9,61.9L176.9,64.3L176.9,66.7L177.9,68.9L181.5,70.4L182.3,71.3L182.6,73L182.3,76.1L181.9,76.3L190.5,77L194.9,75.7L195.2,75.7L198.5,72.4L199.5,70.8L200.6,69.5L202.1,68.9L203.5,69.1L205.7,69.1L206.4,67.3L207.1,65.4L207.5,63.8L209.3,63L209.6,66.5L210.3,70.2L213.6,70.2L214.3,69.5L214.7,68.6L215,68L216.1,67.6L218.6,67.8L225.1,66.2L228,64.9L229.4,65.4L232.3,67.3L233.7,68L239.1,68.2L237.7,72.4L237.7,73.7L239.5,74.6L241.3,74.6L243.5,74.3L245.3,73.7L246.7,72.6L247.4,71.7L247.4,70.8L247.8,70L248.5,69.3L249.2,69.3L250.7,70.4L251.7,70.4L253.2,71.1L254.3,72.8L255.3,75L255.7,77L257.1,75.9L259.3,73.2L260.7,72.4L262.2,72.1L265.8,72.1L267.9,71.9L274.8,69.5L278,67.6L279.1,66.2L280.2,64.7L280.5,62.5L279.8,58.4L280.2,56.6L280.9,55.7L282.3,54.6L284.1,53.8L285.6,53.5L288.8,55.5L291.7,57.9L294.9,59.5L298.5,57.9L300.7,56.2L301.8,56.6L303.2,57.3L305.4,59.2L308.3,59.7L314.4,59.2L316.9,57.9L317.6,54L320.5,54.4L324.1,59.9L327.3,60.8L334.2,60.5L337.8,59.5L339.2,56.8L341.4,57.7L342.8,59.2L343.2,61.4L342.5,67.1L343.2,68L345,68.2L347.5,69.1L346.4,71.5L343.9,82L343.5,83.3L342.8,84.4L342.1,85.5L342.5,86.8L343.2,87.9L343.5,89L343.9,91.4L344.6,94L345.7,96L348.6,97.1L349.7,96.9L351.1,96L352.5,95.1L353.3,94.5L354,93.8L355.4,93.8L363.3,95.6L368.4,97.3L372.7,100L377,104.3L378.5,106.3L379.5,107.6L374.5,114.4L372,117L371.3,118.3L371.6,119.4L371.6,120.3L371.6,121.2L368,127.1L368,128.2L364.8,128.4L363.3,129.1L362.3,129.9L362.3,130.2L362.6,130.8L362.3,131.9L362.3,132.6L361.5,132.8L360.5,132.4L360.1,132.6L356.9,137.6L353.6,140.9L350.4,143.3L344.6,145.7L343.5,146.4L337.1,146.6L335.3,146.8L334.2,148.1L330.6,153.4L329.9,155.3L329.1,156.2L325.9,159.3L324.5,160.8L324.1,161.9L324.5,165L323.4,167.4L319.4,173.1L318.3,174.4L315.5,174.8L309.3,174.2L307.2,175.3L306.8,177.7L305.7,179.4L306.1,181.2L306.8,182.5L310.1,185.8L311.5,188.2L313.7,193.4L314.4,196.1L315.5,197.2L316.9,197.6L318,198.2L318.3,200L318,201.8L316.2,202.2L316.2,205.5L316.2,206.3L316.5,207.7L316.5,208.5L316.2,209.2L316.2,210.5L316.2,212.9L316.2,214.9L317.6,219L318.3,223.4L318.7,225.6L318.7,227.1L318,229.6L315.5,233.7L315.1,235.7L315.1,237.9L316.2,239.2L317.3,240.5L318.3,242.3L318.7,244.4L318.3,246L316.2,249.3L314.4,253.9L314.7,258L317.3,261.7L320.5,265L318.7,268.1L318,269L313.7,272.2L312.9,272.9L312.6,273.8L312.6,274.9L312.6,276L312.2,276.8L310.4,277.9L308.3,278.2L306.5,277.9L305.7,278.2L304.7,278.4L300.3,281.2L298.5,281.9L297.5,283.2L296.4,286L295.7,287.6L296.4,289.5L297.1,293.9L298.5,295.7L299.6,296.1L302.1,296.5L303.2,296.8L304.3,297.9L305.7,300L307.9,302.7L311.9,309.9L310.4,312.7L309.7,314.3L310.1,315.6L309.7,316.7L309,320L308.6,320.4L307.9,321.3L307.5,321.7L307.5,322.6L307.9,323.9L307.9,324.6L307.5,325.7L307.5,327.9L307.2,329.2L304.7,332.9L303.9,333.3L301.4,334.4L300.7,335.1L300,336.8L300,338.1L300.7,339.5L300.7,340.3L300.3,341.6L299.3,343.8L298.5,344.9L298.5,346.2L298.9,347.1L298.9,348L297.8,350.8L296.4,351.5L281.6,353.2L278.7,353.2L276.6,351.7L274.8,352.4L270.8,352.2L269,352.6L267.2,353.2L265.8,353.7L244.2,352.6L244.5,353L245.3,354.8L248.5,363.8L250.3,365.5L253.2,369.4L255,371L258.2,372.9L258.9,374L260,376.9L261.5,378L263.6,379.1L267.9,380.2L268.7,381.5L268.7,384.3L268.3,387.2L267.2,389.1L266.9,390.9L266.9,393.7L267.2,396.6L267.9,398.1L270.1,399.7L274.8,405.8L273.7,408.2L273.3,410.8L274.1,413.4L275.5,415.4L278,416.7L280.9,417.6L283.1,418.7L284.5,421.1L284.1,422.4L283.1,425.1L283.4,426.1L284.1,427.2L285.6,427.9L287.4,428.1L288.5,427.7L291,426.1L293.5,425.9L296,426.6L298.5,428.3L300,429.9L301.4,432.1L302.1,434.7L301.4,436.9L302.5,437.8L302.5,439.1L302.1,440.4L301.1,441.7L297.8,448.3L295.7,451.3L293.5,453.1L294.9,455.7L294.2,457.7L294.2,459.6L293.5,460.1L292.4,461.2L291,462.5L289.5,463.1L284.9,464.2L283.8,465.1L283.4,466.2L282,468L280.5,469.3L278.7,469.9L277.3,471L273,474.7L272.6,475.4L271.9,477.2L271.5,478L270.8,482.4L270.8,485.5L270.8,486.8L270.8,487.7L271.5,488.5L271.9,489L272.6,489.4L273,490.3L272.3,492.3L268.3,498.4L266.5,505L265.4,506.5L266.5,508L266.5,509.6L265.4,511.1L264,512.6L265.4,513.3L268.3,515.5L278.7,529.3L279.5,530.1L279.8,531.7L280.5,532.5L280.9,533.2L282.7,534.5L283.4,535.2L287.4,545.7L288.5,546.6L289.5,547.9L291.3,547.9L293.9,547.4L296,546.3L297.5,544.6L297.8,544.8L298.2,544.8L300.7,543.9L303.6,543.7L305,544.8L305.4,545L304.3,548.7L303.6,550.5L302.1,554.9L300.3,558.8L299.3,562.8L298.5,564.3L297.5,567.6L294.9,567.8L289.5,565.4L287.7,565.2L286.7,566.3L285.9,568.9L284.9,570.4L284.1,570.9L282.7,571.3L281.6,571.9L280.2,571.7L279.1,571.3L277.7,571.3L276.6,571.9L273.3,572.6L272.6,573.5L272.6,574.6L273,575.7L273,577L272.6,579.4L270.5,585.3L269.4,589.9L266.5,594.9L257.5,602.8L255.7,605.4L254.3,609.4L253.5,615.5L252.8,617.5L252.1,618.6L249.6,621.4L248.5,622.1L248.9,623L248.9,623.6L248.5,624.1L248.5,624.7L247.4,626L247.1,626.7L247.1,628L247.4,628L247.8,628L248.1,629.7L248.1,630.6L248.5,631.5L248.5,631.7L249.2,633L250.3,633.7L251.7,635.2L252.5,636.1L253.2,638.5L253.5,641.6L253.9,644.4L253.9,645.9L255.3,649.9L256.4,660.2L257.1,664.6L256.4,666.5L257.1,669.4L258.6,675.1ZM204.6,702.6L209.6,703.3L211.8,702.6L213.9,700L214.3,700.5L214.3,700.9L214.7,701.8L213.9,702.2L213.9,702.6L212.1,704L209.6,704.6L206.7,704.4L204.6,703.5L204.6,702.6ZM95.9,457.9L96.6,457.7L96.6,458.3L95.9,460.3L94.4,462.5L92.6,464.5L91.9,464L93,461.8L93.7,459.9L95.1,458.8L95.5,458.1L95.9,457.9Z"/>
+          <text class="mlabel-sea" x="32" y="591">OCEANO</text>
+          <text class="mlabel-sea" x="32" y="607">ATLÂNTICO</text>
+          <text class="mcity" x="99.0" y="166.1">Porto</text>
+          <path id="mArrow" class="marrow" d="" marker-end="url(#mArrowHead)"/>
+          <g class="mpin" data-i="1" transform="translate(245.0,156.9)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">1</text></g><g class="mpin" data-i="2" transform="translate(134.6,228.2)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">2</text></g><g class="mpin" data-i="3" transform="translate(117.4,355.4)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">3</text></g><g class="mpin" data-i="4" transform="translate(54.9,462.3)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">4</text></g><g class="mpin" data-i="5" transform="translate(70.4,490.7)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">5</text></g><g class="mpin" data-i="6" transform="translate(89.3,492.0)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">6</text></g><g class="mpin" data-i="7" transform="translate(108.0,461.9)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">7</text></g><g class="mpin" data-i="8" transform="translate(250.3,544.9)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">8</text></g><g class="mpin" data-i="9" transform="translate(157.3,688.8)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">9</text></g>
+        </svg>
+          </div></div>
+          <div class="merv-list">
+        <article class="merv-item" data-i="1" id="merv-1">
+          <div class="merv-head"><span class="merv-num">1</span><div><span class="merv-place" data-i18n="m1_place">NORD · ALTO DOURO</span><h3 class="merv-name" data-i18n="m1_name">La vallée du Douro</h3></div></div>
+          <a class="merv-photo merv-video" href="https://youtu.be/zbUbmYi2fHk" target="_blank" rel="noopener"><img src="images/photos/w-douro.jpg" alt="" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="video-label"><span class="yt-badge">YouTube</span><span data-i18n="merv_video_watch">Regarder la vidéo du Douro</span></span></a>
+          
+          <p class="merv-text" data-i18n="m1_text">Pendant des siècles, les hommes ont taillé à la main des terrasses dans les collines de schiste pour y planter la vigne. C'est ici que naît le célèbre vin de Porto, transporté autrefois jusqu'à Porto sur les bateaux rabelos.</p>
+          <ul class="merv-facts"><li data-i18n="m1_f1">Patrimoine mondial de l'UNESCO depuis 2001</li><li data-i18n="m1_f2">Région viticole délimitée dès 1756, l'une des plus anciennes du monde</li></ul>
+          
+        </article>
+        <article class="merv-item" data-i="2" id="merv-2">
+          <div class="merv-head"><span class="merv-num">2</span><div><span class="merv-place" data-i18n="m2_place">CENTRE · RIA DE AVEIRO</span><h3 class="merv-name" data-i18n="m2_name">Aveiro, la « Venise du Portugal »</h3></div></div>
+          <div class="merv-photo" data-opt-photo="photos/w-aveiro.jpg"><img src="images/photos/w-aveiro.jpg" alt="" loading="lazy"></div>
+          
+          <p class="merv-text" data-i18n="m2_text">Ses canaux sont parcourus par les moliceiros, des bateaux colorés qui servaient autrefois à récolter le moliço, une algue utilisée comme engrais. Autour de la ville, les salines produisent depuis des siècles un sel marin récolté à la main.</p>
+          <ul class="merv-facts"><li data-i18n="m2_f1">Environ 2 600 hectares de salines dans la Ria</li><li data-i18n="m2_f2">La fleur de sel : la fine couche de sel récoltée à la surface</li></ul>
+          <figure class="merv-sub" data-opt-photo="photos/w-salinas.jpg"><img src="images/photos/w-salinas.jpg" alt="" loading="lazy"><figcaption data-i18n="m2_salt_cap">Les salines d'Aveiro</figcaption></figure>
+        </article>
+        <article class="merv-item" data-i="3" id="merv-3">
+          <div class="merv-head"><span class="merv-num">3</span><div><span class="merv-place" data-i18n="m3_place">CENTRE · LEIRIA</span><h3 class="merv-name" data-i18n="m3_name">Le monastère de Batalha</h3></div></div>
+          <div class="merv-photo" data-opt-photo="photos/w-batalha.jpg"><img src="images/photos/w-batalha.jpg" alt="" loading="lazy"></div>
+          <span class="merv-badge" data-i18n="merv_7m">L'une des « 7 Merveilles du Portugal » (2007)</span>
+          <p class="merv-text" data-i18n="m3_text">Le roi Jean Ier le fait construire à partir de 1386 pour remercier la Vierge de la victoire d'Aljubarrota contre la Castille (1385), qui sauve l'indépendance du Portugal. Il y repose avec son épouse anglaise, Philippa de Lancastre, et leur fils, Henri le Navigateur.</p>
+          <ul class="merv-facts"><li data-i18n="m3_f1">Patrimoine mondial de l'UNESCO depuis 1983</li><li data-i18n="m3_f2">Plus d'un siècle de travaux, du gothique au manuélin</li></ul>
+          
+        </article>
+        <article class="merv-item" data-i="4" id="merv-4">
+          <div class="merv-head"><span class="merv-num">4</span><div><span class="merv-place" data-i18n="m4_place">LISBONNE · SERRA DE SINTRA</span><h3 class="merv-name" data-i18n="m4_name">Le palais de la Pena, Sintra</h3></div></div>
+          <div class="merv-photo" data-opt-photo="photos/w-pena.jpg"><img src="images/photos/w-pena.jpg" alt="" loading="lazy"></div>
+          <span class="merv-badge" data-i18n="merv_7m">L'une des « 7 Merveilles du Portugal » (2007)</span>
+          <p class="merv-text" data-i18n="m4_text">Perché au sommet de la serra, ce palais aux couleurs vives a été construit au XIXe siècle pour le roi Ferdinand II. Avec ses jardins, ses châteaux et ses forêts, Sintra ressemble à un conte de fées.</p>
+          <ul class="merv-facts"><li data-i18n="m4_f1">Paysage culturel de Sintra : UNESCO depuis 1995</li><li data-i18n="m4_f2">Chef-d'œuvre du romantisme en Europe</li></ul>
+          
+        </article>
+        <article class="merv-item" data-i="5" id="merv-5">
+          <div class="merv-head"><span class="merv-num">5</span><div><span class="merv-place" data-i18n="m5_place">LISBONNE · BELÉM</span><h3 class="merv-name" data-i18n="m5_name">La tour de Belém</h3></div></div>
+          <div class="merv-photo" data-opt-photo="photos/hero-hist.jpg"><img src="images/photos/hero-hist.jpg" alt="" loading="lazy"></div>
+          <span class="merv-badge" data-i18n="merv_7m">L'une des « 7 Merveilles du Portugal » (2007)</span>
+          <p class="merv-text" data-i18n="m5_text">Construite de 1514 à 1519 sur le Tage, elle protégeait l'entrée de Lisbonne et saluait les navigateurs qui partaient vers l'Afrique, l'Inde et le Brésil. C'est l'un des symboles de l'époque des Découvertes.</p>
+          <ul class="merv-facts"><li data-i18n="m5_f1">Patrimoine mondial de l'UNESCO depuis 1983</li><li data-i18n="m5_f2">Chef-d'œuvre du style manuélin</li></ul>
+          
+        </article>
+        <article class="merv-item" data-i="6" id="merv-6">
+          <div class="merv-head"><span class="merv-num">6</span><div><span class="merv-place" data-i18n="m6_place">LISBONNE · BELÉM</span><h3 class="merv-name" data-i18n="m6_name">Le monastère des Hiéronymites</h3></div></div>
+          <div class="merv-photo" data-opt-photo="photos/w-jeronimos.jpg"><img src="images/photos/w-jeronimos.jpg" alt="" loading="lazy"></div>
+          <span class="merv-badge" data-i18n="merv_7m">L'une des « 7 Merveilles du Portugal » (2007)</span>
+          <p class="merv-text" data-i18n="m6_text">Commandé par le roi Manuel Ier au début du XVIe siècle et financé grâce au commerce des épices, il célèbre le voyage de Vasco de Gama. On y trouve les tombeaux de Vasco de Gama et du poète Luís de Camões. Et c'est de ses moines que vient la recette du pastel de nata !</p>
+          <ul class="merv-facts"><li data-i18n="m6_f1">Patrimoine mondial de l'UNESCO depuis 1983</li><li data-i18n="m6_f2">Tombeaux de Vasco de Gama et de Camões</li></ul>
+          
+        </article>
+        <article class="merv-item" data-i="7" id="merv-7">
+          <div class="merv-head"><span class="merv-num">7</span><div><span class="merv-place" data-i18n="m7_place">LISBONNE · PARQUE DAS NAÇÕES</span><h3 class="merv-name" data-i18n="m7_name">Le pont Vasco de Gama et l'Expo 98</h3></div></div>
+          <div class="merv-photo" data-opt-photo="photos/w-vgama.jpg"><img src="images/photos/w-vgama.jpg" alt="" loading="lazy"></div>
+          
+          <p class="merv-text" data-i18n="m7_text">Inauguré le 29 mars 1998 pour l'Exposition universelle, 500 ans après l'arrivée de Vasco de Gama en Inde, ce pont à haubans traverse l'estuaire du Tage. L'Expo 98, sur le thème « Les océans, un patrimoine pour le futur », a accueilli plus de 10 millions de visiteurs et a transformé tout un quartier de Lisbonne.</p>
+          <ul class="merv-facts"><li data-i18n="m7_f1">17,2 km de long, dont 12,3 km au-dessus de l'eau</li><li data-i18n="m7_f2">Le plus long pont d'Europe à son ouverture</li></ul>
+          <div class="merv-duo">
+            <figure class="merv-sub" data-opt-photo="photos/w-expo.jpg"><img src="images/photos/w-expo.jpg" alt="" loading="lazy"><figcaption data-i18n="m7_expo_cap">Le site de l'Expo 98, aujourd'hui Parque das Nações</figcaption></figure>
+            <div class="merv-ocean"><figure class="merv-sub" data-opt-photo="photos/w-oceanario.jpg"><img src="images/photos/w-oceanario.jpg" alt="" loading="lazy"></figure><h4 data-i18n="m7_ocean_t">L'Oceanário de Lisbonne</h4><p data-i18n="m7_ocean">Construit pour l'Expo 98, c'est l'un des plus grands aquariums d'Europe, avec un bassin central de 5 millions de litres. Les voyageurs de TripAdvisor l'ont élu meilleur aquarium du monde en 2015, 2017 et 2018.</p></div>
+          </div>
+        </article>
+        <article class="merv-item" data-i="8" id="merv-8">
+          <div class="merv-head"><span class="merv-num">8</span><div><span class="merv-place" data-i18n="m8_place">ALENTEJO · FLEUVE GUADIANA</span><h3 class="merv-name" data-i18n="m8_name">Le lac d'Alqueva</h3></div></div>
+          <div class="merv-photo" data-opt-photo="photos/w-alqueva.jpg"><img src="images/photos/w-alqueva.jpg" alt="" loading="lazy"></div>
+          
+          <p class="merv-text" data-i18n="m8_text">Créé par le barrage d'Alqueva sur le Guadiana et rempli en 2010, c'est le plus grand lac artificiel d'Europe occidentale. Il irrigue l'Alentejo, produit de l'électricité et offre un ciel parmi les plus étoilés d'Europe.</p>
+          <ul class="merv-facts"><li data-i18n="m8_f1">Environ 250 km² de surface</li><li data-i18n="m8_f2">Plus de 1 100 km de rives : plus que toute la côte du Portugal continental !</li></ul>
+          <div class="merv-cmp">
+            <h4 data-i18n="m8_cmp_title">Alqueva ou Léman : lequel est le plus grand&nbsp;?</h4>
+            <svg viewBox="0 0 420 210" class="cmp-svg" role="img" aria-label="Léman 580 km², Alqueva 250 km²">
+              <circle cx="110" cy="105" r="92" class="cmp-leman"/><text x="110" y="100" text-anchor="middle" class="cmp-num">580 km²</text><text x="110" y="122" text-anchor="middle" class="cmp-lbl" data-i18n="m8_leman">Lac Léman</text>
+              <circle cx="295.4" cy="136.6" r="60.4" class="cmp-alq"/><text x="295.4" y="131.6" text-anchor="middle" class="cmp-num">250 km²</text><text x="295.4" y="153.6" text-anchor="middle" class="cmp-lbl" data-i18n="m8_alqueva">Lac d'Alqueva</text>
+            </svg>
+            <p data-i18n="m8_cmp_text">Le Léman reste environ 2,3 fois plus grand. Les surfaces sont dessinées à l'échelle.</p>
+          </div>
+        </article>
+        <article class="merv-item" data-i="9" id="merv-9">
+          <div class="merv-head"><span class="merv-num">9</span><div><span class="merv-place" data-i18n="m9_place">ALGARVE · LAGOA</span><h3 class="merv-name" data-i18n="m9_name">La grotte de Benagil</h3></div></div>
+          <div class="merv-photo" data-opt-photo="photos/r-algarve.jpg"><img src="images/photos/r-algarve.jpg" alt="" loading="lazy"></div>
+          
+          <p class="merv-text" data-i18n="m9_text">Creusée par la mer dans les falaises dorées de l'Algarve, cette grotte possède une ouverture dans son plafond : « l'œil », par où entre la lumière du soleil. On ne peut l'atteindre que par la mer, en bateau ou en kayak.</p>
+          <ul class="merv-facts"><li data-i18n="m9_f1">Accessible uniquement par la mer</li><li data-i18n="m9_f2">Parmi les grottes marines les plus célèbres du monde</li></ul>
+          
+        </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="wrap cta-content">
+        <h3 class="cta-title" data-i18n="merv_cta_title">Et pour finir… ce que le Portugal représente pour moi.</h3>
         <a class="cta-button" href="#conclusion" data-view="conclusion">
-          <span data-i18n="reg_cta_button">Continuer vers la Conclusion</span>
+          <span data-i18n="merv_cta_button">Continuer vers la Conclusion</span>
           <span class="cta-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
@@ -4372,11 +4600,11 @@
         <nav class="recap">
           <a href="#geographie" data-view="geographie"><b>01</b><span data-i18n="journey_geo">Géographie</span></a>
           <a href="#histoire" data-view="histoire"><b>02</b><span data-i18n="journey_hist">Histoire</span></a>
-          <a href="#institutions" data-view="institutions"><b>03</b><span data-i18n="journey_inst">Institutions</span></a>
-          <a href="#societe" data-view="societe"><b>04</b><span data-i18n="journey_soc">Société</span></a>
-          <a href="#culture" data-view="culture"><b>05</b><span data-i18n="journey_cult">Culture</span></a>
-          <a href="#sport" data-view="sport"><b>06</b><span data-i18n="nav_sport">Sport</span></a>
-          <a href="#regions" data-view="regions"><b>07</b><span data-i18n="journey_reg">Régions</span></a>
+          <a href="#societe" data-view="societe"><b>03</b><span data-i18n="journey_soc">Société</span></a>
+          <a href="#culture" data-view="culture"><b>04</b><span data-i18n="journey_cult">Culture</span></a>
+          <a href="#sport" data-view="sport"><b>05</b><span data-i18n="nav_sport">Sport</span></a>
+          <a href="#regions" data-view="regions"><b>06</b><span data-i18n="journey_reg">Régions</span></a>
+          <a href="#merveilles" data-view="merveilles"><b>07</b><span data-i18n="journey_merv">Merveilles</span></a>
           <a href="#conclusion" data-view="conclusion"><b>08</b><span data-i18n="journey_moi">Portugal &amp; moi</span></a>
         </nav>
       </div>
@@ -4438,7 +4666,7 @@
           <li><a href="https://commons.wikimedia.org/wiki/File:Praia_da_Marinha_(2012-09-27),_by_Klugschnacker_in_Wikipedia_(69).JPG" target="_blank" rel="noopener">Praia da Marinha (2012-09-27), by Klugschnacker in Wikipedia (69).JPG</a> — Klugschnacker, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Lisbon_Torre_de_Bel%C3%A9m_BW_2018-10-03_16-33-21.jpg" target="_blank" rel="noopener">Lisbon Torre de Belém BW 2018-10-03 16-33-21.jpg</a> — Berthold Werner, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:D%C3%A4mmerung_am_Rio_Douro.jpg" target="_blank" rel="noopener">Dämmerung am Rio Douro.jpg</a> — Wurminister, CC BY-SA 3.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:Assembleia_da_República_(Portugal)_Palácio_de_São_Bento,_Lisboa.JPG" target="_blank" rel="noopener">Assembleia da República (Portugal) Palácio de São Bento, Lisboa.JPG</a> — Jose Manuel, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Palácio_Nacional_da_Pena,_Sintra,_Portugal,_20250606_1155_0104.jpg" target="_blank" rel="noopener">Palácio Nacional da Pena, Sintra, Portugal, 20250606 1155 0104.jpg</a> — Jakub Hałun, CC BY 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Terraced_vineyards_in_the_douro_valley.jpg" target="_blank" rel="noopener">Terraced vineyards in the douro valley.jpg</a> — Rosino, CC BY-SA 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Lissabon_-_Alfama_-_Largo_de_Santa_Luzia_-_Streetcar_-_2.jpg" target="_blank" rel="noopener">Lissabon - Alfama - Largo de Santa Luzia - Streetcar - 2.jpg</a> — Ingo Mehling, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Praia_do_Norte,Nazaré_-21_(50656467151).jpg" target="_blank" rel="noopener">Praia do Norte,Nazaré -21 (50656467151).jpg</a> — Luis Ascenso from Lisbon, Portugal, CC BY 2.0</li>
@@ -4469,7 +4697,7 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:View_from_Miradouro_de_Santa_Luzia,_Lisbon,_20250603_2016_9045.jpg" target="_blank" rel="noopener">View from Miradouro de Santa Luzia, Lisbon, 20250603 2016 9045.jpg</a> — Jakub Hałun, CC BY 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:View_from_Miradouro_do_Pico_do_Arieiro_-_Madeira_01.jpg" target="_blank" rel="noopener">View from Miradouro do Pico do Arieiro - Madeira 01.jpg</a> — H. Zell, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Rabelo_boats_and_Ribeira_seen_from_Cais_de_Gaia,_20250605_1623_9879.jpg" target="_blank" rel="noopener">Rabelo boats and Ribeira seen from Cais de Gaia, 20250605 1623 9879.jpg</a> — Jakub Hałun, CC BY 4.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:Estatua_de_Eusébio,_Estádio_da_Luz,_Lisboa_01.jpg" target="_blank" rel="noopener">Estatua de Eusébio, Estádio da Luz, Lisboa 01.jpg</a> — GualdimG, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Eusebio_statue_2010.jpg" target="_blank" rel="noopener">Eusebio statue 2010.jpg</a> — Erik Cleves Kristensen, CC BY 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Seleção_Portuguesa_de_Hóquei_em_Patins_-_01.jpg" target="_blank" rel="noopener">Seleção Portuguesa de Hóquei em Patins - 01.jpg</a> — Carlos Delgado, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:LuzLissabon.jpg" target="_blank" rel="noopener">LuzLissabon.jpg</a> — Massimo Catarinella, CC BY 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Red_Bull_Air_Race_Oporto_2017_-_28.jpg" target="_blank" rel="noopener">Red Bull Air Race Oporto 2017 - 28.jpg</a> — Harpagornis, CC BY-SA 4.0</li>
@@ -4482,6 +4710,16 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Aristides_de_Sousa_Mendes,_1940.jpg" target="_blank" rel="noopener">Aristides de Sousa Mendes, 1940.jpg</a> — Unknown photographer, Public domain</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Nanban_Scene_–_Arrival_of_the_Portuguese_in_Japan.jpg" target="_blank" rel="noopener">Nanban Scene – Arrival of the Portuguese in Japan.jpg</a> — Jorge Patrão, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:António_de_Oliveira_Salazar_portrait_(by_Manuel_Alves_San_Payo)_–_Lisboa.jpg" target="_blank" rel="noopener">António de Oliveira Salazar portrait (by Manuel Alves San Payo) – Lisboa.jpg</a> — Manuel Alves de San Payo, Public domain</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Albufeira_do_Alqueva_-_Portugal_(48347214211).jpg" target="_blank" rel="noopener">Albufeira do Alqueva - Portugal (48347214211).jpg</a> — Vitor Oliveira from Torres Vedras, PORTUGAL, CC BY-SA 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Canal_in_Aveiro_19.jpg" target="_blank" rel="noopener">Canal in Aveiro 19.jpg</a> — John Samuel, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Batalha_September_2021-2.jpg" target="_blank" rel="noopener">Batalha September 2021-2.jpg</a> — Alvesgaspar, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Břeh_naproti_Pinhão_(Alijó,_Portugalsko)_001.jpg" target="_blank" rel="noopener">Břeh naproti Pinhão (Alijó, Portugalsko) 001.jpg</a> — Petr Adam Dohnálek, CC BY-SA 3.0 cz</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Lisboa_-_Parque_das_Nações_-_20170814_-_02_-.jpg" target="_blank" rel="noopener">Lisboa - Parque das Nações - 20170814 - 02 -.jpg</a> — Mathieu Kappler, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Mosteiro_dos_Jerónimos_-_Lisboa_-_Portugal_(34386696080).jpg" target="_blank" rel="noopener">Mosteiro dos Jerónimos - Lisboa - Portugal (34386696080).jpg</a> — Vitor Oliveira from Torres Vedras, PORTUGAL, CC BY-SA 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Oceanário_de_Lisboa_(53870803219).jpg" target="_blank" rel="noopener">Oceanário de Lisboa (53870803219).jpg</a> — Jorge Franganillo, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Sintra_Portugal_Palácio_da_Pena-01.jpg" target="_blank" rel="noopener">Sintra Portugal Palácio da Pena-01.jpg</a> — CEphoto, Uwe Aranas, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:2025-08-03_Salinas_de_Aveiro.jpg" target="_blank" rel="noopener">2025-08-03 Salinas de Aveiro.jpg</a> — Alexkom000, CC BY 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Vasco_da_Gama_Bridge_seen_from_Parque_das_Nações,_Lisbon,_Portugal_julesvernex2.jpg" target="_blank" rel="noopener">Vasco da Gama Bridge seen from Parque das Nações, Lisbon, Portugal julesvernex2.jpg</a> — Jules Verne Times Two, CC BY-SA 4.0</li>
         </ol>
       </details>
     </div>
@@ -4529,13 +4767,26 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
     });
     function viewFromHash(){
       const name = location.hash.replace('#', '') || 'home';
+      if (name === 'institutions') { showView('histoire', false); openInst(true); return; }
       showView(document.getElementById('view-' + name) ? name : 'home', false);
     }
+    // Institutions panel inside Histoire
+    const instToggle = document.getElementById('instToggle');
+    const instPanel = document.getElementById('instPanel');
+    function openInst(scroll){
+      instPanel.hidden = false; instToggle.setAttribute('aria-expanded', 'true'); instToggle.classList.add('open');
+      instPanel.querySelectorAll('.rv').forEach(e => e.classList.add('in'));
+      if (scroll) setTimeout(() => instToggle.scrollIntoView({behavior: 'smooth', block: 'start'}), 60);
+    }
+    instToggle.addEventListener('click', () => {
+      if (instPanel.hidden) openInst(false);
+      else { instPanel.hidden = true; instToggle.setAttribute('aria-expanded', 'false'); instToggle.classList.remove('open'); }
+    });
     window.addEventListener('popstate', viewFromHash);
     viewFromHash();
 
     // Arrow keys move between pages during the presentation
-    const ORDER = ['home','geographie','histoire','institutions','societe','culture','sport','regions','conclusion'];
+    const ORDER = ['home','geographie','histoire','societe','culture','sport','regions','merveilles','conclusion'];
     document.addEventListener('keydown', (e) => {
       if(e.altKey || e.ctrlKey || e.metaKey) return;
       const current = (document.querySelector('.view.active') || {}).id || 'view-home';
@@ -4688,8 +4939,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "hist_tl_1974": "Révolution des Œillets (25 avril) : fin de la dictature de l'Estado Novo.",
   "hist_tl_1986": "Le Portugal entre dans la Communauté européenne, l'actuelle Union européenne.",
   "hist_tl_2002": "L'euro remplace l'escudo dans les porte-monnaie.",
-  "hist_cta_title": "Prêt à découvrir les institutions du Portugal&nbsp;?",
-  "hist_cta_button": "Continuer vers les Institutions",
+  "hist_cta_title": "Prêt à rencontrer les Portugais&nbsp;?",
+  "hist_cta_button": "Continuer vers la Société",
   "inst_hero_title": "Institutions",
   "inst_hero_subtitle": "Une république démocratique au cœur de l'Europe",
   "inst_hero_text": "Depuis la Révolution des Œillets de 1974, le Portugal est une démocratie stable, fondée sur la Constitution de 1976.",
@@ -4871,8 +5122,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "reg_az_desc": "Neuf îles volcaniques au milieu de l'Atlantique : lacs de cratère, sources chaudes et le Pico, plus haut sommet du pays.",
   "reg_m_name": "Madère",
   "reg_m_desc": "L'« île de l'éternel printemps » : levadas, fleurs, vin de Madère… et ville natale de Cristiano Ronaldo.",
-  "reg_cta_title": "Et pour finir… ce que le Portugal représente pour moi.",
-  "reg_cta_button": "Continuer vers la Conclusion",
+  "reg_cta_title": "Prêt à découvrir les merveilles du Portugal&nbsp;?",
+  "reg_cta_button": "Continuer vers les Merveilles",
   "concl_hero_title": "Conclusion",
   "concl_hero_subtitle": "Ce que le Portugal représente pour moi",
   "concl_hero_text": "Un voyage à travers un pays… et à travers mon histoire.",
@@ -5042,7 +5293,79 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "rbar_text": "En 2007, la course d'avions la plus rapide du monde arrive à Porto : les pilotes slaloment entre des pylônes gonflables à quelques mètres au-dessus du Douro, sous le pont Dom Luís. Environ 600 000 spectateurs envahissent les deux rives dès la première édition, puis près d'un million en 2008 : un record pour la compétition.",
   "rbar_f1": "PREMIÈRE COURSE À PORTO",
   "rbar_f2": "SPECTATEURS EN 2008 (RECORD)",
-  "rbar_cap": "Un avion de course au-dessus du Douro, face à Porto (édition 2017)."
+  "rbar_cap": "Un avion de course au-dessus du Douro, face à Porto (édition 2017).",
+  "nav_merv": "Merveilles",
+  "card_merv": "Les merveilles<br>du Portugal",
+  "journey_merv": "Merveilles",
+  "journey_sport": "Sport",
+  "inst_toggle_title": "Institutions &amp; politique",
+  "inst_toggle_sub": "Comment fonctionne la démocratie portugaise, la Révolution des Œillets et ses deux chansons, la comparaison avec la Suisse… Cliquez pour tout afficher.",
+  "inst_toggle_open": "Afficher",
+  "inst_toggle_close": "Masquer",
+  "merv_cta_title": "Et pour finir… ce que le Portugal représente pour moi.",
+  "merv_cta_button": "Continuer vers la Conclusion",
+  "merv_hero_title": "Merveilles",
+  "merv_hero_subtitle": "Les trésors du Portugal, du nord au sud",
+  "merv_hero_text": "Vignobles, monastères, palais, ponts et lacs : faites défiler la page et suivez la carte.",
+  "merv_map_eyebrow": "UN VOYAGE SUR LA CARTE",
+  "merv_map_title": "Neuf merveilles à découvrir",
+  "merv_map_lead": "Faites défiler : la carte vous montre où se trouve chaque merveille.",
+  "merv_7m": "L'une des « 7 Merveilles du Portugal » (2007)",
+  "merv_video": "Cliquez sur la photo pour voir la vidéo",
+  "merv_video_watch": "Regarder la vidéo du Douro",
+  "m1_name": "La vallée du Douro",
+  "m1_place": "NORD · ALTO DOURO",
+  "m1_text": "Pendant des siècles, les hommes ont taillé à la main des terrasses dans les collines de schiste pour y planter la vigne. C'est ici que naît le célèbre vin de Porto, transporté autrefois jusqu'à Porto sur les bateaux rabelos.",
+  "m1_f1": "Patrimoine mondial de l'UNESCO depuis 2001",
+  "m1_f2": "Région viticole délimitée dès 1756, l'une des plus anciennes du monde",
+  "m2_name": "Aveiro, la « Venise du Portugal »",
+  "m2_place": "CENTRE · RIA DE AVEIRO",
+  "m2_text": "Ses canaux sont parcourus par les moliceiros, des bateaux colorés qui servaient autrefois à récolter le moliço, une algue utilisée comme engrais. Autour de la ville, les salines produisent depuis des siècles un sel marin récolté à la main.",
+  "m2_f1": "Environ 2 600 hectares de salines dans la Ria",
+  "m2_f2": "La fleur de sel : la fine couche de sel récoltée à la surface",
+  "m2_salt_cap": "Les salines d'Aveiro",
+  "m3_name": "Le monastère de Batalha",
+  "m3_place": "CENTRE · LEIRIA",
+  "m3_text": "Le roi Jean Ier le fait construire à partir de 1386 pour remercier la Vierge de la victoire d'Aljubarrota contre la Castille (1385), qui sauve l'indépendance du Portugal. Il y repose avec son épouse anglaise, Philippa de Lancastre, et leur fils, Henri le Navigateur.",
+  "m3_f1": "Patrimoine mondial de l'UNESCO depuis 1983",
+  "m3_f2": "Plus d'un siècle de travaux, du gothique au manuélin",
+  "m4_name": "Le palais de la Pena, Sintra",
+  "m4_place": "LISBONNE · SERRA DE SINTRA",
+  "m4_text": "Perché au sommet de la serra, ce palais aux couleurs vives a été construit au XIXe siècle pour le roi Ferdinand II. Avec ses jardins, ses châteaux et ses forêts, Sintra ressemble à un conte de fées.",
+  "m4_f1": "Paysage culturel de Sintra : UNESCO depuis 1995",
+  "m4_f2": "Chef-d'œuvre du romantisme en Europe",
+  "m5_name": "La tour de Belém",
+  "m5_place": "LISBONNE · BELÉM",
+  "m5_text": "Construite de 1514 à 1519 sur le Tage, elle protégeait l'entrée de Lisbonne et saluait les navigateurs qui partaient vers l'Afrique, l'Inde et le Brésil. C'est l'un des symboles de l'époque des Découvertes.",
+  "m5_f1": "Patrimoine mondial de l'UNESCO depuis 1983",
+  "m5_f2": "Chef-d'œuvre du style manuélin",
+  "m6_name": "Le monastère des Hiéronymites",
+  "m6_place": "LISBONNE · BELÉM",
+  "m6_text": "Commandé par le roi Manuel Ier au début du XVIe siècle et financé grâce au commerce des épices, il célèbre le voyage de Vasco de Gama. On y trouve les tombeaux de Vasco de Gama et du poète Luís de Camões. Et c'est de ses moines que vient la recette du pastel de nata !",
+  "m6_f1": "Patrimoine mondial de l'UNESCO depuis 1983",
+  "m6_f2": "Tombeaux de Vasco de Gama et de Camões",
+  "m7_name": "Le pont Vasco de Gama et l'Expo 98",
+  "m7_place": "LISBONNE · PARQUE DAS NAÇÕES",
+  "m7_text": "Inauguré le 29 mars 1998 pour l'Exposition universelle, 500 ans après l'arrivée de Vasco de Gama en Inde, ce pont à haubans traverse l'estuaire du Tage. L'Expo 98, sur le thème « Les océans, un patrimoine pour le futur », a accueilli plus de 10 millions de visiteurs et a transformé tout un quartier de Lisbonne.",
+  "m7_f1": "17,2 km de long, dont 12,3 km au-dessus de l'eau",
+  "m7_f2": "Le plus long pont d'Europe à son ouverture",
+  "m7_ocean_t": "L'Oceanário de Lisbonne",
+  "m7_ocean": "Construit pour l'Expo 98, c'est l'un des plus grands aquariums d'Europe, avec un bassin central de 5 millions de litres. Les voyageurs de TripAdvisor l'ont élu meilleur aquarium du monde en 2015, 2017 et 2018.",
+  "m7_expo_cap": "Le site de l'Expo 98, aujourd'hui Parque das Nações",
+  "m8_name": "Le lac d'Alqueva",
+  "m8_place": "ALENTEJO · FLEUVE GUADIANA",
+  "m8_text": "Créé par le barrage d'Alqueva sur le Guadiana et rempli en 2010, c'est le plus grand lac artificiel d'Europe occidentale. Il irrigue l'Alentejo, produit de l'électricité et offre un ciel parmi les plus étoilés d'Europe.",
+  "m8_f1": "Environ 250 km² de surface",
+  "m8_f2": "Plus de 1 100 km de rives : plus que toute la côte du Portugal continental !",
+  "m8_cmp_title": "Alqueva ou Léman : lequel est le plus grand&nbsp;?",
+  "m8_cmp_text": "Le Léman reste environ 2,3 fois plus grand. Les surfaces sont dessinées à l'échelle.",
+  "m8_leman": "Lac Léman",
+  "m8_alqueva": "Lac d'Alqueva",
+  "m9_name": "La grotte de Benagil",
+  "m9_place": "ALGARVE · LAGOA",
+  "m9_text": "Creusée par la mer dans les falaises dorées de l'Algarve, cette grotte possède une ouverture dans son plafond : « l'œil », par où entre la lumière du soleil. On ne peut l'atteindre que par la mer, en bateau ou en kayak.",
+  "m9_f1": "Accessible uniquement par la mer",
+  "m9_f2": "Parmi les grottes marines les plus célèbres du monde"
  },
  "it": {
   "nav_home": "Home",
@@ -5187,8 +5510,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "hist_tl_1974": "Rivoluzione dei Garofani (25 aprile): fine della dittatura dell'Estado Novo.",
   "hist_tl_1986": "Il Portogallo entra nella Comunità europea, l'attuale Unione europea.",
   "hist_tl_2002": "L'euro sostituisce l'escudo nei portafogli.",
-  "hist_cta_title": "Pronti a scoprire le istituzioni del Portogallo?",
-  "hist_cta_button": "Continua verso le Istituzioni",
+  "hist_cta_title": "Pronti a conoscere i portoghesi?",
+  "hist_cta_button": "Continua verso la Società",
   "inst_hero_title": "Istituzioni",
   "inst_hero_subtitle": "Una repubblica democratica nel cuore dell'Europa",
   "inst_hero_text": "Dalla Rivoluzione dei Garofani del 1974, il Portogallo è una democrazia stabile, fondata sulla Costituzione del 1976.",
@@ -5370,8 +5693,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "reg_az_desc": "Nove isole vulcaniche in mezzo all'Atlantico: laghi craterici, sorgenti termali e il Pico, la vetta più alta del paese.",
   "reg_m_name": "Madeira",
   "reg_m_desc": "L'«isola dell'eterna primavera»: levadas, fiori, vino di Madeira… e città natale di Cristiano Ronaldo.",
-  "reg_cta_title": "E per finire… cosa rappresenta il Portogallo per me.",
-  "reg_cta_button": "Continua verso la Conclusione",
+  "reg_cta_title": "Pronti a scoprire le meraviglie del Portogallo?",
+  "reg_cta_button": "Continua verso le Meraviglie",
   "concl_hero_title": "Conclusione",
   "concl_hero_subtitle": "Cosa rappresenta il Portogallo per me",
   "concl_hero_text": "Un viaggio attraverso un paese… e attraverso la mia storia.",
@@ -5541,7 +5864,79 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "rbar_text": "Nel 2007 la gara aerea più veloce del mondo arriva a Porto: i piloti fanno slalom tra piloni gonfiabili a pochi metri sopra il Douro, sotto il ponte Dom Luís. Circa 600 000 spettatori invadono le due rive già alla prima edizione, poi quasi un milione nel 2008: un record per la competizione.",
   "rbar_f1": "PRIMA GARA A PORTO",
   "rbar_f2": "SPETTATORI NEL 2008 (RECORD)",
-  "rbar_cap": "Un aereo da corsa sopra il Douro, di fronte a Porto (edizione 2017)."
+  "rbar_cap": "Un aereo da corsa sopra il Douro, di fronte a Porto (edizione 2017).",
+  "nav_merv": "Meraviglie",
+  "card_merv": "Le meraviglie<br>del Portogallo",
+  "journey_merv": "Meraviglie",
+  "journey_sport": "Sport",
+  "inst_toggle_title": "Istituzioni e politica",
+  "inst_toggle_sub": "Come funziona la democrazia portoghese, la Rivoluzione dei Garofani e le sue due canzoni, il confronto con la Svizzera… Clicca per vedere tutto.",
+  "inst_toggle_open": "Mostra",
+  "inst_toggle_close": "Nascondi",
+  "merv_cta_title": "E per finire… cosa rappresenta il Portogallo per me.",
+  "merv_cta_button": "Continua verso la Conclusione",
+  "merv_hero_title": "Meraviglie",
+  "merv_hero_subtitle": "I tesori del Portogallo, da nord a sud",
+  "merv_hero_text": "Vigneti, monasteri, palazzi, ponti e laghi: scorri la pagina e segui la mappa.",
+  "merv_map_eyebrow": "UN VIAGGIO SULLA MAPPA",
+  "merv_map_title": "Nove meraviglie da scoprire",
+  "merv_map_lead": "Scorri: la mappa ti mostra dove si trova ogni meraviglia.",
+  "merv_7m": "Una delle «7 Meraviglie del Portogallo» (2007)",
+  "merv_video": "Clicca sulla foto per vedere il video",
+  "merv_video_watch": "Guarda il video del Douro",
+  "m1_name": "La valle del Douro",
+  "m1_place": "NORD · ALTO DOURO",
+  "m1_text": "Per secoli gli uomini hanno scavato a mano terrazze nelle colline di scisto per piantarvi la vite. Qui nasce il famoso vino di Porto, un tempo trasportato fino a Porto sulle barche rabelo.",
+  "m1_f1": "Patrimonio mondiale UNESCO dal 2001",
+  "m1_f2": "Regione vinicola delimitata già nel 1756, una delle più antiche del mondo",
+  "m2_name": "Aveiro, la «Venezia del Portogallo»",
+  "m2_place": "CENTRO · RIA DE AVEIRO",
+  "m2_text": "I suoi canali sono percorsi dai moliceiros, barche colorate che un tempo servivano a raccogliere il moliço, un'alga usata come fertilizzante. Intorno alla città, le saline producono da secoli un sale marino raccolto a mano.",
+  "m2_f1": "Circa 2 600 ettari di saline nella Ria",
+  "m2_f2": "Il fior di sale: il sottile strato di sale raccolto in superficie",
+  "m2_salt_cap": "Le saline di Aveiro",
+  "m3_name": "Il monastero di Batalha",
+  "m3_place": "CENTRO · LEIRIA",
+  "m3_text": "Il re Giovanni I lo fa costruire a partire dal 1386 per ringraziare la Vergine della vittoria di Aljubarrota contro la Castiglia (1385), che salva l'indipendenza del Portogallo. Vi riposa con la moglie inglese, Filippa di Lancaster, e il figlio Enrico il Navigatore.",
+  "m3_f1": "Patrimonio mondiale UNESCO dal 1983",
+  "m3_f2": "Più di un secolo di lavori, dal gotico al manuelino",
+  "m4_name": "Il palazzo della Pena, Sintra",
+  "m4_place": "LISBONA · SERRA DE SINTRA",
+  "m4_text": "Arroccato in cima alla serra, questo palazzo dai colori vivaci fu costruito nel XIX secolo per il re Ferdinando II. Con i suoi giardini, castelli e boschi, Sintra sembra una fiaba.",
+  "m4_f1": "Paesaggio culturale di Sintra: UNESCO dal 1995",
+  "m4_f2": "Capolavoro del romanticismo in Europa",
+  "m5_name": "La torre di Belém",
+  "m5_place": "LISBONA · BELÉM",
+  "m5_text": "Costruita dal 1514 al 1519 sul Tago, proteggeva l'ingresso di Lisbona e salutava i navigatori in partenza per l'Africa, l'India e il Brasile. È uno dei simboli dell'epoca delle Scoperte.",
+  "m5_f1": "Patrimonio mondiale UNESCO dal 1983",
+  "m5_f2": "Capolavoro dello stile manuelino",
+  "m6_name": "Il monastero dei Geronimi",
+  "m6_place": "LISBONA · BELÉM",
+  "m6_text": "Commissionato dal re Manuele I all'inizio del XVI secolo e finanziato con il commercio delle spezie, celebra il viaggio di Vasco da Gama. Ospita le tombe di Vasco da Gama e del poeta Luís de Camões. E dai suoi monaci viene la ricetta del pastel de nata!",
+  "m6_f1": "Patrimonio mondiale UNESCO dal 1983",
+  "m6_f2": "Tombe di Vasco da Gama e di Camões",
+  "m7_name": "Il ponte Vasco da Gama e l'Expo 98",
+  "m7_place": "LISBONA · PARQUE DAS NAÇÕES",
+  "m7_text": "Inaugurato il 29 marzo 1998 per l'Esposizione universale, 500 anni dopo l'arrivo di Vasco da Gama in India, questo ponte strallato attraversa l'estuario del Tago. L'Expo 98, sul tema «Gli oceani, un patrimonio per il futuro», ha accolto più di 10 milioni di visitatori e ha trasformato un intero quartiere di Lisbona.",
+  "m7_f1": "17,2 km di lunghezza, di cui 12,3 km sopra l'acqua",
+  "m7_f2": "Il ponte più lungo d'Europa alla sua apertura",
+  "m7_ocean_t": "L'Oceanário di Lisbona",
+  "m7_ocean": "Costruito per l'Expo 98, è uno dei più grandi acquari d'Europa, con una vasca centrale di 5 milioni di litri. I viaggiatori di TripAdvisor lo hanno eletto miglior acquario del mondo nel 2015, 2017 e 2018.",
+  "m7_expo_cap": "Il sito dell'Expo 98, oggi Parque das Nações",
+  "m8_name": "Il lago di Alqueva",
+  "m8_place": "ALENTEJO · FIUME GUADIANA",
+  "m8_text": "Creato dalla diga di Alqueva sul Guadiana e riempito nel 2010, è il più grande lago artificiale dell'Europa occidentale. Irriga l'Alentejo, produce elettricità e offre uno dei cieli più stellati d'Europa.",
+  "m8_f1": "Circa 250 km² di superficie",
+  "m8_f2": "Più di 1 100 km di sponde: più dell'intera costa del Portogallo continentale!",
+  "m8_cmp_title": "Alqueva o Lemano: quale è più grande?",
+  "m8_cmp_text": "Il Lemano resta circa 2,3 volte più grande. Le superfici sono disegnate in scala.",
+  "m8_leman": "Lago Lemano",
+  "m8_alqueva": "Lago di Alqueva",
+  "m9_name": "La grotta di Benagil",
+  "m9_place": "ALGARVE · LAGOA",
+  "m9_text": "Scavata dal mare nelle scogliere dorate dell'Algarve, questa grotta ha un'apertura nel soffitto: «l'occhio», da cui entra la luce del sole. Si raggiunge solo dal mare, in barca o in kayak.",
+  "m9_f1": "Raggiungibile solo dal mare",
+  "m9_f2": "Tra le grotte marine più famose del mondo"
  },
  "de": {
   "nav_home": "Startseite",
@@ -5686,8 +6081,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "hist_tl_1974": "Nelkenrevolution (25. April): Ende der Diktatur des Estado Novo.",
   "hist_tl_1986": "Portugal tritt der Europäischen Gemeinschaft bei, der heutigen EU.",
   "hist_tl_2002": "Der Euro ersetzt den Escudo im Portemonnaie.",
-  "hist_cta_title": "Bereit, die Institutionen Portugals zu entdecken?",
-  "hist_cta_button": "Weiter zu den Institutionen",
+  "hist_cta_title": "Bereit, die Portugiesen kennenzulernen?",
+  "hist_cta_button": "Weiter zur Gesellschaft",
   "inst_hero_title": "Institutionen",
   "inst_hero_subtitle": "Eine demokratische Republik im Herzen Europas",
   "inst_hero_text": "Seit der Nelkenrevolution von 1974 ist Portugal eine stabile Demokratie, gestützt auf die Verfassung von 1976.",
@@ -5869,8 +6264,8 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "reg_az_desc": "Neun Vulkaninseln mitten im Atlantik: Kraterseen, heisse Quellen und der Pico, der höchste Berg des Landes.",
   "reg_m_name": "Madeira",
   "reg_m_desc": "Die «Insel des ewigen Frühlings»: Levadas, Blumen, Madeirawein … und Heimat von Cristiano Ronaldo.",
-  "reg_cta_title": "Und zum Schluss … was Portugal für mich bedeutet.",
-  "reg_cta_button": "Weiter zum Schluss",
+  "reg_cta_title": "Bereit, die Wunder Portugals zu entdecken?",
+  "reg_cta_button": "Weiter zu den Wundern",
   "concl_hero_title": "Schluss",
   "concl_hero_subtitle": "Was Portugal für mich bedeutet",
   "concl_hero_text": "Eine Reise durch ein Land … und durch meine Geschichte.",
@@ -6040,7 +6435,79 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
   "rbar_text": "2007 kommt das schnellste Flugrennen der Welt nach Porto: Die Piloten fliegen im Slalom um aufblasbare Pylonen, nur wenige Meter über dem Douro, unter der Dom-Luís-Brücke hindurch. Schon bei der ersten Ausgabe säumen rund 600 000 Zuschauer beide Ufer, 2008 sind es fast eine Million – ein Rekord für den Wettbewerb.",
   "rbar_f1": "ERSTES RENNEN IN PORTO",
   "rbar_f2": "ZUSCHAUER 2008 (REKORD)",
-  "rbar_cap": "Ein Rennflugzeug über dem Douro vor Porto (Ausgabe 2017)."
+  "rbar_cap": "Ein Rennflugzeug über dem Douro vor Porto (Ausgabe 2017).",
+  "nav_merv": "Wunder",
+  "card_merv": "Die Wunder<br>Portugals",
+  "journey_merv": "Wunder",
+  "journey_sport": "Sport",
+  "inst_toggle_title": "Institutionen &amp; Politik",
+  "inst_toggle_sub": "Wie die portugiesische Demokratie funktioniert, die Nelkenrevolution und ihre zwei Lieder, der Vergleich mit der Schweiz … Klicken, um alles anzuzeigen.",
+  "inst_toggle_open": "Anzeigen",
+  "inst_toggle_close": "Ausblenden",
+  "merv_cta_title": "Und zum Schluss … was Portugal für mich bedeutet.",
+  "merv_cta_button": "Weiter zum Schluss",
+  "merv_hero_title": "Wunder",
+  "merv_hero_subtitle": "Die Schätze Portugals, von Nord nach Süd",
+  "merv_hero_text": "Weinberge, Klöster, Paläste, Brücken und Seen: Scrollen Sie und folgen Sie der Karte.",
+  "merv_map_eyebrow": "EINE REISE AUF DER KARTE",
+  "merv_map_title": "Neun Wunder zum Entdecken",
+  "merv_map_lead": "Scrollen Sie: Die Karte zeigt, wo jedes Wunder liegt.",
+  "merv_7m": "Eines der «7 Wunder Portugals» (2007)",
+  "merv_video": "Klicken Sie auf das Foto für das Video",
+  "merv_video_watch": "Das Douro-Video ansehen",
+  "m1_name": "Das Douro-Tal",
+  "m1_place": "NORDEN · ALTO DOURO",
+  "m1_text": "Jahrhundertelang haben Menschen von Hand Terrassen in die Schieferhügel gehauen, um Reben zu pflanzen. Hier entsteht der berühmte Portwein, der früher auf Rabelo-Booten nach Porto gebracht wurde.",
+  "m1_f1": "UNESCO-Welterbe seit 2001",
+  "m1_f2": "Schon 1756 abgegrenzte Weinregion, eine der ältesten der Welt",
+  "m2_name": "Aveiro, das «Venedig Portugals»",
+  "m2_place": "ZENTRUM · RIA DE AVEIRO",
+  "m2_text": "Auf den Kanälen fahren die Moliceiros, bunte Boote, mit denen man früher Moliço erntete, eine Alge, die als Dünger diente. Rund um die Stadt gewinnen die Salinen seit Jahrhunderten von Hand Meersalz.",
+  "m2_f1": "Rund 2 600 Hektar Salinen in der Ria",
+  "m2_f2": "Fleur de Sel: die feine Salzschicht, die an der Oberfläche geerntet wird",
+  "m2_salt_cap": "Die Salinen von Aveiro",
+  "m3_name": "Das Kloster von Batalha",
+  "m3_place": "ZENTRUM · LEIRIA",
+  "m3_text": "König Johann I. lässt es ab 1386 errichten, um der Jungfrau Maria für den Sieg von Aljubarrota gegen Kastilien (1385) zu danken, der Portugals Unabhängigkeit rettet. Er ruht dort mit seiner englischen Frau Philippa von Lancaster und ihrem Sohn Heinrich dem Seefahrer.",
+  "m3_f1": "UNESCO-Welterbe seit 1983",
+  "m3_f2": "Über ein Jahrhundert Bauzeit, von der Gotik bis zur Manuelinik",
+  "m4_name": "Der Pena-Palast, Sintra",
+  "m4_place": "LISSABON · SERRA DE SINTRA",
+  "m4_text": "Hoch oben auf der Serra wurde dieser farbenfrohe Palast im 19. Jahrhundert für König Ferdinand II. erbaut. Mit seinen Gärten, Burgen und Wäldern wirkt Sintra wie ein Märchen.",
+  "m4_f1": "Kulturlandschaft Sintra: UNESCO seit 1995",
+  "m4_f2": "Meisterwerk der Romantik in Europa",
+  "m5_name": "Der Turm von Belém",
+  "m5_place": "LISSABON · BELÉM",
+  "m5_text": "Von 1514 bis 1519 am Tejo erbaut, schützte er die Einfahrt nach Lissabon und grüsste die Seefahrer auf dem Weg nach Afrika, Indien und Brasilien. Er ist ein Symbol der Entdeckerzeit.",
+  "m5_f1": "UNESCO-Welterbe seit 1983",
+  "m5_f2": "Meisterwerk der Manuelinik",
+  "m6_name": "Das Hieronymus-Kloster",
+  "m6_place": "LISSABON · BELÉM",
+  "m6_text": "Von König Manuel I. Anfang des 16. Jahrhunderts in Auftrag gegeben und mit dem Gewürzhandel finanziert, feiert es die Reise von Vasco da Gama. Hier liegen die Gräber von Vasco da Gama und dem Dichter Luís de Camões. Und von seinen Mönchen stammt das Rezept des Pastel de nata!",
+  "m6_f1": "UNESCO-Welterbe seit 1983",
+  "m6_f2": "Gräber von Vasco da Gama und Camões",
+  "m7_name": "Die Vasco-da-Gama-Brücke und die Expo 98",
+  "m7_place": "LISSABON · PARQUE DAS NAÇÕES",
+  "m7_text": "Die am 29. März 1998 zur Weltausstellung eröffnete Schrägseilbrücke – 500 Jahre nach Vasco da Gamas Ankunft in Indien – überquert die Tejo-Mündung. Die Expo 98 zum Thema «Die Ozeane, ein Erbe für die Zukunft» zog über 10 Millionen Besucher an und verwandelte ein ganzes Lissabonner Viertel.",
+  "m7_f1": "17,2 km lang, davon 12,3 km über dem Wasser",
+  "m7_f2": "Bei der Eröffnung die längste Brücke Europas",
+  "m7_ocean_t": "Das Oceanário von Lissabon",
+  "m7_ocean": "Für die Expo 98 gebaut, ist es eines der grössten Aquarien Europas mit einem zentralen Becken von 5 Millionen Litern. Die Reisenden von TripAdvisor wählten es 2015, 2017 und 2018 zum besten Aquarium der Welt.",
+  "m7_expo_cap": "Das Expo-98-Gelände, heute Parque das Nações",
+  "m8_name": "Der Alqueva-Stausee",
+  "m8_place": "ALENTEJO · FLUSS GUADIANA",
+  "m8_text": "Vom Alqueva-Damm am Guadiana aufgestaut und 2010 gefüllt, ist er der grösste künstliche See Westeuropas. Er bewässert den Alentejo, erzeugt Strom und bietet einen der sternenreichsten Himmel Europas.",
+  "m8_f1": "Rund 250 km² Fläche",
+  "m8_f2": "Über 1 100 km Ufer – mehr als die ganze Küste des portugiesischen Festlands!",
+  "m8_cmp_title": "Alqueva oder Genfersee: Welcher ist grösser?",
+  "m8_cmp_text": "Der Genfersee ist rund 2,3-mal grösser. Die Flächen sind massstabsgetreu dargestellt.",
+  "m8_leman": "Genfersee",
+  "m8_alqueva": "Alqueva-Stausee",
+  "m9_name": "Die Benagil-Höhle",
+  "m9_place": "ALGARVE · LAGOA",
+  "m9_text": "Vom Meer in die goldenen Klippen der Algarve gegraben, hat diese Höhle eine Öffnung in der Decke – «das Auge», durch das das Sonnenlicht fällt. Man erreicht sie nur vom Meer aus, mit dem Boot oder Kajak.",
+  "m9_f1": "Nur vom Meer aus erreichbar",
+  "m9_f2": "Eine der berühmtesten Meereshöhlen der Welt"
  }
 };
 
@@ -6080,7 +6547,7 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
 
     // Reveal on scroll
     try {
-      const sel = '.info-card, .dish-card, .region-card, .story, .pas-card, .fam-photo, .fest-card, .pillar, .step, .tl-item, .world-item, .pio-item, .card, .journey-card, .smf-photo, .video-frame, .life-photos figure';
+      const sel = '.merv-photo, .merv-cmp, .info-card, .dish-card, .region-card, .story, .pas-card, .fam-photo, .fest-card, .pillar, .step, .tl-item, .world-item, .pio-item, .card, .journey-card, .smf-photo, .video-frame, .life-photos figure';
       if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.classList.add('js-reveal');
         const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin: '0px 0px -8% 0px'});
@@ -6104,6 +6571,29 @@ http://julesvernex2.com, CC BY-SA 4.0</li>
         card.classList.add('playing');
       });
     });
+
+    // Merveilles: map follows the scroll
+    (function(){
+      const PINS = {"1": [245, 156.9], "2": [134.6, 228.2], "3": [117.4, 355.4], "4": [54.9, 462.3], "5": [70.4, 490.7], "6": [89.3, 492], "7": [108, 461.9], "8": [250.3, 544.9], "9": [157.3, 688.8]};
+      const AX = 356;
+      const arrow = document.getElementById('mArrow');
+      const pins = document.querySelectorAll('.mpin');
+      const items = document.querySelectorAll('.merv-item');
+      function activate(i){
+        pins.forEach(p => p.classList.toggle('active', p.dataset.i === String(i)));
+        items.forEach(it => it.classList.toggle('active', it.dataset.i === String(i)));
+        const [x, y] = PINS[i];
+        const cx = (x + AX) / 2;
+        arrow.setAttribute('d', 'M' + (x + 12) + ' ' + y + ' C ' + cx + ' ' + (y - 40) + ', ' + cx + ' ' + (y - 40) + ', ' + AX + ' ' + y);
+        arrow.classList.remove('draw'); void arrow.getBoundingClientRect(); arrow.classList.add('draw');
+      }
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) activate(e.target.dataset.i); }), {rootMargin: '-45% 0px -45% 0px'});
+        items.forEach(it => io.observe(it));
+      }
+      pins.forEach(p => p.addEventListener('click', () => document.getElementById('merv-' + p.dataset.i).scrollIntoView({behavior: 'smooth', block: 'center'})));
+      activate(1);
+    })();
 
     let savedLang = null;
     try { savedLang = localStorage.getItem('lang'); } catch(e) {}

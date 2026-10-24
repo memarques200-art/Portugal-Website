@@ -45,6 +45,18 @@ Q = {
  "inst-1974": ("Revolução dos Cravos 25 de Abril 1974", 600, False),
 }
 Q.update({
+ "w-batalha": ("Mosteiro da Batalha", 1600, True),
+ "w-aveiro": ("Aveiro moliceiros canal", 1600, True),
+ "w-salinas": ("Salinas de Aveiro", 1200, False),
+ "w-pena": ("Palácio da Pena Sintra", 1600, True),
+ "w-vgama": ("Ponte Vasco da Gama", 1600, True),
+ "w-expo": ("Expo 98 Lisboa Parque das Nações", 1200, False),
+ "w-oceanario": ("Oceanário de Lisboa", 1200, False),
+ "w-alqueva": ("Barragem do Alqueva lago", 1600, True),
+ "w-eusebio": ("Eusébio estátua", 600, False),
+ "w-eusebio2": ("Eusébio 1966 Benfica", 400, False),
+ "w-jeronimos": ("Mosteiro dos Jerónimos fachada", 1600, True),
+ "w-douro": ("Douro Valley vineyards Pinhão", 1600, True),
  "rbar": ("Red Bull Air Race Porto", 1200, True),
  "smf-castle": ("Castelo de Santa Maria da Feira", 2000, True),
  "smf-viagem": ("Feira Medieval de SM", 1200, False),
