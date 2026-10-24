@@ -1104,3 +1104,8 @@
   .cmp-lbl2{font:600 12.5px Inter, sans-serif; fill:var(--text);}
   .cmp-num2{font:800 17px Inter, sans-serif; fill:var(--azul);}
   .page-hero-media img[src*="hero-soc2"]{object-position:50% 75%;}
+
+  /* Merveilles: same azulejo background as the other pages */
+  .merv-sec{position:relative; padding-top:126px; background-color:var(--azul-soft); background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='88'%20height='88'%20viewBox='0%200%2088%2088'%3E%3Crect%20width='88'%20height='88'%20fill='none'/%3E%3Cg%20fill='%231E4F8F'%20fill-opacity='0.07'%20stroke='%231E4F8F'%20stroke-opacity='0.07'%20stroke-width='1.6'%3E%3Cpath%20d='M44%208c7%209%207%2017%200%2022c-7-5-7-13%200-22zM44%2080c7-9%207-17%200-22c-7%205-7%2013%200%2022zM8%2044c9-7%2017-7%2022%200c-5%207-13%207-22%200zM80%2044c-9-7-17-7-22%200c5%207%2013%207%2022%200z'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='6'/%3E%3Cpath%20d='M0%200h12c0%207-5%2012-12%2012zM88%200v12c-7%200-12-5-12-12zM0%2088v-12c7%200%2012%205%2012%2012zM88%2088h-12c0-7%205-12%2012-12z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%231E4F8F'%20stroke-opacity='0.07'%20stroke-width='1.2'%3E%3Ccircle%20cx='44'%20cy='44'%20r='17'/%3E%3Cpath%20d='M44%2027l17%2017l-17%2017l-17-17z'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(180deg, var(--azul-soft) 0%, #F7F9FC 100%); background-size:120px 120px, auto;}
+  .merv-sec::before{content:""; position:absolute; left:0; right:0; top:0; height:30px; background:var(--tile); background-size:30px 30px; border-bottom:2px solid var(--azul);}
+  .merv-sec .sec-head .sec-lead{background:rgba(252,251,248,.92); padding:14px 20px; border-radius:8px; box-shadow:0 8px 24px -18px rgba(23,33,29,.35);}
