@@ -182,14 +182,15 @@ divider("01", "geo_hero_title", "geo_hero_subtitle", "geo_hero_text", P("hero-ge
 }
 {
   const s = add();
-  head(s, F.geo_volc_eyebrow, "Madère et Açores, terres de volcans");
-  tb(s, F.geo_volc_body, { x: MX, y: 1.65, w: 12, h: 0.7, fontSize: 16 });
-  const v = [[P("geo-acores.jpg"), F.geo_volc_acores_label, F.geo_volc_acores_desc], [P("geo-volcano.jpg"), "CAPELINHOS (1957-1958)", F.geo_volc_acores_caption], [P("geo-madeira.jpg"), F.geo_volc_madeira_label, F.geo_volc_madeira_desc]];
-  v.forEach(([ph, t, d], i) => {
-    const x = MX + i * 4.1;
-    img(s, ph, x, 2.55, 3.9, 2.6);
-    tb(s, t, { x, y: 5.3, w: 3.9, h: 0.35, fontSize: 14, bold: true, color: COL.red, charSpacing: 1 });
-    tb(s, d, { x, y: 5.65, w: 3.9, h: 1.2, fontSize: 14 });
+  head(s, F.geo_volc_eyebrow, F.geo_volc_title);
+  tb(s, F.geo_volc_body, { x: MX, y: 1.5, w: 12, h: 0.65, fontSize: 14 });
+  [[[L("sete-cidades.jpg"), P("x-acores2.jpg")], F.geo_volc_acores_label, F.geo_volc_acores_desc, [["9", F.isl_az_f1], ["1427", F.isl_az_f2], ["2 351 m", "PICO"]]],
+   [[P("x-madeira1.jpg"), P("x-madeira2.jpg")], F.geo_volc_madeira_label, F.geo_volc_madeira_desc, [["2", F.isl_md_f1], ["1419", F.isl_md_f2], ["1976", "AUTONOMIE"]]]].forEach(([ph, t, d, f], i) => {
+    const x = MX + i * 6.2;
+    img(s, ph[0], x, 2.25, 3.4, 2.3); img(s, ph[1], x + 3.5, 2.25, 2.4, 2.3);
+    tb(s, t, { x, y: 4.7, w: 5.9, h: 0.3, fontSize: 13, bold: true, color: COL.red, charSpacing: 2 });
+    tb(s, d, { x, y: 5.0, w: 5.9, h: 1.35, fontSize: 11.5, fit: "shrink" });
+    f.forEach(([b2, l], j) => { tb(s, b2, { x: x + j * 2.0, y: 6.4, w: 1.9, h: 0.4, fontSize: 18, bold: true, fontFace: "Cambria", color: COL.green }); tb(s, l, { x: x + j * 2.0, y: 6.8, w: 1.9, h: 0.4, fontSize: 8.5, bold: true, color: COL.grey }); });
   });
 }
 {
@@ -215,7 +216,7 @@ divider("02", "hist_hero_title", "hist_hero_subtitle", "hist_hero_text", P("hero
 {
   const s = add();
   head(s, "SYMBOLES & ALLIANCES", "Une identité forgée au fil des siècles");
-  const c = [[P("hist-flag.jpg"), F.hist_c1_title, F.hist_c1_desc], [P("hist-guimaraes.jpg"), F.hist_c2_title, F.hist_c2_desc], [P("hist-windsor.jpg"), F.hist_c3_title, F.hist_c3_desc], [P("hist-tea.jpg"), F.hist_c4_title, F.hist_c4_desc]];
+  const c = [[P("hist-flag.jpg"), F.hist_c1_title, F.hist_c1_desc], [P("x-afonso.jpg"), F.hist_c2_title, F.hist_c2_desc], [P("hist-windsor.jpg"), F.hist_c3_title, F.hist_c3_desc], [P("hist-tea.jpg"), F.hist_c4_title, F.hist_c4_desc]];
   c.forEach(([ph, t, d], i) => {
     const x = MX + i * 3.07;
     card(s, x, 1.75, 2.87, 5.05, COL.white);
@@ -363,6 +364,17 @@ divider("03", "soc_hero_title", "soc_hero_subtitle", "soc_hero_text", P("hero-so
 }
 {
   const s = add();
+  head(s, F.terroir_eyebrow, F.terroir_title);
+  [[P("x-olival.jpg"), F.terroir_oil_t, F.terroir_oil], [P("x-porco.jpg"), F.terroir_pig_t, F.terroir_pig]].forEach(([ph, t, d], i) => {
+    const x = MX + i * 6.2;
+    card(s, x, 1.75, 5.9, 5.05, COL.white);
+    img(s, ph, x, 1.75, 5.9, 2.9);
+    tb(s, t, { x: x + 0.25, y: 4.8, w: 5.4, h: 0.5, fontSize: 20, bold: true, fontFace: "Cambria", color: COL.green });
+    tb(s, d, { x: x + 0.25, y: 5.3, w: 5.4, h: 1.4, fontSize: 12.5 });
+  });
+}
+{
+  const s = add();
   head(s, F.inst_pio_eyebrow, F.inst_pio_title);
   [["1867", F.inst_pio1], ["2001", F.inst_pio2], ["2010", F.inst_pio3], ["7e", F.inst_pio4]].forEach(([b, t], i) => {
     const x = MX + i * 3.07;
@@ -383,12 +395,23 @@ divider("04", "cult_hero_title", "cult_hero_subtitle", "cult_hero_text", P("hero
 {
   const s = add();
   head(s, F.cult_arts_eyebrow, F.cult_arts_title);
-  [["c-fado.jpg", "cult_a1"], ["c-azulejo.jpg", "cult_a2"], ["c-manuelino.jpg", "cult_a3"], ["c-pessoa.jpg", "cult_a4"]].forEach(([ph, k], i) => {
+  [["c-fado.jpg", "cult_a1"], ["c-azulejo.jpg", "cult_a2"], ["c-manuelino.jpg", "cult_a3"], ["x-pessoa.jpg", "cult_a4"]].forEach(([ph, k], i) => {
     const x = MX + i * 3.07;
     card(s, x, 1.75, 2.87, 5.05, COL.white);
     img(s, P(ph), x, 1.75, 2.87, 2.3);
     tb(s, F[k + "_title"], { x: x + 0.2, y: 4.2, w: 2.5, h: 0.5, fontSize: 19, bold: true, fontFace: "Cambria", color: COL.green });
     tb(s, F[k + "_desc"], { x: x + 0.2, y: 4.75, w: 2.5, h: 1.95, fontSize: 13 });
+  });
+}
+{
+  const s = add();
+  head(s, F.uni_eyebrow, F.uni_title);
+  [[P("z-coimbra.jpg"), "uni_c1"], [L("traje.jpg"), "uni_c2"], [L("lello.jpg"), "uni_c3"], [L("harry-potter.jpg"), "uni_c4"]].forEach(([ph, k], i) => {
+    const x = MX + i * 3.07;
+    card(s, x, 1.75, 2.87, 5.05, COL.white);
+    img(s, ph, x, 1.75, 2.87, 2.0);
+    tb(s, F[k + "_t"], { x: x + 0.2, y: 3.85, w: 2.5, h: 0.6, fontSize: 16, bold: true, fontFace: "Cambria", color: COL.green });
+    tb(s, F[k], { x: x + 0.2, y: 4.45, w: 2.5, h: 2.25, fontSize: 11, fit: "shrink" });
   });
 }
 {
@@ -407,16 +430,18 @@ divider("04", "cult_hero_title", "cult_hero_subtitle", "cult_hero_text", P("hero
   head(s, F.cult_world_eyebrow, F.cult_world_title, { w: 7.5, size: 26 });
   [["Tempura", "Japon", F.cult_w1], ["Vindaloo", "Inde", F.cult_w2], ["Piri-piri", "Asie & Afrique", F.cult_w3], ["Kasutera", "Japon", F.cult_w4], ["Marmelada", "Europe", F.cult_w5]].forEach(([n, r, t], i) => {
     const y = 1.75 + i * 1.02;
-    tb(s, n, { x: MX, y, w: 1.9, h: 0.45, fontSize: 20, bold: true, italic: true, fontFace: "Cambria", color: ACC[i % 4] });
-    tb(s, r.toUpperCase(), { x: MX, y: y + 0.45, w: 1.9, h: 0.3, fontSize: 10, bold: true, color: COL.grey, charSpacing: 1 });
-    tb(s, t, { x: MX + 2.0, y, w: 5.3, h: 0.95, fontSize: 13 });
+    img(s, P(["x-tempura.jpg", "x-vindaloo.jpg", "x-piri.jpg", "x-kasutera.jpg", "x-marmelada.jpg"][i]), MX, y, 1.15, 0.9);
+    tb(s, n, { x: MX + 1.3, y, w: 1.8, h: 0.45, fontSize: 18, bold: true, italic: true, fontFace: "Cambria", color: ACC[i % 4] });
+    tb(s, r.toUpperCase(), { x: MX + 1.3, y: y + 0.45, w: 1.8, h: 0.3, fontSize: 9, bold: true, color: COL.grey, charSpacing: 1 });
+    tb(s, t, { x: MX + 3.15, y, w: 4.3, h: 0.95, fontSize: 11.5, fit: "shrink" });
   });
   card(s, 8.4, 0.6, 4.33, 6.2, "5E2230");
   tb(s, F.cult_wine_eyebrow, { x: 8.7, y: 0.85, w: 3.8, h: 0.3, fontSize: 12, bold: true, color: "F2C14E", charSpacing: 2 });
   [["Vinho do Porto", F.cult_v1_desc], ["Vinho verde", F.cult_v2_desc], ["Dão", F.cult_v3_desc]].forEach(([n, t], i) => {
     const y = 1.3 + i * 1.8;
-    tb(s, n, { x: 8.7, y, w: 3.8, h: 0.55, fontSize: 24, bold: true, italic: true, fontFace: "Cambria", color: COL.white });
-    tb(s, t, { x: 8.7, y: y + 0.55, w: 3.8, h: 1.1, fontSize: 13, color: "F1E4E7" });
+    img(s, P(["x-porto-wine.jpg", "x-vverde.jpg", "x-dao.jpg"][i]), 8.7, y + 0.05, 1.3, 1.5);
+    tb(s, n, { x: 10.15, y, w: 2.5, h: 0.5, fontSize: 19, bold: true, italic: true, fontFace: "Cambria", color: COL.white });
+    tb(s, t, { x: 10.15, y: y + 0.5, w: 2.45, h: 1.15, fontSize: 11, color: "F1E4E7", fit: "shrink" });
   });
 }
 {
@@ -463,6 +488,18 @@ divider("05", "sport_hero_title", "sport_hero_subtitle", "sport_hero_text", P("h
   });
 }
 {
+  const s = add();
+  img(s, L("lopes-mota.jpg"), 0, 0, 6.3, H);
+  caption(s, F.athl_cap, 0, 7.1, 6.3);
+  tb(s, F.athl_eyebrow, { x: 6.8, y: 0.6, w: 5.9, h: 0.3, fontSize: 12, bold: true, color: COL.red, charSpacing: 2 });
+  tb(s, F.athl_title, { x: 6.8, y: 0.95, w: 5.9, h: 0.8, fontSize: 32, bold: true, fontFace: "Cambria", color: COL.green });
+  tb(s, "Carlos Lopes", { x: 6.8, y: 1.9, w: 5.9, h: 0.45, fontSize: 19, bold: true, fontFace: "Cambria", color: COL.azul });
+  tb(s, F.athl_lopes, { x: 6.8, y: 2.35, w: 5.9, h: 1.3, fontSize: 13 });
+  tb(s, "Rosa Mota", { x: 6.8, y: 3.75, w: 5.9, h: 0.45, fontSize: 19, bold: true, fontFace: "Cambria", color: COL.azul });
+  tb(s, F.athl_mota, { x: 6.8, y: 4.2, w: 5.9, h: 1.3, fontSize: 13 });
+  [["1984", "OR — C. LOPES"], ["1988", "OR — R. MOTA"], ["2:07:12", F.athl_f3]].forEach(([b2, l], j) => stat(s, 6.8 + j * 2.0, 5.75, 1.9, b2, l, ACC[j]));
+}
+{
   const s = add("BLEED");
   s.background = { color: "0F2A4F" };
   img(s, P("s-rbar.jpg"), 0, 0, 7.2, H);
@@ -497,7 +534,7 @@ divider("06", "reg_hero_title", "reg_hero_subtitle", "reg_hero_text", P("hero-re
   tb(s, F.reg_car_f1, { x: 10.25, y: 5.5, w: 2.35, h: 1.1, fontSize: 12 });
   head(s, F.reg_car_eyebrow, "Caramulo, la montagne de l'air pur", { w: 6.4, size: 26 });
   tb(s, F.reg_car_text, { x: MX, y: 1.75, w: 6.3, h: 3.0, fontSize: 16 });
-  stat(s, MX, 5.0, 3, "1920s", F.reg_car_f2, COL.green);
+  stat(s, MX, 5.0, 3, "1921", F.reg_car_f2, COL.green);
   stat(s, MX + 3.2, 5.0, 3, "1953", F.reg_car_f3, COL.red);
 }
 {
@@ -532,28 +569,31 @@ divider("07", "merv_hero_title", "merv_hero_subtitle", "merv_hero_text", P("hero
   s.addImage({ path: __dirname + "/map.png", x: MX, y: 0.45, w: 2.9, h: 6.27 });
   tb(s, F.merv_map_eyebrow, { x: 4.0, y: 0.45, w: 8.5, h: 0.3, fontSize: 12, bold: true, charSpacing: 3, color: COL.red });
   tb(s, F.merv_map_title, { x: 4.0, y: 0.75, w: 8.7, h: 0.75, fontSize: 34, bold: true, fontFace: "Cambria", color: COL.green });
-  const names = [1,2,3,4,5,6,7,8,9].map(i => F["m" + i + "_name"]);
-  names.forEach((n, i) => {
-    const col = i < 5 ? 0 : 1, row = col ? i - 5 : i, x = 4.0 + col * 4.4, y = 1.85 + row * 0.95;
+  const keys = ["m1", "mP", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9"];
+  keys.forEach((k, i) => {
+    const col = i < 5 ? 0 : 1, row = col ? i - 5 : i, x = 4.0 + col * 4.4, y = 1.75 + row * 0.9;
     dot(s, x, y, i % 2 ? COL.azul : COL.red, String(i + 1));
-    tb(s, n, { x: x + 0.7, y: y + 0.02, w: 3.6, h: 0.5, fontSize: 16, bold: true, fontFace: "Cambria", color: COL.ink, valign: "middle" });
-    tb(s, F["m" + (i + 1) + "_place"], { x: x + 0.7, y: y + 0.48, w: 3.6, h: 0.3, fontSize: 10, bold: true, color: COL.grey, charSpacing: 1 });
+    tb(s, F[k + "_name"], { x: x + 0.7, y: y + 0.02, w: 3.6, h: 0.5, fontSize: 15, bold: true, fontFace: "Cambria", color: COL.ink, valign: "middle" });
+    tb(s, F[k + "_place"], { x: x + 0.7, y: y + 0.46, w: 3.6, h: 0.3, fontSize: 9.5, bold: true, color: COL.grey, charSpacing: 1 });
   });
+  s.addShape(pres.shapes.LINE, { x: 4.05, y: 6.47, w: 0.5, h: 0, line: { color: "C8102E", width: 3, dashType: "dash" } });
+  tb(s, "N222 — " + F.road_f2, { x: 4.7, y: 6.3, w: 8.0, h: 0.35, fontSize: 12, bold: true, color: "C8102E" });
 }
 
 const WONDERS = [
-  [1, P("w-douro.jpg"), false, "https://youtu.be/zbUbmYi2fHk"],
-  [2, P("w-aveiro.jpg"), false, null, P("w-salinas.jpg"), "m2_salt_cap"],
-  [3, P("w-batalha.jpg"), true],
-  [4, P("w-pena.jpg"), true],
-  [5, P("hero-hist.jpg"), true],
-  [6, P("w-jeronimos.jpg"), true],
-  [7, P("w-vgama.jpg"), false, null, P("w-oceanario.jpg"), "m7_ocean_t"],
-  [8, P("w-alqueva.jpg"), false, null, null, null, true],
-  [9, L("benagil.jpg"), false],
+  ["m1", P("w-douro.jpg"), false, "https://youtu.be/zbUbmYi2fHk"],
+  ["mP", P("x-dluis.jpg"), false, null, P("x-caves.jpg"), "mP_caves_cap"],
+  ["m2", P("w-aveiro.jpg"), false, null, P("w-salinas.jpg"), "m2_salt_cap"],
+  ["m3", P("w-batalha.jpg"), true],
+  ["m4", P("w-pena.jpg"), true],
+  ["m5", P("hero-hist.jpg"), true],
+  ["m6", P("w-jeronimos.jpg"), true],
+  ["m7", P("w-vgama.jpg"), false, null, P("w-oceanario.jpg"), "m7_ocean_t"],
+  ["m8", P("w-alqueva.jpg"), false, null, null, null, true],
+  ["m9", L("benagil.jpg"), false],
 ];
-WONDERS.forEach(([i, ph, seven, video, ph2, cap2, cmp]) => {
-  const s = add(), k = "m" + i;
+WONDERS.forEach(([k, ph, seven, video, ph2, cap2, cmp], idx) => {
+  const s = add(), i = idx + 1, n7 = k === "m7";
   img(s, ph, 0, 0, 6.3, ph2 ? 4.6 : H);
   if (ph2) { img(s, ph2, 0, 4.7, 6.3, 2.8); caption(s, F[cap2], 0, 7.5, 6.3); }
   if (video) link(s, "▶  " + F.merv_video_watch, video, 0.4, 6.6, 3.6);
@@ -567,7 +607,7 @@ WONDERS.forEach(([i, ph, seven, video, ph2, cap2, cmp]) => {
     tb(s, "★  " + F.merv_7m, { x: x + 0.15, y, w: 4.4, h: 0.42, fontSize: 12, bold: true, color: "7A5A18", valign: "middle" });
     y += 0.6;
   }
-  const textH = cmp ? 1.55 : (i === 7 ? 1.9 : 1.75);
+  const textH = cmp ? 1.55 : (n7 ? 1.9 : 1.75);
   tb(s, F[k + "_text"], { x, y, w, h: textH, fontSize: 14 });
   y += textH + 0.1;
   [F[k + "_f1"], F[k + "_f2"]].forEach((f) => {
@@ -575,7 +615,7 @@ WONDERS.forEach(([i, ph, seven, video, ph2, cap2, cmp]) => {
     tb(s, f, { x: x + 0.2, y, w: w - 0.3, h: 0.55, fontSize: 13, bold: true, valign: "middle" });
     y += 0.68;
   });
-  if (i === 7) tb(s, F.m7_ocean_t + " — " + F.m7_ocean, { x, y: y + 0.05, w, h: 1.1, fontSize: 12, color: COL.grey });
+  if (n7) tb(s, F.m7_ocean_t + " — " + F.m7_ocean, { x, y: y + 0.05, w, h: 1.1, fontSize: 12, color: COL.grey });
   if (cmp) {
     const K = 4.3 / 83;
     [[F.m8_alqueva, 83, "3BB3A0"], [F.m8_leman, 73, "2B6CB8"]].forEach(([n, km, c], j) => {
@@ -586,8 +626,26 @@ WONDERS.forEach(([i, ph, seven, video, ph2, cap2, cmp]) => {
     });
     tb(s, F.m8_cmp_text, { x, y: y + 1.4, w, h: 1.0, fontSize: 11.5, italic: true, color: COL.grey });
   }
-  s.addNotes(F[k + "_name"] + ". " + F[k + "_text"] + " " + F[k + "_f1"] + ". " + F[k + "_f2"] + "." + (i === 7 ? " " + F.m7_ocean : ""));
+  s.addNotes(F[k + "_name"] + ". " + F[k + "_text"] + " " + F[k + "_f1"] + ". " + F[k + "_f2"] + "." + (n7 ? " " + F.m7_ocean : ""));
 });
+{
+  const s = add();
+  img(s, P("z-n222.jpg"), 0, 0, 6.3, 4.6);
+  img(s, P("z-n222b.jpg"), 0, 4.7, 6.3, 2.8);
+  const x = 6.8, w = 5.95;
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: 0.55, w: 1.1, h: 0.5, fill: { color: "C8102E" }, line: { color: "C8102E" }, rectRadius: 0.25 });
+  tb(s, "N222", { x, y: 0.55, w: 1.1, h: 0.5, fontSize: 14, bold: true, color: COL.white, align: "center", valign: "middle" });
+  tb(s, F.road_place, { x: x + 1.3, y: 0.55, w: w - 1.3, h: 0.3, fontSize: 11, bold: true, color: COL.azul, charSpacing: 2 });
+  tb(s, F.road_name, { x: x + 1.3, y: 0.82, w: w - 1.3, h: 0.7, fontSize: 26, bold: true, fontFace: "Cambria", color: COL.green });
+  tb(s, F.road_text, { x, y: 1.75, w, h: 2.6, fontSize: 14 });
+  let y = 4.45;
+  [F.road_f1, F.road_f2, F.road_f3].forEach((f) => {
+    card(s, x, y, w, 0.55, COL.tintBlue);
+    tb(s, f, { x: x + 0.2, y, w: w - 0.3, h: 0.55, fontSize: 12.5, bold: true, valign: "middle" });
+    y += 0.68;
+  });
+  s.addNotes(F.road_name + ". " + F.road_text);
+}
 
 // =====================================================================
 sec("08 Conclusion");
@@ -612,7 +670,7 @@ divider("08", "concl_hero_title", "concl_hero_subtitle", "concl_hero_text", P("h
 {
   const s = add();
   head(s, F.concl_pas_eyebrow, F.concl_pas_title);
-  const p = [["moto-alpes.jpg", "concl_p_moto"], ["moto-garage.jpg", "concl_p_meca"], ["parapente.jpg", "concl_p_para"], ["jura.jpg", "concl_p_sort"], ["lac.jpg", "concl_p_lac"], ["tanay.jpg", "concl_p_walk"]];
+  const p = [["moto-alpes.jpg", "concl_p_moto"], ["moto-garage.jpg", "concl_p_meca"], ["parapente.jpg", "concl_p_para"], ["st-ursanne-affiche.jpg", "concl_p_sort"], ["lac.jpg", "concl_p_lac"], ["tanay.jpg", "concl_p_walk"]];
   p.forEach(([ph, k], i) => {
     const x = MX + (i % 3) * 4.1, y = 1.7 + Math.floor(i / 3) * 2.6;
     img(s, L(ph), x, y, 1.9, 2.4);
