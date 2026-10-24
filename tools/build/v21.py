@@ -44,6 +44,33 @@ ISLANDS = '''    <section class="geo-volcanic isl-sec">
     </section>
 '''
 
+FS_BTN = '''      <button class="fs-btn" id="fsBtn" type="button" hidden>
+        <svg class="fs-in" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+        <svg class="fs-out" viewBox="0 0 24 24"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>
+        <span data-i18n="fs_label">Plein écran</span>
+      </button>
+'''
+
+FS_JS = '''<script>
+  // cinema mode: hide the browser bars (Fullscreen API, needs a click)
+  (function(){
+    const d = document, el = d.documentElement, btn = d.getElementById('fsBtn');
+    const req = el.requestFullscreen || el.webkitRequestFullscreen;
+    if (!req) return;
+    btn.hidden = false;
+    const isFs = () => !!(d.fullscreenElement || d.webkitFullscreenElement);
+    const enter = () => { if (!isFs()) { const p = req.call(el); if (p && p.catch) p.catch(() => {}); } };
+    const exit = () => (d.exitFullscreen || d.webkitExitFullscreen).call(d);
+    btn.addEventListener('click', () => isFs() ? exit() : enter());
+    const sync = () => d.body.classList.toggle('is-fs', isFs());
+    d.addEventListener('fullscreenchange', sync); d.addEventListener('webkitfullscreenchange', sync);
+    // starting the presentation from the home page also goes full screen
+    const start = d.querySelector('#view-home .cta-button');
+    if (start) start.addEventListener('click', enter);
+  })();
+</script>
+'''
+
 def apply(html, render, FR=None, keys=()):
     def sub1(old, new):
         nonlocal html
@@ -61,6 +88,11 @@ def apply(html, render, FR=None, keys=()):
          'src="images/photos/x-afonso.jpg" alt="Statue de Dom Afonso Henriques, Guimarães"')
     # conclusion: close-up portrait for the round photo
     sub1('<img class="concl-portrait" src="images/luis.jpg"', '<img class="concl-portrait" src="images/luis-round.jpg"')
+    # geography: Douro train photo for the north
+    sub1('src="images/photos/geo-north.jpg"', 'src="images/luis/douro-train.jpg"')
+    # full-screen ("cinema") button in the nav
+    sub1('      <div class="lang-toggle" id="langToggle">', FS_BTN + '      <div class="lang-toggle" id="langToggle">')
+    sub1('</body>', FS_JS + '</body>')
     # refresh the French text baked into the base page for every key we overrode
     for k in keys:
         html = re.sub(r'(<(\w+)[^>]*\sdata-i18n="%s"[^>]*>).*?(</\2>)' % k, lambda m: m.group(1) + FR[k] + m.group(3), html, flags=re.S)

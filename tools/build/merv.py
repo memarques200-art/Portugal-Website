@@ -8,7 +8,7 @@ VB = (25, 15, 335, H - 15)  # cropped to mainland Portugal; arrow runs to the ri
 ITEMS = [
     ('m1', 'douro',     ['photos/w-douro.jpg'], False, 'video'),
     ('mP', 'porto',     ['photos/x-dluis.jpg', 'photos/x-caves.jpg'], False, 'caves'),
-    ('m2', 'aveiro',    ['photos/w-aveiro.jpg', 'photos/w-salinas.jpg'], False, 'salt'),
+    ('m2', 'aveiro',    ['photos/w-aveiro.jpg', 'luis/salinas-aveiro.jpg'], False, 'salt'),
     ('m3', 'batalha',   ['photos/w-batalha.jpg'], True, None),
     ('m4', 'sintra',    ['photos/w-pena.jpg'], True, None),
     ('m5', 'belem',     ['photos/hero-hist.jpg'], True, None),

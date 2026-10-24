@@ -173,7 +173,7 @@ divider("01", "geo_hero_title", "geo_hero_subtitle", "geo_hero_text", P("hero-ge
 {
   const s = add();
   head(s, F.geo_dual_eyebrow, "Deux visages, un même pays");
-  img(s, P("geo-north.jpg"), MX, 1.75, 6.0, 3.0); caption(s, F.geo_dual_f1_label, MX, 4.75, 6.0);
+  img(s, L("douro-train.jpg"), MX, 1.75, 6.0, 3.0); caption(s, F.geo_dual_f1_label, MX, 4.75, 6.0);
   img(s, P("geo-south.jpg"), 6.73, 1.75, 6.0, 3.0); caption(s, F.geo_dual_f2_label, 6.73, 4.75, 6.0);
   tb(s, F.geo_dual_f1_desc + "  " + F.geo_cr_f1_desc, { x: MX, y: 5.0, w: 6.0, h: 0.9, fontSize: 15 });
   tb(s, F.geo_dual_f2_desc + "  " + F.geo_cr_f2_desc, { x: 6.73, y: 5.0, w: 6.0, h: 0.9, fontSize: 15 });
@@ -583,7 +583,7 @@ divider("07", "merv_hero_title", "merv_hero_subtitle", "merv_hero_text", P("hero
 const WONDERS = [
   ["m1", P("w-douro.jpg"), false, "https://youtu.be/zbUbmYi2fHk"],
   ["mP", P("x-dluis.jpg"), false, null, P("x-caves.jpg"), "mP_caves_cap"],
-  ["m2", P("w-aveiro.jpg"), false, null, P("w-salinas.jpg"), "m2_salt_cap"],
+  ["m2", P("w-aveiro.jpg"), false, null, L("salinas-aveiro.jpg"), "m2_salt_cap"],
   ["m3", P("w-batalha.jpg"), true],
   ["m4", P("w-pena.jpg"), true],
   ["m5", P("hero-hist.jpg"), true],

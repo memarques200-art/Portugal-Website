@@ -3111,6 +3111,15 @@
   .card-photo img[src*="harry-potter"]{object-position:50% 22%;}
   .card-photo img[src*="lello"]{object-position:50% 60%;}
 
+  /* cinema mode button */
+  .fs-btn{display:flex; align-items:center; gap:6px; margin-right:18px; padding:7px 12px; border:1px solid var(--border); border-radius:999px; background:transparent; color:var(--ink); font:600 12px Inter, sans-serif; letter-spacing:.04em; cursor:pointer; transition:background .2s, border-color .2s;}
+  .fs-btn:hover{background:var(--ivory); border-color:var(--green);}
+  .fs-btn[hidden]{display:none;}
+  .fs-btn svg{width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+  .fs-btn .fs-out, .is-fs .fs-btn .fs-in{display:none;}
+  .is-fs .fs-btn .fs-out{display:block;}
+  @media (max-width:900px){ .fs-btn{margin-left:auto; margin-right:10px; padding:7px;} .fs-btn span{display:none;} .lang-toggle{margin-left:0;} }
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -3137,6 +3146,11 @@
         <li><a href="#conclusion" class="nav-link" data-view="conclusion" data-i18n="nav_concl">Conclusion</a></li>
       </ul>
 
+      <button class="fs-btn" id="fsBtn" type="button" hidden>
+        <svg class="fs-in" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+        <svg class="fs-out" viewBox="0 0 24 24"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>
+        <span data-i18n="fs_label">Plein écran</span>
+      </button>
       <div class="lang-toggle" id="langToggle">
         <span id="langCurrent">FR</span>
         <svg viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="var(--ink)" stroke-width="1.4" stroke-linecap="round"/></svg>
@@ -3267,7 +3281,7 @@
             <span class="intro-stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1.5" stroke-width="1.4"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 12h18" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
             <span class="intro-stat-label" data-i18n="stat3_label">PROFESSION</span>
             <span class="intro-stat-rule"></span>
-            <span class="intro-stat-value" style="font-size:17px;" data-i18n="stat3_value">Agent de sécurité privé,<br>responsable du centre de sécurité</span>
+            <span class="intro-stat-value" style="font-size:17px;" data-i18n="stat3_value">Agent de sécurité privée,<br>responsable du centre de sécurité</span>
             <img class="intro-stat-illus" src="images/stat-3.png" alt="">
           </div>
           <div class="intro-stat-card">
@@ -3517,7 +3531,7 @@
           </div>
         </div>
         <div class="geo-duality-photo">
-          <img src="images/photos/geo-north.jpg" alt="Paysage du Nord du Portugal, région montagneuse">
+          <img src="images/luis/douro-train.jpg" alt="Paysage du Nord du Portugal, région montagneuse">
         </div>
         <div class="geo-duality-photo">
           <img src="images/photos/geo-south.jpg" alt="Paysage du Sud du Portugal, plaine dorée">
@@ -4579,7 +4593,7 @@
           
           <p class="merv-text" data-i18n="m2_text">Ses canaux sont parcourus par les moliceiros, des bateaux colorés qui servaient autrefois à récolter le moliço, une algue utilisée comme engrais. Autour de la ville, les salines produisent depuis des siècles un sel marin récolté à la main.</p>
           <ul class="merv-facts"><li data-i18n="m2_f1">Environ 2 600 hectares de salines dans la Ria</li><li data-i18n="m2_f2">La fleur de sel : la fine couche de sel récoltée à la surface</li></ul>
-          <figure class="merv-sub" data-opt-photo="photos/w-salinas.jpg"><img src="images/photos/w-salinas.jpg" alt="" loading="lazy"><figcaption data-i18n="m2_salt_cap">Les salines d'Aveiro</figcaption></figure>
+          <figure class="merv-sub" data-opt-photo="luis/salinas-aveiro.jpg"><img src="images/luis/salinas-aveiro.jpg" alt="" loading="lazy"><figcaption data-i18n="m2_salt_cap">Les salines d'Aveiro</figcaption></figure>
         </article>
         <article class="merv-item" data-i="4" id="merv-4">
           <div class="merv-head"><span class="merv-num">4</span><div><span class="merv-place" data-i18n="m3_place">CENTRE · LEIRIA</span><h3 class="merv-name" data-i18n="m3_name">Le monastère de Batalha</h3></div></div>
@@ -4826,7 +4840,6 @@
           <li><a href="https://commons.wikimedia.org/wiki/File:Queijo_Serra_da_Estrela_DOP_-_Marca_de_caseína.jpg" target="_blank" rel="noopener">Queijo Serra da Estrela DOP - Marca de caseína.jpg</a> — Hipersyl, CC0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Grilled_Sardines_5.50€_Marisqueira_O_Varino_Nazaré_(3785526688).jpg" target="_blank" rel="noopener">Grilled Sardines 5.50€ Marisqueira O Varino Nazaré (3785526688).jpg</a> — Yusuke Kawasaki from Tokyo, Japan, CC BY 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Köppen_climate_types_of_Iberia.png" target="_blank" rel="noopener">Köppen climate types of Iberia.png</a> — Adam Peterson, CC BY-SA 4.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:Peneda-Geres_NP_from_Tibo_Lookout_(2).jpg" target="_blank" rel="noopener">Peneda-Geres NP from Tibo Lookout (2).jpg</a> — Krzysztof Golik, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Serra_da_Estrela-_Brumas_Matinais.jpg" target="_blank" rel="noopener">Serra da Estrela- Brumas Matinais.jpg</a> — Sara Bento Photography, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Rede_Natura_2000_-_Sítio_do_Cabeção_-_05.jpg" target="_blank" rel="noopener">Rede Natura 2000 - Sítio do Cabeção - 05.jpg</a> — Joao 1968, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Cabo_da_Roca_at_sunset,_Portugal.jpg" target="_blank" rel="noopener">Cabo da Roca at sunset, Portugal.jpg</a> — Aurelia Teslaru, CC BY-SA 4.0</li>
@@ -4882,7 +4895,6 @@
           <li><a href="https://commons.wikimedia.org/wiki/File:Mosteiro_dos_Jerónimos_-_Lisboa_-_Portugal_(34386696080).jpg" target="_blank" rel="noopener">Mosteiro dos Jerónimos - Lisboa - Portugal (34386696080).jpg</a> — Vitor Oliveira from Torres Vedras, PORTUGAL, CC BY-SA 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Oceanário_de_Lisboa_(53870803219).jpg" target="_blank" rel="noopener">Oceanário de Lisboa (53870803219).jpg</a> — Jorge Franganillo, CC BY 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Sintra_Portugal_Palácio_da_Pena-01.jpg" target="_blank" rel="noopener">Sintra Portugal Palácio da Pena-01.jpg</a> — CEphoto, Uwe Aranas, CC BY-SA 3.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:2025-08-03_Salinas_de_Aveiro.jpg" target="_blank" rel="noopener">2025-08-03 Salinas de Aveiro.jpg</a> — Alexkom000, CC BY 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Vasco_da_Gama_Bridge_seen_from_Parque_das_Nações,_Lisbon,_Portugal_julesvernex2.jpg" target="_blank" rel="noopener">Vasco da Gama Bridge seen from Parque das Nações, Lisbon, Portugal julesvernex2.jpg</a> — Jules Verne Times Two, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Aerial_view_of_Lagoa_do_Fogo,_São_Miguel_Island,_Azores,_Portugal_(PPL3-Altered).jpg" target="_blank" rel="noopener">Aerial view of Lagoa do Fogo, São Miguel Island, Azores, Portugal (PPL3-Altered).jpg</a> — Jules Verne Times Two, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Estátua_de_Dom_Afonso_Henriques_junto_ao_Estádio_Afonso_Henriques_2.jpg" target="_blank" rel="noopener">Estátua de Dom Afonso Henriques junto ao Estádio Afonso Henriques 2.jpg</a> — V.B.Speranza, CC BY-SA 4.0</li>
@@ -5011,7 +5023,7 @@
   "stat2_label": "ARRIVÉ EN SUISSE",
   "stat2_sub": "Plus de 13 ans<br>en Suisse",
   "stat3_label": "PROFESSION",
-  "stat3_value": "Agent de sécurité privé,<br>responsable du centre de sécurité",
+  "stat3_value": "Agent de sécurité privée,<br>responsable du centre de sécurité",
   "stat4_label": "CENTRES D'INTÉRÊT",
   "stat4_value": "Voyages<br>Sport<br>Gastronomie<br>Culture",
   "glance_title": "Le Portugal en un coup d'œil",
@@ -5604,7 +5616,8 @@
   "uni_c3_t": "La Livraria Lello, à Porto",
   "uni_c3": "Ouverte en 1906, avec son escalier rouge et ses boiseries sculptées, elle est souvent citée parmi les plus belles librairies du monde. Il faut parfois faire la queue pour y entrer !",
   "uni_c4_t": "Et Harry Potter&nbsp;?",
-  "uni_c4": "J.K. Rowling a vécu à Porto au début des années 1990 : elle y enseignait l'anglais et écrivait déjà Harry Potter. On dit que les capes des étudiants ont inspiré les robes de Poudlard, et Lello sa bibliothèque… mais Rowling affirme n'être jamais entrée chez Lello !"
+  "uni_c4": "J.K. Rowling a vécu à Porto au début des années 1990 : elle y enseignait l'anglais et écrivait déjà Harry Potter. On dit que les capes des étudiants ont inspiré les robes de Poudlard, et Lello sa bibliothèque… mais Rowling affirme n'être jamais entrée chez Lello !",
+  "fs_label": "Plein écran"
  },
  "it": {
   "nav_home": "Home",
@@ -6227,7 +6240,8 @@
   "uni_c3_t": "La Livraria Lello, a Porto",
   "uni_c3": "Aperta nel 1906, con la sua scala rossa e i legni intagliati, è spesso citata tra le librerie più belle del mondo. A volte bisogna fare la fila per entrare!",
   "uni_c4_t": "E Harry Potter?",
-  "uni_c4": "J.K. Rowling visse a Porto all'inizio degli anni '90: insegnava inglese e scriveva già Harry Potter. Si dice che i mantelli degli studenti abbiano ispirato le divise di Hogwarts, e la Lello la sua biblioteca… ma la Rowling afferma di non essere mai entrata alla Lello!"
+  "uni_c4": "J.K. Rowling visse a Porto all'inizio degli anni '90: insegnava inglese e scriveva già Harry Potter. Si dice che i mantelli degli studenti abbiano ispirato le divise di Hogwarts, e la Lello la sua biblioteca… ma la Rowling afferma di non essere mai entrata alla Lello!",
+  "fs_label": "Schermo intero"
  },
  "de": {
   "nav_home": "Startseite",
@@ -6850,7 +6864,8 @@
   "uni_c3_t": "Die Livraria Lello in Porto",
   "uni_c3": "1906 eröffnet, mit ihrer roten Treppe und den geschnitzten Holzverkleidungen, gilt sie oft als eine der schönsten Buchhandlungen der Welt. Manchmal muss man anstehen, um hineinzukommen!",
   "uni_c4_t": "Und Harry Potter?",
-  "uni_c4": "J.K. Rowling lebte Anfang der 1990er-Jahre in Porto: Sie unterrichtete Englisch und schrieb bereits an Harry Potter. Man sagt, die Studentenumhänge hätten die Roben von Hogwarts inspiriert und die Lello dessen Bibliothek … doch Rowling sagt, sie sei nie in der Lello gewesen!"
+  "uni_c4": "J.K. Rowling lebte Anfang der 1990er-Jahre in Porto: Sie unterrichtete Englisch und schrieb bereits an Harry Potter. Man sagt, die Studentenumhänge hätten die Roben von Hogwarts inspiriert und die Lello dessen Bibliothek … doch Rowling sagt, sie sei nie in der Lello gewesen!",
+  "fs_label": "Vollbild"
  }
 };
 
@@ -6945,5 +6960,23 @@
 
   </script>
 
+<script>
+  // cinema mode: hide the browser bars (Fullscreen API, needs a click)
+  (function(){
+    const d = document, el = d.documentElement, btn = d.getElementById('fsBtn');
+    const req = el.requestFullscreen || el.webkitRequestFullscreen;
+    if (!req) return;
+    btn.hidden = false;
+    const isFs = () => !!(d.fullscreenElement || d.webkitFullscreenElement);
+    const enter = () => { if (!isFs()) { const p = req.call(el); if (p && p.catch) p.catch(() => {}); } };
+    const exit = () => (d.exitFullscreen || d.webkitExitFullscreen).call(d);
+    btn.addEventListener('click', () => isFs() ? exit() : enter());
+    const sync = () => d.body.classList.toggle('is-fs', isFs());
+    d.addEventListener('fullscreenchange', sync); d.addEventListener('webkitfullscreenchange', sync);
+    // starting the presentation from the home page also goes full screen
+    const start = d.querySelector('#view-home .cta-button');
+    if (start) start.addEventListener('click', enter);
+  })();
+</script>
 </body>
 </html>

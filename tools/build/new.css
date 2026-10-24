@@ -1190,3 +1190,12 @@
   .pas-card--poster .pas-photo img{object-fit:contain; background:#f4f1ea;}
   .card-photo img[src*="harry-potter"]{object-position:50% 22%;}
   .card-photo img[src*="lello"]{object-position:50% 60%;}
+
+  /* cinema mode button */
+  .fs-btn{display:flex; align-items:center; gap:6px; margin-right:18px; padding:7px 12px; border:1px solid var(--border); border-radius:999px; background:transparent; color:var(--ink); font:600 12px Inter, sans-serif; letter-spacing:.04em; cursor:pointer; transition:background .2s, border-color .2s;}
+  .fs-btn:hover{background:var(--ivory); border-color:var(--green);}
+  .fs-btn[hidden]{display:none;}
+  .fs-btn svg{width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+  .fs-btn .fs-out, .is-fs .fs-btn .fs-in{display:none;}
+  .is-fs .fs-btn .fs-out{display:block;}
+  @media (max-width:900px){ .fs-btn{margin-left:auto; margin-right:10px; padding:7px;} .fs-btn span{display:none;} .lang-toggle{margin-left:0;} }

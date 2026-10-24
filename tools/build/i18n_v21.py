@@ -1,6 +1,6 @@
 T4 = {
 # home
-"stat3_value": ("Agent de sécurité privé,<br>responsable du centre de sécurité",
+"stat3_value": ("Agent de sécurité privée,<br>responsable du centre de sécurité",
   "Agente di sicurezza privato,<br>responsabile del centro di sicurezza",
   "Privater Sicherheitsagent,<br>verantwortlich für die Sicherheitszentrale"),
 
@@ -137,4 +137,7 @@ T4.update({
 "uni_c4": ("J.K. Rowling a vécu à Porto au début des années 1990 : elle y enseignait l'anglais et écrivait déjà Harry Potter. On dit que les capes des étudiants ont inspiré les robes de Poudlard, et Lello sa bibliothèque… mais Rowling affirme n'être jamais entrée chez Lello !",
   "J.K. Rowling visse a Porto all'inizio degli anni '90: insegnava inglese e scriveva già Harry Potter. Si dice che i mantelli degli studenti abbiano ispirato le divise di Hogwarts, e la Lello la sua biblioteca… ma la Rowling afferma di non essere mai entrata alla Lello!",
   "J.K. Rowling lebte Anfang der 1990er-Jahre in Porto: Sie unterrichtete Englisch und schrieb bereits an Harry Potter. Man sagt, die Studentenumhänge hätten die Roben von Hogwarts inspiriert und die Lello dessen Bibliothek … doch Rowling sagt, sie sei nie in der Lello gewesen!"),
+})
+T4.update({
+"fs_label": ("Plein écran", "Schermo intero", "Vollbild"),
 })
