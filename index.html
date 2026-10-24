@@ -3030,6 +3030,87 @@
   .merv-sec::before{content:""; position:absolute; left:0; right:0; top:0; height:30px; background:var(--tile); background-size:30px 30px; border-bottom:2px solid var(--azul);}
   .merv-sec .sec-head .sec-lead{background:rgba(252,251,248,.92); padding:14px 20px; border-radius:8px; box-shadow:0 8px 24px -18px rgba(23,33,29,.35);}
 
+  /* ---- v21: islands ---- */
+  .isl-sec{padding:96px 0; background:var(--azul-soft);}
+  .isl-grid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:28px;}
+  .isl-card{background:#fff; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 24px 50px -32px rgba(23,33,29,.45); display:flex; flex-direction:column;}
+  .isl-photos{display:grid; grid-template-columns:1.35fr 1fr; gap:4px;}
+  .isl-photos figure{position:relative; margin:0; aspect-ratio:4/3.4; overflow:hidden;}
+  .isl-photos img{width:100%; height:100%; object-fit:cover; display:block;}
+  .isl-photos figcaption{position:absolute; left:0; right:0; bottom:0; padding:28px 12px 10px; font-size:12.5px; line-height:1.4; color:#fff; background:linear-gradient(transparent, rgba(0,0,0,.72));}
+  .isl-body{padding:24px 26px 26px;}
+  .isl-label{display:inline-block; font:700 12px Inter, sans-serif; letter-spacing:.16em; color:var(--azul); margin-bottom:8px;}
+  .isl-body p{font-size:15.5px; line-height:1.65; color:var(--text); margin:0 0 16px;}
+  .isl-facts{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;}
+  .isl-facts div{background:var(--azul-soft); border-radius:10px; padding:12px; text-align:center;}
+  .isl-facts b{display:block; font-family:'Cormorant Garamond', serif; font-size:26px; color:var(--green); line-height:1.1;}
+  .isl-facts span{display:block; font-size:10.5px; font-weight:700; letter-spacing:.08em; color:var(--grey); margin-top:4px;}
+  @media (max-width:900px){ .isl-grid{grid-template-columns:minmax(0,1fr);} .isl-sec{padding:64px 0;} }
+  @media (max-width:520px){ .isl-photos{grid-template-columns:minmax(0,1fr);} .isl-facts b{font-size:21px;} }
+
+  /* Asterix book larger + note */
+  .geo-extras-book{width:230px;}
+  .geo-extras-book-caption{width:230px;}
+  .geo-extras-book-note{display:block; width:230px; margin:6px auto 0; text-align:center; font-size:12.5px; font-style:italic; color:var(--grey);}
+
+  /* Pessoa: keep the face in frame */
+  .card-photo img[src*="x-pessoa"]{object-position:50% 18%;}
+
+  /* ---- v21: olive oil & black pork ---- */
+  .terroir-grid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:26px; max-width:1100px; margin:0 auto;}
+  .terroir-card{background:var(--warm-white); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:0 18px 40px -28px rgba(23,33,29,.35);}
+  .terroir-photo{aspect-ratio:16/9; overflow:hidden;}
+  .terroir-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .terroir-body{padding:22px 24px 24px;}
+  .terroir-body h3{font-family:'Cormorant Garamond', serif; font-size:26px; color:var(--green); margin:0 0 8px;}
+  .terroir-body p{font-size:15.5px; line-height:1.65; color:var(--text); margin:0;}
+  @media (max-width:800px){ .terroir-grid{grid-template-columns:minmax(0,1fr);} }
+
+  /* ---- v21: wines ---- */
+  .wine-photo{aspect-ratio:4/3; border-radius:10px; overflow:hidden; margin:0 auto 18px; max-width:300px; box-shadow:0 18px 36px -20px rgba(0,0,0,.6);}
+  .wine-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .wine-map-btn{display:table; margin:40px auto 0; padding:14px 26px; border:1.5px solid rgba(252,251,248,.7); border-radius:999px; color:var(--warm-white); text-decoration:none; font:700 13px Inter, sans-serif; letter-spacing:.08em; text-transform:uppercase; transition:background .2s, color .2s;}
+  .wine-map-btn .arrow{margin-left:10px;}
+  .wine-map-btn:hover{background:var(--warm-white); color:#5E2230;}
+
+  /* ---- v21: world food photos ---- */
+  .wf-card{overflow:hidden;}
+  .wf-photo{margin:-26px -26px 18px; aspect-ratio:16/10; overflow:hidden;}
+  .wf-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+
+  /* ---- v21: athletics ---- */
+  .athl-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:48px; align-items:center;}
+  .athl-photo{margin:0; border-radius:14px; overflow:hidden; box-shadow:0 24px 50px -30px rgba(23,33,29,.5);}
+  .athl-photo img{width:100%; display:block;}
+  .athl-photo figcaption{padding:10px 14px; font-size:13px; color:var(--grey); background:var(--warm-white);}
+  .athl-title{text-align:left; margin-bottom:18px;}
+  .athl-sec .sec-eyebrow{justify-content:flex-start;}
+  .athl-people{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:18px; margin-bottom:20px;}
+  .athl-person h3{font-family:'Cormorant Garamond', serif; font-size:24px; color:var(--green); margin:0 0 6px;}
+  .athl-person p{font-size:15px; line-height:1.6; color:var(--text); margin:0;}
+  .athl-facts{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;}
+  .athl-facts div{background:var(--ivory); border:1px solid var(--border); border-radius:10px; padding:12px; text-align:center;}
+  .athl-facts b{display:block; font-family:'Cormorant Garamond', serif; font-size:26px; color:var(--red); line-height:1.1;}
+  .athl-facts span{display:block; font-size:10.5px; font-weight:700; letter-spacing:.06em; color:var(--grey); margin-top:4px;}
+  @media (max-width:900px){ .athl-grid{grid-template-columns:minmax(0,1fr); gap:28px;} }
+  @media (max-width:560px){ .athl-people{grid-template-columns:minmax(0,1fr);} .athl-facts b{font-size:20px;} }
+
+  /* ---- v21: more Red Bull photos ---- */
+  .rbar-more{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px; margin-top:28px;}
+  .rbar-more figure{margin:0; aspect-ratio:16/10; border-radius:12px; overflow:hidden;}
+  .rbar-more img{width:100%; height:100%; object-fit:cover; display:block;}
+  @media (max-width:600px){ .rbar-more{grid-template-columns:minmax(0,1fr);} }
+
+  /* ---- v21: N222 road on the Merveilles map ---- */
+  .mroad{fill:none; stroke:#C8102E; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:420; stroke-dashoffset:420; opacity:0; transition:stroke-dashoffset 1.6s ease, opacity .3s ease;}
+  .merv-svg.road-on .mroad{stroke-dashoffset:0; opacity:1;}
+  .merv-num--road{width:auto; min-width:44px; padding:0 10px; border-radius:22px; font-size:15px; letter-spacing:.04em; background:#C8102E;}
+  .merv-road{border-top:4px solid #C8102E;}
+  .pas-card--poster .pas-photo{aspect-ratio:auto; height:420px;}
+  .pas-card--poster .pas-photo img{object-fit:contain; background:#f4f1ea;}
+  .card-photo img[src*="harry-potter"]{object-position:50% 22%;}
+  .card-photo img[src*="lello"]{object-position:50% 60%;}
+
   .view{display:none;}
   .view.active{display:block;}
 
@@ -3186,7 +3267,7 @@
             <span class="intro-stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1.5" stroke-width="1.4"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 12h18" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
             <span class="intro-stat-label" data-i18n="stat3_label">PROFESSION</span>
             <span class="intro-stat-rule"></span>
-            <span class="intro-stat-value" style="font-size:17px;" data-i18n="stat3_value">Responsable d'objets,<br>Centre sécurité</span>
+            <span class="intro-stat-value" style="font-size:17px;" data-i18n="stat3_value">Agent de sécurité privé,<br>responsable du centre de sécurité</span>
             <img class="intro-stat-illus" src="images/stat-3.png" alt="">
           </div>
           <div class="intro-stat-card">
@@ -3485,37 +3566,44 @@
       </div>
     </section>
 
-    <section class="geo-volcanic">
-      <div class="geo-volc-grid">
-        <div class="geo-volc-intro">
-          <span class="geo-cr-eyebrow" data-i18n="geo_volc_eyebrow">LE PORTUGAL VOLCANIQUE</span>
-          <h2 class="geo-cr-title" data-i18n="geo_volc_title">Madère et Açores,<br>terres de volcans</h2>
-          <p class="geo-cr-body" data-i18n="geo_volc_body">Les îles de Madère et des Açores sont d'origine volcanique. Leur paysage spectaculaire est le résultat d'éruptions vieilles de millions d'années.</p>
+    <section class="geo-volcanic isl-sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="geo_volc_eyebrow">LES ÎLES DU PORTUGAL</span>
+          <h2 class="sec-title" data-i18n="geo_volc_title">Madère et les Açores</h2>
+          <p class="sec-lead" data-i18n="geo_volc_body">Les deux archipels sont nés de volcans au milieu de l'Atlantique : les Açores à environ 1 400 km de Lisbonne, Madère à près de 1 000 km. Ce sont aujourd'hui deux régions autonomes du Portugal.</p>
         </div>
-
-        <div class="geo-volc-col">
-          <div class="geo-volc-col-text">
-            <span class="geo-volc-label" data-i18n="geo_volc_acores_label">AÇORES</span>
-            <p class="geo-volc-desc" data-i18n="geo_volc_acores_desc">Neuf îles volcaniques avec des lacs de cratère, sources chaudes et paysages uniques.</p>
-          </div>
-          <div class="geo-volc-photo-wrap">
-            <img src="images/photos/geo-acores.jpg" alt="Lac de cratère au coucher du soleil, São Miguel, Açores">
-            <p class="geo-volc-caption" data-i18n="geo_volc_acores_caption">En 1957-1958, l'éruption du volcan des Capelinhos (île de Faial) a fait naître de nouvelles terres sur l'océan.</p>
-          </div>
-        </div>
-
-        <div class="geo-volc-center">
-          <img src="images/photos/geo-volcano.jpg" alt="Éruption volcanique">
-        </div>
-
-        <div class="geo-volc-col">
-          <div class="geo-volc-col-text">
-            <span class="geo-volc-label" data-i18n="geo_volc_madeira_label">MADÈRE</span>
-            <p class="geo-volc-desc" data-i18n="geo_volc_madeira_desc">Île montagneuse d'origine volcanique, avec des falaises impressionnantes et des vallées profondes.</p>
-          </div>
-          <div class="geo-volc-photo-wrap geo-volc-photo-wrap--tall">
-            <img src="images/photos/geo-madeira.jpg" alt="Falaises de Madère">
-          </div>
+        <div class="isl-grid">
+          <article class="isl-card">
+            <div class="isl-photos">
+              <figure><img src="images/luis/sete-cidades.jpg" alt="Sete Cidades, São Miguel" loading="lazy"><figcaption data-i18n="isl_az_cap1">Sete Cidades (São Miguel) : un lac vert et un lac bleu au fond d'un immense cratère.</figcaption></figure>
+              <figure><img src="images/photos/x-acores2.jpg" alt="Lagoa do Fogo, São Miguel" loading="lazy"><figcaption data-i18n="isl_az_cap2">La Lagoa do Fogo, au cœur de São Miguel.</figcaption></figure>
+            </div>
+            <div class="isl-body">
+              <span class="isl-label" data-i18n="geo_volc_acores_label">AÇORES</span>
+              <p data-i18n="geo_volc_acores_desc">Neuf îles réparties sur plus de 600 km. Les navigateurs portugais découvrent les premières vers 1427 et les peuplent à partir des années 1430 ; Flores et Corvo, les plus à l'ouest, ne sont atteintes qu'en 1452. Lacs de cratère, sources chaudes, baleines et hortensias.</p>
+              <div class="isl-facts">
+                <div><b>9</b><span data-i18n="isl_az_f1">ÎLES</span></div>
+                <div><b>1427</b><span data-i18n="isl_az_f2">DÉCOUVERTE DES PREMIÈRES ÎLES</span></div>
+                <div><b>2 351 m</b><span data-i18n="isl_az_f3">LE PICO, PLUS HAUT SOMMET DU PAYS</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="isl-card">
+            <div class="isl-photos">
+              <figure><img src="images/photos/x-madeira1.jpg" alt="Pico do Arieiro, Madère" loading="lazy"><figcaption data-i18n="isl_md_cap1">Le Pico do Arieiro (1 818 m), souvent au-dessus des nuages.</figcaption></figure>
+              <figure><img src="images/photos/x-madeira2.jpg" alt="Ponta de São Lourenço, Madère" loading="lazy"><figcaption data-i18n="isl_md_cap2">La Ponta de São Lourenço, à l'extrémité est de Madère.</figcaption></figure>
+            </div>
+            <div class="isl-body">
+              <span class="isl-label" data-i18n="geo_volc_madeira_label">MADÈRE</span>
+              <p data-i18n="geo_volc_madeira_desc">Deux îles habitées : Madère et Porto Santo (les îles Desertas et Selvagens, elles, sont inhabitées). João Gonçalves Zarco et Tristão Vaz Teixeira découvrent Porto Santo en 1418, puis Madère en 1419. Falaises vertigineuses, levadas et douceur toute l'année.</p>
+              <div class="isl-facts">
+                <div><b>2</b><span data-i18n="isl_md_f1">ÎLES HABITÉES</span></div>
+                <div><b>1419</b><span data-i18n="isl_md_f2">DÉCOUVERTE DE MADÈRE</span></div>
+                <div><b>1976</b><span data-i18n="isl_md_f3">RÉGIONS AUTONOMES DEPUIS</span></div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -3543,7 +3631,7 @@
             </li>
             <li>
               <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M4 20C4 10 12 4 20 4c0 8-6 16-16 16z" stroke-width="1.3" stroke-linejoin="round"/><path d="M6 18C10 14 14 10 18 6" stroke-width="1.1" stroke-linecap="round"/></svg></span>
-              <span data-i18n="geo_ext_nature_li3">Un engagement fort pour<br>la protection de l'environnement.</span>
+              <span data-i18n="geo_ext_nature_li3">Un engagement fort pour l'environnement&nbsp;:<br>le parc éolien du Haut-Minho était, à son ouverture en 2008, l'un des plus grands d'Europe.</span>
             </li>
           </ul>
         </div>
@@ -3553,7 +3641,7 @@
           <ul class="geo-extras-list geo-extras-list--facts">
             <li>
               <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M2 19l6-10 4 6 3-4 7 8H2z" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
-              <span data-i18n="geo_ext_fact1">Le point culminant du pays se trouve<br>aux Açores (Pico, 2 351 m).</span>
+              <span data-i18n="geo_ext_fact1">Le point culminant du pays se trouve<br>aux Açores (Pico, 2 351 m). Sur le continent, c'est la Serra da Estrela (1 993 m).</span>
             </li>
             <li>
               <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.6L21 9.5l-5 4.6L17.5 21 12 17.3 6.5 21 8 14.1l-5-4.6 6.4-.9z" stroke-width="1.2" stroke-linejoin="round"/></svg></span>
@@ -3561,7 +3649,7 @@
             </li>
             <li>
               <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M3 16c1-3 3-5 6-5 1 0 1.5-1 2.5-1 2 0 3 1.5 3 1.5s2-1 3.5.5c1 1 1 2.5 0 3.5M8 11V7M14 12c0 2-1.5 3-3 3-2 0-3-1.5-4-1.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="9" r=".5" fill="currentColor" stroke="none"/></svg></span>
-              <span data-i18n="geo_ext_fact3">Il y a des empreintes de dinosaures<br>vieilles de 175 millions d'années&nbsp;!</span>
+              <span data-i18n="geo_ext_fact3">Il y a des empreintes de dinosaures<br>vieilles de 175 millions d'années, près de Fátima (Pedreira do Galinha)&nbsp;! Et dans la vallée du Côa (Douro), des gravures préhistoriques de plus de 20 000 ans.</span>
             </li>
             <li>
               <span class="geo-extras-icon"><svg viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z" stroke-width="1.4"/><circle cx="12" cy="9" r="2.4" stroke-width="1.4"/></svg></span>
@@ -3575,7 +3663,7 @@
           <h3 class="geo-extras-title" data-i18n="geo_ext_luis_title">Ma ville, mon origine</h3>
           <p class="geo-extras-desc" data-i18n="geo_ext_luis_desc">Caramulo est un village de montagne au centre du Portugal, terre du peuple lusitanien.</p>
           <div class="geo-extras-book">
-            <img src="images/asterix.jpg" alt="Astérix en Lusitanie"><span class="geo-extras-book-caption" data-i18n="geo_ext_book_caption">Le peuple lusitanien,<br>même dans Astérix&nbsp;!</span></div></div>
+            <img src="images/asterix.jpg" alt="Astérix en Lusitanie"><span class="geo-extras-book-caption" data-i18n="geo_ext_book_caption">Le peuple lusitanien,<br>même dans Astérix&nbsp;!</span><span class="geo-extras-book-note" data-i18n="geo_ext_book_note">« Astérix en Lusitanie » (2025), le dernier album de la série.</span></div></div>
       </div>
     </section>
 
@@ -3617,7 +3705,7 @@
         <div class="hist-card">
           <div class="hist-card-text">
             <h3 class="hist-card-title" data-i18n="hist_c1_title">Le drapeau<br>portugais</h3>
-            <p class="hist-card-desc" data-i18n="hist_c1_desc">Le vert symbolise l'espoir de l'avenir et le rouge le sang versé pour l'indépendance.</p>
+            <p class="hist-card-desc" data-i18n="hist_c1_desc">Le vert symbolise l'espoir et le rouge le sang versé pour la nation. Au centre, la sphère armillaire, un instrument d'astronomie utilisé par les navigateurs, célèbre les grandes découvertes maritimes des XVe et XVIe siècles.</p>
           </div>
           <div class="hist-card-photo">
             <img src="images/photos/hist-flag.jpg" alt="Drapeau portugais">
@@ -3627,10 +3715,10 @@
         <div class="hist-card">
           <div class="hist-card-text">
             <h3 class="hist-card-title" data-i18n="hist_c2_title">La construction<br>du Portugal</h3>
-            <p class="hist-card-desc" data-i18n="hist_c2_desc">Du Comté de Portugal à la nation indépendante, une identité forgée au fil des siècles.</p>
+            <p class="hist-card-desc" data-i18n="hist_c2_desc">24 juin 1128 : à la bataille de São Mamede, Afonso Henriques prend le contrôle du Comté de Portugal. 1143 : par le traité de Zamora, Alphonse VII de León et de Castille reconnaît l'indépendance du Portugal.</p>
           </div>
           <div class="hist-card-photo">
-            <img src="images/photos/hist-guimaraes.jpg" alt="Château de Guimarães et statue de Dom Afonso Henriques">
+            <img src="images/photos/x-afonso.jpg" alt="Statue de Dom Afonso Henriques, Guimarães">
           </div>
         </div>
 
@@ -3980,6 +4068,19 @@
         </div>
       </div>
     </section>
+
+    <section class="sec sec--ivory terroir-sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="terroir_eyebrow">SAVEURS DU TERROIR</span>
+          <h2 class="sec-title" data-i18n="terroir_title">L'huile d'olive et le porc noir</h2>
+        </div>
+        <div class="terroir-grid">
+          <article class="terroir-card"><div class="terroir-photo"><img src="images/photos/x-olival.jpg" alt="Oliveraie de l'Alentejo" loading="lazy"></div><div class="terroir-body"><h3 data-i18n="terroir_oil_t">L'azeite, l'or vert</h3><p data-i18n="terroir_oil">Le Portugal compte parmi les dix plus grands producteurs d'huile d'olive au monde, surtout grâce à l'Alentejo, couvert d'oliveraies. Sur la table portugaise, l'azeite est partout : sur la morue, les légumes, ou simplement avec du pain.</p></div></article>
+          <article class="terroir-card"><div class="terroir-photo"><img src="images/photos/x-porco.jpg" alt="Porc noir alentejano" loading="lazy"></div><div class="terroir-body"><h3 data-i18n="terroir_pig_t">Le porco preto</h3><p data-i18n="terroir_pig">Le porc noir de race alentejana vit en liberté dans le montado, la forêt de chênes-lièges et de chênes verts, où il se nourrit de glands. Sa viande tendre et persillée donne des grillades réputées (secretos, plumas) et un jambon d'exception, comme le presunto de Barrancos (AOP).</p></div></article>
+        </div>
+      </div>
+    </section>
     <section class="sec sec--ivory">
       <div class="wrap">
         <div class="sec-head">
@@ -4047,7 +4148,23 @@
           <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/c-fado.jpg" alt="Amália Rodrigues" loading="lazy"></div><h3 class="info-title" data-i18n="cult_a1_title">Le fado</h3><p class="info-desc" data-i18n="cult_a1_desc">Chant mélancolique accompagné de la guitare portugaise. Amália Rodrigues en est la grande voix. Patrimoine immatériel de l'UNESCO depuis 2011.</p></article>
           <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/c-azulejo.jpg" alt="Azulejos" loading="lazy"></div><h3 class="info-title" data-i18n="cult_a2_title">Les azulejos</h3><p class="info-desc" data-i18n="cult_a2_desc">Carreaux de faïence peints, souvent bleus et blancs, qui décorent églises, gares et façades.</p></article>
           <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/c-manuelino.jpg" alt="Mosteiro dos Jerónimos" loading="lazy"></div><h3 class="info-title" data-i18n="cult_a3_title">L'art manuélin</h3><p class="info-desc" data-i18n="cult_a3_desc">Style de l'époque des Découvertes, riche en motifs marins : cordages, coquillages, sphères armillaires. Exemple : le monastère des Hiéronymites.</p></article>
-          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/c-pessoa.jpg" alt="Fernando Pessoa" loading="lazy"></div><h3 class="info-title" data-i18n="cult_a4_title">La littérature</h3><p class="info-desc" data-i18n="cult_a4_desc">Luís de Camões (Les Lusiades, 1572), Fernando Pessoa et José Saramago, prix Nobel de littérature 1998.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/x-pessoa.jpg" alt="Fernando Pessoa" loading="lazy"></div><h3 class="info-title" data-i18n="cult_a4_title">La littérature</h3><p class="info-desc" data-i18n="cult_a4_desc">Luís de Camões (Les Lusiades, 1572), Fernando Pessoa et José Saramago, prix Nobel de littérature 1998.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--white uni-sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-eyebrow" data-i18n="uni_eyebrow">ÉTUDES &amp; TRADITIONS</span>
+          <h2 class="sec-title" data-i18n="uni_title">Universités, capes noires et Harry Potter</h2>
+          <p class="sec-lead" data-i18n="uni_lead">Au Portugal, la vie étudiante a ses propres traditions, connues dans le monde entier.</p>
+        </div>
+        <div class="info-grid">
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/z-coimbra.jpg" alt="Université de Coimbra" loading="lazy"></div><h3 class="info-title" data-i18n="uni_c1_t">L'Université de Coimbra</h3><p class="info-desc" data-i18n="uni_c1">Fondée en 1290 par le roi Denis Ier et installée définitivement à Coimbra en 1537, c'est l'une des plus anciennes universités du monde. Elle est classée à l'UNESCO depuis 2013, avec sa splendide bibliothèque baroque, la Joanina.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/luis/traje.jpg" alt="Étudiants en traje académico" loading="lazy"></div><h3 class="info-title" data-i18n="uni_c2_t">Les étudiants « trajados »</h3><p class="info-desc" data-i18n="uni_c2">Costume noir et grande cape : c'est le traje académico. Selon la tradition, la cape ne se lave pas et chaque déchirure rappelle une personne ou un moment important. En mai, la Queima das Fitas fête la fin des études.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/luis/lello.jpg" alt="Livraria Lello, Porto" loading="lazy"></div><h3 class="info-title" data-i18n="uni_c3_t">La Livraria Lello, à Porto</h3><p class="info-desc" data-i18n="uni_c3">Ouverte en 1906, avec son escalier rouge et ses boiseries sculptées, elle est souvent citée parmi les plus belles librairies du monde. Il faut parfois faire la queue pour y entrer !</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/luis/harry-potter.jpg" alt="Harry Potter à l'école des sorciers" loading="lazy"></div><h3 class="info-title" data-i18n="uni_c4_t">Et Harry Potter&nbsp;?</h3><p class="info-desc" data-i18n="uni_c4">J.K. Rowling a vécu à Porto au début des années 1990 : elle y enseignait l'anglais et écrivait déjà Harry Potter. On dit que les capes des étudiants ont inspiré les robes de Poudlard, et Lello sa bibliothèque… mais Rowling affirme n'être jamais entrée chez Lello !</p></article>
         </div>
       </div>
     </section>
@@ -4080,10 +4197,11 @@
       <div class="wrap">
         <span class="sec-eyebrow" data-i18n="cult_wine_eyebrow">LES VINS</span>
         <div class="wine-grid">
-          <div class="wine-item"><span class="wine-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-.5 6a4.5 4.5 0 01-9 0L7 3zM12 13.5V21M8 21h8M7.3 7h9.4"/></svg></span><span class="wine-name">Vinho do Porto</span><p class="wine-desc" data-i18n="cult_v1_desc">Vin doux de la vallée du Douro, l'une des plus anciennes régions viticoles délimitées au monde (1756).</p></div>
-          <div class="wine-item"><span class="wine-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-.5 6a4.5 4.5 0 01-9 0L7 3zM12 13.5V21M8 21h8M7.3 7h9.4"/></svg></span><span class="wine-name">Vinho verde</span><p class="wine-desc" data-i18n="cult_v2_desc">Vin jeune et frais du Minho, au nord du pays.</p></div>
-          <div class="wine-item"><span class="wine-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-.5 6a4.5 4.5 0 01-9 0L7 3zM12 13.5V21M8 21h8M7.3 7h9.4"/></svg></span><span class="wine-name">Dão</span><p class="wine-desc" data-i18n="cult_v3_desc">Les vins rouges de la région de Viseu, ma région d'origine.</p></div>
+          <div class="wine-item"><div class="wine-photo"><img src="images/photos/x-porto-wine.jpg" alt="Vinho do Porto" loading="lazy"></div><span class="wine-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-.5 6a4.5 4.5 0 01-9 0L7 3zM12 13.5V21M8 21h8M7.3 7h9.4"/></svg></span><span class="wine-name">Vinho do Porto</span><p class="wine-desc" data-i18n="cult_v1_desc">Vin doux de la vallée du Douro, l'une des plus anciennes régions viticoles délimitées au monde (1756).</p></div>
+          <div class="wine-item"><div class="wine-photo"><img src="images/photos/x-vverde.jpg" alt="Vinho verde" loading="lazy"></div><span class="wine-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-.5 6a4.5 4.5 0 01-9 0L7 3zM12 13.5V21M8 21h8M7.3 7h9.4"/></svg></span><span class="wine-name">Vinho verde</span><p class="wine-desc" data-i18n="cult_v2_desc">Vin jeune et frais du Minho, au nord du pays.</p></div>
+          <div class="wine-item"><div class="wine-photo"><img src="images/photos/x-dao.jpg" alt="Dão" loading="lazy"></div><span class="wine-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-.5 6a4.5 4.5 0 01-9 0L7 3zM12 13.5V21M8 21h8M7.3 7h9.4"/></svg></span><span class="wine-name">Dão</span><p class="wine-desc" data-i18n="cult_v3_desc">Les vins rouges de la région de Viseu, ma région d'origine.</p></div>
         </div>
+        <a class="wine-map-btn" href="https://winesofportugal.com/en/discover/wine-regions" target="_blank" rel="noopener"><span data-i18n="cult_wine_map">Voir la carte des régions viticoles</span><span class="arrow">→</span></a>
       </div>
     </section>
 
@@ -4094,11 +4212,11 @@
           <h2 class="sec-title" data-i18n="cult_world_title">Le Portugal a changé la cuisine du monde</h2>
         </div>
         <div class="wf-grid">
-          <article class="wf-card wf-card--jp"><span class="wf-region" data-i18n="wf_reg_jp">JAPON</span><h3 class="wf-dish">Tempura</h3><p class="wf-text" data-i18n="cult_w1">Les missionnaires portugais mangeaient du poisson et des légumes frits pendant les jours de jeûne des « Quatre-Temps » (<em>têmporas</em>) : une origine probable de la tempura.</p></article>
-          <article class="wf-card wf-card--in"><span class="wf-region" data-i18n="wf_reg_in">INDE</span><h3 class="wf-dish">Vindaloo</h3><p class="wf-text" data-i18n="cult_w2">Ce curry de Goa tire son nom de la « carne de vinha d'alhos », une viande marinée au vin et à l'ail apportée par les Portugais.</p></article>
-          <article class="wf-card wf-card--as"><span class="wf-region" data-i18n="wf_reg_as">ASIE &amp; AFRIQUE</span><h3 class="wf-dish">Piri-piri</h3><p class="wf-text" data-i18n="cult_w3">Les navigateurs portugais ont diffusé le piment venu d'Amérique, jusqu'en Inde et en Thaïlande.</p></article>
-          <article class="wf-card wf-card--jp"><span class="wf-region" data-i18n="wf_reg_jp">JAPON</span><h3 class="wf-dish">Kasutera</h3><p class="wf-text" data-i18n="cult_w4">Ce gâteau japonais vient du « pão de Castela », le gâteau de Castille apporté par les Portugais à Nagasaki.</p></article>
-          <article class="wf-card wf-card--eu"><span class="wf-region" data-i18n="wf_reg_eu">EUROPE</span><h3 class="wf-dish">Marmelada</h3><p class="wf-text" data-i18n="cult_w5">Le mot « marmelade » vient du portugais « marmelada », une pâte de coings.</p></article>
+          <article class="wf-card wf-card--jp"><div class="wf-photo"><img src="images/photos/x-tempura.jpg" alt="Tempura" loading="lazy"></div><span class="wf-region" data-i18n="wf_reg_jp">JAPON</span><h3 class="wf-dish">Tempura</h3><p class="wf-text" data-i18n="cult_w1">Les missionnaires portugais mangeaient du poisson et des légumes frits pendant les jours de jeûne des « Quatre-Temps » (<em>têmporas</em>) : une origine probable de la tempura.</p></article>
+          <article class="wf-card wf-card--in"><div class="wf-photo"><img src="images/photos/x-vindaloo.jpg" alt="Vindaloo" loading="lazy"></div><span class="wf-region" data-i18n="wf_reg_in">INDE</span><h3 class="wf-dish">Vindaloo</h3><p class="wf-text" data-i18n="cult_w2">Ce curry de Goa tire son nom de la « carne de vinha d'alhos », une viande marinée au vin et à l'ail apportée par les Portugais.</p></article>
+          <article class="wf-card wf-card--as"><div class="wf-photo"><img src="images/photos/x-piri.jpg" alt="Piri-piri" loading="lazy"></div><span class="wf-region" data-i18n="wf_reg_as">ASIE &amp; AFRIQUE</span><h3 class="wf-dish">Piri-piri</h3><p class="wf-text" data-i18n="cult_w3">Les navigateurs portugais ont diffusé le piment venu d'Amérique, jusqu'en Inde et en Thaïlande.</p></article>
+          <article class="wf-card wf-card--jp"><div class="wf-photo"><img src="images/photos/x-kasutera.jpg" alt="Kasutera" loading="lazy"></div><span class="wf-region" data-i18n="wf_reg_jp">JAPON</span><h3 class="wf-dish">Kasutera</h3><p class="wf-text" data-i18n="cult_w4">Ce gâteau japonais vient du « pão de Castela », le gâteau de Castille apporté par les Portugais à Nagasaki.</p></article>
+          <article class="wf-card wf-card--eu"><div class="wf-photo"><img src="images/photos/x-marmelada.jpg" alt="Marmelada" loading="lazy"></div><span class="wf-region" data-i18n="wf_reg_eu">EUROPE</span><h3 class="wf-dish">Marmelada</h3><p class="wf-text" data-i18n="cult_w5">Le mot « marmelade » vient du portugais « marmelada », une pâte de coings.</p></article>
         </div>
       </div>
     </section>
@@ -4203,10 +4321,29 @@
           <h2 class="sec-title" data-i18n="sport_more_title">D'autres fiertés sportives</h2>
         </div>
         <div class="info-grid">
-          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/hero-sport-card.jpg" alt="Nazaré" loading="lazy"></div><h3 class="info-title" data-i18n="sport_m1_title">Surf à Nazaré</h3><p class="info-desc" data-i18n="sport_m1_desc">Des vagues géantes de plus de 25 mètres : des records du monde de surf y ont été établis.</p></article>
+          <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/hero-sport-card.jpg" alt="Nazaré" loading="lazy"></div><h3 class="info-title" data-i18n="sport_m1_title">Surf à Nazaré</h3><p class="info-desc" data-i18n="sport_m1_desc">La plus grande vague jamais surfée y a été mesurée : 26,21 m, la hauteur d'un immeuble d'environ 8 étages (Sebastian Steudtner, 2020).</p></article>
           <article class="info-card info-card--photo"><div class="card-photo"><img src="images/photos/s-hockey.jpg" alt="Rink-hockey" loading="lazy"></div><h3 class="info-title" data-i18n="sport_m2_title">Rink-hockey</h3><p class="info-desc" data-i18n="sport_m2_desc">L'une des plus grandes nations du hockey sur patins à roulettes, avec plus de 15 titres de champion du monde.</p></article>
           <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="5"/><path d="M8.5 11.5L5 3h4l3 6 3-6h4l-3.5 8.5M12 13v4"/></svg></span><h3 class="info-title" data-i18n="sport_m3_title">Athlétisme</h3><p class="info-desc" data-i18n="sport_m3_desc">Carlos Lopes (1984) et Rosa Mota (1988) ont remporté l'or olympique au marathon.</p></article>
-          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.3 2.4-1.3 3.9H10l-1.3-3.9L12 7.5zM12 3v4.5M20.5 9.5l-4 1.5M3.5 9.5l4 1.5M15 18.5l-1-4.7M9 18.5l1-4.7"/></svg></span><h3 class="info-title" data-i18n="sport_m4_title">Futsal</h3><p class="info-desc" data-i18n="sport_m4_desc">Champion du monde en 2021 et double champion d'Europe.</p></article>
+          <article class="info-card"><span class="info-icon"><svg viewBox="0 0 24 24" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.3 2.4-1.3 3.9H10l-1.3-3.9L12 7.5zM12 3v4.5M20.5 9.5l-4 1.5M3.5 9.5l4 1.5M15 18.5l-1-4.7M9 18.5l1-4.7"/></svg></span><h3 class="info-title" data-i18n="sport_m4_title">Futsal</h3><p class="info-desc" data-i18n="sport_m4_desc">Champion du monde en 2021, champion d'Europe en 2018 et 2022, finaliste en 2026.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--white athl-sec">
+      <div class="wrap athl-grid">
+        <figure class="athl-photo"><img src="images/luis/lopes-mota.jpg" alt="Rosa Mota et Carlos Lopes" loading="lazy"><figcaption data-i18n="athl_cap">Rosa Mota et Carlos Lopes lors d'une course populaire à Faro.</figcaption></figure>
+        <div>
+          <span class="sec-eyebrow" data-i18n="athl_eyebrow">ATHLÉTISME</span>
+          <h2 class="sec-title athl-title" data-i18n="athl_title">Les rois du marathon</h2>
+          <div class="athl-people">
+            <div class="athl-person"><h3>Carlos Lopes</h3><p data-i18n="athl_lopes">Champion olympique du marathon à Los Angeles en 1984, à 37 ans, puis record du monde en 2 h 07 min 12 s à Rotterdam en 1985. Il a aussi été trois fois champion du monde de cross-country.</p></div>
+            <div class="athl-person"><h3>Rosa Mota</h3><p data-i18n="athl_mota">Bronze en 1984, puis championne olympique du marathon à Séoul en 1988 : la première Portugaise sacrée aux Jeux. Championne du monde en 1987 et trois fois championne d'Europe.</p></div>
+          </div>
+          <div class="athl-facts">
+            <div><b>1984</b><span data-i18n="athl_f1">OR OLYMPIQUE — CARLOS LOPES</span></div>
+            <div><b>1988</b><span data-i18n="athl_f2">OR OLYMPIQUE — ROSA MOTA</span></div>
+            <div><b>2:07:12</b><span data-i18n="athl_f3">RECORD DU MONDE (1985)</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -4223,6 +4360,10 @@
             <div><b>1 000 000</b><span data-i18n="rbar_f2">SPECTATEURS EN 2008 (RECORD)</span></div>
           </div>
         </div>
+      </div>
+      <div class="wrap rbar-more">
+        <figure data-opt-photo="x-redbull3.jpg"><img src="images/photos/x-redbull3.jpg" alt="Red Bull Air Race, Porto" loading="lazy"></figure>
+        <figure data-opt-photo="x-redbull2.jpg"><img src="images/photos/x-redbull2.jpg" alt="Red Bull Air Race, Porto" loading="lazy"></figure>
       </div>
     </section>
 
@@ -4279,7 +4420,7 @@
             <div class="region-body"><h3 class="region-name" data-i18n="reg_al_name">L'Alentejo</h3><span class="region-cities">Évora · Beja</span><p class="region-desc" data-i18n="reg_al_desc">Vastes plaines dorées, oliviers et chênes-lièges : le Portugal produit environ la moitié du liège mondial. Évora est classée à l'UNESCO.</p></div>
           </article>
           <article class="region-card">
-            <div class="region-photo"><img src="images/photos/r-algarve.jpg" alt="Plage de l'Algarve"><span class="region-num">5</span></div>
+            <div class="region-photo"><img src="images/photos/x-algarve.jpg" alt="Praia da Falésia, Algarve"><span class="region-num">5</span></div>
             <div class="region-body"><h3 class="region-name" data-i18n="reg_ag_name">L'Algarve</h3><span class="region-cities">Faro · Lagos</span><p class="region-desc" data-i18n="reg_ag_desc">Plages de sable doré, falaises spectaculaires et plus de 300 jours de soleil par an.</p></div>
           </article>
           <article class="region-card">
@@ -4299,13 +4440,13 @@
         <div class="sec-head sec-head--left" style="margin-bottom:0;">
           <span class="sec-eyebrow" data-i18n="reg_car_eyebrow">ZOOM SUR CHEZ MOI</span>
           <h2 class="sec-title" data-i18n="reg_car_title">Caramulo, la montagne de l'air pur</h2>
-          <p class="sec-lead" data-i18n="reg_car_text">Dans les années 1920, le docteur Jerónimo de Lacerda fonde à Caramulo une station de sanatoriums : on venait de tout le pays soigner la tuberculose grâce à l'air pur de la montagne. Plus tard, ses fils créent le Musée du Caramulo, qui réunit une collection d'art — de l'Égypte ancienne à Picasso — et une magnifique collection de voitures et de motos anciennes.</p>
+          <p class="sec-lead" data-i18n="reg_car_text">En 1921, le docteur Jerónimo de Lacerda fonde à Caramulo une station sanatoriale, qui comptera jusqu'à une vingtaine de sanatoriums : on venait de tout le pays soigner la tuberculose grâce à l'air pur de la montagne. Plus tard, ses fils créent le Musée du Caramulo, qui réunit une collection d'art — de l'Égypte ancienne à Picasso — et une magnifique collection de voitures et de motos anciennes.</p>
         </div>
         <div class="car-side">
           <div class="car-photos"><img src="images/luis/caramulo-vue.jpg" alt="Serra do Caramulo" loading="lazy"><img src="images/photos/r-caramulo2.jpg" alt="Museu do Caramulo" loading="lazy"></div>
         <div class="car-facts">
           <div class="car-fact"><span class="car-num">1 076 <small>m</small></span><span class="car-label" data-i18n="reg_car_f1">Altitude du Caramulinho, le sommet de la serra</span></div>
-          <div class="car-fact"><span class="car-num">1920s</span><span class="car-label" data-i18n="reg_car_f2">Fondation du sanatorium</span></div>
+          <div class="car-fact"><span class="car-num">1921</span><span class="car-label" data-i18n="reg_car_f2">Création de la station sanatoriale (une vingtaine de sanatoriums)</span></div>
           <div class="car-fact"><span class="car-num">1953</span><span class="car-label" data-i18n="reg_car_f3">Fondation du Musée du Caramulo</span></div>
         </div>
         </div>
@@ -4398,7 +4539,7 @@
       <div class="wrap">
         <div class="sec-head">
           <span class="sec-eyebrow" data-i18n="merv_map_eyebrow">UN VOYAGE SUR LA CARTE</span>
-          <h2 class="sec-title" data-i18n="merv_map_title">Neuf merveilles à découvrir</h2>
+          <h2 class="sec-title" data-i18n="merv_map_title">Dix merveilles à découvrir</h2>
           <p class="sec-lead" data-i18n="merv_map_lead">Faites défiler : la carte vous montre où se trouve chaque merveille.</p>
         </div>
         <div class="merv-grid">
@@ -4409,9 +4550,10 @@
           <path class="mland-pt" d="M258.6,675.1L258.9,675.7L258.9,676.4L259.3,676.8L260,677L260,677.7L259.3,678.8L257.5,677.5L255.3,676.8L253.2,676.8L251,677L248.9,677.9L244.9,680.8L243.1,681.4L237.3,685.4L236.6,686.4L221.5,697.2L217.9,700.2L216.5,700.2L215,699.6L212.9,699.1L206.7,698.9L204.9,698.3L204.2,699.8L203.1,699.6L201.7,698.7L201,698.3L201.7,699.8L202.1,700.7L202.4,701.8L200.3,698.5L196.7,695.2L189.5,691L185.1,690.2L182.3,688.6L178.7,688.9L170.7,689.9L167.1,688.9L163.5,687.3L160.7,688.9L156,689.3L151.7,687.8L151.7,688L146.3,684.9L141.9,684L137.3,684.5L135.8,684.9L134.4,685.8L131.5,689.3L125.4,689.3L123.9,689.7L121.4,691.5L120,691.9L118.5,692.1L116.4,692.8L114.2,694.8L112.1,693.9L110.3,695.9L109.5,696.5L108.5,697L106.3,698.7L105.6,699.1L103.8,698.5L102.7,697.4L101.6,696.7L100.2,697.4L100.9,693.7L101.6,691.9L102,691L105.9,684.7L107.4,681.2L108.8,678.1L107.7,674.2L109.5,672.4L111.7,670L113.1,664.3L112.4,661.9L111.7,660L113.5,656.7L116,653.4L116.7,650.3L118.5,645.9L119.6,640L120.3,636.5L120.3,630.6L120,627.6L118.9,625.6L117.5,623.8L117.5,622.3L118.9,616.6L119.3,612.9L120,609.6L121.4,608.9L124.3,608.5L124.7,605.4L124.7,604.8L123.9,605.7L121.8,606.3L119.3,606.3L118.2,604.1L118.9,597.6L120.3,590.6L120,586.2L119.6,583.1L117.8,579.8L114.6,579.2L110.6,576.5L111,575.5L111.7,575L112.4,574.8L113.1,573.9L118.5,562.3L120.3,553.1L122.5,546.1L122.1,539.3L121.4,531L120.3,523.8L117.8,518.8L115.3,515.9L112.1,512.2L108.5,509.1L105.6,508L107.4,506.5L109.5,507.4L113.1,510.7L117.8,512.4L120,513.5L120,515.2L124.3,515L134.4,517.9L139.4,516.1L136.2,515.9L133.7,515.5L126.5,512L125.4,510.9L125,509.1L124.7,507.1L125,505.6L125.4,504.3L126.5,503.6L126.5,502.8L125,502.1L123.9,500.8L123.6,498.8L124.3,497.5L122.5,497.1L120.7,501.2L118.9,501.9L118.9,502.8L121.1,503L122.1,505L122.1,507.1L121.1,508L118.9,507.8L116.7,507.4L113.1,505.4L109.5,504.1L104.5,505L100.2,510.2L100.9,510.9L95.1,513.3L85.4,514.6L83.3,515.2L81.8,516.6L80,517L77.5,516.1L76.8,516.1L76.8,515.5L76.8,514.6L76.8,513.7L77.1,513.3L77.9,512.2L81.1,509.1L81.5,505.2L81.5,499L79.3,492.9L76.1,488.1L74.6,484.2L76.4,483.1L81.1,482.6L85.4,482.2L87.6,483.5L88.7,485L89.4,485L88.7,482.4L90.1,481.5L93.3,480.7L94.8,480.4L94.8,479.8L96.2,477.8L98,476.3L100.9,474.1L104.5,470.8L104.9,470.6L105.2,470.2L105.6,469.9L105.6,469.1L104.9,467.3L103.4,464.9L103.1,462.1L103.8,460.1L101.3,460.3L100.2,458.3L99.8,455L98.7,452L103.1,442.8L105.6,438.8L109.2,436L111.3,435.6L115.3,435.3L117.5,434.5L121.1,431.6L122.5,430.1L123.6,428.1L120.7,430.1L116.4,433.4L107.7,434.5L106.3,435.6L104.5,439.3L99.8,446.3L94.1,457.5L91.2,461.2L90.1,462.9L89.4,464.9L89.7,467.3L89.7,471.7L90.1,474.7L88.7,477.8L83.6,479.6L77.9,480.4L71.4,479.8L69.6,481.3L67.8,483.5L63.8,481.1L59.5,479.1L57,478.7L53,479.3L50.9,478.7L50.9,476.1L51.6,473.9L50.1,468.2L50.1,465.6L50.9,464.2L51.9,462.7L54.5,460.3L57.7,449.8L57.3,441.9L56.3,437.1L57.3,434L57.7,430.5L61.7,423.5L62.7,420L64.9,415.2L65.3,410.4L66,406.2L64.5,399.9L63.5,397.2L59.9,393.5L59.1,392.2L60.2,391.8L64.5,393.1L72.1,388.3L73.9,386.5L76.1,386.3L77.1,387.8L78.2,388.1L79.3,387L78.6,385.2L77.1,383.7L78.6,381L80.7,378.4L81.8,376.9L83.6,375.8L86.5,373.8L87.9,371.4L89,369.4L90.8,365.7L91.2,363.5L90.8,360.9L92.3,357.4L93,352.6L100.5,331.6L113.1,295L114.6,293L116,294.8L117.5,295.7L121.4,295.7L121.4,294.8L120,293.3L118.5,292.2L116.7,291.5L112.1,290.9L110.3,289.8L109.2,288L109.2,285.2L110.3,281.4L113.5,275.5L120,249.7L121.4,241.6L123.6,235.7L124.7,228L125,227.6L125.4,227.4L125.7,230L125.4,230.9L127.5,227.6L129,226.5L130.4,227.4L131.1,227.4L131.1,226.5L130.8,226.1L130.4,225.4L130.1,224.5L130.4,223.9L131.5,223.2L131.9,223.6L132.2,224.3L132.9,224.7L133.7,224.3L134.7,223.4L135.8,221.2L134.4,220.1L133.3,218.6L133.7,217.3L135.5,216.6L138,216.4L139.8,215.8L141.2,214.7L142.7,213.1L141.2,213.4L138.7,214.7L136.5,215.1L136.2,215.1L135.5,215.3L133.3,214.2L132.6,213.1L131.5,209.6L135.5,204.4L134.4,201.5L134.4,203.7L133.7,205.5L132.9,205.9L132.6,204.2L131.1,207L130.1,210.3L129.3,213.8L129,217.1L128.6,219.3L127.5,222.3L126.1,225L125,226.5L134.4,182.3L134.4,177.5L133.3,168.9L133.3,164.3L135.1,162.6L135.1,161.7L131.5,160.8L129.3,157.3L128.3,152.7L126.5,149.2L126.8,147.5L126.5,145.9L126.1,144.6L125.4,142.9L125.7,138.9L125,137.6L124.3,137.4L123.9,136.1L123.6,134.8L122.1,132.4L121.8,130.4L121.8,128.9L121.4,125.1L122.5,120.8L121.4,117.9L121.1,115.1L120.7,113.3L120.3,111.1L119.3,107.2L118.9,104.3L118.2,102.1L117.8,99.7L117.1,97.5L117.1,94.5L117.5,92.9L119.6,92.1L125.7,91.2L127.5,90.3L129,89.2L130.4,87.9L119.3,91.2L117.1,91.4L115.7,91.2L113.9,90.1L112.1,85.9L112.1,82.2L112.8,76.5L112.1,72.8L112.4,71.3L113.1,70.2L120.3,64.5L123.6,60.8L125,55.9L126.1,55.1L128.3,54L130.8,53.1L132.9,51.8L133.7,50.5L134.7,47.8L135.5,46.5L137.3,45.2L139.1,45L142.7,44.8L144.5,44.1L148.1,41.7L149.9,41.1L165.3,38.7L167.1,37.8L169.7,35.6L170.4,34.9L171.1,34.7L172.9,34.7L174.7,34.1L177.9,31.9L178.7,33.2L179.7,35.2L179.4,40.8L179.7,42.8L180.8,43.9L182.3,43.5L184.1,42.6L186.2,42.4L188,43.3L189.8,44.6L190.5,46.5L190.2,48.7L189.1,50.5L187.7,51.8L184.8,53.5L181.9,56.4L177.9,61.9L176.9,64.3L176.9,66.7L177.9,68.9L181.5,70.4L182.3,71.3L182.6,73L182.3,76.1L181.9,76.3L190.5,77L194.9,75.7L195.2,75.7L198.5,72.4L199.5,70.8L200.6,69.5L202.1,68.9L203.5,69.1L205.7,69.1L206.4,67.3L207.1,65.4L207.5,63.8L209.3,63L209.6,66.5L210.3,70.2L213.6,70.2L214.3,69.5L214.7,68.6L215,68L216.1,67.6L218.6,67.8L225.1,66.2L228,64.9L229.4,65.4L232.3,67.3L233.7,68L239.1,68.2L237.7,72.4L237.7,73.7L239.5,74.6L241.3,74.6L243.5,74.3L245.3,73.7L246.7,72.6L247.4,71.7L247.4,70.8L247.8,70L248.5,69.3L249.2,69.3L250.7,70.4L251.7,70.4L253.2,71.1L254.3,72.8L255.3,75L255.7,77L257.1,75.9L259.3,73.2L260.7,72.4L262.2,72.1L265.8,72.1L267.9,71.9L274.8,69.5L278,67.6L279.1,66.2L280.2,64.7L280.5,62.5L279.8,58.4L280.2,56.6L280.9,55.7L282.3,54.6L284.1,53.8L285.6,53.5L288.8,55.5L291.7,57.9L294.9,59.5L298.5,57.9L300.7,56.2L301.8,56.6L303.2,57.3L305.4,59.2L308.3,59.7L314.4,59.2L316.9,57.9L317.6,54L320.5,54.4L324.1,59.9L327.3,60.8L334.2,60.5L337.8,59.5L339.2,56.8L341.4,57.7L342.8,59.2L343.2,61.4L342.5,67.1L343.2,68L345,68.2L347.5,69.1L346.4,71.5L343.9,82L343.5,83.3L342.8,84.4L342.1,85.5L342.5,86.8L343.2,87.9L343.5,89L343.9,91.4L344.6,94L345.7,96L348.6,97.1L349.7,96.9L351.1,96L352.5,95.1L353.3,94.5L354,93.8L355.4,93.8L363.3,95.6L368.4,97.3L372.7,100L377,104.3L378.5,106.3L379.5,107.6L374.5,114.4L372,117L371.3,118.3L371.6,119.4L371.6,120.3L371.6,121.2L368,127.1L368,128.2L364.8,128.4L363.3,129.1L362.3,129.9L362.3,130.2L362.6,130.8L362.3,131.9L362.3,132.6L361.5,132.8L360.5,132.4L360.1,132.6L356.9,137.6L353.6,140.9L350.4,143.3L344.6,145.7L343.5,146.4L337.1,146.6L335.3,146.8L334.2,148.1L330.6,153.4L329.9,155.3L329.1,156.2L325.9,159.3L324.5,160.8L324.1,161.9L324.5,165L323.4,167.4L319.4,173.1L318.3,174.4L315.5,174.8L309.3,174.2L307.2,175.3L306.8,177.7L305.7,179.4L306.1,181.2L306.8,182.5L310.1,185.8L311.5,188.2L313.7,193.4L314.4,196.1L315.5,197.2L316.9,197.6L318,198.2L318.3,200L318,201.8L316.2,202.2L316.2,205.5L316.2,206.3L316.5,207.7L316.5,208.5L316.2,209.2L316.2,210.5L316.2,212.9L316.2,214.9L317.6,219L318.3,223.4L318.7,225.6L318.7,227.1L318,229.6L315.5,233.7L315.1,235.7L315.1,237.9L316.2,239.2L317.3,240.5L318.3,242.3L318.7,244.4L318.3,246L316.2,249.3L314.4,253.9L314.7,258L317.3,261.7L320.5,265L318.7,268.1L318,269L313.7,272.2L312.9,272.9L312.6,273.8L312.6,274.9L312.6,276L312.2,276.8L310.4,277.9L308.3,278.2L306.5,277.9L305.7,278.2L304.7,278.4L300.3,281.2L298.5,281.9L297.5,283.2L296.4,286L295.7,287.6L296.4,289.5L297.1,293.9L298.5,295.7L299.6,296.1L302.1,296.5L303.2,296.8L304.3,297.9L305.7,300L307.9,302.7L311.9,309.9L310.4,312.7L309.7,314.3L310.1,315.6L309.7,316.7L309,320L308.6,320.4L307.9,321.3L307.5,321.7L307.5,322.6L307.9,323.9L307.9,324.6L307.5,325.7L307.5,327.9L307.2,329.2L304.7,332.9L303.9,333.3L301.4,334.4L300.7,335.1L300,336.8L300,338.1L300.7,339.5L300.7,340.3L300.3,341.6L299.3,343.8L298.5,344.9L298.5,346.2L298.9,347.1L298.9,348L297.8,350.8L296.4,351.5L281.6,353.2L278.7,353.2L276.6,351.7L274.8,352.4L270.8,352.2L269,352.6L267.2,353.2L265.8,353.7L244.2,352.6L244.5,353L245.3,354.8L248.5,363.8L250.3,365.5L253.2,369.4L255,371L258.2,372.9L258.9,374L260,376.9L261.5,378L263.6,379.1L267.9,380.2L268.7,381.5L268.7,384.3L268.3,387.2L267.2,389.1L266.9,390.9L266.9,393.7L267.2,396.6L267.9,398.1L270.1,399.7L274.8,405.8L273.7,408.2L273.3,410.8L274.1,413.4L275.5,415.4L278,416.7L280.9,417.6L283.1,418.7L284.5,421.1L284.1,422.4L283.1,425.1L283.4,426.1L284.1,427.2L285.6,427.9L287.4,428.1L288.5,427.7L291,426.1L293.5,425.9L296,426.6L298.5,428.3L300,429.9L301.4,432.1L302.1,434.7L301.4,436.9L302.5,437.8L302.5,439.1L302.1,440.4L301.1,441.7L297.8,448.3L295.7,451.3L293.5,453.1L294.9,455.7L294.2,457.7L294.2,459.6L293.5,460.1L292.4,461.2L291,462.5L289.5,463.1L284.9,464.2L283.8,465.1L283.4,466.2L282,468L280.5,469.3L278.7,469.9L277.3,471L273,474.7L272.6,475.4L271.9,477.2L271.5,478L270.8,482.4L270.8,485.5L270.8,486.8L270.8,487.7L271.5,488.5L271.9,489L272.6,489.4L273,490.3L272.3,492.3L268.3,498.4L266.5,505L265.4,506.5L266.5,508L266.5,509.6L265.4,511.1L264,512.6L265.4,513.3L268.3,515.5L278.7,529.3L279.5,530.1L279.8,531.7L280.5,532.5L280.9,533.2L282.7,534.5L283.4,535.2L287.4,545.7L288.5,546.6L289.5,547.9L291.3,547.9L293.9,547.4L296,546.3L297.5,544.6L297.8,544.8L298.2,544.8L300.7,543.9L303.6,543.7L305,544.8L305.4,545L304.3,548.7L303.6,550.5L302.1,554.9L300.3,558.8L299.3,562.8L298.5,564.3L297.5,567.6L294.9,567.8L289.5,565.4L287.7,565.2L286.7,566.3L285.9,568.9L284.9,570.4L284.1,570.9L282.7,571.3L281.6,571.9L280.2,571.7L279.1,571.3L277.7,571.3L276.6,571.9L273.3,572.6L272.6,573.5L272.6,574.6L273,575.7L273,577L272.6,579.4L270.5,585.3L269.4,589.9L266.5,594.9L257.5,602.8L255.7,605.4L254.3,609.4L253.5,615.5L252.8,617.5L252.1,618.6L249.6,621.4L248.5,622.1L248.9,623L248.9,623.6L248.5,624.1L248.5,624.7L247.4,626L247.1,626.7L247.1,628L247.4,628L247.8,628L248.1,629.7L248.1,630.6L248.5,631.5L248.5,631.7L249.2,633L250.3,633.7L251.7,635.2L252.5,636.1L253.2,638.5L253.5,641.6L253.9,644.4L253.9,645.9L255.3,649.9L256.4,660.2L257.1,664.6L256.4,666.5L257.1,669.4L258.6,675.1ZM204.6,702.6L209.6,703.3L211.8,702.6L213.9,700L214.3,700.5L214.3,700.9L214.7,701.8L213.9,702.2L213.9,702.6L212.1,704L209.6,704.6L206.7,704.4L204.6,703.5L204.6,702.6ZM95.9,457.9L96.6,457.7L96.6,458.3L95.9,460.3L94.4,462.5L92.6,464.5L91.9,464L93,461.8L93.7,459.9L95.1,458.8L95.5,458.1L95.9,457.9Z"/>
           <text class="mlabel-sea" x="32" y="591">OCEANO</text>
           <text class="mlabel-sea" x="32" y="607">ATLÂNTICO</text>
-          <text class="mcity" x="99.0" y="166.1">Porto</text>
+          
+          <path id="mRoad" class="mroad" d="M138.9 165.5 L152.0 171.9 L173.0 176.4 L191.0 172.5 L204.0 168.6 L221.0 161.5 L233.0 160.2 L245.0 156.9 L259.9 162.1 L274.9 168.6 L285.9 171.2 L294.9 182.9"/>
           <path id="mArrow" class="marrow" d="" marker-end="url(#mArrowHead)"/>
-          <g class="mpin" data-i="1" transform="translate(245.0,156.9)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">1</text></g><g class="mpin" data-i="2" transform="translate(134.6,228.2)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">2</text></g><g class="mpin" data-i="3" transform="translate(117.4,355.4)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">3</text></g><g class="mpin" data-i="4" transform="translate(54.9,462.3)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">4</text></g><g class="mpin" data-i="5" transform="translate(70.4,490.7)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">5</text></g><g class="mpin" data-i="6" transform="translate(89.3,492.0)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">6</text></g><g class="mpin" data-i="7" transform="translate(108.0,461.9)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">7</text></g><g class="mpin" data-i="8" transform="translate(250.3,544.9)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">8</text></g><g class="mpin" data-i="9" transform="translate(157.3,688.8)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">9</text></g>
+          <g class="mpin" data-i="1" transform="translate(245.0,156.9)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">1</text></g><g class="mpin" data-i="2" transform="translate(139.0,162.1)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">2</text></g><g class="mpin" data-i="3" transform="translate(134.6,228.2)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">3</text></g><g class="mpin" data-i="4" transform="translate(117.4,355.4)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">4</text></g><g class="mpin" data-i="5" transform="translate(54.9,462.3)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">5</text></g><g class="mpin" data-i="6" transform="translate(70.4,490.7)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">6</text></g><g class="mpin" data-i="7" transform="translate(89.3,492.0)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">7</text></g><g class="mpin" data-i="8" transform="translate(108.0,461.9)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">8</text></g><g class="mpin" data-i="9" transform="translate(250.3,544.9)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">9</text></g><g class="mpin" data-i="10" transform="translate(157.3,688.8)"><circle class="mpin-halo" r="15"/><circle class="mpin-dot" r="9"/><text y="3.6" text-anchor="middle">10</text></g>
         </svg>
           </div></div>
           <div class="merv-list">
@@ -4424,47 +4566,55 @@
           
         </article>
         <article class="merv-item" data-i="2" id="merv-2">
-          <div class="merv-head"><span class="merv-num">2</span><div><span class="merv-place" data-i18n="m2_place">CENTRE · RIA DE AVEIRO</span><h3 class="merv-name" data-i18n="m2_name">Aveiro, la « Venise du Portugal »</h3></div></div>
+          <div class="merv-head"><span class="merv-num">2</span><div><span class="merv-place" data-i18n="mP_place">NORD · PORTO</span><h3 class="merv-name" data-i18n="mP_name">Porto et le pont Dom Luís I</h3></div></div>
+          <div class="merv-photo" data-opt-photo="photos/x-dluis.jpg"><img src="images/photos/x-dluis.jpg" alt="" loading="lazy"></div>
+          
+          <p class="merv-text" data-i18n="mP_text">Inauguré en 1886, le pont Dom Luís I relie Porto à Vila Nova de Gaia par une arche de fer de 172 m. Il a été conçu par Théophile Seyrig, ancien associé de Gustave Eiffel. À ses pieds, les maisons colorées de la Ribeira se reflètent dans le Douro.</p>
+          <ul class="merv-facts"><li data-i18n="mP_f1">Deux tabliers : le métro en haut, les voitures en bas</li><li data-i18n="mP_f2">Centre historique classé à l'UNESCO en 1996</li></ul>
+          <figure class="merv-sub" data-opt-photo="photos/x-caves.jpg"><img src="images/photos/x-caves.jpg" alt="" loading="lazy"><figcaption data-i18n="mP_caves_cap">En face, à Gaia, le vin de Porto vieillit dans les caves, comme autrefois quand il descendait le Douro sur les bateaux rabelos.</figcaption></figure>
+        </article>
+        <article class="merv-item" data-i="3" id="merv-3">
+          <div class="merv-head"><span class="merv-num">3</span><div><span class="merv-place" data-i18n="m2_place">CENTRE · RIA DE AVEIRO</span><h3 class="merv-name" data-i18n="m2_name">Aveiro, la « Venise du Portugal »</h3></div></div>
           <div class="merv-photo" data-opt-photo="photos/w-aveiro.jpg"><img src="images/photos/w-aveiro.jpg" alt="" loading="lazy"></div>
           
           <p class="merv-text" data-i18n="m2_text">Ses canaux sont parcourus par les moliceiros, des bateaux colorés qui servaient autrefois à récolter le moliço, une algue utilisée comme engrais. Autour de la ville, les salines produisent depuis des siècles un sel marin récolté à la main.</p>
           <ul class="merv-facts"><li data-i18n="m2_f1">Environ 2 600 hectares de salines dans la Ria</li><li data-i18n="m2_f2">La fleur de sel : la fine couche de sel récoltée à la surface</li></ul>
           <figure class="merv-sub" data-opt-photo="photos/w-salinas.jpg"><img src="images/photos/w-salinas.jpg" alt="" loading="lazy"><figcaption data-i18n="m2_salt_cap">Les salines d'Aveiro</figcaption></figure>
         </article>
-        <article class="merv-item" data-i="3" id="merv-3">
-          <div class="merv-head"><span class="merv-num">3</span><div><span class="merv-place" data-i18n="m3_place">CENTRE · LEIRIA</span><h3 class="merv-name" data-i18n="m3_name">Le monastère de Batalha</h3></div></div>
+        <article class="merv-item" data-i="4" id="merv-4">
+          <div class="merv-head"><span class="merv-num">4</span><div><span class="merv-place" data-i18n="m3_place">CENTRE · LEIRIA</span><h3 class="merv-name" data-i18n="m3_name">Le monastère de Batalha</h3></div></div>
           <div class="merv-photo" data-opt-photo="photos/w-batalha.jpg"><img src="images/photos/w-batalha.jpg" alt="" loading="lazy"></div>
           <span class="merv-badge" data-i18n="merv_7m">L'une des « 7 Merveilles du Portugal » (2007)</span>
           <p class="merv-text" data-i18n="m3_text">Le roi Jean Ier le fait construire à partir de 1386 pour remercier la Vierge de la victoire d'Aljubarrota contre la Castille (1385), qui sauve l'indépendance du Portugal. Il y repose avec son épouse anglaise, Philippa de Lancastre, et leur fils, Henri le Navigateur.</p>
           <ul class="merv-facts"><li data-i18n="m3_f1">Patrimoine mondial de l'UNESCO depuis 1983</li><li data-i18n="m3_f2">Plus d'un siècle de travaux, du gothique au manuélin</li></ul>
           
         </article>
-        <article class="merv-item" data-i="4" id="merv-4">
-          <div class="merv-head"><span class="merv-num">4</span><div><span class="merv-place" data-i18n="m4_place">LISBONNE · SERRA DE SINTRA</span><h3 class="merv-name" data-i18n="m4_name">Le palais de la Pena, Sintra</h3></div></div>
+        <article class="merv-item" data-i="5" id="merv-5">
+          <div class="merv-head"><span class="merv-num">5</span><div><span class="merv-place" data-i18n="m4_place">LISBONNE · SERRA DE SINTRA</span><h3 class="merv-name" data-i18n="m4_name">Le palais de la Pena, Sintra</h3></div></div>
           <div class="merv-photo" data-opt-photo="photos/w-pena.jpg"><img src="images/photos/w-pena.jpg" alt="" loading="lazy"></div>
           <span class="merv-badge" data-i18n="merv_7m">L'une des « 7 Merveilles du Portugal » (2007)</span>
           <p class="merv-text" data-i18n="m4_text">Perché au sommet de la serra, ce palais aux couleurs vives a été construit au XIXe siècle pour le roi Ferdinand II. Avec ses jardins, ses châteaux et ses forêts, Sintra ressemble à un conte de fées.</p>
           <ul class="merv-facts"><li data-i18n="m4_f1">Paysage culturel de Sintra : UNESCO depuis 1995</li><li data-i18n="m4_f2">Chef-d'œuvre du romantisme en Europe</li></ul>
           
         </article>
-        <article class="merv-item" data-i="5" id="merv-5">
-          <div class="merv-head"><span class="merv-num">5</span><div><span class="merv-place" data-i18n="m5_place">LISBONNE · BELÉM</span><h3 class="merv-name" data-i18n="m5_name">La tour de Belém</h3></div></div>
+        <article class="merv-item" data-i="6" id="merv-6">
+          <div class="merv-head"><span class="merv-num">6</span><div><span class="merv-place" data-i18n="m5_place">LISBONNE · BELÉM</span><h3 class="merv-name" data-i18n="m5_name">La tour de Belém</h3></div></div>
           <div class="merv-photo" data-opt-photo="photos/hero-hist.jpg"><img src="images/photos/hero-hist.jpg" alt="" loading="lazy"></div>
           <span class="merv-badge" data-i18n="merv_7m">L'une des « 7 Merveilles du Portugal » (2007)</span>
           <p class="merv-text" data-i18n="m5_text">Construite de 1514 à 1519 sur le Tage, elle protégeait l'entrée de Lisbonne et saluait les navigateurs qui partaient vers l'Afrique, l'Inde et le Brésil. C'est l'un des symboles de l'époque des Découvertes.</p>
           <ul class="merv-facts"><li data-i18n="m5_f1">Patrimoine mondial de l'UNESCO depuis 1983</li><li data-i18n="m5_f2">Chef-d'œuvre du style manuélin</li></ul>
           
         </article>
-        <article class="merv-item" data-i="6" id="merv-6">
-          <div class="merv-head"><span class="merv-num">6</span><div><span class="merv-place" data-i18n="m6_place">LISBONNE · BELÉM</span><h3 class="merv-name" data-i18n="m6_name">Le monastère des Hiéronymites</h3></div></div>
+        <article class="merv-item" data-i="7" id="merv-7">
+          <div class="merv-head"><span class="merv-num">7</span><div><span class="merv-place" data-i18n="m6_place">LISBONNE · BELÉM</span><h3 class="merv-name" data-i18n="m6_name">Le monastère des Hiéronymites</h3></div></div>
           <div class="merv-photo" data-opt-photo="photos/w-jeronimos.jpg"><img src="images/photos/w-jeronimos.jpg" alt="" loading="lazy"></div>
           <span class="merv-badge" data-i18n="merv_7m">L'une des « 7 Merveilles du Portugal » (2007)</span>
           <p class="merv-text" data-i18n="m6_text">Commandé par le roi Manuel Ier au début du XVIe siècle et financé grâce au commerce des épices, il célèbre le voyage de Vasco de Gama. On y trouve les tombeaux de Vasco de Gama et du poète Luís de Camões. Et c'est de ses moines que vient la recette du pastel de nata !</p>
           <ul class="merv-facts"><li data-i18n="m6_f1">Patrimoine mondial de l'UNESCO depuis 1983</li><li data-i18n="m6_f2">Tombeaux de Vasco de Gama et de Camões</li></ul>
           
         </article>
-        <article class="merv-item" data-i="7" id="merv-7">
-          <div class="merv-head"><span class="merv-num">7</span><div><span class="merv-place" data-i18n="m7_place">LISBONNE · PARQUE DAS NAÇÕES</span><h3 class="merv-name" data-i18n="m7_name">Le pont Vasco de Gama et l'Expo 98</h3></div></div>
+        <article class="merv-item" data-i="8" id="merv-8">
+          <div class="merv-head"><span class="merv-num">8</span><div><span class="merv-place" data-i18n="m7_place">LISBONNE · PARQUE DAS NAÇÕES</span><h3 class="merv-name" data-i18n="m7_name">Le pont Vasco de Gama et l'Expo 98</h3></div></div>
           <div class="merv-photo" data-opt-photo="photos/w-vgama.jpg"><img src="images/photos/w-vgama.jpg" alt="" loading="lazy"></div>
           
           <p class="merv-text" data-i18n="m7_text">Inauguré le 29 mars 1998 pour l'Exposition universelle, 500 ans après l'arrivée de Vasco de Gama en Inde, ce pont à haubans traverse l'estuaire du Tage. L'Expo 98, sur le thème « Les océans, un patrimoine pour le futur », a accueilli plus de 10 millions de visiteurs et a transformé tout un quartier de Lisbonne.</p>
@@ -4474,8 +4624,8 @@
             <div class="merv-ocean"><figure class="merv-sub" data-opt-photo="photos/w-oceanario.jpg"><img src="images/photos/w-oceanario.jpg" alt="" loading="lazy"></figure><h4 data-i18n="m7_ocean_t">L'Oceanário de Lisbonne</h4><p data-i18n="m7_ocean">Construit pour l'Expo 98, c'est l'un des plus grands aquariums d'Europe, avec un bassin central de 5 millions de litres. Les voyageurs de TripAdvisor l'ont élu meilleur aquarium du monde en 2015, 2017 et 2018.</p></div>
           </div>
         </article>
-        <article class="merv-item" data-i="8" id="merv-8">
-          <div class="merv-head"><span class="merv-num">8</span><div><span class="merv-place" data-i18n="m8_place">ALENTEJO · FLEUVE GUADIANA</span><h3 class="merv-name" data-i18n="m8_name">Le lac d'Alqueva</h3></div></div>
+        <article class="merv-item" data-i="9" id="merv-9">
+          <div class="merv-head"><span class="merv-num">9</span><div><span class="merv-place" data-i18n="m8_place">ALENTEJO · FLEUVE GUADIANA</span><h3 class="merv-name" data-i18n="m8_name">Le lac d'Alqueva</h3></div></div>
           <div class="merv-photo" data-opt-photo="photos/w-alqueva.jpg"><img src="images/photos/w-alqueva.jpg" alt="" loading="lazy"></div>
           
           <p class="merv-text" data-i18n="m8_text">Créé par le barrage d'Alqueva sur le Guadiana et rempli en 2010, c'est le plus grand lac artificiel d'Europe occidentale. Il irrigue l'Alentejo, produit de l'électricité et offre un ciel parmi les plus étoilés d'Europe.</p>
@@ -4497,13 +4647,20 @@
             <p data-i18n="m8_cmp_text">En longueur, Alqueva gagne : environ 83 km d'un bout à l'autre, contre 73 km pour le Léman. Mais en surface, le Léman reste environ 2,3 fois plus grand, car Alqueva est un lac étroit et ramifié qui épouse les vallées du Guadiana. Dessins à l'échelle.</p>
           </div>
         </article>
-        <article class="merv-item" data-i="9" id="merv-9">
-          <div class="merv-head"><span class="merv-num">9</span><div><span class="merv-place" data-i18n="m9_place">ALGARVE · LAGOA</span><h3 class="merv-name" data-i18n="m9_name">La grotte de Benagil</h3></div></div>
+        <article class="merv-item" data-i="10" id="merv-10">
+          <div class="merv-head"><span class="merv-num">10</span><div><span class="merv-place" data-i18n="m9_place">ALGARVE · LAGOA</span><h3 class="merv-name" data-i18n="m9_name">La grotte de Benagil</h3></div></div>
           <div class="merv-photo" data-opt-photo="luis/benagil.jpg"><img src="images/luis/benagil.jpg" alt="" loading="lazy"></div>
           
           <p class="merv-text" data-i18n="m9_text">Creusée par la mer dans les falaises dorées de l'Algarve, cette grotte possède une ouverture dans son plafond : « l'œil », par où entre la lumière du soleil. On ne peut l'atteindre que par la mer, en bateau ou en kayak.</p>
           <ul class="merv-facts"><li data-i18n="m9_f1">Accessible uniquement par la mer</li><li data-i18n="m9_f2">Parmi les grottes marines les plus célèbres du monde</li></ul>
           
+        </article>
+        <article class="merv-item merv-road" data-i="road" id="merv-road">
+          <div class="merv-head"><span class="merv-num merv-num--road">N222</span><div><span class="merv-place" data-i18n="road_place">DOURO · DE GAIA À ALMENDRA</span><h3 class="merv-name" data-i18n="road_name">La route N222</h3></div></div>
+          <div class="merv-photo" data-opt-photo="photos/z-n222.jpg"><img src="images/photos/z-n222.jpg" alt="Estrada Nacional 222" loading="lazy"></div>
+          <p class="merv-text" data-i18n="road_text">La route nationale 222 longe le Douro sur environ 226 km, de Vila Nova de Gaia jusqu'à Almendra, près de Vila Nova de Foz Côa. Son tronçon le plus célèbre, entre Peso da Régua et Pinhão, serpente au bord du fleuve, au milieu des vignobles en terrasses. En 2015, une étude du loueur de voitures Avis l'a classée meilleure route du monde à conduire.</p>
+          <ul class="merv-facts"><li data-i18n="road_f1">27 km et 93 virages entre Régua et Pinhão</li><li data-i18n="road_f2">« Meilleure route du monde à conduire » (étude Avis, 2015)</li><li data-i18n="road_f3">Au cœur du Haut-Douro viticole, classé à l'UNESCO en 2001</li></ul>
+          <figure class="merv-sub" data-opt-photo="photos/z-n222b.jpg"><img src="images/photos/z-n222b.jpg" alt="Estrada Nacional 222" loading="lazy"><figcaption data-i18n="road_cap">Les vignobles en terrasses que traverse la route.</figcaption></figure>
         </article>
           </div>
         </div>
@@ -4583,7 +4740,7 @@
           <article class="pas-card pas-card--wide" data-opt="moto-alpes.jpg"><div class="pas-photo"><img src="images/luis/moto-alpes.jpg" alt="Ducati Multistrada dans les Alpes" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_moto_t">La moto</h3><p class="pas-text" data-i18n="concl_p_moto">Ma grande passion. Je roule en Suisse, dans le nord de l'Italie, en France et en Allemagne, à la recherche des plus belles routes de montagne.</p></div></article>
           <article class="pas-card pas-card--tall" data-opt="parapente.jpg"><div class="pas-photo"><img src="images/luis/parapente.jpg" alt="Parapente au-dessus du Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_para_t">Le parapente</h3><p class="pas-text" data-i18n="concl_p_para">Récemment, j'ai volé en parapente au-dessus du lac Léman. Une vue inoubliable&nbsp;!</p></div></article>
           <article class="pas-card " data-opt="moto-garage.jpg"><div class="pas-photo"><img src="images/luis/moto-garage.jpg" alt="Moto en réparation" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_meca_t">La mécanique</h3><p class="pas-text" data-i18n="concl_p_meca">J'adore modifier ma moto et la réparer moi-même : chaque détail compte&nbsp;!</p></div></article>
-          <article class="pas-card " data-opt="jura.jpg"><div class="pas-photo"><img src="images/luis/jura.jpg" alt="Le Jura" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_sort_t">Les sorties</h3><p class="pas-text" data-i18n="concl_p_sort">Découvrir de nouveaux endroits, comme le Jura, où je suis allé voir la course de côte automobile de Saint-Ursanne.</p></div></article>
+          <article class="pas-card pas-card--poster" data-opt="st-ursanne-affiche.jpg"><div class="pas-photo"><img src="images/luis/st-ursanne-affiche.jpg" alt="Course de côte Saint-Ursanne – Les Rangiers 2026" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_sort_t">Les sorties</h3><p class="pas-text" data-i18n="concl_p_sort">Découvrir de nouveaux endroits, comme le Jura, où je suis allé voir la course de côte automobile de Saint-Ursanne.</p></div></article>
           <article class="pas-card " data-opt="lac.jpg"><div class="pas-photo"><img src="images/luis/lac.jpg" alt="Sur le lac Léman" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_lac_t">Le lac Léman</h3><p class="pas-text" data-i18n="concl_p_lac">L'été, on profite du lac : kayak, baignade et détente.</p></div></article>
           <article class="pas-card" data-opt="tanay.jpg"><div class="pas-photo"><img src="images/luis/tanay.jpg" alt="Lac de Tanay" loading="lazy"></div><div class="pas-body"><h3 class="pas-title" data-i18n="concl_p_walk_t">Marcher et se balader</h3><p class="pas-text" data-i18n="concl_p_walk">Randonnées et balades — « passear », comme on dit au Portugal —, par exemple jusqu'au lac de Tanay, au-dessus de Vouvry.</p></div></article>
         </div>
@@ -4650,7 +4807,6 @@
           <li><a href="https://commons.wikimedia.org/wiki/File:Belem_-_Padrao_dos_Descobrimentos.jpg" target="_blank" rel="noopener">Belem - Padrao dos Descobrimentos.jpg</a> — Ingo Mehling, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:ArT_of_opEN_doors_project_-_Travessa_das_Torres_02.jpg" target="_blank" rel="noopener">ArT of opEN doors project - Travessa das Torres 02.jpg</a> — H. Zell, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Cloister_of_the_Jerónimos_Monastery_in_Belém,_Lisbon,_20250604_1313_9206.jpg" target="_blank" rel="noopener">Cloister of the Jerónimos Monastery in Belém, Lisbon, 20250604 1313 9206.jpg</a> — Jakub Hałun, CC BY 4.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:Lisboa-Pessoa-A_Brasileira-1.jpg" target="_blank" rel="noopener">Lisboa-Pessoa-A Brasileira-1.jpg</a> — Nol Aders, CC BY 2.5</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Marchas_Populares_de_Lisboa_(4).JPG" target="_blank" rel="noopener">Marchas Populares de Lisboa (4).JPG</a> — Béria Lima de Rodríguez, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Festa_de_Sao_Joao_(Porto).jpg" target="_blank" rel="noopener">Festa de Sao Joao (Porto).jpg</a> — Hugo Cadavez from Portugal, CC BY 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:A_BRASILEIRA_DO_CHIADO.jpg" target="_blank" rel="noopener">A BRASILEIRA DO CHIADO.jpg</a> — VDT2021, CC BY-SA 4.0</li>
@@ -4669,13 +4825,10 @@
           <li><a href="https://commons.wikimedia.org/wiki/File:Polvo_a_lagareiro.jpg" target="_blank" rel="noopener">Polvo a lagareiro.jpg</a> — Exilexi, CC BY 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Queijo_Serra_da_Estrela_DOP_-_Marca_de_caseína.jpg" target="_blank" rel="noopener">Queijo Serra da Estrela DOP - Marca de caseína.jpg</a> — Hipersyl, CC0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Grilled_Sardines_5.50€_Marisqueira_O_Varino_Nazaré_(3785526688).jpg" target="_blank" rel="noopener">Grilled Sardines 5.50€ Marisqueira O Varino Nazaré (3785526688).jpg</a> — Yusuke Kawasaki from Tokyo, Japan, CC BY 2.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:Lago_verde,_isla_de_San_Miguel,_Azores,_Portugal,_2020-07-29,_DD_16.jpg" target="_blank" rel="noopener">Lago verde, isla de San Miguel, Azores, Portugal, 2020-07-29, DD 16.jpg</a> — Diego Delso, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Köppen_climate_types_of_Iberia.png" target="_blank" rel="noopener">Köppen climate types of Iberia.png</a> — Adam Peterson, CC BY-SA 4.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:PSL_-_Cliffs_and_sea_stacks_at_Ponta_de_São_Lourenço,_Madeira,_2012.jpg" target="_blank" rel="noopener">PSL - Cliffs and sea stacks at Ponta de São Lourenço, Madeira, 2012.jpg</a> — Josep M. Gracia, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Peneda-Geres_NP_from_Tibo_Lookout_(2).jpg" target="_blank" rel="noopener">Peneda-Geres NP from Tibo Lookout (2).jpg</a> — Krzysztof Golik, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Serra_da_Estrela-_Brumas_Matinais.jpg" target="_blank" rel="noopener">Serra da Estrela- Brumas Matinais.jpg</a> — Sara Bento Photography, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Rede_Natura_2000_-_Sítio_do_Cabeção_-_05.jpg" target="_blank" rel="noopener">Rede Natura 2000 - Sítio do Cabeção - 05.jpg</a> — Joao 1968, CC BY-SA 3.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:Volcanic_cliffs_of_Capelinhos,_Faial_Island,_2014.jpg" target="_blank" rel="noopener">Volcanic cliffs of Capelinhos, Faial Island, 2014.jpg</a> — Josep M. Gracia, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Cabo_da_Roca_at_sunset,_Portugal.jpg" target="_blank" rel="noopener">Cabo da Roca at sunset, Portugal.jpg</a> — Aurelia Teslaru, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Porto_April_2019-5.jpg" target="_blank" rel="noopener">Porto April 2019-5.jpg</a> — Alvesgaspar, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Praia_da_Marinha_(2012-09-27),_by_Klugschnacker_in_Wikipedia_(69).JPG" target="_blank" rel="noopener">Praia da Marinha (2012-09-27), by Klugschnacker in Wikipedia (69).JPG</a> — Klugschnacker, CC BY-SA 3.0</li>
@@ -4687,7 +4840,6 @@
           <li><a href="https://commons.wikimedia.org/wiki/File:Praia_do_Norte,Nazaré_-21_(50656467151).jpg" target="_blank" rel="noopener">Praia do Norte,Nazaré -21 (50656467151).jpg</a> — Luis Ascenso from Lisbon, Portugal, CC BY 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Praia_do_Norte_beach_-_High_waves_-_Nazaré_-_Portugal_(39615885300).jpg" target="_blank" rel="noopener">Praia do Norte beach - High waves - Nazaré - Portugal (39615885300).jpg</a> — Luis Ascenso from Lisbon, Portugal, CC BY 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Portuguese_flag_on_the_"Netos_de_José_Augusto"_whale_watching_boat,_São_Miguel_Island,_Azores,_Portugal_(PPL1-Corrected)-2.jpg" target="_blank" rel="noopener">Portuguese flag on the &quot;Netos de José Augusto&quot; whale watching boat, São Miguel Island, Azores, Portugal (PPL1-Corrected)-2.jpg</a> — Jules Verne Times Two, CC BY-SA 4.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:Castelo_de_Guimaraes_(1).jpg" target="_blank" rel="noopener">Castelo de Guimaraes (1).jpg</a> — Krzysztof Golik, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Descobrimentos_e_explorações_portuguesesV2.png" target="_blank" rel="noopener">Descobrimentos e explorações portuguesesV2.png</a> — Descobrimentos_e_explorações_portugueses.png: *Portuguese_discoveries_and_explor, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Jacob_Huysmans_-_Queen_Catherine_of_Braganza_as_Saint_Catherine_of_Alexandria.jpg" target="_blank" rel="noopener">Jacob Huysmans - Queen Catherine of Braganza as Saint Catherine of Alexandria.jpg</a> — Jacob Huysmans, Public domain</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Casamento_João_I_e_Filipa_Lencastre.JPG" target="_blank" rel="noopener">Casamento João I e Filipa Lencastre.JPG</a> — , Public domain</li>
@@ -4702,7 +4854,6 @@
           <li><a href="https://commons.wikimedia.org/wiki/File:Serra_do_Caramulo_-_Portugal_(6929735785).jpg" target="_blank" rel="noopener">Serra do Caramulo - Portugal (6929735785).jpg</a> — Vitor Oliveira from Torres Vedras, PORTUGAL, CC BY-SA 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Vistas_de_Lisboa_desde_el_Mirador_de_Santa_Luzia,_Portugal,_2012-05-12,_DD_01.JPG" target="_blank" rel="noopener">Vistas de Lisboa desde el Mirador de Santa Luzia, Portugal, 2012-05-12, DD 01.JPG</a> — Diego Delso, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Pico_Volcano.jpg" target="_blank" rel="noopener">Pico Volcano.jpg</a> — The Cosmonaut, CC BY-SA 4.0</li>
-          <li><a href="https://commons.wikimedia.org/wiki/File:Benagil_Cave_(10).jpg" target="_blank" rel="noopener">Benagil Cave (10).jpg</a> — Joseolgon, CC BY-SA 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Museu_do_Caramulo_-_Portugal_(4684593349).jpg" target="_blank" rel="noopener">Museu do Caramulo - Portugal (4684593349).jpg</a> — Vitor Oliveira from Torres Vedras, PORTUGAL, CC BY-SA 2.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Coimbra_BW_2018-10-06_10-11-56.jpg" target="_blank" rel="noopener">Coimbra BW 2018-10-06 10-11-56.jpg</a> — Berthold Werner, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Portugal_Vallée_du_Douro_(8121915978).jpg" target="_blank" rel="noopener">Portugal Vallée du Douro (8121915978).jpg</a> — peuplier from Switzerland Suisse romande, CC BY 2.0</li>
@@ -4733,6 +4884,29 @@
           <li><a href="https://commons.wikimedia.org/wiki/File:Sintra_Portugal_Palácio_da_Pena-01.jpg" target="_blank" rel="noopener">Sintra Portugal Palácio da Pena-01.jpg</a> — CEphoto, Uwe Aranas, CC BY-SA 3.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:2025-08-03_Salinas_de_Aveiro.jpg" target="_blank" rel="noopener">2025-08-03 Salinas de Aveiro.jpg</a> — Alexkom000, CC BY 4.0</li>
           <li><a href="https://commons.wikimedia.org/wiki/File:Vasco_da_Gama_Bridge_seen_from_Parque_das_Nações,_Lisbon,_Portugal_julesvernex2.jpg" target="_blank" rel="noopener">Vasco da Gama Bridge seen from Parque das Nações, Lisbon, Portugal julesvernex2.jpg</a> — Jules Verne Times Two, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Aerial_view_of_Lagoa_do_Fogo,_São_Miguel_Island,_Azores,_Portugal_(PPL3-Altered).jpg" target="_blank" rel="noopener">Aerial view of Lagoa do Fogo, São Miguel Island, Azores, Portugal (PPL3-Altered).jpg</a> — Jules Verne Times Two, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Estátua_de_Dom_Afonso_Henriques_junto_ao_Estádio_Afonso_Henriques_2.jpg" target="_blank" rel="noopener">Estátua de Dom Afonso Henriques junto ao Estádio Afonso Henriques 2.jpg</a> — V.B.Speranza, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:"Praia_da_Falésia"_(5514757750).jpg" target="_blank" rel="noopener">&quot;Praia da Falésia&quot; (5514757750).jpg</a> — PortoBay Hotels &amp; Resorts from Portugal, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Cave_do_Vinho_do_Porto_03.jpg" target="_blank" rel="noopener">Cave do Vinho do Porto 03.jpg</a> — Peter from Wellesley, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Dao_red_wine.jpg" target="_blank" rel="noopener">Dao red wine.jpg</a> — Agne27, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Ponte_de_Dom_Luís_I_and_Ribeira,_Porto_(54795128175).jpg" target="_blank" rel="noopener">Ponte de Dom Luís I and Ribeira, Porto (54795128175).jpg</a> — Dale Cruse - 10M views from San Francisco, CA, USA, CC BY 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Nagasaki_kasutera_129349331_5d6c87fd4f_o_d.jpg" target="_blank" rel="noopener">Nagasaki kasutera 129349331 5d6c87fd4f o d.jpg</a> — Flickr user: Kanko* from Nagasaki, Japan, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:View_from_Miradouro_do_Pico_do_Arieiro_-_Madeira_04.jpg" target="_blank" rel="noopener">View from Miradouro do Pico do Arieiro - Madeira 04.jpg</a> — H. Zell, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Ponta_de_São_Lourenço,_Madeira,_Portugal,_2019-05-28,_DD_31.jpg" target="_blank" rel="noopener">Ponta de São Lourenço, Madeira, Portugal, 2019-05-28, DD 31.jpg</a> — Diego Delso, CC BY-SA 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Dulce_de_Membrillo.jpg" target="_blank" rel="noopener">Dulce de Membrillo.jpg</a> — Javier Lastras from España/Spain, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Olival_ao_Pôr_do_Sol.JPG" target="_blank" rel="noopener">Olival ao Pôr do Sol.JPG</a> — AndréMiranda77, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Fernando_Pessoa_1912.jpg" target="_blank" rel="noopener">Fernando Pessoa 1912.jpg</a> — Unknown authorUnknown author, Public domain</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Capsicum_frutescens,_Burdwan,_West_Bengal,_India_03_05_2013.jpg" target="_blank" rel="noopener">Capsicum frutescens, Burdwan, West Bengal, India 03 05 2013.jpg</a> — Joydeep, CC BY-SA 3.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Cerdos_ibéricos_close-up.jpg" target="_blank" rel="noopener">Cerdos ibéricos close-up.jpg</a> — comakut from Marbella, Spain, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Port_wine.jpg" target="_blank" rel="noopener">Port wine.jpg</a> — Jon Sullivan, Public domain</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:2009_Red_Bull_Air_Race_in_Porto_(3811807428).jpg" target="_blank" rel="noopener">2009 Red Bull Air Race in Porto (3811807428).jpg</a> — Felipe Ortega, CC BY-SA 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:2009_Red_Bull_Air_Race_in_Porto_(3811803830).jpg" target="_blank" rel="noopener">2009 Red Bull Air Race in Porto (3811803830).jpg</a> — Felipe Ortega, CC BY-SA 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Tempura_01.jpg" target="_blank" rel="noopener">Tempura 01.jpg</a> — Yaco*, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Vindaloo_goa.jpg" target="_blank" rel="noopener">Vindaloo goa.jpg</a> — The original uploader was Elitre at Italian Wikipedia., CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Minho_Vinho_Verde_Vineyards.jpg" target="_blank" rel="noopener">Minho Vinho Verde Vineyards.jpg</a> — alexandra vale, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Universidade_de_Coimbra_(53561582378).jpg" target="_blank" rel="noopener">Universidade de Coimbra (53561582378).jpg</a> — xiquinhosilva, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:N222_-_from_Peso_da_Régua_to_Pinhão_(27810875276).jpg" target="_blank" rel="noopener">N222 - from Peso da Régua to Pinhão (27810875276).jpg</a> — pedrik, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:2025_-_4_jours_à_Porto_et…_(54513608057).jpg" target="_blank" rel="noopener">2025 - 4 jours à Porto et… (54513608057).jpg</a> — bDom - artiste - www.bdom.info from Enghien, Belgique, CC BY 2.0</li>
         </ol>
       </details>
     </div>
@@ -4837,7 +5011,7 @@
   "stat2_label": "ARRIVÉ EN SUISSE",
   "stat2_sub": "Plus de 13 ans<br>en Suisse",
   "stat3_label": "PROFESSION",
-  "stat3_value": "Responsable d'objets,<br>Centre sécurité",
+  "stat3_value": "Agent de sécurité privé,<br>responsable du centre de sécurité",
   "stat4_label": "CENTRES D'INTÉRÊT",
   "stat4_value": "Voyages<br>Sport<br>Gastronomie<br>Culture",
   "glance_title": "Le Portugal en un coup d'œil",
@@ -4894,23 +5068,23 @@
   "geo_cr_li2": "Collines et vallées au centre.",
   "geo_cr_li3": "Vastes plaines au sud.",
   "geo_cr_li4": "Côtes découpées et falaises face à l'Atlantique.",
-  "geo_volc_eyebrow": "LE PORTUGAL VOLCANIQUE",
-  "geo_volc_title": "Madère et Açores,<br>terres de volcans",
-  "geo_volc_body": "Les îles de Madère et des Açores sont d'origine volcanique. Leur paysage spectaculaire est le résultat d'éruptions vieilles de millions d'années.",
+  "geo_volc_eyebrow": "LES ÎLES DU PORTUGAL",
+  "geo_volc_title": "Madère et les Açores",
+  "geo_volc_body": "Les deux archipels sont nés de volcans au milieu de l'Atlantique : les Açores à environ 1 400 km de Lisbonne, Madère à près de 1 000 km. Ce sont aujourd'hui deux régions autonomes du Portugal.",
   "geo_volc_acores_label": "AÇORES",
-  "geo_volc_acores_desc": "Neuf îles volcaniques avec des lacs de cratère, sources chaudes et paysages uniques.",
+  "geo_volc_acores_desc": "Neuf îles réparties sur plus de 600 km. Les navigateurs portugais découvrent les premières vers 1427 et les peuplent à partir des années 1430 ; Flores et Corvo, les plus à l'ouest, ne sont atteintes qu'en 1452. Lacs de cratère, sources chaudes, baleines et hortensias.",
   "geo_volc_acores_caption": "En 1957-1958, l'éruption du volcan des Capelinhos (île de Faial) a fait naître de nouvelles terres sur l'océan.",
   "geo_volc_madeira_label": "MADÈRE",
-  "geo_volc_madeira_desc": "Île montagneuse d'origine volcanique, avec des falaises impressionnantes et des vallées profondes.",
+  "geo_volc_madeira_desc": "Deux îles habitées : Madère et Porto Santo (les îles Desertas et Selvagens, elles, sont inhabitées). João Gonçalves Zarco et Tristão Vaz Teixeira découvrent Porto Santo en 1418, puis Madère en 1419. Falaises vertigineuses, levadas et douceur toute l'année.",
   "geo_ext_nature_eyebrow": "NATURE &amp; BIODIVERSITÉ",
   "geo_ext_nature_title": "Une nature riche<br>et préservée",
   "geo_ext_nature_li1": "Forêts, parcs naturels<br>et réserves protégées.",
   "geo_ext_nature_li2": "Faune et flore variées,<br>dont plusieurs espèces<br>endémiques.",
-  "geo_ext_nature_li3": "Un engagement fort pour<br>la protection de l'environnement.",
+  "geo_ext_nature_li3": "Un engagement fort pour l'environnement&nbsp;:<br>le parc éolien du Haut-Minho était, à son ouverture en 2008, l'un des plus grands d'Europe.",
   "geo_ext_facts_eyebrow": "PETITS FAITS ÉTONNANTS",
-  "geo_ext_fact1": "Le point culminant du pays se trouve<br>aux Açores (Pico, 2 351 m).",
+  "geo_ext_fact1": "Le point culminant du pays se trouve<br>aux Açores (Pico, 2 351 m). Sur le continent, c'est la Serra da Estrela (1 993 m).",
   "geo_ext_fact2": "Le Portugal n'a qu'un seul voisin<br>terrestre&nbsp;: l'Espagne.",
-  "geo_ext_fact3": "Il y a des empreintes de dinosaures<br>vieilles de 175 millions d'années&nbsp;!",
+  "geo_ext_fact3": "Il y a des empreintes de dinosaures<br>vieilles de 175 millions d'années, près de Fátima (Pedreira do Galinha)&nbsp;! Et dans la vallée du Côa (Douro), des gravures préhistoriques de plus de 20 000 ans.",
   "geo_ext_luis_eyebrow": "CARAMULO, VISEU &mdash; CHEZ LUÍS",
   "geo_ext_luis_title": "Ma ville, mon origine",
   "geo_ext_luis_desc": "Caramulo est un village de montagne au centre du Portugal, terre du peuple lusitanien.",
@@ -4922,9 +5096,9 @@
   "hist_hero_subtitle": "Un peuple de navigateurs,<br>une histoire de découvertes",
   "hist_hero_text": "Petite nation, grand destin&nbsp;: le Portugal a joué un rôle majeur dans l'histoire du monde, de la mer aux idées.",
   "hist_c1_title": "Le drapeau<br>portugais",
-  "hist_c1_desc": "Le vert symbolise l'espoir de l'avenir et le rouge le sang versé pour l'indépendance.",
+  "hist_c1_desc": "Le vert symbolise l'espoir et le rouge le sang versé pour la nation. Au centre, la sphère armillaire, un instrument d'astronomie utilisé par les navigateurs, célèbre les grandes découvertes maritimes des XVe et XVIe siècles.",
   "hist_c2_title": "La construction<br>du Portugal",
-  "hist_c2_desc": "Du Comté de Portugal à la nation indépendante, une identité forgée au fil des siècles.",
+  "hist_c2_desc": "24 juin 1128 : à la bataille de São Mamede, Afonso Henriques prend le contrôle du Comté de Portugal. 1143 : par le traité de Zamora, Alphonse VII de León et de Castille reconnaît l'indépendance du Portugal.",
   "hist_c3_title": "Traité de Windsor<br>(1386)",
   "hist_c3_desc": "Le plus ancien traité toujours en vigueur. Alliance avec l'Angleterre qui a résisté à deux invasions de Napoléon.",
   "hist_c3_link": "En savoir plus <span class=\"arrow\">→</span>",
@@ -5105,13 +5279,13 @@
   "sport_more_eyebrow": "AU-DELÀ DU FOOTBALL",
   "sport_more_title": "D'autres fiertés sportives",
   "sport_m1_title": "Surf à Nazaré",
-  "sport_m1_desc": "Des vagues géantes de plus de 25 mètres : des records du monde de surf y ont été établis.",
+  "sport_m1_desc": "La plus grande vague jamais surfée y a été mesurée : 26,21 m, la hauteur d'un immeuble d'environ 8 étages (Sebastian Steudtner, 2020).",
   "sport_m2_title": "Rink-hockey",
   "sport_m2_desc": "L'une des plus grandes nations du hockey sur patins à roulettes, avec plus de 15 titres de champion du monde.",
   "sport_m3_title": "Athlétisme",
   "sport_m3_desc": "Carlos Lopes (1984) et Rosa Mota (1988) ont remporté l'or olympique au marathon.",
   "sport_m4_title": "Futsal",
-  "sport_m4_desc": "Champion du monde en 2021 et double champion d'Europe.",
+  "sport_m4_desc": "Champion du monde en 2021, champion d'Europe en 2018 et 2022, finaliste en 2026.",
   "sport_cta_title": "Prêt à voyager à travers les régions&nbsp;?",
   "sport_cta_button": "Continuer vers les Régions",
   "reg_hero_title": "Régions",
@@ -5219,9 +5393,9 @@
   "sport_eusebio": "Eusébio, la « Panthère noire », né au Mozambique, meilleur buteur de la Coupe du monde 1966 avec 9 buts.",
   "reg_car_eyebrow": "ZOOM SUR CHEZ MOI",
   "reg_car_title": "Caramulo, la montagne de l'air pur",
-  "reg_car_text": "Dans les années 1920, le docteur Jerónimo de Lacerda fonde à Caramulo une station de sanatoriums : on venait de tout le pays soigner la tuberculose grâce à l'air pur de la montagne. Plus tard, ses fils créent le Musée du Caramulo, qui réunit une collection d'art — de l'Égypte ancienne à Picasso — et une magnifique collection de voitures et de motos anciennes.",
+  "reg_car_text": "En 1921, le docteur Jerónimo de Lacerda fonde à Caramulo une station sanatoriale, qui comptera jusqu'à une vingtaine de sanatoriums : on venait de tout le pays soigner la tuberculose grâce à l'air pur de la montagne. Plus tard, ses fils créent le Musée du Caramulo, qui réunit une collection d'art — de l'Égypte ancienne à Picasso — et une magnifique collection de voitures et de motos anciennes.",
   "reg_car_f1": "Altitude du Caramulinho, le sommet de la serra",
-  "reg_car_f2": "Fondation du sanatorium",
+  "reg_car_f2": "Création de la station sanatoriale (une vingtaine de sanatoriums)",
   "reg_car_f3": "Fondation du Musée du Caramulo",
   "concl_hero_cap": "Cabo da Roca, « là où la terre finit et où la mer commence ».",
   "credits_title": "Crédits photos",
@@ -5321,7 +5495,7 @@
   "merv_hero_subtitle": "Les trésors du Portugal, du nord au sud",
   "merv_hero_text": "Vignobles, monastères, palais, ponts et lacs : faites défiler la page et suivez la carte.",
   "merv_map_eyebrow": "UN VOYAGE SUR LA CARTE",
-  "merv_map_title": "Neuf merveilles à découvrir",
+  "merv_map_title": "Dix merveilles à découvrir",
   "merv_map_lead": "Faites défiler : la carte vous montre où se trouve chaque merveille.",
   "merv_7m": "L'une des « 7 Merveilles du Portugal » (2007)",
   "merv_video": "Cliquez sur la photo pour voir la vidéo",
@@ -5380,7 +5554,57 @@
   "m9_place": "ALGARVE · LAGOA",
   "m9_text": "Creusée par la mer dans les falaises dorées de l'Algarve, cette grotte possède une ouverture dans son plafond : « l'œil », par où entre la lumière du soleil. On ne peut l'atteindre que par la mer, en bateau ou en kayak.",
   "m9_f1": "Accessible uniquement par la mer",
-  "m9_f2": "Parmi les grottes marines les plus célèbres du monde"
+  "m9_f2": "Parmi les grottes marines les plus célèbres du monde",
+  "geo_ext_book_note": "« Astérix en Lusitanie » (2025), le dernier album de la série.",
+  "isl_az_cap1": "Sete Cidades (São Miguel) : un lac vert et un lac bleu au fond d'un immense cratère.",
+  "isl_az_cap2": "La Lagoa do Fogo, au cœur de São Miguel.",
+  "isl_md_cap1": "Le Pico do Arieiro (1 818 m), souvent au-dessus des nuages.",
+  "isl_md_cap2": "La Ponta de São Lourenço, à l'extrémité est de Madère.",
+  "isl_az_f1": "ÎLES",
+  "isl_az_f2": "DÉCOUVERTE DES PREMIÈRES ÎLES",
+  "isl_az_f3": "LE PICO, PLUS HAUT SOMMET DU PAYS",
+  "isl_md_f1": "ÎLES HABITÉES",
+  "isl_md_f2": "DÉCOUVERTE DE MADÈRE",
+  "isl_md_f3": "RÉGIONS AUTONOMES DEPUIS",
+  "terroir_eyebrow": "SAVEURS DU TERROIR",
+  "terroir_title": "L'huile d'olive et le porc noir",
+  "terroir_oil_t": "L'azeite, l'or vert",
+  "terroir_oil": "Le Portugal compte parmi les dix plus grands producteurs d'huile d'olive au monde, surtout grâce à l'Alentejo, couvert d'oliveraies. Sur la table portugaise, l'azeite est partout : sur la morue, les légumes, ou simplement avec du pain.",
+  "terroir_pig_t": "Le porco preto",
+  "terroir_pig": "Le porc noir de race alentejana vit en liberté dans le montado, la forêt de chênes-lièges et de chênes verts, où il se nourrit de glands. Sa viande tendre et persillée donne des grillades réputées (secretos, plumas) et un jambon d'exception, comme le presunto de Barrancos (AOP).",
+  "cult_wine_map": "Voir la carte des régions viticoles",
+  "athl_eyebrow": "ATHLÉTISME",
+  "athl_title": "Les rois du marathon",
+  "athl_cap": "Rosa Mota et Carlos Lopes lors d'une course populaire à Faro.",
+  "athl_lopes": "Champion olympique du marathon à Los Angeles en 1984, à 37 ans, puis record du monde en 2 h 07 min 12 s à Rotterdam en 1985. Il a aussi été trois fois champion du monde de cross-country.",
+  "athl_mota": "Bronze en 1984, puis championne olympique du marathon à Séoul en 1988 : la première Portugaise sacrée aux Jeux. Championne du monde en 1987 et trois fois championne d'Europe.",
+  "athl_f1": "OR OLYMPIQUE — CARLOS LOPES",
+  "athl_f2": "OR OLYMPIQUE — ROSA MOTA",
+  "athl_f3": "RECORD DU MONDE (1985)",
+  "mP_name": "Porto et le pont Dom Luís I",
+  "mP_place": "NORD · PORTO",
+  "mP_text": "Inauguré en 1886, le pont Dom Luís I relie Porto à Vila Nova de Gaia par une arche de fer de 172 m. Il a été conçu par Théophile Seyrig, ancien associé de Gustave Eiffel. À ses pieds, les maisons colorées de la Ribeira se reflètent dans le Douro.",
+  "mP_f1": "Deux tabliers : le métro en haut, les voitures en bas",
+  "mP_f2": "Centre historique classé à l'UNESCO en 1996",
+  "mP_caves_cap": "En face, à Gaia, le vin de Porto vieillit dans les caves, comme autrefois quand il descendait le Douro sur les bateaux rabelos.",
+  "road_place": "DOURO · DE GAIA À ALMENDRA",
+  "road_name": "La route N222",
+  "road_text": "La route nationale 222 longe le Douro sur environ 226 km, de Vila Nova de Gaia jusqu'à Almendra, près de Vila Nova de Foz Côa. Son tronçon le plus célèbre, entre Peso da Régua et Pinhão, serpente au bord du fleuve, au milieu des vignobles en terrasses. En 2015, une étude du loueur de voitures Avis l'a classée meilleure route du monde à conduire.",
+  "road_f1": "27 km et 93 virages entre Régua et Pinhão",
+  "road_f2": "« Meilleure route du monde à conduire » (étude Avis, 2015)",
+  "road_f3": "Au cœur du Haut-Douro viticole, classé à l'UNESCO en 2001",
+  "road_cap": "Les vignobles en terrasses que traverse la route.",
+  "uni_eyebrow": "ÉTUDES &amp; TRADITIONS",
+  "uni_title": "Universités, capes noires et Harry Potter",
+  "uni_lead": "Au Portugal, la vie étudiante a ses propres traditions, connues dans le monde entier.",
+  "uni_c1_t": "L'Université de Coimbra",
+  "uni_c1": "Fondée en 1290 par le roi Denis Ier et installée définitivement à Coimbra en 1537, c'est l'une des plus anciennes universités du monde. Elle est classée à l'UNESCO depuis 2013, avec sa splendide bibliothèque baroque, la Joanina.",
+  "uni_c2_t": "Les étudiants « trajados »",
+  "uni_c2": "Costume noir et grande cape : c'est le traje académico. Selon la tradition, la cape ne se lave pas et chaque déchirure rappelle une personne ou un moment important. En mai, la Queima das Fitas fête la fin des études.",
+  "uni_c3_t": "La Livraria Lello, à Porto",
+  "uni_c3": "Ouverte en 1906, avec son escalier rouge et ses boiseries sculptées, elle est souvent citée parmi les plus belles librairies du monde. Il faut parfois faire la queue pour y entrer !",
+  "uni_c4_t": "Et Harry Potter&nbsp;?",
+  "uni_c4": "J.K. Rowling a vécu à Porto au début des années 1990 : elle y enseignait l'anglais et écrivait déjà Harry Potter. On dit que les capes des étudiants ont inspiré les robes de Poudlard, et Lello sa bibliothèque… mais Rowling affirme n'être jamais entrée chez Lello !"
  },
  "it": {
   "nav_home": "Home",
@@ -5410,7 +5634,7 @@
   "stat2_label": "ARRIVATO IN SVIZZERA",
   "stat2_sub": "Più di 13 anni<br>in Svizzera",
   "stat3_label": "PROFESSIONE",
-  "stat3_value": "Responsabile oggetti,<br>Centro sicurezza",
+  "stat3_value": "Agente di sicurezza privato,<br>responsabile del centro di sicurezza",
   "stat4_label": "INTERESSI",
   "stat4_value": "Viaggi<br>Sport<br>Gastronomia<br>Cultura",
   "glance_title": "Il Portogallo in breve",
@@ -5467,23 +5691,23 @@
   "geo_cr_li2": "Colline e valli al centro.",
   "geo_cr_li3": "Vaste pianure a sud.",
   "geo_cr_li4": "Coste frastagliate e scogliere di fronte all'Atlantico.",
-  "geo_volc_eyebrow": "IL PORTOGALLO VULCANICO",
-  "geo_volc_title": "Madeira e Azzorre,<br>terre di vulcani",
-  "geo_volc_body": "Le isole di Madeira e delle Azzorre sono di origine vulcanica. Il loro paesaggio spettacolare è il risultato di eruzioni vecchie di milioni di anni.",
+  "geo_volc_eyebrow": "LE ISOLE DEL PORTOGALLO",
+  "geo_volc_title": "Madeira e le Azzorre",
+  "geo_volc_body": "I due arcipelaghi sono nati da vulcani in mezzo all'Atlantico: le Azzorre a circa 1 400 km da Lisbona, Madeira a quasi 1 000 km. Oggi sono due regioni autonome del Portogallo.",
   "geo_volc_acores_label": "AZZORRE",
-  "geo_volc_acores_desc": "Nove isole vulcaniche con laghi craterici, sorgenti termali e paesaggi unici.",
+  "geo_volc_acores_desc": "Nove isole distribuite su oltre 600 km. I navigatori portoghesi scoprono le prime verso il 1427 e le popolano a partire dagli anni 1430; Flores e Corvo, le più occidentali, vengono raggiunte solo nel 1452. Laghi craterici, sorgenti calde, balene e ortensie.",
   "geo_volc_acores_caption": "Nel 1957-1958, l'eruzione del vulcano dei Capelinhos (isola di Faial) ha creato nuove terre sull'oceano.",
   "geo_volc_madeira_label": "MADEIRA",
-  "geo_volc_madeira_desc": "Isola montuosa di origine vulcanica, con scogliere imponenti e valli profonde.",
+  "geo_volc_madeira_desc": "Due isole abitate: Madeira e Porto Santo (le isole Desertas e Selvagens sono disabitate). João Gonçalves Zarco e Tristão Vaz Teixeira scoprono Porto Santo nel 1418, poi Madeira nel 1419. Scogliere vertiginose, levadas e clima mite tutto l'anno.",
   "geo_ext_nature_eyebrow": "NATURA E BIODIVERSITÀ",
   "geo_ext_nature_title": "Una natura ricca<br>e preservata",
   "geo_ext_nature_li1": "Foreste, parchi naturali<br>e riserve protette.",
   "geo_ext_nature_li2": "Fauna e flora variegate,<br>tra cui diverse specie<br>endemiche.",
-  "geo_ext_nature_li3": "Un forte impegno per<br>la protezione dell'ambiente.",
+  "geo_ext_nature_li3": "Un forte impegno per l'ambiente:<br>il parco eolico dell'Alto Minho era, alla sua apertura nel 2008, uno dei più grandi d'Europa.",
   "geo_ext_facts_eyebrow": "PICCOLE CURIOSITÀ",
-  "geo_ext_fact1": "Il punto più alto del paese si trova<br>alle Azzorre (Pico, 2 351 m).",
+  "geo_ext_fact1": "Il punto più alto del paese si trova<br>alle Azzorre (Pico, 2 351 m). Sul continente è la Serra da Estrela (1 993 m).",
   "geo_ext_fact2": "Il Portogallo ha un solo vicino<br>terrestre: la Spagna.",
-  "geo_ext_fact3": "Ci sono impronte di dinosauri<br>vecchie di 175 milioni di anni!",
+  "geo_ext_fact3": "Ci sono impronte di dinosauri<br>vecchie di 175 milioni di anni, vicino a Fátima (Pedreira do Galinha)! E nella valle del Côa (Douro), incisioni preistoriche di oltre 20 000 anni.",
   "geo_ext_luis_eyebrow": "CARAMULO, VISEU &mdash; DA LUÍS",
   "geo_ext_luis_title": "La mia città, la mia origine",
   "geo_ext_luis_desc": "Caramulo è un villaggio di montagna nel centro del Portogallo, terra del popolo lusitano.",
@@ -5495,9 +5719,9 @@
   "hist_hero_subtitle": "Un popolo di navigatori,<br>una storia di scoperte",
   "hist_hero_text": "Piccola nazione, grande destino: il Portogallo ha avuto un ruolo importante nella storia del mondo, dal mare alle idee.",
   "hist_c1_title": "La bandiera<br>portoghese",
-  "hist_c1_desc": "Il verde simboleggia la speranza nel futuro e il rosso il sangue versato per l'indipendenza.",
+  "hist_c1_desc": "Il verde simboleggia la speranza e il rosso il sangue versato per la nazione. Al centro, la sfera armillare, uno strumento astronomico usato dai navigatori, celebra le grandi scoperte marittime del XV e XVI secolo.",
   "hist_c2_title": "La costruzione<br>del Portogallo",
-  "hist_c2_desc": "Dalla Contea del Portogallo alla nazione indipendente, un'identità forgiata nel corso dei secoli.",
+  "hist_c2_desc": "24 giugno 1128: nella battaglia di São Mamede, Afonso Henriques prende il controllo della Contea di Portogallo. 1143: con il trattato di Zamora, Alfonso VII di León e Castiglia riconosce l'indipendenza del Portogallo.",
   "hist_c3_title": "Trattato di Windsor<br>(1386)",
   "hist_c3_desc": "Il più antico trattato ancora in vigore. Alleanza con l'Inghilterra che ha resistito a due invasioni di Napoleone.",
   "hist_c3_link": "Scopri di più <span class=\"arrow\">→</span>",
@@ -5678,13 +5902,13 @@
   "sport_more_eyebrow": "OLTRE IL CALCIO",
   "sport_more_title": "Altri orgogli sportivi",
   "sport_m1_title": "Surf a Nazaré",
-  "sport_m1_desc": "Onde giganti di oltre 25 metri: qui sono stati stabiliti record mondiali di surf.",
+  "sport_m1_desc": "Qui è stata misurata l'onda più grande mai surfata: 26,21 m, l'altezza di un palazzo di circa 8 piani (Sebastian Steudtner, 2020).",
   "sport_m2_title": "Hockey su pista",
   "sport_m2_desc": "Una delle grandi nazioni dell'hockey su pista, con più di 15 titoli mondiali.",
   "sport_m3_title": "Atletica",
   "sport_m3_desc": "Carlos Lopes (1984) e Rosa Mota (1988) hanno vinto l'oro olimpico nella maratona.",
   "sport_m4_title": "Futsal",
-  "sport_m4_desc": "Campione del mondo nel 2021 e due volte campione d'Europa.",
+  "sport_m4_desc": "Campione del mondo nel 2021, campione d'Europa nel 2018 e 2022, finalista nel 2026.",
   "sport_cta_title": "Pronti a viaggiare tra le regioni?",
   "sport_cta_button": "Continua verso le Regioni",
   "reg_hero_title": "Regioni",
@@ -5792,9 +6016,9 @@
   "sport_eusebio": "Eusébio, la «Pantera nera», nato in Mozambico, capocannoniere dei Mondiali 1966 con 9 gol.",
   "reg_car_eyebrow": "ZOOM SU CASA MIA",
   "reg_car_title": "Caramulo, la montagna dell'aria pura",
-  "reg_car_text": "Negli anni '20 il dottor Jerónimo de Lacerda fonda a Caramulo una stazione di sanatori: si veniva da tutto il paese per curare la tubercolosi grazie all'aria pura di montagna. Più tardi i suoi figli creano il Museo del Caramulo, che riunisce una collezione d'arte — dall'antico Egitto a Picasso — e una splendida collezione di auto e moto d'epoca.",
+  "reg_car_text": "Nel 1921 il dottor Jerónimo de Lacerda fonda a Caramulo una stazione sanatoriale, che arriverà a contare una ventina di sanatori: si veniva da tutto il paese per curare la tubercolosi grazie all'aria pura di montagna. Più tardi i suoi figli creano il Museo del Caramulo, che riunisce una collezione d'arte — dall'antico Egitto a Picasso — e una splendida collezione di auto e moto d'epoca.",
   "reg_car_f1": "Altitudine del Caramulinho, la vetta della serra",
-  "reg_car_f2": "Fondazione del sanatorio",
+  "reg_car_f2": "Nascita della stazione sanatoriale (una ventina di sanatori)",
   "reg_car_f3": "Fondazione del Museo del Caramulo",
   "concl_hero_cap": "Cabo da Roca, «dove la terra finisce e il mare comincia».",
   "credits_title": "Crediti fotografici",
@@ -5894,7 +6118,7 @@
   "merv_hero_subtitle": "I tesori del Portogallo, da nord a sud",
   "merv_hero_text": "Vigneti, monasteri, palazzi, ponti e laghi: scorri la pagina e segui la mappa.",
   "merv_map_eyebrow": "UN VIAGGIO SULLA MAPPA",
-  "merv_map_title": "Nove meraviglie da scoprire",
+  "merv_map_title": "Dieci meraviglie da scoprire",
   "merv_map_lead": "Scorri: la mappa ti mostra dove si trova ogni meraviglia.",
   "merv_7m": "Una delle «7 Meraviglie del Portogallo» (2007)",
   "merv_video": "Clicca sulla foto per vedere il video",
@@ -5953,7 +6177,57 @@
   "m9_place": "ALGARVE · LAGOA",
   "m9_text": "Scavata dal mare nelle scogliere dorate dell'Algarve, questa grotta ha un'apertura nel soffitto: «l'occhio», da cui entra la luce del sole. Si raggiunge solo dal mare, in barca o in kayak.",
   "m9_f1": "Raggiungibile solo dal mare",
-  "m9_f2": "Tra le grotte marine più famose del mondo"
+  "m9_f2": "Tra le grotte marine più famose del mondo",
+  "geo_ext_book_note": "«Asterix in Lusitania» (2025), l'ultimo album della serie.",
+  "isl_az_cap1": "Sete Cidades (São Miguel): un lago verde e un lago blu in fondo a un enorme cratere.",
+  "isl_az_cap2": "La Lagoa do Fogo, nel cuore di São Miguel.",
+  "isl_md_cap1": "Il Pico do Arieiro (1 818 m), spesso sopra le nuvole.",
+  "isl_md_cap2": "La Ponta de São Lourenço, all'estremità orientale di Madeira.",
+  "isl_az_f1": "ISOLE",
+  "isl_az_f2": "SCOPERTA DELLE PRIME ISOLE",
+  "isl_az_f3": "IL PICO, VETTA PIÙ ALTA DEL PAESE",
+  "isl_md_f1": "ISOLE ABITATE",
+  "isl_md_f2": "SCOPERTA DI MADEIRA",
+  "isl_md_f3": "REGIONI AUTONOME DAL",
+  "terroir_eyebrow": "SAPORI DEL TERRITORIO",
+  "terroir_title": "L'olio d'oliva e il maiale nero",
+  "terroir_oil_t": "L'azeite, l'oro verde",
+  "terroir_oil": "Il Portogallo è tra i dieci maggiori produttori di olio d'oliva al mondo, soprattutto grazie all'Alentejo, coperto di uliveti. Sulla tavola portoghese l'azeite è ovunque: sul baccalà, sulle verdure o semplicemente con il pane.",
+  "terroir_pig_t": "Il porco preto",
+  "terroir_pig": "Il maiale nero di razza alentejana vive libero nel montado, il bosco di querce da sughero e lecci, dove si nutre di ghiande. La sua carne tenera e marmorizzata regala grigliate rinomate (secretos, plumas) e un prosciutto d'eccezione, come il presunto di Barrancos (DOP).",
+  "cult_wine_map": "Vedi la mappa delle regioni vinicole",
+  "athl_eyebrow": "ATLETICA",
+  "athl_title": "I re della maratona",
+  "athl_cap": "Rosa Mota e Carlos Lopes durante una corsa popolare a Faro.",
+  "athl_lopes": "Campione olimpico di maratona a Los Angeles nel 1984, a 37 anni, poi record del mondo in 2 h 07 min 12 s a Rotterdam nel 1985. È stato anche tre volte campione del mondo di corsa campestre.",
+  "athl_mota": "Bronzo nel 1984, poi campionessa olimpica di maratona a Seul nel 1988: la prima portoghese a vincere l'oro ai Giochi. Campionessa del mondo nel 1987 e tre volte campionessa d'Europa.",
+  "athl_f1": "ORO OLIMPICO — CARLOS LOPES",
+  "athl_f2": "ORO OLIMPICO — ROSA MOTA",
+  "athl_f3": "RECORD DEL MONDO (1985)",
+  "mP_name": "Porto e il ponte Dom Luís I",
+  "mP_place": "NORD · PORTO",
+  "mP_text": "Inaugurato nel 1886, il ponte Dom Luís I collega Porto a Vila Nova de Gaia con un arco di ferro di 172 m. Fu progettato da Théophile Seyrig, ex socio di Gustave Eiffel. Ai suoi piedi, le case colorate della Ribeira si specchiano nel Douro.",
+  "mP_f1": "Due impalcati: la metro sopra, le auto sotto",
+  "mP_f2": "Centro storico patrimonio UNESCO dal 1996",
+  "mP_caves_cap": "Di fronte, a Gaia, il vino Porto invecchia nelle cantine, come quando un tempo scendeva il Douro sulle barche rabelo.",
+  "road_place": "DOURO · DA GAIA AD ALMENDRA",
+  "road_name": "La strada N222",
+  "road_text": "La strada nazionale 222 costeggia il Douro per circa 226 km, da Vila Nova de Gaia fino ad Almendra, vicino a Vila Nova de Foz Côa. Il tratto più famoso, tra Peso da Régua e Pinhão, serpeggia lungo il fiume tra i vigneti terrazzati. Nel 2015 uno studio della società di noleggio Avis l'ha classificata come la strada più bella del mondo da guidare.",
+  "road_f1": "27 km e 93 curve tra Régua e Pinhão",
+  "road_f2": "«La migliore strada del mondo da guidare» (studio Avis, 2015)",
+  "road_f3": "Nel cuore dell'Alto Douro vinicolo, patrimonio UNESCO dal 2001",
+  "road_cap": "I vigneti terrazzati attraversati dalla strada.",
+  "uni_eyebrow": "STUDI E TRADIZIONI",
+  "uni_title": "Università, mantelli neri e Harry Potter",
+  "uni_lead": "In Portogallo la vita studentesca ha tradizioni proprie, famose in tutto il mondo.",
+  "uni_c1_t": "L'Università di Coimbra",
+  "uni_c1": "Fondata nel 1290 dal re Dionigi I e trasferita definitivamente a Coimbra nel 1537, è una delle università più antiche del mondo. È patrimonio UNESCO dal 2013, con la splendida biblioteca barocca Joanina.",
+  "uni_c2_t": "Gli studenti «trajados»",
+  "uni_c2": "Abito nero e grande mantello: è il traje académico. Secondo la tradizione il mantello non si lava e ogni strappo ricorda una persona o un momento importante. A maggio la Queima das Fitas festeggia la fine degli studi.",
+  "uni_c3_t": "La Livraria Lello, a Porto",
+  "uni_c3": "Aperta nel 1906, con la sua scala rossa e i legni intagliati, è spesso citata tra le librerie più belle del mondo. A volte bisogna fare la fila per entrare!",
+  "uni_c4_t": "E Harry Potter?",
+  "uni_c4": "J.K. Rowling visse a Porto all'inizio degli anni '90: insegnava inglese e scriveva già Harry Potter. Si dice che i mantelli degli studenti abbiano ispirato le divise di Hogwarts, e la Lello la sua biblioteca… ma la Rowling afferma di non essere mai entrata alla Lello!"
  },
  "de": {
   "nav_home": "Startseite",
@@ -5983,7 +6257,7 @@
   "stat2_label": "ANKUNFT IN DER SCHWEIZ",
   "stat2_sub": "Seit über 13 Jahren<br>in der Schweiz",
   "stat3_label": "BERUF",
-  "stat3_value": "Objektverantwortlicher,<br>Sicherheitszentrale",
+  "stat3_value": "Privater Sicherheitsagent,<br>verantwortlich für die Sicherheitszentrale",
   "stat4_label": "INTERESSEN",
   "stat4_value": "Reisen<br>Sport<br>Gastronomie<br>Kultur",
   "glance_title": "Portugal auf einen Blick",
@@ -6040,23 +6314,23 @@
   "geo_cr_li2": "Hügel und Täler in der Mitte.",
   "geo_cr_li3": "Weite Ebenen im Süden.",
   "geo_cr_li4": "Zerklüftete Küsten und Klippen zum Atlantik.",
-  "geo_volc_eyebrow": "DAS VULKANISCHE PORTUGAL",
-  "geo_volc_title": "Madeira und Azoren,<br>Länder der Vulkane",
-  "geo_volc_body": "Die Inseln Madeira und die Azoren sind vulkanischen Ursprungs. Ihre spektakuläre Landschaft ist das Ergebnis von Millionen Jahre alten Eruptionen.",
+  "geo_volc_eyebrow": "DIE INSELN PORTUGALS",
+  "geo_volc_title": "Madeira und die Azoren",
+  "geo_volc_body": "Beide Archipele sind aus Vulkanen mitten im Atlantik entstanden: die Azoren rund 1 400 km von Lissabon entfernt, Madeira fast 1 000 km. Heute sind sie zwei autonome Regionen Portugals.",
   "geo_volc_acores_label": "AZOREN",
-  "geo_volc_acores_desc": "Neun vulkanische Inseln mit Kraterseen, heissen Quellen und einzigartigen Landschaften.",
+  "geo_volc_acores_desc": "Neun Inseln, verteilt auf über 600 km. Portugiesische Seefahrer entdecken die ersten um 1427 und besiedeln sie ab den 1430er-Jahren; Flores und Corvo, die westlichsten, werden erst 1452 erreicht. Kraterseen, heisse Quellen, Wale und Hortensien.",
   "geo_volc_acores_caption": "1957–1958 liess der Ausbruch des Vulkans Capelinhos (Insel Faial) neues Land im Ozean entstehen.",
   "geo_volc_madeira_label": "MADEIRA",
-  "geo_volc_madeira_desc": "Bergige Insel vulkanischen Ursprungs, mit beeindruckenden Klippen und tiefen Tälern.",
+  "geo_volc_madeira_desc": "Zwei bewohnte Inseln: Madeira und Porto Santo (die Desertas und die Selvagens sind unbewohnt). João Gonçalves Zarco und Tristão Vaz Teixeira entdecken 1418 Porto Santo, 1419 dann Madeira. Schwindelerregende Klippen, Levadas und mildes Klima das ganze Jahr.",
   "geo_ext_nature_eyebrow": "NATUR &amp; BIODIVERSITÄT",
   "geo_ext_nature_title": "Eine reiche und<br>geschützte Natur",
   "geo_ext_nature_li1": "Wälder, Naturparks<br>und Schutzgebiete.",
   "geo_ext_nature_li2": "Vielfältige Fauna und Flora,<br>darunter mehrere<br>endemische Arten.",
-  "geo_ext_nature_li3": "Ein starkes Engagement für<br>den Umweltschutz.",
+  "geo_ext_nature_li3": "Ein starkes Engagement für die Umwelt:<br>Der Windpark Alto Minho war bei seiner Eröffnung 2008 einer der grössten Europas.",
   "geo_ext_facts_eyebrow": "KLEINE ÜBERRASCHENDE FAKTEN",
-  "geo_ext_fact1": "Der höchste Punkt des Landes liegt<br>auf den Azoren (Pico, 2 351 m).",
+  "geo_ext_fact1": "Der höchste Punkt des Landes liegt<br>auf den Azoren (Pico, 2 351 m). Auf dem Festland ist es die Serra da Estrela (1 993 m).",
   "geo_ext_fact2": "Portugal hat nur einen<br>Landnachbarn: Spanien.",
-  "geo_ext_fact3": "Es gibt Dinosaurierspuren,<br>die 175 Millionen Jahre alt sind!",
+  "geo_ext_fact3": "Es gibt Dinosaurierspuren,<br>175 Millionen Jahre alt, bei Fátima (Pedreira do Galinha)! Und im Côa-Tal (Douro) prähistorische Felsgravuren, über 20 000 Jahre alt.",
   "geo_ext_luis_eyebrow": "CARAMULO, VISEU &mdash; BEI LUÍS",
   "geo_ext_luis_title": "Meine Stadt, mein Ursprung",
   "geo_ext_luis_desc": "Caramulo ist ein Bergdorf in Zentralportugal, im Land des lusitanischen Volkes.",
@@ -6068,9 +6342,9 @@
   "hist_hero_subtitle": "Ein Volk von Seefahrern,<br>eine Geschichte der Entdeckungen",
   "hist_hero_text": "Kleine Nation, grosses Schicksal: Portugal spielte eine bedeutende Rolle in der Weltgeschichte, vom Meer bis zu den Ideen.",
   "hist_c1_title": "Die portugiesische<br>Flagge",
-  "hist_c1_desc": "Grün symbolisiert die Hoffnung auf die Zukunft und Rot das für die Unabhängigkeit vergossene Blut.",
+  "hist_c1_desc": "Grün steht für Hoffnung, Rot für das für die Nation vergossene Blut. In der Mitte erinnert die Armillarsphäre, ein astronomisches Instrument der Seefahrer, an die grossen Entdeckungsfahrten des 15. und 16. Jahrhunderts.",
   "hist_c2_title": "Der Aufbau<br>Portugals",
-  "hist_c2_desc": "Von der Grafschaft Portugal zur unabhängigen Nation, eine über Jahrhunderte geformte Identität.",
+  "hist_c2_desc": "24. Juni 1128: In der Schlacht von São Mamede übernimmt Afonso Henriques die Kontrolle über die Grafschaft Portugal. 1143: Im Vertrag von Zamora erkennt Alfons VII. von León und Kastilien die Unabhängigkeit Portugals an.",
   "hist_c3_title": "Vertrag von Windsor<br>(1386)",
   "hist_c3_desc": "Der älteste noch geltende Vertrag. Bündnis mit England, das zwei napoleonischen Invasionen standhielt.",
   "hist_c3_link": "Mehr erfahren <span class=\"arrow\">→</span>",
@@ -6251,13 +6525,13 @@
   "sport_more_eyebrow": "MEHR ALS FUSSBALL",
   "sport_more_title": "Weitere sportliche Erfolge",
   "sport_m1_title": "Surfen in Nazaré",
-  "sport_m1_desc": "Riesenwellen von über 25 Metern: Hier wurden Surf-Weltrekorde aufgestellt.",
+  "sport_m1_desc": "Hier wurde die grösste je gesurfte Welle gemessen: 26,21 m, so hoch wie ein Haus mit etwa 8 Stockwerken (Sebastian Steudtner, 2020).",
   "sport_m2_title": "Rollhockey",
   "sport_m2_desc": "Eine der grossen Rollhockey-Nationen, mit über 15 Weltmeistertiteln.",
   "sport_m3_title": "Leichtathletik",
   "sport_m3_desc": "Carlos Lopes (1984) und Rosa Mota (1988) holten Olympia-Gold im Marathon.",
   "sport_m4_title": "Futsal",
-  "sport_m4_desc": "Weltmeister 2021 und zweifacher Europameister.",
+  "sport_m4_desc": "Weltmeister 2021, Europameister 2018 und 2022, Finalist 2026.",
   "sport_cta_title": "Bereit für eine Reise durch die Regionen?",
   "sport_cta_button": "Weiter zu den Regionen",
   "reg_hero_title": "Regionen",
@@ -6365,9 +6639,9 @@
   "sport_eusebio": "Eusébio, der «Schwarze Panther», in Mosambik geboren, Torschützenkönig der WM 1966 mit 9 Toren.",
   "reg_car_eyebrow": "MEINE HEIMAT IM FOKUS",
   "reg_car_title": "Caramulo, der Berg der reinen Luft",
-  "reg_car_text": "In den 1920er-Jahren gründet der Arzt Jerónimo de Lacerda in Caramulo einen Sanatoriumskurort: Aus dem ganzen Land kam man, um mit der reinen Bergluft die Tuberkulose zu behandeln. Später gründen seine Söhne das Museu do Caramulo mit einer Kunstsammlung – vom alten Ägypten bis Picasso – und einer prächtigen Sammlung historischer Autos und Motorräder.",
+  "reg_car_text": "1921 gründet der Arzt Jerónimo de Lacerda in Caramulo einen Sanatoriumskurort mit bis zu rund zwanzig Sanatorien: Aus dem ganzen Land kam man, um mit der reinen Bergluft die Tuberkulose zu behandeln. Später gründen seine Söhne das Museu do Caramulo mit einer Kunstsammlung – vom alten Ägypten bis Picasso – und einer prächtigen Sammlung historischer Autos und Motorräder.",
   "reg_car_f1": "Höhe des Caramulinho, des höchsten Gipfels",
-  "reg_car_f2": "Gründung des Sanatoriums",
+  "reg_car_f2": "Gründung des Sanatoriumskurorts (rund zwanzig Sanatorien)",
   "reg_car_f3": "Gründung des Museu do Caramulo",
   "concl_hero_cap": "Cabo da Roca, «wo das Land endet und das Meer beginnt».",
   "credits_title": "Bildnachweis",
@@ -6467,7 +6741,7 @@
   "merv_hero_subtitle": "Die Schätze Portugals, von Nord nach Süd",
   "merv_hero_text": "Weinberge, Klöster, Paläste, Brücken und Seen: Scrollen Sie und folgen Sie der Karte.",
   "merv_map_eyebrow": "EINE REISE AUF DER KARTE",
-  "merv_map_title": "Neun Wunder zum Entdecken",
+  "merv_map_title": "Zehn Wunder zum Entdecken",
   "merv_map_lead": "Scrollen Sie: Die Karte zeigt, wo jedes Wunder liegt.",
   "merv_7m": "Eines der «7 Wunder Portugals» (2007)",
   "merv_video": "Klicken Sie auf das Foto für das Video",
@@ -6526,7 +6800,57 @@
   "m9_place": "ALGARVE · LAGOA",
   "m9_text": "Vom Meer in die goldenen Klippen der Algarve gegraben, hat diese Höhle eine Öffnung in der Decke – «das Auge», durch das das Sonnenlicht fällt. Man erreicht sie nur vom Meer aus, mit dem Boot oder Kajak.",
   "m9_f1": "Nur vom Meer aus erreichbar",
-  "m9_f2": "Eine der berühmtesten Meereshöhlen der Welt"
+  "m9_f2": "Eine der berühmtesten Meereshöhlen der Welt",
+  "geo_ext_book_note": "«Asterix in Lusitanien» (2025), das neueste Album der Reihe.",
+  "isl_az_cap1": "Sete Cidades (São Miguel): ein grüner und ein blauer See am Grund eines riesigen Kraters.",
+  "isl_az_cap2": "Die Lagoa do Fogo im Herzen von São Miguel.",
+  "isl_md_cap1": "Der Pico do Arieiro (1 818 m), oft über den Wolken.",
+  "isl_md_cap2": "Die Ponta de São Lourenço an der Ostspitze Madeiras.",
+  "isl_az_f1": "INSELN",
+  "isl_az_f2": "ENTDECKUNG DER ERSTEN INSELN",
+  "isl_az_f3": "DER PICO, HÖCHSTER GIPFEL DES LANDES",
+  "isl_md_f1": "BEWOHNTE INSELN",
+  "isl_md_f2": "ENTDECKUNG MADEIRAS",
+  "isl_md_f3": "AUTONOME REGIONEN SEIT",
+  "terroir_eyebrow": "AROMEN DER REGION",
+  "terroir_title": "Olivenöl und schwarzes Schwein",
+  "terroir_oil_t": "Azeite, das grüne Gold",
+  "terroir_oil": "Portugal gehört zu den zehn grössten Olivenölproduzenten der Welt, vor allem dank des Alentejo mit seinen Olivenhainen. Auf dem portugiesischen Tisch ist Azeite überall: auf dem Stockfisch, dem Gemüse oder einfach mit Brot.",
+  "terroir_pig_t": "Der Porco preto",
+  "terroir_pig": "Das schwarze Schwein der Rasse Alentejana lebt frei im Montado, dem Wald aus Kork- und Steineichen, und frisst Eicheln. Sein zartes, marmoriertes Fleisch ergibt berühmte Grillstücke (Secretos, Plumas) und einen aussergewöhnlichen Schinken wie den Presunto de Barrancos (g.U.).",
+  "cult_wine_map": "Karte der Weinregionen ansehen",
+  "athl_eyebrow": "LEICHTATHLETIK",
+  "athl_title": "Die Könige des Marathons",
+  "athl_cap": "Rosa Mota und Carlos Lopes bei einem Volkslauf in Faro.",
+  "athl_lopes": "Olympiasieger im Marathon 1984 in Los Angeles, mit 37 Jahren, dann Weltrekord in 2:07:12 Std. 1985 in Rotterdam. Ausserdem dreimal Crosslauf-Weltmeister.",
+  "athl_mota": "Bronze 1984, dann Olympiasiegerin im Marathon 1988 in Seoul: die erste Portugiesin mit olympischem Gold. Weltmeisterin 1987 und dreimal Europameisterin.",
+  "athl_f1": "OLYMPIA-GOLD — CARLOS LOPES",
+  "athl_f2": "OLYMPIA-GOLD — ROSA MOTA",
+  "athl_f3": "WELTREKORD (1985)",
+  "mP_name": "Porto und die Brücke Dom Luís I",
+  "mP_place": "NORDEN · PORTO",
+  "mP_text": "Die 1886 eröffnete Brücke Dom Luís I verbindet Porto mit Vila Nova de Gaia über einen 172 m langen Eisenbogen. Entworfen hat sie Théophile Seyrig, ein früherer Partner von Gustave Eiffel. Zu ihren Füssen spiegeln sich die bunten Häuser der Ribeira im Douro.",
+  "mP_f1": "Zwei Ebenen: oben die Metro, unten die Autos",
+  "mP_f2": "Altstadt seit 1996 UNESCO-Welterbe",
+  "mP_caves_cap": "Gegenüber in Gaia reift der Portwein in den Kellern, wie früher, als er auf Rabelo-Booten den Douro hinunterkam.",
+  "road_place": "DOURO · VON GAIA NACH ALMENDRA",
+  "road_name": "Die Strasse N222",
+  "road_text": "Die Nationalstrasse 222 folgt dem Douro auf rund 226 km, von Vila Nova de Gaia bis Almendra bei Vila Nova de Foz Côa. Ihr berühmtester Abschnitt zwischen Peso da Régua und Pinhão schlängelt sich am Fluss entlang durch die Terrassenweinberge. 2015 kürte eine Studie des Autovermieters Avis sie zur schönsten Strasse der Welt zum Fahren.",
+  "road_f1": "27 km und 93 Kurven zwischen Régua und Pinhão",
+  "road_f2": "«Beste Strasse der Welt zum Fahren» (Avis-Studie, 2015)",
+  "road_f3": "Mitten im Weinbaugebiet Alto Douro, seit 2001 UNESCO-Welterbe",
+  "road_cap": "Die Terrassenweinberge, durch die die Strasse führt.",
+  "uni_eyebrow": "STUDIUM &amp; TRADITIONEN",
+  "uni_title": "Universitäten, schwarze Umhänge und Harry Potter",
+  "uni_lead": "In Portugal hat das Studentenleben eigene Traditionen, die weltweit bekannt sind.",
+  "uni_c1_t": "Die Universität Coimbra",
+  "uni_c1": "1290 von König Dionysius I. gegründet und 1537 endgültig nach Coimbra verlegt, ist sie eine der ältesten Universitäten der Welt. Seit 2013 ist sie UNESCO-Welterbe, mit der prächtigen Barockbibliothek Joanina.",
+  "uni_c2_t": "Die Studenten im «Traje»",
+  "uni_c2": "Schwarzer Anzug und weiter Umhang: das ist der Traje académico. Der Tradition nach wird der Umhang nie gewaschen, und jeder Riss erinnert an einen Menschen oder einen wichtigen Moment. Im Mai feiert die Queima das Fitas das Ende des Studiums.",
+  "uni_c3_t": "Die Livraria Lello in Porto",
+  "uni_c3": "1906 eröffnet, mit ihrer roten Treppe und den geschnitzten Holzverkleidungen, gilt sie oft als eine der schönsten Buchhandlungen der Welt. Manchmal muss man anstehen, um hineinzukommen!",
+  "uni_c4_t": "Und Harry Potter?",
+  "uni_c4": "J.K. Rowling lebte Anfang der 1990er-Jahre in Porto: Sie unterrichtete Englisch und schrieb bereits an Harry Potter. Man sagt, die Studentenumhänge hätten die Roben von Hogwarts inspiriert und die Lello dessen Bibliothek … doch Rowling sagt, sie sei nie in der Lello gewesen!"
  }
 };
 
@@ -6593,7 +6917,7 @@
 
     // Merveilles: map follows the scroll
     (function(){
-      const PINS = {"1": [245, 156.9], "2": [134.6, 228.2], "3": [117.4, 355.4], "4": [54.9, 462.3], "5": [70.4, 490.7], "6": [89.3, 492], "7": [108, 461.9], "8": [250.3, 544.9], "9": [157.3, 688.8]};
+      const PINS = {"1": [245, 156.9], "2": [139, 162.1], "3": [134.6, 228.2], "4": [117.4, 355.4], "5": [54.9, 462.3], "6": [70.4, 490.7], "7": [89.3, 492], "8": [108, 461.9], "9": [250.3, 544.9], "10": [157.3, 688.8], "road": [221.0, 161.5]};
       const AX = 356;
       const arrow = document.getElementById('mArrow');
       const pins = document.querySelectorAll('.mpin');
@@ -6601,6 +6925,7 @@
       function activate(i){
         pins.forEach(p => p.classList.toggle('active', p.dataset.i === String(i)));
         items.forEach(it => it.classList.toggle('active', it.dataset.i === String(i)));
+        document.querySelector('.merv-svg').classList.toggle('road-on', String(i) === 'road');
         const [x, y] = PINS[i];
         const cx = (x + AX) / 2;
         arrow.setAttribute('d', 'M' + (x + 12) + ' ' + y + ' C ' + cx + ' ' + (y - 40) + ', ' + cx + ' ' + (y - 40) + ', ' + AX + ' ' + y);

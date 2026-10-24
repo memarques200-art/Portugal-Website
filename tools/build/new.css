@@ -1109,3 +1109,84 @@
   .merv-sec{position:relative; padding-top:126px; background-color:var(--azul-soft); background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='88'%20height='88'%20viewBox='0%200%2088%2088'%3E%3Crect%20width='88'%20height='88'%20fill='none'/%3E%3Cg%20fill='%231E4F8F'%20fill-opacity='0.07'%20stroke='%231E4F8F'%20stroke-opacity='0.07'%20stroke-width='1.6'%3E%3Cpath%20d='M44%208c7%209%207%2017%200%2022c-7-5-7-13%200-22zM44%2080c7-9%207-17%200-22c-7%205-7%2013%200%2022zM8%2044c9-7%2017-7%2022%200c-5%207-13%207-22%200zM80%2044c-9-7-17-7-22%200c5%207%2013%207%2022%200z'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='6'/%3E%3Cpath%20d='M0%200h12c0%207-5%2012-12%2012zM88%200v12c-7%200-12-5-12-12zM0%2088v-12c7%200%2012%205%2012%2012zM88%2088h-12c0-7%205-12%2012-12z'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%231E4F8F'%20stroke-opacity='0.07'%20stroke-width='1.2'%3E%3Ccircle%20cx='44'%20cy='44'%20r='17'/%3E%3Cpath%20d='M44%2027l17%2017l-17%2017l-17-17z'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(180deg, var(--azul-soft) 0%, #F7F9FC 100%); background-size:120px 120px, auto;}
   .merv-sec::before{content:""; position:absolute; left:0; right:0; top:0; height:30px; background:var(--tile); background-size:30px 30px; border-bottom:2px solid var(--azul);}
   .merv-sec .sec-head .sec-lead{background:rgba(252,251,248,.92); padding:14px 20px; border-radius:8px; box-shadow:0 8px 24px -18px rgba(23,33,29,.35);}
+
+  /* ---- v21: islands ---- */
+  .isl-sec{padding:96px 0; background:var(--azul-soft);}
+  .isl-grid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:28px;}
+  .isl-card{background:#fff; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 24px 50px -32px rgba(23,33,29,.45); display:flex; flex-direction:column;}
+  .isl-photos{display:grid; grid-template-columns:1.35fr 1fr; gap:4px;}
+  .isl-photos figure{position:relative; margin:0; aspect-ratio:4/3.4; overflow:hidden;}
+  .isl-photos img{width:100%; height:100%; object-fit:cover; display:block;}
+  .isl-photos figcaption{position:absolute; left:0; right:0; bottom:0; padding:28px 12px 10px; font-size:12.5px; line-height:1.4; color:#fff; background:linear-gradient(transparent, rgba(0,0,0,.72));}
+  .isl-body{padding:24px 26px 26px;}
+  .isl-label{display:inline-block; font:700 12px Inter, sans-serif; letter-spacing:.16em; color:var(--azul); margin-bottom:8px;}
+  .isl-body p{font-size:15.5px; line-height:1.65; color:var(--text); margin:0 0 16px;}
+  .isl-facts{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;}
+  .isl-facts div{background:var(--azul-soft); border-radius:10px; padding:12px; text-align:center;}
+  .isl-facts b{display:block; font-family:'Cormorant Garamond', serif; font-size:26px; color:var(--green); line-height:1.1;}
+  .isl-facts span{display:block; font-size:10.5px; font-weight:700; letter-spacing:.08em; color:var(--grey); margin-top:4px;}
+  @media (max-width:900px){ .isl-grid{grid-template-columns:minmax(0,1fr);} .isl-sec{padding:64px 0;} }
+  @media (max-width:520px){ .isl-photos{grid-template-columns:minmax(0,1fr);} .isl-facts b{font-size:21px;} }
+
+  /* Asterix book larger + note */
+  .geo-extras-book{width:230px;}
+  .geo-extras-book-caption{width:230px;}
+  .geo-extras-book-note{display:block; width:230px; margin:6px auto 0; text-align:center; font-size:12.5px; font-style:italic; color:var(--grey);}
+
+  /* Pessoa: keep the face in frame */
+  .card-photo img[src*="x-pessoa"]{object-position:50% 18%;}
+
+  /* ---- v21: olive oil & black pork ---- */
+  .terroir-grid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:26px; max-width:1100px; margin:0 auto;}
+  .terroir-card{background:var(--warm-white); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:0 18px 40px -28px rgba(23,33,29,.35);}
+  .terroir-photo{aspect-ratio:16/9; overflow:hidden;}
+  .terroir-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .terroir-body{padding:22px 24px 24px;}
+  .terroir-body h3{font-family:'Cormorant Garamond', serif; font-size:26px; color:var(--green); margin:0 0 8px;}
+  .terroir-body p{font-size:15.5px; line-height:1.65; color:var(--text); margin:0;}
+  @media (max-width:800px){ .terroir-grid{grid-template-columns:minmax(0,1fr);} }
+
+  /* ---- v21: wines ---- */
+  .wine-photo{aspect-ratio:4/3; border-radius:10px; overflow:hidden; margin:0 auto 18px; max-width:300px; box-shadow:0 18px 36px -20px rgba(0,0,0,.6);}
+  .wine-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .wine-map-btn{display:table; margin:40px auto 0; padding:14px 26px; border:1.5px solid rgba(252,251,248,.7); border-radius:999px; color:var(--warm-white); text-decoration:none; font:700 13px Inter, sans-serif; letter-spacing:.08em; text-transform:uppercase; transition:background .2s, color .2s;}
+  .wine-map-btn .arrow{margin-left:10px;}
+  .wine-map-btn:hover{background:var(--warm-white); color:#5E2230;}
+
+  /* ---- v21: world food photos ---- */
+  .wf-card{overflow:hidden;}
+  .wf-photo{margin:-26px -26px 18px; aspect-ratio:16/10; overflow:hidden;}
+  .wf-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+
+  /* ---- v21: athletics ---- */
+  .athl-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:48px; align-items:center;}
+  .athl-photo{margin:0; border-radius:14px; overflow:hidden; box-shadow:0 24px 50px -30px rgba(23,33,29,.5);}
+  .athl-photo img{width:100%; display:block;}
+  .athl-photo figcaption{padding:10px 14px; font-size:13px; color:var(--grey); background:var(--warm-white);}
+  .athl-title{text-align:left; margin-bottom:18px;}
+  .athl-sec .sec-eyebrow{justify-content:flex-start;}
+  .athl-people{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:18px; margin-bottom:20px;}
+  .athl-person h3{font-family:'Cormorant Garamond', serif; font-size:24px; color:var(--green); margin:0 0 6px;}
+  .athl-person p{font-size:15px; line-height:1.6; color:var(--text); margin:0;}
+  .athl-facts{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;}
+  .athl-facts div{background:var(--ivory); border:1px solid var(--border); border-radius:10px; padding:12px; text-align:center;}
+  .athl-facts b{display:block; font-family:'Cormorant Garamond', serif; font-size:26px; color:var(--red); line-height:1.1;}
+  .athl-facts span{display:block; font-size:10.5px; font-weight:700; letter-spacing:.06em; color:var(--grey); margin-top:4px;}
+  @media (max-width:900px){ .athl-grid{grid-template-columns:minmax(0,1fr); gap:28px;} }
+  @media (max-width:560px){ .athl-people{grid-template-columns:minmax(0,1fr);} .athl-facts b{font-size:20px;} }
+
+  /* ---- v21: more Red Bull photos ---- */
+  .rbar-more{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px; margin-top:28px;}
+  .rbar-more figure{margin:0; aspect-ratio:16/10; border-radius:12px; overflow:hidden;}
+  .rbar-more img{width:100%; height:100%; object-fit:cover; display:block;}
+  @media (max-width:600px){ .rbar-more{grid-template-columns:minmax(0,1fr);} }
+
+  /* ---- v21: N222 road on the Merveilles map ---- */
+  .mroad{fill:none; stroke:#C8102E; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:420; stroke-dashoffset:420; opacity:0; transition:stroke-dashoffset 1.6s ease, opacity .3s ease;}
+  .merv-svg.road-on .mroad{stroke-dashoffset:0; opacity:1;}
+  .merv-num--road{width:auto; min-width:44px; padding:0 10px; border-radius:22px; font-size:15px; letter-spacing:.04em; background:#C8102E;}
+  .merv-road{border-top:4px solid #C8102E;}
+  .pas-card--poster .pas-photo{aspect-ratio:auto; height:420px;}
+  .pas-card--poster .pas-photo img{object-fit:contain; background:#f4f1ea;}
+  .card-photo img[src*="harry-potter"]{object-position:50% 22%;}
+  .card-photo img[src*="lello"]{object-position:50% 60%;}

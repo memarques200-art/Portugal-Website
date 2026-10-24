@@ -3,8 +3,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from i18n_new import T
 from i18n_more import T2
 from i18n_merv import T3
-T = {**T, **T2, **T3}
-import merv
+from i18n_v21 import T4
+T = {**T, **T2, **T3, **T4}
+import merv, v21
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = sys.argv[1]
@@ -360,6 +361,7 @@ script = '''  <script>
       function activate(i){
         pins.forEach(p => p.classList.toggle('active', p.dataset.i === String(i)));
         items.forEach(it => it.classList.toggle('active', it.dataset.i === String(i)));
+        document.querySelector('.merv-svg').classList.toggle('road-on', String(i) === 'road');
         const [x, y] = PINS[i];
         const cx = (x + AX) / 2;
         arrow.setAttribute('d', 'M' + (x + 12) + ' ' + y + ' C ' + cx + ' ' + (y - 40) + ', ' + cx + ' ' + (y - 40) + ', ' + AX + ' ' + y);
@@ -421,6 +423,7 @@ ROOT = _os.path.dirname(_os.path.abspath(SRC))
 for old, new in SWAP.items():
     if _os.path.exists(_os.path.join(ROOT, new)):
         html = html.replace('src="%s"' % old, 'src="%s"' % new)
+html = v21.apply(html, render, FR, T4.keys())
 missing = sorted(set(re.findall(r'src="(images/photos/[^"]+)"', html)) - {p for p in set(re.findall(r'src="(images/photos/[^"]+)"', html)) if _os.path.exists(_os.path.join(ROOT, p))})
 if missing: print("MISSING PHOTOS:", missing)
 
