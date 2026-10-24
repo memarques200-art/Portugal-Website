@@ -76,7 +76,7 @@ function divider(num, titleKey, subKey, textKey, photo, pos) {
   const s = add("BLEED");
   img(s, photo, 0, 0, W, H);
   s.addShape(pres.shapes.RECTANGLE, { x: 0, y: 0, w: 7.4, h: H, fill: { color: "08140F", transparency: 30 }, line: { color: "08140F", transparency: 100 } });
-  tb(s, num + " / 08", { x: 0.9, y: 2.0, w: 5, h: 0.4, fontSize: 16, bold: true, color: "F2C14E", charSpacing: 3 });
+  tb(s, /^\d+$/.test(num) ? num + " / 08" : num, { x: 0.9, y: 2.0, w: 5, h: 0.4, fontSize: 16, bold: true, color: "F2C14E", charSpacing: 3 });
   tb(s, F[titleKey], { x: 0.9, y: 2.45, w: 6.3, h: 1.4, fontSize: 60, bold: true, fontFace: "Cambria", color: COL.white, fit: "shrink" });
   tb(s, F[subKey], { x: 0.9, y: 3.95, w: 6.0, h: 1.0, fontSize: 24, fontFace: "Cambria", italic: true, color: COL.white });
   if (textKey) tb(s, F[textKey], { x: 0.9, y: 5.0, w: 5.6, h: 1.1, fontSize: 15, color: "E6ECE8" });
@@ -135,7 +135,7 @@ sec("Accueil");
 { // 4 parcours (journey)
   const s = add();
   head(s, "PROGRAMME", F.journey_title);
-  const j = [["01", F.journey_geo, P("j-geo.jpg")], ["02", F.journey_hist, P("j-hist.jpg")], ["03", F.journey_inst, P("inst-saobento.jpg")], ["04", F.journey_soc, P("j-soc.jpg")], ["05", "Culture & gastronomie", P("j-cult.jpg")], ["06", "Sport", P("hero-sport.jpg")], ["07", F.journey_reg, P("r-douro.jpg")], ["08", "Conclusion", L("caramulo-vue.jpg")]];
+  const j = [["01", F.journey_geo, P("j-geo.jpg")], ["02", F.journey_hist, P("j-hist.jpg")], ["03", F.journey_soc, P("j-soc.jpg")], ["04", "Culture & gastronomie", P("j-cult.jpg")], ["05", "Sport", P("hero-sport.jpg")], ["06", F.journey_reg, P("r-douro.jpg")], ["07", F.journey_merv, P("hero-merv.jpg")], ["08", "Conclusion", L("caramulo-vue.jpg")]];
   j.forEach(([n, t, ph], i) => {
     const x = MX + (i % 4) * 3.07, y = 1.85 + Math.floor(i / 4) * 2.55;
     img(s, ph, x, y, 2.87, 2.3);
@@ -282,8 +282,8 @@ divider("02", "hist_hero_title", "hist_hero_subtitle", "hist_hero_text", P("hero
 }
 
 // =====================================================================
-sec("03 Institutions");
-divider("03", "inst_hero_title", "inst_hero_subtitle", "inst_hero_text", P("hero-inst.jpg"));
+sec("02 Histoire · Institutions");
+divider("HISTOIRE · INSTITUTIONS", "inst_hero_title", "inst_hero_subtitle", "inst_hero_text", P("hero-inst.jpg"));
 {
   const s = add();
   head(s, F.inst_pow_eyebrow, F.inst_pow_title);
@@ -343,8 +343,8 @@ divider("03", "inst_hero_title", "inst_hero_subtitle", "inst_hero_text", P("hero
   });
 }
 // =====================================================================
-sec("04 Société");
-divider("04", "soc_hero_title", "soc_hero_subtitle", "soc_hero_text", P("hero-soc.jpg"));
+sec("03 Société");
+divider("03", "soc_hero_title", "soc_hero_subtitle", "soc_hero_text", P("hero-soc.jpg"));
 {
   const s = add();
   head(s, F.soc_life_eyebrow, F.soc_life_title);
@@ -390,8 +390,8 @@ divider("04", "soc_hero_title", "soc_hero_subtitle", "soc_hero_text", P("hero-so
   });
 }
 // =====================================================================
-sec("05 Culture");
-divider("05", "cult_hero_title", "cult_hero_subtitle", "cult_hero_text", P("hero-cult.jpg"));
+sec("04 Culture");
+divider("04", "cult_hero_title", "cult_hero_subtitle", "cult_hero_text", P("hero-cult.jpg"));
 {
   const s = add();
   head(s, F.cult_arts_eyebrow, F.cult_arts_title);
@@ -443,8 +443,8 @@ divider("05", "cult_hero_title", "cult_hero_subtitle", "cult_hero_text", P("hero
   });
 }
 // =====================================================================
-sec("06 Sport");
-divider("06", "sport_hero_title", "sport_hero_subtitle", "sport_hero_text", P("hero-sport.jpg"));
+sec("05 Sport");
+divider("05", "sport_hero_title", "sport_hero_subtitle", "sport_hero_text", P("hero-sport.jpg"));
 {
   const s = add();
   img(s, P("s-ronaldo.jpg"), 0, 0, 4.6, H);
@@ -486,8 +486,8 @@ divider("06", "sport_hero_title", "sport_hero_subtitle", "sport_hero_text", P("h
   tb(s, F.rbar_cap, { x: 0.3, y: 7.05, w: 6.6, h: 0.3, fontSize: 10, color: COL.white });
 }
 // =====================================================================
-sec("07 Régions");
-divider("07", "reg_hero_title", "reg_hero_subtitle", "reg_hero_text", P("hero-reg.jpg"));
+sec("06 Régions");
+divider("06", "reg_hero_title", "reg_hero_subtitle", "reg_hero_text", P("hero-reg.jpg"));
 {
   const s = add();
   head(s, F.reg_eyebrow, F.reg_title);
@@ -523,6 +523,70 @@ divider("07", "reg_hero_title", "reg_hero_subtitle", "reg_hero_text", P("hero-re
   link(s, "▶  Regarder la vidéo", "https://youtu.be/jJedre8t3Go", 0.8, 6.55, 2.8);
   s.addNotes(F.cmf_text);
 }
+
+// =====================================================================
+sec("07 Merveilles");
+divider("07", "merv_hero_title", "merv_hero_subtitle", "merv_hero_text", P("hero-merv.jpg"));
+{
+  const s = add();
+  s.addImage({ path: __dirname + "/map.png", x: MX, y: 0.45, w: 2.9, h: 6.27 });
+  tb(s, F.merv_map_eyebrow, { x: 4.0, y: 0.45, w: 8.5, h: 0.3, fontSize: 12, bold: true, charSpacing: 3, color: COL.red });
+  tb(s, F.merv_map_title, { x: 4.0, y: 0.75, w: 8.7, h: 0.75, fontSize: 34, bold: true, fontFace: "Cambria", color: COL.green });
+  const names = [1,2,3,4,5,6,7,8,9].map(i => F["m" + i + "_name"]);
+  names.forEach((n, i) => {
+    const col = i < 5 ? 0 : 1, row = col ? i - 5 : i, x = 4.0 + col * 4.4, y = 1.85 + row * 0.95;
+    dot(s, x, y, i % 2 ? COL.azul : COL.red, String(i + 1));
+    tb(s, n, { x: x + 0.7, y: y + 0.02, w: 3.6, h: 0.5, fontSize: 16, bold: true, fontFace: "Cambria", color: COL.ink, valign: "middle" });
+    tb(s, F["m" + (i + 1) + "_place"], { x: x + 0.7, y: y + 0.48, w: 3.6, h: 0.3, fontSize: 10, bold: true, color: COL.grey, charSpacing: 1 });
+  });
+}
+
+const WONDERS = [
+  [1, P("w-douro.jpg"), false, "https://youtu.be/zbUbmYi2fHk"],
+  [2, P("w-aveiro.jpg"), false, null, P("w-salinas.jpg"), "m2_salt_cap"],
+  [3, P("w-batalha.jpg"), true],
+  [4, P("w-pena.jpg"), true],
+  [5, P("hero-hist.jpg"), true],
+  [6, P("w-jeronimos.jpg"), true],
+  [7, P("w-vgama.jpg"), false, null, P("w-oceanario.jpg"), "m7_ocean_t"],
+  [8, P("w-alqueva.jpg"), false, null, null, null, true],
+  [9, P("r-algarve.jpg"), false],
+];
+WONDERS.forEach(([i, ph, seven, video, ph2, cap2, cmp]) => {
+  const s = add(), k = "m" + i;
+  img(s, ph, 0, 0, 6.3, ph2 ? 4.6 : H);
+  if (ph2) { img(s, ph2, 0, 4.7, 6.3, 2.8); caption(s, F[cap2], 0, 7.5, 6.3); }
+  if (video) link(s, "▶  " + F.merv_video_watch, video, 0.4, 6.6, 3.6);
+  const x = 6.8, w = 5.95;
+  dot(s, x, 0.55, COL.red, String(i));
+  tb(s, F[k + "_place"], { x: x + 0.7, y: 0.55, w: w - 0.7, h: 0.3, fontSize: 11, bold: true, color: COL.azul, charSpacing: 2 });
+  tb(s, F[k + "_name"], { x: x + 0.7, y: 0.82, w: w - 0.7, h: 0.9, fontSize: 26, bold: true, fontFace: "Cambria", color: COL.green });
+  let y = 1.85;
+  if (seven) {
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w: 4.6, h: 0.42, fill: { color: "FBF1D9" }, line: { color: "EBD6A2" }, rectRadius: 0.21 });
+    tb(s, "★  " + F.merv_7m, { x: x + 0.15, y, w: 4.4, h: 0.42, fontSize: 12, bold: true, color: "7A5A18", valign: "middle" });
+    y += 0.6;
+  }
+  const textH = cmp ? 1.55 : (i === 7 ? 1.9 : 1.75);
+  tb(s, F[k + "_text"], { x, y, w, h: textH, fontSize: 14 });
+  y += textH + 0.1;
+  [F[k + "_f1"], F[k + "_f2"]].forEach((f) => {
+    card(s, x, y, w, 0.55, COL.tintBlue);
+    tb(s, f, { x: x + 0.2, y, w: w - 0.3, h: 0.55, fontSize: 13, bold: true, valign: "middle" });
+    y += 0.68;
+  });
+  if (i === 7) tb(s, F.m7_ocean_t + " — " + F.m7_ocean, { x, y: y + 0.05, w, h: 1.1, fontSize: 12, color: COL.grey });
+  if (cmp) {
+    const R1 = 0.95, R2 = R1 * Math.sqrt(250 / 580), cy = y + 0.25 + R1;
+    s.addShape(pres.shapes.OVAL, { x: x + 0.3, y: cy - R1, w: 2 * R1, h: 2 * R1, fill: { color: "2B6CB8" }, line: { color: "2B6CB8" } });
+    tb(s, "580 km²\n" + F.m8_leman, { x: x + 0.3, y: cy - 0.35, w: 2 * R1, h: 0.7, fontSize: 13, bold: true, color: COL.white, align: "center" });
+    s.addShape(pres.shapes.OVAL, { x: x + 2.6, y: cy + R1 - 2 * R2, w: 2 * R2, h: 2 * R2, fill: { color: "3BB3A0" }, line: { color: "3BB3A0" } });
+    tb(s, "250 km²\nAlqueva", { x: x + 2.6, y: cy + R1 - R2 - 0.3, w: 2 * R2, h: 0.6, fontSize: 11, bold: true, color: COL.white, align: "center" });
+    tb(s, F.m8_cmp_text, { x: x + 4.0, y: cy - 0.6, w: 1.95, h: 1.4, fontSize: 12, italic: true, color: COL.grey });
+  }
+  s.addNotes(F[k + "_name"] + ". " + F[k + "_text"] + " " + F[k + "_f1"] + ". " + F[k + "_f2"] + "." + (i === 7 ? " " + F.m7_ocean : ""));
+});
+
 // =====================================================================
 sec("08 Conclusion");
 divider("08", "concl_hero_title", "concl_hero_subtitle", "concl_hero_text", P("hero-concl.jpg"));
