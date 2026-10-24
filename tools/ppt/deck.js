@@ -288,6 +288,17 @@ divider("HISTOIRE · INSTITUTIONS", "inst_hero_title", "inst_hero_subtitle", "in
   });
 }
 {
+  const s = add();
+  head(s, "PORTUGAL — SUISSE", F.inst_cmp_title);
+  const hdr = (t) => ({ text: t, options: { bold: true, color: COL.white, fill: { color: COL.green }, fontSize: 15 } });
+  const rows = [[hdr(""), hdr("🇵🇹  Portugal"), hdr("🇨🇭  Suisse")]];
+  for (let i = 1; i <= 6; i++) {
+    const shade = i % 2 ? COL.tint : COL.white;
+    rows.push([{ text: F["inst_cmp_r" + i].toUpperCase(), options: { bold: true, color: COL.red, fontSize: 12, fill: { color: shade } } }, { text: F["inst_cmp_r" + i + "_pt"], options: { fill: { color: shade } } }, { text: F["inst_cmp_r" + i + "_ch"], options: { fill: { color: shade } } }]);
+  }
+  s.addTable(rows, { x: MX, y: 1.8, w: 12.1, colW: [2.5, 4.8, 4.8], fontSize: 15, fontFace: "Calibri", color: COL.ink, border: { type: "solid", pt: 0.5, color: "D5DAD7" }, rowH: 0.62, valign: "middle", margin: 0.1 });
+}
+{
   const s = add("DARK");
   head(s, "25 · IV · 1974", F.inst_rev_title, { dark: true, w: 6.5 });
   tb(s, F.inst_rev_text, { x: MX, y: 1.75, w: 6.3, h: 3.6, fontSize: 15, color: COL.white });
@@ -349,17 +360,6 @@ divider("03", "soc_hero_title", "soc_hero_subtitle", "soc_hero_text", P("hero-so
     tb(s, t, { x: x + 0.2, y: 3.9, w: 2.5, h: 0.7, fontSize: 18, bold: true, fontFace: "Cambria", color: COL.green });
     tb(s, d, { x: x + 0.2, y: 4.65, w: 2.5, h: 2.05, fontSize: 13 });
   });
-}
-{
-  const s = add();
-  head(s, "PORTUGAL — SUISSE", F.inst_cmp_title);
-  const hdr = (t) => ({ text: t, options: { bold: true, color: COL.white, fill: { color: COL.green }, fontSize: 15 } });
-  const rows = [[hdr(""), hdr("🇵🇹  Portugal"), hdr("🇨🇭  Suisse")]];
-  for (let i = 1; i <= 6; i++) {
-    const shade = i % 2 ? COL.tint : COL.white;
-    rows.push([{ text: F["inst_cmp_r" + i].toUpperCase(), options: { bold: true, color: COL.red, fontSize: 12, fill: { color: shade } } }, { text: F["inst_cmp_r" + i + "_pt"], options: { fill: { color: shade } } }, { text: F["inst_cmp_r" + i + "_ch"], options: { fill: { color: shade } } }]);
-  }
-  s.addTable(rows, { x: MX, y: 1.8, w: 12.1, colW: [2.5, 4.8, 4.8], fontSize: 15, fontFace: "Calibri", color: COL.ink, border: { type: "solid", pt: 0.5, color: "D5DAD7" }, rowH: 0.62, valign: "middle", margin: 0.1 });
 }
 {
   const s = add();

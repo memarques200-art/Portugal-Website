@@ -7,9 +7,9 @@ T3 = {
 
 # Institutions folded into Histoire
 "inst_toggle_title": ("Envie d’en savoir plus&nbsp;?", "Vuoi saperne di più?", "Lust auf mehr?"),
-"inst_toggle_sub": ("Découvrez les institutions du Portugal : qui gouverne et comment, la Révolution des Œillets et les deux chansons qui l’ont lancée.",
-  "Scopri le istituzioni del Portogallo: chi governa e come, la Rivoluzione dei Garofani e le due canzoni che l’hanno avviata.",
-  "Entdecken Sie die Institutionen Portugals: wer regiert und wie, die Nelkenrevolution und die zwei Lieder, die sie auslösten."),
+"inst_toggle_sub": ("Découvrez les institutions du Portugal : qui gouverne et comment, la comparaison avec la Suisse, la Révolution des Œillets et les deux chansons qui l’ont lancée.",
+  "Scopri le istituzioni del Portogallo: chi governa e come, il confronto con la Svizzera, la Rivoluzione dei Garofani e le due canzoni che l’hanno avviata.",
+  "Entdecken Sie die Institutionen Portugals: wer regiert und wie, der Vergleich mit der Schweiz, die Nelkenrevolution und die zwei Lieder, die sie auslösten."),
 "inst_toggle_open": ("Découvrir", "Scopri", "Entdecken"),
 "inst_toggle_close": ("Masquer", "Nascondi", "Ausblenden"),
 "hist_cta_title": ("Prêt à rencontrer les Portugais&nbsp;?", "Pronti a conoscere i portoghesi?", "Bereit, die Portugiesen kennenzulernen?"),
