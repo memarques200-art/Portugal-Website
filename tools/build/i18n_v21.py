@@ -160,3 +160,8 @@ T4.update({
   "Creato dalla diga di Alqueva sul Guadiana e riempito nel 2010, questo lago immenso irriga l'Alentejo, produce elettricità e offre uno dei cieli più stellati d'Europa.",
   "Der vom Alqueva-Staudamm am Guadiana gebildete und 2010 gefüllte riesige See bewässert den Alentejo, erzeugt Strom und bietet einen der sternenreichsten Himmel Europas."),
 })
+T4.update({
+"concl_p_para": ("Récemment, j'ai volé en parapente au-dessus du lac Léman. Une expérience inoubliable&nbsp;!",
+  "Di recente ho volato in parapendio sopra il lago Lemano. Un'esperienza indimenticabile!",
+  "Kürzlich bin ich mit dem Gleitschirm über den Genfersee geflogen. Ein unvergessliches Erlebnis!"),
+})
