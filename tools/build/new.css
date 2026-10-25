@@ -1216,3 +1216,10 @@
   .thanks-bar{background:var(--green); color:rgba(252,251,248,.85); text-align:center; padding:14px 0; font-size:13.5px;}
   .thanks-bar a{color:#F2C14E; font-weight:700; text-decoration:none; margin:0 4px;}
   .thanks-bar a:hover{text-decoration:underline;}
+
+  /* passions: mécanique, sorties and parapente on one level */
+  .pas-card--row .pas-photo{aspect-ratio:auto; height:400px;}
+  .pas-card--para .pas-photo img{object-position:50% 0%;}
+  .pas-grid > .pas-card.pas-card--full{grid-column:1 / -1;}
+  .pas-grid > .pas-card.pas-card--full .pas-photo{aspect-ratio:16/6;}
+  @media (max-width:900px){ .pas-card--row .pas-photo{height:320px;} .pas-grid > .pas-card.pas-card--full .pas-photo{aspect-ratio:4/3;} }
