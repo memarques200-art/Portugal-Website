@@ -5,6 +5,7 @@ from i18n_more import T2
 from i18n_merv import T3
 from i18n_v21 import T4
 T = {**T, **T2, **T3, **T4}
+for _k in ('m8_cmp_title', 'm8_len_t', 'm8_area_t', 'm8_cmp_text', 'm8_leman', 'm8_alqueva'): T.pop(_k, None)  # Léman comparison removed
 import merv, v21
 
 HERE = os.path.dirname(os.path.abspath(__file__))

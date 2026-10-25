@@ -14,7 +14,7 @@ ITEMS = [
     ('m5', 'belem',     ['photos/hero-hist.jpg'], True, None),
     ('m6', 'jeronimos', ['photos/w-jeronimos.jpg'], True, None),
     ('m7', 'vgama',     ['photos/w-vgama.jpg', 'photos/w-expo.jpg', 'photos/w-oceanario.jpg'], False, 'expo'),
-    ('m8', 'alqueva',   ['photos/w-alqueva.jpg'], False, 'cmp'),
+    ('m8', 'alqueva',   ['photos/w-alqueva.jpg'], False, None),
     ('m9', 'benagil',   ['luis/benagil.jpg'], False, None),
 ]
 # small manual offsets so the Lisbon pins don't sit on top of each other

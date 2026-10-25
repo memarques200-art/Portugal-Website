@@ -152,3 +152,11 @@ T4.update({
 "merci_nt_link": ("Voir sur Google", "Vedi su Google", "Auf Google ansehen"),
 "merci_bar": ("Merci pour leur soutien&nbsp;:", "Grazie per il loro sostegno:", "Danke für die Unterstützung:"),
 })
+T4.update({
+"m8_f1": ("Le plus grand lac artificiel d'Europe occidentale : environ 250 km²", "Il più grande lago artificiale dell'Europa occidentale: circa 250 km²", "Der grösste künstliche See Westeuropas: rund 250 km²"),
+})
+T4.update({
+"m8_text": ("Créé par le barrage d'Alqueva sur le Guadiana et rempli en 2010, ce lac immense irrigue l'Alentejo, produit de l'électricité et offre un ciel parmi les plus étoilés d'Europe.",
+  "Creato dalla diga di Alqueva sul Guadiana e riempito nel 2010, questo lago immenso irriga l'Alentejo, produce elettricità e offre uno dei cieli più stellati d'Europa.",
+  "Der vom Alqueva-Staudamm am Guadiana gebildete und 2010 gefüllte riesige See bewässert den Alentejo, erzeugt Strom und bietet einen der sternenreichsten Himmel Europas."),
+})

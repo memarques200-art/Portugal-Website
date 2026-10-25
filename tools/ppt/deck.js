@@ -589,7 +589,7 @@ const WONDERS = [
   ["m5", P("hero-hist.jpg"), true],
   ["m6", P("w-jeronimos.jpg"), true],
   ["m7", P("w-vgama.jpg"), false, null, P("w-oceanario.jpg"), "m7_ocean_t"],
-  ["m8", P("w-alqueva.jpg"), false, null, null, null, true],
+  ["m8", P("w-alqueva.jpg"), false],
   ["m9", L("benagil.jpg"), false],
 ];
 WONDERS.forEach(([k, ph, seven, video, ph2, cap2, cmp], idx) => {
