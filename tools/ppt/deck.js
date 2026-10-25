@@ -406,7 +406,7 @@ divider("04", "cult_hero_title", "cult_hero_subtitle", "cult_hero_text", P("hero
 {
   const s = add();
   head(s, F.uni_eyebrow, F.uni_title);
-  [[P("z-coimbra.jpg"), "uni_c1"], [L("traje.jpg"), "uni_c2"], [L("lello.jpg"), "uni_c3"], [L("harry-potter.jpg"), "uni_c4"]].forEach(([ph, k], i) => {
+  [[P("z-coimbra.jpg"), "uni_c1"], [L("traje.jpg"), "uni_c2"], [L("lello.jpg"), "uni_c3"], [L("harry-potter-wide.jpg"), "uni_c4"]].forEach(([ph, k], i) => {
     const x = MX + i * 3.07;
     card(s, x, 1.75, 2.87, 5.05, COL.white);
     img(s, ph, x, 1.75, 2.87, 2.0);
