@@ -171,3 +171,8 @@ T4.update({
   "Il Portogallo è tra i dieci maggiori produttori di olio d'oliva al mondo, soprattutto grazie all'Alentejo. Sulla tavola portoghese l'azeite è ovunque: sul baccalà, sulle verdure o semplicemente con il pane.",
   "Portugal gehört zu den zehn grössten Olivenölproduzenten der Welt, vor allem dank des Alentejo. Auf dem portugiesischen Tisch ist Azeite überall: auf dem Stockfisch, dem Gemüse oder einfach mit Brot."),
 })
+T4.update({
+"soc_eco4": ("Longtemps pays d'émigration, le Portugal attire aujourd'hui : plus de 1,5 million d'étrangers y vivaient fin 2024, surtout des Brésiliens. Et en 2024, un record de 29 millions de touristes étrangers l'ont visité, près de trois fois sa population&nbsp;!",
+  "A lungo paese di emigrazione, oggi il Portogallo attira: a fine 2024 vi vivevano più di 1,5 milioni di stranieri, soprattutto brasiliani. E nel 2024 un record di 29 milioni di turisti stranieri lo ha visitato, quasi tre volte la sua popolazione!",
+  "Lange ein Auswanderungsland, zieht Portugal heute Menschen an: Ende 2024 lebten dort über 1,5 Millionen Ausländer, vor allem Brasilianer. Und 2024 besuchten es rekordverdächtige 29 Millionen ausländische Touristen – fast dreimal so viele wie seine Einwohner!"),
+})
