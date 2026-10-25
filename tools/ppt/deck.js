@@ -353,24 +353,14 @@ divider("03", "soc_hero_title", "soc_hero_subtitle", "soc_hero_text", P("hero-so
 {
   const s = add();
   head(s, F.soc_eco_eyebrow, F.soc_eco_title);
-  const c = [[null, F.soc_eco1_title, F.soc_eco1], [P("e-wind.jpg"), F.soc_eco2_title, F.soc_eco2], [P("e-cork.jpg"), F.soc_eco3_title, F.soc_eco3], [null, F.soc_eco4_title, F.soc_eco4]];
-  c.forEach(([ph, t, d], i) => {
-    const x = MX + i * 3.07;
-    card(s, x, 1.75, 2.87, 5.05, COL.white);
-    if (ph) img(s, ph, x, 1.75, 2.87, 2.0); else { s.addShape(pres.shapes.RECTANGLE, { x, y: 1.75, w: 2.87, h: 2.0, fill: { color: i ? COL.tintBlue : COL.tint }, line: { color: COL.tint } }); tb(s, i ? "1,5 M" : "78 Md €", { x, y: 2.35, w: 2.87, h: 0.8, fontSize: 36, bold: true, fontFace: "Cambria", color: ACC[i], align: "center" }); }
-    tb(s, t, { x: x + 0.2, y: 3.9, w: 2.5, h: 0.7, fontSize: 18, bold: true, fontFace: "Cambria", color: COL.green });
-    tb(s, d, { x: x + 0.2, y: 4.65, w: 2.5, h: 2.05, fontSize: 13 });
-  });
-}
-{
-  const s = add();
-  head(s, F.terroir_eyebrow, F.terroir_title);
-  [[P("x-olival.jpg"), F.terroir_oil_t, F.terroir_oil], [P("x-porco.jpg"), F.terroir_pig_t, F.terroir_pig]].forEach(([ph, t, d], i) => {
-    const x = MX + i * 6.2;
-    card(s, x, 1.75, 5.9, 5.05, COL.white);
-    img(s, ph, x, 1.75, 5.9, 2.9);
-    tb(s, t, { x: x + 0.25, y: 4.8, w: 5.4, h: 0.5, fontSize: 20, bold: true, fontFace: "Cambria", color: COL.green });
-    tb(s, d, { x: x + 0.25, y: 5.3, w: 5.4, h: 1.4, fontSize: 12.5 });
+  const c = [[null, F.soc_eco1_title, F.soc_eco1, ""], [P("e-wind.jpg"), F.soc_eco2_title, F.soc_eco2, ""], [P("e-cork.jpg"), F.soc_eco3_title, F.soc_eco3, "Cortiça"], [P("x-olival.jpg"), F.soc_eco5_title, F.soc_eco5, "Azeite"], [null, F.soc_eco4_title, F.soc_eco4, ""]];
+  c.forEach(([ph, t, d, pt], i) => {
+    const x = MX + i * 2.45, w = 2.3;
+    card(s, x, 1.75, w, 5.05, COL.white);
+    if (ph) img(s, ph, x, 1.75, w, 1.7); else { s.addShape(pres.shapes.RECTANGLE, { x, y: 1.75, w, h: 1.7, fill: { color: i ? COL.tintBlue : COL.tint }, line: { color: COL.tint } }); tb(s, i ? "1,5 M" : "78 Md €", { x, y: 2.2, w, h: 0.8, fontSize: 30, bold: true, fontFace: "Cambria", color: ACC[i % 4], align: "center" }); }
+    if (pt) tb(s, pt, { x: x + 0.15, y: 3.55, w: w - 0.3, h: 0.3, fontSize: 11, bold: true, italic: true, color: COL.red });
+    tb(s, t, { x: x + 0.15, y: 3.85, w: w - 0.3, h: 0.65, fontSize: 15, bold: true, fontFace: "Cambria", color: COL.green });
+    tb(s, d, { x: x + 0.15, y: 4.5, w: w - 0.3, h: 2.2, fontSize: 11, fit: "shrink" });
   });
 }
 {

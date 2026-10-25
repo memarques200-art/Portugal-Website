@@ -165,3 +165,9 @@ T4.update({
   "Di recente ho volato in parapendio sopra il lago Lemano. Un'esperienza indimenticabile!",
   "Kürzlich bin ich mit dem Gleitschirm über den Genfersee geflogen. Ein unvergessliches Erlebnis!"),
 })
+T4.update({
+"soc_eco5_title": ("L'or vert", "L'oro verde", "Das grüne Gold"),
+"soc_eco5": ("Le Portugal compte parmi les dix plus grands producteurs d'huile d'olive au monde, surtout grâce à l'Alentejo. Sur la table portugaise, l'azeite est partout : sur la morue, les légumes, ou simplement avec du pain.",
+  "Il Portogallo è tra i dieci maggiori produttori di olio d'oliva al mondo, soprattutto grazie all'Alentejo. Sulla tavola portoghese l'azeite è ovunque: sul baccalà, sulle verdure o semplicemente con il pane.",
+  "Portugal gehört zu den zehn grössten Olivenölproduzenten der Welt, vor allem dank des Alentejo. Auf dem portugiesischen Tisch ist Azeite überall: auf dem Stockfisch, dem Gemüse oder einfach mit Brot."),
+})

@@ -1223,3 +1223,11 @@
   .pas-grid > .pas-card.pas-card--full{grid-column:1 / -1;}
   .pas-grid > .pas-card.pas-card--full .pas-photo{aspect-ratio:16/6;}
   @media (max-width:900px){ .pas-card--row .pas-photo{height:320px;} .pas-grid > .pas-card.pas-card--full .pas-photo{aspect-ratio:4/3;} }
+
+  /* economy: five cards, Portuguese name above the French title */
+  .info-grid--eco{grid-template-columns:repeat(5, minmax(0,1fr)); gap:16px;}
+  @media (max-width:1200px){ .info-grid--eco{grid-template-columns:repeat(3, minmax(0,1fr));} }
+  @media (max-width:800px){ .info-grid--eco{grid-template-columns:repeat(2, minmax(0,1fr));} }
+  @media (max-width:560px){ .info-grid--eco{grid-template-columns:minmax(0,1fr);} }
+  .info-pt{display:block; font:italic 700 13px Inter, sans-serif; letter-spacing:.06em; color:var(--red);}
+  .info-card--photo .info-pt{margin:-4px 0 6px;}
