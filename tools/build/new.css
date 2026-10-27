@@ -1231,3 +1231,6 @@
   @media (max-width:560px){ .info-grid--eco{grid-template-columns:minmax(0,1fr);} }
   .info-pt{display:block; font:italic 700 13px Inter, sans-serif; letter-spacing:.06em; color:var(--red);}
   .info-card--photo .info-pt{margin:-4px 0 6px;}
+  .merv-bridge{margin-top:18px; padding-top:16px; border-top:1px solid var(--border);}
+  .merv-bridge h4{font-family:'Cormorant Garamond', serif; font-size:22px; font-weight:700; margin:14px 0 6px; color:var(--azul);}
+  .merv-bridge .merv-sub img{aspect-ratio:16/10; object-fit:cover; object-position:50% 40%;}

@@ -3151,6 +3151,9 @@
   @media (max-width:560px){ .info-grid--eco{grid-template-columns:minmax(0,1fr);} }
   .info-pt{display:block; font:italic 700 13px Inter, sans-serif; letter-spacing:.06em; color:var(--red);}
   .info-card--photo .info-pt{margin:-4px 0 6px;}
+  .merv-bridge{margin-top:18px; padding-top:16px; border-top:1px solid var(--border);}
+  .merv-bridge h4{font-family:'Cormorant Garamond', serif; font-size:22px; font-weight:700; margin:14px 0 6px; color:var(--azul);}
+  .merv-bridge .merv-sub img{aspect-ratio:16/10; object-fit:cover; object-position:50% 40%;}
 
   .view{display:none;}
   .view.active{display:block;}
@@ -4638,7 +4641,12 @@
           <span class="merv-badge" data-i18n="merv_7m">L'une des « 7 Merveilles du Portugal » (2007)</span>
           <p class="merv-text" data-i18n="m5_text">Construite de 1514 à 1519 sur le Tage, elle protégeait l'entrée de Lisbonne et saluait les navigateurs qui partaient vers l'Afrique, l'Inde et le Brésil. C'est l'un des symboles de l'époque des Découvertes.</p>
           <ul class="merv-facts"><li data-i18n="m5_f1">Patrimoine mondial de l'UNESCO depuis 1983</li><li data-i18n="m5_f2">Chef-d'œuvre du style manuélin</li></ul>
-          
+          <div class="merv-bridge">
+            <figure class="merv-sub" data-opt-photo="luis/ponte-25-abril.jpg"><img src="images/luis/ponte-25-abril.jpg" alt="Ponte 25 de Abril" loading="lazy"><figcaption data-i18n="m5_bridge_cap">Le pont 25 Avril et la statue du Cristo Rei.</figcaption></figure>
+            <h4 data-i18n="m5_bridge_t">Et juste à côté : le pont 25 Avril</h4>
+            <p class="merv-text" data-i18n="m5_bridge">Ce grand pont suspendu rouge enjambe le Tage depuis 1966. Avec sa couleur et ses hautes tours, il ressemble beaucoup au Golden Gate de San Francisco ; il a d'ailleurs été construit par une entreprise américaine. Il porte le nom de la Révolution des Œillets du 25 avril 1974.</p>
+            <ul class="merv-facts"><li data-i18n="m5_bridge_f1">Environ 2,3 km de long</li><li data-i18n="m5_bridge_f2">Voitures en haut, trains en bas</li></ul>
+          </div>
         </article>
         <article class="merv-item" data-i="7" id="merv-7">
           <div class="merv-head"><span class="merv-num">7</span><div><span class="merv-place" data-i18n="m6_place">LISBONNE · BELÉM</span><h3 class="merv-name" data-i18n="m6_name">Le monastère des Hiéronymites</h3></div></div>
@@ -5658,7 +5666,12 @@
   "merci_nt_link": "Voir sur Google",
   "merci_bar": "Merci pour leur soutien&nbsp;:",
   "soc_eco5_title": "L'or vert",
-  "soc_eco5": "Le Portugal compte parmi les dix plus grands producteurs d'huile d'olive au monde, surtout grâce à l'Alentejo. Sur la table portugaise, l'azeite est partout : sur la morue, les légumes, ou simplement avec du pain."
+  "soc_eco5": "Le Portugal compte parmi les dix plus grands producteurs d'huile d'olive au monde, surtout grâce à l'Alentejo. Sur la table portugaise, l'azeite est partout : sur la morue, les légumes, ou simplement avec du pain.",
+  "m5_bridge_t": "Et juste à côté : le pont 25 Avril",
+  "m5_bridge": "Ce grand pont suspendu rouge enjambe le Tage depuis 1966. Avec sa couleur et ses hautes tours, il ressemble beaucoup au Golden Gate de San Francisco ; il a d'ailleurs été construit par une entreprise américaine. Il porte le nom de la Révolution des Œillets du 25 avril 1974.",
+  "m5_bridge_f1": "Environ 2,3 km de long",
+  "m5_bridge_f2": "Voitures en haut, trains en bas",
+  "m5_bridge_cap": "Le pont 25 Avril et la statue du Cristo Rei."
  },
  "it": {
   "nav_home": "Home",
@@ -6287,7 +6300,12 @@
   "merci_nt_link": "Vedi su Google",
   "merci_bar": "Grazie per il loro sostegno:",
   "soc_eco5_title": "L'oro verde",
-  "soc_eco5": "Il Portogallo è tra i dieci maggiori produttori di olio d'oliva al mondo, soprattutto grazie all'Alentejo. Sulla tavola portoghese l'azeite è ovunque: sul baccalà, sulle verdure o semplicemente con il pane."
+  "soc_eco5": "Il Portogallo è tra i dieci maggiori produttori di olio d'oliva al mondo, soprattutto grazie all'Alentejo. Sulla tavola portoghese l'azeite è ovunque: sul baccalà, sulle verdure o semplicemente con il pane.",
+  "m5_bridge_t": "E poco più in là: il ponte 25 Aprile",
+  "m5_bridge": "Questo grande ponte sospeso rosso attraversa il Tago dal 1966. Con il suo colore e le alte torri somiglia molto al Golden Gate di San Francisco; del resto è stato costruito da un'impresa americana. Porta il nome della Rivoluzione dei Garofani del 25 aprile 1974.",
+  "m5_bridge_f1": "Circa 2,3 km di lunghezza",
+  "m5_bridge_f2": "Auto sopra, treni sotto",
+  "m5_bridge_cap": "Il ponte 25 Aprile e la statua del Cristo Rei."
  },
  "de": {
   "nav_home": "Startseite",
@@ -6916,7 +6934,12 @@
   "merci_nt_link": "Auf Google ansehen",
   "merci_bar": "Danke für die Unterstützung:",
   "soc_eco5_title": "Das grüne Gold",
-  "soc_eco5": "Portugal gehört zu den zehn grössten Olivenölproduzenten der Welt, vor allem dank des Alentejo. Auf dem portugiesischen Tisch ist Azeite überall: auf dem Stockfisch, dem Gemüse oder einfach mit Brot."
+  "soc_eco5": "Portugal gehört zu den zehn grössten Olivenölproduzenten der Welt, vor allem dank des Alentejo. Auf dem portugiesischen Tisch ist Azeite überall: auf dem Stockfisch, dem Gemüse oder einfach mit Brot.",
+  "m5_bridge_t": "Gleich daneben: die Brücke des 25. April",
+  "m5_bridge": "Diese grosse rote Hängebrücke überspannt den Tejo seit 1966. Mit ihrer Farbe und den hohen Türmen erinnert sie stark an die Golden Gate Bridge in San Francisco – gebaut hat sie übrigens eine amerikanische Firma. Ihr Name erinnert an die Nelkenrevolution vom 25. April 1974.",
+  "m5_bridge_f1": "Rund 2,3 km lang",
+  "m5_bridge_f2": "Oben Autos, unten Züge",
+  "m5_bridge_cap": "Die Brücke des 25. April und die Cristo-Rei-Statue."
  }
 };
 

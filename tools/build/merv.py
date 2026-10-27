@@ -11,7 +11,7 @@ ITEMS = [
     ('m2', 'aveiro',    ['photos/w-aveiro.jpg', 'luis/salinas-aveiro.jpg'], False, 'salt'),
     ('m3', 'batalha',   ['photos/w-batalha.jpg'], True, None),
     ('m4', 'sintra',    ['photos/w-pena.jpg'], True, None),
-    ('m5', 'belem',     ['photos/hero-hist.jpg'], True, None),
+    ('m5', 'belem',     ['photos/hero-hist.jpg', 'luis/ponte-25-abril.jpg'], True, 'bridge'),
     ('m6', 'jeronimos', ['photos/w-jeronimos.jpg'], True, None),
     ('m7', 'vgama',     ['photos/w-vgama.jpg', 'photos/w-expo.jpg', 'photos/w-oceanario.jpg'], False, 'expo'),
     ('m8', 'alqueva',   ['photos/w-alqueva.jpg'], False, None),
@@ -74,6 +74,13 @@ def item(i, k, key, photos, seven, extra):
         more = f'<figure class="merv-sub" data-opt-photo="{photos[1]}"><img src="images/{photos[1]}" alt="" loading="lazy"><figcaption i18n="{k}_salt_cap"></figcaption></figure>'
     if extra == 'caves':
         more = f'<figure class="merv-sub" data-opt-photo="{photos[1]}"><img src="images/{photos[1]}" alt="" loading="lazy"><figcaption i18n="{k}_caves_cap"></figcaption></figure>'
+    if extra == 'bridge':
+        more = f'''<div class="merv-bridge">
+            <figure class="merv-sub" data-opt-photo="{photos[1]}"><img src="images/{photos[1]}" alt="Ponte 25 de Abril" loading="lazy"><figcaption i18n="{k}_bridge_cap"></figcaption></figure>
+            <h4 i18n="{k}_bridge_t"></h4>
+            <p class="merv-text" i18n="{k}_bridge"></p>
+            <ul class="merv-facts"><li i18n="{k}_bridge_f1"></li><li i18n="{k}_bridge_f2"></li></ul>
+          </div>'''
     if extra == 'expo':
         more = f'''<div class="merv-duo">
             <figure class="merv-sub" data-opt-photo="{photos[1]}"><img src="images/{photos[1]}" alt="" loading="lazy"><figcaption i18n="m7_expo_cap"></figcaption></figure>

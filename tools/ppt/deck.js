@@ -576,7 +576,7 @@ const WONDERS = [
   ["m2", P("w-aveiro.jpg"), false, null, L("salinas-aveiro.jpg"), "m2_salt_cap"],
   ["m3", P("w-batalha.jpg"), true],
   ["m4", P("w-pena.jpg"), true],
-  ["m5", P("hero-hist.jpg"), true],
+  ["m5", P("hero-hist.jpg"), true, null, L("ponte-25-abril.jpg"), "m5_bridge_cap"],
   ["m6", P("w-jeronimos.jpg"), true],
   ["m7", P("w-vgama.jpg"), false, null, P("w-oceanario.jpg"), "m7_ocean_t"],
   ["m8", P("w-alqueva.jpg"), false],
@@ -605,6 +605,7 @@ WONDERS.forEach(([k, ph, seven, video, ph2, cap2, cmp], idx) => {
     tb(s, f, { x: x + 0.2, y, w: w - 0.3, h: 0.55, fontSize: 13, bold: true, valign: "middle" });
     y += 0.68;
   });
+  if (k === "m5") { tb(s, F.m5_bridge_t, { x, y: y + 0.05, w, h: 0.4, fontSize: 15, bold: true, fontFace: "Cambria", color: COL.azul }); tb(s, F.m5_bridge + " " + F.m5_bridge_f1 + ". " + F.m5_bridge_f2 + ".", { x, y: y + 0.45, w, h: 1.6, fontSize: 11.5, fit: "shrink" }); }
   if (n7) tb(s, F.m7_ocean_t + " — " + F.m7_ocean, { x, y: y + 0.05, w, h: 1.1, fontSize: 12, color: COL.grey });
   if (cmp) {
     const K = 4.3 / 83;

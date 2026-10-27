@@ -176,3 +176,12 @@ T4.update({
   "A lungo paese di emigrazione, oggi il Portogallo attira: a fine 2024 vi vivevano più di 1,5 milioni di stranieri, soprattutto brasiliani. E nel 2024 un record di 29 milioni di turisti stranieri lo ha visitato, quasi tre volte la sua popolazione!",
   "Lange ein Auswanderungsland, zieht Portugal heute Menschen an: Ende 2024 lebten dort über 1,5 Millionen Ausländer, vor allem Brasilianer. Und 2024 besuchten es rekordverdächtige 29 Millionen ausländische Touristen – fast dreimal so viele wie seine Einwohner!"),
 })
+T4.update({
+"m5_bridge_t": ("Et juste à côté : le pont 25 Avril", "E poco più in là: il ponte 25 Aprile", "Gleich daneben: die Brücke des 25. April"),
+"m5_bridge": ("Ce grand pont suspendu rouge enjambe le Tage depuis 1966. Avec sa couleur et ses hautes tours, il ressemble beaucoup au Golden Gate de San Francisco ; il a d'ailleurs été construit par une entreprise américaine. Il porte le nom de la Révolution des Œillets du 25 avril 1974.",
+  "Questo grande ponte sospeso rosso attraversa il Tago dal 1966. Con il suo colore e le alte torri somiglia molto al Golden Gate di San Francisco; del resto è stato costruito da un'impresa americana. Porta il nome della Rivoluzione dei Garofani del 25 aprile 1974.",
+  "Diese grosse rote Hängebrücke überspannt den Tejo seit 1966. Mit ihrer Farbe und den hohen Türmen erinnert sie stark an die Golden Gate Bridge in San Francisco – gebaut hat sie übrigens eine amerikanische Firma. Ihr Name erinnert an die Nelkenrevolution vom 25. April 1974."),
+"m5_bridge_f1": ("Environ 2,3 km de long", "Circa 2,3 km di lunghezza", "Rund 2,3 km lang"),
+"m5_bridge_f2": ("Voitures en haut, trains en bas", "Auto sopra, treni sotto", "Oben Autos, unten Züge"),
+"m5_bridge_cap": ("Le pont 25 Avril et la statue du Cristo Rei.", "Il ponte 25 Aprile e la statua del Cristo Rei.", "Die Brücke des 25. April und die Cristo-Rei-Statue."),
+})
